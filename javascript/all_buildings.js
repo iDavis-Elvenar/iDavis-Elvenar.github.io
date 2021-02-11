@@ -16,100 +16,119 @@ function readBuildingsJSON() {
     createExc();
     $.get('database/buildings.json')
         .done(data => {
-            console.log(data);
-
             //HANDLE FILTERS
+            console.log("APEBECA")
             var eventSelect = document.getElementById('input_event');
             var filterEventData = eventSelect.options[eventSelect.selectedIndex].value;
             var productionSelect = document.getElementById('input_production');
             var filterProductionData = productionSelect.options[productionSelect.selectedIndex].value;
+            var appearancesCheckbox = document.getElementById('includeAppearances');
+            var includeAppearances = appearancesCheckbox.checked;
 
 
             document.getElementById('column_with_tables').innerHTML = ``;
+            var filteredData = [];
             for (var i = 0; i < data.length; i++) {
-                if (filterEvent(filterEventData, data[i]) && filterProduction(filterProductionData, data[i])) {
-                    var h5 = document.createElement('h5');
-                    h5.className = "card-title text-center text-title font-weight-bold";
-                    h5.style.textAlign = "left";
-                    h5.innerHTML = `${data[i]['name']}<br>`;
-                    document.getElementById('column_with_tables').appendChild(h5);
-                    var div = document.createElement('div');
-                    div.className = 'bbTable';
-                    div.style.marginBottom = "20px";
-                    var firstTable = document.createElement('table');
-                    firstTable.className = 'table-primary';
-                    firstTable.style.width = "100%";
-                    var t1body = document.createElement('tbody');
-                    var t1r = document.createElement('tr');
-                    var td11 = document.createElement('td');
-                    td11.style.width = "60%";
-                    td11.innerHTML = `<img src="${data[i]['image']}">`;
-                    var td12 = document.createElement('td');
-                    td12.style.width = "40%";
-                    td12.innerHTML = `<b>Typ budovy:</b> ${data[i]['type']}<br>
-                                    <b>Čas výstavby:</b> ${data[i]['construction_time']}<br>
-                                    <b>Veľkosť:</b> ${data[i]['width']}x${data[i]['length']}<br>
+                if ((filterEvent(filterEventData, data[i]) && filterProduction(filterProductionData, data[i])) ||
+                    (includeAppearances && hasAppearance(filterEventData, data[i]))) {
+                    filteredData.push(data[i]);
+                }
+            }
+            if (includeAppearances) {
+                //SORT BY DAY OF APPEARANCE
+                for (var j = 0; j < filteredData.length; j++) {
+                    for (var k = 0; k < filteredData.length-1; k++) {
+                        if (filteredData[k]['appearances'][filterEventData] > filteredData[k+1]['appearances'][filterEventData]) {
+                            let temp = filteredData[k];
+                            filteredData[k] = filteredData[k+1];
+                            filteredData[k+1] = temp;
+                        }
+                    }
+                }
+            }
+            for (var i = 0; i < filteredData.length; i++) {
+                var h5 = document.createElement('h5');
+                h5.id = filteredData[i]['id'];
+                h5.className = "card-title text-center text-title font-weight-bold";
+                h5.style.textAlign = "left";
+                h5.innerHTML = `${filteredData[i]['name']}<br>`;
+                document.getElementById('column_with_tables').appendChild(h5);
+                var div = document.createElement('div');
+                div.className = 'bbTable';
+                div.style.marginBottom = "20px";
+                var firstTable = document.createElement('table');
+                firstTable.className = 'table-primary';
+                firstTable.style.width = "100%";
+                var t1body = document.createElement('tbody');
+                var t1r = document.createElement('tr');
+                var td11 = document.createElement('td');
+                td11.style.width = "60%";
+                td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
+                var td12 = document.createElement('td');
+                td12.style.width = "40%";
+                td12.innerHTML = `<b>Typ budovy:</b> ${filteredData[i]['type']}<br>
+                                    <b>Čas výstavby:</b> ${filteredData[i]['construction_time']}<br>
+                                    <b>Veľkosť:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>Súčasťou setu:</b> -<br>
                                     <b>Dočasný efekt:</b> -<br>
                                     <b>Dostupnosť:</b> ???`;
-                    t1r.appendChild(td11);
-                    t1r.appendChild(td12);
-                    t1body.appendChild(t1r);
-                    firstTable.appendChild(t1body);
-                    div.appendChild(firstTable);
+                t1r.appendChild(td11);
+                t1r.appendChild(td12);
+                t1body.appendChild(t1r);
+                firstTable.appendChild(t1body);
+                div.appendChild(firstTable);
 
-                    var secondTable = document.createElement('table');
-                    secondTable.className = 'table-primary text-center';
-                    secondTable.style.width = "100%";
-                    var t2body = document.createElement('tbody');
-                    var tr21 = document.createElement('tr');
-                    for (var h = 0; h < numberOfChapters + 1; h++) {
-                        var th = document.createElement('th');
-                        if (h === 0) {
-                            th.innerHTML = `Kapitola / Bonus`;
-                        } else {
-                            th.innerHTML = `<img src=${chapter_icons[h]}>`;
-                        }
-                        tr21.appendChild(th);
+                var secondTable = document.createElement('table');
+                secondTable.className = 'table-primary text-center';
+                secondTable.style.width = "100%";
+                var t2body = document.createElement('tbody');
+                var tr21 = document.createElement('tr');
+                for (var h = 0; h < numberOfChapters + 1; h++) {
+                    var th = document.createElement('th');
+                    if (h === 0) {
+                        th.innerHTML = `Kapitola / Bonus`;
+                    } else {
+                        th.innerHTML = `<img src=${chapter_icons[h]}>`;
                     }
-                    t2body.appendChild(tr21);
-                    for (var prod = 0; prod < data[i]['all_productions'].length; prod++) {
-                        var tr = document.createElement('tr');
-                        for (var ch = 0; ch < numberOfChapters + 1; ch++) {
-                            var td = document.createElement('td');
-                            if (ch === 0) {
-                                td.innerHTML = `${goods_icons[data[i]['all_productions'][prod]]}`;
-                                if (data[i]['all_productions'][prod] != 'providedCulture' &&
-                                    data[i]['all_productions'][prod] != 'provided_population') {
-                                    //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
-                                    for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
-                                        if (data[i]['chapters'][chPom].hasOwnProperty(data[i]['all_productions'][prod])) {
-                                            td.innerHTML += `${data[i]['earlyPickupTime'] / 60 / 60}h / <b>${data[i]['chapters'][chPom][data[i]['all_productions'][prod]]['production_time'] / 60 / 60}h</b>`;
-                                            break;
-                                        }
+                    tr21.appendChild(th);
+                }
+                t2body.appendChild(tr21);
+                for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
+                    var tr = document.createElement('tr');
+                    for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                        var td = document.createElement('td');
+                        if (ch === 0) {
+                            td.innerHTML = `${goods_icons[filteredData[i]['all_productions'][prod]]}`;
+                            if (filteredData[i]['all_productions'][prod] != 'providedCulture' &&
+                                filteredData[i]['all_productions'][prod] != 'provided_population') {
+                                //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
+                                for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
+                                    if (filteredData[i]['chapters'][chPom].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                        td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][filteredData[i]['all_productions'][prod]]['production_time'] / 60 / 60}h</b>`;
+                                        break;
                                     }
-                                }
-                            } else {
-                                if (data[i]['chapters'][ch].hasOwnProperty(data[i]['all_productions'][prod])) {
-                                    if (typeof data[i]['chapters'][ch][data[i]['all_productions'][prod]] === 'object') {
-                                        td.innerHTML = `${data[i]['chapters'][ch][data[i]['all_productions'][prod]]['value']}`;
-                                    } else {
-                                        td.innerHTML = `${data[i]['chapters'][ch][data[i]['all_productions'][prod]]}`;
-                                    }
-                                } else {
-                                    td.innerHTML = `-`;
                                 }
                             }
-                            tr.appendChild(td);
+                        } else {
+                            if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]] === 'object') {
+                                    td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']}`;
+                                } else {
+                                    td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]}`;
+                                }
+                            } else {
+                                td.innerHTML = `-`;
+                            }
                         }
-                        t2body.appendChild(tr);
+                        tr.appendChild(td);
                     }
-                    secondTable.appendChild(t2body);
-                    div.appendChild(secondTable);
-                    document.getElementById('column_with_tables').appendChild(div);
+                    t2body.appendChild(tr);
                 }
+                secondTable.appendChild(t2body);
+                div.appendChild(secondTable);
+                document.getElementById('column_with_tables').appendChild(div);
+                create_exception("Buildings Generated!", 3, 'success');
             }
-            create_exception("Buildings Generated!",3,'success');
         })
     //td.innerHTML = `<img src="https://image.ibb.co/g5ErZq/money.png"+<br>`;
 }
@@ -150,6 +169,10 @@ function filterProduction(filterData, objectToPass) {
         }
         return neededToPass === 0;
     }
+}
+
+function hasAppearance(filterData, objectToPass) {
+    return objectToPass['appearances'].hasOwnProperty(filterData);
 }
 
 //readBuildingsJSON();

@@ -11,7 +11,7 @@ window.onload = function() {
     html_close = document.getElementById('close');
     html_text = document.getElementById('text');
 }
-function lengthOK(text_length, min_count_of_characters, max_count_of_characters, what){
+function is_good_length(text_length,min_count_of_characters,max_count_of_characters,what){
     if( text_length < min_count_of_characters || text_length > max_count_of_characters){
         create_exception( 'Your <strong>'+what+'</strong> has incorrect length.' +
             '<br> - the minimal length is <strong>'+min_count_of_characters+'</strong>,' +
@@ -22,18 +22,6 @@ function lengthOK(text_length, min_count_of_characters, max_count_of_characters,
     }
 }
 
-function isCorrectPassword(text_string){
-    return lengthOK(text_string.length,3,50,'password');
-}
-
-function isCorrectUsername(email_string){
-    if (format_for_username.test(email_string) ){
-        create_exception( 'Your <strong>email</strong> has the wrong format. Do not use any of the following symbols: '+format_for_username,13,'warning');
-        return true;
-    }else{
-        return lengthOK(email_string.length,3,50,'email');
-    }
-}
 function create_exception(insert_text,time_of_display,type_of_style){
     html_alert.className = 'alert alert-'+type_of_style+' alert-dismissible fade show fixed-top ';
     html_text.innerHTML = insert_text;

@@ -1,0 +1,140 @@
+.text-finished{
+    color: #6f42c1;
+}
+
+.curs{
+    z-index: 300;
+    min-width: 100px;
+    max-width: 100px;
+    left: 100px;
+    display: flex;
+    cursor: pointer;
+}
+.curs img{
+    position: relative;right: 10px;
+}
+.curs .only_requested_count{
+    margin: 5px 0px 0px;
+}
+.bg-finished{
+    background-color: #6f42c1;
+}
+
+/* SEKCIA POD NAVIGACIOU HLAVNI Ovladaci panel s moznostami*/
+
+#role_down{
+    margin-top: 56px;z-index: 200;
+}
+input[type=date] ,#back_date, #next_date{
+    height: 38px;
+}
+.table{
+    margin-bottom: 0px;
+}
+#date_number{
+    margin: 0px;padding: 0px;
+}
+.table thead .top_bar{
+    border-bottom: 0px;
+    vertical-align: top;
+}
+
+.form-control{
+    /*vertical-align: top;*/
+    /*display: inherit;*/
+    min-width: 60px;
+    max-width: 120px;
+}
+#input_text{
+    /*vertical-align: top;*/
+    /*display: inherit;*/
+    max-width: 1200px;
+    min-width: 80px;
+}
+label{
+    display: none;
+}
+
+
+
+
+
+.table thead .first{
+    border-bottom: 0px;
+}
+
+.td_flex_buttons{
+    display: flex;
+}
+.only_one{
+    margin-right: 5px;
+}
+
+td p{
+    margin: 0px;
+}
+#main_row{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.table thead .top_bar{
+    border-bottom: 0px;
+    width: 20%;
+}
+.table thead .last{
+    border-right: 0px ;
+}
+.table_of_customers{
+    width: auto;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 0px;
+}
+table thead th{
+    width: 20%;
+}
+h3 {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+#offset_element{
+    padding-top: 110px;
+    margin-bottom: 0px;
+}
+
+@media (min-width: 0px) {
+    .table_of_customers{
+        font-size: 12px;
+    }
+    #offset_element{
+        padding-top: 145px;
+    }
+}
+
+@media (min-width: 767px) {
+    .table_of_customers{
+        font-size: 15px;
+    }
+    #offset_element{
+        padding-top: 135px;
+    }
+}
+
+@media (min-width: 991px){
+    .table_of_customers{
+        font-size: 17px;
+    }
+
+    #offset_element{
+        padding-top: 110px;
+    }
+}
+
+@media (min-width: 1199px) {
+    .table_of_customers{
+        font-size: 20px;
+    }
+    #offset_element{
+        padding-top: 110px;
+    }
+}

@@ -1,5 +1,5 @@
 let role_down = false;
-function rollNavigation(){
+function rollDownNavigation(){
     if (role_down === false){
         document.getElementById('role_down').style.display = 'none';
         role_down = true;

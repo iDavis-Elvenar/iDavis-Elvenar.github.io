@@ -2,7 +2,7 @@ function log_in(){
     let username = document.getElementById('inputName');
     let password = document.getElementById('inputPassword');
     if (username.value !== "" && password.value !== ""){
-        if (isCorrectUsername(username.value) || isCorrectPassword(password.value)){
+        if (is_correct_username(username.value) || is_correct_password(password.value)){
             return;
         }
         $.post('login_AJAX/login.php',{

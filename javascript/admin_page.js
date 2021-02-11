@@ -43,7 +43,8 @@ function handleBuildingsJSON() {
                     "width": allBuildings[i]['width'],
                     "length": allBuildings[i]['length'],
                     "construction_time": allBuildings[i]['construction_time'],
-                    "chapters": {}
+                    "chapters": {},
+                    "appearances": {}
                 };
                 if (images_buildings.hasOwnProperty(b['id'])) {
                     if (images_buildings[b['id']] != "") {
@@ -56,6 +57,13 @@ function handleBuildingsJSON() {
                 }
                 if (allBuildings[i].hasOwnProperty('production')) {
                     b['earlyPickupTime'] = allBuildings[i]['production']['earlyPickupTime'];
+                }
+                for (var key in eventAppearances) {
+                    if (eventAppearances[key].includes(b['id'])) {
+                        var appearance = {};
+                        appearance[key] = eventAppearances[key].indexOf(b['id']);
+                        b['appearances'] = appearance;
+                    }
                 }
                 var setOfAllProductions = new Set();
                 var levelsFound = 0;
@@ -183,6 +191,33 @@ function generateJSONBuildingsIDs() {
         saveJSON( JSON.stringify(result), "images_buildings.json" );
         create_exception("Data Generated!",10,'success');
     };
+}
+
+var eventAppearances = {
+    "february_xxi_": [
+        "A_Evt_February_XXI_Elder_Snowman",
+        "A_Evt_February_XXI_Yeti_Hot_Spring",
+        "",
+        "A_Evt_Car_XIX_Elven_Wagon",
+        "A_Evt_Car_XX_Deers_Golems",
+        "A_Evt_Val_Balcony",
+        "A_Evt_Car_XX_Halfling_Wagon",
+        "A_Evt_February_XXI_Aureate_Willow",
+        "A_Evt_Car_XIX_Dancing_People",
+        "A_Evt_February_XXI_Dawn_Of_Spring_Shrine",
+        "A_Evt_Car_XIX_Beauty_Puppet",
+        "A_Evt_Car_XX_Dragon_Puppet",
+        "",
+        "A_Evt_Car_XIX_Orc_Wagon",
+        "A_Evt_February_XXI_Sun_Loop",
+        "",
+        "A_Evt_February_XXI_Elder_Snowman",
+        "A_Evt_Car_XX_Bubble_Mask",
+        "A_Evt_Car_XX_Constructs_Wagon",
+        "",
+        "A_Evt_Car_XX_Dwarven_Wagon",
+        "A_Evt_February_XXI_Lifeblood_Cone"
+    ]
 }
 
 var images_buildings = {

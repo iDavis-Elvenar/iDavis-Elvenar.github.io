@@ -48,35 +48,37 @@ if (! isset($page)){
     <?php }?>
     <?php if (isset($_SESSION['role'])){ ?>
         <!-- Our JavaScript -->
-        <script src="javascript/log_out.js"></script>
         <!-- Modified Bootstrap CSS -->
         <link rel="stylesheet" href="css/employee.css">
-        <title>iDavis Page</title>
+        <title>Employee Page</title>
+    <?php }?>
+    <?php if ($page == 'employee'){ ?>
+        <!-- Our JavaScript -->
+        <!-- Modified Bootstrap CSS -->
+        <link rel="stylesheet" href="css/employee.css">
+        <title>Employee Page</title>
+    <?php }?>
+    <?php if ($page == 'contact'){ ?>
+        <!-- Our JavaScript -->
+        <!-- Modified Bootstrap CSS -->
+        <link rel="stylesheet" href="css/change_password.css">
+        <title>Contact Page </title>
     <?php }?>
     <?php if ($page == 'event_guide'){ ?>
         <!-- Our JavaScript -->
-        <script src="javascript/log_out.js"></script>
+        <script src="javascript/all_buildings.js"></script>
         <!--<script  src="javascript/config.js"></script>-->
         <!-- Modified Bootstrap CSS -->
         <link rel="stylesheet" href="css/config.css">
-        <title>Eveng Guide</title>
+        <title>Config Page </title>
     <?php }?>
     <?php if ($page == 'all_buildings'){ ?>
         <!-- Our JavaScript -->
-        <script src="javascript/log_out.js"></script>
         <script src="javascript/all_buildings.js"></script>
         <!--<script  src="javascript/config.js"></script>-->
         <!-- Modified Bootstrap CSS -->
         <link rel="stylesheet" href="css/config.css">
         <title>All Buildings</title>
-    <?php }?>
-    <?php if ($page == 'change_password'){ ?>
-        <!-- Our JavaScript -->
-        <script src="javascript/log_out.js"></script>
-        <script src="javascript/change_password.js"></script>
-        <!-- Modified Bootstrap CSS -->
-        <link rel="stylesheet" href="css/changePassword.css">
-        <title>Change Password</title>
     <?php }?>
 </head>
 <?php }?>
