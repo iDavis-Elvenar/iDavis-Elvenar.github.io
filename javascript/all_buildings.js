@@ -126,8 +126,8 @@ function readBuildingsJSON() {
                 secondTable.appendChild(t2body);
                 div.appendChild(secondTable);
                 document.getElementById('column_with_tables').appendChild(div);
-                create_exception("Buildings Generated!", 3, 'success');
             }
+            create_exception("Buildings Generated!", 3, 'success');
         })
     //td.innerHTML = `<img src="https://image.ibb.co/g5ErZq/money.png"+<br>`;
 }
