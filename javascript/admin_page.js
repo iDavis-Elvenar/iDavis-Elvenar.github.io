@@ -32,8 +32,6 @@ function handleBuildingsJSON() {
             }
         }
 
-        //ALL BUILDINGS IS READY
-        //var b = {};
         for (let i = 0; i < allBuildings.length; i++) {
             if (allBuildings[i]['level'] === 1) {
                 var b = {
@@ -241,7 +239,7 @@ var images_buildings = {
     "A_Evt_March_XXI_Eggshell_Pavillon":"https://i.ibb.co/hHQ0mVV/eggshell-pavilon.png",
     "A_Evt_March_XXI_Phoenix_Water_Mill":"https://i.ibb.co/JmBphzj/phoenix-water-mill.png",
     "A_Evt_March_XXI_Phoenix_Rider":"https://i.ibb.co/JrZm2B6/phoenix-rider.png",
-    "A_Evt_Evo_March_XXI_Ashen_Phoenix":"",
+    "A_Evt_Evo_March_XXI_Ashen_Phoenix":"https://i.ibb.co/4tF9PqC/evo-ashen-phoenix.png",
     "A_Evt_HolyCodexGreen":"",
     "A_Evt_HolyCodexYellow":"",
     "A_Evt_HolyCodexRed":"",

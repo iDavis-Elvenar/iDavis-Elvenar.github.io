@@ -17,7 +17,6 @@ function readBuildingsJSON() {
     $.get('database/buildings.json')
         .done(data => {
             //HANDLE FILTERS
-            console.log("APEBECA")
             var eventSelect = document.getElementById('input_event');
             var filterEventData = eventSelect.options[eventSelect.selectedIndex].value;
             var productionSelect = document.getElementById('input_production');
@@ -66,12 +65,12 @@ function readBuildingsJSON() {
                 td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
                 var td12 = document.createElement('td');
                 td12.style.width = "40%";
-                td12.innerHTML = `<b>Typ budovy:</b> ${filteredData[i]['type']}<br>
-                                    <b>Čas výstavby:</b> ${filteredData[i]['construction_time']}<br>
-                                    <b>Veľkosť:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
-                                    <b>Súčasťou setu:</b> -<br>
-                                    <b>Dočasný efekt:</b> -<br>
-                                    <b>Dostupnosť:</b> ???`;
+                td12.innerHTML = `<b>Building type:</b> ${filteredData[i]['type']}<br>
+                                    <b>Construction time:</b> ${filteredData[i]['construction_time']}<br>
+                                    <b>Size:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
+                                    <b>Set building:</b> -<br>
+                                    <b>Expiring:</b> -<br>
+                                    <b>Available:</b> ???`;
                 t1r.appendChild(td11);
                 t1r.appendChild(td12);
                 t1body.appendChild(t1r);
@@ -86,7 +85,7 @@ function readBuildingsJSON() {
                 for (var h = 0; h < numberOfChapters + 1; h++) {
                     var th = document.createElement('th');
                     if (h === 0) {
-                        th.innerHTML = `Kapitola / Bonus`;
+                        th.innerHTML = `Chapter / Bonus`;
                     } else {
                         th.innerHTML = `<img src=${chapter_icons[h]}>`;
                     }
@@ -212,16 +211,16 @@ var goods_icons = {
     "sentientelixir": "<img src='https://i.ibb.co/LzqV8H3/sentient-elixir.png'><br>",
     "sentientmagic_dust": "<img src='https://i.ibb.co/MRCdFKn/sentient-dust.png'><br>",
     "sentientgems": "<img src='https://i.ibb.co/sWNdPJx/sentient-gems.png'><br>",
-    "boosted_sentient_plus_0_quality_1": "<img src='https://i.ibb.co/Lv4NLsx/boosted-sentient-quality-1-mini.png'><br>",
-    "boosted_sentient_plus_1_quality_1": "<img src='https://i.ibb.co/H448DrP/boosted-sentient-quality-1-plus-1-mini.png'><br>",
-    "boosted_sentient_plus_2_quality_1": "<img src='https://i.ibb.co/CJgvwGW/boosted-sentient-quality-1-plus-2-mini.png'><br>",
+    "boosted_sentient_plus_0_quality_1": "<img src='https://i.ibb.co/j3NHkyw/boosted-sentient-plus-0-quality-1-mini.png'><br>",
+    "boosted_sentient_plus_1_quality_1": "<img src='https://i.ibb.co/WvC1LQm/boosted-sentient-plus-1-quality-1-mini.png'><br>",
+    "boosted_sentient_plus_2_quality_1": "<img src='https://i.ibb.co/0GzFcvk/boosted-sentient-plus-2-quality-1-mini.png'><br>",
     "boosted_sentient_plus_0_quality_2": "missing img",
-    "boosted_sentient_plus_1_quality_2": "missing img",
-    "boosted_sentient_plus_2_quality_2": "missing img",
+    "boosted_sentient_plus_1_quality_2": "<img src='https://i.ibb.co/j8C7yjz/boosted-sentient-plus-1-quality-2-mini.png'><br>",
+    "boosted_sentient_plus_2_quality_2": "<img src='https://i.ibb.co/1v3vkXS/boosted-sentient-plus-2-quality-2-mini.png'><br>",
     "boosted_sentient_plus_0_quality_3": "missing img",
     "boosted_sentient_plus_1_quality_3": "missing img",
     "boosted_sentient_plus_2_quality_3": "missing img",
-    "unurium": "missing img",
+    "unurium": "<img src='https://i.ibb.co/jGSkcbd/unurium-mini.png'><br>",
     "knowledge_points": "<img src='https://i.ibb.co/CB7JkFY/knowledge-points-new.png'><br>",
     "broken_shards": "<img src='https://i.ibb.co/ZMBLJS3/broken-shard.png'><br>",
     "ins_rf_cn_5": "5%<br><img src='https://image.ibb.co/dJs520/coin-rain.png'><br>",

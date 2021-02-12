@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eab29a78-d47c-4161-9cc2-1033d779da2b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1nFh1VGoEGMTgLWknMEvW7He7R1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\USBWebserver\root\Elvenar-website\images\general" />
+      <recent name="C:\USBWebserver\root\Elvenar-website\images" />
+      <recent name="C:\USBWebserver\root\Elvenar-website" />
+      <recent name="C:\USBWebserver\root\Elvenar-website\events" />
+      <recent name="C:\USBWebserver\root\Elvenar-website\images\events\february_xxi" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eab29a78-d47c-4161-9cc2-1033d779da2b" name="Default Changelist" comment="" />
+      <created>1610991530750</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610991530750</updated>
+      <workItem from="1610991531782" duration="4835000" />
+      <workItem from="1611078035592" duration="11000" />
+      <workItem from="1611574288392" duration="11685000" />
+      <workItem from="1611757899011" duration="593000" />
+      <workItem from="1611958802904" duration="1450000" />
+      <workItem from="1612707966527" duration="9288000" />
+      <workItem from="1612730471995" duration="1391000" />
+      <workItem from="1612784037121" duration="24131000" />
+      <workItem from="1612863619647" duration="1300000" />
+      <workItem from="1612868797809" duration="22345000" />
+      <workItem from="1612947763996" duration="17514000" />
+      <workItem from="1612975088604" duration="10140000" />
+      <workItem from="1613033853629" duration="4657000" />
+      <workItem from="1613048075243" duration="13424000" />
+      <workItem from="1613065134658" duration="188000" />
+      <workItem from="1613067397260" duration="1236000" />
+      <workItem from="1613121646574" duration="873000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613122260194">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1613122260194" />
+    <state x="604" y="355" key="NewPhpFileDialog" timestamp="1612716136103">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="604" y="355" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1612716136103" />
+    <state x="478" y="31" width="579" height="801" key="find.popup" timestamp="1612982978047">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="478" y="31" width="579" height="801" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1612982978047" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1612980354015">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1612980354015" />
+    <state x="452" y="182" width="672" height="665" key="search.everywhere.popup" timestamp="1612958922722">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="452" y="182" width="672" height="665" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1612958922722" />
+    <state x="482" y="186" width="672" height="678" key="search.everywhere.popup/0.0.1638.882@0.0.1638.882" timestamp="1611010820020" />
+  </component>
+</project>
