@@ -32,6 +32,7 @@
 
     <!-- Our JavaScript -->
     <script src="javascript/all_buildings.js"></script>
+    <script src="database/variousData.js"></script>
     <!--<script  src="javascript/config.js"></script>-->
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/config.css">
@@ -118,10 +119,38 @@
                     </select></center>
                 </div>
                 <div class="col-sm">
-                    <center><label for="input_orderBy">Order By:</label>
-                    <select id="input_orderBy" class="custom-select" style="width: 50%; margin-bottom: 10px;" onchange="">
-                        <option value="all_events">Coming Soon</option>
+                    <center><label for="input_orderBy">Order By</label>
+                    <select id="input_orderBy" class="custom-select" style="width: 30%; margin-bottom: 10px;" onchange="">
+                        <option value="all_">All</option>
+                        <option value="providedCulture">Culture per square</option>
+                        <option value="provided_population">Population per square</option>
+                        <option value="money">Money per square per 1h</option>
+                        <option value="supplies">Supplies per square per 1h</option>
+                        <option value="orcs">Orcs per square per 1h</option>
+                        <option value="mana">Mana per square per 1h</option>
+                        <option value="seeds">Seeds per square per 1h</option>
                     </select>
+                        <label for="input_chapter">for chapter:
+                        <select id="input_chapter" class="custom-select" style="width: 40%; margin-bottom: 10px;" onchange="">
+                            <option value="all_">All</option>
+                            <option value="17">17</option>
+                            <option value="16">16</option>
+                            <option value="15">15</option>
+                            <option value="14">14</option>
+                            <option value="13">13</option>
+                            <option value="12">12</option>
+                            <option value="11">11</option>
+                            <option value="10">10</option>
+                            <option value="9">9</option>
+                            <option value="8">8</option>
+                            <option value="7">7</option>
+                            <option value="6">6</option>
+                            <option value="5">5</option>
+                            <option value="4">4</option>
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                        </select></label>
                     </center>
                 </div>
             </div>

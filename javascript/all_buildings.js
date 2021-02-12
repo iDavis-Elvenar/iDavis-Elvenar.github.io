@@ -1,8 +1,4 @@
-var numberOfChapters = 17;
-var chapters = {
-    1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
-    11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII'
-}
+
 
 function readBuildingsJSON() {
     html_alert = document.getElementById('alert');
@@ -23,14 +19,22 @@ function readBuildingsJSON() {
             var filterProductionData = productionSelect.options[productionSelect.selectedIndex].value;
             var appearancesCheckbox = document.getElementById('includeAppearances');
             var includeAppearances = appearancesCheckbox.checked;
+            var orderBySelect = document.getElementById('input_orderBy');
+            var orderByOption = orderBySelect.options[orderBySelect.selectedIndex].value;
+            var isTriggeredOrderBy = orderByOption !== 'all_';
+            var chapterSelect = document.getElementById('input_chapter');
+            var chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
 
 
             document.getElementById('column_with_tables').innerHTML = ``;
             var filteredData = [];
+            //APPLY FILTERS
             for (var i = 0; i < data.length; i++) {
                 if ((filterEvent(filterEventData, data[i]) && filterProduction(filterProductionData, data[i])) ||
                     (includeAppearances && hasAppearance(filterEventData, data[i]))) {
-                    filteredData.push(data[i]);
+                    if (!excludeAsDisabled(data[i])) {
+                        filteredData.push(data[i]);
+                    }
                 }
             }
             if (includeAppearances) {
@@ -45,6 +49,46 @@ function readBuildingsJSON() {
                     }
                 }
             }
+            if (isTriggeredOrderBy) {
+                if (chapterOption === 'all_') {
+                    create_exception("Chapter selection is required when using <strong>Order By</strong>.", 5, 'danger')
+                    return;
+                }
+                for (var j = 0; j < filteredData.length; j++) {
+                    for (var k = 0; k < filteredData.length-1; k++) {
+                        var swap = false;
+                        if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                            if (filteredData[k+1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                                if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
+                                    //ak treba brat do uvahy aj cas
+                                    if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length'])/(filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time']/3600) <
+                                        filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k+1]['width'] * filteredData[k+1]['length'])/(filteredData[k+1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time']/3600)) {
+                                        swap = true;
+                                    }
+                                } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k+1]['width'] * filteredData[k+1]['length'])) {
+                                    //ak to nie je produkcia s casom
+                                    swap = true;
+                                }
+                            }
+                        } else {
+                            swap = true;
+                        }
+                        if (swap) {
+                            let temp = filteredData[k];
+                            filteredData[k] = filteredData[k+1];
+                            filteredData[k+1] = temp;
+                        }
+                    }
+                }
+            }
+            /*console.log("--------------------------")
+            for (var i = 0; i < filteredData.length; i++) {
+                if (filteredData[i]['chapters'][17].hasOwnProperty('seeds')) {
+                    console.log(filteredData[i]['name'])
+                    console.log(filteredData[i]['chapters'][17]['seeds']['value']/(filteredData[i]['width']*filteredData[i]['length'])/(filteredData[i]['chapters'][17]['seeds']['production_time']/3600));
+                }
+            }*/
             for (var i = 0; i < filteredData.length; i++) {
                 var h5 = document.createElement('h5');
                 h5.id = filteredData[i]['id'];
@@ -122,6 +166,31 @@ function readBuildingsJSON() {
                         tr.appendChild(td);
                     }
                     t2body.appendChild(tr);
+                    if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod]) {
+                        var trPerSquare = document.createElement('tr');
+                        for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                            var tdPerSquare = document.createElement('td');
+                            if (ch === 0) {
+                                if (prioritiesProduction.includes(filteredData[i]['all_productions'][prod])) {
+                                    tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square per 1h</h7>`;
+                                } else {
+                                    tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square</h7>`;
+                                }
+                            } else {
+                                if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                    if (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]].hasOwnProperty('production_time')) {
+                                        tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']/(filteredData[i]['length']*filteredData[i]['width'])/(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['production_time']/3600)).toFixed(1)}</h7>`;
+                                    } else {
+                                        tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']/(filteredData[i]['length']*filteredData[i]['width'])).toFixed(1)}</h7>`;
+                                    }
+                                } else {
+                                    tdPerSquare.innerHTML = `-`;
+                                }
+                            }
+                            trPerSquare.appendChild(tdPerSquare);
+                        }
+                        t2body.appendChild(trPerSquare);
+                    }
                 }
                 secondTable.appendChild(t2body);
                 div.appendChild(secondTable);
@@ -174,115 +243,18 @@ function hasAppearance(filterData, objectToPass) {
     return objectToPass['appearances'].hasOwnProperty(filterData);
 }
 
+function excludeAsDisabled(objectToPass) {
+    var select = document.getElementById('input_event');
+    for (var i = 0; i < select.length; i++) {
+        var option = select.options[i];
+        if (option.disabled && objectToPass['id'].toLowerCase().includes(option.value.toLowerCase())) {
+            return true;
+        }
+    }
+    return false;
+}
+
 //readBuildingsJSON();
 
-var goods_icons = {
-    "providedCulture": "<img src='https://image.ibb.co/mEtRZq/culture.png'>",
-    "provided_population": "<img src='https://image.ibb.co/ipAZLV/population.png'>",
-    "money": "<img src='https://image.ibb.co/g5ErZq/money.png'><br>",
-    "supplies": "<img src='https://image.ibb.co/gtNH7A/supplies.png'><br>",
-    "marble": "<img src='https://i.ibb.co/mtYStcp/good-marble-big.png'><br>",
-    "steel": "<img src='https://i.ibb.co/Lds7D9z/good-steel-big.png'><br>",
-    "planks": "<img src='https://i.ibb.co/r38GcfT/good-planks-big.png'><br>",
-    "crystal": "<img src='https://i.ibb.co/C88GHJF/good-crystal-big.png'><br>",
-    "scrolls": "<img src='https://i.ibb.co/hsNXDsb/good-scrolls-big.png'><br>",
-    "silk": "<img src='https://i.ibb.co/PcLs9hT/good-silk-big.png'><br>",
-    "elixir": "<img src='https://i.ibb.co/VDtDYD1/good-elixir-big.png'><br>",
-    "magic_dust": "<img src='https://i.ibb.co/S3HKY7j/good-magic-dust-big.png'><br>",
-    "gems": "<img src='https://i.ibb.co/QCHg8Y5/good-gems-big.png'><br>",
-    "boosted_plus_0_quality_1": "<img src='https://i.ibb.co/gvPd8Mv/boosted-plus-0-quality-1.png'><br>",
-    "boosted_plus_0_quality_2": "<img src='https://i.ibb.co/cgSyp4Z/boosted-plus-0-quality-2.png'><br>",
-    "boosted_plus_0_quality_3": "<img src='https://i.ibb.co/r4fRKKq/boosted-plus-0-quality-3.png'><br>",
-    "boosted_plus_1_quality_1": "<img src='https://image.ibb.co/bVDVDV/goods-quality-1-plus-1.png'><br>",
-    "boosted_plus_2_quality_1": "<img src='https://i.ibb.co/sHDVsM0/goods-quality-1-plus-2.png'><br>",
-    "boosted_plus_1_quality_2": "<img src='https://i.ibb.co/2NC7h3q/goods-quality-2-plus-1.png'><br>",
-    "boosted_plus_2_quality_2": "<img src='https://i.ibb.co/dMHH2Ns/goods-quality-2-plus-2.png'><br>",
-    "boosted_plus_1_quality_3": "<img src='https://image.ibb.co/fOAi4f/goods-quality-3-plus-1.png'><br>",
-    "boosted_plus_2_quality_3": "<img src='https://i.ibb.co/9qqkPBC/goods-quality-3-plus-2.png'><br>",
-    "orcs": "<img src='https://i.ibb.co/Hn5W8XF/orcs.png'><br>",
-    "mana": "<img src='https://image.ibb.co/bzd1Zq/mana.png'><br>",
-    "seeds": "<img src='https://image.ibb.co/c9JtEq/seeds.png'><br>",
-    "sentientmarble": "<img src='https://i.ibb.co/wRN3HJP/sentient-marble.png'><br>",
-    "sentientsteel": "<img src='https://i.ibb.co/wB410LW/sentient-steel.png'><br>",
-    "sentientplanks": "<img src='https://i.ibb.co/HqmkSDk/sentient-wood.png'><br>",
-    "sentientcrystal": "<img src='https://i.ibb.co/Gs7Gqgj/sentient-crystal.png'><br>",
-    "sentientscrolls": "<img src='https://i.ibb.co/Y0Md5dV/sentient-scrolls.png'><br>",
-    "sentientsilk": "<img src='https://i.ibb.co/wznTtMS/sentient-silk.png'><br>",
-    "sentientelixir": "<img src='https://i.ibb.co/LzqV8H3/sentient-elixir.png'><br>",
-    "sentientmagic_dust": "<img src='https://i.ibb.co/MRCdFKn/sentient-dust.png'><br>",
-    "sentientgems": "<img src='https://i.ibb.co/sWNdPJx/sentient-gems.png'><br>",
-    "boosted_sentient_plus_0_quality_1": "<img src='https://i.ibb.co/j3NHkyw/boosted-sentient-plus-0-quality-1-mini.png'><br>",
-    "boosted_sentient_plus_1_quality_1": "<img src='https://i.ibb.co/WvC1LQm/boosted-sentient-plus-1-quality-1-mini.png'><br>",
-    "boosted_sentient_plus_2_quality_1": "<img src='https://i.ibb.co/0GzFcvk/boosted-sentient-plus-2-quality-1-mini.png'><br>",
-    "boosted_sentient_plus_0_quality_2": "missing img",
-    "boosted_sentient_plus_1_quality_2": "<img src='https://i.ibb.co/j8C7yjz/boosted-sentient-plus-1-quality-2-mini.png'><br>",
-    "boosted_sentient_plus_2_quality_2": "<img src='https://i.ibb.co/1v3vkXS/boosted-sentient-plus-2-quality-2-mini.png'><br>",
-    "boosted_sentient_plus_0_quality_3": "missing img",
-    "boosted_sentient_plus_1_quality_3": "missing img",
-    "boosted_sentient_plus_2_quality_3": "missing img",
-    "unurium": "<img src='https://i.ibb.co/jGSkcbd/unurium-mini.png'><br>",
-    "knowledge_points": "<img src='https://i.ibb.co/CB7JkFY/knowledge-points-new.png'><br>",
-    "broken_shards": "<img src='https://i.ibb.co/ZMBLJS3/broken-shard.png'><br>",
-    "ins_rf_cn_5": "5%<br><img src='https://image.ibb.co/dJs520/coin-rain.png'><br>",
-    "ins_rf_cn_10": "10%<br><img src='https://image.ibb.co/dJs520/coin-rain.png'><br>",
-    "ins_rf_cn_15": "15%<br><img src='https://image.ibb.co/dJs520/coin-rain.png'><br>",
-    "ins_rf_cn_20": "20%<br><img src='https://image.ibb.co/dJs520/coin-rain.png'><br>",
-    "ins_rf_cn_25": "25%<br><img src='https://image.ibb.co/dJs520/coin-rain.png'><br>",
-    "ins_rf_cn_33": "33%<br><img src='https://image.ibb.co/dJs520/coin-rain.png'><br>",
-    "ins_rf_cn_50": "50%<br><img src='https://image.ibb.co/dJs520/coin-rain.png'><br>",
-    "ins_rf_cn_100": "100%<br><img src='https://image.ibb.co/dJs520/coin-rain.png'><br>",
-    "ins_rf_spl_5": "5%<br><img src='https://image.ibb.co/c8e7FL/supply-windfall.png'><br>",
-    "ins_rf_spl_10": "10%<br><img src='https://image.ibb.co/c8e7FL/supply-windfall.png'><br>",
-    "ins_rf_spl_15": "15%<br><img src='https://image.ibb.co/c8e7FL/supply-windfall.png'><br>",
-    "ins_rf_spl_20": "20%<br><img src='https://image.ibb.co/c8e7FL/supply-windfall.png'><br>",
-    "ins_rf_spl_25": "25%<br><img src='https://image.ibb.co/c8e7FL/supply-windfall.png'><br>",
-    "ins_rf_spl_33": "33%<br><img src='https://image.ibb.co/c8e7FL/supply-windfall.png'><br>",
-    "ins_rf_spl_50": "50%<br><img src='https://image.ibb.co/c8e7FL/supply-windfall.png'><br>",
-    "ins_rf_spl_100": "100%<br><img src='https://image.ibb.co/c8e7FL/supply-windfall.png'><br>",
-    "ins_rf_grr_5": "5%<br><img src='https://i.ibb.co/vvxT5fD/ins-grr.png'><br>",
-    "ins_rf_grr_10": "10%<br><img src='https://i.ibb.co/vvxT5fD/ins-grr.png'><br>",
-    "ins_rf_grr_15": "15%<br><img src='https://i.ibb.co/vvxT5fD/ins-grr.png'><br>",
-    "ins_rf_grr_20": "20%<br><img src='https://i.ibb.co/vvxT5fD/ins-grr.png'><br>",
-    "ins_rf_grr_25": "25%<br><img src='https://i.ibb.co/vvxT5fD/ins-grr.png'><br>",
-    "ins_rf_grr_33": "33%<br><img src='https://i.ibb.co/vvxT5fD/ins-grr.png'><br>",
-    "ins_rf_grr_50": "50%<br><img src='https://i.ibb.co/vvxT5fD/ins-grr.png'><br>",
-    "ins_rf_grr_100": "100%<br><img src='https://i.ibb.co/vvxT5fD/ins-grr.png'><br>",
-    "ins_kp_aw_1": "1 VB<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png'><br>",
-    "ins_kp_aw_3": "3 VB<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png'><br>",
-    "ins_kp_aw_5": "5 VB<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png'><br>",
-    "ins_kp_aw_7": "7 VB<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png'><br>",
-    "ins_kp_aw_10": "10 VB<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png'><br>",
-    "ins_kp_aw_15": "15 VB<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png'><br>",
-    "ins_kp_aw_20": "20 VB<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png'><br>",
-    "ins_kp_aw_30": "30 VB<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png'><br>",
-    "ins_rs_1": "<img src='https://i.ibb.co/s6kzbrx/ins-rs.png'><br>",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": ""
-}
 
-var chapter_icons = {
-    1: "https://i.ibb.co/kQF5s0q/ch1.png",
-    2: "https://i.ibb.co/DfkmS1H/ch2.png",
-    3: "https://i.ibb.co/mFkxVRb/ch3.png",
-    4: "https://i.ibb.co/TcDB1Vx/ch4.png",
-    5: "https://i.ibb.co/F61wRpp/ch5.png",
-    6: "https://i.ibb.co/qYDnBNk/ch6.png",
-    7: "https://i.ibb.co/7yHBTJV/ch7.png",
-    8: "https://i.ibb.co/sWcQSrp/ch8.png",
-    9: "https://i.ibb.co/tsm2HCs/ch9.png",
-    10: "https://i.ibb.co/sqkZ7FN/ch10.png",
-    11: "https://i.ibb.co/D4sgMFf/ch11.png",
-    12: "https://i.ibb.co/KVrY4M2/ch12.png",
-    13: "https://i.ibb.co/Sx7bcfG/ch13.png",
-    14: "https://i.ibb.co/5h3nr8K/ch14.png",
-    15: "https://i.ibb.co/mbhNzvt/ch15.png",
-    16: "https://i.ibb.co/qjFYznn/ch16.png",
-    17: "https://i.ibb.co/W5CtfR2/ch17.png"
-}
+

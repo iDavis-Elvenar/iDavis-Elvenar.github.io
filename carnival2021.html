@@ -34,6 +34,7 @@
         THISv-->
     <!-- Our JavaScript -->
     <script src="javascript/all_buildings.js"></script>
+    <script src="database/variousData.js"></script>
     <!--<script  src="javascript/config.js"></script>-->
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/config.css">
@@ -304,6 +305,12 @@
         <option value="all_events" selected>...</option>
     </select>
     <input hidden type="checkbox" id="includeAppearances" name="" value="" checked>
+    <select hidden id="input_orderBy" class="custom-select" style="width: 30%; margin-bottom: 10px;" onchange="">
+        <option value="all_">All</option>
+    </select>
+    <select hidden id="input_chapter" class="custom-select" style="width: 40%; margin-bottom: 10px;" onchange="">
+        <option value="all_">All</option>
+    </select>
 
 
 

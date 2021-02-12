@@ -162,6 +162,10 @@ h7, .h7 {
     padding: 3px;
 }
 
+.table-td-highlighted {
+    background: #ccffb3;
+}
+
 .message-content a:hover, .notice-content a:hover {
     text-decoration: underline;
 }
