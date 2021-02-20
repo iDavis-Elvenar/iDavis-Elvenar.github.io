@@ -30,6 +30,10 @@ a.text-white:hover, a.text-white:focus {
     background-color: #ffc34d !important;
 }
 
+.bg-all_events_header_background {
+    background-color: #ffe6e6 !important;
+}
+
 .rounded-top50 {
     border-top-left-radius: 0.50rem !important;
     border-top-right-radius: 0.50rem !important;

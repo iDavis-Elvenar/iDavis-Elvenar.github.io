@@ -20,9 +20,12 @@
     <script src="javascript/global_functions.js"></script>
 
     <!-- Our JavaScript -->
+    <!--<script src="javascript/all_buildings.js"></script>-->
+    <script src="database/variousData.js"></script>
+    <script src="javascript/all_events.js"></script>
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/login.css">
-    <title>Login Page</title>
+    <title>All Events</title>
     <link rel="icon" href="images/general/idavis.png" type="image/x-icon">
 
     <!-- NAVIGATION -->
@@ -49,7 +52,7 @@
     </nav>
 </head>
 
-<body>
+<body onload="displayDailyPrizes()">
 
 <!-- EXCEPTION HANDLER -->
 
@@ -60,19 +63,94 @@
     </button>
 </div>
 
-<div class="container" style="margin-top: 100px">
-    <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto ">
-            <div class="card card-signin my-5 ">
-                <div class="card-body ">
+<div style="padding-top: 59px;">
+    <div style="width: 100%;">
+        <div class="container-thick center bg-skin_light_background rounded-bottom75" style="width: 100%; padding-top: 20px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px;">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="row center" style="height: 33%; vertical-align: middle">
+                        <div class="col-sm">
+                            <center><label for="input_event">Select event:</label>
+                            <select id="input_event" class="custom-select" style="width: 80%; margin-bottom: 10px;">
+                                <option value="march_xxi_" disabled>Easter (available soon)</option>
+                                <option value="february_xxi_" selected="selected">Elvarian Carnival</option>
+                            </select>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="row center" style="height: 33%; vertical-align: middle">
+                        <div class="col-sm">
+                            <center><label for="input_orderBy">Order By</label>
+                                <select id="input_orderBy" class="custom-select" style="width: 30%; margin-bottom: 10px;" onchange="">
+                                    <option value="day">Day</option>
+                                    <option value="providedCulture">Culture per square</option>
+                                    <option value="provided_population">Population per square</option>
+                                    <option value="money">Money per square per 1h</option>
+                                    <option value="supplies">Supplies per square per 1h</option>
+                                    <option value="orcs">Orcs per square per 1h</option>
+                                    <option value="mana">Mana per square per 1h</option>
+                                    <option value="seeds">Seeds per square per 1h</option>
+                                </select>
+                                <label for="input_chapter" class="d-inline-block">for chapter:
+                                    <select id="input_chapter" class="custom-select d-inline-block" style="width: 40%; margin-bottom: 10px;" onchange="">
+                                        <option value="all_">All</option>
+                                        <option value="17">17</option>
+                                        <option value="16">16</option>
+                                        <option value="15">15</option>
+                                        <option value="14">14</option>
+                                        <option value="13">13</option>
+                                        <option value="12">12</option>
+                                        <option value="11">11</option>
+                                        <option value="10">10</option>
+                                        <option value="9">9</option>
+                                        <option value="8">8</option>
+                                        <option value="7">7</option>
+                                        <option value="6">6</option>
+                                        <option value="5">5</option>
+                                        <option value="4">4</option>
+                                        <option value="3">3</option>
+                                        <option value="2">2</option>
+                                        <option value="1">1</option>
+                                    </select></label>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="row center" style="height: 33%; position: relative" >
+                        <button class="btn btn-sm btn-success btn-block text-uppercase" style="margin-top: 20px; margin-bottom: 0px; vertical-align: middle" onclick="displayDailyPrizes(); changeEventBanner()">Generate Buildings</button>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <center>
+                    <img id="event_banner" src="https://i.ibb.co/NLRxJ7y/EL-akcia-karneval-2021-banner.png" style="width: 50%;">
+                    </center>
+                </div>
+            </div>
 
-                    <h5 class="card-title text-center">Content coming soon!</h5>
+        </div>
+    </div>
+</div>
+
+
+<!-- SKRYTE SELECTY -->
+<select hidden id="input_production" class="form-select form-select-sm" aria-label=".form-select-sm example" onchange="">
+    <option value="all_events" selected>...</option>
+</select>
+<input hidden type="checkbox" id="includeAppearances" name="" value="" checked>
+
+
+<div id="event_main" style="padding-top: 20px;">
+    <div id="event_buildings" style="width: 100%;">
+        <div class="container center bg-skin_light_background rounded-bottom75 rounded-top75" style="width: 100%; padding-top: 20px; padding-bottom: 20px;">
+            <div class="row">
+                <div id="column_with_tables" class="col-sm">
+
                 </div>
             </div>
         </div>
-
     </div>
 </div>
+
+
 </body>
 
 </html>

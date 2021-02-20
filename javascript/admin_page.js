@@ -40,11 +40,14 @@ function handleBuildingsJSON() {
                 if (allBuildings[i].hasOwnProperty('production')) {
                     b['earlyPickupTime'] = allBuildings[i]['production']['earlyPickupTime'];
                 }
-                for (var key in eventAppearances) {
-                    if (eventAppearances[key].includes(b['id'])) {
-                        var appearance = {};
-                        appearance[key] = eventAppearances[key].indexOf(b['id']);
-                        b['appearances'] = appearance;
+                for (var key in dailyPrizes) {
+                    for (var ix = 0; ix < dailyPrizes[key].length; ix++) {
+                        if (dailyPrizes[key][ix].includes(b['id'])) {
+                            if (!b['appearances'].hasOwnProperty(key)) {
+                                b['appearances'][key] = new Array();
+                            }
+                            b['appearances'][key].push(ix);
+                        }
                     }
                 }
                 var setOfAllProductions = new Set();

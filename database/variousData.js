@@ -23,7 +23,14 @@ var chapters = {
     11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII'
 }
 
-var eventAppearances = {
+var dailyPrizes = {
+
+    "march_xxi_": [
+        "A_Evt_March_XXI_Phoenix_Chick",
+        "A_Evt_March_XXI_Eggshell_Shrine",
+        "A_Evt_March_XXI_Temple_of_Embers"
+    ],
+
     "february_xxi_": [
         "A_Evt_February_XXI_Elder_Snowman",
         "A_Evt_February_XXI_Yeti_Hot_Spring",
@@ -48,6 +55,11 @@ var eventAppearances = {
         "A_Evt_Car_XX_Dwarven_Wagon",
         "A_Evt_February_XXI_Lifeblood_Cone"
     ]
+}
+
+var eventBanners = {
+    "february_xxi_": "https://i.ibb.co/NLRxJ7y/EL-akcia-karneval-2021-banner.png",
+    "march_xxi_": "https://i.ibb.co/w7zVyFH/EL-akcia-zima-2020-banner.png"
 }
 
 
