@@ -34,7 +34,7 @@ var dailyPrizes = {
     "february_xxi_": [
         "A_Evt_February_XXI_Elder_Snowman",
         "A_Evt_February_XXI_Yeti_Hot_Spring",
-        "",
+        "INS_RF_GRR_10",
         "A_Evt_Car_XIX_Elven_Wagon",
         "A_Evt_Car_XX_Deers_Golems",
         "A_Evt_Val_Balcony",
@@ -44,14 +44,14 @@ var dailyPrizes = {
         "A_Evt_February_XXI_Dawn_Of_Spring_Shrine",
         "A_Evt_Car_XIX_Beauty_Puppet",
         "A_Evt_Car_XX_Dragon_Puppet",
-        "",
+        "INS_UNIT_LR_10",
         "A_Evt_Car_XIX_Orc_Wagon",
         "A_Evt_February_XXI_Sun_Loop",
-        "",
+        "INS_KP_AW_10",
         "A_Evt_February_XXI_Elder_Snowman",
         "A_Evt_Car_XX_Bubble_Mask",
         "A_Evt_Car_XX_Constructs_Wagon",
-        "",
+        "INS_UNIT_LM_10",
         "A_Evt_Car_XX_Dwarven_Wagon",
         "A_Evt_February_XXI_Lifeblood_Cone"
     ]

@@ -1,5 +1,5 @@
 var images_buildings = {
-    "A_Evt_December_XX_GoblinSleigh":"https://i.ibb.co/58CC9x2/sculpture-phoenix.png",//"https://i.ibb.co/z5P2ktw/goblinsleigh.png",
+    "A_Evt_December_XX_GoblinSleigh":"https://i.ibb.co/z5P2ktw/goblinsleigh.png",
     "A_Evt_December_XX_FrozenOwlCave":"https://i.ibb.co/0nTs8S1/frozenowlcave.png",
     "A_Evt_December_XX_GoblinGiftShop":"https://i.ibb.co/v4P7XRY/goblingiftshop.png",
     "A_Evt_December_XX_IceCreamConeFram":"https://i.ibb.co/HYQ2CRj/icecreamconefram.png",

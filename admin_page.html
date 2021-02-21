@@ -23,6 +23,8 @@
     <script src="javascript/admin_page.js"></script>
     <script src="database/variousData.js"></script>
     <script src="database/imagesBuildings.js"></script>
+    <script src="database/imagesItems.js"></script>
+    <script src="database/items.js"></script>
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/login.css">
     <title>Administrator Page</title>
@@ -83,6 +85,15 @@
 
     <input class="form-control-file" type="file" id="buildings_file" name="filename">
     <button class="btn btn-lg btn-warning btn-block text-uppercase"  onclick="generateJSONBuildingsIDs()">GENERATE</button>
+
+</div>
+
+<div class="container" style="margin-bottom: 20px;">
+    <p>Pregenerovanie itemov</p>
+
+
+    <input class="form-control-file" type="file" id="items_file" name="filename">
+    <button class="btn btn-lg btn-warning btn-block text-uppercase"  onclick="regenerateItemsJSON()">GENERATE</button>
 
 </div>
 </body>

@@ -180,5 +180,51 @@ function generateJSONBuildingsIDs() {
     };
 }
 
+function regenerateItemsJSON() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('items_file').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var allItems = [];
+    var result = [];
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        for (let i = 0; i < data.length; i++) {
+            console.log('itemsCount');
+            allItems.push(data[i]);
+        }
+        for (let i = 0; i < allItems.length; i++) {
+            var b = {
+                "id": allItems[i]['id'],
+                "name": allItems[i]['name'],
+                "appearances": {}
+            };
+            if (imagesItems.hasOwnProperty(b['id'])) {
+                if (imagesItems[b['id']] != "") {
+                    b['image'] = images_buildings[b['id']];
+                } else {
+                    b['image'] = "https://i.ibb.co/j3JHrXg/placeholder.jpg";
+                }
+            } else {
+                b['image'] = "https://i.ibb.co/j3JHrXg/placeholder.jpg";
+            }
+            for (var key in dailyPrizes) {
+                for (var ix = 0; ix < dailyPrizes[key].length; ix++) {
+                    if (dailyPrizes[key][ix].includes(b['id'])) {
+                        if (!b['appearances'].hasOwnProperty(key)) {
+                            b['appearances'][key] = new Array();
+                        }
+                        b['appearances'][key].push(ix);
+                    }
+                }
+            }
+            result.push(b);
+        }
+        console.log(result);
+        saveJSON( JSON.stringify(result), "items.json" );
+        create_exception("Data Generated!",10,'success');
+
+    }
+}
 
 

@@ -36,6 +36,28 @@ function displayDailyPrizes() {
                     }
                 }
             }
+            for (var i = 0; i < Object.keys(dailyPrizes[selectedEvent]).length; i++) {
+                if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_') {
+                    var baseID = dailyPrizes[selectedEvent][i].substring(0, dailyPrizes[selectedEvent][i].lastIndexOf('_')+1);
+                    var instantObject = {};
+                    instantObject['id'] = baseID;
+                    instantObject['name'] = instants[baseID]['name'];
+                    instantObject['image_big'] = instants[baseID]['image_big'];
+                    instantObject['image_small'] = instants[baseID]['image_small'];
+                    if (instants[baseID].hasOwnProperty('image_big_secondary')) {
+                        instantObject['image_big_secondary'] = instants[baseID]['image_big_secondary'];
+                    }
+                    if (instants[baseID].hasOwnProperty('image_small_secondary')) {
+                        instantObject['image_small_secondary'] = instants[baseID]['image_small_secondary'];
+                    }
+                    instantObject['production_type'] = instants[baseID]['production_type'];
+                    instantObject['value'] = parseInt(dailyPrizes[selectedEvent][i].substring(dailyPrizes[selectedEvent][i].lastIndexOf('_')+1, dailyPrizes[selectedEvent][i].length));
+                    if (instantObject['production_type'] === 'h') {
+                        instantObject['value'] /= 60;
+                    }
+                    filteredDataDict[i] = instantObject;
+                }
+            }
             var filteredData = [];
             for (var key in filteredDataDict) {
                 filteredData.push(filteredDataDict[key])
@@ -46,6 +68,9 @@ function displayDailyPrizes() {
                     return;
                 }
                 filteredData = Array.from(new Set(filteredData));
+                filteredData = filteredData.filter(function(x) {
+                    return x['id'].toLowerCase().includes('a_evt')
+                })
                 for (var j = 0; j < filteredData.length; j++) {
                     for (var k = 0; k < filteredData.length-1; k++) {
                         var swap = false;
@@ -95,91 +120,140 @@ function displayDailyPrizes() {
                 var t1r = document.createElement('tr');
                 var td11 = document.createElement('td');
                 td11.style.width = "60%";
-                td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
-                var td12 = document.createElement('td');
-                td12.style.width = "40%";
-                td12.innerHTML = `<b>Building type:</b> ${filteredData[i]['type']}<br>
+                if (filteredData[i]['id'].toLowerCase().includes('a_evt')) {
+                    td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
+                    var td12 = document.createElement('td');
+                    td12.style.width = "40%";
+                    td12.innerHTML = `<b>Building type:</b> ${filteredData[i]['type']}<br>
                                     <b>Construction time:</b> ${filteredData[i]['construction_time']}<br>
                                     <b>Size:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>Set building:</b> -<br>
                                     <b>Expiring:</b> -<br>
                                     <b>Available:</b> ???`;
-                t1r.appendChild(td11);
-                t1r.appendChild(td12);
-                t1body.appendChild(t1r);
-                firstTable.appendChild(t1body);
-                div.appendChild(firstTable);
+                    t1r.appendChild(td11);
+                    t1r.appendChild(td12);
+                    t1body.appendChild(t1r);
+                    firstTable.appendChild(t1body);
+                    div.appendChild(firstTable);
 
-                var secondTable = document.createElement('table');
-                secondTable.className = 'table-primary text-center';
-                secondTable.style.width = "100%";
-                var t2body = document.createElement('tbody');
-                var tr21 = document.createElement('tr');
-                for (var h = 0; h < numberOfChapters + 1; h++) {
-                    var th = document.createElement('th');
-                    if (h === 0) {
-                        th.innerHTML = `Chapter / Bonus`;
-                    } else {
-                        th.innerHTML = `<img src=${chapter_icons[h]}>`;
+                    var secondTable = document.createElement('table');
+                    secondTable.className = 'table-primary text-center';
+                    secondTable.style.width = "100%";
+                    var t2body = document.createElement('tbody');
+                    var tr21 = document.createElement('tr');
+                    for (var h = 0; h < numberOfChapters + 1; h++) {
+                        var th = document.createElement('th');
+                        if (h === 0) {
+                            th.innerHTML = `Chapter / Bonus`;
+                        } else {
+                            th.innerHTML = `<img src=${chapter_icons[h]}>`;
+                        }
+                        tr21.appendChild(th);
                     }
-                    tr21.appendChild(th);
-                }
-                t2body.appendChild(tr21);
-                for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
+                    t2body.appendChild(tr21);
+                    for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
+                        var tr = document.createElement('tr');
+                        for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                            var td = document.createElement('td');
+                            if (ch === 0) {
+                                td.innerHTML = `${goods_icons[filteredData[i]['all_productions'][prod]]}`;
+                                if (filteredData[i]['all_productions'][prod] != 'providedCulture' &&
+                                    filteredData[i]['all_productions'][prod] != 'provided_population') {
+                                    //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
+                                    for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
+                                        if (filteredData[i]['chapters'][chPom].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                            td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][filteredData[i]['all_productions'][prod]]['production_time'] / 60 / 60}h</b>`;
+                                            break;
+                                        }
+                                    }
+                                }
+                            } else {
+                                if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                    if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]] === 'object') {
+                                        td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']}`;
+                                    } else {
+                                        td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]}`;
+                                    }
+                                } else {
+                                    td.innerHTML = `-`;
+                                }
+                            }
+                            tr.appendChild(td);
+                        }
+                        t2body.appendChild(tr);
+                        if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod]) {
+                            var trPerSquare = document.createElement('tr');
+                            for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                                var tdPerSquare = document.createElement('td');
+                                if (ch === 0) {
+                                    if (prioritiesProduction.includes(filteredData[i]['all_productions'][prod])) {
+                                        tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square per 1h</h7>`;
+                                    } else {
+                                        tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square</h7>`;
+                                    }
+                                } else {
+                                    if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                        if (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]].hasOwnProperty('production_time')) {
+                                            tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['production_time'] / 3600)).toFixed(1)}</h7>`;
+                                        } else {
+                                            tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1)}</h7>`;
+                                        }
+                                    } else {
+                                        tdPerSquare.innerHTML = `-`;
+                                    }
+                                }
+                                trPerSquare.appendChild(tdPerSquare);
+                            }
+                            t2body.appendChild(trPerSquare);
+                        }
+                    }
+                } else {  //INSTANTS
+                    if (filteredData[i].hasOwnProperty('image_big_secondary')) {
+                        td11.innerHTML = `<img src="${filteredData[i]['image_big']}">/<img src="${filteredData[i]['image_big_secondary']}">`;
+                    } else {
+                        td11.innerHTML = `<img src="${filteredData[i]['image_big']}">`;
+                    }
+                    var td12 = document.createElement('td');
+                    td12.style.width = "40%";
+                    td12.innerHTML = `<b>Type:</b> instant<br>`;
+                    t1r.appendChild(td11);
+                    t1r.appendChild(td12);
+                    t1body.appendChild(t1r);
+                    firstTable.appendChild(t1body);
+                    div.appendChild(firstTable);
+
+                    var secondTable = document.createElement('table');
+                    secondTable.className = 'table-primary text-center';
+                    secondTable.style.width = "100%";
+                    var t2body = document.createElement('tbody');
+                    var tr21 = document.createElement('tr');
+                    for (var h = 0; h < numberOfChapters + 1; h++) {
+                        var th = document.createElement('th');
+                        if (h === 0) {
+                            th.innerHTML = `Chapter / Bonus`;
+                        } else {
+                            th.innerHTML = `<img src=${chapter_icons[h]}>`;
+                        }
+                        tr21.appendChild(th);
+                    }
+                    t2body.appendChild(tr21);
                     var tr = document.createElement('tr');
                     for (var ch = 0; ch < numberOfChapters + 1; ch++) {
                         var td = document.createElement('td');
                         if (ch === 0) {
-                            td.innerHTML = `${goods_icons[filteredData[i]['all_productions'][prod]]}`;
-                            if (filteredData[i]['all_productions'][prod] != 'providedCulture' &&
-                                filteredData[i]['all_productions'][prod] != 'provided_population') {
-                                //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
-                                for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
-                                    if (filteredData[i]['chapters'][chPom].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
-                                        td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][filteredData[i]['all_productions'][prod]]['production_time'] / 60 / 60}h</b>`;
-                                        break;
-                                    }
-                                }
+                            if (filteredData[i].hasOwnProperty('image_small_secondary')) {
+                                td.innerHTML = `${filteredData[i]['value']}${filteredData[i]['production_type']}<br>
+                                    <img src="${filteredData[i]['image_small']}">/<img src="${filteredData[i]['image_small_secondary']}">`;
+                            } else {
+                                td.innerHTML = `${filteredData[i]['value']}${filteredData[i]['production_type']}<br>
+                                            <img src="${filteredData[i]['image_small']}">`;
                             }
                         } else {
-                            if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
-                                if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]] === 'object') {
-                                    td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']}`;
-                                } else {
-                                    td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]}`;
-                                }
-                            } else {
-                                td.innerHTML = `-`;
-                            }
+                            td.innerHTML = `1`;
                         }
                         tr.appendChild(td);
                     }
                     t2body.appendChild(tr);
-                    if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod]) {
-                        var trPerSquare = document.createElement('tr');
-                        for (var ch = 0; ch < numberOfChapters + 1; ch++) {
-                            var tdPerSquare = document.createElement('td');
-                            if (ch === 0) {
-                                if (prioritiesProduction.includes(filteredData[i]['all_productions'][prod])) {
-                                    tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square per 1h</h7>`;
-                                } else {
-                                    tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square</h7>`;
-                                }
-                            } else {
-                                if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
-                                    if (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]].hasOwnProperty('production_time')) {
-                                        tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']/(filteredData[i]['length']*filteredData[i]['width'])/(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['production_time']/3600)).toFixed(1)}</h7>`;
-                                    } else {
-                                        tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']/(filteredData[i]['length']*filteredData[i]['width'])).toFixed(1)}</h7>`;
-                                    }
-                                } else {
-                                    tdPerSquare.innerHTML = `-`;
-                                }
-                            }
-                            trPerSquare.appendChild(tdPerSquare);
-                        }
-                        t2body.appendChild(trPerSquare);
-                    }
                 }
                 secondTable.appendChild(t2body);
                 div.appendChild(secondTable);
