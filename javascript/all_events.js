@@ -209,9 +209,9 @@ function displayDailyPrizes() {
                     }
                 } else {  //INSTANTS
                     if (filteredData[i].hasOwnProperty('image_big_secondary')) {
-                        td11.innerHTML = `<img src="${filteredData[i]['image_big']}">/<img src="${filteredData[i]['image_big_secondary']}">`;
+                        td11.innerHTML = `<img src="${filteredData[i]['image_big']}" style="margin-left: 10%;">/<img src="${filteredData[i]['image_big_secondary']}">`;
                     } else {
-                        td11.innerHTML = `<img src="${filteredData[i]['image_big']}">`;
+                        td11.innerHTML = `<img src="${filteredData[i]['image_big']}" style="margin-left: 10%;">`;
                     }
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
