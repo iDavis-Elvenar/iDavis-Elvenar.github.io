@@ -23,7 +23,6 @@ function displayDailyPrizes() {
             var isTriggeredOrderBy = orderByOption !== 'day';
             var chapterSelect = document.getElementById('input_chapter');
             var chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
-            var isSelectedChapter = chapterOption !== 'all';
 
 
             document.getElementById('column_with_tables').innerHTML = ``;
@@ -62,15 +61,31 @@ function displayDailyPrizes() {
             for (var key in filteredDataDict) {
                 filteredData.push(filteredDataDict[key])
             }
+            if (orderByOption === 'day') {
+                chapterOption = 'all_';
+                chapterSelect.value = 'all_';
+            }
             if (isTriggeredOrderBy) {
                 if (chapterOption === 'all_') {
-                    create_exception("Chapter selection is required when using <strong>Order By</strong>.", 5, 'danger')
-                    return;
+                    let maxim = 0;
+                    let chapt = 0;
+                    for(i = 0; i < chapterSelect.length; i++) {
+                        chapt = parseInt(chapterSelect.options[i].value);
+                        if (chapt > maxim) {
+                            maxim = chapt;
+                        }
+                    }
+                    chapterSelect.value = maxim.toString();
+                    chapterOption = maxim;
+
                 }
                 filteredData = Array.from(new Set(filteredData));
                 filteredData = filteredData.filter(function(x) {
-                    return x['id'].toLowerCase().includes('a_evt')
+                    return x['id'].toLowerCase().includes('a_evt') && x['chapters'][chapterOption].hasOwnProperty(orderByOption)
                 })
+                if (filteredData.length === 0) {
+                    create_exception("No buildings found. Please adjust your <strong>Order By</strong> options.", 3, 'primary')
+                }
                 for (var j = 0; j < filteredData.length; j++) {
                     for (var k = 0; k < filteredData.length-1; k++) {
                         var swap = false;
@@ -99,15 +114,18 @@ function displayDailyPrizes() {
                     }
                 }
             }
+            if (orderByOption === 'day') {
+                createCalendar(filteredData);
+            }
             for (var i = 0; i < filteredData.length; i++) {
                 var h5 = document.createElement('h5');
                 h5.id = filteredData[i]['id'];
                 h5.className = "card-title text-center text-title font-weight-bold";
                 h5.style.textAlign = "left";
                 if (!isTriggeredOrderBy) {
-                    h5.innerHTML = `DAY ${i + 1}: ${filteredData[i]['name']}<br>`;
+                    h5.innerHTML = `Day ${i + 1}: ${filteredData[i]['name']}<br>`;
                 } else {
-                    h5.innerHTML = `DAY ${filteredData[i]['appearances'][selectedEvent].map(x => x+1)}: ${filteredData[i]['name']}<br>`;
+                    h5.innerHTML = `Day ${filteredData[i]['appearances'][selectedEvent].map(x => x+1)}: ${filteredData[i]['name']}<br>`;
                 }
                 document.getElementById('column_with_tables').appendChild(h5);
                 var div = document.createElement('div');
@@ -262,6 +280,61 @@ function displayDailyPrizes() {
             create_exception("Buildings Generated!", 3, 'success');
         })
     //td.innerHTML = `<img src="https://image.ibb.co/g5ErZq/money.png"+<br>`;
+}
+
+function createCalendar(filteredData) {
+    var h5 = document.createElement('h5');
+    h5.id = 'calendar';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: Daily Prizes Calendar ::..<br>`;
+    document.getElementById('column_with_tables').appendChild(h5);
+    var div = document.createElement('div');
+    div.style.textAlign = 'center';
+    div.style.marginBottom = '10px';
+    var divBBTable = document.createElement('div');
+    divBBTable.className = 'bbTable';
+    var table = document.createElement('table');
+    table.className = 'table-primary';
+    table.style.width = '100%';
+    var tbody = document.createElement('tbody');
+    var numberOfRows = Math.floor(filteredData.length/7);
+    if (filteredData.length % 7 > 0) {
+        numberOfRows++;
+    }
+    var daysCounter = 1;
+    var prizesCounter = 1;
+    for (var line = 0; line < numberOfRows; line++) {
+        var trDays = document.createElement('tr');
+        for (var i = 0; i < 7; i++) {
+            var tdDay = document.createElement('td');
+            if (daysCounter <= filteredData.length) {
+                tdDay.innerHTML = `<b>${daysCounter}. day</b>`
+            }
+            trDays.appendChild(tdDay);
+            daysCounter++;
+        }
+        tbody.appendChild(trDays);
+        var trPrizes = document.createElement('tr');
+        for (var i = 0; i < 7; i++) {
+            var tdPrize = document.createElement('td');
+            if (prizesCounter <= filteredData.length) {
+                if (filteredData[prizesCounter-1].hasOwnProperty('value')) {
+                    tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${filteredData[prizesCounter - 1]['name']} 
+                            (${filteredData[prizesCounter-1]['value']}${filteredData[prizesCounter-1]['production_type']})</a>`;
+                } else {
+                    tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${filteredData[prizesCounter - 1]['name']}</a>`;
+                }
+            }
+            trPrizes.appendChild(tdPrize);
+            prizesCounter++;
+        }
+        tbody.appendChild(trPrizes);
+    }
+    table.appendChild(tbody);
+    divBBTable.appendChild(table);
+    div.appendChild(divBBTable);
+    document.getElementById('column_with_tables').appendChild(div);
 }
 
 function filterEvent(filterData, objectToPass) {

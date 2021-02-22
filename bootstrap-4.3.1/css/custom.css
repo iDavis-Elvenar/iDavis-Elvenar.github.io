@@ -30,8 +30,8 @@ a.text-white:hover, a.text-white:focus {
     background-color: #ffc34d !important;
 }
 
-.bg-all_events_header_background {
-    background-color: #ffe6e6 !important;
+.bg-skin_astable_background {
+    background-color: #ccb790 !important;
 }
 
 .rounded-top50 {
@@ -246,4 +246,8 @@ h7, .h7 {
     color:#fff;
     background-color:#0099ff;
     border-color:#007acc
+}
+
+select option[value="providedCulture"]   {
+    background-image:url("https://image.ibb.co/mEtRZq/culture.png");
 }

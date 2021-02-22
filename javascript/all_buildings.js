@@ -49,10 +49,23 @@ function readBuildingsJSON() {
                     }
                 }
             }
+            if (orderByOption === 'all_') {
+                chapterOption = 'all_';
+                chapterSelect.value = 'all_';
+            }
             if (isTriggeredOrderBy) {
                 if (chapterOption === 'all_') {
-                    create_exception("Chapter selection is required when using <strong>Order By</strong>.", 5, 'danger')
-                    return;
+                    let maxim = 0;
+                    let chapt = 0;
+                    for(i = 0; i < chapterSelect.length; i++) {
+                        chapt = parseInt(chapterSelect.options[i].value);
+                        if (chapt > maxim) {
+                            maxim = chapt;
+                        }
+                    }
+                    chapterSelect.value = maxim.toString();
+                    chapterOption = maxim;
+
                 }
                 for (var j = 0; j < filteredData.length; j++) {
                     for (var k = 0; k < filteredData.length-1; k++) {
