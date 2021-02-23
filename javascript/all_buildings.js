@@ -4,7 +4,7 @@ function readBuildingsJSON() {
     html_alert = document.getElementById('alert');
     html_close = document.getElementById('close');
     html_text = document.getElementById('text');
-    //tieto 3 riadky vyssie su kopiou z exception_handler.js > onload funkcie, kedze all_buildings.html > body onload
+    //tieto 3 riadky vyssie su kopiou z exception_handler.js > onload funkcie, kedze buildings.html > body onload
     //to berie prioritne
     async function createExc() {
         create_exception("Loading...", 10000, 'primary');
