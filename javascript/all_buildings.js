@@ -28,7 +28,6 @@ function setAndReload(id) {
 
 
 function readBuildingsJSON() {
-    console.log(selectedEvoStages)
     html_alert = document.getElementById('alert');
     html_close = document.getElementById('close');
     html_text = document.getElementById('text');
