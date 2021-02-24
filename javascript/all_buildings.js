@@ -1,6 +1,34 @@
+var selectedEvoStages = {
+    "A_Evt_Evo_February_XXI_Everblossom_Sleigh" : 9,
+    "A_Evt_Evo_Autumn_XIX_Bear_Brown" : 9,
+    "A_Evt_Evo_Autumn_XIX_Bear_Ice" : 9,
+    "A_Evt_Evo_Winter_XIX_Gingerbread_Mansion" : 9,
+    "A_Evt_Evo_Summer_XIX_Stonehenge" : 9,
+    "A_Evt_Evo_September_XX_Moon_Bear" : 9,
+    "A_Evt_Evo_October_XX_Witches_Hut" : 9,
+    "A_Evt_Evo_May_XX_May_Tree" : 9,
+    "A_Evt_Evo_March_XXI_Ashen_Phoenix" : 9,
+    "A_Evt_Evo_MM_XIX_WaterTower" : 9,
+    "A_Evt_Evo_July_XX_Wise_Golem" : 9,
+    "A_Evt_Evo_Easter_XX_Phoenix_Coldfire" : 9,
+    "A_Evt_Evo_Easter_XIX_Phoenix_Yellow" : 9,
+    "A_Evt_Evo_Easter_XIX_Phoenix_Red" : 9,
+    "A_Evt_Evo_Easter_XIX_Phoenix_Blue" : 9,
+    "A_Evt_Evo_December_XX_Watchful_Winter_Owl" : 9,
+    "A_Evt_Evo_Car_XX_Burukbrak_Gaelagil" : 9,
+    "A_Evt_Evo_Autumn_XIX_Bear_Panda" : 9
+}
+
+function setAndReload(id) {
+    let select = document.getElementById(id.id);
+    let stage = select.options[select.selectedIndex].value;
+    selectedEvoStages[id.id.substring(12)] = parseInt(stage);
+    readBuildingsJSON();
+}
 
 
 function readBuildingsJSON() {
+    console.log(selectedEvoStages)
     html_alert = document.getElementById('alert');
     html_close = document.getElementById('close');
     html_text = document.getElementById('text');
@@ -24,7 +52,6 @@ function readBuildingsJSON() {
             var isTriggeredOrderBy = orderByOption !== 'all_';
             var chapterSelect = document.getElementById('input_chapter');
             var chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
-
 
             document.getElementById('column_with_tables').innerHTML = ``;
             var filteredData = [];
@@ -70,22 +97,78 @@ function readBuildingsJSON() {
                 for (var j = 0; j < filteredData.length; j++) {
                     for (var k = 0; k < filteredData.length-1; k++) {
                         var swap = false;
-                        if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                            if (filteredData[k+1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                                if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
-                                    //ak treba brat do uvahy aj cas
-                                    if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length'])/(filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time']/3600) <
-                                        filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k+1]['width'] * filteredData[k+1]['length'])/(filteredData[k+1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time']/3600)) {
+                        let displayStage1 = selectedEvoStages[filteredData[k]['id']];
+                        let displayStage2 = selectedEvoStages[filteredData[k+1]['id']];
+                        if (!filteredData[k]['id'].toLowerCase().includes('_evo_') && !filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
+                            if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                                if (filteredData[k + 1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                                    if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
+                                        //ak treba brat do uvahy aj cas
+                                        if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600) <
+                                            filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600)) {
+                                            swap = true;
+                                        }
+                                    } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                        filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                                        //ak to nie je produkcia s casom
                                         swap = true;
                                     }
-                                } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k+1]['width'] * filteredData[k+1]['length'])) {
-                                    //ak to nie je produkcia s casom
-                                    swap = true;
                                 }
+                            } else {
+                                swap = true;
                             }
                         } else {
-                            swap = true;
+                            if (filteredData[k]['id'].toLowerCase().includes('_evo_') && !filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
+                                if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1].hasOwnProperty(orderByOption)) {
+                                    if (filteredData[k + 1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                                        if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption].hasOwnProperty('production_time')) {
+                                            if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['production_time'] / 3600) <
+                                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600)) {
+                                                swap = true;
+                                            }
+                                        } else if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                            filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                                            swap = true;
+                                        }
+                                    }
+                                } else {
+                                    swap = true;
+                                }
+                            } else {
+                                if (!filteredData[k]['id'].toLowerCase().includes('_evo_') && filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
+                                    if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                                        if (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2].hasOwnProperty(orderByOption)) {
+                                            if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
+                                                if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600) <
+                                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['production_time'] / 3600)) {
+                                                    swap = true;
+                                                }
+                                            } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                                                swap = true;
+                                            }
+                                        }
+                                    } else {
+                                        swap = true;
+                                    }
+                                } else {
+                                    if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                                        if (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2].hasOwnProperty(orderByOption)) {
+                                            if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption].hasOwnProperty('production_time')) {
+                                                if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['production_time'] / 3600) <
+                                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['production_time'] / 3600)) {
+                                                    swap = true;
+                                                }
+                                            } else if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                                                swap = true;
+                                            }
+                                        }
+                                    } else {
+                                        swap = true;
+                                    }
+                                }
+                            }
                         }
                         if (swap) {
                             let temp = filteredData[k];
@@ -103,6 +186,12 @@ function readBuildingsJSON() {
                 }
             }*/
             for (var i = 0; i < filteredData.length; i++) {
+                let isEvo = false;
+                let displayStage = 0;
+                if (filteredData[i]['id'].toLowerCase().includes('_evo_')) {
+                    isEvo = true;
+                    displayStage = selectedEvoStages[filteredData[i]['id']];
+                }
                 var h5 = document.createElement('h5');
                 h5.id = filteredData[i]['id'];
                 h5.className = "card-title text-center text-title font-weight-bold";
@@ -122,12 +211,38 @@ function readBuildingsJSON() {
                 td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
                 var td12 = document.createElement('td');
                 td12.style.width = "40%";
-                td12.innerHTML = `<b>Building type:</b> ${filteredData[i]['type']}<br>
+                if (isEvo) {
+                    td12.innerHTML = `<b>Building type:</b> ${filteredData[i]['type']}<br>
                                     <b>Construction time:</b> ${filteredData[i]['construction_time']}<br>
                                     <b>Size:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>Set building:</b> -<br>
                                     <b>Expiring:</b> -<br>
-                                    <b>Available:</b> ???`;
+                                    <b>Upgrade costs:</b> ${evoUpgradeCosts[filteredData[i]['id']]}<br>`;
+                    if (feedingEffectsDescriptions.hasOwnProperty(filteredData[i]['id'])) {
+                        td12.innerHTML += `<b>Feeding effect:</b> -<br>`;
+                    }
+                    td12.innerHTML += `<b>Stage:</b><br>`;
+                    let tempArr = ["","","","","","","","","",""];
+                    tempArr[selectedEvoStages[filteredData[i]['id']]] = "selected";
+                    td12.innerHTML += `<select id="${"input_stage_"+filteredData[i]['id']}" class="custom-select" style="width: 70px; margin-bottom: 10px;" onchange="setAndReload(this)">
+                            <option value="9" ${tempArr[9]}>10</option>
+                            <option value="8" ${tempArr[8]}>9</option>
+                            <option value="7" ${tempArr[7]}>8</option>
+                            <option value="6" ${tempArr[6]}>7</option>
+                            <option value="5" ${tempArr[5]}>6</option>
+                            <option value="4" ${tempArr[4]}>5</option>
+                            <option value="3" ${tempArr[3]}>4</option>
+                            <option value="2" ${tempArr[2]}>3</option>
+                            <option value="1" ${tempArr[1]}>2</option>
+                            <option value="0" ${tempArr[0]}>1</option>
+                        </select>`;
+                } else {
+                    td12.innerHTML = `<b>Building type:</b> ${filteredData[i]['type']}<br>
+                                    <b>Construction time:</b> ${filteredData[i]['construction_time']}<br>
+                                    <b>Size:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
+                                    <b>Set building:</b> -<br>
+                                    <b>Expiring:</b> -`;
+                }
                 t1r.appendChild(td11);
                 t1r.appendChild(td12);
                 t1body.appendChild(t1r);
@@ -149,60 +264,130 @@ function readBuildingsJSON() {
                     tr21.appendChild(th);
                 }
                 t2body.appendChild(tr21);
-                for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
-                    var tr = document.createElement('tr');
-                    for (var ch = 0; ch < numberOfChapters + 1; ch++) {
-                        var td = document.createElement('td');
-                        if (ch === 0) {
-                            td.innerHTML = `${goods_icons[filteredData[i]['all_productions'][prod]]}`;
-                            if (filteredData[i]['all_productions'][prod] != 'providedCulture' &&
-                                filteredData[i]['all_productions'][prod] != 'provided_population') {
-                                //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
-                                for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
-                                    if (filteredData[i]['chapters'][chPom].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
-                                        td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][filteredData[i]['all_productions'][prod]]['production_time'] / 60 / 60}h</b>`;
-                                        break;
-                                    }
-                                }
-                            }
-                        } else {
-                            if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
-                                if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]] === 'object') {
-                                    td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']}`;
-                                } else {
-                                    td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]}`;
-                                }
-                            } else {
-                                td.innerHTML = `-`;
-                            }
-                        }
-                        tr.appendChild(td);
-                    }
-                    t2body.appendChild(tr);
-                    if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod]) {
-                        var trPerSquare = document.createElement('tr');
+                if (!isEvo) {
+                    for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
+                        var tr = document.createElement('tr');
                         for (var ch = 0; ch < numberOfChapters + 1; ch++) {
-                            var tdPerSquare = document.createElement('td');
+                            var td = document.createElement('td');
                             if (ch === 0) {
-                                if (prioritiesProduction.includes(filteredData[i]['all_productions'][prod])) {
-                                    tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square per 1h</h7>`;
-                                } else {
-                                    tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square</h7>`;
+                                td.innerHTML = `${goods_icons[filteredData[i]['all_productions'][prod]]}`;
+                                if (filteredData[i]['all_productions'][prod] != 'providedCulture' &&
+                                    filteredData[i]['all_productions'][prod] != 'provided_population') {
+                                    //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
+                                    for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
+                                        if (filteredData[i]['chapters'][chPom].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                            td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][filteredData[i]['all_productions'][prod]]['production_time'] / 60 / 60}h</b>`;
+                                            break;
+                                        }
+                                    }
                                 }
                             } else {
                                 if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
-                                    if (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]].hasOwnProperty('production_time')) {
-                                        tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']/(filteredData[i]['length']*filteredData[i]['width'])/(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['production_time']/3600)).toFixed(1)}</h7>`;
+                                    if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]] === 'object') {
+                                        td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']}`;
                                     } else {
-                                        tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value']/(filteredData[i]['length']*filteredData[i]['width'])).toFixed(1)}</h7>`;
+                                        td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]}`;
                                     }
                                 } else {
-                                    tdPerSquare.innerHTML = `-`;
+                                    td.innerHTML = `-`;
                                 }
                             }
-                            trPerSquare.appendChild(tdPerSquare);
+                            tr.appendChild(td);
                         }
-                        t2body.appendChild(trPerSquare);
+                        t2body.appendChild(tr);
+                        if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod]) {
+                            var trPerSquare = document.createElement('tr');
+                            for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                                var tdPerSquare = document.createElement('td');
+                                if (ch === 0) {
+                                    if (prioritiesProduction.includes(filteredData[i]['all_productions'][prod])) {
+                                        tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square per 1h</h7>`;
+                                    } else {
+                                        tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square</h7>`;
+                                    }
+                                } else {
+                                    if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                        if (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]].hasOwnProperty('production_time')) {
+                                            tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['production_time'] / 3600)).toFixed(1)}</h7>`;
+                                        } else {
+                                            tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1)}</h7>`;
+                                        }
+                                    } else {
+                                        tdPerSquare.innerHTML = `-`;
+                                    }
+                                }
+                                trPerSquare.appendChild(tdPerSquare);
+                            }
+                            t2body.appendChild(trPerSquare);
+                        }
+                    }
+                } else {
+                    for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
+                        var tr = document.createElement('tr');
+                        let existsInThisStage = false;
+                        for (let chAttempt = 1; chAttempt < numberOfChapters+1; chAttempt++) {
+                            if (filteredData[i]['chapters'][chAttempt][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                existsInThisStage = true;
+                                break;
+                            }
+                        }
+                        if (existsInThisStage) {
+                            for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                                var td = document.createElement('td');
+                                if (ch === 0) {
+                                    td.innerHTML = `${goods_icons[filteredData[i]['all_productions'][prod]]}`;
+                                    if (filteredData[i]['all_productions'][prod] != 'providedCulture' &&
+                                        filteredData[i]['all_productions'][prod] != 'provided_population') {
+                                        //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
+                                        for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
+                                            if (filteredData[i]['chapters'][chPom][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                                td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][displayStage][filteredData[i]['all_productions'][prod]]['production_time'] / 60 / 60}h</b>`;
+                                                break;
+                                            }
+                                        }
+                                    }
+                                } else {
+                                    if (filteredData[i]['chapters'][ch][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                        if (typeof filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod]] === 'object') {
+                                            td.innerHTML = `${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod]]['value']).toFixed(0)}`;
+                                        } else {
+                                            td.innerHTML = `${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod]]).toFixed(0)}`;
+                                        }
+                                    } else {
+                                        td.innerHTML = `-`;
+                                    }
+                                }
+                                tr.appendChild(td);
+                            }
+                        }
+                        t2body.appendChild(tr);
+                        if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod]) {
+                            if (existsInThisStage) {
+                                var trPerSquare = document.createElement('tr');
+                                for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                                    var tdPerSquare = document.createElement('td');
+                                    if (ch === 0) {
+                                        if (prioritiesProduction.includes(filteredData[i]['all_productions'][prod])) {
+                                            tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square per 1h</h7>`;
+                                        } else {
+                                            tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square</h7>`;
+                                        }
+                                    } else {
+                                        if (filteredData[i]['chapters'][ch][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod])) {
+                                            if (filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod]].hasOwnProperty('production_time')) {
+                                                tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod]]['production_time'] / 3600)).toFixed(1)}</h7>`;
+                                            } else {
+                                                tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1)}</h7>`;
+                                            }
+                                        } else {
+                                            tdPerSquare.innerHTML = `-`;
+                                        }
+                                    }
+                                    trPerSquare.appendChild(tdPerSquare);
+                                }
+                            }
+                            t2body.appendChild(trPerSquare);
+                        }
                     }
                 }
                 secondTable.appendChild(t2body);

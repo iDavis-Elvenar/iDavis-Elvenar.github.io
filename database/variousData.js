@@ -5,7 +5,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "mana", "seeds", "sentientmarble", "sentientsteel", "sentientplanks", "sentientcrystal", "sentientscrolls", "sentientsilk", "sentientelixir", "sentientmagic_dust", "sentientgems", "boosted_sentient_plus_0_quality_1", "boosted_sentient_plus_1_quality_1", "boosted_sentient_plus_2_quality_1",
     "boosted_sentient_plus_0_quality_2", "boosted_sentient_plus_1_quality_2", "boosted_sentient_plus_2_quality_2",
     "boosted_sentient_plus_0_quality_3", "boosted_sentient_plus_1_quality_3", "boosted_sentient_plus_2_quality_3",
-    "unurium", "knowledge_points", "broken_shards", "ins_rf_cn_5", "ins_rf_cn_10", "ins_rf_cn_15", "ins_rf_cn_20",
+    "unurium", "mc_hr", "knowledge_points", "broken_shards", "ins_rf_cn_5", "ins_rf_cn_10", "ins_rf_cn_15", "ins_rf_cn_20",
     "ins_rf_cn_25", "ins_rf_cn_33", "ins_rf_cn_50", "ins_rf_cn_100", "ins_rf_spl_5", "ins_rf_spl_10", "ins_rf_spl_15",
     "ins_rf_spl_20", "ins_rf_spl_25", "ins_rf_spl_33", "ins_rf_spl_50", "ins_rf_spl_100", "ins_rf_grr_5",
     "ins_rf_grr_10", "ins_rf_grr_15", "ins_rf_grr_20", "ins_rf_grr_25", "ins_rf_grr_33", "ins_rf_grr_50", "ins_rf_grr_100",
@@ -26,9 +26,7 @@ var chapters = {
 var dailyPrizes = {
 
     "march_xxi_": [
-        "A_Evt_March_XXI_Phoenix_Chick",
-        "A_Evt_March_XXI_Eggshell_Shrine",
-        "A_Evt_March_XXI_Temple_of_Embers"
+        "A_Evt_March_XXI_Phoenix_Chick"
     ],
 
     "february_xxi_": [
@@ -60,6 +58,14 @@ var dailyPrizes = {
 var eventBanners = {
     "february_xxi_": "https://i.ibb.co/NLRxJ7y/EL-akcia-karneval-2021-banner.png",
     "march_xxi_": "https://i.ibb.co/w7zVyFH/EL-akcia-zima-2020-banner.png"
+}
+
+var evoUpgradeCosts = {
+
+}
+
+var feedingEffectsDescriptions = {
+
 }
 
 

@@ -46,7 +46,7 @@
             <span class="navbar-toggler-icon"> </span>
         </button>
         <a href="index.html" class="navbar-brand text-white"><img src="images/general/home.png" width="30" style="position: relative;"> Home</a>
-        <a href="buildings.html" class="nav-link text-warning">All Buildings</a>
+        <a href="buildings.html" class="nav-link text-warning">&#x203A; All Buildings &#x2039;</a>
         <a href="events.html" class="nav-link text-warning">All Events</a>
 
         <div>
@@ -56,7 +56,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link text-white" href=#>Soon</a>
-                <a class="nav-item nav-link text-white" href="admin_page.html">Admin page</a>
+                <a class="nav-item nav-link text-white" href="admin.html">Admin page</a>
             </div>
         </div>
     </nav>
@@ -164,10 +164,23 @@
                     <button class="btn btn-sm btn-success btn-block text-uppercase" style="margin-top: 10px;" onclick="readBuildingsJSON()">Filter & Generate</button>
                 </div>
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
-                    <center><label for="input_placeholder">Filter soon:</label>
-                    <select id="input_placeholder" class="custom-select" style="width: 50%;" onchange="">
-                        <option value="all_events">Coming Soon</option>
-                    </select>
+                    <center><!--<label for="input_stage">Stage for evolving buildings:
+                        <select id="input_stage" class="custom-select" style="width: 25%; margin-bottom: 10px;" onchange="">
+                            <option value="9">10</option>
+                            <option value="8">9</option>
+                            <option value="7">8</option>
+                            <option value="6">7</option>
+                            <option value="5">6</option>
+                            <option value="4">5</option>
+                            <option value="3">4</option>
+                            <option value="2">3</option>
+                            <option value="1">2</option>
+                            <option value="0">1</option>
+                        </select></label>-->
+                        <label for="input_placeholder">Filter soon:</label>
+                        <select id="input_placeholder" class="custom-select" style="width: 50%;" onchange="">
+                            <option value="all_events">Coming Soon</option>
+                        </select>
                     </center>
                 </div>
             </div>
