@@ -61,14 +61,46 @@ var eventBanners = {
 }
 
 var evoUpgradeCosts = {
-
+    "A_Evt_Evo_February_XXI_Everblossom_Sleigh" : "1x Carnival Artifact",
+    "A_Evt_Evo_Autumn_XIX_Bear_Brown" : "1x Bear Artifact",
+    "A_Evt_Evo_Autumn_XIX_Bear_Ice" : "1x Bear Artifact",
+    "A_Evt_Evo_Winter_XIX_Gingerbread_Mansion" : "1x Gingerbread Artifact",
+    "A_Evt_Evo_Summer_XIX_Stonehenge" : "1x Stonehenge Artifact",
+    "A_Evt_Evo_September_XX_Moon_Bear" : "1x Moon Bear Artifact",
+    "A_Evt_Evo_October_XX_Witches_Hut" : "1x Witch's Hut Artifact",
+    "A_Evt_Evo_May_XX_May_Tree" : "1x Festive May Tree Artifact",
+    "A_Evt_Evo_March_XXI_Ashen_Phoenix" : "1x Ashen Phoenix Artifact",
+    "A_Evt_Evo_MM_XIX_WaterTower" : "1x Mermaid Artifact",
+    "A_Evt_Evo_July_XX_Wise_Golem" : "1x Wise Golem Artifact",
+    "A_Evt_Evo_Easter_XX_Phoenix_Coldfire" : "1x Coldfire Phoenix Artifact",
+    "A_Evt_Evo_Easter_XIX_Phoenix_Yellow" : "1x Phoenix Artifact",
+    "A_Evt_Evo_Easter_XIX_Phoenix_Red" : "1x Phoenix Artifact",
+    "A_Evt_Evo_Easter_XIX_Phoenix_Blue" : "1x Phoenix Artifact",
+    "A_Evt_Evo_December_XX_Watchful_Winter_Owl" : "1x Watchful Winter Owl Artifact",
+    "A_Evt_Evo_Car_XX_Burukbrak_Gaelagil" : "1x Valentines Artifact",
+    "A_Evt_Evo_Autumn_XIX_Bear_Panda" : "1x Bear Artifact"
 }
 
 var feedingEffectsDescriptions = {
-
+    "A_Evt_Evo_Autumn_XIX_Bear_Brown" : `<img src="https://i.ibb.co/9rSkBkw/unit-production-boost.png">`,
+    "A_Evt_Evo_Autumn_XIX_Bear_Ice" : `<img src="https://i.ibb.co/NZ1xsbt/tournament-cooldown-reduction.png">`,
+    "A_Evt_Evo_September_XX_Moon_Bear" : `<img src="https://i.ibb.co/CB7JkFY/knowledge-points-new.png">`,
+    "A_Evt_Evo_March_XXI_Ashen_Phoenix" : `<img src="https://i.ibb.co/cYv1Scg/EL-akcia-ve-k-noc-2019-event-currency.png">`,
+    "A_Evt_Evo_Easter_XX_Phoenix_Coldfire" : `<img src="https://i.ibb.co/CB7JkFY/knowledge-points-new.png">`,
+    "A_Evt_Evo_Easter_XIX_Phoenix_Yellow" : `<img src="https://i.ibb.co/s5zgfs4/goods-production.png">`,
+    "A_Evt_Evo_Easter_XIX_Phoenix_Red" : `<img src="https://i.ibb.co/3TG2xv7/unit-attack-enhance.png">`,
+    "A_Evt_Evo_Easter_XIX_Phoenix_Blue" : `<img src="https://i.ibb.co/J749d95/mm-boost.png">`,
+    "A_Evt_Evo_December_XX_Watchful_Winter_Owl" : `<img src="https://i.ibb.co/gvPd8Mv/boosted-plus-0-quality-1.png">`,
+    "A_Evt_Evo_Autumn_XIX_Bear_Panda" : `<img src="https://i.ibb.co/0YD0JRZ/boosted-quality-1.png">`
 }
 
-
+var buildingTypes = {
+    "culture_residential" : "Culture-residential",
+    "culture" : "Culture",
+    "" : "",
+    "" : "",
+    "" : ""
+}
 
 var goods_icons = {
     "providedCulture": "<img src='https://image.ibb.co/mEtRZq/culture.png'>",
@@ -108,12 +140,12 @@ var goods_icons = {
     "boosted_sentient_plus_0_quality_1": "<img src='https://i.ibb.co/j3NHkyw/boosted-sentient-plus-0-quality-1-mini.png'><br>",
     "boosted_sentient_plus_1_quality_1": "<img src='https://i.ibb.co/WvC1LQm/boosted-sentient-plus-1-quality-1-mini.png'><br>",
     "boosted_sentient_plus_2_quality_1": "<img src='https://i.ibb.co/0GzFcvk/boosted-sentient-plus-2-quality-1-mini.png'><br>",
-    "boosted_sentient_plus_0_quality_2": "missing img",
+    "boosted_sentient_plus_0_quality_2": "T5+0 ",
     "boosted_sentient_plus_1_quality_2": "<img src='https://i.ibb.co/j8C7yjz/boosted-sentient-plus-1-quality-2-mini.png'><br>",
     "boosted_sentient_plus_2_quality_2": "<img src='https://i.ibb.co/1v3vkXS/boosted-sentient-plus-2-quality-2-mini.png'><br>",
-    "boosted_sentient_plus_0_quality_3": "missing img",
-    "boosted_sentient_plus_1_quality_3": "missing img",
-    "boosted_sentient_plus_2_quality_3": "missing img",
+    "boosted_sentient_plus_0_quality_3": "T6+0 ",
+    "boosted_sentient_plus_1_quality_3": "T6+1 ",
+    "boosted_sentient_plus_2_quality_3": "T6+2 ",
     "unurium": "<img src='https://i.ibb.co/jGSkcbd/unurium-mini.png'><br>",
     "knowledge_points": "<img src='https://i.ibb.co/CB7JkFY/knowledge-points-new.png'><br>",
     "broken_shards": "<img src='https://i.ibb.co/ZMBLJS3/broken-shard.png'><br>",

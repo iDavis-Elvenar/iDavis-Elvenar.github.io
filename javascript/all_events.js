@@ -142,7 +142,7 @@ function displayDailyPrizes() {
                     td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
-                    td12.innerHTML = `<b>Building type:</b> ${filteredData[i]['type']}<br>
+                    td12.innerHTML = `<b>Building type:</b> ${buildingTypes[filteredData[i]['type']]}<br>
                                     <b>Construction time:</b> ${filteredData[i]['construction_time']}<br>
                                     <b>Size:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>Set building:</b> -<br>
@@ -233,7 +233,7 @@ function displayDailyPrizes() {
                     }
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
-                    td12.innerHTML = `<b>Type:</b> instant<br>`;
+                    td12.innerHTML = `<b>Type:</b> Instant<br>`;
                     t1r.appendChild(td11);
                     t1r.appendChild(td12);
                     t1body.appendChild(t1r);
