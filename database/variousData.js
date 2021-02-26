@@ -26,7 +26,9 @@ var chapters = {
 var dailyPrizes = {
 
     "march_xxi_": [
-        "A_Evt_March_XXI_Phoenix_Chick"
+        "A_Evt_March_XXI_Phoenix_Chick",
+		"A_Evt_March_XXI_Eggshell_Pavillon",
+		"INS_RF_GRR_10"
     ],
 
     "february_xxi_": [
@@ -55,12 +57,17 @@ var dailyPrizes = {
     ]
 }
 
-var eventBanners = {
+let eventBanners = {
     "february_xxi_": "https://i.ibb.co/NLRxJ7y/EL-akcia-karneval-2021-banner.png",
     "march_xxi_": "https://i.ibb.co/w7zVyFH/EL-akcia-zima-2020-banner.png"
 }
 
-var evoUpgradeCosts = {
+let eventVideos = {
+    "february_xxi_": "https://www.youtube.com/embed/AS2XrTrF8PM",
+    "march_xxi_": ""
+}
+
+let evoUpgradeCosts = {
     "A_Evt_Evo_February_XXI_Everblossom_Sleigh" : "1x Carnival Artifact",
     "A_Evt_Evo_Autumn_XIX_Bear_Brown" : "1x Bear Artifact",
     "A_Evt_Evo_Autumn_XIX_Bear_Ice" : "1x Bear Artifact",

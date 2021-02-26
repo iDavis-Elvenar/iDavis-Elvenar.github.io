@@ -28,162 +28,55 @@ function setAndReload(id) {
 
 
 function readBuildingsJSON() {
-    html_alert = document.getElementById('alert');
-    html_close = document.getElementById('close');
-    html_text = document.getElementById('text');
-    //tieto 3 riadky vyssie su kopiou z exception_handler.js > onload funkcie, kedze buildings.html > body onload
-    //to berie prioritne
-    async function createExc() {
-        create_exception("Loading...", 10000, 'primary');
-    }
-    createExc();
+    prepSetAlertElements();
+
+    create_exception("Loading...", 10000, 'primary');
+
     $.get('database/buildings.json')
         .done(data => {
-            //HANDLE FILTERS
-            var eventSelect = document.getElementById('input_event');
-            var filterEventData = eventSelect.options[eventSelect.selectedIndex].value;
-            var productionSelect = document.getElementById('input_production');
-            var filterProductionData = productionSelect.options[productionSelect.selectedIndex].value;
-            var appearancesCheckbox = document.getElementById('includeAppearances');
-            var includeAppearances = appearancesCheckbox.checked;
-            var orderBySelect = document.getElementById('input_orderBy');
-            var orderByOption = orderBySelect.options[orderBySelect.selectedIndex].value;
-            var isTriggeredOrderBy = orderByOption !== 'all_';
-            var chapterSelect = document.getElementById('input_chapter');
-            var chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
 
-            document.getElementById('column_with_tables').innerHTML = ``;
-            var filteredData = [];
-            //APPLY FILTERS
-            for (var i = 0; i < data.length; i++) {
-                if ((filterEvent(filterEventData, data[i]) && filterProduction(filterProductionData, data[i])) ||
-                    (includeAppearances && hasAppearance(filterEventData, data[i]))) {
-                    if (!excludeAsDisabled(data[i])) {
-                        filteredData.push(data[i]);
-                    }
-                }
-            }
+            let eventSelect = document.getElementById('input_event');
+            let filterEventData = eventSelect.options[eventSelect.selectedIndex].value;
+            let productionSelect = document.getElementById('input_production');
+            let filterProductionData = productionSelect.options[productionSelect.selectedIndex].value;
+            let appearancesCheckbox = document.getElementById('includeAppearances');
+            let includeAppearances = appearancesCheckbox.checked;
+            let orderBySelect = document.getElementById('input_orderBy');
+            let orderByOption = orderBySelect.options[orderBySelect.selectedIndex].value;
+            let isTriggeredOrderBy = orderByOption !== 'all_';
+            let chapterSelect = document.getElementById('input_chapter');
+            let chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
+
+            clearColumnWithTables();
+
+            let filteredData = filterData(data, filterEventData, filterProductionData, includeAppearances);
+
             if (includeAppearances) {
-                //SORT BY DAY OF APPEARANCE
-                for (var j = 0; j < filteredData.length; j++) {
-                    for (var k = 0; k < filteredData.length-1; k++) {
-                        if (filteredData[k]['appearances'][filterEventData] > filteredData[k+1]['appearances'][filterEventData]) {
-                            let temp = filteredData[k];
-                            filteredData[k] = filteredData[k+1];
-                            filteredData[k+1] = temp;
-                        }
-                    }
-                }
+                filteredData = sortByDay(filteredData, filterEventData);
             }
+
             if (orderByOption === 'all_') {
                 chapterOption = 'all_';
                 chapterSelect.value = 'all_';
             }
+
             if (isTriggeredOrderBy) {
                 if (chapterOption === 'all_') {
                     let maxim = 0;
-                    let chapt = 0;
+                    let chapterTemp = 0;
                     for(i = 0; i < chapterSelect.length; i++) {
-                        chapt = parseInt(chapterSelect.options[i].value);
-                        if (chapt > maxim) {
-                            maxim = chapt;
+                        chapterTemp = parseInt(chapterSelect.options[i].value);
+                        if (chapterTemp > maxim) {
+                            maxim = chapterTemp;
                         }
                     }
                     chapterSelect.value = maxim.toString();
                     chapterOption = maxim;
 
                 }
-                for (var j = 0; j < filteredData.length; j++) {
-                    for (var k = 0; k < filteredData.length-1; k++) {
-                        var swap = false;
-                        let displayStage1 = selectedEvoStages[filteredData[k]['id']];
-                        let displayStage2 = selectedEvoStages[filteredData[k+1]['id']];
-                        if (!filteredData[k]['id'].toLowerCase().includes('_evo_') && !filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
-                            if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                                if (filteredData[k + 1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                                    if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
-                                        //ak treba brat do uvahy aj cas
-                                        if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600) <
-                                            filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600)) {
-                                            swap = true;
-                                        }
-                                    } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                                        filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
-                                        //ak to nie je produkcia s casom
-                                        swap = true;
-                                    }
-                                }
-                            } else {
-                                swap = true;
-                            }
-                        } else {
-                            if (filteredData[k]['id'].toLowerCase().includes('_evo_') && !filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
-                                if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1].hasOwnProperty(orderByOption)) {
-                                    if (filteredData[k + 1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                                        if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption].hasOwnProperty('production_time')) {
-                                            if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['production_time'] / 3600) <
-                                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600)) {
-                                                swap = true;
-                                            }
-                                        } else if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                                            filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
-                                            swap = true;
-                                        }
-                                    }
-                                } else {
-                                    swap = true;
-                                }
-                            } else {
-                                if (!filteredData[k]['id'].toLowerCase().includes('_evo_') && filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
-                                    if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                                        if (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2].hasOwnProperty(orderByOption)) {
-                                            if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
-                                                if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600) <
-                                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['production_time'] / 3600)) {
-                                                    swap = true;
-                                                }
-                                            } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
-                                                swap = true;
-                                            }
-                                        }
-                                    } else {
-                                        swap = true;
-                                    }
-                                } else {
-                                    if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                                        if (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2].hasOwnProperty(orderByOption)) {
-                                            if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption].hasOwnProperty('production_time')) {
-                                                if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['production_time'] / 3600) <
-                                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['production_time'] / 3600)) {
-                                                    swap = true;
-                                                }
-                                            } else if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
-                                                swap = true;
-                                            }
-                                        }
-                                    } else {
-                                        swap = true;
-                                    }
-                                }
-                            }
-                        }
-                        if (swap) {
-                            let temp = filteredData[k];
-                            filteredData[k] = filteredData[k+1];
-                            filteredData[k+1] = temp;
-                        }
-                    }
-                }
+                filteredData = sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption, orderByOption);
             }
-            /*console.log("--------------------------")
-            for (var i = 0; i < filteredData.length; i++) {
-                if (filteredData[i]['chapters'][17].hasOwnProperty('seeds')) {
-                    console.log(filteredData[i]['name'])
-                    console.log(filteredData[i]['chapters'][17]['seeds']['value']/(filteredData[i]['width']*filteredData[i]['length'])/(filteredData[i]['chapters'][17]['seeds']['production_time']/3600));
-                }
-            }*/
+
             for (var i = 0; i < filteredData.length; i++) {
                 let isEvo = false;
                 let displayStage = 0;
@@ -395,7 +288,6 @@ function readBuildingsJSON() {
             }
             create_exception("Buildings Generated!", 3, 'success');
         })
-    //td.innerHTML = `<img src="https://image.ibb.co/g5ErZq/money.png"+<br>`;
 }
 
 function filterEvent(filterData, objectToPass) {
@@ -451,7 +343,125 @@ function excludeAsDisabled(objectToPass) {
     return false;
 }
 
-//readBuildingsJSON();
+function prepSetAlertElements() {
+    html_alert = document.getElementById('alert');
+    html_close = document.getElementById('close');
+    html_text = document.getElementById('text');
+}
+
+function filterData(data, filterEventData, filterProductionData, includeAppearances) {
+    let filteredData = [];
+    for (let i = 0; i < data.length; i++) {
+        if ((filterEvent(filterEventData, data[i]) && filterProduction(filterProductionData, data[i])) ||
+            (includeAppearances && hasAppearance(filterEventData, data[i]))) {
+            if (!excludeAsDisabled(data[i])) {
+                filteredData.push(data[i]);
+            }
+        }
+    }
+    return filteredData;
+}
+
+function sortByDay(filteredData, filterEventData) {
+    let res = filteredData;
+    for (var j = 0; j < res.length; j++) {
+        for (var k = 0; k < res.length-1; k++) {
+            if (res[k]['appearances'][filterEventData] > res[k+1]['appearances'][filterEventData]) {
+                let temp = res[k];
+                res[k] = res[k+1];
+                res[k+1] = temp;
+            }
+        }
+    }
+    return res;
+}
+
+function sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption, orderByOption) {
+    for (var j = 0; j < filteredData.length; j++) {
+        for (var k = 0; k < filteredData.length-1; k++) {
+            var swap = false;
+            let displayStage1 = selectedEvoStages[filteredData[k]['id']];
+            let displayStage2 = selectedEvoStages[filteredData[k+1]['id']];
+            if (!filteredData[k]['id'].toLowerCase().includes('_evo_') && !filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
+                if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                    if (filteredData[k + 1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                        if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
+                            //ak treba brat do uvahy aj cas
+                            if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600) <
+                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600)) {
+                                swap = true;
+                            }
+                        } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                            filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                            //ak to nie je produkcia s casom
+                            swap = true;
+                        }
+                    }
+                } else {
+                    swap = true;
+                }
+            } else {
+                if (filteredData[k]['id'].toLowerCase().includes('_evo_') && !filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
+                    if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1].hasOwnProperty(orderByOption)) {
+                        if (filteredData[k + 1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                            if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption].hasOwnProperty('production_time')) {
+                                if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['production_time'] / 3600) <
+                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600)) {
+                                    swap = true;
+                                }
+                            } else if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                                swap = true;
+                            }
+                        }
+                    } else {
+                        swap = true;
+                    }
+                } else {
+                    if (!filteredData[k]['id'].toLowerCase().includes('_evo_') && filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
+                        if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                            if (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2].hasOwnProperty(orderByOption)) {
+                                if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
+                                    if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600) <
+                                        filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['production_time'] / 3600)) {
+                                        swap = true;
+                                    }
+                                } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                                    swap = true;
+                                }
+                            }
+                        } else {
+                            swap = true;
+                        }
+                    } else {
+                        if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
+                            if (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2].hasOwnProperty(orderByOption)) {
+                                if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption].hasOwnProperty('production_time')) {
+                                    if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['production_time'] / 3600) <
+                                        filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['production_time'] / 3600)) {
+                                        swap = true;
+                                    }
+                                } else if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                                    swap = true;
+                                }
+                            }
+                        } else {
+                            swap = true;
+                        }
+                    }
+                }
+            }
+            if (swap) {
+                let temp = filteredData[k];
+                filteredData[k] = filteredData[k+1];
+                filteredData[k+1] = temp;
+            }
+        }
+    }
+    return filteredData;
+}
 
 
 

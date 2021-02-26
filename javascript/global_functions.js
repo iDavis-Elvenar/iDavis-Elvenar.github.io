@@ -32,5 +32,8 @@ function create_html_linked_text(text,cell){
 function show_full_text(link_id,linked_text_id){
     link_id.style.display = 'none';
     linked_text_id.style.position = 'inherit';
+}
 
+function clearColumnWithTables() {
+    document.getElementById('column_with_tables').innerHTML = ``;
 }

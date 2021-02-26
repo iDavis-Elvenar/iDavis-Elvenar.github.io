@@ -16,25 +16,19 @@ function displayDailyPrizes() {
     $.get('database/buildings.json')
         .done(data => {
             //HANDLE FILTERS
-            var eventSelect = document.getElementById('input_event');
-            var selectedEvent = eventSelect.options[eventSelect.selectedIndex].value;
-            var orderBySelect = document.getElementById('input_orderBy');
-            var orderByOption = orderBySelect.options[orderBySelect.selectedIndex].value;
-            var isTriggeredOrderBy = orderByOption !== 'day';
-            var chapterSelect = document.getElementById('input_chapter');
-            var chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
+
+            let eventSelect = document.getElementById('input_event');
+            let selectedEvent = eventSelect.options[eventSelect.selectedIndex].value;
+            let orderBySelect = document.getElementById('input_orderBy');
+            let orderByOption = orderBySelect.options[orderBySelect.selectedIndex].value;
+            let isTriggeredOrderBy = orderByOption !== 'day';
+            let chapterSelect = document.getElementById('input_chapter');
+            let chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
 
 
-            document.getElementById('column_with_tables').innerHTML = ``;
-            var filteredDataDict = {};
-            //APPLY FILTERS
-            for (var i = 0; i < data.length; i++) {
-                if (hasAppearance(selectedEvent, data[i])) {
-                    for (var ix = 0; ix < data[i]['appearances'][selectedEvent].length; ix++) {
-                        filteredDataDict[data[i]['appearances'][selectedEvent][ix]] = data[i];
-                    }
-                }
-            }
+            clearColumnWithTables();
+            let filteredDataDict = applyFilters(data, selectedEvent);
+
             for (var i = 0; i < Object.keys(dailyPrizes[selectedEvent]).length; i++) {
                 if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_') {
                     var baseID = dailyPrizes[selectedEvent][i].substring(0, dailyPrizes[selectedEvent][i].lastIndexOf('_')+1);
@@ -116,6 +110,9 @@ function displayDailyPrizes() {
             }
             if (orderByOption === 'day') {
                 createCalendar(filteredData);
+                if (eventVideos.hasOwnProperty(selectedEvent) && eventVideos[selectedEvent] !== "") {
+                    insertVideo(selectedEvent);
+                }
             }
             for (var i = 0; i < filteredData.length; i++) {
                 var h5 = document.createElement('h5');
@@ -146,8 +143,7 @@ function displayDailyPrizes() {
                                     <b>Construction time:</b> ${filteredData[i]['construction_time']}<br>
                                     <b>Size:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>Set building:</b> -<br>
-                                    <b>Expiring:</b> -<br>
-                                    <b>Available:</b> ???`;
+                                    <b>Expiring:</b> -`;
                     t1r.appendChild(td11);
                     t1r.appendChild(td12);
                     t1body.appendChild(t1r);
@@ -279,7 +275,6 @@ function displayDailyPrizes() {
             }
             create_exception("Buildings Generated!", 3, 'success');
         })
-    //td.innerHTML = `<img src="https://image.ibb.co/g5ErZq/money.png"+<br>`;
 }
 
 function createCalendar(filteredData) {
@@ -337,10 +332,39 @@ function createCalendar(filteredData) {
     document.getElementById('column_with_tables').appendChild(div);
 }
 
+function insertVideo(selectedEvent) {
+    var h5 = document.createElement('h5');
+    h5.id = 'video';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: Event Video ::..<br>`;
+    document.getElementById('column_with_tables').appendChild(h5);
+    var iframe = document.createElement('iframe');
+    iframe.className = 'center';
+    iframe.style.width = '560px';
+    iframe.style.height = '315.2px';
+    iframe.allow = 'autoplay; encrypted-media';
+    iframe.src = eventVideos[selectedEvent];
+    iframe.style.marginBottom = '15px';
+    document.getElementById('column_with_tables').appendChild(iframe);
+}
+
 function filterEvent(filterData, objectToPass) {
     return objectToPass['id'].toLowerCase().includes(filterData.toLowerCase());
 }
 
 function hasAppearance(filterData, objectToPass) {
     return objectToPass['appearances'].hasOwnProperty(filterData);
+}
+
+function applyFilters(data, selectedEvent) {
+    let result = {};
+    for (var i = 0; i < data.length; i++) {
+        if (hasAppearance(selectedEvent, data[i])) {
+            for (var ix = 0; ix < data[i]['appearances'][selectedEvent].length; ix++) {
+                result[data[i]['appearances'][selectedEvent][ix]] = data[i];
+            }
+        }
+    }
+    return result;
 }
