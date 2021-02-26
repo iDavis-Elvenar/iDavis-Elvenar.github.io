@@ -200,7 +200,7 @@ function displayDailyPrizes() {
                             for (var ch = 0; ch < numberOfChapters + 1; ch++) {
                                 var tdPerSquare = document.createElement('td');
                                 if (ch === 0) {
-                                    if (prioritiesProduction.toLowerCase().includes(filteredData[i]['all_productions'][prod].toLowerCase())) {
+                                    if (prioritiesProduction.includes(filteredData[i]['all_productions'][prod].toLowerCase())) {
                                         tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square per 1h</h7>`;
                                     } else {
                                         tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod]]} / per square</h7>`;
