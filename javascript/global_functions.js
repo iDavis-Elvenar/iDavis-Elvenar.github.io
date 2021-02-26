@@ -1,4 +1,4 @@
-let role_down = false;
+//let role_down = false;
 function rollDownNavigation(){
     if (role_down === false){
         document.getElementById('role_down').style.display = 'none';
@@ -9,7 +9,7 @@ function rollDownNavigation(){
     }
 }
 
-let linked_id = 0;
+//let linked_id = 0;
 function create_html_linked_text(text,cell){
     let link = document.createElement('a');
     let linked_text = document.createElement('span');

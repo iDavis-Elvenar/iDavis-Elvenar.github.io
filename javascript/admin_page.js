@@ -121,7 +121,7 @@ function handleBuildingsJSON() {
                                             var t = {};
                                             t['value'] = allBuildings[k][allDifferentProductions[prod]];
                                             b['chapters'][currentLevelString][allDifferentProductions[prod]] = t;
-                                        } else if (prioritiesProduction.includes(allDifferentProductions[prod])) {
+                                        } else if (prioritiesProduction.includes(allDifferentProductions[prod].toLowerCase())) {
                                             for (var o = 0; o < allBuildings[k]['production']['products'].length; o++) {
                                                 if (allBuildings[k]['production']['products'][o]['revenue']['resources'].hasOwnProperty(allDifferentProductions[prod])) {
                                                     var c = {};
@@ -162,7 +162,7 @@ function handleBuildingsJSON() {
                                                     b['chapters'][currentLevelString][stageString] = {};
                                                 }
                                                 b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]] = t;
-                                            } else if (prioritiesProduction.includes(allDifferentProductions[prod])) {
+                                            } else if (prioritiesProduction.includes(allDifferentProductions[prod].toLowerCase())) {
                                                 for (var o = 0; o < allBuildings[k]['production']['products'].length; o++) {
                                                     if (allBuildings[k]['production']['products'][o]['revenue']['resources'].hasOwnProperty(allDifferentProductions[prod])) {
                                                         var c = {};
