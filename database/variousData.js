@@ -31,7 +31,7 @@ var dailyPrizes = {
 		"INS_RF_GRR_10",
 		"A_Evt_March_XXI_Eggshell_Shrine",
 		"INS_UNIT_LM_15",
-		"",
+		"A_Evt_Easter_XX_Phoenix_Anatomy",
 		"",
 		"",
 		"",
@@ -126,6 +126,12 @@ var buildingTypes = {
     "" : "",
     "" : ""
 }
+
+var discardBuildings = [
+    "A_Evt_Expiring_NegotiationDebuff",
+    "A_Evt_Expiring_OrcBuff",
+    "A_Evt_Expiring_AWAssistance"
+]
 
 var goods_icons = {
     "providedCulture": "<img src='https://image.ibb.co/mEtRZq/culture.png'>",
