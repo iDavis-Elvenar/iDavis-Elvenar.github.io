@@ -170,11 +170,18 @@ function handleBuildingsJSON() {
                                                             b['chapters'][currentLevelString][stageString] = {};
                                                         }
                                                         c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod]];
-                                                        if (evoObject['stages'][stage]['products'][o].hasOwnProperty('factor')) {
-                                                            c['value'] *= evoObject['stages'][stage]['products'][o]['factor'];
+                                                        if (evoObject['stages'][stage]['products'][o].hasOwnProperty('value')) {
+                                                            c['value'] = evoObject['stages'][stage]['products'][o]['value'];
                                                             c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
                                                             b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]] = c;
                                                             usedEvoProducts.push(o);
+                                                        } else {
+                                                            if (evoObject['stages'][stage]['products'][o].hasOwnProperty('factor')) {
+                                                                c['value'] *= evoObject['stages'][stage]['products'][o]['factor'];
+                                                                c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
+                                                                b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]] = c;
+                                                                usedEvoProducts.push(o);
+                                                            }
                                                         }
                                                         break;
                                                     }
