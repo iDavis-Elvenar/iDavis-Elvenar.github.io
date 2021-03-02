@@ -76,7 +76,8 @@ function handleBuildingsJSON() {
                                 if (allBuildings[l].hasOwnProperty('production')) {
                                     for (var p2 = 0; p2 < prioritiesProduction.length; p2++) {
                                         for (var product = 0; product < allBuildings[l]['production']['products'].length; product++) {
-                                            if (allBuildings[l]['production']['products'][product]['revenue']['resources'].hasOwnProperty(prioritiesProduction[p2])) {
+                                            if (allBuildings[l]['production']['products'][product]['revenue']['resources'].hasOwnProperty(prioritiesProduction[p2])
+                                            || allBuildings[l]['production']['products'][product]['revenue']['resources'].hasOwnProperty(prioritiesProduction[p2].toLowerCase())) {
                                                 setOfAllProductions.add(prioritiesProduction[p2]);
                                             }
                                         }
@@ -162,9 +163,11 @@ function handleBuildingsJSON() {
                                                     b['chapters'][currentLevelString][stageString] = {};
                                                 }
                                                 b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]] = t;
-                                            } else if (prioritiesProduction.includes(allDifferentProductions[prod].toLowerCase())) {
+                                            } else if (prioritiesProduction.includes(allDifferentProductions[prod].toLowerCase())
+                                            || prioritiesProduction.includes(allDifferentProductions[prod])) {
                                                 for (var o = 0; o < allBuildings[k]['production']['products'].length; o++) {
-                                                    if (allBuildings[k]['production']['products'][o]['revenue']['resources'].hasOwnProperty(allDifferentProductions[prod])) {
+                                                    if (allBuildings[k]['production']['products'][o]['revenue']['resources'].hasOwnProperty(allDifferentProductions[prod])
+                                                    || allBuildings[k]['production']['products'][o]['revenue']['resources'].hasOwnProperty(allDifferentProductions[prod].toLowerCase())) {
                                                         var c = {};
                                                         if (!b['chapters'][currentLevelString].hasOwnProperty(stageString)) {
                                                             b['chapters'][currentLevelString][stageString] = {};

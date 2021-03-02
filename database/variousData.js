@@ -32,7 +32,7 @@ var dailyPrizes = {
 		"A_Evt_March_XXI_Eggshell_Shrine",
 		"INS_UNIT_LM_15",
 		"A_Evt_Easter_XX_Phoenix_Anatomy",
-		"",
+		"INS_KP_AW_10",
 		"",
 		"",
 		"",
@@ -103,7 +103,8 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Easter_XIX_Phoenix_Blue" : "1x Phoenix Artifact",
     "A_Evt_Evo_December_XX_Watchful_Winter_Owl" : "1x Watchful Winter Owl Artifact",
     "A_Evt_Evo_Car_XX_Burukbrak_Gaelagil" : "1x Valentines Artifact",
-    "A_Evt_Evo_Autumn_XIX_Bear_Panda" : "1x Bear Artifact"
+    "A_Evt_Evo_Autumn_XIX_Bear_Panda" : "1x Bear Artifact",
+    "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat": "1x Queen Faeries Retreat Artifact"
 }
 
 var feedingEffectsDescriptions = {
@@ -130,7 +131,8 @@ var buildingTypes = {
 var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
-    "A_Evt_Expiring_AWAssistance"
+    "A_Evt_Expiring_AWAssistance",
+    "may_xxi_"
 ]
 
 var goods_icons = {

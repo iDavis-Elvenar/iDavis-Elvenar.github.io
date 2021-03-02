@@ -16,7 +16,8 @@ var selectedEvoStages = {
     "A_Evt_Evo_Easter_XIX_Phoenix_Blue" : 9,
     "A_Evt_Evo_December_XX_Watchful_Winter_Owl" : 9,
     "A_Evt_Evo_Car_XX_Burukbrak_Gaelagil" : 9,
-    "A_Evt_Evo_Autumn_XIX_Bear_Panda" : 9
+    "A_Evt_Evo_Autumn_XIX_Bear_Panda" : 9,
+    "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat": 9
 }
 
 function setAndReload(id) {
