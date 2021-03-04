@@ -109,6 +109,7 @@ function displayDailyPrizes() {
                 }
             }
             if (orderByOption === 'day') {
+                console.log(filteredData)
                 createCalendar(filteredData);
                 if (eventVideos.hasOwnProperty(selectedEvent) && eventVideos[selectedEvent] !== "") {
                     insertVideo(selectedEvent);
