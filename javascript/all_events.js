@@ -27,7 +27,14 @@ function displayDailyPrizes() {
 
 
             clearColumnWithTables();
-            let filteredDataDict = applyFilters(data, selectedEvent);
+            let filteredDataDict = {};
+            for (var i = 0; i < data.length; i++) {
+                if (hasAppearance(selectedEvent, data[i])) {
+                    for (var ix = 0; ix < data[i]['appearances'][selectedEvent].length; ix++) {
+                        filteredDataDict[data[i]['appearances'][selectedEvent][ix]] = data[i];
+                    }
+                }
+            }
 
             for (var i = 0; i < Object.keys(dailyPrizes[selectedEvent]).length; i++) {
                 if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_') {
@@ -109,7 +116,6 @@ function displayDailyPrizes() {
                 }
             }
             if (orderByOption === 'day') {
-                console.log(filteredData)
                 createCalendar(filteredData);
                 if (eventVideos.hasOwnProperty(selectedEvent) && eventVideos[selectedEvent] !== "") {
                     insertVideo(selectedEvent);
@@ -360,13 +366,6 @@ function hasAppearance(filterData, objectToPass) {
 
 function applyFilters(data, selectedEvent) {
     let result = {};
-    for (var i = 0; i < data.length; i++) {
-        if (hasAppearance(selectedEvent, data[i])) {
-            for (var ix = 0; ix < data[i]['appearances'][selectedEvent].length; ix++) {
-                result[data[i]['appearances'][selectedEvent][ix]] = data[i];
-            }
-        }
-    }
-    console.log(result)
+
     return result;
 }
