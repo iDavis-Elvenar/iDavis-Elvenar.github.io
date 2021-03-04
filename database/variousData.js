@@ -77,7 +77,7 @@ var dailyPrizes = {
 
 let eventBanners = {
     "february_xxi_": "https://i.ibb.co/NLRxJ7y/EL-akcia-karneval-2021-banner.png",
-    "march_xxi_": "https://i.ibb.co/w7zVyFH/EL-akcia-zima-2020-banner.png"
+    "march_xxi_": "https://i.ibb.co/m0hGLdm/EL-akcia-ve-k-noc-2021-banner.png"
 }
 
 let eventVideos = {
