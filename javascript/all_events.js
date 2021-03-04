@@ -351,6 +351,7 @@ function insertVideo(selectedEvent) {
     iframe.style.width = '560px';
     iframe.style.height = '315.2px';
     iframe.allow = 'autoplay; encrypted-media';
+    iframe.setAttribute('allowFullScreen', 'true');
     iframe.src = eventVideos[selectedEvent];
     iframe.style.marginBottom = '15px';
     document.getElementById('column_with_tables').appendChild(iframe);
