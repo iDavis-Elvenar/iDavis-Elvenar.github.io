@@ -367,5 +367,6 @@ function applyFilters(data, selectedEvent) {
             }
         }
     }
+    console.log(result)
     return result;
 }
