@@ -42,7 +42,7 @@ function displayDailyPrizes() {
                     }
                 }
             }
-            console.log(filteredDataDict)
+            //console.log(filteredDataDict)
 
             for (var i = 0; i < Object.keys(dailyPrizes[selectedEvent]).length; i++) {
                 if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_') {
