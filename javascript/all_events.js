@@ -28,13 +28,21 @@ function displayDailyPrizes() {
 
             clearColumnWithTables();
             let filteredDataDict = {};
-            for (var i = 0; i < data.length; i++) {
+            /*for (var i = 0; i < data.length; i++) {
                 if (hasAppearance(selectedEvent, data[i])) {
                     for (var ix = 0; ix < data[i]['appearances'][selectedEvent].length; ix++) {
                         filteredDataDict[data[i]['appearances'][selectedEvent][ix]] = data[i];
                     }
                 }
+            }*/
+            for (let i = 0; i < dailyPrizes.length; i++) {
+                for (let j = 0; j < data.length; j++) {
+                    if (dailyPrizes[i] === data[j]['id']) {
+                        filteredDataDict[dailyPrizes[i]] = data[j];
+                    }
+                }
             }
+            console.log(filteredDataDict)
 
             for (var i = 0; i < Object.keys(dailyPrizes[selectedEvent]).length; i++) {
                 if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_') {
