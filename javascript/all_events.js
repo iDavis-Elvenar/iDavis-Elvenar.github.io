@@ -137,7 +137,14 @@ function displayDailyPrizes() {
                 if (!isTriggeredOrderBy) {
                     h5.innerHTML = `Day ${i + 1}: ${filteredData[i]['name']}<br>`;
                 } else {
-                    h5.innerHTML = `Day ${filteredData[i]['appearances'][selectedEvent].map(x => x+1)}: ${filteredData[i]['name']}<br>`;
+                    let dpDays = "";
+                    for (let dp = 0; dp < dailyPrizes[selectedEvent].length; dp++) {
+                        if (dailyPrizes[selectedEvent][dp] === filteredData[i]['id']) {
+                            dpDays += (dp+1).toString()+", ";
+                        }
+                    }
+                    h5.innerHTML = `Day ${dpDays.substring(0, dpDays.length-2)}: ${filteredData[i]['name']}<br>`;
+                    //h5.innerHTML = `Day ${filteredData[i]['appearances'][selectedEvent].map(x => x+1)}: ${filteredData[i]['name']}<br>`;
                 }
                 document.getElementById('column_with_tables').appendChild(h5);
                 var div = document.createElement('div');
