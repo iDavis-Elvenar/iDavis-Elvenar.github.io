@@ -35,14 +35,15 @@ function displayDailyPrizes() {
                     }
                 }
             }*/
-            for (let i = 0; i < dailyPrizes.length; i++) {
+            for (let i = 0; i < dailyPrizes[selectedEvent].length; i++) {
+                console.log(dailyPrizes[selectedEvent][i])
                 for (let j = 0; j < data.length; j++) {
-                    if (dailyPrizes[i] === data[j]['id']) {
-                        filteredDataDict[dailyPrizes[i]] = data[j];
+                    if (dailyPrizes[selectedEvent][i] === data[j]['id']) {
+                        filteredDataDict[dailyPrizes[selectedEvent][i]] = data[j];
                     }
                 }
             }
-            console.log(filteredDataDict)
+            //console.log(filteredDataDict)
 
             for (var i = 0; i < Object.keys(dailyPrizes[selectedEvent]).length; i++) {
                 if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_') {
