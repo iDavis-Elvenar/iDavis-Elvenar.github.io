@@ -38,7 +38,7 @@ var dailyPrizes = {
 		"A_Evt_March_XXI_Phoenix_Rider",
 		"A_Evt_Easter_XX_Phoenix_Lava",
 		"Burning egg",
-		"",
+		"Units rangers 10",
 		"",
 		"",
 		"",
