@@ -83,7 +83,7 @@ let eventBanners = {
 
 let eventVideos = {
     "february_xxi_": "https://www.youtube.com/embed/AS2XrTrF8PM",
-    "march_xxi_": ""
+    "march_xxi_": "https://www.youtube.com/embed/6VoSOv1ZXFA"
 }
 
 let eventBetaStarts = { // MM/DD/YYYY
