@@ -25,6 +25,7 @@ function displayDailyPrizes() {
             let chapterSelect = document.getElementById('input_chapter');
             let chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
 
+            let days = getDaysFromStart(selectedEvent)+1;
 
             clearColumnWithTables();
             let filteredDataDict = {};
@@ -35,7 +36,7 @@ function displayDailyPrizes() {
                     }
                 }
             }*/
-            for (let i = 0; i < dailyPrizes[selectedEvent].length; i++) {
+            for (let i = 0; i < Math.min(dailyPrizes[selectedEvent].length, days); i++) {
                 for (let j = 0; j < data.length; j++) {
                     if (dailyPrizes[selectedEvent][i] === data[j]['id']) {
                         filteredDataDict[i] = data[j];
@@ -44,7 +45,7 @@ function displayDailyPrizes() {
             }
             //console.log(filteredDataDict)
 
-            for (var i = 0; i < Object.keys(dailyPrizes[selectedEvent]).length; i++) {
+            for (var i = 0; i < Math.min(Object.keys(dailyPrizes[selectedEvent]).length, days); i++) {
                 if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_') {
                     var baseID = dailyPrizes[selectedEvent][i].substring(0, dailyPrizes[selectedEvent][i].lastIndexOf('_')+1);
                     var instantObject = {};
@@ -384,4 +385,18 @@ function applyFilters(data, selectedEvent) {
     let result = {};
 
     return result;
+}
+
+function getDaysFromStart(selectedEvent) {
+    if (!eventBetaStarts.hasOwnProperty(selectedEvent)) {
+        return 0;
+    }
+    let start = eventBetaStarts[selectedEvent];
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    let tod = new Date(today);
+    return (tod-new Date(start))/1000/60/60/24;
 }

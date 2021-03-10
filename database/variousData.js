@@ -20,7 +20,7 @@ var numberOfChapters = 17;
 
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
-    11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII'
+    11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII', 18: 'XVIII'
 }
 
 var dailyPrizes = {
@@ -32,8 +32,8 @@ var dailyPrizes = {
 		"A_Evt_March_XXI_Eggshell_Shrine",
 		"INS_UNIT_LM_15",
 		"A_Evt_Easter_XX_Phoenix_Anatomy",
-		"INS_KP_AW_10"
-		/*"A_Evt_March_XXI_Temple_of_Embers",
+		"INS_KP_AW_10",
+		"A_Evt_March_XXI_Temple_of_Embers",
 		"A_Evt_March_XXI_Phoenix_Water_Mill",
 		"A_Evt_March_XXI_Phoenix_Rider",
 		"A_Evt_Easter_XX_Phoenix_Lava",
@@ -46,7 +46,8 @@ var dailyPrizes = {
 		"",
 		"",
 		"",
-		""*/
+		"",
+		""
     ],
 
     "february_xxi_": [
@@ -83,6 +84,11 @@ let eventBanners = {
 let eventVideos = {
     "february_xxi_": "https://www.youtube.com/embed/AS2XrTrF8PM",
     "march_xxi_": ""
+}
+
+let eventBetaStarts = { // MM/DD/YYYY
+    "february_xxi_": "01/24/2021",
+    "march_xxi_": "03/04/2021"
 }
 
 let evoUpgradeCosts = {
@@ -243,5 +249,6 @@ var chapter_icons = {
     14: "https://i.ibb.co/5h3nr8K/ch14.png",
     15: "https://i.ibb.co/mbhNzvt/ch15.png",
     16: "https://i.ibb.co/qjFYznn/ch16.png",
-    17: "https://i.ibb.co/W5CtfR2/ch17.png"
+    17: "https://i.ibb.co/W5CtfR2/ch17.png",
+    18: "https://i.ibb.co/ZxGJSVv/ch18.png"
 }
