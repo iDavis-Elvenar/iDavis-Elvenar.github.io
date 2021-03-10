@@ -38,7 +38,7 @@ var dailyPrizes = {
 		"A_Evt_March_XXI_Phoenix_Rider",
 		"A_Evt_Easter_XX_Phoenix_Lava",
 		"A_Evt_Easter_Vii_BurningEgg",
-		"INS_UNIT_MC_LR",
+		"INS_UNIT_MC_LR_10",
 		"A_Evt_Golden_Palace",
 		"A_Evt_March_XXI_Phoenix_Chick",
 		"",
