@@ -366,7 +366,7 @@ function insertVideo(selectedEvent) {
     iframe.className = 'center';
     iframe.style.width = '560px';
     iframe.style.height = '315.2px';
-    iframe.allow = 'autoplay; encrypted-media';
+    //iframe.allow = 'autoplay; encrypted-media';
     iframe.setAttribute('allowFullScreen', 'true');
     iframe.src = eventVideos[selectedEvent];
     iframe.style.marginBottom = '15px';
@@ -393,9 +393,9 @@ function getDaysFromStart(selectedEvent) {
     }
     let start = eventBetaStarts[selectedEvent];
     var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
+    var dd = String(today.getUTCDate()).padStart(2, '0');
+    var mm = String(today.getUTCMonth() + 1).padStart(2, '0');
+    var yyyy = today.getUTCFullYear();
     today = mm + '/' + dd + '/' + yyyy;
     let tod = new Date(today);
     return (tod-new Date(start))/1000/60/60/24;
