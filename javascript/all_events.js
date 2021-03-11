@@ -393,9 +393,9 @@ function getDaysFromStart(selectedEvent) {
     }
     let start = eventBetaStarts[selectedEvent];
     var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
+    var dd = String(today.getUTCDate()).padStart(2, '0');
+    var mm = String(today.getUTCMonth() + 1).padStart(2, '0');
+    var yyyy = today.getUTCFullYear();
     today = mm + '/' + dd + '/' + yyyy;
     let tod = new Date(today);
     console.log(tod);
