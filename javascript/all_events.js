@@ -398,5 +398,6 @@ function getDaysFromStart(selectedEvent) {
     var yyyy = today.getUTCFullYear();
     today = mm + '/' + dd + '/' + yyyy;
     let tod = new Date(today);
+    console.log(tod);
     return (tod-new Date(start))/1000/60/60/24;
 }
