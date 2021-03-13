@@ -43,7 +43,7 @@ var dailyPrizes = {
         "INS_RF_GRR_10", //"A_Evt_March_XXI_Phoenix_Chick",
         "A_Evt_March_XXI_Eggshell_Shrine",
         "INS_UNIT_LM_15",
-        "",
+        "A_Evt_Easter_XX_Phoenix_Anatomy",
         "",
         "",
         "",
