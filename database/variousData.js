@@ -45,7 +45,7 @@ var dailyPrizes = {
         "INS_UNIT_LM_15",
         "A_Evt_Easter_XX_Phoenix_Anatomy",
         "INS_KP_AW_10",
-        "",
+        "A_Evt_March_XXI_Temple_of_Embers",
         "",
         ""
     ],
