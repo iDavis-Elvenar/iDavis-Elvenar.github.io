@@ -46,7 +46,7 @@ var dailyPrizes = {
         "A_Evt_Easter_XX_Phoenix_Anatomy",
         "INS_KP_AW_10",
         "A_Evt_March_XXI_Temple_of_Embers",
-        "",
+        "A_Evt_March_XXI_Phoenix_Water_Mill",
         ""
     ],
 
