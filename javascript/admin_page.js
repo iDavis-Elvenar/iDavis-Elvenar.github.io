@@ -176,17 +176,25 @@ function handleBuildingsJSON() {
                                                         if (evoObject['stages'][stage]['products'][o].hasOwnProperty('value')) {
                                                             c['value'] = evoObject['stages'][stage]['products'][o]['value'];
                                                             c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
-                                                            b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]] = c;
+                                                            if (b['chapters'][currentLevelString][stageString].hasOwnProperty(allDifferentProductions[prod])) {
+                                                                b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]]['value'] += c['value'];
+                                                            } else {
+                                                                b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]] = c;
+                                                            }
                                                             usedEvoProducts.push(o);
                                                         } else {
                                                             if (evoObject['stages'][stage]['products'][o].hasOwnProperty('factor')) {
                                                                 c['value'] *= evoObject['stages'][stage]['products'][o]['factor'];
                                                                 c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
-                                                                b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]] = c;
+                                                                if (b['chapters'][currentLevelString][stageString].hasOwnProperty(allDifferentProductions[prod])) {
+                                                                    b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]]['value'] += c['value'];
+                                                                } else {
+                                                                    b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]] = c;
+                                                                }
                                                                 usedEvoProducts.push(o);
                                                             }
                                                         }
-                                                        break;
+                                                        //break;
                                                     }
                                                 }
                                             }
