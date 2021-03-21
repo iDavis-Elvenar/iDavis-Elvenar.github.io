@@ -124,8 +124,9 @@ function displayDailyPrizes() {
                     }
                 }
             }
+            createEventHeader(selectedEvent);
             if (orderByOption === 'day') {
-                createCalendar(filteredData);
+                createCalendar(filteredData, selectedEvent);
                 if (eventVideos.hasOwnProperty(selectedEvent) && eventVideos[selectedEvent] !== "") {
                     insertVideo(selectedEvent);
                 }
@@ -300,7 +301,24 @@ function displayDailyPrizes() {
         })
 }
 
-function createCalendar(filteredData) {
+function createEventHeader(selectedEvent) {
+    var h5 = document.createElement('h5');
+    h5.id = 'header';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: ${eventNames[selectedEvent]} ::..<br>`;
+    document.getElementById('column_with_tables').appendChild(h5);
+    var eventImg = document.createElement("img");
+    eventImg.id = `event_banner`;
+    eventImg.src = `${eventBanners[selectedEvent]}`;
+    eventImg.alt = `${eventNames[selectedEvent]}`;
+    eventImg.className = `center `;
+    eventImg.style.marginBottom = `15px`;
+    eventImg.style.width = `50%`;
+    document.getElementById('column_with_tables').appendChild(eventImg);
+}
+
+function createCalendar(filteredData, selectedEvent) {
     var h5 = document.createElement('h5');
     h5.id = 'calendar';
     h5.className = "card-title text-center text-title font-weight-bold";
@@ -317,17 +335,24 @@ function createCalendar(filteredData) {
     table.style.width = '100%';
     var tbody = document.createElement('tbody');
     var numberOfRows = Math.floor(filteredData.length/7);
-    if (filteredData.length % 7 > 0) {
+    if (filteredData.length+1 % 7 > 0) {  //bez pridania counteru do dalsieho dna bolo iba filteredData.length % 7 > 0
         numberOfRows++;
     }
     var daysCounter = 1;
     var prizesCounter = 1;
+    let counterDayDisplayed = false;
+    let counterPrizeDisplayed
     for (var line = 0; line < numberOfRows; line++) {
         var trDays = document.createElement('tr');
         for (var i = 0; i < 7; i++) {
             var tdDay = document.createElement('td');
             if (daysCounter <= filteredData.length) {
                 tdDay.innerHTML = `<b>${daysCounter}. day</b>`
+            } else {
+                if (daysCounter < dailyPrizes[selectedEvent].length && !counterDayDisplayed) {
+                    tdDay.innerHTML = `<h7 class="card-title text-center text-link">?</h7>`;
+                    counterDayDisplayed = true;
+                }
             }
             trDays.appendChild(tdDay);
             daysCounter++;
@@ -342,6 +367,11 @@ function createCalendar(filteredData) {
                             (${filteredData[prizesCounter-1]['value']}${filteredData[prizesCounter-1]['production_type']})</a>`;
                 } else {
                     tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${filteredData[prizesCounter - 1]['name']}</a>`;
+                }
+            } else {
+                if (prizesCounter < dailyPrizes[selectedEvent].length && !counterPrizeDisplayed) {
+                    tdPrize.innerHTML = `<h7 class="card-title text-center text-link"><i>Reveals in ${getHoursTillNextDay()}h</i></h7>`;
+                    counterPrizeDisplayed = true;
                 }
             }
             trPrizes.appendChild(tdPrize);
@@ -399,4 +429,19 @@ function getDaysFromStart(selectedEvent) {
     today = mm + '/' + dd + '/' + yyyy;
     let tod = new Date(today);
     return (tod-new Date(start))/1000/60/60/24;
+}
+
+function getHoursTillNextDay() {
+    let today = new Date();
+    let hh = String(today.getUTCHours());
+    let tom = new Date(today.getTime() + (24 * 60 * 60 * 1000));
+    tom.setUTCHours(0);
+    tom.setUTCMinutes(0);
+    tom.setUTCSeconds(0);
+    let remainingHours = Math.floor(Math.abs(tom - today) / 36e5);
+    if (remainingHours > 0) {
+        return remainingHours.toString();
+    } else {
+        return "<1";
+    }
 }

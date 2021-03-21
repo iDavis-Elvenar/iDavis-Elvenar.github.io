@@ -80,13 +80,13 @@
 
 <div style="padding-top: 59px;" id="events_top">
     <div style="width: 100%;">
-        <div class="container-thick center bg-skin_astable_background rounded-bottom75" style="width: 100%; padding-top: 20px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px;">
+        <div class="container-thick center bg-skin_astable_background rounded-bottom75" style="width: 100%; padding-top: 20px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px;">
             <div class="row">
                 <div class="col-sm">
                     <div class="row center" style="height: 33%; vertical-align: middle">
                         <div class="col-sm">
-                            <center><label for="input_event">Select event:</label>
-                            <select id="input_event" class="custom-select" style="width: 80%; margin-bottom: 10px;">
+                            <center><label for="input_event" style="margin-left: 40px;">Select event:</label>
+                            <select id="input_event" class="custom-select" style="width: 80%;">
                                 <optgroup label="2021">
                                     <option value="march_xxi_" selected="selected">Rise of the Phoenix Cult</option>
                                     <option value="february_xxi_">Elvarian Carnival</option>
@@ -94,11 +94,9 @@
                             </select>
                             </center>
                         </div>
-                    </div>
-                    <div class="row center" style="height: 33%; vertical-align: middle">
                         <div class="col-sm">
-                            <center><label for="input_orderBy">Order By</label>
-                                <select id="input_orderBy" class="custom-select" style="width: 30%; margin-bottom: 10px;" onchange="">
+                            <center><label for="input_orderBy">Order daily prizes by</label>
+                                <select id="input_orderBy" class="custom-select" style="width: 30%;" onchange="">
                                     <option value="day">Day</option>
                                     <option value="providedCulture">Culture per square</option>
                                     <option value="provided_population">Population per square</option>
@@ -109,7 +107,7 @@
                                     <option value="seeds">Seeds per square per 1h</option>
                                 </select>
                                 <label for="input_chapter" class="d-inline-block">for chapter:
-                                    <select id="input_chapter" class="custom-select d-inline-block" style="width: 40%; margin-bottom: 10px;" onchange="">
+                                    <select id="input_chapter" class="custom-select d-inline-block" style="width: 40%;" onchange="">
                                         <option value="all_">All</option>
                                         <option value="17">17</option>
                                         <option value="16">16</option>
@@ -132,15 +130,18 @@
                             </center>
                         </div>
                     </div>
-                    <div class="row center" style="height: 33%; position: relative" >
-                        <button class="btn btn-sm btn-success btn-block text-uppercase" style="margin-top: 20px; margin-bottom: 0px; vertical-align: middle" onclick="displayDailyPrizes(); changeEventBanner()">Generate Buildings</button>
+                    <div class="row center" style="height: 33%; vertical-align: middle">
+
+                    </div>
+                    <div class="col text-center" style="height: 33%; position: relative" >
+                        <button class="btn btn-sm btn-success btn-block text-uppercase center" style="width: 50%; align-content: center" onclick="displayDailyPrizes();">Generate Daily Prizes</button>
                     </div>
                 </div>
-                <div class="col-sm">
+                <!--<div class="col-sm">
                     <center>
                     <img id="event_banner" src="https://i.ibb.co/m0hGLdm/EL-akcia-ve-k-noc-2021-banner.png" style="width: 50%;">
                     </center>
-                </div>
+                </div>-->
             </div>
 
         </div>

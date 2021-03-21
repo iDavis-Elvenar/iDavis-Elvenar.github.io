@@ -89,6 +89,11 @@ let eventVideos = {
     "march_xxi_": "https://www.youtube.com/embed/6VoSOv1ZXFA"
 }
 
+let eventNames = {
+    "february_xxi_": "Elvarian Carnival 2021",
+    "march_xxi_": "Rise of the Phoenix Cult 2021"
+}
+
 let eventBetaStarts = { // MM/DD/YYYY
     "february_xxi_": "01/24/2021",
     "march_xxi_": "03/04/2021"
