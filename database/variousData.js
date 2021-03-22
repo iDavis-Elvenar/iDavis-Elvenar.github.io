@@ -46,7 +46,7 @@ var dailyPrizes = {
         "A_Evt_March_XXI_Eggshell_Shrine",
         "A_Evt_March_XXI_Phoenix_Water_Mill",
         "INS_UNIT_MC_LM_10",
-        "INS_KP_AW_10",
+        "A_Evt_March_XXI_Eggshell_Shrine",
         "A_Evt_March_XXI_Temple_of_Embers",
         "A_Evt_March_XXI_Phoenix_Water_Mill",
         "A_Evt_March_XXI_Phoenix_Rider",
