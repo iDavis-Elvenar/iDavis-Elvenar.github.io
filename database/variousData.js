@@ -28,6 +28,7 @@ var chapters = {
 var dailyPrizes = {
 
     "march_xxi_": [
+        "A_Evt_Easter_XX_Phoenix_Lava",
         "A_Evt_March_XXI_Phoenix_Chick",
         "A_Evt_March_XXI_Eggshell_Pavillon",
         "INS_RF_GRR_10",
@@ -38,7 +39,6 @@ var dailyPrizes = {
         "A_Evt_March_XXI_Temple_of_Embers",
         "A_Evt_March_XXI_Phoenix_Water_Mill",
         "A_Evt_March_XXI_Phoenix_Rider",
-        "A_Evt_Easter_XX_Phoenix_Lava",
         "A_Evt_Easter_Vii_BurningEgg",
         "INS_UNIT_MC_LR_10",
         "A_Evt_Golden_Palace",
