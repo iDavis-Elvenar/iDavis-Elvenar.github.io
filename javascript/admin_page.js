@@ -208,6 +208,18 @@ function handleBuildingsJSON() {
                                                     }
                                                     c['value'] = evoObject['stages'][stage]['products'][unusedProduct]['value'];
                                                     b['chapters'][currentLevelString][stageString][evoObject['stages'][stage]['products'][unusedProduct]['goodId']] = c;
+                                                } else if (evoObject['stages'][stage]['products'][unusedProduct].hasOwnProperty('factor')) {
+                                                    var c = {};
+                                                    if (!b['chapters'][currentLevelString].hasOwnProperty(stageString)) {
+                                                        b['chapters'][currentLevelString][stageString] = {};
+                                                    }
+                                                    for (prod in allBuildings[k]['production']['products'][allBuildings[k]['production']['products'].length-1]['revenue']['resources']) {  //beriem vzdy posledny product (neviem ci to v hre funguje inak)
+                                                        if (prod !== '__class__') {
+                                                            c['value'] = evoObject['stages'][stage]['products'][unusedProduct]['factor']*allBuildings[k]['production']['products'][allBuildings[k]['production']['products'].length-1]['revenue']['resources'][prod];
+                                                            c['production_time'] = allBuildings[k]['production']['products'][allBuildings[k]['production']['products'].length-1]['production_time'];
+                                                        }
+                                                    }
+                                                    b['chapters'][currentLevelString][stageString][evoObject['stages'][stage]['products'][unusedProduct]['goodId']] = c;
                                                 }
                                             }
                                         }
