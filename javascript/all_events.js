@@ -349,7 +349,7 @@ function createCalendar(filteredData, selectedEvent) {
             if (daysCounter <= filteredData.length) {
                 tdDay.innerHTML = `<b>${daysCounter}. day</b>`
             } else {
-                if (daysCounter < dailyPrizes[selectedEvent].length && !counterDayDisplayed) {
+                if (daysCounter < dailyPrizes[selectedEvent].length+1 && !counterDayDisplayed) {
                     tdDay.innerHTML = `<h7 class="card-title text-center text-link">?</h7>`;
                     counterDayDisplayed = true;
                 }
@@ -369,7 +369,7 @@ function createCalendar(filteredData, selectedEvent) {
                     tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${filteredData[prizesCounter - 1]['name']}</a>`;
                 }
             } else {
-                if (prizesCounter < dailyPrizes[selectedEvent].length && !counterPrizeDisplayed) {
+                if (prizesCounter < dailyPrizes[selectedEvent].length+1 && !counterPrizeDisplayed) {
                     tdPrize.innerHTML = `<h7 class="card-title text-center text-link"><i>Reveals in ${getHoursTillNextDay()}h</i></h7>`;
                     counterPrizeDisplayed = true;
                 }
@@ -396,7 +396,7 @@ function insertVideo(selectedEvent) {
     iframe.className = 'center';
     iframe.style.width = '560px';
     iframe.style.height = '315.2px';
-    iframe.allow = 'autoplay; encrypted-media';
+    //iframe.allow = 'autoplay; encrypted-media';
     iframe.setAttribute('allowFullScreen', 'true');
     iframe.src = eventVideos[selectedEvent];
     iframe.style.marginBottom = '15px';
