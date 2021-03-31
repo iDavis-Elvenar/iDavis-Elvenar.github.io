@@ -1,4 +1,11 @@
 var images_buildings = {
+    "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat":"https://i.ibb.co/CbT67KK/evo-fairy-retreat.png",
+    "A_Evt_May_XXI_Blossom_Light_post":"https://i.ibb.co/FVLWVR3/blossom-light-post.png",
+    "A_Evt_May_XXI_Bumblebee_Stables":"https://i.ibb.co/W0NgSKL/bumblebee-stambles.png",
+    "A_Evt_May_XXI_Dragonfly_Pond":"https://i.ibb.co/m0YkgrX/dragonfly-pond.png",
+    "A_Evt_May_XXI_Faerie_Inn":"https://i.ibb.co/2WwXGdK/faerie-inn.png",
+    "A_Evt_May_XXI_Faerie_Sand_Garden":"https://i.ibb.co/YB45BjC/sand-garden.png",
+    "A_Evt_May_XXI_Petal_Bridge":"https://i.ibb.co/9VGmKLt/petal-bridge.png",
     "A_Evt_December_XX_GoblinSleigh":"https://i.ibb.co/z5P2ktw/goblinsleigh.png",
     "A_Evt_December_XX_FrozenOwlCave":"https://i.ibb.co/0nTs8S1/frozenowlcave.png",
     "A_Evt_December_XX_GoblinGiftShop":"https://i.ibb.co/v4P7XRY/goblingiftshop.png",
