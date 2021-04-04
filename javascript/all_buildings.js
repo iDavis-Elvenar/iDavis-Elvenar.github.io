@@ -302,7 +302,15 @@ function filterProduction(filterData, objectToPass) {
     if (filterData.includes('all')) {
         return true;
     }
-    var filterDataSplit = filterData.split(",");
+    let filterDataSplit = "";
+    let logicalOperand = "";
+    if (filterData.includes("&")) {
+        filterDataSplit = filterData.split("&");
+        logicalOperand = "&";
+    } else {
+        filterDataSplit = filterData.split("|");
+        logicalOperand = "|";
+    }
     if (filterDataSplit[0] === 'only') {
         var neededToPass = filterDataSplit.length-1;
         if (neededToPass != objectToPass['all_productions'].length) {
@@ -317,15 +325,27 @@ function filterProduction(filterData, objectToPass) {
         }
         return neededToPass === 0;
     } else {
-        var neededToPass = filterDataSplit.length;
-        for (var i = 0; i < filterDataSplit.length; i++) {
-            for (var j = 0; j < objectToPass['all_productions'].length; j++) {
-                if (filterDataSplit[i] === objectToPass['all_productions'][j]) {
-                    neededToPass--;
+        if (logicalOperand === "&") {
+            var neededToPass = filterDataSplit.length;
+            for (var i = 0; i < filterDataSplit.length; i++) {
+                for (var j = 0; j < objectToPass['all_productions'].length; j++) {
+                    if (filterDataSplit[i] === objectToPass['all_productions'][j]) {
+                        neededToPass--;
+                    }
                 }
             }
+            return neededToPass === 0;
+        } else {
+            let passed = 0;
+            for (let i = 0; i < filterDataSplit.length; i++) {
+                for (let j = 0; j < objectToPass['all_productions'].length; j++) {
+                    if (filterDataSplit[i] === objectToPass['all_productions'][j]) {
+                        passed++;
+                    }
+                }
+            }
+            return passed >= 1;
         }
-        return neededToPass === 0;
     }
 }
 
