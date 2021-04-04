@@ -26,6 +26,10 @@
     <script src="javascript/jquery-3.5.1.min.js"></script>
     <script src="bootstrap-4.3.1/js/bootstrap.min.js" ></script>
 
+    <!-- For language selector -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     <!-- Exception Handler and Global Functions -->
     <script src="javascript/exception_handler.js"></script>
     <script src="javascript/global_functions.js"></script>
@@ -34,6 +38,7 @@
     <script src="javascript/all_buildings.js"></script>
     <script src="javascript/global_functions.js"></script>
     <script src="database/variousData.js"></script>
+    <script src="database/languages.js"></script>
     <!--<script  src="javascript/config.js"></script>-->
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/config.css">
@@ -46,11 +51,27 @@
         <button class="navbar-toggler navbar-toggler-right bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" onclick="rollDownNavigation()">
             <span class="navbar-toggler-icon"> </span>
         </button>
-        <a href="index.html" class="navbar-brand text-white"><img src="images/general/home.png" width="30" style="position: relative;"> Home</a>
-        <a href="buildings.html" class="nav-link text-warning">&#x203A; All Buildings &#x2039;</a>
-        <a href="events.html" class="nav-link text-warning">All Events</a>
+        <a href="index.html" class="navbar-brand text-white"id="home"><img src="images/general/home.png" width="30" style="position: relative;"></a>
+        <a href="buildings.html" class="nav-link text-warning" id="all_buildings"></a>
+        <a href="events.html" class="nav-link text-warning" id="all_events"></a>
+
+        <script>
+            document.getElementById("home").innerHTML += " "+langUI("Home");
+            document.getElementById("all_buildings").innerHTML = "&#x203A; "+langUI("All Buildings")+" &#x2039;";
+            document.getElementById("all_events").innerHTML = langUI("All Events");
+        </script>
 
         <div>
+            <div class="dropdown" style="margin-right: 30px">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                    <img src="images/general/globe_big.png" style="width: 30px; position: relative">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('en')"><img src="images/general/lang_en.png">EN</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('cz')"><img src="images/general/lang_cz.png">CZ</a></li>
+                </ul>
+            </div>
             <img src="images/general/idavis.png" width="48" style="margin-left: 10px;right:8px;top: 5px;position: absolute;">
         </div>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -77,7 +98,7 @@
         <div class="container-thick center bg-skin_dark_background rounded-bottom75" style="width: 100%; padding-top: 20px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px;">
             <div class="row">
                 <div class="col-sm">
-                    <label for="input_event">Introduced in event:</label>
+                    <label for="input_event" id="introduced_in_event_label"></label>
                     <select id="input_event" class="custom-select" style="width: 50%; margin-bottom: 10px;"  onchange="">
                         <option value="all_events">All</option>
                         <optgroup label="2021">
@@ -107,7 +128,7 @@
                     <input hidden type="checkbox" id="includeAppearances" name="" value="">
                 </div>
                 <div class="col-sm">
-                    <center><label for="input_production">Filter production:</label>
+                    <center><label for="input_production" id="filter_production_label"></label>
                     <select id="input_production" class="custom-select" style="width: 50%; margin-bottom: 10px;" onchange="">
                         <option value="all_events">All</option>
                         <option value="only&providedCulture">Culture Only</option>
@@ -130,7 +151,7 @@
                     </select></center>
                 </div>
                 <div class="col-sm">
-                    <center><label for="input_orderBy">Order By</label>
+                    <center><label for="input_orderBy" id="order_by_label"></label>
                     <select id="input_orderBy" class="custom-select" style="width: 30%; margin-bottom: 10px;" onchange="">
                         <option value="all_">All</option>
                         <option value="providedCulture">Culture per square</option>
@@ -141,7 +162,21 @@
                         <option value="mana">Mana per square per 1h</option>
                         <option value="seeds">Seeds per square per 1h</option>
                     </select>
-                        <label for="input_chapter">for chapter:
+                    </center>
+                </div>
+            </div>
+            <div class="row center">
+                <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
+                    <label for="input_placeholder" id="set_evolving_label"></label>
+                    <select id="input_placeholder" class="custom-select" style="width: 50%;" onchange="">
+                        <option value="all_events">Coming Soon</option>
+                    </select>
+                </div>
+                <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 60%;">
+                    <button class="btn btn-sm btn-success btn-block text-uppercase" id="filter_and_generate_button" style="margin-top: 10px;" onclick="readBuildingsJSON()"></button>
+                </div>
+                <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
+                    <center><label for="input_chapter" id="for_chapter_label"></label>
                         <select id="input_chapter" class="custom-select" style="width: 40%; margin-bottom: 10px;" onchange="">
                             <option value="all_">All</option>
                             <option value="17">17</option>
@@ -161,37 +196,6 @@
                             <option value="3">3</option>
                             <option value="2">2</option>
                             <option value="1">1</option>
-                        </select></label>
-                    </center>
-                </div>
-            </div>
-            <div class="row center">
-                <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
-                    <label for="input_placeholder">Filter soon:</label>
-                    <select id="input_placeholder" class="custom-select" style="width: 50%;" onchange="">
-                        <option value="all_events">Coming Soon</option>
-                    </select>
-                </div>
-                <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 60%;">
-                    <button class="btn btn-sm btn-success btn-block text-uppercase" style="margin-top: 10px;" onclick="readBuildingsJSON()">Filter & Generate</button>
-                </div>
-                <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
-                    <center><!--<label for="input_stage">Stage for evolving buildings:
-                        <select id="input_stage" class="custom-select" style="width: 25%; margin-bottom: 10px;" onchange="">
-                            <option value="9">10</option>
-                            <option value="8">9</option>
-                            <option value="7">8</option>
-                            <option value="6">7</option>
-                            <option value="5">6</option>
-                            <option value="4">5</option>
-                            <option value="3">4</option>
-                            <option value="2">3</option>
-                            <option value="1">2</option>
-                            <option value="0">1</option>
-                        </select></label>-->
-                        <label for="input_placeholder">Filter soon:</label>
-                        <select id="input_placeholder" class="custom-select" style="width: 50%;" onchange="">
-                            <option value="all_events">Coming Soon</option>
                         </select>
                     </center>
                 </div>
@@ -199,6 +203,16 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById("introduced_in_event_label").innerHTML = langUI("Introduced in event:");
+    document.getElementById("filter_production_label").innerHTML = langUI("Filter production:");
+    document.getElementById("order_by_label").innerHTML = langUI("Order By:");
+    document.getElementById("for_chapter_label").innerHTML = langUI("For chapter:");
+    document.getElementById("set_evolving_label").innerHTML = langUI("Filter soon:");
+    document.getElementById("filter_and_generate_button").innerHTML = langUI("Filter & Generate");
+
+</script>
 
 <div id="event_main" style="padding-top: 20px;">
     <div id="event_buildings" style="width: 100%;">

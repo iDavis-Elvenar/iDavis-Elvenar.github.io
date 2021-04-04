@@ -105,12 +105,12 @@ function readBuildingsJSON() {
                 var td12 = document.createElement('td');
                 td12.style.width = "40%";
                 if (isEvo) {
-                    td12.innerHTML = `<b>Building type:</b> ${buildingTypes[filteredData[i]['type']]}<br>
-                                    <b>Construction time:</b> ${filteredData[i]['construction_time']}<br>
-                                    <b>Size:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
-                                    <b>Set building:</b> -<br>
-                                    <b>Expiring:</b> -<br>
-                                    <b>Upgrade costs:</b> ${evoUpgradeCosts[filteredData[i]['id']]}<br>`;
+                    td12.innerHTML = `<b>${langUI("Building type:")}</b> ${buildingTypes[filteredData[i]['type']]}<br>
+                                    <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}<br>
+                                    <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
+                                    <b>${langUI("Set building:")}</b> -<br>
+                                    <b>${langUI("Expiring:")}</b> -<br>
+                                    <b>${langUI("Upgrade costs:")}</b> ${evoUpgradeCosts[filteredData[i]['id']]}<br>`;
                     if (feedingEffectsDescriptions.hasOwnProperty(filteredData[i]['id'])) {
                         td12.innerHTML += `<b>Feeding effect:</b> ${feedingEffectsDescriptions[filteredData[i]['id']]}<br>`;
                     }
@@ -130,11 +130,11 @@ function readBuildingsJSON() {
                             <option value="0" ${tempArr[0]}>1</option>
                         </select>`;
                 } else {
-                    td12.innerHTML = `<b>Building type:</b> ${buildingTypes[filteredData[i]['type']]}<br>
-                                    <b>Construction time:</b> ${filteredData[i]['construction_time']}<br>
-                                    <b>Size:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
-                                    <b>Set building:</b> -<br>
-                                    <b>Expiring:</b> -`;
+                    td12.innerHTML = `<b>${langUI("Building type:")}</b> ${buildingTypes[filteredData[i]['type']]}<br>
+                                    <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}<br>
+                                    <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
+                                    <b>${langUI("Set building:")}</b> -<br>
+                                    <b>${langUI("Expiring:")}</b> -`;
                 }
                 t1r.appendChild(td11);
                 t1r.appendChild(td12);
@@ -150,7 +150,7 @@ function readBuildingsJSON() {
                 for (var h = 0; h < numberOfChapters + 1; h++) {
                     var th = document.createElement('th');
                     if (h === 0) {
-                        th.innerHTML = `Chapter / Bonus`;
+                        th.innerHTML = `${langUI("Chapter / Bonus")}`;
                     } else {
                         th.innerHTML = `<img src=${chapter_icons[h]}>`;
                     }
@@ -483,6 +483,5 @@ function sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption,
     }
     return filteredData;
 }
-
 
 

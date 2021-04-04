@@ -1,3 +1,7 @@
+if (localStorage.getItem("lang") === null) {
+    setLanguage("en");
+}
+
 //let role_down = false;
 function rollDownNavigation(){
     if (role_down === false){
@@ -36,4 +40,9 @@ function show_full_text(link_id,linked_text_id){
 
 function clearColumnWithTables() {
     document.getElementById('column_with_tables').innerHTML = ``;
+}
+
+function setLanguage(lang) {
+    localStorage.setItem("lang", lang);
+    location.reload();
 }

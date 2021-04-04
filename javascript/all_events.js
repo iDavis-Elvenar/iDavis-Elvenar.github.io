@@ -137,7 +137,7 @@ function displayDailyPrizes() {
                 h5.className = "card-title text-center text-title font-weight-bold";
                 h5.style.textAlign = "left";
                 if (!isTriggeredOrderBy) {
-                    h5.innerHTML = `Day ${i + 1}: ${filteredData[i]['name']}<br>`;
+                    h5.innerHTML = `${langUI("Day")} ${i + 1}: ${filteredData[i]['name']}<br>`;
                 } else {
                     let dpDays = "";
                     for (let dp = 0; dp < dailyPrizes[selectedEvent].length; dp++) {
@@ -163,11 +163,11 @@ function displayDailyPrizes() {
                     td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
-                    td12.innerHTML = `<b>Building type:</b> ${buildingTypes[filteredData[i]['type']]}<br>
-                                    <b>Construction time:</b> ${filteredData[i]['construction_time']}<br>
-                                    <b>Size:</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
-                                    <b>Set building:</b> -<br>
-                                    <b>Expiring:</b> -`;
+                    td12.innerHTML = `<b>${langUI("Building type:")}</b> ${buildingTypes[filteredData[i]['type']]}<br>
+                                    <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}<br>
+                                    <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
+                                    <b>${langUI("Set building:")}</b> -<br>
+                                    <b>${langUI("Expiring:")}</b> -`;
                     t1r.appendChild(td11);
                     t1r.appendChild(td12);
                     t1body.appendChild(t1r);
@@ -182,7 +182,7 @@ function displayDailyPrizes() {
                     for (var h = 0; h < numberOfChapters + 1; h++) {
                         var th = document.createElement('th');
                         if (h === 0) {
-                            th.innerHTML = `Chapter / Bonus`;
+                            th.innerHTML = `${langUI("Chapter / Bonus")}`;
                         } else {
                             th.innerHTML = `<img src=${chapter_icons[h]}>`;
                         }
@@ -323,7 +323,7 @@ function createCalendar(filteredData, selectedEvent) {
     h5.id = 'calendar';
     h5.className = "card-title text-center text-title font-weight-bold";
     h5.style.textAlign = "left";
-    h5.innerHTML = `..:: Daily Prizes Calendar ::..<br>`;
+    h5.innerHTML = `..:: ${langUI("Daily Prizes Calendar")} ::..<br>`;
     document.getElementById('column_with_tables').appendChild(h5);
     var div = document.createElement('div');
     div.style.textAlign = 'center';
@@ -347,7 +347,7 @@ function createCalendar(filteredData, selectedEvent) {
         for (var i = 0; i < 7; i++) {
             var tdDay = document.createElement('td');
             if (daysCounter <= filteredData.length) {
-                tdDay.innerHTML = `<b>${daysCounter}. day</b>`
+                tdDay.innerHTML = `<b>${daysCounter}. ${langUI("day")}</b>`
             } else {
                 if (daysCounter < dailyPrizes[selectedEvent].length+1 && !counterDayDisplayed) {
                     tdDay.innerHTML = `<h7 class="card-title text-center text-link">?</h7>`;
@@ -390,7 +390,7 @@ function insertVideo(selectedEvent) {
     h5.id = 'video';
     h5.className = "card-title text-center text-title font-weight-bold";
     h5.style.textAlign = "left";
-    h5.innerHTML = `..:: Event Video ::..<br>`;
+    h5.innerHTML = `..:: ${langUI("Event Video")} ::..<br>`;
     document.getElementById('column_with_tables').appendChild(h5);
     var iframe = document.createElement('iframe');
     iframe.className = 'center';

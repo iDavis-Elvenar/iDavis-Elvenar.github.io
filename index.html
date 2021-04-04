@@ -29,7 +29,7 @@
     <!-- Exception Handler and Global Functions -->
     <script src="javascript/exception_handler.js"></script>
     <script src="javascript/global_functions.js"></script>
-
+    <script src="database/languages.js"></script>
     <!-- Our JavaScript -->
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/login.css">
@@ -42,11 +42,27 @@
         <button class="navbar-toggler navbar-toggler-right bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" onclick="rollDownNavigation()">
             <span class="navbar-toggler-icon"> </span>
         </button>
-        <a href="index.html" class="navbar-brand text-white"><img src="images/general/home.png" width="30" style="position: relative;"> Home</a>
-        <a href="buildings.html" class="nav-link text-warning">All Buildings</a>
-        <a href="events.html" class="nav-link text-warning">All Events</a>
+        <a href="index.html" class="navbar-brand text-white" id="home"><img src="images/general/home.png" width="30" style="position: relative;"></a>
+        <a href="buildings.html" class="nav-link text-warning" id="all_buildings"></a>
+        <a href="events.html" class="nav-link text-warning" id="all_events"></a>
+
+        <script>
+            document.getElementById("home").innerHTML += " "+langUI("Home");
+            document.getElementById("all_buildings").innerHTML = langUI("All Buildings");
+            document.getElementById("all_events").innerHTML = langUI("All Events");
+        </script>
 
         <div>
+            <div class="dropdown" style="margin-right: 30px">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                    <img src="images/general/globe_big.png" style="width: 30px; position: relative">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('en')"><img src="images/general/lang_en.png">EN</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('cz')"><img src="images/general/lang_cz.png">CZ</a></li>
+                </ul>
+            </div>
             <img src="images/general/idavis.png" width="48" style="margin-left: 10px;right:8px;top: 5px;position: absolute;">
         </div>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
