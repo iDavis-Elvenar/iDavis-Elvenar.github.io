@@ -137,7 +137,11 @@ function displayDailyPrizes() {
                 h5.className = "card-title text-center text-title font-weight-bold";
                 h5.style.textAlign = "left";
                 if (!isTriggeredOrderBy) {
-                    h5.innerHTML = `${langUI("Day")} ${i + 1}: ${filteredData[i]['name']}<br>`;
+                    if (buildingsCZ.hasOwnProperty(filteredData[i]['id']) && localStorage.getItem("lang") === 'cz') {
+                        h5.innerHTML = `${langUI("Day")} ${i + 1}: ${buildingsCZ[filteredData[i]['id']]}<br>`;
+                    } else {
+                        h5.innerHTML = `${langUI("Day")} ${i + 1}: ${filteredData[i]['name']}<br>`;
+                    }
                 } else {
                     let dpDays = "";
                     for (let dp = 0; dp < dailyPrizes[selectedEvent].length; dp++) {
@@ -145,7 +149,11 @@ function displayDailyPrizes() {
                             dpDays += (dp+1).toString()+", ";
                         }
                     }
-                    h5.innerHTML = `Day ${dpDays.substring(0, dpDays.length-2)}: ${filteredData[i]['name']}<br>`;
+                    if (buildingsCZ.hasOwnProperty(filteredData[i]['id']) && localStorage.getItem("lang") === 'cz') {
+                        h5.innerHTML = `Day ${dpDays.substring(0, dpDays.length-2)}: ${buildingsCZ[filteredData[i]['id']]}<br>`;
+                    } else {
+                        h5.innerHTML = `Day ${dpDays.substring(0, dpDays.length-2)}: ${filteredData[i]['name']}<br>`;
+                    }
                     //h5.innerHTML = `Day ${filteredData[i]['appearances'][selectedEvent].map(x => x+1)}: ${filteredData[i]['name']}<br>`;
                 }
                 document.getElementById('column_with_tables').appendChild(h5);

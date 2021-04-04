@@ -37,7 +37,7 @@ let ui = {
 }
 
 function langUI(key) {
-    if (ui[localStorage.getItem("lang")].hasOwnProperty(key)) {
+    if (localStorage.getItem("lang") !== null && ui[localStorage.getItem("lang")].hasOwnProperty(key)) {
         return ui[localStorage.getItem("lang")][key];
     } else {
         return key;

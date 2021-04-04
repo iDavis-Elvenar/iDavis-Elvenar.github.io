@@ -365,4 +365,34 @@ function regenerateItemsJSON() {
     }
 }
 
-
+function regenerateBuildingNamesLanguages() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('building_names').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    let allIds = new Set()
+    var allBuildings = [];
+    var result = [];
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        for (let i = 0; i < data.length; i++) {
+            if (data[i]['id'].toLowerCase().includes("a_evt")) {
+                console.log('buildingsCount');
+                allIds.add(data[i]['id'].substring(0, data[i]['id'].lastIndexOf('_')));
+            }
+        }
+        let allIdsArray = Array.from(allIds)
+        let cz = {};
+        for (let i = 0; i < allIdsArray.length; i++) {
+            for (let j = 0; j < data.length; j++) {
+                if (allIdsArray[i].toLowerCase() === data[j]['id'].substring(0, data[j]['id'].lastIndexOf('_')).toLowerCase()) {
+                    cz[data[j]['id'].substring(0, data[j]['id'].lastIndexOf('_'))] = data[j]['name'];
+                    break;
+                }
+            }
+        }
+        console.log(result);
+        saveJSON( JSON.stringify(cz), "buildingNamesLanguages.json" );
+        create_exception("Data Generated!",10,'success');
+    }
+}
