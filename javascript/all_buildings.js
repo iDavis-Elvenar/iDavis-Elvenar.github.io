@@ -89,11 +89,7 @@ function readBuildingsJSON() {
                 h5.id = filteredData[i]['id'];
                 h5.className = "card-title text-center text-title font-weight-bold";
                 h5.style.textAlign = "left";
-                if (buildingsCZ.hasOwnProperty(filteredData[i]['id']) && localStorage.getItem("lang") === 'cz') {
-                    h5.innerHTML = `${buildingsCZ[filteredData[i]['id']]}<br>`;
-                } else {
-                    h5.innerHTML = `${filteredData[i]['name']}<br>`;
-                }
+                h5.innerHTML = `${langBuildings(filteredData[i])}<br>`;
                 document.getElementById('column_with_tables').appendChild(h5);
                 var div = document.createElement('div');
                 div.className = 'bbTable';

@@ -137,11 +137,7 @@ function displayDailyPrizes() {
                 h5.className = "card-title text-center text-title font-weight-bold";
                 h5.style.textAlign = "left";
                 if (!isTriggeredOrderBy) {
-                    if (buildingsCZ.hasOwnProperty(filteredData[i]['id']) && localStorage.getItem("lang") === 'cz') {
-                        h5.innerHTML = `${langUI("Day")} ${i + 1}: ${buildingsCZ[filteredData[i]['id']]}<br>`;
-                    } else {
-                        h5.innerHTML = `${langUI("Day")} ${i + 1}: ${filteredData[i]['name']}<br>`;
-                    }
+                    h5.innerHTML = `${langUI("Day")} ${i + 1}: ${langBuildings(filteredData[i])}<br>`;
                 } else {
                     let dpDays = "";
                     for (let dp = 0; dp < dailyPrizes[selectedEvent].length; dp++) {
@@ -149,11 +145,7 @@ function displayDailyPrizes() {
                             dpDays += (dp+1).toString()+", ";
                         }
                     }
-                    if (buildingsCZ.hasOwnProperty(filteredData[i]['id']) && localStorage.getItem("lang") === 'cz') {
-                        h5.innerHTML = `Day ${dpDays.substring(0, dpDays.length-2)}: ${buildingsCZ[filteredData[i]['id']]}<br>`;
-                    } else {
-                        h5.innerHTML = `Day ${dpDays.substring(0, dpDays.length-2)}: ${filteredData[i]['name']}<br>`;
-                    }
+                    h5.innerHTML = `Day ${dpDays.substring(0, dpDays.length-2)}: ${langBuildings(filteredData[i])}<br>`;
                     //h5.innerHTML = `Day ${filteredData[i]['appearances'][selectedEvent].map(x => x+1)}: ${filteredData[i]['name']}<br>`;
                 }
                 document.getElementById('column_with_tables').appendChild(h5);
@@ -374,7 +366,7 @@ function createCalendar(filteredData, selectedEvent) {
                     tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${filteredData[prizesCounter - 1]['name']} 
                             (${filteredData[prizesCounter-1]['value']}${filteredData[prizesCounter-1]['production_type']})</a>`;
                 } else {
-                    tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${filteredData[prizesCounter - 1]['name']}</a>`;
+                    tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langBuildings(filteredData[prizesCounter - 1])}</a>`;
                 }
             } else {
                 if (prizesCounter < dailyPrizes[selectedEvent].length+1 && !counterPrizeDisplayed) {

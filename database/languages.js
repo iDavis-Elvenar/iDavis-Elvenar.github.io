@@ -23,7 +23,7 @@ let ui = {
         "Filter soon:" : "Čoskoro:",
         "Select event:" : "Udalosť:",
         "Order daily prizes by:" : "Usporiadať odmeny podľa:",
-        "Daily Prizes Calendar" : "Kalendár denných odmien",
+        "Daily Prizes Calendar" : "Kalendář odměn",
         "day" : "deň",
         "Event Video" : "Video k události",
         "Day" : "Deň",
