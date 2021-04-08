@@ -1,3 +1,5 @@
+// Copyright 2021, iDavis, All rights reserved.
+
 var selectedEvoStages = {
     "A_Evt_Evo_February_XXI_Everblossom_Sleigh" : 9,
     "A_Evt_Evo_Autumn_XIX_Bear_Brown" : 9,

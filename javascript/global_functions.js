@@ -46,3 +46,13 @@ function setLanguage(lang) {
     localStorage.setItem("lang", lang);
     location.reload();
 }
+
+function setFooter() {
+    let h7 = document.createElement('h7');
+    h7.id = "copyright";
+    h7.className = "text-gray";
+    let center = document.createElement('center');
+    center.innerHTML = 'Copyright &#169; 2021 iDavis';
+    h7.appendChild(center);
+    document.getElementById('footer').appendChild(h7);
+}

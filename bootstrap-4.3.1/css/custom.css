@@ -14,6 +14,10 @@ a.text-white:hover, a.text-white:focus {
     color: #ffcc66 !important;
 }
 
+.text-gray {
+    color: #5a6268; !important;
+}
+
 /*body {
  background: #ecdec0 !important;
 }*/

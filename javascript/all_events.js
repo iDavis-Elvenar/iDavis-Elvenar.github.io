@@ -1,3 +1,5 @@
+// Copyright 2021, iDavis, All rights reserved.
+
 function changeEventBanner() {
     var imgBanner = document.getElementById("event_banner");
     var selectEvent = document.getElementById("input_event");
