@@ -84,61 +84,61 @@ var instants = {
     "INS_UNIT_MC_LM_": {
         "name": "Drone Riders Instant",
         "image_big": "https://i.ibb.co/FsD0wZ5/ins-unit-mc-lm.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/85g0RHK/mc-lm-small.png",
         "production_type": ""
     },
     "INS_UNIT_MC_LR_": {
         "name": "Rangers Instant",
         "image_big": "https://i.ibb.co/6DJrNTH/ins-unit-mc-lr.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/8NRMqzq/mc-lr-small.png",
         "production_type": ""
     },
     "INS_UNIT_MC_MA_": {
         "name": "Blossom Mages Instant",
         "image_big": "https://i.ibb.co/nQ4xvbh/ins-unit-mc-ma.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/9TKY6Pp/mc-ma-small.png",
         "production_type": ""
     },
     "INS_UNIT_MC_HM_": {
         "name": "Vallorian Guards Instant",
         "image_big": "https://i.ibb.co/7NCH5YP/ins-unit-mc-hm.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/MsCqywh/unit-valorian.png",
         "production_type": ""
     },
     "INS_UNIT_MC_HR_": {
         "name": "Faineant Frogs Instant",
         "image_big": "https://i.ibb.co/RC3FdWY/ins-unit-mc-hr.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/c2x0pfJ/unit-frog.png",
         "production_type": ""
     },
     "INS_UNIT_TG_LM_": {
         "name": "Cerberi Instant",
         "image_big": "https://i.ibb.co/YkdqWSw/ins-unit-tg-lm.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/c3PWGGn/tg-lm-small.png",
         "production_type": ""
     },
     "INS_UNIT_TG_LR_": {
         "name": "Dryads Instant",
         "image_big": "https://i.ibb.co/HKn4c2S/ins-unit-tg-lr.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/80nbSKf/tg-lr-small.png",
         "production_type": ""
     },
     "INS_UNIT_TG_MA_": {
         "name": "Banshees Instant",
         "image_big": "https://i.ibb.co/LpXHSQ3/ins-unit-tg-ma.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/LNVK6Js/tg-ma-small.png",
         "production_type": ""
     },
     "INS_UNIT_TG_HM_": {
         "name": "Orc Warriors Instant",
         "image_big": "https://i.ibb.co/Mh9TQc0/ins-unit-tg-hm.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/q5ky4WS/unit-orc-warrior.png",
         "production_type": ""
     },
     "INS_UNIT_TG_HR_": {
         "name": "Orc Strategists Instant",
         "image_big": "https://i.ibb.co/48prTbY/ins-unit-tg-hr.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/Gds0422/unit-orc-strategist.png",
         "production_type": ""
     }
 }
