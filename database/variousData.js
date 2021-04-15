@@ -27,6 +27,10 @@ var chapters = {
 
 var dailyPrizes = {
 
+    "may_xxi_": [
+        "A_Evt_May_XXI_Bumblebee_Stables"
+    ],
+
     "march_xxi_": [
         "A_Evt_Easter_XX_Phoenix_Lava",
         "A_Evt_March_XXI_Phoenix_Chick",
@@ -80,7 +84,8 @@ var dailyPrizes = {
 
 let eventBanners = {
     "february_xxi_": "https://i.ibb.co/NLRxJ7y/EL-akcia-karneval-2021-banner.png",
-    "march_xxi_": "https://i.ibb.co/m0hGLdm/EL-akcia-ve-k-noc-2021-banner.png"
+    "march_xxi_": "https://i.ibb.co/m0hGLdm/EL-akcia-ve-k-noc-2021-banner.png",
+    "may_xxi_": "https://media.innogamescdn.com/com_ONYX_ZZ/announcements/may2021/mainbanner_easter2021.png"
 }
 
 let eventVideos = {
@@ -90,12 +95,14 @@ let eventVideos = {
 
 let eventNames = {
     "february_xxi_": "Elvarian Carnival 2021",
-    "march_xxi_": "Rise of the Phoenix Cult 2021"
+    "march_xxi_": "Rise of the Phoenix Cult 2021",
+    "may_xxi_": "Queen Fairy's Garden"
 }
 
 let eventBetaStarts = { // MM/DD/YYYY
     "february_xxi_": "01/24/2021",
-    "march_xxi_": "03/04/2021"
+    "march_xxi_": "03/04/2021",
+    "may_xxi_": "04/15/2021"
 }
 
 let evoUpgradeCosts = {
@@ -144,8 +151,7 @@ var buildingTypes = {
 var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
-    "A_Evt_Expiring_AWAssistance",
-    "may_xxi_"
+    "A_Evt_Expiring_AWAssistance"
 ]
 
 var goods_icons = {
