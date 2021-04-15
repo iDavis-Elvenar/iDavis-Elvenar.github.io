@@ -85,7 +85,7 @@ var dailyPrizes = {
 let eventBanners = {
     "february_xxi_": "https://i.ibb.co/NLRxJ7y/EL-akcia-karneval-2021-banner.png",
     "march_xxi_": "https://i.ibb.co/m0hGLdm/EL-akcia-ve-k-noc-2021-banner.png",
-    "may_xxi_": "https://media.innogamescdn.com/com_ONYX_ZZ/announcements/may2021/mainbanner_easter2021.png"
+    "may_xxi_": "https://i.ibb.co/tB6W7cj/EL-akcia-m-j-2021-banner.png"
 }
 
 let eventVideos = {
