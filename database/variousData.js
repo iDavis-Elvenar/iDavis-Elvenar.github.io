@@ -28,7 +28,8 @@ var chapters = {
 var dailyPrizes = {
 
     "may_xxi_": [
-        "A_Evt_May_XXI_Bumblebee_Stables"
+        "A_Evt_May_XXI_Bumblebee_Stables",
+        "A_Evt_May_XXI_Blossom_Light_post
     ],
 
     "march_xxi_": [
