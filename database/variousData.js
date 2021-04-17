@@ -29,7 +29,8 @@ var dailyPrizes = {
 
     "may_xxi_": [
         "A_Evt_May_XXI_Bumblebee_Stables",
-        "A_Evt_May_XXI_Blossom_Light_post"
+        "A_Evt_May_XXI_Blossom_Light_post",
+        "INS_RF_GRR_10"
     ],
 
     "march_xxi_": [
