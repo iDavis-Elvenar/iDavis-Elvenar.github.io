@@ -30,7 +30,8 @@ var dailyPrizes = {
     "may_xxi_": [
         "A_Evt_May_XXI_Bumblebee_Stables",
         "A_Evt_May_XXI_Blossom_Light_post",
-        "INS_RF_GRR_10"
+        "INS_RF_GRR_10",
+        "A_Evt_May_XX_Public_Stage"
     ],
 
     "march_xxi_": [
