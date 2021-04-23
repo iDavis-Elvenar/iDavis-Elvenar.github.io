@@ -35,7 +35,8 @@ var dailyPrizes = {
         "INS_UNIT_TG_HR_10",
         "A_Evt_May_XXI_Faerie_Sand_Garden",
         "INS_KP_AW_10",
-        "A_Evt_May_XXI_Dragonfly_Pond"
+        "A_Evt_May_XXI_Dragonfly_Pond",
+        "A_Evt_May_XXI_Petal_Bridge"
     ],
 
     "march_xxi_": [
