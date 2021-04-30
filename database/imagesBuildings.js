@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_June_XXI_Active_Fissure":"https://i.ibb.co/7nXfLBD/active-fissure.png",
+    "A_Evt_June_XXI_Body_Transmutation":"https://i.ibb.co/R9f3M9Y/body-transmutation.png",
+    "A_Evt_June_XXI_Hungry_Treasure":"https://i.ibb.co/KxSRGr1/hungry-treasure.png",
+    "A_Evt_June_XXI_Unexpected_Morning":"https://i.ibb.co/BjHhx4y/unexpected-morning.png",
     "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat":"https://i.ibb.co/CbT67KK/evo-fairy-retreat.png",
     "A_Evt_May_XXI_Blossom_Light_post":"https://i.ibb.co/FVLWVR3/blossom-light-post.png",
     "A_Evt_May_XXI_Bumblebee_Stables":"https://i.ibb.co/W0NgSKL/bumblebee-stambles.png",
