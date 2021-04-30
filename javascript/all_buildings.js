@@ -279,51 +279,7 @@ function readBuildingsJSON() {
                             }
                             tSetBody.appendChild(trSet);
                         }
-
-                        /*let trSetprod = document.createElement('tr');
-                        for (let setProd = 0; setProd < filteredData[i]['setBuilding']['bonuses'].length+1; setProd++) {
-                            if (setProd === 0) {
-                                for (let ch = 0; ch < numberOfChapters+1; ch++) {
-                                    let thSet = document.createElement('th');
-                                    if (ch === 0) {
-                                        thSet.innerHTML = `${langUI("Chapter / Connection")}`;
-                                    } else {
-                                        thSet.innerHTML = `<img src=${chapter_icons[ch]}>`;
-                                    }
-                                    trSetprod.appendChild(thSet);
-                                    tSetBody.appendChild(trSetprod);
-                                }
-                            } else {
-                                let trSetSpecificprod = document.createElement('tr');
-                                let chaptersFulfilled = 0;
-                                let firstColDisplayed = false;
-                                let prevProd = null;
-                                while (chaptersFulfilled < numberOfChapters) {
-                                    if (!firstColDisplayed) {
-                                        let td1C = document.createElement('td');
-                                        td1C.innerHTML = `${setProd}. ${langUI("building")}`;
-                                        trSetSpecificprod.appendChild(td1C);
-                                        firstColDisplayed = true;
-                                    } else {
-                                        let tdSet = document.createElement('td');
-                                        if (filteredData[i]['setBuilding']['bonuses'][setProd-1]['type'] === 'self') {
-                                            if (filteredData[i]['setBuilding']['bonuses'][setProd-1]['type'] === prevProd) {
-                                                tdSet.innerHTML = ``;
-                                                chaptersFulfilled++;
-                                            }
-                                            chaptersFulfilled++;
-                                        } else {
-                                            chaptersFulfilled++;
-                                        }
-
-                                    }
-                                }
-                                tSetBody.appendChild(trSetSpecificprod);
-                            }
-                        }*/
-
                     }
-
                 } else {
                     for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
                         var tr = document.createElement('tr');
