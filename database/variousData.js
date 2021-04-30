@@ -6,7 +6,11 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "boosted_sentient_plus_0_quality_2", "boosted_sentient_plus_1_quality_2", "boosted_sentient_plus_2_quality_2",
     "boosted_sentient_plus_0_quality_3", "boosted_sentient_plus_1_quality_3", "boosted_sentient_plus_2_quality_3",
     "unurium", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
-    "mc_lm", "mc_lr", "mc_ma", "mc_hm", "mc_hr", "knowledge_points", "broken_shards", "spell_good_production_boost_1",
+    "mc_lm", "mc_lr", "mc_ma", "mc_hm", "mc_hr", "knowledge_points", "broken_shards",
+    "relic_marble", "relic_steel", "relic_planks", "relic_crystal", "relic_scrolls", "relic_silk", "relic_elixir",
+    "relic_magic_dust", "relic_gems",
+    "spell_good_production_boost_1",
+    "craft_spell_fragments", "spell_combining_catalyst_1",
     "ins_rf_cn_5", "ins_rf_cn_10", "ins_rf_cn_15", "ins_rf_cn_20",
     "ins_rf_cn_25", "ins_rf_cn_33", "ins_rf_cn_50", "ins_rf_cn_100", "ins_rf_spl_5", "ins_rf_spl_10", "ins_rf_spl_15",
     "ins_rf_spl_20", "ins_rf_spl_25", "ins_rf_spl_33", "ins_rf_spl_50", "ins_rf_spl_100", "ins_rf_grr_5",
@@ -164,11 +168,26 @@ var buildingTypes = {
     "" : ""
 }
 
+var setNames = {
+    "winter_xvii" : "Winter Set",
+    "easter_xviii" : "Phoenix Cult Set",
+    "summer_xviii" : "Woodelvenstock Set",
+    "autumn_a_xviii" : "Harvest Temple Set",
+    "autumn_b_xviii" : "Shrines of Sun and Moon Set",
+    "january_xviii" : "Redbeard Set",
+    "winter_a_xviii" : "Winter Market Set",
+    "winter_b_xviii" : "Snow Owls Set",
+    "carnival_xix" : "Carnival Set",
+    "crafting_1_chess" : "Magical Chess Set",
+    "spire_a_library" : "Moonstone Library Set",
+    "june_xx" : "Air Traders Set",
+    "scroll_sorcerers" : "Pilgrim's Manor"
+}
+
 var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
-    "A_Evt_Expiring_AWAssistance",
-    "june_xxi_"
+    "A_Evt_Expiring_AWAssistance"
 ]
 
 var goods_icons = {
@@ -267,8 +286,17 @@ var goods_icons = {
     "unit_4": "<img src='https://i.ibb.co/1GykVmT/barracks-hm.png'>/<img src='https://i.ibb.co/chCSJVS/barracks-hm-2.png'><br>",
     "unit_5": "<img src='https://i.ibb.co/D9MNhSk/barracks-hr.png'>/<img src='https://i.ibb.co/KqGV47d/barracks-hr-2.png'><br>",
     "spell_good_production_boost_1": "<img src='https://i.ibb.co/vz2BZbv/spell-good-production.png'><br>",
-    "": "",
-    "": "",
+    "relic_marble": "<img src='https://i.ibb.co/sJ8pN3V/relic-marble-small.png'><br>",
+    "relic_steel": "<img src='https://i.ibb.co/DYs5LqZ/relic-steel-small.png'><br>",
+    "relic_planks": "<img src='https://i.ibb.co/rHPSK2m/relic-planks-small.png'><br>",
+    "relic_crystal": "<img src='https://i.ibb.co/LvhbTt6/relic-crystal-small.png'><br>",
+    "relic_scrolls": "<img src='https://i.ibb.co/236qxwB/relic-scrolls-small.png'><br>",
+    "relic_silk": "<img src='https://i.ibb.co/n0z2QMS/relic-silk-small.png'><br>",
+    "relic_elixir": "<img src='https://i.ibb.co/jzxf6qf/relic-elixir-small.png'><br>",
+    "relic_magic_dust": "<img src='https://i.ibb.co/jH0yBYV/relic-magic-dust-small.png'><br>",
+    "relic_gems": "<img src='https://i.ibb.co/k4GJyzw/relic-gems-small.png'><br>",
+    "craft_spell_fragments": "<img src='https://i.ibb.co/fYLXgWP/spell-fragment.png'><br>",
+    "spell_combining_catalyst_1": "<img src='https://i.ibb.co/WnDfq7P/combining-catalyst.png'><br>",
     "": "",
     "": "",
     "": ""

@@ -132,10 +132,14 @@ function readBuildingsJSON() {
                             <option value="0" ${tempArr[0]}>1</option>
                         </select>`;
                 } else {
+                    let setDesc = "-";
+                    if (filteredData[i].hasOwnProperty('setBuilding')) {
+                        setDesc = setNames[filteredData[i]['setBuilding']['setID']];
+                    }
                     td12.innerHTML = `<b>${langUI("Building type:")}</b> ${buildingTypes[filteredData[i]['type']]}<br>
                                     <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}<br>
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
-                                    <b>${langUI("Set building:")}</b> -<br>
+                                    <b>${langUI("Set building:")}</b> ${setDesc}<br>
                                     <b>${langUI("Expiring:")}</b> -`;
                 }
                 t1r.appendChild(td11);
@@ -158,6 +162,10 @@ function readBuildingsJSON() {
                     }
                     tr21.appendChild(th);
                 }
+                var setTable = document.createElement('table');
+                setTable.className = 'table-primary text-center';
+                setTable.style.width = "100%";
+                var tSetBody = document.createElement('tbody');
                 t2body.appendChild(tr21);
                 if (!isEvo) {
                     for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
@@ -216,6 +224,106 @@ function readBuildingsJSON() {
                             t2body.appendChild(trPerSquare);
                         }
                     }
+                    secondTable.appendChild(t2body);
+                    //SETOVE PARAMETRE:
+                    if (filteredData[i].hasOwnProperty('setBuilding')) {
+                        console.log("E "+filteredData[i]['id'])
+
+                        let bonuses = orderSetBuildingData(filteredData[i]);
+
+                        //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
+                        //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
+                        console.log(bonuses);
+
+                        let prodChangeFlags = getProdChangeFlags(bonuses);
+                        console.log(prodChangeFlags);
+
+                        for (let setLine = -1; setLine < bonuses.length; setLine++) {
+                            let trSet = document.createElement('tr');
+                            let idxFlag = -1;
+                            let chToPrint = 1;
+                            if (setLine === -1) {
+                                while (chToPrint <= numberOfChapters) {
+                                    let thSet = document.createElement('th');
+                                    if (idxFlag === -1) {
+                                        thSet.innerHTML = `${langUI("Chapter / Connection")}`;
+                                        idxFlag++;
+                                    } else {
+                                        if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                            thSet.innerHTML = `<img src=${chapter_icons[chToPrint]}>`;
+                                            chToPrint++;
+                                        } else {
+                                            thSet.innerHTML = `-`;
+                                            idxFlag++;
+                                        }
+                                    }
+                                    trSet.appendChild(thSet);
+                                }
+                            } else {
+                                while (chToPrint <= numberOfChapters) {
+                                    let tdSet = document.createElement('td');
+                                    if (idxFlag === -1) {
+                                        tdSet.innerHTML = `${setLine+1}. ${langUI("building")}`;
+                                        idxFlag++;
+                                    } else {
+                                        if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                            tdSet.innerHTML = `${bonuses[setLine][chToPrint-1][1].toFixed(0)}`;
+                                            chToPrint++;
+                                        } else {
+                                            tdSet.innerHTML = `${goods_icons[bonuses[setLine][chToPrint-1][0]]}`;
+                                            idxFlag++;
+                                        }
+                                    }
+                                    trSet.appendChild(tdSet);
+                                }
+                            }
+                            tSetBody.appendChild(trSet);
+                        }
+
+                        /*let trSetprod = document.createElement('tr');
+                        for (let setProd = 0; setProd < filteredData[i]['setBuilding']['bonuses'].length+1; setProd++) {
+                            if (setProd === 0) {
+                                for (let ch = 0; ch < numberOfChapters+1; ch++) {
+                                    let thSet = document.createElement('th');
+                                    if (ch === 0) {
+                                        thSet.innerHTML = `${langUI("Chapter / Connection")}`;
+                                    } else {
+                                        thSet.innerHTML = `<img src=${chapter_icons[ch]}>`;
+                                    }
+                                    trSetprod.appendChild(thSet);
+                                    tSetBody.appendChild(trSetprod);
+                                }
+                            } else {
+                                let trSetSpecificprod = document.createElement('tr');
+                                let chaptersFulfilled = 0;
+                                let firstColDisplayed = false;
+                                let prevProd = null;
+                                while (chaptersFulfilled < numberOfChapters) {
+                                    if (!firstColDisplayed) {
+                                        let td1C = document.createElement('td');
+                                        td1C.innerHTML = `${setProd}. ${langUI("building")}`;
+                                        trSetSpecificprod.appendChild(td1C);
+                                        firstColDisplayed = true;
+                                    } else {
+                                        let tdSet = document.createElement('td');
+                                        if (filteredData[i]['setBuilding']['bonuses'][setProd-1]['type'] === 'self') {
+                                            if (filteredData[i]['setBuilding']['bonuses'][setProd-1]['type'] === prevProd) {
+                                                tdSet.innerHTML = ``;
+                                                chaptersFulfilled++;
+                                            }
+                                            chaptersFulfilled++;
+                                        } else {
+                                            chaptersFulfilled++;
+                                        }
+
+                                    }
+                                }
+                                tSetBody.appendChild(trSetSpecificprod);
+                            }
+                        }*/
+
+                    }
+
                 } else {
                     for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
                         var tr = document.createElement('tr');
@@ -284,9 +392,14 @@ function readBuildingsJSON() {
                             t2body.appendChild(trPerSquare);
                         }
                     }
+                    secondTable.appendChild(t2body);
                 }
-                secondTable.appendChild(t2body);
+
                 div.appendChild(secondTable);
+                if (filteredData[i].hasOwnProperty('setBuilding')) {
+                    setTable.appendChild(tSetBody);
+                    div.appendChild(setTable);
+                }
                 document.getElementById('column_with_tables').appendChild(div);
             }
             create_exception("Buildings Generated!", 3, 'success');
@@ -486,4 +599,41 @@ function sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption,
     return filteredData;
 }
 
+function orderSetBuildingData(filteredData) {
+    let result = [];
+    for (let b = 0; b < filteredData['setBuilding']['bonuses'].length; b++) {
+        let bonus = [];
+        for (let chap = 1; chap <= numberOfChapters; chap++) {
+            if (filteredData['setBuilding']['bonuses'][b].hasOwnProperty('factor')) {
+                for (let prod in filteredData['chapters'][chap]) {
+                    if (prioritiesProduction.includes(prod)) {
+                        if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
+                            bonus.push([prod, filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);
+                        } else {
+                            bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']])
+                        }
+                        break; //teraz berie len jednu z produkcii (zatial som nevidel setovu budovu ktora by to mala inak)
+                    }
+                }
+            } else {
+                bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['setBuilding']['bonuses'][b]['value']])
+            }
+        }
+        result.push(bonus);
+    }
+    return result;
+}
 
+function getProdChangeFlags(bonuses) {
+    let result = new Set();
+    for (let i = 0; i < bonuses.length; i++) {
+        let prevProd = "";
+        for (let j = 0; j < bonuses[i].length; j++) {
+            if (bonuses[i][j][0] !== prevProd) {
+                prevProd = bonuses[i][j][0];
+                result.add(j+1);
+            }
+        }
+    }
+    return Array.from(result);
+}

@@ -32,7 +32,10 @@ let ui = {
         "Filter & Generate" : "Filtruj a Generuj",
         "Home" : "Domov",
         "All Buildings" : "Všetky budovy",
-        "All Events" : "Všetky udalosti"
+        "All Events" : "Všetky udalosti",
+        "Chapter / Connection": "Kapitola / Spojenie",
+        "building": "budova",
+        "Search:": "Hľadať:"
     }
 }
 
