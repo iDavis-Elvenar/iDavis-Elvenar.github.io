@@ -42,7 +42,8 @@ var dailyPrizes = {
         "A_Evt_May_XX_Halfling_Stage",
         "A_Evt_May_XX_Cake_Counter",
         "A_Evt_May_XX_Cotton_Candy_Magic",
-        "A_Evt_May_XXI_Bumblebee_Stables"
+        "A_Evt_May_XXI_Bumblebee_Stables",
+        "A_Evt_May_XXI_Petal_Bridge"
     ],
 
     "march_xxi_": [
