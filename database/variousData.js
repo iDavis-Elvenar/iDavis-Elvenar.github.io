@@ -188,7 +188,8 @@ var setNames = {
 var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
-    "A_Evt_Expiring_AWAssistance"
+    "A_Evt_Expiring_AWAssistance",
+    "june_xxi_"
 ]
 
 var goods_icons = {
