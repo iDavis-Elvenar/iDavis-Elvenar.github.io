@@ -169,18 +169,17 @@
             </div>
             <div class="row center">
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
-                    <label for="input_placeholder" id="set_evolving_label"></label>
-                    <select id="input_placeholder" class="custom-select" style="width: 50%;" onchange="">
-                        <option value="all_events">Coming Soon</option>
-                    </select>
+                    <label for="input_search" id="set_evolving_label"></label>
+                    <input type="text" id="input_search" class="custom-select" style="width: 50%;"><img src="images/general/request_sign.png" style="margin-left: 5px;" width="30px" class="pointer" onclick="showHint()" >
                 </div>
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 60%;">
-                    <button class="btn btn-sm btn-success btn-block text-uppercase" id="filter_and_generate_button" style="margin-top: 10px;" onclick="readBuildingsJSON()"></button>
+                    <button class="btn btn-sm btn-success btn-block text-uppercase" id="filter_and_generate_button" style="margin-top: 10px;" onclick="clearInputField(); clearURL(); readBuildingsJSON();"></button>
                 </div>
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
                     <center><label for="input_chapter" id="for_chapter_label"></label>
                         <select id="input_chapter" class="custom-select" style="width: 40%; margin-bottom: 10px;" onchange="">
                             <option value="all_">All</option>
+                            <option value="18">18</option>
                             <option value="17">17</option>
                             <option value="16">16</option>
                             <option value="15">15</option>
@@ -211,8 +210,13 @@
     document.getElementById("filter_production_label").innerHTML = langUI("Filter production:");
     document.getElementById("order_by_label").innerHTML = langUI("Order By:");
     document.getElementById("for_chapter_label").innerHTML = langUI("For chapter:");
-    document.getElementById("set_evolving_label").innerHTML = langUI("Filter soon:");
+    document.getElementById("set_evolving_label").innerHTML = langUI("Search:");
+    document.getElementById("input_search").innerHTML = langUI("Start typing...");
     document.getElementById("filter_and_generate_button").innerHTML = langUI("Filter & Generate");
+
+    document.getElementById("input_search").addEventListener('input', function() {
+        readBuildingsJSON();
+    });
 
 </script>
 

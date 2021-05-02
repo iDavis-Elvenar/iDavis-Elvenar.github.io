@@ -3,8 +3,10 @@ let buildingsCZ = {
 }
 
 function langBuildings(key) {
-    if (buildingsCZ.hasOwnProperty(key['id']) && localStorage.getItem("lang") === 'cz') {
-        return buildingsCZ[key['id']];
+    if (buildingsCZ.hasOwnProperty(key['id']) && localStorage.getItem("lang") !== 'en') {
+        switch (localStorage.getItem("lang")) {
+            case 'cz': return buildingsCZ[key['id']];
+        }
     } else {
         return key['name'];
     }

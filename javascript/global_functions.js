@@ -105,3 +105,35 @@ function searchForBuildingID(data, idToSearch) {
     }
     return result;
 }
+
+function openInNewTab(url) {
+    window.open(url).focus();
+}
+
+function clearURL() {
+    var uri = window.location.toString();
+
+    if (uri.indexOf("#") > 0) {
+        var clean_uri = uri.substring(0,
+            uri.indexOf("#"));
+
+        window.history.replaceState({},
+            document.title, clean_uri);
+    }
+}
+
+function clearInputField() {
+    try {
+        document.getElementById("input_search").value = "";
+    } catch {
+
+    }
+}
+
+function showHint() {
+    create_exception(langUI("You can search buildings by typing their name."), 5, 'warning');
+}
+
+function hideHint() {
+    close_alert();
+}

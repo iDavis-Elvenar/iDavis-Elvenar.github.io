@@ -49,15 +49,22 @@ function readBuildingsJSON() {
             let isTriggeredOrderBy = orderByOption !== 'all_';
             let chapterSelect = document.getElementById('input_chapter');
             let chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
+            let inputField = document.getElementById('input_search');
+            let inputValue = inputField.value;
 
             clearColumnWithTables();
 
             let filteredData;
-            /*if (location.href.split('#').length>1) {
-                filteredData = searchForBuildingID(data, location.href.split('#')[1]);
-            } else {*/
-            filteredData = filterData(data, filterEventData, filterProductionData, includeAppearances);
-            //}
+
+            if (inputValue.trim() === '') {
+                if (location.href.split('#').length > 1 && location.href.split('#')[1] !== "") {
+                    filteredData = searchForBuildingID(data, location.href.split('#')[1]);
+                } else {
+                    filteredData = filterData(data, filterEventData, filterProductionData, includeAppearances);
+                }
+            } else {
+                filteredData = searchByInput(data, inputValue);
+            }
 
             if (includeAppearances) {
                 filteredData = sortByDay(filteredData, filterEventData);
@@ -149,15 +156,17 @@ function readBuildingsJSON() {
                 }
                 t1r.appendChild(td11);
                 t1r.appendChild(td12);
-                /*var h5hashtag = document.createElement('h5');
-                h5hashtag.id = "HASH-"+filteredData[i]['id'];
-                //h5hashtag.className = "text-link font-weight-bold";
+                let h5hashtag = document.createElement('h5');
+                h5hashtag.id = "#"+filteredData[i]['id'];
                 h5hashtag.style.textAlign = "left";
                 h5hashtag.style.position = "absolute";
                 h5hashtag.style.marginRight = "-55px";
                 h5hashtag.style.marginTop = "-35px";
-                h5hashtag.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[i]['id']}" onclick="readBuildingsJSON();">#</a><br>`;
-                t1r.appendChild(h5hashtag);*/
+                h5hashtag.innerHTML = '<a class="text-link font-weight-bold" id="hash"><img src="images/general/share-symbol.png" class="pointer" title="Open in new tab and share" width="15px;"></a><br>';
+                h5hashtag.addEventListener('click', function() {
+                    openInNewTab(location.href.split(`#`)[0]+h5hashtag.id);
+                });
+                t1r.appendChild(h5hashtag);
                 t1body.appendChild(t1r);
                 firstTable.appendChild(t1body);
                 div.appendChild(firstTable);
@@ -246,10 +255,8 @@ function readBuildingsJSON() {
 
                         //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
                         //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
-                        console.log(bonuses);
 
                         let prodChangeFlags = getProdChangeFlags(bonuses);
-                        console.log(prodChangeFlags);
 
                         for (let setLine = -1; setLine < bonuses.length; setLine++) {
                             let trSet = document.createElement('tr');
@@ -566,4 +573,14 @@ function sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption,
         }
     }
     return filteredData;
+}
+
+function searchByInput(data, inputValue) {
+    let result = [];
+    for (let i = 0; i < data.length; i++) {
+        if (langBuildings(data[i]).toLowerCase().includes(inputValue.toLowerCase())) {
+            result.push(data[i]);
+        }
+    }
+    return result;
 }

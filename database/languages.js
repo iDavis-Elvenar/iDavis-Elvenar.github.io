@@ -35,7 +35,9 @@ let ui = {
         "All Events" : "Všetky udalosti",
         "Chapter / Connection": "Kapitola / Spojenie",
         "building": "budova",
-        "Search:": "Hľadať:"
+        "Search:": "Hľadať:",
+        "Start typing...": "Začni písať...",
+        "You can search buildings by typing their name.": "Vyhľadávať budovy môžeš podľa ich názvu."
     }
 }
 

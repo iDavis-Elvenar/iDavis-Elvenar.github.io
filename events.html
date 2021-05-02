@@ -131,6 +131,7 @@
                                 <label for="input_chapter" class="d-inline-block" id="for_chapter_label"></label>
                                     <select id="input_chapter" class="custom-select d-inline-block" style="width: 10%;" onchange="">
                                         <option value="all_">All</option>
+                                        <option value="18">18</option>
                                         <option value="17">17</option>
                                         <option value="16">16</option>
                                         <option value="15">15</option>
@@ -156,7 +157,7 @@
 
                     </div>
                     <div class="col text-center" style="height: 33%; position: relative" >
-                        <button class="btn btn-sm btn-success btn-block text-uppercase center" id="generate_daily_prizes_button" style="width: 50%; align-content: center" onclick="displayDailyPrizes();"></button>
+                        <button class="btn btn-sm btn-success btn-block text-uppercase center" id="generate_daily_prizes_button" style="width: 50%; align-content: center" onclick="clearURL(); displayDailyPrizes();"></button>
                     </div>
                 </div>
                 <!--<div class="col-sm">
