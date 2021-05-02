@@ -52,7 +52,12 @@ function readBuildingsJSON() {
 
             clearColumnWithTables();
 
-            let filteredData = filterData(data, filterEventData, filterProductionData, includeAppearances);
+            let filteredData;
+            /*if (location.href.split('#').length>1) {
+                filteredData = searchForBuildingID(data, location.href.split('#')[1]);
+            } else {*/
+            filteredData = filterData(data, filterEventData, filterProductionData, includeAppearances);
+            //}
 
             if (includeAppearances) {
                 filteredData = sortByDay(filteredData, filterEventData);
@@ -91,7 +96,7 @@ function readBuildingsJSON() {
                 h5.id = filteredData[i]['id'];
                 h5.className = "card-title text-center text-title font-weight-bold";
                 h5.style.textAlign = "left";
-                h5.innerHTML = `${langBuildings(filteredData[i])}<br>`;
+                h5.innerHTML = `${langBuildings(filteredData[i])}`;
                 document.getElementById('column_with_tables').appendChild(h5);
                 var div = document.createElement('div');
                 div.className = 'bbTable';
@@ -144,6 +149,15 @@ function readBuildingsJSON() {
                 }
                 t1r.appendChild(td11);
                 t1r.appendChild(td12);
+                /*var h5hashtag = document.createElement('h5');
+                h5hashtag.id = "HASH-"+filteredData[i]['id'];
+                //h5hashtag.className = "text-link font-weight-bold";
+                h5hashtag.style.textAlign = "left";
+                h5hashtag.style.position = "absolute";
+                h5hashtag.style.marginRight = "-55px";
+                h5hashtag.style.marginTop = "-35px";
+                h5hashtag.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[i]['id']}" onclick="readBuildingsJSON();">#</a><br>`;
+                t1r.appendChild(h5hashtag);*/
                 t1body.appendChild(t1r);
                 firstTable.appendChild(t1body);
                 div.appendChild(firstTable);
@@ -227,7 +241,6 @@ function readBuildingsJSON() {
                     secondTable.appendChild(t2body);
                     //SETOVE PARAMETRE:
                     if (filteredData[i].hasOwnProperty('setBuilding')) {
-                        console.log("E "+filteredData[i]['id'])
 
                         let bonuses = orderSetBuildingData(filteredData[i]);
 
@@ -553,43 +566,4 @@ function sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption,
         }
     }
     return filteredData;
-}
-
-function orderSetBuildingData(filteredData) {
-    let result = [];
-    for (let b = 0; b < filteredData['setBuilding']['bonuses'].length; b++) {
-        let bonus = [];
-        for (let chap = 1; chap <= numberOfChapters; chap++) {
-            if (filteredData['setBuilding']['bonuses'][b].hasOwnProperty('factor')) {
-                for (let prod in filteredData['chapters'][chap]) {
-                    if (prioritiesProduction.includes(prod)) {
-                        if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
-                            bonus.push([prod, filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);
-                        } else {
-                            bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']])
-                        }
-                        break; //teraz berie len jednu z produkcii (zatial som nevidel setovu budovu ktora by to mala inak)
-                    }
-                }
-            } else {
-                bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['setBuilding']['bonuses'][b]['value']])
-            }
-        }
-        result.push(bonus);
-    }
-    return result;
-}
-
-function getProdChangeFlags(bonuses) {
-    let result = new Set();
-    for (let i = 0; i < bonuses.length; i++) {
-        let prevProd = "";
-        for (let j = 0; j < bonuses[i].length; j++) {
-            if (bonuses[i][j][0] !== prevProd) {
-                prevProd = bonuses[i][j][0];
-                result.add(j+1);
-            }
-        }
-    }
-    return Array.from(result);
 }

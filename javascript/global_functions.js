@@ -56,3 +56,52 @@ function setFooter() {
     h7.appendChild(center);
     document.getElementById('footer').appendChild(h7);
 }
+
+function orderSetBuildingData(filteredData) {
+    let result = [];
+    for (let b = 0; b < filteredData['setBuilding']['bonuses'].length; b++) {
+        let bonus = [];
+        for (let chap = 1; chap <= numberOfChapters; chap++) {
+            if (filteredData['setBuilding']['bonuses'][b].hasOwnProperty('factor')) {
+                for (let prod in filteredData['chapters'][chap]) {
+                    if (prioritiesProduction.includes(prod)) {
+                        if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
+                            bonus.push([prod, filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);
+                        } else {
+                            bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']])
+                        }
+                        break; //teraz berie len jednu z produkcii (zatial som nevidel setovu budovu ktora by to mala inak)
+                    }
+                }
+            } else {
+                bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['setBuilding']['bonuses'][b]['value']])
+            }
+        }
+        result.push(bonus);
+    }
+    return result;
+}
+
+function getProdChangeFlags(bonuses) {
+    let result = new Set();
+    for (let i = 0; i < bonuses.length; i++) {
+        let prevProd = "";
+        for (let j = 0; j < bonuses[i].length; j++) {
+            if (bonuses[i][j][0] !== prevProd) {
+                prevProd = bonuses[i][j][0];
+                result.add(j+1);
+            }
+        }
+    }
+    return Array.from(result);
+}
+
+function searchForBuildingID(data, idToSearch) {
+    let result = [];
+    for (let i = 0; i < data.length; i++) {
+        if (data[i]['id'] === idToSearch) {
+            result.push(data[i]);
+        }
+    }
+    return result;
+}
