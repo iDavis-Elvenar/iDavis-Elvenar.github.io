@@ -51,7 +51,8 @@ var dailyPrizes = {
         "INS_UNIT_MC_LM_10",
         "INS_KP_AW_10",
         "A_Evt_May_XXI_Faerie_Inn",
-        "INS_UNIT_TG_MA_10"
+        "INS_UNIT_TG_MA_10",
+        "A_Evt_May_XXI_Faerie_Sand_Garden",
     ],
 
     "march_xxi_": [
