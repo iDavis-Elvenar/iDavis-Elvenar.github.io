@@ -30,6 +30,10 @@ var chapters = {
 }
 
 var dailyPrizes = {
+    
+    "june_xxi_": [
+        "A_Evt_June_XXI_Body_Transmutation"
+    ],
 
     "may_xxi_": [
         "A_Evt_May_XXI_Bumblebee_Stables",
