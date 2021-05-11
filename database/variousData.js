@@ -32,7 +32,8 @@ var chapters = {
 var dailyPrizes = {
     
     "june_xxi_": [
-        "A_Evt_June_XXI_Body_Transmutation"
+        "A_Evt_June_XXI_Body_Transmutation",
+        "A_Evt_July_XX_Hedge_Beard_Treant"
     ],
 
     "may_xxi_": [
