@@ -71,6 +71,17 @@ function orderSetBuildingData(filteredData) {
                             bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']])
                         }
                         break; //teraz berie len jednu z produkcii (zatial som nevidel setovu budovu ktora by to mala inak)
+                    } else {
+                        let numOfMatchesWithProductions = getNumOfMatchesWithProductions(filteredData['chapters'][chap]);
+                        console.log(filteredData['id'] + "=>" +" " +filteredData['setBuilding']['bonuses'].length+" "+ numOfMatchesWithProductions)
+                        if (numOfMatchesWithProductions === 0) {
+                            if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
+                                bonus.push([prod, filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);
+                            } else {
+                                bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']])
+                            }
+                        }
+                        //break;   v tejto else vetve to bude chciet nejak poriesit s tym june_xxi setom
                     }
                 }
             } else {
@@ -80,6 +91,18 @@ function orderSetBuildingData(filteredData) {
         result.push(bonus);
     }
     return result;
+}
+
+function getNumOfMatchesWithProductions(productions) {
+    let count = 0;
+    for (let prod in productions) {
+        for (let j = 0; j < prioritiesProduction.length; j++) {
+            if (prod === prioritiesProduction[j]) {
+                count++;
+            }
+        }
+    }
+    return count;
 }
 
 function getProdChangeFlags(bonuses) {

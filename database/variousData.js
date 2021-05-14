@@ -202,7 +202,8 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "june_xxi_"
+    "june_xxi_",
+    "july_xxi_"
 ]
 
 var goods_icons = {
@@ -310,6 +311,9 @@ var goods_icons = {
     "relic_elixir": "<img src='https://i.ibb.co/jzxf6qf/relic-elixir-small.png'><br>",
     "relic_magic_dust": "<img src='https://i.ibb.co/jH0yBYV/relic-magic-dust-small.png'><br>",
     "relic_gems": "<img src='https://i.ibb.co/k4GJyzw/relic-gems-small.png'><br>",
+    "boosted_relic_plus_2_quality_1": "<img src='https://i.ibb.co/X2YZWKD/relics-t1-small.png'><br>",
+    "boosted_relic_plus_2_quality_2": "<img src='https://i.ibb.co/hWtPCSd/relics-t2-small.png'><br>",
+    "boosted_relic_plus_2_quality_3": "<img src='https://i.ibb.co/f4tttR1/relics-t3-small.png'><br>",
     "craft_spell_fragments": "<img src='https://i.ibb.co/fYLXgWP/spell-fragment.png'><br>",
     "spell_combining_catalyst_1": "<img src='https://i.ibb.co/WnDfq7P/combining-catalyst.png'><br>",
     "": "",

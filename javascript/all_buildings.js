@@ -252,7 +252,7 @@ function readBuildingsJSON() {
                     if (filteredData[i].hasOwnProperty('setBuilding')) {
 
                         let bonuses = orderSetBuildingData(filteredData[i]);
-
+                        console.log(bonuses)
                         //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
                         //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
 
