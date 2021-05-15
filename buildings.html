@@ -38,8 +38,8 @@
     <script src="javascript/all_buildings.js"></script>
     <script src="javascript/global_functions.js"></script>
     <script src="database/variousData.js"></script>
-    <script src="database/languages.js"></script>
-    <script src="database/buildingNamesLanguages.js"></script>
+    <script src="database/languages/langUI.js"></script>
+    <script src="database/languages/buildingNamesLanguages.js"></script>
     <!--<script  src="javascript/config.js"></script>-->
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/config.css">
@@ -71,6 +71,7 @@
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('en')"><img src="images/general/lang_en.png" style="margin-right: 3px; margin-left: 3px;">EN</a></li>
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('cz')"><img src="images/general/lang_cz.png" style="margin-right: 3px; margin-left: 3px;">CZ</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('de')"><img src="images/general/lang_de.png" style="margin-right: 3px; margin-left: 3px;">DE</a></li>
                 </ul>
             </div>
             <img src="images/general/idavis.png" width="48" style="margin-left: 10px;right:8px;top: 5px;position: absolute;">
@@ -101,7 +102,7 @@
                 <div class="col-sm">
                     <label for="input_event" id="introduced_in_event_label"></label>
                     <select id="input_event" class="custom-select" style="width: 50%; margin-bottom: 10px;"  onchange="">
-                        <option value="all_events">All</option>
+                        <!--<option value="all_events">All</option>
                         <optgroup label="2021">
                             <option value="june_xxi_" disabled>Sorcerers' Homecoming (available soon)</option>
                             <option value="may_xxi_" selected="selected">Queen Fairy's Garden</option>
@@ -126,7 +127,7 @@
                             <option value="queenoffish">The Queen of the Seas</option>
                             <option value="summer_xix_">Summer Solstice</option>
                         </optgroup>
-                        <option value="summer_xix_">Older</option>
+                        <option value="summer_xix_">Older</option>-->
                     </select>
                     <input hidden type="checkbox" id="includeAppearances" name="" value="">
                 </div>
@@ -218,6 +219,8 @@
     document.getElementById("input_search").addEventListener('input', function() {
         readBuildingsJSON();
     });
+
+    generateEventsForAllBuildings("input_event", "all_buildings");
 
 </script>
 

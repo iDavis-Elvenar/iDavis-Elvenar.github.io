@@ -21,6 +21,7 @@ function displayDailyPrizes() {
 
             let eventSelect = document.getElementById('input_event');
             let selectedEvent = eventSelect.options[eventSelect.selectedIndex].value;
+            let selectedEventName = eventSelect.options[eventSelect.selectedIndex].text;
             let orderBySelect = document.getElementById('input_orderBy');
             let orderByOption = orderBySelect.options[orderBySelect.selectedIndex].value;
             let isTriggeredOrderBy = orderByOption !== 'day';
@@ -118,7 +119,7 @@ function displayDailyPrizes() {
                     }
                 }
             }
-            createEventHeader(selectedEvent);
+            createEventHeader(selectedEvent, selectedEventName);
             if (orderByOption === 'day') {
                 createCalendar(filteredData, selectedEvent);
                 if (eventVideos.hasOwnProperty(selectedEvent) && eventVideos[selectedEvent] !== "") {
@@ -358,12 +359,12 @@ function displayDailyPrizes() {
         })
 }
 
-function createEventHeader(selectedEvent) {
+function createEventHeader(selectedEvent, selectedEventName) {
     var h5 = document.createElement('h5');
     h5.id = 'header';
     h5.className = "card-title text-center text-title font-weight-bold";
     h5.style.textAlign = "left";
-    h5.innerHTML = `..:: ${eventNames[selectedEvent]} ::..<br>`;
+    h5.innerHTML = `..:: ${langUI(selectedEventName)} ::..<br>`;
     document.getElementById('column_with_tables').appendChild(h5);
     var eventImg = document.createElement("img");
     eventImg.id = `event_banner`;

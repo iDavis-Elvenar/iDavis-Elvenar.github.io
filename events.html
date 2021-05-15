@@ -36,11 +36,12 @@
     <!-- Our JavaScript -->
     <!--<script src="javascript/all_buildings.js"></script>-->
     <script src="database/variousData.js"></script>
+    <script src="database/dailyPrizes.js"></script>
     <script src="javascript/all_events.js"></script>
     <script src="javascript/global_functions.js"></script>
     <script src="database/items.js"></script>
-    <script src="database/languages.js"></script>
-    <script src="database/buildingNamesLanguages.js"></script>
+    <script src="database/languages/langUI.js"></script>
+    <script src="database/languages/buildingNamesLanguages.js"></script>
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/login.css">
     <title>All Events</title>
@@ -71,6 +72,7 @@
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('en')"><img src="images/general/lang_en.png" style="margin-right: 3px; margin-left: 3px;">EN</a></li>
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('cz')"><img src="images/general/lang_cz.png" style="margin-right: 3px; margin-left: 3px;">CZ</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="setLanguage('de')"><img src="images/general/lang_de.png" style="margin-right: 3px; margin-left: 3px;">DE</a></li>
                 </ul>
             </div>
             <img src="images/general/idavis.png" width="48" style="margin-left: 10px;right:8px;top: 5px;position: absolute;">
@@ -108,12 +110,12 @@
                         <div class="col-sm">
                             <center><label for="input_event" id="select_event_label" style="margin-left: 40px;"></label>
                             <select id="input_event" class="custom-select" style="width: 80%;">
-                                <optgroup label="2021">
+                                <!--<optgroup label="2021">
                                     <option value="june_xxi_" disabled>Sorcerers' Homecoming (available soon)</option>
                                     <option value="may_xxi_" selected="selected">Queen Fairy's Garden</option>
                                     <option value="march_xxi_">Rise of the Phoenix Cult</option>
                                     <option value="february_xxi_">Elvarian Carnival</option>
-                                </optgroup>
+                                </optgroup>-->
                             </select>
                             </center>
                         </div>
@@ -178,6 +180,8 @@
     document.getElementById("for_chapter_label").innerHTML = langUI("For chapter:");
     document.getElementById("calendar_top").innerHTML += langUI("Calendar");
     document.getElementById("generate_daily_prizes_button").innerHTML += langUI("Generate Daily Prizes");
+
+    generateEventsForAllBuildings("input_event", "all_events");
 
 </script>
 

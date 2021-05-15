@@ -160,3 +160,36 @@ function showHint() {
 function hideHint() {
     close_alert();
 }
+
+function generateEventsForAllBuildings(idToAppend, flag) {
+    if (flag === "all_buildings") {
+        let option = document.createElement('option');
+        option.innerHTML = langUI(`All`);
+        option.value = `all_events`;
+        document.getElementById(idToAppend).appendChild(option);
+    }
+    let years = Object.keys(allEvents[flag]).sort().reverse();
+    for (let y = 0; y < years.length; y++) {
+        for (let year in allEvents[flag]) {
+            if (years[y] === year) {
+                let optGroup = document.createElement('optGroup');
+                optGroup.label = `${year}`;
+                for (let e = 0; e < allEvents[flag][year].length; e++) {
+                    let option = document.createElement('option');
+                    option.innerHTML = langUI(allEvents[flag][year][e][0]);
+                    option.value = allEvents[flag][year][e][1];
+                    option.selected = allEvents[flag][year][e][2];
+                    option.disabled = allEvents[flag][year][e][3];
+                    optGroup.appendChild(option);
+                }
+                document.getElementById(idToAppend).appendChild(optGroup);
+            }
+        }
+    }
+    if (flag === "all_buildings") {
+        let optionOlder = document.createElement('option');
+        optionOlder.innerHTML = langUI(`Older`);
+        optionOlder.value = `summer_xix_`;
+        document.getElementById(idToAppend).appendChild(optionOlder);
+    }
+}
