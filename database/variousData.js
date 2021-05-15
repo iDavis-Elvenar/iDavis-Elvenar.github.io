@@ -120,43 +120,6 @@ var discardBuildings = [
     "july_xxi_"
 ]
 
-var allEvents = {
-    "all_buildings" : {
-        "2021": [ //NAME,ID,SELECTED,DISABLED
-            ["Sorcerers' Homecoming (available soon)", "june_xxi_", false, true],
-            ["Queen Fairy's Garden", "may_xxi_", true, false],
-            ["Rise of the Phoenix Cult", "march_xxi_", false, false],
-            ["Elvarian Carnival", "february_xxi_", false, false]
-        ],
-        "2020": [
-            ["Winter Magic - The Snow Owl", "december_xx_", false, false],
-            ["The Mistery of the Misty Forest", "october_xx_", false, false],
-            ["Autumn Zodiac", "september_xx_", false, false],
-            ["Sorcerers' Pilgrimage", "july_xx_", false, false],
-            ["The Air Traders' Voyage", "june_xx_", false, false],
-            ["May Celebrations", "may_xx_", false, false],
-            ["Gathering of the Phoenix Cults", "easter_xx_", false, false],
-            ["Elvarian Carnival", "car_xx_", false, false]
-        ],
-        "2019": [
-            ["Winter Magic", "winter_xix_", false, false],
-            ["Dr. Freakenspleen", "halloween_xix", false, false],
-            ["Autumn Zodiac", "autumn_xix_", false, false],
-            ["Summer Mermaids", "mm_xix_", false, false],
-            ["The Queen of the Seas", "queenoffish", false, false],
-            ["Summer Solstice", "summer_xix_", false, false]
-        ]
-    },
-    "all_events" : {
-        "2021" : [
-            ["Sorcerers' Homecoming (available soon)","june_xxi_",false,true],
-            ["Queen Fairy's Garden","may_xxi_",true,false],
-            ["Rise of the Phoenix Cult","march_xxi_",false,false],
-            ["Elvarian Carnival","february_xxi_",false,false]
-        ]
-    }
-}
-
 var goods_icons = {
     "providedCulture": "<img src='https://image.ibb.co/mEtRZq/culture.png'>",
     "provided_population": "<img src='https://image.ibb.co/ipAZLV/population.png'>",
