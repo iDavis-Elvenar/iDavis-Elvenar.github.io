@@ -7,7 +7,8 @@ var dailyPrizes = {
         "INS_UNIT_TG_LR_10",
         "A_Evt_June_XXI_Hungry_Treasure",
         "A_Evt_July_XX_Hedge_Beard_Treant",
-        "A_Evt_June_XXI_Active_Fissure"
+        "A_Evt_June_XXI_Active_Fissure",
+        "A_Evt_July_XX_Astral_Crevice"
     ],
 
     "may_xxi_": [
