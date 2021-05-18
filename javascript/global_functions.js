@@ -59,36 +59,38 @@ function setFooter() {
 
 function orderSetBuildingData(filteredData) {
     let result = [];
-    for (let b = 0; b < filteredData['setBuilding']['bonuses'].length; b++) {
-        let bonus = [];
-        for (let chap = 1; chap <= numberOfChapters; chap++) {
-            if (filteredData['setBuilding']['bonuses'][b].hasOwnProperty('factor')) {
-                for (let prod in filteredData['chapters'][chap]) {
-                    if (prioritiesProduction.includes(prod)) {
-                        if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
-                            bonus.push([prod, filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);
-                        } else {
-                            bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']])
-                        }
-                        break; //teraz berie len jednu z produkcii (zatial som nevidel setovu budovu ktora by to mala inak)
-                    } else {
-                        let numOfMatchesWithProductions = getNumOfMatchesWithProductions(filteredData['chapters'][chap]);
-                        console.log(filteredData['id'] + "=>" +" " +filteredData['setBuilding']['bonuses'].length+" "+ numOfMatchesWithProductions)
-                        if (numOfMatchesWithProductions === 0) {
+    if (filteredData['setBuilding'].hasOwnProperty('bonuses')) {
+        for (let b = 0; b < filteredData['setBuilding']['bonuses'].length; b++) {
+            let bonus = [];
+            for (let chap = 1; chap <= numberOfChapters; chap++) {
+                if (filteredData['setBuilding']['bonuses'][b].hasOwnProperty('factor')) {
+                    for (let prod in filteredData['chapters'][chap]) {
+                        if (prioritiesProduction.includes(prod)) {
                             if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
                                 bonus.push([prod, filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);
                             } else {
                                 bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']])
                             }
+                            break; //teraz berie len jednu z produkcii (zatial som nevidel setovu budovu ktora by to mala inak)
+                        } else {
+                            let numOfMatchesWithProductions = getNumOfMatchesWithProductions(filteredData['chapters'][chap]);
+                            console.log(filteredData['id'] + "=>" + " " + filteredData['setBuilding']['bonuses'].length + " " + numOfMatchesWithProductions)
+                            if (numOfMatchesWithProductions === 0) {
+                                if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
+                                    bonus.push([prod, filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);
+                                } else {
+                                    bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']])
+                                }
+                            }
+                            //break;   v tejto else vetve to bude chciet nejak poriesit s tym june_xxi setom
                         }
-                        //break;   v tejto else vetve to bude chciet nejak poriesit s tym june_xxi setom
                     }
+                } else {
+                    bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['setBuilding']['bonuses'][b]['value']])
                 }
-            } else {
-                bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['setBuilding']['bonuses'][b]['value']])
             }
+            result.push(bonus);
         }
-        result.push(bonus);
     }
     return result;
 }

@@ -258,46 +258,48 @@ function readBuildingsJSON() {
 
                         let prodChangeFlags = getProdChangeFlags(bonuses);
 
-                        for (let setLine = -1; setLine < bonuses.length; setLine++) {
-                            let trSet = document.createElement('tr');
-                            let idxFlag = -1;
-                            let chToPrint = 1;
-                            if (setLine === -1) {
-                                while (chToPrint <= numberOfChapters) {
-                                    let thSet = document.createElement('th');
-                                    if (idxFlag === -1) {
-                                        thSet.innerHTML = `${langUI("Chapter / Connection")}`;
-                                        idxFlag++;
-                                    } else {
-                                        if (prodChangeFlags[idxFlag] !== chToPrint) {
-                                            thSet.innerHTML = `<img src=${chapter_icons[chToPrint]}>`;
-                                            chToPrint++;
-                                        } else {
-                                            thSet.innerHTML = `-`;
+                        if (bonuses.length > 0) {
+                            for (let setLine = -1; setLine < bonuses.length; setLine++) {
+                                let trSet = document.createElement('tr');
+                                let idxFlag = -1;
+                                let chToPrint = 1;
+                                if (setLine === -1) {
+                                    while (chToPrint <= numberOfChapters) {
+                                        let thSet = document.createElement('th');
+                                        if (idxFlag === -1) {
+                                            thSet.innerHTML = `${langUI("Chapter / Connection")}`;
                                             idxFlag++;
-                                        }
-                                    }
-                                    trSet.appendChild(thSet);
-                                }
-                            } else {
-                                while (chToPrint <= numberOfChapters) {
-                                    let tdSet = document.createElement('td');
-                                    if (idxFlag === -1) {
-                                        tdSet.innerHTML = `${setLine+1}. ${langUI("building")}`;
-                                        idxFlag++;
-                                    } else {
-                                        if (prodChangeFlags[idxFlag] !== chToPrint) {
-                                            tdSet.innerHTML = `${bonuses[setLine][chToPrint-1][1].toFixed(0)}`;
-                                            chToPrint++;
                                         } else {
-                                            tdSet.innerHTML = `${goods_icons[bonuses[setLine][chToPrint-1][0]]}`;
-                                            idxFlag++;
+                                            if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                                thSet.innerHTML = `<img src=${chapter_icons[chToPrint]}>`;
+                                                chToPrint++;
+                                            } else {
+                                                thSet.innerHTML = `-`;
+                                                idxFlag++;
+                                            }
                                         }
+                                        trSet.appendChild(thSet);
                                     }
-                                    trSet.appendChild(tdSet);
+                                } else {
+                                    while (chToPrint <= numberOfChapters) {
+                                        let tdSet = document.createElement('td');
+                                        if (idxFlag === -1) {
+                                            tdSet.innerHTML = `${setLine + 1}. ${langUI("building")}`;
+                                            idxFlag++;
+                                        } else {
+                                            if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                                tdSet.innerHTML = `${bonuses[setLine][chToPrint - 1][1].toFixed(0)}`;
+                                                chToPrint++;
+                                            } else {
+                                                tdSet.innerHTML = `${goods_icons[bonuses[setLine][chToPrint - 1][0]]}`;
+                                                idxFlag++;
+                                            }
+                                        }
+                                        trSet.appendChild(tdSet);
+                                    }
                                 }
+                                tSetBody.appendChild(trSet);
                             }
-                            tSetBody.appendChild(trSet);
                         }
                     }
                 } else {
