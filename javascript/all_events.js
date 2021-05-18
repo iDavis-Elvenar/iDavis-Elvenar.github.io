@@ -405,7 +405,11 @@ function createCalendar(filteredData, selectedEvent) {
         for (var i = 0; i < 7; i++) {
             var tdDay = document.createElement('td');
             if (daysCounter <= filteredData.length) {
-                tdDay.innerHTML = `<b>${daysCounter}. ${langUI("day")}</b>`
+                if (getDaysFromStart(selectedEvent, "live")+1 === daysCounter) {
+                    tdDay.innerHTML = `<b>${daysCounter}. ${langUI("day")}</b>`
+                } else {
+                    tdDay.innerHTML = `<b>${daysCounter}. ${langUI("day")}</b>`
+                }
             } else {
                 if (daysCounter < dailyPrizes[selectedEvent].length+1 && !counterDayDisplayed) {
                     tdDay.innerHTML = `<h7 class="card-title text-center text-link">?</h7>`;
@@ -475,11 +479,16 @@ function applyFilters(data, selectedEvent) {
     return result;
 }
 
-function getDaysFromStart(selectedEvent) {
+function getDaysFromStart(selectedEvent, flag="") {
     if (!eventBetaStarts.hasOwnProperty(selectedEvent)) {
         return 0;
     }
-    let start = eventBetaStarts[selectedEvent];
+    let start = "";
+    if (flag === "live") {
+         start = eventLiveStarts[selectedEvent];
+    } else {
+        start = eventBetaStarts[selectedEvent];
+    }
     var today = new Date();
     var dd = String(today.getUTCDate()).padStart(2, '0');
     var mm = String(today.getUTCMonth() + 1).padStart(2, '0');

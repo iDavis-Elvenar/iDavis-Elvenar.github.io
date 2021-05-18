@@ -50,7 +50,14 @@ let eventNames = {
 let eventBetaStarts = { // MM/DD/YYYY
     "february_xxi_": "01/24/2021",
     "march_xxi_": "03/04/2021",
-    "may_xxi_": "04/15/2021"
+    "may_xxi_": "04/15/2021",
+    "june_xxi_": "05/18/2021"
+}
+
+let eventLiveStarts = {
+    "february_xxi_": "02/09/2021",
+    "march_xxi_": "03/23/2021",
+    "may_xxi_": "05/04/2021"
 }
 
 let evoUpgradeCosts = {
@@ -116,15 +123,14 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "june_xxi_",
     "july_xxi_"
 ]
 
 var allEvents = {
     "all_buildings" : {
         "2021" : [ //NAME,ID,SELECTED,DISABLED
-            ["Sorcerers' Homecoming (available soon)","june_xxi_",false,true],
-            ["Queen Fairy's Garden","may_xxi_",true,false],
+            ["Sorcerers' Homecoming","june_xxi_",true,false],
+            ["Queen Fairy's Garden","may_xxi_",false,false],
             ["Rise of the Phoenix Cult","march_xxi_",false,false],
             ["Elvarian Carnival","february_xxi_",false,false]
         ],
@@ -149,8 +155,8 @@ var allEvents = {
     },
     "all_events" : {
         "2021" : [
-            ["Sorcerers' Homecoming (available soon)","june_xxi_",false,true],
-            ["Queen Fairy's Garden","may_xxi_",true,false],
+            ["Sorcerers' Homecoming","june_xxi_",true,false],
+            ["Queen Fairy's Garden","may_xxi_",false,false],
             ["Rise of the Phoenix Cult","march_xxi_",false,false],
             ["Elvarian Carnival","february_xxi_",false,false]
         ]

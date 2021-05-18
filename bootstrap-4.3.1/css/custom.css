@@ -6,6 +6,10 @@
     color: #7a5e49 !important;
 }
 
+.text-orange {
+    color: #fc7f25 !important;
+}
+
 a.text-title:hover, a.text-title:focus {
     color: #800000 !important;
 }
