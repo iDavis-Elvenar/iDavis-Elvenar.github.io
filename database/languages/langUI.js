@@ -34,7 +34,7 @@ let ui = {
         "Start typing...": "Začni písať...",
         "You can search buildings by typing their name.": "Vyhľadávať budovy môžeš podľa ich názvu.",
         //EVENTS
-        "Sorcerers' Homecoming (available soon)":"Sorcerers' Homecoming (čoskoro)",
+        "Sorcerers' Homecoming":"Návrat kouzelníků domů",
         "Queen Fairy's Garden":"Zahrada královny víl",
         "Rise of the Phoenix Cult":"Vzestup kultu fénixe",
         "Elvarian Carnival":"Elvarianský karneval",
@@ -88,7 +88,7 @@ let ui = {
         "Start typing...": "Beginne zu tippen...",
         "You can search buildings by typing their name.": "Sie können Gebäude durchsuchen, indem Sie deren Namen eingeben.",
         //EVENTS
-        "Sorcerers' Homecoming (available soon)":"Sorcerers' Homecoming (available soon)",
+        "Sorcerers' Homecoming":"Die Heimkehr der Zauberer",
         "Queen Fairy's Garden":"Garten der Feenkönigin",
         "Rise of the Phoenix Cult":"Der Aufstieg des Phoenixkults",
         "Elvarian Carnival":"Elvarischer Karneval",
