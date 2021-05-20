@@ -39,7 +39,8 @@ let eventBanners = {
 let eventVideos = {
     "february_xxi_": "https://www.youtube.com/embed/AS2XrTrF8PM",
     "march_xxi_": "https://www.youtube.com/embed/6VoSOv1ZXFA",
-    "may_xxi_": "https://www.youtube.com/embed/lQ-iFRKuFvU"
+    "may_xxi_": "https://www.youtube.com/embed/lQ-iFRKuFvU",
+    "june_xxi_": "https://www.youtube.com/embed/doNM1AbVWt8"
 }
 
 let eventNames = {
