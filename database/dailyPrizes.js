@@ -15,7 +15,8 @@ var dailyPrizes = {
         "A_Evt_July_XX_Golem_Cave",
         "INS_RF_GRR_10",
         "A_Evt_June_XXI_Body_Transmutation",
-        "A_Evt_July_XX_Hedge_Beard_Treant"
+        "A_Evt_July_XX_Hedge_Beard_Treant",
+        "A_Evt_July_XX_Wizard_Spell_Shop"
     ],
 
     "may_xxi_": [
