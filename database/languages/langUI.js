@@ -1,4 +1,4 @@
-console.log(localStorage.getItem("lang"))
+//console.log(localStorage.getItem("lang"))
 
 let ui = {
     "en" : {},
