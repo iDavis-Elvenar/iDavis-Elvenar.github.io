@@ -12,14 +12,14 @@ var dailyPrizes = {
         "A_Evt_July_XX_Hedge_Beard_Treant",
         "A_Evt_June_XXI_Active_Fissure",
         "A_Evt_July_XX_Astral_Crevice",
-        "INS_UNIT_TG_HM_10", //--
+        "INS_UNIT_TG_HM_10"/*,
         "A_Evt_July_XX_Golem_Cave",
         "INS_RF_GRR_10",
         "A_Evt_June_XXI_Body_Transmutation",
         "A_Evt_July_XX_Hedge_Beard_Treant",
         "A_Evt_July_XX_Wizard_Spell_Shop",
         "INS_UNIT_TG_LR_10",
-        "A_Evt_June_XXI_Hungry_Treasure"
+        "A_Evt_June_XXI_Hungry_Treasure"*/
     ],
 
     "may_xxi_": [
