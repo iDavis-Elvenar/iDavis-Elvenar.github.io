@@ -2,8 +2,8 @@ var dailyPrizes = {
 
     "june_xxi_": [
         "A_Evt_June_XXI_Unexpected_Morning",
-        "A_Evt_July_XX_Golem_Cave",//dalej su zz2
-        "INS_RF_GRR_10",//zrejme zo zz2
+        "A_Evt_July_XX_Golem_Cave",
+        "INS_RF_GRR_10",
         "A_Evt_June_XXI_Body_Transmutation",
         "A_Evt_July_XX_Hedge_Beard_Treant",
         "A_Evt_July_XX_Wizard_Spell_Shop",
@@ -14,7 +14,8 @@ var dailyPrizes = {
         "A_Evt_July_XX_Astral_Crevice",
         "INS_UNIT_TG_HM_10",
         "A_Evt_June_XXI_Hungry_Treasure",
-        "A_Evt_July_XX_Golem_Cave",//--<
+        "A_Evt_July_XX_Golem_Cave",
+        "A_Evt_June_XXI_Unexpected_Morning",//--<
         "INS_RF_GRR_10",
         "A_Evt_June_XXI_Body_Transmutation",
         "A_Evt_July_XX_Hedge_Beard_Treant",
