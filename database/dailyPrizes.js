@@ -20,7 +20,8 @@ var dailyPrizes = {
         "A_Evt_June_XXI_Active_Fissure",
         "A_Evt_July_XX_Copper_Dragon",
         "INS_UNIT_TG_HR_10",
-        "A_Evt_July_XX_Mana_Crystal_Merchant", //--<
+        "A_Evt_July_XX_Mana_Crystal_Merchant",
+        "INS_KP_AW_10", //--<
         "INS_RF_GRR_10",
         "A_Evt_June_XXI_Body_Transmutation",
         "A_Evt_July_XX_Hedge_Beard_Treant",
