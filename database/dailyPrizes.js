@@ -22,11 +22,7 @@ var dailyPrizes = {
         "INS_UNIT_TG_HR_10",
         "A_Evt_July_XX_Mana_Crystal_Merchant",
         "INS_KP_AW_10",
-        "A_Evt_June_XXI_Body_Transmutation", //--<
-        "A_Evt_July_XX_Hedge_Beard_Treant",
-        "A_Evt_July_XX_Wizard_Spell_Shop",
-        "INS_UNIT_TG_LR_10",
-        "A_Evt_June_XXI_Hungry_Treasure"
+        "A_Evt_June_XXI_Body_Transmutation"
     ],
 
     "may_xxi_": [
