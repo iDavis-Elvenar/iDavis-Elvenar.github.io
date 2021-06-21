@@ -1,4 +1,8 @@
 var dailyPrizes = {
+    
+    "july_xxi_": [
+        "A_Evt_July_XXI_Leviathan_Ferry"
+    ],
 
     "june_xxi_": [
         "A_Evt_June_XXI_Unexpected_Morning",
