@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_July_XXI_Diving_Platform":"https://i.ibb.co/7Kf12qP/diving-platform.png",
+    "A_Evt_July_XXI_Leviathan_Ferry":"https://i.ibb.co/jJqdmQ2/leviathan-ferry.png",
+    "A_Evt_July_XXI_Manta_Boat":"https://i.ibb.co/prn7ztT/manta-boat.png",
+    "A_Evt_July_XXI_Mechanical_Seahorse":"https://i.ibb.co/BgRrWtr/mechanical-seahorse.png",
+    "A_Evt_Evo_July_XXI_Triumph_of_Tides":"https://i.ibb.co/wyb5GRp/evo-triumph-of-tides.png",
     "A_Evt_June_XXI_Active_Fissure":"https://i.ibb.co/7nXfLBD/active-fissure.png",
     "A_Evt_June_XXI_Body_Transmutation":"https://i.ibb.co/R9f3M9Y/body-transmutation.png",
     "A_Evt_June_XXI_Hungry_Treasure":"https://i.ibb.co/KxSRGr1/hungry-treasure.png",

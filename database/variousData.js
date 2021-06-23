@@ -125,12 +125,14 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "july_xxi_"
+    "july_xxi",
+    "september_xxi"
 ]
 
 var allEvents = {
     "all_buildings" : {
         "2021" : [ //NAME,ID,SELECTED,DISABLED
+            ["Elvarian Games","july_xxi_",false,true],
             ["Sorcerers' Homecoming","june_xxi_",true,false],
             ["Queen Fairy's Garden","may_xxi_",false,false],
             ["Rise of the Phoenix Cult","march_xxi_",false,false],
@@ -157,6 +159,7 @@ var allEvents = {
     },
     "all_events" : {
         "2021" : [
+            ["Elvarian Games","july_xxi_",false,true],
             ["Sorcerers' Homecoming","june_xxi_",true,false],
             ["Queen Fairy's Garden","may_xxi_",false,false],
             ["Rise of the Phoenix Cult","march_xxi_",false,false],
