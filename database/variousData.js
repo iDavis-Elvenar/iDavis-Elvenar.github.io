@@ -53,7 +53,8 @@ let eventBetaStarts = { // MM/DD/YYYY
     "february_xxi_": "01/24/2021",
     "march_xxi_": "03/04/2021",
     "may_xxi_": "04/15/2021",
-    "june_xxi_": "05/18/2021"
+    "june_xxi_": "05/18/2021",
+    "july_xxi_": "06/24/2021"
 }
 
 let eventLiveStarts = {
@@ -81,7 +82,8 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_December_XX_Watchful_Winter_Owl" : "1x Watchful Winter Owl Artifact",
     "A_Evt_Evo_Car_XX_Burukbrak_Gaelagil" : "1x Valentines Artifact",
     "A_Evt_Evo_Autumn_XIX_Bear_Panda" : "1x Bear Artifact",
-    "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat": "1x Queen Faeries Retreat Artifact"
+    "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat": "1x Queen Faeries Retreat Artifact",
+    "A_Evt_Evo_July_XXI_Triumph_of_Tides": "1x Triumph of the Tides Artifact <br> --> This building has <b>Switchable production</b> - that means that only one of the productions (except culture and population) can be running at the same time. I will add the appropriate way to display this soon."
 }
 
 var feedingEffectsDescriptions = {
@@ -125,15 +127,14 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "july_xxi",
     "september_xxi"
 ]
 
 var allEvents = {
     "all_buildings" : {
         "2021" : [ //NAME,ID,SELECTED,DISABLED
-            ["Elvarian Games","july_xxi_",false,true],
-            ["Sorcerers' Homecoming","june_xxi_",true,false],
+            ["Elvarian Games","july_xxi_",true,false],
+            ["Sorcerers' Homecoming","june_xxi_",false,false],
             ["Queen Fairy's Garden","may_xxi_",false,false],
             ["Rise of the Phoenix Cult","march_xxi_",false,false],
             ["Elvarian Carnival","february_xxi_",false,false]
@@ -159,8 +160,8 @@ var allEvents = {
     },
     "all_events" : {
         "2021" : [
-            ["Elvarian Games","july_xxi_",false,true],
-            ["Sorcerers' Homecoming","june_xxi_",true,false],
+            ["Elvarian Games","july_xxi_",true,false],
+            ["Sorcerers' Homecoming","june_xxi_",false,false],
             ["Queen Fairy's Garden","may_xxi_",false,false],
             ["Rise of the Phoenix Cult","march_xxi_",false,false],
             ["Elvarian Carnival","february_xxi_",false,false]

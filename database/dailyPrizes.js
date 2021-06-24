@@ -3,11 +3,8 @@ var dailyPrizes = {
     "july_xxi_": [
         "A_Evt_July_XXI_Leviathan_Ferry",
         "A_Evt_MM_XIX_MantaRay",
-        "A_Evt_MM_XIX_Seahorse"
-    ],
-
-    "july_xxi_": [
-
+        "A_Evt_MM_XIX_Seahorse",
+        "A_Evt_MM_XIX_CrabHotel"
     ],
 
     "june_xxi_": [
