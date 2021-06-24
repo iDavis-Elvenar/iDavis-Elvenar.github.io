@@ -388,6 +388,7 @@ function readBuildingsJSON() {
                 document.getElementById('column_with_tables').appendChild(div);
             }
             create_exception("Buildings Generated!", 3, 'success');
+            //create_exception("If the values are not displaying correctly, press CTRL+F5 to make full refresh of the website", 10, "warning");
         })
 }
 
