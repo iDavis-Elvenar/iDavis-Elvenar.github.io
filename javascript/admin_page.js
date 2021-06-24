@@ -150,7 +150,10 @@ function handleBuildingsJSON() {
 
                                 var arrayOfProductions = Array.from(setOfAllProductions);
                                 var allDifferentProductions = orderByPriorities(arrayOfProductions);
-                                b['all_productions'] = allDifferentProductions;
+                                b['all_productions'] = new Array();
+                                for (let allp = 0; allp < allDifferentProductions.length; allp++) {
+                                    b['all_productions'].push([allDifferentProductions[allp]]);
+                                }
                                 levelsFound = 0;
                                 for (var k = i; k < allBuildings.length; k++) {
                                     if (allBuildings[k]['id'].includes(b['id'])) {
@@ -169,6 +172,15 @@ function handleBuildingsJSON() {
                                                             var c = {};
                                                             c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod]];
                                                             c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
+                                                            if (allBuildings[k]['production']['__class__'] === 'SwitchableProductionVO') {
+                                                                for (let allp2 = 0; allp2 < b['all_productions'].length; allp2++) {
+                                                                    if (b['all_productions'][allp2][0] === allDifferentProductions[prod]) {
+                                                                        if (b['all_productions'][allp2].length === 1) {
+                                                                            b['all_productions'][allp2].push("switchable");
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
                                                             b['chapters'][currentLevelString][allDifferentProductions[prod]] = c;
                                                             break;
                                                         }
@@ -217,6 +229,15 @@ function handleBuildingsJSON() {
                                                                 if (evoObject['stages'][stage]['products'][o].hasOwnProperty('value')) {
                                                                     c['value'] = evoObject['stages'][stage]['products'][o]['value'];
                                                                     c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
+                                                                    if (allBuildings[k]['production']['__class__'] === 'SwitchableProductionVO') {
+                                                                        for (let allp2 = 0; allp2 < b['all_productions'].length; allp2++) {
+                                                                            if (b['all_productions'][allp2][0] === allDifferentProductions[prod]) {
+                                                                                if (b['all_productions'][allp2].length === 1) {
+                                                                                    b['all_productions'][allp2].push("switchable");
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
                                                                     if (b['chapters'][currentLevelString][stageString].hasOwnProperty(allDifferentProductions[prod])) {
                                                                         b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]]['value'] += c['value'];
                                                                     } else {
@@ -227,6 +248,15 @@ function handleBuildingsJSON() {
                                                                     if (evoObject['stages'][stage]['products'][o].hasOwnProperty('factor')) {
                                                                         c['value'] *= evoObject['stages'][stage]['products'][o]['factor'];
                                                                         c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
+                                                                        if (allBuildings[k]['production']['__class__'] === 'SwitchableProductionVO') {
+                                                                            for (let allp2 = 0; allp2 < b['all_productions'].length; allp2++) {
+                                                                                if (b['all_productions'][allp2][0] === allDifferentProductions[prod]) {
+                                                                                    if (b['all_productions'][allp2].length === 1) {
+                                                                                        b['all_productions'][allp2].push("switchable");
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
                                                                         if (b['chapters'][currentLevelString][stageString].hasOwnProperty(allDifferentProductions[prod])) {
                                                                             b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]]['value'] += c['value'];
                                                                         } else {
@@ -258,6 +288,9 @@ function handleBuildingsJSON() {
                                                                 if (prod !== '__class__') {
                                                                     c['value'] = evoObject['stages'][stage]['products'][unusedProduct]['factor']*allBuildings[k]['production']['products'][allBuildings[k]['production']['products'].length-1]['revenue']['resources'][prod];
                                                                     c['production_time'] = allBuildings[k]['production']['products'][allBuildings[k]['production']['products'].length-1]['production_time'];
+                                                                    if (allBuildings[k]['production']['products'][allBuildings[k]['production']['products'].length-1].hasOwnProperty('production_option')) {
+                                                                        c['flag'] = "switchable";
+                                                                    }
                                                                 }
                                                             }
                                                             b['chapters'][currentLevelString][stageString][evoObject['stages'][stage]['products'][unusedProduct]['goodId']] = c;

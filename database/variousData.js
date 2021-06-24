@@ -84,7 +84,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Car_XX_Burukbrak_Gaelagil" : "1x Valentines Artifact",
     "A_Evt_Evo_Autumn_XIX_Bear_Panda" : "1x Bear Artifact",
     "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat": "1x Queen Faeries Retreat Artifact",
-    "A_Evt_Evo_July_XXI_Triumph_of_Tides": "1x Triumph of the Tides Artifact <br> --> This building has <b>Switchable production</b> - that means that only one of the productions (except culture and population) can be running at the same time. I will add the appropriate way to display this soon."
+    "A_Evt_Evo_July_XXI_Triumph_of_Tides": "1x Triumph of the Tides Artifact"
 }
 
 var feedingEffectsDescriptions = {

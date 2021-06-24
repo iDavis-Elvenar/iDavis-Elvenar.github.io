@@ -53,7 +53,8 @@ let ui = {
         "The Queen of the Seas":"Královna moří",
         "Summer Solstice":"Letní slunovrat",
         "Older":"Staršie",
-        "All":"Všetky"
+        "All":"Všetky",
+        "This is a switchable production. Only one of the switchable productions can be running at the same time.":"Toto je prepínateľná produkcia. Iba jedna z prepínateľných produkcií môže byť aktívna v jednu chvíľu."
     },
 
     "de" : {
@@ -107,7 +108,8 @@ let ui = {
         "The Queen of the Seas":"Königin der Meere",
         "Summer Solstice":"Sommersonnenwende",
         "Older":"Ältere",
-        "All":"Alle"
+        "All":"Alle",
+        "This is a switchable production. Only one of the switchable productions can be running at the same time.":"Dies ist eine schaltbare Produktion. Es kann immer nur eine der umschaltbaren Produktionen gleichzeitig laufen."
     },
 
     "fr" : {
@@ -160,8 +162,9 @@ let ui = {
         "Summer Mermaids":"L'Été des Sirènes",
         "The Queen of the Seas":"The Queen of the Seas",
         "Summer Solstice":"Solstice d'été",
-        "Plus ancien":"Staršie",
-        "Tout":"Všetky"
+        "Older":"Plus ancien",
+        "All":"Tout",
+        "This is a switchable production. Only one of the switchable productions can be running at the same time.":"Il s'agit d'une production commutable. Une seule des productions commutables peut être exécutée en même temps."
     },
 
     "pl" : {
@@ -214,8 +217,9 @@ let ui = {
         "Summer Mermaids":"Letnie Syreny",
         "The Queen of the Seas":"The Queen of the Seas",
         "Summer Solstice":"Letnie Przesilenie",
-        "Older":"Staršie",
-        "All":"Všetky"
+        "Older":"Starsze",
+        "All":"Wszystko",
+        "This is a switchable production. Only one of the switchable productions can be running at the same time.":"To jest produkcja przełączalna. Tylko jedna z przełączalnych produkcji może być uruchomiona w tym samym czasie."
     },
 
     "ru" : {
@@ -268,8 +272,9 @@ let ui = {
         "Summer Mermaids":"Летние русалки",
         "The Queen of the Seas":"The Queen of the Seas",
         "Summer Solstice":"Летнее солнцестояние",
-        "Older":"Staršie",
-        "All":"Všetky"
+        "Older":"Старшая",
+        "All":"Все",
+        "This is a switchable production. Only one of the switchable productions can be running at the same time.":"Это переключаемое производство. Одновременно может работать только одно из переключаемых производств."
     },
 }
 
