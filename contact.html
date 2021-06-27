@@ -149,17 +149,17 @@
                         document.getElementById('contact_body').appendChild(iframe);
 
                         if (localStorage.getItem("contactLastSentMin") !== null &&
-                        Math.round(((((new Date - new Date(localStorage.getItem("contactLastSentMin"))) % 86400000) % 3600000) / 60000)) > 30) {
+                        Math.round(((((new Date - new Date(localStorage.getItem("contactLastSentMin"))) % 86400000) % 3600000) / 60000)) < 30) {
                             //console.log(Math.round(((((new Date - new Date(localStorage.getItem("contactLastSentMin"))) % 86400000) % 3600000) / 60000)))
                             //create_exception("Please wait some time before sending an email again.", 10, "success");
+                            let p3 = document.createElement('p');
+                            p3.innerHTML = "You need to wait some time before you can send an email again.";
+                            form.appendChild(p3);
+                        } else {
                             let button = document.createElement('input');
                             button.type = "submit";
                             button.value = "Submit";
                             form.appendChild(button);
-                        } else {
-                            let p3 = document.createElement('p');
-                            p3.innerHTML = "You need to wait some time before you can send an email again.";
-                            form.appendChild(p3);
                         }
                     </script>
                     <!--<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1ntCRBWQdjH137wRGAxjRKCGHDaJbb4yqOGndecwrM2E/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
