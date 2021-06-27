@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MQN4EC0WX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9MQN4EC0WX');
+    </script>
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -60,7 +70,7 @@
 
         <script>
             document.getElementById("home").innerHTML += " "+langUI("Home");
-            document.getElementById("all_buildings").innerHTML = "&#x203A; "+langUI("All Buildings")+" &#x2039;";
+            document.getElementById("all_buildings").innerHTML = langUI("All Buildings");
             document.getElementById("all_events").innerHTML = langUI("All Events");
         </script>
 
