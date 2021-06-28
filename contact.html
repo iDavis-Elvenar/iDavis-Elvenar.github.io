@@ -149,7 +149,7 @@
                         document.getElementById('contact_body').appendChild(iframe);
 
                         if (localStorage.getItem("contactLastSentMin") !== null &&
-                        Math.round(((((new Date - new Date(localStorage.getItem("contactLastSentMin"))) % 86400000) % 3600000) / 60000)) < 30) {
+                        Math.round(((new Date - new Date(localStorage.getItem("contactLastSentMin"))) / 60000)) < 30) {
                             //console.log(Math.round(((((new Date - new Date(localStorage.getItem("contactLastSentMin"))) % 86400000) % 3600000) / 60000)))
                             //create_exception("Please wait some time before sending an email again.", 10, "success");
                             let p3 = document.createElement('p');
