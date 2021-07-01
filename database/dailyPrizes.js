@@ -10,7 +10,8 @@ var dailyPrizes = {
         "INS_KP_AW_10",
         "A_Evt_MM_XIX_CrabHotel",
         "A_Evt_MM_XIX_SharkTower",
-        "A_Evt_July_XXI_Diving_Platform"
+        "A_Evt_July_XXI_Diving_Platform",
+        "INS_UNIT_LR_15"
     ],
 
     "june_xxi_": [
