@@ -11,7 +11,8 @@ var dailyPrizes = {
         "A_Evt_MM_XIX_CrabHotel",
         "A_Evt_MM_XIX_SharkTower",
         "A_Evt_July_XXI_Diving_Platform",
-        "INS_UNIT_LR_15"
+        "INS_UNIT_LR_15",
+        "INS_RF_GRR_10"
     ],
 
     "june_xxi_": [
