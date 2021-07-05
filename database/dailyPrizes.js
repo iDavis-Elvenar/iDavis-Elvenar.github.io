@@ -14,7 +14,8 @@ var dailyPrizes = {
         "INS_UNIT_LM_15",
         "INS_RF_GRR_10",
         "A_Evt_July_XXI_Mechanical_Seahorse",
-        "A_Evt_MM_XIX_Seahorse"
+        "A_Evt_MM_XIX_Seahorse",
+        "A_Evt_July_XXI_Manta_Boat"
     ],
 
     "june_xxi_": [
