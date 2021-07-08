@@ -17,7 +17,8 @@ var dailyPrizes = {
         "A_Evt_MM_XIX_Seahorse",
         "A_Evt_July_XXI_Manta_Boat",
         "A_Evt_MM_XIX_ShellSinger",
-        "A_Evt_July_XXI_Diving_Platform"
+        "A_Evt_July_XXI_Diving_Platform",
+        "INS_UNIT_LR_15"
     ],
 
     "june_xxi_": [
