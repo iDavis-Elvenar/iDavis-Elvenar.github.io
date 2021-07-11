@@ -21,7 +21,7 @@ var dailyPrizes = {
         "INS_UNIT_LR_15",
         "A_Evt_MM_XIX_SharkTower",
         "INS_KP_AW_10",
-        "A_Evt_MM_XIX_MantaRay
+        "A_Evt_MM_XIX_MantaRay"
     ],
 
     "june_xxi_": [
