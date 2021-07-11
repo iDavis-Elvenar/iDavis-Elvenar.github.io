@@ -20,7 +20,8 @@ var dailyPrizes = {
         "A_Evt_July_XXI_Diving_Platform",
         "INS_UNIT_LR_15",
         "A_Evt_MM_XIX_SharkTower",
-        "INS_KP_AW_10"
+        "INS_KP_AW_10",
+        "A_Evt_MM_XIX_MantaRay
     ],
 
     "june_xxi_": [
