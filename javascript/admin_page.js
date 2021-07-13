@@ -134,7 +134,7 @@ function handleBuildingsJSON() {
                                 let evoObject = {};
                                 if (b['id'].includes('_Evo_')) {
                                     for (let evo = 0; evo < allEvolvings.length; evo++) {
-                                        if (allEvolvings[evo]['baseName'] === b['id']) {
+                                        if (allEvolvings[evo]['baseName'].toLowerCase() === b['id'].toLowerCase()) {
                                             evoObject = allEvolvings[evo];
                                             break;
                                         }
