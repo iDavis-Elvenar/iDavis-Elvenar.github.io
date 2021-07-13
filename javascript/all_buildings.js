@@ -400,6 +400,7 @@ function filterEvent(filterData, objectToPass) {
 }
 
 function filterProduction(filterData, objectToPass) {
+    console.log(filterData+" + "+objectToPass['name'])
     if (filterData.includes('all')) {
         return true;
     }
@@ -419,7 +420,7 @@ function filterProduction(filterData, objectToPass) {
         }
         for (var i = 1; i < filterDataSplit.length; i++) {
             for (var j = 0; j < objectToPass['all_productions'].length; j++) {
-                if (filterDataSplit[i] === objectToPass['all_productions'][j]) {
+                if (filterDataSplit[i] === objectToPass['all_productions'][j][0]) {
                     neededToPass--;
                 }
             }
@@ -430,7 +431,7 @@ function filterProduction(filterData, objectToPass) {
             var neededToPass = filterDataSplit.length;
             for (var i = 0; i < filterDataSplit.length; i++) {
                 for (var j = 0; j < objectToPass['all_productions'].length; j++) {
-                    if (filterDataSplit[i] === objectToPass['all_productions'][j]) {
+                    if (filterDataSplit[i] === objectToPass['all_productions'][j][0]) {
                         neededToPass--;
                     }
                 }
@@ -440,7 +441,7 @@ function filterProduction(filterData, objectToPass) {
             let passed = 0;
             for (let i = 0; i < filterDataSplit.length; i++) {
                 for (let j = 0; j < objectToPass['all_productions'].length; j++) {
-                    if (filterDataSplit[i] === objectToPass['all_productions'][j]) {
+                    if (filterDataSplit[i] === objectToPass['all_productions'][j][0]) {
                         passed++;
                     }
                 }
