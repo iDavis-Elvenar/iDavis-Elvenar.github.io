@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_September_XXI_Bonsai_Garden":"https://i.ibb.co/prFMwC4/bonsai-garden.png",
+    "A_Evt_September_XXI_Training_Dojo":"https://i.ibb.co/YXmTn25/training-dojo.png",
+    "A_Evt_September_XXI_Calligraphy_Class":"https://i.ibb.co/ZYZs5Nn/calligraphy-class.png",
+    "A_Evt_September_XXI_Bamboo_Fountain":"https://i.ibb.co/N9RmYG6/bamboo-fountain.png",
+    "A_Evt_Evo_September_XXI_Red_Panda_Master":"https://i.ibb.co/Z2XXLPV/evo-red-panda-master.png",
     "A_Evt_July_XXI_Diving_Platform":"https://i.ibb.co/7Kf12qP/diving-platform.png",
     "A_Evt_July_XXI_Leviathan_Ferry":"https://i.ibb.co/jJqdmQ2/leviathan-ferry.png",
     "A_Evt_July_XXI_Manta_Boat":"https://i.ibb.co/prn7ztT/manta-boat.png",
