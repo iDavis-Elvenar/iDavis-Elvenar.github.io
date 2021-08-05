@@ -387,68 +387,63 @@ function readBuildingsJSON() {
                     div.appendChild(setTable);
                 }
                 //PET FEEDING EFFECT
-                if (isEvo) {
-                    var dataToPass = {myid:filteredData[i]['id']};
-                    $.getJSON('database/effectConfigs.json',
-                        dataToPass,
-                        function(data) {
-                            for (let pet = 0; pet < data.length; pet++) {
-                                if (data[pet]["buildingID"] === dataToPass["myid"]) {
-                                    var petJSON = data[pet];
+                if (isEvo && filteredData[i].hasOwnProperty("feedingEffect")) {
+                    var petJSON = filteredData[i]["feedingEffect"];
+                    var petDiv = document.createElement('div');
+                    petDiv.className = 'bbTable';
+                    petDiv.style.marginTop = "20px";
+                    var petCenter = document.createElement('center');
+                    var petImg = document.createElement('img');
+                    petImg.src = "images/general/feeding_icon.png";
+                    petCenter.appendChild(petImg);
+                    //petDiv.appendChild(petCenter);
+                    var petUl = document.createElement('ul');
+                    var petLi1 = document.createElement('li');
+                    petLi1.innerHTML = `<b>Effect description: </b>${petJSON['description']}`;
+                    petUl.appendChild(petLi1);
+                    var petLi2 = document.createElement('li');
+                    petLi2.innerHTML = `<b>Duration: </b>${petJSON['duration']/60/60}h`;
+                    petUl.appendChild(petLi2);
+                    if (petJSON.hasOwnProperty("source") && allowedFeedingMultiplicators.hasOwnProperty(petJSON['source'])) {
+                        var petLi3 = document.createElement('li');
+                        petLi3.innerHTML = `<b>Note: </b>The values are multiplied by ${allowedFeedingMultiplicators[petJSON['source']]}.`
+                        petUl.appendChild(petLi3);
+                    }
+                    petDiv.appendChild(petUl);
 
-                                    var petDiv = document.createElement('div');
-                                    petDiv.className = 'bbTable';
-                                    petDiv.style.marginTop = "20px";
-                                    var petUl = document.createElement('ul');
-                                    var petLi1 = document.createElement('li');
-                                    petLi1.innerHTML = `<b>Effect description: </b>${petJSON['description']}`;
-                                    petUl.appendChild(petLi1);
-                                    var petLi2 = document.createElement('li');
-                                    petLi2.innerHTML = `<b>Duration: </b>${petJSON['duration']/60/60}h`;
-                                    petUl.appendChild(petLi2);
-                                    if (petJSON.hasOwnProperty("source") && allowedFeedingMultiplicators.hasOwnProperty(petJSON['source'])) {
-                                        var petLi3 = document.createElement('li');
-                                        petLi3.innerHTML = `<b>Note: </b>The values are multiplied by ${allowedFeedingMultiplicators[petJSON['source']]}.`
-                                        petUl.appendChild(petLi3);
-                                    }
-                                    petDiv.appendChild(petUl);
-
-                                    var petTable = document.createElement('table');
-                                    petTable.className = 'table-primary text-center';
-                                    petTable.style.width = "100%";
-                                    var petBody = document.createElement('tbody');
-                                    var petTr1 = document.createElement('tr');
-                                    for (let stg = 0; stg <= 10; stg++) {
-                                        var petTh = document.createElement('th');
-                                        if (stg === 0) {
-                                            petTh.innerHTML = `${langUI("Stage / Feeding effect")}`;
-                                        } else {
-                                            petTh.innerHTML = `${stg}`;
-                                        }
-                                        petTr1.appendChild(petTh);
-                                    }
-                                    petBody.appendChild(petTr1);
-                                    var petTr2 = document.createElement('tr');
-                                    for (let stg = 0; stg <= 10; stg++) {
-                                        var petTd = document.createElement('td');
-                                        if (stg === 0) {
-                                            petTd.innerHTML = `${feedingEffectsDescriptions[dataToPass['myid']]}`;
-                                        } else {
-                                            if (petJSON['format'].toLowerCase().includes("percentage")) {
-                                                petTd.innerHTML = `${(petJSON['valuesStages'][stg]*100).toFixed(1)}%`;
-                                            } else {
-                                                petTd.innerHTML = `${petJSON['valuesStages'][stg]}`;
-                                            }
-                                        }
-                                        petTr2.appendChild(petTd);
-                                    }
-                                    petBody.appendChild(petTr2);
-                                    petTable.appendChild(petBody);
-                                    petDiv.appendChild(petTable);
-                                    document.getElementById(dataToPass["myid"]+"_div").appendChild(petDiv);
-                                }
+                    var petTable = document.createElement('table');
+                    petTable.className = 'table-primary text-center';
+                    petTable.style.width = "100%";
+                    var petBody = document.createElement('tbody');
+                    var petTr1 = document.createElement('tr');
+                    for (let stg = 0; stg <= 10; stg++) {
+                        var petTh = document.createElement('th');
+                        if (stg === 0) {
+                            petTh.innerHTML = `${langUI("Stage / Feeding effect")}`;
+                        } else {
+                            petTh.innerHTML = `${stg}`;
+                        }
+                        petTr1.appendChild(petTh);
+                    }
+                    petBody.appendChild(petTr1);
+                    var petTr2 = document.createElement('tr');
+                    for (let stg = 0; stg <= 10; stg++) {
+                        var petTd = document.createElement('td');
+                        if (stg === 0) {
+                            petTd.innerHTML = `${feedingEffectsDescriptions[filteredData[i]['id']]}`;
+                        } else {
+                            if (petJSON['format'].toLowerCase().includes("percentage")) {
+                                petTd.innerHTML = `${(petJSON['valuesStages'][stg]*100).toFixed(1)}%`;
+                            } else {
+                                petTd.innerHTML = `${petJSON['valuesStages'][stg]}`;
                             }
-                        })
+                        }
+                        petTr2.appendChild(petTd);
+                    }
+                    petBody.appendChild(petTr2);
+                    petTable.appendChild(petBody);
+                    petDiv.appendChild(petTable);
+                    div.appendChild(petDiv);
                 }
                 document.getElementById('column_with_tables').appendChild(div);
             }
