@@ -298,7 +298,6 @@ function handleBuildingsJSON() {
                                                     }
                                                 }
                                             }
-                                            b = new Object(fillMissingProductionTimes(b));
                                         }
 
                                         levelsFound++;
@@ -307,6 +306,24 @@ function handleBuildingsJSON() {
                                         }
                                     }
                                 }
+                                /*//FILL MISSING PRODUCTION TIMES
+                                if (b['id'].includes('_Evo_')) {
+                                    for (var ch in b["chapters"]) {
+                                        for (var st in b["chapters"][ch]) {
+                                            let foundProductionTime = -1;
+                                            for (var sprod in b["chapters"][ch][st]) {
+                                                if (prioritiesProduction.includes(sprod) &&
+                                                    b["chapters"][ch][st][sprod].hasOwnProperty("production_time")) {
+                                                    foundProductionTime = b["chapters"][ch][st][sprod]["production_time"];
+                                                } else if (prioritiesProduction.includes(sprod) &&
+                                                    !b["chapters"][ch][st][sprod].hasOwnProperty("production_time") && foundProductionTime !== -1) {
+                                                    b["chapters"][ch][st][sprod]["production_time"] = foundProductionTime;
+                                                    console.log("ZMENENE")
+                                                }
+                                            }
+                                        }
+                                    }
+                                }*/
                                 //PRIDAJ FEEDING EFFECTS PRE EVO (AK EXISTUJE)
                                 for (let pet = 0; pet < effectConfigs.length; pet++) {
                                     if (effectConfigs[pet]["buildingID"] === b["id"]) {
@@ -341,25 +358,6 @@ function saveJSON(text, filename){
     a.setAttribute('href', 'data:text/plain;charset=utf-8,'+encodeURIComponent(text));
     a.setAttribute('download', filename);
     a.click()
-}
-
-function fillMissingProductionTimes(evoObj) {
-    let result = new Object(evoObj);
-    for (var ch in result["chapters"]) {
-        for (var st in result["chapters"][ch]) {
-            let foundProductionTime = -1;
-            for (var prod in result["chapters"][ch][st]) {
-                if (prioritiesProduction.includes(prod) &&
-                    result["chapters"][ch][st][prod].hasOwnProperty("production_time")) {
-                    foundProductionTime = result["chapters"][ch][st][prod]["production_time"];
-                } else if (prioritiesProduction.includes(prod) &&
-                    !result["chapters"][ch][st][prod].hasOwnProperty("production_time") && foundProductionTime !== -1) {
-                    result["chapters"][ch][st][prod]["production_time"] = foundProductionTime;
-                }
-            }
-        }
-    }
-    return result;
 }
 
 function getByKey(object, key, default_value) {
