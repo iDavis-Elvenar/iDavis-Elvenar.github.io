@@ -102,6 +102,10 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_September_XXI_Red_Panda_Master" : `<img src="https://i.ibb.co/hYXr3HW/vision-vapor-small.png">`
 }
 
+var allowedFeedingMultiplicators = {
+    "completedProvinces":"completed provinces",
+}
+
 var buildingTypes = {
     "culture_residential" : "Culture-residential",
     "culture" : "Culture",

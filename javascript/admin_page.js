@@ -473,3 +473,53 @@ function regenerateBuildingNamesLanguages() {
         create_exception("Data Generated!",10,'success');
     }
 }
+
+function generateEffectConfigs() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('effectConfigs').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = [];
+    reader.onload = function () {
+        let file2 = document.getElementById('effectConfigsTooltips').files[0];
+        let reader2 = new FileReader();
+        reader2.readAsText(file2);
+        reader2.onload = function () {
+            let data = JSON.parse(reader.result);
+            let data2 = JSON.parse(reader2.result);
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].hasOwnProperty("proxyBuildingId") &&
+                    data[i]["proxyBuildingId"].toLowerCase().includes("a_evt_evo")) {
+                    var pet = {};
+                    pet['buildingID'] = data[i]["proxyBuildingId"];
+                    pet['valuesStages'] = data[i]["valuesStages"];
+                    pet['duration'] = data[i]["duration"];
+                    if (data[i].hasOwnProperty("metadata")) {
+                        if (data[i]["metadata"].hasOwnProperty("iconId")) {
+                            pet["iconId"] = data[i]["metadata"]["iconId"];
+                        }
+                        if (data[i]["metadata"].hasOwnProperty("format")) {
+                            pet["format"] = data[i]["metadata"]["format"];
+                        }
+                    }
+                    if (data[i].hasOwnProperty("metadata"))
+                    if (data[i].hasOwnProperty("source")) {
+                        pet["source"] = data[i]["source"];
+                    }
+                    for (let j = 0; j < data2.length; j++) {
+                        if (data2[j].hasOwnProperty("effectConfigId") &&
+                        data2[j]["effectConfigId"] === data[i]["id"].toString()) {
+                            pet["title"] = data2[j]["title"];
+                            pet["description"] = data2[j]["description"];
+                            break;
+                        }
+                    }
+                    result.push(pet);
+                }
+            }
+            console.log(result)
+            saveJSON( JSON.stringify(result), "effectConfigs.json" );
+            create_exception("Data Generated!",10,'success');
+        }
+    }
+}
