@@ -1,5 +1,4 @@
 function showNotification(id) {
-    //console.log("OPENED NOTIFICATION WITH ID "+id.toString())
     markOpenedNotification(id);
     create_exception(notifications[id]["text"], notifications[id]["duration"], notifications[id]["style"]);
 }
@@ -49,7 +48,6 @@ function findNotificationToOpen() {
         }
     }
     activeNotifications.sort((a,b) => (a.priority > b.priority) ? -1 : 1);
-    //console.log("AVAILABLE: "+activeNotifications.length)
     return ((activeNotifications.length > 0) ? activeNotifications[0].id : -1);
 }
 
