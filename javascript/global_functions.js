@@ -74,7 +74,7 @@ function orderSetBuildingData(filteredData) {
                             break; //teraz berie len jednu z produkcii (zatial som nevidel setovu budovu ktora by to mala inak)
                         } else {
                             let numOfMatchesWithProductions = getNumOfMatchesWithProductions(filteredData['chapters'][chap]);
-                            console.log(filteredData['id'] + "=>" + " " + filteredData['setBuilding']['bonuses'].length + " " + numOfMatchesWithProductions)
+                            //console.log(filteredData['id'] + "=>" + " " + filteredData['setBuilding']['bonuses'].length + " " + numOfMatchesWithProductions)
                             if (numOfMatchesWithProductions === 0) {
                                 if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
                                     bonus.push([prod, filteredData['chapters'][chap][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);

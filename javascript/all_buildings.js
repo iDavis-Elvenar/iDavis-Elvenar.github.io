@@ -122,11 +122,15 @@ function readBuildingsJSON() {
                 var td12 = document.createElement('td');
                 td12.style.width = "40%";
                 if (isEvo) {
+                    let expiringDuration = `-`;
+                    if (filteredData[i].hasOwnProperty("expiring")) {
+                        expiringDuration = (filteredData[i]["expiring"]["duration"]/60/60).toString()+"h";
+                    }
                     td12.innerHTML = `<b>${langUI("Building type:")}</b> ${buildingTypes[filteredData[i]['type']]}<br>
-                                    <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}<br>
+                                    <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}s<br>
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> -<br>
-                                    <b>${langUI("Expiring:")}</b> -<br>
+                                    <b>${langUI("Expiring:")}</b> ${expiringDuration}<br>
                                     <b>${langUI("Upgrade costs:")}</b> ${evoUpgradeCosts[filteredData[i]['id']]}<br>`;
                     if (feedingEffectsDescriptions.hasOwnProperty(filteredData[i]['id'])) {
                         td12.innerHTML += `<b>Feeding effect:</b> ${feedingEffectsDescriptions[filteredData[i]['id']]}<br>`;
@@ -151,11 +155,15 @@ function readBuildingsJSON() {
                     if (filteredData[i].hasOwnProperty('setBuilding')) {
                         setDesc = setNames[filteredData[i]['setBuilding']['setID']];
                     }
+                    let expiringDuration = `-`;
+                    if (filteredData[i].hasOwnProperty("expiring")) {
+                        expiringDuration = (filteredData[i]["expiring"]["duration"]/60/60).toString()+"h";
+                    }
                     td12.innerHTML = `<b>${langUI("Building type:")}</b> ${buildingTypes[filteredData[i]['type']]}<br>
-                                    <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}<br>
+                                    <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}s<br>
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
-                                    <b>${langUI("Expiring:")}</b> -`;
+                                    <b>${langUI("Expiring:")}</b> ${expiringDuration}`;
                 }
                 t1r.appendChild(td11);
                 t1r.appendChild(td12);
@@ -250,13 +258,32 @@ function readBuildingsJSON() {
                             }
                             t2body.appendChild(trPerSquare);
                         }
+                        //PRIDAJ EXPIRING EFFECT CONFIG VALUES (AK EXISTUJE)
+                        if (filteredData[i].hasOwnProperty("expiring") &&
+                            Object.keys(filteredData[i]["expiring"]["values"]).length >= numberOfChapters) {
+                            var trEffect = document.createElement('tr');
+                            for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                                var tdEffect = document.createElement('td');
+                                if (ch === 0) {
+                                    tdEffect.innerHTML = `${iconsImages[filteredData[i]["expiring"]["iconID"]]}`;
+                                } else {
+                                    if (filteredData[i]["expiring"].hasOwnProperty("format") &&
+                                    filteredData[i]["expiring"]["format"].toLowerCase().includes("percentage")) {
+                                        tdEffect.innerHTML = `+${filteredData[i]["expiring"]["values"][ch]*100}%`;
+                                    } else {
+                                        tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]}`;
+                                    }
+                                }
+                                trEffect.appendChild(tdEffect);
+                            }
+                            t2body.appendChild(trEffect);
+                        }
                     }
                     secondTable.appendChild(t2body);
                     //SETOVE PARAMETRE:
                     if (filteredData[i].hasOwnProperty('setBuilding')) {
 
                         let bonuses = orderSetBuildingData(filteredData[i]);
-                        console.log(bonuses)
                         //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
                         //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
 

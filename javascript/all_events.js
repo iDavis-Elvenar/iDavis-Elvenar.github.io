@@ -256,10 +256,8 @@ function displayDailyPrizes() {
 
                         //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
                         //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
-                        console.log(bonuses);
 
                         let prodChangeFlags = getProdChangeFlags(bonuses);
-                        console.log(prodChangeFlags);
 
                         for (let setLine = -1; setLine < bonuses.length; setLine++) {
                             let trSet = document.createElement('tr');

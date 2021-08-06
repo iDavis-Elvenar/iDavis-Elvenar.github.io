@@ -326,8 +326,25 @@ function handleBuildingsJSON() {
                                 }*/
                                 //PRIDAJ FEEDING EFFECTS PRE EVO (AK EXISTUJE)
                                 for (let pet = 0; pet < effectConfigs.length; pet++) {
-                                    if (effectConfigs[pet]["buildingID"] === b["id"]) {
+                                    if (effectConfigs[pet]["buildingID"] === b["id"] &&
+                                    effectConfigs[pet]["typeEffectConfig"] === "feeding") {
                                         b['feedingEffect'] = effectConfigs[pet];
+                                    }
+                                }
+                                //PRIDAJ EXPIRING AK EXISTUJE
+                                for (let exp = 0; exp < effectConfigs.length; exp++) {
+                                    if (effectConfigs[exp]["buildingID"] === b["id"] &&
+                                    effectConfigs[exp]["typeEffectConfig"] === "expiring") {
+                                        var expObj = {};
+                                        expObj["duration"] = effectConfigs[exp]["duration"];
+                                        expObj["values"] = effectConfigs[exp]["values"];
+                                        if (effectConfigs[exp].hasOwnProperty("iconID")) {
+                                            expObj["iconID"] = effectConfigs[exp]["iconID"];
+                                        }
+                                        if (effectConfigs[exp].hasOwnProperty("format")) {
+                                            expObj["format"] = effectConfigs[exp]["format"];
+                                        }
+                                        b["expiring"] = expObj;
                                     }
                                 }
                                 result.push(b);
@@ -517,6 +534,7 @@ function generateEffectConfigs() {
                     var pet = {};
                     pet['buildingID'] = data[i]["proxyBuildingId"];
                     pet['valuesStages'] = data[i]["valuesStages"];
+                    pet['typeEffectConfig'] = "feeding"
                     pet['duration'] = data[i]["duration"];
                     if (data[i].hasOwnProperty("metadata")) {
                         if (data[i]["metadata"].hasOwnProperty("iconId")) {
@@ -539,6 +557,19 @@ function generateEffectConfigs() {
                         }
                     }
                     result.push(pet);
+                }
+                if (data[i].hasOwnProperty("origins") && data[i].hasOwnProperty("duration")) {
+                    var expiring = {};
+                    expiring["buildingID"] = data[i]["origins"][0];
+                    expiring["values"] = data[i]["values"];
+                    expiring["typeEffectConfig"] = "expiring";
+                    expiring["duration"] = data[i]["duration"];
+                    if (data[i].hasOwnProperty("metadata")) {
+                        expiring["iconID"] = data[i]["metadata"]["iconId"];
+                        expiring["name"] = data[i]["metadata"]["name"];
+                        expiring["format"] = data[i]["metadata"]["format"];
+                    }
+                    result.push(expiring);
                 }
             }
             console.log(result)

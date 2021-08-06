@@ -106,10 +106,18 @@ var allowedFeedingMultiplicators = {
     "completedProvinces":"completed provinces",
 }
 
+var iconsImages = {
+    "damage_boost":`<img src="https://i.ibb.co/3TG2xv7/unit-attack-enhance.png" title="Damage Boost">`,
+    "event_currency_1":`<img src="https://i.ibb.co/cYv1Scg/EL-akcia-ve-k-noc-2019-event-currency.png" title="Event Currency">`,
+    "aw_hitpoints":`<img src="https://i.ibb.co/Yy21rpT/health-points.png" title="Troops Health">`,
+    "damage_boost":`<img src="https://i.ibb.co/3TG2xv7/unit-attack-enhance.png">`,
+    "damage_boost":`<img src="https://i.ibb.co/3TG2xv7/unit-attack-enhance.png">`,
+}
+
 var buildingTypes = {
     "culture_residential" : "Culture-residential",
     "culture" : "Culture",
-    "" : "",
+    "expiring" : "Expiring",
     "" : "",
     "" : ""
 }
