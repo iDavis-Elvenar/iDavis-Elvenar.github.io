@@ -56,7 +56,7 @@ function isAvailable(id) {
         return false;
     }
     if ((((Date.now() - parseInt(localStorage.getItem("idavis-notification_"+id.toString()))))/1000)
-    < notifications[id].eachSeconds) {
+    < notifications[id].repeatAfter) {
         return false;
     }
     return true;
