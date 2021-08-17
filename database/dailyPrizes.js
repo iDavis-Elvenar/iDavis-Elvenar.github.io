@@ -2,6 +2,7 @@ var dailyPrizes = {
     
     "september_xxi_": [
         "A_Evt_September_XXI_Calligraphy_Class",
+        "A_Evt_September_XXI_Training_Dojo",
     ],
     
     "july_xxi_": [
