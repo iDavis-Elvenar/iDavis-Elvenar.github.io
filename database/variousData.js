@@ -34,7 +34,8 @@ let eventBanners = {
     "march_xxi_": "https://i.ibb.co/m0hGLdm/EL-akcia-ve-k-noc-2021-banner.png",
     "may_xxi_": "https://i.ibb.co/tB6W7cj/EL-akcia-m-j-2021-banner.png",
     "june_xxi_": "https://i.ibb.co/8Y0N5Qn/EL-akcia-j-n-2021-banner.png",
-    "july_xxi_": "https://i.ibb.co/vh3BQGv/EL-akcia-j-l-2021-banner.png"
+    "july_xxi_": "https://i.ibb.co/vh3BQGv/EL-akcia-j-l-2021-banner.png",
+    "september_xxi_": "https://i.ibb.co/Sv8KCqt/EL-akcia-september-2021-banner.png",
 }
 
 let eventVideos = {
