@@ -6,16 +6,16 @@ var notifications = {
         "style":"warning",
         "duration":10,
         "active":true,
-        "priority":20
+        "priority":10
     },
     "2":{
         "id":2,
-        "text":"There are new features on the website! Check the list of everything new on the updated <a href='index.html'><strong>Home Page</strong></a>.",
-        "repeatAfter":1000000,
-        "style":"warning",
-        "duration":10,
-        "active":false,
-        "priority":10
+        "text":"New event arrived on Beta and all the new buildings are now available! Make sure to check both <a href='buildings.html' class='alert-link'>All Buildings</a> and <a href='events.html' class='alert-link'>All Events</a> subpages so that you don't miss any news!",
+        "repeatAfter":604800,
+        "style":"info",
+        "duration":15,
+        "active":true,
+        "priority":30
     },
     "3":{
         "id":3,
@@ -30,5 +30,14 @@ var notifications = {
         "duration":300,
         "active":false,
         "priority":30
+    },
+    "4":{
+        "id":4,
+        "text":"New event is here and some new videos might appear on my channel soon! Feel free to <a href='https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg' class='alert-link'>subscribe to my channel</a> so that you won't miss any new video.",
+        "repeatAfter":604800,
+        "style":"info",
+        "duration":15,
+        "active":true,
+        "priority":20
     },
 }

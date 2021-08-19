@@ -3,7 +3,8 @@ var dailyPrizes = {
     "september_xxi_": [
         "A_Evt_September_XXI_Calligraphy_Class",
         "A_Evt_September_XXI_Training_Dojo",
-        "petfood",
+        "petfood_1",
+        "A_Evt_September_XX_Ancient_Pond_Statue",
     ],
     
     "july_xxi_": [

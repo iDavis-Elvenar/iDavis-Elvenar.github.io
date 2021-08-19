@@ -41,7 +41,7 @@ function displayDailyPrizes() {
             }
 
             for (var i = 0; i < Math.min(Object.keys(dailyPrizes[selectedEvent]).length, days); i++) {
-                if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_') {
+                if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_' || dailyPrizes[selectedEvent][i].toLowerCase().includes("petfood")) {
                     var baseID = dailyPrizes[selectedEvent][i].substring(0, dailyPrizes[selectedEvent][i].lastIndexOf('_')+1);
                     var instantObject = {};
                     instantObject['id'] = baseID;

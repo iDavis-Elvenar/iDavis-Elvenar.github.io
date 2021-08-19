@@ -56,7 +56,8 @@ let eventBetaStarts = { // MM/DD/YYYY
     "march_xxi_": "03/04/2021",
     "may_xxi_": "04/15/2021",
     "june_xxi_": "05/18/2021",
-    "july_xxi_": "06/24/2021"
+    "july_xxi_": "06/24/2021",
+    "september_xxi_": "08/19/2021",
 }
 
 let eventLiveStarts = {
@@ -85,7 +86,8 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Car_XX_Burukbrak_Gaelagil" : "1x Valentines Artifact",
     "A_Evt_Evo_Autumn_XIX_Bear_Panda" : "1x Bear Artifact",
     "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat": "1x Queen Faeries Retreat Artifact",
-    "A_Evt_Evo_July_XXI_Triumph_of_Tides": "1x Triumph of the Tides Artifact"
+    "A_Evt_Evo_July_XXI_Triumph_of_Tides": "1x Triumph of the Tides Artifact",
+    "A_Evt_Evo_September_XXI_Red_Panda_Master": "1x Red Panda Master Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -142,14 +144,13 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "september_xxi_"
 ]
 
 var allEvents = {
     "all_buildings" : {
         "2021" : [ //NAME,ID,SELECTED,DISABLED
-            ["Autumn Zodiac (soon)","september_xxi_",false,true],
-            ["Elvarian Games","july_xxi_",true,false],
+            ["Autumn Zodiac","september_xxi_",true,false],
+            ["Elvarian Games","july_xxi_",false,false],
             ["Sorcerers' Homecoming","june_xxi_",false,false],
             ["Queen Fairy's Garden","may_xxi_",false,false],
             ["Rise of the Phoenix Cult","march_xxi_",false,false],
@@ -176,8 +177,8 @@ var allEvents = {
     },
     "all_events" : {
         "2021" : [
-            ["Autumn Zodiac (soon)","september_xxi_",false,true],
-            ["Elvarian Games","july_xxi_",true,false],
+            ["Autumn Zodiac","september_xxi_",true,false],
+            ["Elvarian Games","july_xxi_",false,false],
             ["Sorcerers' Homecoming","june_xxi_",false,false],
             ["Queen Fairy's Garden","may_xxi_",false,false],
             ["Rise of the Phoenix Cult","march_xxi_",false,false],

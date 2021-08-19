@@ -140,5 +140,11 @@ var instants = {
         "image_big": "https://i.ibb.co/48prTbY/ins-unit-tg-hr.png",
         "image_small": "https://i.ibb.co/Gds0422/unit-orc-strategist.png",
         "production_type": ""
+    },
+    "petfood_": {
+        "name": "Pet Food",
+        "image_big": "https://i.ibb.co/bKkGCKx/petfood-big.png",
+        "image_small": "https://i.ibb.co/1GNjFQN/petfood-small.png",
+        "production_type": ""
     }
 }
