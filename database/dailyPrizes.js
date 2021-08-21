@@ -6,6 +6,7 @@ var dailyPrizes = {
         "petfood_1",
         "A_Evt_September_XX_Ancient_Pond_Statue",
         "A_Evt_Autumn_XVIII_Green_Pond",
+        "A_Evt_September_XXI_Bamboo_Fountain",
     ],
     
     "july_xxi_": [
