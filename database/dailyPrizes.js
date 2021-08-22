@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_September_XX_Ancient_Pond_Statue",
         "A_Evt_Autumn_XVIII_Green_Pond",
         "A_Evt_September_XXI_Bamboo_Fountain",
+        "A_Evt_September_XX_Kite_Outpost",
     ],
     
     "july_xxi_": [
