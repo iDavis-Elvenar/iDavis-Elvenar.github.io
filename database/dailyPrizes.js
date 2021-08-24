@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_September_XXI_Bamboo_Fountain",
         "A_Evt_September_XX_Kite_Outpost",
         "A_Evt_September_XXI_Bonsai_Garden",
+        "A_Evt_September_XX_Prayer_Wheels",
     ],
     
     "july_xxi_": [
