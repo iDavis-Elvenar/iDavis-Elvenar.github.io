@@ -11,6 +11,7 @@ var dailyPrizes = {
         "A_Evt_September_XXI_Bonsai_Garden",
         "A_Evt_September_XX_Prayer_Wheels",
         "A_Evt_September_XX_Firefly_Lookout",
+        "INS_KP_AW_20",
     ],
     
     "july_xxi_": [
