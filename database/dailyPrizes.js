@@ -13,6 +13,7 @@ var dailyPrizes = {
         "A_Evt_September_XX_Firefly_Lookout",
         "INS_KP_AW_20",
         "A_Evt_Hazeltown",
+        "A_Evt_Prod_Nutcracker",
     ],
     
     "july_xxi_": [
