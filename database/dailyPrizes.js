@@ -14,6 +14,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_Hazeltown",
         "A_Evt_Prod_Nutcracker",
+        "INS_UNIT_MC_HR_10",
     ],
     
     "july_xxi_": [
