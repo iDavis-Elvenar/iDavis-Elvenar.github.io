@@ -16,6 +16,7 @@ var dailyPrizes = {
         "A_Evt_Prod_Nutcracker",
         "INS_UNIT_MC_HR_10",
         "A_Evt_September_XXI_Training_Dojo",
+        "A_Evt_September_XXI_Bamboo_Fountain",
     ],
     
     "july_xxi_": [
