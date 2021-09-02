@@ -18,6 +18,7 @@ var dailyPrizes = {
         "A_Evt_September_XXI_Training_Dojo",
         "A_Evt_September_XXI_Bamboo_Fountain",
         "A_Evt_September_XX_Bell_Fountain",
+        "A_Evt_September_XX_Pond_Pillar",
     ],
     
     "july_xxi_": [
