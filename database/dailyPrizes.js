@@ -20,6 +20,7 @@ var dailyPrizes = {
         "A_Evt_September_XX_Bell_Fountain",
         "A_Evt_September_XX_Pond_Pillar",
         "INS_UNIT_MC_MA_10",
+        "A_Evt_SquirrelTown",
     ],
     
     "july_xxi_": [
