@@ -21,6 +21,7 @@ var dailyPrizes = {
         "A_Evt_September_XX_Pond_Pillar",
         "INS_UNIT_MC_MA_10",
         "A_Evt_SquirrelTown",
+        "A_Evt_September_XXI_Calligraphy_Class",
     ],
     
     "july_xxi_": [
