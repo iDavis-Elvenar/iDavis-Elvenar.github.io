@@ -22,6 +22,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_MA_10",
         "A_Evt_SquirrelTown",
         "A_Evt_September_XXI_Calligraphy_Class",
+        "A_Evt_September_XXI_Bonsai_Garden",
     ],
     
     "july_xxi_": [
