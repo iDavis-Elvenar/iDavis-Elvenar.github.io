@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_October_XXI_Lost_Cemetry":"https://i.ibb.co/74C1yCP/lost-cemetry.png",
+    "A_Evt_October_XXI_Phantom_Bear":"https://i.ibb.co/VNcFjtF/phantom-bear.png",
+    "A_Evt_October_XXI_Spirit_Moose_Family":"https://i.ibb.co/vd3mYKG/spirit-moose-family.png",
+    "A_Evt_October_XXI_Spirit_Wolf_Pack":"https://i.ibb.co/f42T6c9/spirit-wolf-pack.png",
     "A_Evt_September_XXI_Bonsai_Garden":"https://i.ibb.co/prFMwC4/bonsai-garden.png",
     "A_Evt_September_XXI_Training_Dojo":"https://i.ibb.co/YXmTn25/training-dojo.png",
     "A_Evt_September_XXI_Calligraphy_Class":"https://i.ibb.co/ZYZs5Nn/calligraphy-class.png",
