@@ -90,6 +90,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat": "1x Queen Faeries Retreat Artifact",
     "A_Evt_Evo_July_XXI_Triumph_of_Tides": "1x Triumph of the Tides Artifact",
     "A_Evt_Evo_September_XXI_Red_Panda_Master": "1x Red Panda Master Artifact",
+    "A_Evt_Evo_October_XXI_Witch_Summoning_Circle": "1x Witch Summoning Circle Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -151,6 +152,7 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : {
         "2021" : [ //NAME,ID,SELECTED,DISABLED
+            ["Halloween","october_xxi_",false,true],
             ["Autumn Zodiac","september_xxi_",true,false],
             ["Elvarian Games","july_xxi_",false,false],
             ["Sorcerers' Homecoming","june_xxi_",false,false],
@@ -179,6 +181,7 @@ var allEvents = {
     },
     "all_events" : {
         "2021" : [
+            ["Halloween","october_xxi_",false,true],
             ["Autumn Zodiac","september_xxi_",true,false],
             ["Elvarian Games","july_xxi_",false,false],
             ["Sorcerers' Homecoming","june_xxi_",false,false],
