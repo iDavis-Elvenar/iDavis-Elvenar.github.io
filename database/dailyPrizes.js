@@ -3,6 +3,7 @@ var dailyPrizes = {
     "october_xxi_": [
         "A_Evt_October_XXI_Lost_Cemetry",
         "A_Evt_October_XX_Mausoleum_Wedding",
+        "A_Evt_October_XX_Smiling_Pumpkins",
     ],
     
     "september_xxi_": [
