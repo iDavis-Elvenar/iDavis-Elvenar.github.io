@@ -2,7 +2,7 @@ var notifications = {
     "1":{
         "id":1,
         "text":"Do you have any feedback for me or did you find a bug at the website? Feel free to reach me at new <a href='contact.html' class='alert-link'>Contact Page</a> in the top left menu.",
-        "repeatAfter":604800,
+        "repeatAfter":1209600,
         "style":"warning",
         "duration":10,
         "active":true,

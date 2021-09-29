@@ -21,7 +21,8 @@ var selectedEvoStages = {
     "A_Evt_Evo_Autumn_XIX_Bear_Panda" : 9,
     "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat": 9,
     "A_Evt_Evo_July_XXI_Triumph_of_Tides": 9,
-    "A_Evt_Evo_September_XXI_Red_Panda_Master": 9
+    "A_Evt_Evo_September_XXI_Red_Panda_Master": 9,
+    "A_Evt_Evo_October_XXI_Witch_Summoning_Circle": 9,
 }
 
 function setAndReload(id) {

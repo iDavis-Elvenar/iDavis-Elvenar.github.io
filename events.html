@@ -106,6 +106,8 @@
 
 <div class="highest2 container bg-skin_background rounded-right75 border-bottom border-right border-top border-popup" style="width: 155px; height: 50px; margin-top: 274px; margin-left: 0px; position: fixed">
     <div class="justify-content-center box d-flex flex-column" style="height: 100%;"><span class="align-middle"><a class="text-link font-weight-bold" id="calendar_top" href="#events_top"><img src="images/general/calendar.png" width="45" style="margin-right: 2px; position: relative;"></a></span></div>
+    <!--<div class="justify-content-center box d-flex flex-column" style="height: 33%;"><span class="align-middle"><a class="text-link font-weight-bold" id="quests_left_panel" href="#events_top"><img src="images/general/event_guide.png" width="30" style="margin-left: 5px; margin-right: 10px; position: relative;"></a></span></div>
+    <div class="justify-content-center box d-flex flex-column" style="height: 33%;"><span class="align-middle"><a class="text-link font-weight-bold" id="chests_left_panel" href="#events_top"><img src="images/general/chest_icon.png" width="30" style="margin-left: 5px; margin-right: 10px; position: relative;"></a></span></div>-->
 </div>
 
 <div style="padding-top: 59px;" id="events_top">
@@ -181,6 +183,8 @@
     document.getElementById("order_daily_prizes_by_label").innerHTML = langUI("Order daily prizes by:");
     document.getElementById("for_chapter_label").innerHTML = langUI("For chapter:");
     document.getElementById("calendar_top").innerHTML += langUI("Calendar");
+    /*document.getElementById("quests_left_panel").innerHTML += langUI("Quests");
+    document.getElementById("chests_left_panel").innerHTML += langUI("Chests");*/
     document.getElementById("generate_daily_prizes_button").innerHTML += langUI("Generate Daily Prizes");
 
     generateEventsForAllBuildings("input_event", "all_events");
