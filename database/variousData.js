@@ -154,7 +154,7 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : {
         "2021" : [ //NAME,ID,SELECTED,DISABLED
-            ["Halloween","october_xxi_",true,true],
+            ["Halloween","october_xxi_",true,false],
             ["Autumn Zodiac","september_xxi_",false,false],
             ["Elvarian Games","july_xxi_",false,false],
             ["Sorcerers' Homecoming","june_xxi_",false,false],
@@ -183,7 +183,7 @@ var allEvents = {
     },
     "all_events" : {
         "2021" : [
-            ["Halloween","october_xxi_",true,true],
+            ["Halloween","october_xxi_",true,false],
             ["Autumn Zodiac","september_xxi_",false,false],
             ["Elvarian Games","july_xxi_",false,false],
             ["Sorcerers' Homecoming","june_xxi_",false,false],
