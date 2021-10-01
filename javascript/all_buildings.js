@@ -23,6 +23,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_July_XXI_Triumph_of_Tides": 9,
     "A_Evt_Evo_September_XXI_Red_Panda_Master": 9,
     "A_Evt_Evo_October_XXI_Witch_Summoning_Circle": 9,
+    "A_Evt_Evo_December_XXI_Boblins_Express_Service": 9,
 }
 
 function setAndReload(id) {

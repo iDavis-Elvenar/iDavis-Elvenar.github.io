@@ -182,6 +182,7 @@ function generateEventsForAllBuildings(idToAppend, flag) {
                     option.value = allEvents[flag][year][e][1];
                     option.selected = allEvents[flag][year][e][2];
                     option.disabled = allEvents[flag][year][e][3];
+                    option.hidden = allEvents[flag][year][e][3];
                     optGroup.appendChild(option);
                 }
                 document.getElementById(idToAppend).appendChild(optGroup);
