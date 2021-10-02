@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_October_XX_Disturbed_Coffins",
         "A_Evt_October_XXI_Spirit_Moose_Family",
         "A_Evt_October_XX_Scarriage",
+        "A_Evt_Halloween_XIX",
     ],
     
     "september_xxi_": [
