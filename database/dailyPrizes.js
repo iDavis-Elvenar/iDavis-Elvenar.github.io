@@ -11,6 +11,7 @@ var dailyPrizes = {
         "A_Evt_October_XX_Scarriage",
         "A_Evt_Halloween_XIX",
         "A_Evt_October_XXI_Phantom_Bear",
+        "INS_KP_AW_20",
     ],
     
     "september_xxi_": [
