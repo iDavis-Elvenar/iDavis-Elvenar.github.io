@@ -21,6 +21,7 @@ var dailyPrizes = {
         "A_Evt_October_XX_Mausoleum_Wedding",
         "INS_UNIT_MC_MA_10",
         "A_Evt_October_XX_Scarecrow",
+        "A_Evt_October_XX_Scarriage",
     ],
     
     "september_xxi_": [
