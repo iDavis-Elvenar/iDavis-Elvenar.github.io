@@ -434,7 +434,7 @@ function createCalendar(filteredData, selectedEvent) {
                 }
             } else {
                 if (prizesCounter < dailyPrizes[selectedEvent].length+1 && !counterPrizeDisplayed) {
-                    tdPrize.innerHTML = `<h7 class="card-title text-center text-link"><i>Reveals in ${getHoursTillNextDay()}h</i></h7>`;
+                    tdPrize.innerHTML = `<h7 class="card-title text-center text-link"><i>${langUI("Reveals in")} ${getHoursTillNextDay()}h</i></h7>`;
                     counterPrizeDisplayed = true;
                 }
             }
