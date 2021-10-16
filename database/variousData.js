@@ -46,7 +46,7 @@ let eventVideos = {
     "june_xxi_": "https://www.youtube.com/embed/doNM1AbVWt8",
     "july_xxi_": "https://www.youtube.com/embed/sWa4cT4yGIA",
     "september_xxi_": "https://www.youtube.com/embed/DTGy8Q0lnAc",
-    "october_xxi_": "https://www.youtube.com/embed/PzUHa4Bat2k"
+    "october_xxi_": "https://www.youtube.com/embed/LqUrW3YtDrw;https://www.youtube.com/embed/PzUHa4Bat2k"
 }
 
 let eventNames = {
@@ -153,8 +153,8 @@ var discardBuildings = [
 ]
 
 var allEvents = {
-    "all_buildings" : {
-        "2021" : [ //NAME,ID,SELECTED,DISABLED == HIDDEN
+    "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
+        "2021" : [
             ["Winter Magic","december_xxi_",false,true],
             ["The Misty Forest","october_xxi_",true,false],
             ["Autumn Zodiac","september_xxi_",false,false],
