@@ -67,7 +67,15 @@
         </script>
 
         <div>
-            <div class="dropdown" style="margin-right: 40px">
+            <div class="dropdown" style="margin-right: -10px; position: relative; display: inline-block;">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">
+                    <img src="" id="preset_chapter" style="width: 28px; position: relative">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" id="chapters_dropdown">
+                </ul>
+            </div>
+            <div class="dropdown" style="margin-right: 40px; position: relative; display: inline-block;">
                 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
                     <img src="images/general/globe_big.png" style="width: 30px; position: relative">
                     <span class="caret"></span>
@@ -136,7 +144,7 @@
                                     <option value="seeds">Seeds per square per 1h</option>
                                 </select>
                                 <label for="input_chapter" class="d-inline-block" id="for_chapter_label"></label>
-                                    <select id="input_chapter" class="custom-select d-inline-block" style="width: 10%;" onchange="">
+                                    <select id="input_chapter" class="custom-select d-inline-block" style="width: 10%;" onchange="" disabled>
                                         <option value="all_">All</option>
                                         <option value="18">18</option>
                                         <option value="17">17</option>
@@ -156,7 +164,7 @@
                                         <option value="3">3</option>
                                         <option value="2">2</option>
                                         <option value="1">1</option>
-                                    </select>
+                                    </select><img src="images/general/request_sign.png" style="margin-left: 5px;" width="30px" class="pointer" onclick="tempHint()" >
                             </center>
                         </div>
                     </div>
@@ -188,6 +196,8 @@
     document.getElementById("generate_daily_prizes_button").innerHTML += langUI("Generate Daily Prizes");
 
     generateEventsForAllBuildings("input_event", "all_events");
+
+    generateChapterDropdown();
 
 </script>
 

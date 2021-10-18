@@ -1,6 +1,9 @@
 if (localStorage.getItem("lang") === null) {
     setLanguage("en");
 }
+if (localStorage.getItem("chapter") === null) {
+    setChapter(numberOfChapters);
+}
 
 //let role_down = false;
 function rollDownNavigation(){
@@ -195,4 +198,67 @@ function generateEventsForAllBuildings(idToAppend, flag) {
         optionOlder.value = `summer_xix_`;
         document.getElementById(idToAppend).appendChild(optionOlder);
     }
+}
+
+function setChapter(chap) {
+    localStorage.setItem("chapter", chap);
+    location.reload();
+}
+
+function getPresetChapter() {
+    if (localStorage.getItem("chapter") === null) {
+        return "18";
+    } else {
+        return localStorage.getItem("chapter");
+    }
+}
+
+function generateChapterDropdown() {
+    document.getElementById("preset_chapter").src = "images/general/chapter_icons/ch"+getPresetChapter()+".png";
+    for (let i = 0; i <= numberOfChapters; i++) {
+        if (i == 0) {
+            let item = document.createElement('li');
+            item.role = "presentation";
+            let p = document.createElement('p');
+            p.role = "menuitem";
+            p.tabindex = "-1";
+            p.className = "small pointer";
+            p.innerHTML = "How does this work?"
+            p.onclick = function() {chapterSelectionExplain()};
+            let img = document.createElement('img');
+            img.src = "images/general/request_sign_info.png";
+            img.style.marginLeft = "5px";
+            img.style.width = "30px";
+            img.className = "pointer";
+            img.onclick = function() {chapterSelectionExplain()};
+            p.prepend(img);
+            item.appendChild(p);
+            document.getElementById("chapters_dropdown").appendChild(item)
+        } else {
+            let item = document.createElement('li');
+            item.role = "presentation";
+            let a = document.createElement('a');
+            a.role = "menuitem";
+            a.tabindex = "-1";
+            a.href = "#";
+            a.onclick = function() {setChapter(i)};
+            a.innerHTML = chapterNames[i];
+            let img = document.createElement('img');
+            img.src = `images/general/chapter_icons/ch${i}.png`;
+            img.style.marginRight = "3px";
+            img.style.marginLeft = "3px";
+            img.style.width = "20px";
+            a.prepend(img);
+            item.appendChild(a);
+            document.getElementById("chapters_dropdown").appendChild(item)
+        }
+    }
+}
+
+function tempHint() {
+    create_exception(langUI("New way of chapter selection has been introduced! You can now select your chapter directly from the top bar (next to the language selector) and this will become remembered by your browser - so that you won't have to select it everytime you use a sorting feature :)"), 15, 'warning');
+}
+
+function chapterSelectionExplain() {
+    create_exception(langUI("This is a new way of selecting your chapter on the website. You can now select your current in-game chapter using this new dropdown menu and it will get remembered by your browser - so that you won't have to do it everytime you use a sorting feature. Your chapter is used when sorting buildings in many ways ensuring that the final order will be always accurate for your current in-game progress!"), 25, 'warning');
 }

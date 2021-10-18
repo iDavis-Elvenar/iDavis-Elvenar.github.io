@@ -75,25 +75,11 @@ function readBuildingsJSON() {
             }
 
             if (orderByOption === 'all_') {
-                chapterOption = 'all_';
                 chapterSelect.value = 'all_';
             }
 
             if (isTriggeredOrderBy) {
-                if (chapterOption === 'all_') {
-                    let maxim = 0;
-                    let chapterTemp = 0;
-                    for(i = 0; i < chapterSelect.length; i++) {
-                        chapterTemp = parseInt(chapterSelect.options[i].value);
-                        if (chapterTemp > maxim) {
-                            maxim = chapterTemp;
-                        }
-                    }
-                    chapterSelect.value = maxim.toString();
-                    chapterOption = maxim;
-
-                }
-                filteredData = sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption, orderByOption);
+                filteredData = sortBySelectedAttribute(filteredData, selectedEvoStages, orderByOption);
             }
 
             for (var i = 0; i < filteredData.length; i++) {
@@ -588,23 +574,23 @@ function sortByDay(filteredData, filterEventData) {
     return res;
 }
 
-function sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption, orderByOption) {
+function sortBySelectedAttribute(filteredData, selectedEvoStages, orderByOption) {
     for (var j = 0; j < filteredData.length; j++) {
         for (var k = 0; k < filteredData.length-1; k++) {
             var swap = false;
             let displayStage1 = selectedEvoStages[filteredData[k]['id']];
             let displayStage2 = selectedEvoStages[filteredData[k+1]['id']];
             if (!filteredData[k]['id'].toLowerCase().includes('_evo_') && !filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
-                if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                    if (filteredData[k + 1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                        if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
+                if (filteredData[k]['chapters'][parseInt(getPresetChapter())].hasOwnProperty(orderByOption)) {
+                    if (filteredData[k + 1]['chapters'][parseInt(getPresetChapter())].hasOwnProperty(orderByOption)) {
+                        if (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption].hasOwnProperty('production_time')) {
                             //ak treba brat do uvahy aj cas
-                            if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600) <
-                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600)) {
+                            if (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption]['production_time'] / 3600) <
+                                filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][orderByOption]['production_time'] / 3600)) {
                                 swap = true;
                             }
-                        } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                            filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                        } else if (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                            filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
                             //ak to nie je produkcia s casom
                             swap = true;
                         }
@@ -614,15 +600,15 @@ function sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption,
                 }
             } else {
                 if (filteredData[k]['id'].toLowerCase().includes('_evo_') && !filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
-                    if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1].hasOwnProperty(orderByOption)) {
-                        if (filteredData[k + 1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                            if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption].hasOwnProperty('production_time')) {
-                                if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['production_time'] / 3600) <
-                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600)) {
+                    if (filteredData[k]['chapters'][parseInt(getPresetChapter())][displayStage1].hasOwnProperty(orderByOption)) {
+                        if (filteredData[k + 1]['chapters'][parseInt(getPresetChapter())].hasOwnProperty(orderByOption)) {
+                            if (filteredData[k]['chapters'][parseInt(getPresetChapter())][displayStage1][orderByOption].hasOwnProperty('production_time')) {
+                                if (filteredData[k]['chapters'][parseInt(getPresetChapter())][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(getPresetChapter())][displayStage1][orderByOption]['production_time'] / 3600) <
+                                    filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][orderByOption]['production_time'] / 3600)) {
                                     swap = true;
                                 }
-                            } else if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                                filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                            } else if (filteredData[k]['chapters'][parseInt(getPresetChapter())][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
                                 swap = true;
                             }
                         }
@@ -631,15 +617,15 @@ function sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption,
                     }
                 } else {
                     if (!filteredData[k]['id'].toLowerCase().includes('_evo_') && filteredData[k+1]['id'].toLowerCase().includes('_evo_')) {
-                        if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                            if (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2].hasOwnProperty(orderByOption)) {
-                                if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
-                                    if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time'] / 3600) <
-                                        filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['production_time'] / 3600)) {
+                        if (filteredData[k]['chapters'][parseInt(getPresetChapter())].hasOwnProperty(orderByOption)) {
+                            if (filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][displayStage2].hasOwnProperty(orderByOption)) {
+                                if (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption].hasOwnProperty('production_time')) {
+                                    if (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption]['production_time'] / 3600) <
+                                        filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][displayStage2][orderByOption]['production_time'] / 3600)) {
                                         swap = true;
                                     }
-                                } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                                } else if (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                    filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
                                     swap = true;
                                 }
                             }
@@ -647,15 +633,15 @@ function sortBySelectedAttribute(filteredData, selectedEvoStages, chapterOption,
                             swap = true;
                         }
                     } else {
-                        if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                            if (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2].hasOwnProperty(orderByOption)) {
-                                if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption].hasOwnProperty('production_time')) {
-                                    if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['production_time'] / 3600) <
-                                        filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['production_time'] / 3600)) {
+                        if (filteredData[k]['chapters'][parseInt(getPresetChapter())].hasOwnProperty(orderByOption)) {
+                            if (filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][displayStage2].hasOwnProperty(orderByOption)) {
+                                if (filteredData[k]['chapters'][parseInt(getPresetChapter())][displayStage1][orderByOption].hasOwnProperty('production_time')) {
+                                    if (filteredData[k]['chapters'][parseInt(getPresetChapter())][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) / (filteredData[k]['chapters'][parseInt(getPresetChapter())][displayStage1][orderByOption]['production_time'] / 3600) <
+                                        filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length']) / (filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][displayStage2][orderByOption]['production_time'] / 3600)) {
                                         swap = true;
                                     }
-                                } else if (filteredData[k]['chapters'][parseInt(chapterOption)][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
+                                } else if (filteredData[k]['chapters'][parseInt(getPresetChapter())][displayStage1][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                    filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][displayStage2][orderByOption]['value'] / (filteredData[k + 1]['width'] * filteredData[k + 1]['length'])) {
                                     swap = true;
                                 }
                             }

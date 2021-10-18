@@ -40,4 +40,16 @@ var notifications = {
         "active":false,
         "priority":20
     },
+    "5":{
+        "id":5,
+        "text":`<h4 class="alert-heading">New feature on the website!</h4>
+        <p>You can now preset your chapter for the website, so that you won't have to select one everytime you use a sorting feature. Simply head to the top menu bar (next to the language selector) and select your chapter <img src="images/general/chapter_icons/ch17.png"> / <img src="images/general/chapter_icons/ch15.png"> / <img src="images/general/chapter_icons/ch14.png"> - all the sorting calculations on the website will depend on this chapter, so that you always get the accurate info for your current in-game progress!</p>
+        <hr>
+        <p>This feature was inspired by the suggestion that one of the players sent me using my <a href='contact.html' class='alert-link'>Contact Page</a>. Feel free to share your feedback if you have any ideas for future improvements!</p>`,
+        "repeatAfter":86400,
+        "style":"warning",
+        "duration":45,
+        "active":true,
+        "priority":20
+    },
 }

@@ -66,27 +66,10 @@ function displayDailyPrizes() {
             for (var key in filteredDataDict) {
                 filteredData.push(filteredDataDict[key])
             }
-            if (orderByOption === 'day') {
-                chapterOption = 'all_';
-                chapterSelect.value = 'all_';
-            }
             if (isTriggeredOrderBy) {
-                if (chapterOption === 'all_') {
-                    let maxim = 0;
-                    let chapt = 0;
-                    for(i = 0; i < chapterSelect.length; i++) {
-                        chapt = parseInt(chapterSelect.options[i].value);
-                        if (chapt > maxim) {
-                            maxim = chapt;
-                        }
-                    }
-                    chapterSelect.value = maxim.toString();
-                    chapterOption = maxim;
-
-                }
                 filteredData = Array.from(new Set(filteredData));
                 filteredData = filteredData.filter(function(x) {
-                    return x['id'].toLowerCase().includes('a_evt') && x['chapters'][chapterOption].hasOwnProperty(orderByOption)
+                    return x['id'].toLowerCase().includes('a_evt') && x['chapters'][getPresetChapter()].hasOwnProperty(orderByOption)
                 })
                 if (filteredData.length === 0) {
                     create_exception("No buildings found. Please adjust your <strong>Order By</strong> options.", 3, 'primary')
@@ -94,16 +77,16 @@ function displayDailyPrizes() {
                 for (var j = 0; j < filteredData.length; j++) {
                     for (var k = 0; k < filteredData.length-1; k++) {
                         var swap = false;
-                        if (filteredData[k]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                            if (filteredData[k+1]['chapters'][parseInt(chapterOption)].hasOwnProperty(orderByOption)) {
-                                if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption].hasOwnProperty('production_time')) {
+                        if (filteredData[k]['chapters'][parseInt(getPresetChapter())].hasOwnProperty(orderByOption)) {
+                            if (filteredData[k+1]['chapters'][parseInt(getPresetChapter())].hasOwnProperty(orderByOption)) {
+                                if (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption].hasOwnProperty('production_time')) {
                                     //ak treba brat do uvahy aj cas
-                                    if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length'])/(filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['production_time']/3600) <
-                                        filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k+1]['width'] * filteredData[k+1]['length'])/(filteredData[k+1]['chapters'][parseInt(chapterOption)][orderByOption]['production_time']/3600)) {
+                                    if (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length'])/(filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption]['production_time']/3600) <
+                                        filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k+1]['width'] * filteredData[k+1]['length'])/(filteredData[k+1]['chapters'][parseInt(getPresetChapter())][orderByOption]['production_time']/3600)) {
                                         swap = true;
                                     }
-                                } else if (filteredData[k]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
-                                    filteredData[k + 1]['chapters'][parseInt(chapterOption)][orderByOption]['value'] / (filteredData[k+1]['width'] * filteredData[k+1]['length'])) {
+                                } else if (filteredData[k]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k]['width'] * filteredData[k]['length']) <
+                                    filteredData[k + 1]['chapters'][parseInt(getPresetChapter())][orderByOption]['value'] / (filteredData[k+1]['width'] * filteredData[k+1]['length'])) {
                                     //ak to nie je produkcia s casom
                                     swap = true;
                                 }

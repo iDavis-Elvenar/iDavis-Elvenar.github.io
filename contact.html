@@ -65,7 +65,15 @@
         </script>
 
         <div>
-            <div class="dropdown" style="margin-right: 40px">
+            <div class="dropdown" style="margin-right: -10px; position: relative; display: inline-block;">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">
+                    <img src="" id="preset_chapter" style="width: 28px; position: relative">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" id="chapters_dropdown">
+                </ul>
+            </div>
+            <div class="dropdown" style="margin-right: 40px; position: relative; display: inline-block;">
                 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
                     <img src="images/general/globe_big.png" style="width: 30px; position: relative">
                     <span class="caret"></span>
@@ -102,6 +110,12 @@
 </div>
 
 <!-- BODY -->
+
+<script>
+
+    generateChapterDropdown();
+
+</script>
 
 <div class="container">
     <div class="row" style="margin-top: 50px;">

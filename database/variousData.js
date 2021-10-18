@@ -29,6 +29,13 @@ var chapters = {
     11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII', 18: 'XVIII'
 }
 
+var chapterNames = {
+    1: 'Chapter 1', 2: 'Chapter 2', 3: 'Chapter 3', 4: 'Chapter 4', 5: 'Chapter 5', 6: 'Dwarves', 7: 'Fairies', 
+    8: 'Orcs and Goblins', 9: 'Woodelves', 10: 'Sorcerers and Dragons',
+    11: 'Halflings', 12: 'Elementals', 13: 'Amuni', 14: 'Constructs', 15: 'Elvenar', 16: 'Embassies', 
+    17: 'Traders of Unur', 18: 'Team Spirit'
+}
+
 let eventBanners = {
     "february_xxi_": "https://i.ibb.co/NLRxJ7y/EL-akcia-karneval-2021-banner.png",
     "march_xxi_": "https://i.ibb.co/m0hGLdm/EL-akcia-ve-k-noc-2021-banner.png",

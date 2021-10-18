@@ -59,7 +59,15 @@
         </script>
 
         <div>
-            <div class="dropdown" style="margin-right: 40px">
+            <div class="dropdown" style="margin-right: -10px; position: relative; display: inline-block;">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">
+                    <img src="" id="preset_chapter" style="width: 28px; position: relative">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" id="chapters_dropdown">
+                </ul>
+            </div>
+            <div class="dropdown" style="margin-right: 40px; position: relative; display: inline-block;">
                 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
                     <img src="images/general/globe_big.png" style="width: 30px; position: relative">
                     <span class="caret"></span>
@@ -98,10 +106,17 @@
 
 <center><img style="max-width: 100%; position: relative" src="https://i.ibb.co/GtDWfRY/EL-str-nka-logo2.png"></center>
 
+<script>
+
+    generateChapterDropdown();
+
+</script>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6 col-sm-11 center bg-skin_light_background rounded-bottom75 rounded-top75" style="padding-top: 20px; padding-bottom: 20px; max-height: 550px; overflow-y: scroll;">
             <div id="column_with_news" class="col-md">
+                <li><strong>New chapter selection feature on the website!</strong> You can now use the new dropdown menu in the right top corner of the website to choose your chapter, which will get remembered by your browser (October 18th 2021)</li>
                 <li><strong>The Misty Forest event arrived!</strong> All buildings from this event are now in the database (September 30th 2021)</li>
                 <li><strong>Autumn Zodiac event arrived!</strong> All buildings from this event are now in the database (August 19th 2021)</li>
                 <li><strong>Expiring descriptions are now available!</strong> If a building is expiring, this information is shown in it's description; many additional buildings effects were added as well (August 6th 2021)</li>

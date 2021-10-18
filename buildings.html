@@ -65,7 +65,15 @@
         </script>
 
         <div>
-            <div class="dropdown" style="margin-right: 40px">
+            <div class="dropdown" style="margin-right: -10px; position: relative; display: inline-block;">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">
+                    <img src="" id="preset_chapter" style="width: 28px; position: relative">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" id="chapters_dropdown">
+                </ul>
+            </div>
+            <div class="dropdown" style="margin-right: 40px; position: relative; display: inline-block;">
                 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
                     <img src="images/general/globe_big.png" style="width: 30px; position: relative">
                     <span class="caret"></span>
@@ -160,7 +168,7 @@
                 </div>
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
                     <center><label for="input_chapter" id="for_chapter_label"></label>
-                        <select id="input_chapter" class="custom-select" style="width: 40%; margin-bottom: 10px;" onchange="">
+                        <select id="input_chapter" class="custom-select" style="width: 40%; margin-bottom: 10px;" onchange="" disabled>
                             <option value="all_">All</option>
                             <option value="18">18</option>
                             <option value="17">17</option>
@@ -180,7 +188,7 @@
                             <option value="3">3</option>
                             <option value="2">2</option>
                             <option value="1">1</option>
-                        </select>
+                        </select><img src="images/general/request_sign.png" style="margin-left: 5px;" width="30px" class="pointer" onclick="tempHint()" >
                     </center>
                 </div>
             </div>
@@ -202,6 +210,8 @@
     });
 
     generateEventsForAllBuildings("input_event", "all_buildings");
+
+    generateChapterDropdown();
 
 </script>
 
