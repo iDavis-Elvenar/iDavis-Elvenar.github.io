@@ -34,6 +34,7 @@ let ui = {
         "Start typing...": "Začni písať...",
         "You can search buildings by typing their name.": "Vyhľadávať budovy môžeš podľa ich názvu.",
         "Reveals in": "Odhalí sa za",
+        "New way of chapter selection has been introduced! You can now select your chapter directly from the top bar (next to the language selector) and this will become remembered by your browser - so that you won't have to select it everytime you use a sorting feature :)": "Na stránke bol zavedený nový spôsob výberu vašej kapitoly! Teraz to môžete urobiť priamo z hornej lišty (vedľa výberu jazyka stránky), pričom váš prehliadač si voľbu zapamätá - to znamená, že nebude nutné vyberať vašu aktuálnu kapitolu pri každom usporadúvaní budov na stránke.",
         //EVENTS
         "The Misty Forest":"Mlžný les",
         "Sorcerers' Homecoming":"Návrat kouzelníků domů",
@@ -91,6 +92,7 @@ let ui = {
         "Start typing...": "Beginne zu tippen...",
         "You can search buildings by typing their name.": "Sie können Gebäude durchsuchen, indem Sie deren Namen eingeben.",
         "Reveals in": "Enthüllt in",
+        "New way of chapter selection has been introduced! You can now select your chapter directly from the top bar (next to the language selector) and this will become remembered by your browser - so that you won't have to select it everytime you use a sorting feature :)": "Neue Art der Kapitelauswahl wurde eingeführt! Du kannst jetzt dein Kapitel direkt aus der oberen Leiste (neben der Sprachauswahl) auswählen und dies wird von deinem Browser gespeichert - damit du es nicht jedes Mal auswählen musst, wenn du eine Sortierfunktion verwendest :)",
         //EVENTS
         "The Misty Forest":"Nebelwald",
         "Sorcerers' Homecoming":"Die Heimkehr der Zauberer",
@@ -148,6 +150,7 @@ let ui = {
         "Start typing...": "Commencer à écrire...",
         "You can search buildings by typing their name.": "Vous pouvez rechercher des bâtiments en tapant leur nom.",
         "Reveals in": "Révélé dans",
+        "New way of chapter selection has been introduced! You can now select your chapter directly from the top bar (next to the language selector) and this will become remembered by your browser - so that you won't have to select it everytime you use a sorting feature :)": "Un nouveau type de sélection de chapitre a été introduit ! Vous pouvez maintenant sélectionner votre chapitre directement dans la barre supérieure (à côté de la sélection de la langue) et cela sera enregistré par votre navigateur - vous n'avez donc pas à le sélectionner à chaque fois que vous utilisez une fonction de tri :)",
         //EVENTS
         "The Misty Forest":"Forêt embrumée",
         "Sorcerers' Homecoming":"Retour des Sorciers",
@@ -205,6 +208,7 @@ let ui = {
         "Start typing...": "Zacznij pisać...",
         "You can search buildings by typing their name.": "Budynki można wyszukiwać, wpisując ich nazwę.",
         "Reveals in": "Ujawnione w",
+        "New way of chapter selection has been introduced! You can now select your chapter directly from the top bar (next to the language selector) and this will become remembered by your browser - so that you won't have to select it everytime you use a sorting feature :)": "Wprowadzono nowy rodzaj wyboru rozdziałów! Możesz teraz wybrać swój rozdział bezpośrednio z górnego paska (obok wyboru języka) i zostanie on zapisany przez Twoją przeglądarkę - więc nie musisz go wybierać za każdym razem, gdy używasz funkcji sortowania :)",
         //EVENTS
         "The Misty Forest":"Zamglony Las",
         "Sorcerers' Homecoming":"Powrót Czarowników",
@@ -262,6 +266,7 @@ let ui = {
         "Start typing...": "Начать печатать...",
         "You can search buildings by typing their name.": "Вы можете искать здания, вводя их название.",
         "Reveals in": "Pаскрыто в",
+        "New way of chapter selection has been introduced! You can now select your chapter directly from the top bar (next to the language selector) and this will become remembered by your browser - so that you won't have to select it everytime you use a sorting feature :)": "Введен новый тип выбора глав! Теперь вы можете выбрать свою главу прямо из верхней панели (рядом с выбором языка), и она будет сохранена вашим браузером, поэтому вам не нужно выбирать ее каждый раз, когда вы используете функцию сортировки :)",
         //EVENTS
         "The Misty Forest":"Туманный лес",
         "Sorcerers' Homecoming":"Возвращение Чародеев",
