@@ -157,6 +157,7 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
+    "january_xxii",
 ]
 
 var allEvents = {
