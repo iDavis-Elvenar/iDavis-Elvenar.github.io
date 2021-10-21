@@ -256,7 +256,7 @@ function generateChapterDropdown() {
 }
 
 function tempHint() {
-    create_exception(langUI("New way of chapter selection has been introduced! You can now select your chapter directly from the top bar (next to the language selector) and this will become remembered by your browser - so that you won't have to select it everytime you use a sorting feature :)"), 15, 'warning');
+    create_exception(langUI("This is an old way of chapter selection - the new one has been introduced! Head to the menu bar in the right top corner and choose your chapter directly from there - it will get remembered by your browser, so that you won't have to do it everytime you use a sorting feature."), 15, 'warning');
 }
 
 function chapterSelectionExplain() {
