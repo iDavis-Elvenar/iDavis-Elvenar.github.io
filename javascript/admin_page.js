@@ -108,7 +108,8 @@ function handleBuildingsJSON() {
                                 var setOfAllProductions = new Set();
                                 var levelsFound = 0;
                                 for (var l = i; l < allBuildings.length; l++) {
-                                    if (allBuildings[l]['id'].includes(b['id'])) {
+                                    if (allBuildings[l]['id'].substring(0, allBuildings[l]['id'].lastIndexOf('_')) === b['id']) {
+                                        console.log("1: "+allBuildings[l]['id'].substring(0, allBuildings[l]['id'].lastIndexOf('_'))+","+b['id']);
                                         for (var p1 = 0; p1 < prioritiesNonProduction.length; p1++) {
                                             if (allBuildings[l].hasOwnProperty(prioritiesNonProduction[p1])) {
                                                 setOfAllProductions.add(prioritiesNonProduction[p1]);
@@ -156,7 +157,8 @@ function handleBuildingsJSON() {
                                 }
                                 levelsFound = 0;
                                 for (var k = i; k < allBuildings.length; k++) {
-                                    if (allBuildings[k]['id'].includes(b['id'])) {
+                                    if (allBuildings[k]['id'].substring(0, allBuildings[k]['id'].lastIndexOf('_')) === b['id']) {
+                                        console.log("2: "+allBuildings[k]['id'].substring(0, allBuildings[k]['id'].lastIndexOf('_'))+","+b['id']);
                                         var currentLevel = parseInt(allBuildings[k]['level']);
                                         var currentLevelString = currentLevel.toString();
                                         b['chapters'][currentLevelString] = {};
