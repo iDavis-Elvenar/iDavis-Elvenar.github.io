@@ -55,7 +55,7 @@ var notifications = {
     "6":{  // DONATE
         "id":6,
         "text":`<h4 class="alert-heading">Do you like the website?</h4>
-        <p>If you like the content I create and feel inclined, you can support me using the <a href='donate-create.html' class='alert-link'>Donate Page</a> and make a donation. Any sort of support will be certainly appreciated.</p>`,
+        <p>If you like the Database Portal and would like to support me with its further creation, you can use the <a href='donate-create.html' class='alert-link'>Donate Page</a> to make a donation. It is completely voluntary and you can do so if you like the content I create and feel inclined.</p>`,
         "repeatAfter":1209600,
         "style":"warning",
         "duration":30,
