@@ -13,7 +13,7 @@ function handleBuildingsJSON() {
         let data = JSON.parse(reader.result);
         for (let i = 0; i < data.length; i++) {
             if (data[i]['id'].includes('A_Evt')) {
-                console.log('buildingCount');
+                //console.log('buildingCount');
                 allBuildings.push(data[i]);
             }
         }
@@ -109,7 +109,6 @@ function handleBuildingsJSON() {
                                 var levelsFound = 0;
                                 for (var l = i; l < allBuildings.length; l++) {
                                     if (allBuildings[l]['id'].substring(0, allBuildings[l]['id'].lastIndexOf('_')) === b['id']) {
-                                        console.log("1: "+allBuildings[l]['id'].substring(0, allBuildings[l]['id'].lastIndexOf('_'))+","+b['id']);
                                         for (var p1 = 0; p1 < prioritiesNonProduction.length; p1++) {
                                             if (allBuildings[l].hasOwnProperty(prioritiesNonProduction[p1])) {
                                                 setOfAllProductions.add(prioritiesNonProduction[p1]);
@@ -158,7 +157,6 @@ function handleBuildingsJSON() {
                                 levelsFound = 0;
                                 for (var k = i; k < allBuildings.length; k++) {
                                     if (allBuildings[k]['id'].substring(0, allBuildings[k]['id'].lastIndexOf('_')) === b['id']) {
-                                        console.log("2: "+allBuildings[k]['id'].substring(0, allBuildings[k]['id'].lastIndexOf('_'))+","+b['id']);
                                         var currentLevel = parseInt(allBuildings[k]['level']);
                                         var currentLevelString = currentLevel.toString();
                                         b['chapters'][currentLevelString] = {};
@@ -308,7 +306,7 @@ function handleBuildingsJSON() {
                                         }
                                     }
                                 }
-                                /*//FILL MISSING PRODUCTION TIMES
+                                //FILL MISSING PRODUCTION TIMES
                                 if (b['id'].includes('_Evo_')) {
                                     for (var ch in b["chapters"]) {
                                         for (var st in b["chapters"][ch]) {
@@ -325,7 +323,7 @@ function handleBuildingsJSON() {
                                             }
                                         }
                                     }
-                                }*/
+                                }
                                 //PRIDAJ FEEDING EFFECTS PRE EVO (AK EXISTUJE)
                                 for (let pet = 0; pet < effectConfigs.length; pet++) {
                                     if (effectConfigs[pet]["buildingID"] === b["id"] &&
@@ -415,7 +413,7 @@ function generateJSONBuildingsIDs() {
         let data = JSON.parse(reader.result);
         for (let i = 0; i < data.length; i++) {
             if (data[i]['id'].includes('A_Evt')) {
-                console.log('buildingCount');
+                //console.log('buildingCount');
                 allBuildings.push(data[i]);
             }
         }
@@ -497,7 +495,7 @@ function regenerateBuildingNamesLanguages() {
         let data = JSON.parse(reader.result);
         for (let i = 0; i < data.length; i++) {
             if (data[i]['id'].toLowerCase().includes("a_evt")) {
-                console.log('buildingsCount');
+                //console.log('buildingsCount');
                 allIds.add(data[i]['id'].substring(0, data[i]['id'].lastIndexOf('_')));
             }
         }

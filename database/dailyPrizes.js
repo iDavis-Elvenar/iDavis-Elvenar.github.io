@@ -1,4 +1,15 @@
 var dailyPrizes = {
+
+    "december_xxi_": [
+        "A_Evt_December_XX_FrozenOwlCave",
+        "A_Evt_December_XXI_Sled_Tunnel_Network",
+        "A_Evt_Winter_XIX_Candy_Cane_Factory",
+        "INS_UNIT_HR_10",
+        "A_Evt_Winter_XIX_Ice_Track",
+        "INS_KP_AW_20",
+        "A_Evt_Winter_2Unicorn",
+        "A_Evt_December_XXI_Snowball_Hut",
+    ],
     
     "october_xxi_": [
         "A_Evt_October_XXI_Lost_Cemetry",

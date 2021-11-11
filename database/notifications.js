@@ -14,7 +14,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
-        "active":false,
+        "active":true,
         "priority":30
     },
     "3":{  // DAILY PRIZES VIDEO PROMO
@@ -28,7 +28,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":300,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "4":{  // NEW VIDEOS SOON
@@ -50,7 +50,7 @@ var notifications = {
         "style":"warning",
         "duration":45,
         "active":true,
-        "priority":20
+        "priority":10
     },
     "6":{  // DONATE
         "id":6,
@@ -60,6 +60,6 @@ var notifications = {
         "style":"warning",
         "duration":30,
         "active":true,
-        "priority":30
+        "priority":20
     },
 }

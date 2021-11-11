@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_December_XXI_Frostberry_Bar":"https://i.ibb.co/1vDx9kh/frostberry-bar.png",
+    "A_Evt_December_XXI_Magical_Supply_Station":"https://i.ibb.co/DPFq9CY/magical-supply-station.png",
+    "A_Evt_December_XXI_Sled_Tunnel_Network":"https://i.ibb.co/82ByHxS/sled-tunnel-network.png",
+    "A_Evt_December_XXI_Snowball_Hut":"https://i.ibb.co/4FfYgvx/snowball-hut.png",
+    "A_Evt_Evo_December_XXI_Boblins_Express_Service":"https://i.ibb.co/Jkh7RXZ/evo-boblins-express-service.png",
     "A_Evt_October_XXI_Lost_Cemetry":"https://i.ibb.co/74C1yCP/lost-cemetry.png",
     "A_Evt_October_XXI_Phantom_Bear":"https://i.ibb.co/VNcFjtF/phantom-bear.png",
     "A_Evt_October_XXI_Spirit_Moose_Family":"https://i.ibb.co/vd3mYKG/spirit-moose-family.png",

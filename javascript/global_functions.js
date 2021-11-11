@@ -207,7 +207,7 @@ function setChapter(chap) {
 
 function getPresetChapter() {
     if (localStorage.getItem("chapter") === null) {
-        return "18";
+        return "19";
     } else {
         return localStorage.getItem("chapter");
     }
