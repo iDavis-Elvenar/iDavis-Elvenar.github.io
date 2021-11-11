@@ -10,7 +10,7 @@ var notifications = {
     },
     "2":{  // NEW EVENT - BOTH SUBPAGES
         "id":2,
-        "text":"New event arrived on Beta and all the new buildings are now available! Make sure to check both <a href='buildings.html' class='alert-link'>All Buildings</a> and <a href='events.html' class='alert-link'>All Events</a> subpages so that you don't miss any news!",
+        "text":"New event arrived on Beta and all the new buildings are now available! Make sure to refresh the website using CTRL + F5 to get the latest changes and also to check both <a href='buildings.html' class='alert-link'>All Buildings</a> and <a href='events.html' class='alert-link'>All Events</a> subpages so that you don't miss any news!",
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
