@@ -1,6 +1,7 @@
 var dailyPrizes = {
 
     "december_xxi_": [
+        "A_Evt_December_XX_GoblinGiftShop",
         "A_Evt_December_XX_FrozenOwlCave",
         "A_Evt_December_XXI_Sled_Tunnel_Network",
         "A_Evt_Winter_XIX_Candy_Cane_Factory",
