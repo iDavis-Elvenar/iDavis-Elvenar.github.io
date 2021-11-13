@@ -11,6 +11,7 @@ var dailyPrizes = {
         "A_Evt_Winter_2Unicorn",
         "A_Evt_December_XXI_Snowball_Hut",
         "A_Evt_Winter_XIX_Elvenade_Distributor",
+        "A_Evt_December_XX_FrozenOwlCave",
     ],
     
     "october_xxi_": [
