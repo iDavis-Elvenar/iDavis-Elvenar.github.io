@@ -37,7 +37,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
-        "active":false,
+        "active":true,
         "priority":20
     },
     "5":{  // NEW FEATURE ON THE WEBSITE
@@ -49,7 +49,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":10
     },
     "6":{  // DONATE
