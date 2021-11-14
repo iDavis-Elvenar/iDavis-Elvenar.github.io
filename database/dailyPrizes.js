@@ -2,7 +2,6 @@ var dailyPrizes = {
 
     "december_xxi_": [
         "A_Evt_December_XX_GoblinGiftShop",
-        //"A_Evt_December_XX_FrozenOwlCave",
         "A_Evt_December_XXI_Sled_Tunnel_Network",
         "A_Evt_Winter_XIX_Candy_Cane_Factory",
         "INS_UNIT_HR_10",
@@ -12,6 +11,7 @@ var dailyPrizes = {
         "A_Evt_December_XXI_Snowball_Hut",
         "A_Evt_Winter_XIX_Elvenade_Distributor",
         "A_Evt_December_XX_FrozenOwlCave",
+        "INS_UNIT_LR_10",
     ],
     
     "october_xxi_": [
