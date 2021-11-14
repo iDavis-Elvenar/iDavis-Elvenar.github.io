@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Evt_BlackFriday_XXI_Gift_Dragon":"https://i.ibb.co/3vp79Sf/earth-dragon.png",
     "A_Evt_December_XXI_Frostberry_Bar":"https://i.ibb.co/1vDx9kh/frostberry-bar.png",
     "A_Evt_December_XXI_Magical_Supply_Station":"https://i.ibb.co/DPFq9CY/magical-supply-station.png",
     "A_Evt_December_XXI_Sled_Tunnel_Network":"https://i.ibb.co/82ByHxS/sled-tunnel-network.png",
