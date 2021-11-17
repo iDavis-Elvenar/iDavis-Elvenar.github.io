@@ -14,6 +14,7 @@ var dailyPrizes = {
         "INS_UNIT_LR_10",
         "A_Evt_Winter_XIX_Three_Ghosts",
         "A_Evt_December_XX_GoblinSleigh",
+        "A_Evt_Winter_XIX_Lemonade_Brewery",
     ],
     
     "october_xxi_": [
