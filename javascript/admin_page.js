@@ -59,7 +59,6 @@ function handleBuildingsJSON() {
                                 }
                             }
                         }
-                        console.log(allSets)
 
                         for (let i = 0; i < allBuildings.length; i++) {
                             if (allBuildings[i]['level'] === 1 && !excludeAsDiscard(allBuildings[i]['id'])) {
@@ -318,7 +317,6 @@ function handleBuildingsJSON() {
                                                 } else if (prioritiesProduction.includes(sprod) &&
                                                     !b["chapters"][ch][st][sprod].hasOwnProperty("production_time") && foundProductionTime !== -1) {
                                                     b["chapters"][ch][st][sprod]["production_time"] = foundProductionTime;
-                                                    console.log("ZMENENE")
                                                 }
                                             }
                                         }
@@ -350,7 +348,6 @@ function handleBuildingsJSON() {
                                 result.push(b);
                             }
                         }
-                        console.log(result);
                         saveJSON( JSON.stringify(result), "buildings.json" );
                         create_exception("Data Generated!",10,'success');
                     }
