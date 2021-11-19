@@ -16,6 +16,7 @@ var dailyPrizes = {
         "A_Evt_December_XX_GoblinSleigh",
         "A_Evt_Winter_XIX_Lemonade_Brewery",
         "A_Evt_December_XXI_Magical_Supply_Station",
+        "A_Evt_Winter_XIX_Lemonade_Brewery",
     ],
     
     "october_xxi_": [
