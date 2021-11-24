@@ -21,6 +21,7 @@ var dailyPrizes = {
         "A_Evt_December_XX_GoblinSleigh",
         "A_Evt_Winter_XIX_Ice_Track",
         "A_Evt_Winter_1DailyReward",
+        "INS_UNIT_LM_10",
     ],
     
     "october_xxi_": [
