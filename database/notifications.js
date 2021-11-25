@@ -14,7 +14,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
-        "active":true,
+        "active":false,
         "priority":30
     },
     "3":{  // DAILY PRIZES VIDEO PROMO
@@ -38,7 +38,7 @@ var notifications = {
         "style":"info",
         "duration":15,
         "active":true,
-        "priority":20
+        "priority":30
     },
     "5":{  // NEW FEATURE ON THE WEBSITE
         "id":5,
@@ -61,5 +61,15 @@ var notifications = {
         "duration":30,
         "active":true,
         "priority":20
+    },
+    "7":{  // NEW BUILDING
+        "id":7,
+        "text":`<h4 class="alert-heading">Black Friday!</h4>
+        <p>Black Friday is coming to Elvenar and the new building will available to claim! You can find the parameters of the upcoming Earth Dragon <a href='https://idavis-elvenar.github.io/buildings.html#A_Evt_BlackFriday_XXI_Gift_Dragon' class='alert-link'>here</a>.</p>`,
+        "repeatAfter":86400,
+        "style":"warning",
+        "duration":20,
+        "active":true,
+        "priority":40
     },
 }
