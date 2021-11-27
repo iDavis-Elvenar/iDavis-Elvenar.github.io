@@ -69,7 +69,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":20,
-        "active":true,
+        "active":false,
         "priority":40
     },
 }
