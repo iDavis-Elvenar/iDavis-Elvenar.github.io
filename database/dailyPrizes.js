@@ -24,6 +24,7 @@ var dailyPrizes = {
         "INS_UNIT_LM_10",
         "A_Evt_December_XXI_Sled_Tunnel_Network",
         "A_Evt_Winter_XIX_Three_Ghosts",
+        "A_Evt_Winter_XIX_Elvenade_Distributor",
     ],
     
     "october_xxi_": [
