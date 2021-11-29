@@ -26,6 +26,7 @@ var dailyPrizes = {
         "A_Evt_Winter_XIX_Three_Ghosts",
         "A_Evt_Winter_XIX_Elvenade_Distributor",
         "INS_UNIT_MC_LR_10",
+        "A_Evt_December_XXI_Snowball_Hut",
     ],
     
     "october_xxi_": [
