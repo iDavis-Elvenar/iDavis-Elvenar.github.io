@@ -28,6 +28,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_LR_10",
         "A_Evt_December_XXI_Snowball_Hut",
         "INS_RF_GRR_5",
+        "A_Evt_Winter_XIX_Candy_Cane_Factory",
     ],
     
     "october_xxi_": [
