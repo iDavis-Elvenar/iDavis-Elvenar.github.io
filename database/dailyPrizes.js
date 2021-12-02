@@ -29,6 +29,7 @@ var dailyPrizes = {
         "A_Evt_December_XXI_Snowball_Hut",
         "INS_RF_GRR_5",
         "A_Evt_Winter_XIX_Candy_Cane_Factory",
+        "INS_KP_AW_20",
     ],
     
     "october_xxi_": [
