@@ -76,6 +76,10 @@ let eventBetaStarts = { // MM/DD/YYYY
     "december_xxi_": "11/11/2021",
 }
 
+let questsLinks = {
+    "december_xxi_": "https://bit.ly/Quests-WinterMagic2021",
+}
+
 let eventLiveStarts = {
     "february_xxi_": "02/09/2021",
     "march_xxi_": "03/23/2021",

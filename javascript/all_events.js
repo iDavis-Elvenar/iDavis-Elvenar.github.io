@@ -1,10 +1,30 @@
 // Copyright 2021, iDavis, All rights reserved.
 
+var view = "";
+
 function changeEventBanner() {
     var imgBanner = document.getElementById("event_banner");
     var selectEvent = document.getElementById("input_event");
     var selectedEvent = selectEvent.options[selectEvent.selectedIndex].value;
     imgBanner.src = eventBanners[selectedEvent];
+}
+
+function loadPage() {
+    if (location.href.split('#').length > 1 && location.href.split('#')[1] !== "") {
+        if (location.href.split('#')[1].split('-')[1] !== "") {
+            eventId = location.href.split('#')[1].split('-')[1];
+            eventSelect = document.getElementById("input_event");
+            for (let option = 0; option < eventSelect.options.length; option++) {
+                if (eventSelect.options[option].value === location.href.split('#')[1].split('-')[1]) {
+                    eventSelect.selectedIndex = option;
+                }
+            }
+        }
+        foundView = location.href.split('#')[1].split("-")[0];
+        switchView(foundView);
+    } else {
+        displayDailyPrizes();
+    }
 }
 
 function displayDailyPrizes() {
@@ -15,6 +35,9 @@ function displayDailyPrizes() {
         create_exception("Loading...", 10000, 'primary');
     }
     createExc();
+
+    view = "calendar";
+
     $.get('database/buildings.json')
         .done(data => {
             //HANDLE FILTERS
@@ -26,7 +49,6 @@ function displayDailyPrizes() {
             let orderByOption = orderBySelect.options[orderBySelect.selectedIndex].value;
             let isTriggeredOrderBy = orderByOption !== 'day';
             let chapterSelect = document.getElementById('input_chapter');
-            let chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
 
             let days = getDaysFromStart(selectedEvent)+1;
 
@@ -363,7 +385,7 @@ function createEventHeader(selectedEvent, selectedEventName) {
 
 function createCalendar(filteredData, selectedEvent) {
     var h5 = document.createElement('h5');
-    h5.id = 'calendar';
+    h5.id = 'calendar_top';
     h5.className = "card-title text-center text-title font-weight-bold";
     h5.style.textAlign = "left";
     h5.innerHTML = `..:: ${langUI("Daily Prizes Calendar")} ::..<br>`;
@@ -498,4 +520,253 @@ function getHoursTillNextDay() {
     } else {
         return "<1";
     }
+}
+
+function switchView(type) {
+    if (type === "calendar" && view !== "calendar") {
+        displayDailyPrizes();
+        view = "calendar";
+    } else if (type === "quests" && view !== "quests") {
+        displayQuests();
+        view = "quests";
+    }
+}
+
+function setView(value) {
+    view = value;
+}
+
+function displayQuests() {
+    html_alert = document.getElementById('alert');
+    html_close = document.getElementById('close');
+    html_text = document.getElementById('text');
+    async function createExc() {
+        create_exception("Loading...", 10000, 'primary');
+    }
+    createExc();
+
+    let eventSelect = document.getElementById('input_event');
+    let selectedEvent = eventSelect.options[eventSelect.selectedIndex].value;
+    let selectedEventName = eventSelect.options[eventSelect.selectedIndex].text;
+    document.getElementById("column_with_tables").innerHTML = "";
+    createEventHeader(selectedEvent, selectedEventName);
+
+    var h5 = document.createElement('h5');
+    h5.id = 'quests_header';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: ${langUI("List of Quests")} ::..<br>`;
+    document.getElementById('column_with_tables').appendChild(h5);
+    var div = document.createElement('div');
+    div.style.textAlign = 'center';
+    div.style.marginBottom = '10px';
+    div.style.marginTop = '10px';
+    var divBBTable = document.createElement('div');
+    divBBTable.className = 'bbTable';
+    var table = document.createElement('table');
+    table.className = 'table-primary';
+    table.style.width = '100%';
+    var tbody = document.createElement('tbody');
+
+    if (quests[selectedEvent] === undefined) {
+        var h7 = document.createElement('h7');
+        h7.id = 'quests_noQuests';
+        h7.className = "card-title text-center";
+        h7.style.textAlign = "left";
+        h7.innerHTML = `${langUI("No recorded questline is available for this event")}.`;
+        var center = document.createElement('center');
+        center.appendChild(h7);
+        document.getElementById('column_with_tables').appendChild(center);
+
+    } else {
+
+        var shareLink = document.createElement('h7');
+        shareLink.id = 'quests_shareLink';
+        shareLink.className = "card-title text-center";
+        shareLink.style.textAlign = "left";
+        shareLink.innerHTML = `${langUI('You can send the quest list to other players by sharing the following link')}: <i class='text-title'><b>${questsLinks[selectedEvent]}</b></i>`;
+        var center = document.createElement('center');
+        center.appendChild(shareLink);
+        var div_info = document.createElement('div');
+        div_info.innerHTML = `<div class="card-spoiler border-spoiler mb-3" style="margin-top: 10px; padding-bottom: 10px; padding-top: 7px;" id="cz_disclaimer">
+        <div class="container"><center><span class="text-danger"><b>Skôr než prejdete k zoznamu úloh:</b><br>
+                        Uverejnené zoznamy úloh nemožno považovať za oficiálne, nakoľko autorom nie je žiadna osoba z tímu hry Elvenar! Jedná sa o informácie získané z testovania udalosti na bete a za prípadné nedostatky nie je nikto z tímu zodpovedný! Oficiálny zoznam úloh neexistuje, ani nikdy predtým neexistoval.
+                            Ak chcete zdieľať zoznamy úloh s ďalšími hráčmi, využite odkaz na zdieľanie uvedený vyššie.</span></center></div>
+        <!--<div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-spoiler btn-smbtn-danger " data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h7>Poznámky a vysvetlenia</h7>
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+            <div class="card-body">
+                text
+                
+            </div>
+        </div>-->
+    </div>`;
+        if (localStorage.getItem("lang") !== "cz") {
+            div_info.style.visibility = "hidden";
+            div_info.style.display = "none";
+        }
+        center.appendChild(div_info)
+        document.getElementById('column_with_tables').appendChild(center);
+
+        var numberOfQuests = quests[selectedEvent].length;
+
+        for (let quest = 0; quest <= numberOfQuests; quest++) {
+            if (quest === 0) {
+                let tr = document.createElement('tr');
+                let number = document.createElement('th');
+                number.innerHTML = `${langUI("Number")}`;
+                tr.appendChild(number);
+                let task = document.createElement('th');
+                task.innerHTML = `${langUI("Task")}`;
+                tr.appendChild(task);
+                let finished = document.createElement('th');
+                finished.innerHTML = `${langUI("Finished")}`;
+                tr.appendChild(finished);
+                let prep = document.createElement('th');
+                prep.innerHTML = `${langUI("Prepare")}`;
+                tr.appendChild(prep);
+                tbody.appendChild(tr);
+            } else {
+                let tr = document.createElement('tr');
+                let number = document.createElement('td');
+                number.style.width = "5%";
+                number.innerHTML = quest;
+                tr.appendChild(number);
+                let task = document.createElement('td');
+                task.style.width = "90%";
+                task.id = "quest_task_"+(quest);
+                task.innerHTML = `${questTranslate(quests[selectedEvent][quest-1])}`;
+                /*task.innerHTML += `<div class="myTest custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+              </div>`;*/
+                /*task.className = "text-left";
+                task.style.paddingLeft = "10px";*/
+                let finished = document.createElement('td');
+                let div = document.createElement('div');
+                div.className = "form-check";
+                let input = document.createElement('input');
+                input.className = "form-check-input";
+                input.type = "checkbox";
+                input.id = "quest_finished_"+(quest);
+                if (Array(localStorage.getItem("quests_finished_"+selectedEvent)).join().split(',').includes(String(quest))) {
+                    input.checked = true;
+                    task.className = "text-quest_completed";
+                }
+                input.onchange = function() {
+                    if (input.checked) {
+                        for (let i = 1; i <= quest; i++) {
+                            checkbox = document.getElementById("quest_finished_"+(i));
+                            tasktext = document.getElementById("quest_task_"+(i));
+                            prepareCheckbox = document.getElementById("quest_prepare_"+(i));
+
+                            checkbox.checked = true;
+                            tasktext.className = "text-quest_completed";
+                            tasktext.style.fontWeight = "";
+                        }
+                    } else {
+                        for (let i = quest; i <= numberOfQuests; i++) {
+                            checkbox = document.getElementById("quest_finished_"+(i));
+                            tasktext = document.getElementById("quest_task_"+(i));
+                            prepareCheckbox = document.getElementById("quest_prepare_"+(i));
+
+                            checkbox.checked = false;
+                                if (prepareCheckbox.checked) {
+                                    tasktext.className = "text-prepare";
+                                    tasktext.style.fontWeight = "bold";
+                                } else {
+                                    tasktext.className = "";
+                                }
+                        }
+                    }
+                    
+                    recordFinishedQuests(selectedEvent, numberOfQuests);
+                };
+                let label = document.createElement('label');
+                label.className = "form-check-label";
+                label.htmlFor = quest;
+                label.innerHTML = "";
+                div.appendChild(input);
+                div.appendChild(label);
+
+                let prepare = document.createElement('td');
+                let div2 = document.createElement('div');
+                div2.className = "form-check";
+                let input2 = document.createElement('input');
+                input2.className = "form-check-input";
+                input2.type = "checkbox";
+                input2.id = "quest_prepare_"+(quest);
+                if (Array(localStorage.getItem("quests_prepare_"+selectedEvent)).join().split(',').includes(String(quest))) {
+                    input2.checked = true;
+                    if (!Array(localStorage.getItem("quests_finished_"+selectedEvent)).join().split(',').includes(String(quest))) {
+                        task.className = "text-prepare";
+                        task.style.fontWeight = "bold";
+                    }
+                }
+                input2.onchange = function() {
+                    tasktext = document.getElementById("quest_task_"+(quest));
+                    finishedCheckbox = document.getElementById("quest_finished_"+(quest));
+                    if (!finishedCheckbox.checked) {
+                        if (input2.checked) {
+                            tasktext.className = "text-prepare";
+                            tasktext.style.fontWeight = "bold";
+                        } else {
+                            tasktext.className = "";
+                            tasktext.style.fontWeight = "";
+                        }
+                    }
+                    recordPrepareQuests(selectedEvent, numberOfQuests);
+                };
+                let label2 = document.createElement('label');
+                label2.className = "form-check-label";
+                label2.htmlFor = quest;
+                label2.innerHTML = "";
+                div2.appendChild(input2);
+                div2.appendChild(label2);
+
+                finished.appendChild(div);
+                prepare.appendChild(div2);
+                tr.appendChild(task);
+                tr.appendChild(finished);
+                tr.appendChild(prepare);
+                tbody.appendChild(tr);
+            }
+        }
+    }
+    table.appendChild(tbody);
+    divBBTable.appendChild(table);
+    div.appendChild(divBBTable);
+    document.getElementById('column_with_tables').appendChild(div);
+
+    create_exception("Quests Generated!", 3, 'success');
+}
+
+function recordFinishedQuests(selectedEvent, numberOfQuests) {
+    finished = [];
+    for (let quest = 1; quest <= numberOfQuests; quest++) {
+        if (document.getElementById("quest_finished_"+quest).checked) {
+            finished.push(quest);
+        }
+    }
+    localStorage.setItem("quests_finished_"+selectedEvent, finished);
+
+    if (finished.length === numberOfQuests) {
+        create_exception("Congrats! &#128516;", 5, 'success');
+    }
+}
+
+function recordPrepareQuests(selectedEvent, numberOfQuests) {
+    prepare = [];
+    for (let quest = 1; quest <= numberOfQuests; quest++) {
+        if (document.getElementById("quest_prepare_"+quest).checked) {
+            prepare.push(quest);
+        }
+    }
+    localStorage.setItem("quests_prepare_"+selectedEvent, prepare);
 }
