@@ -30,6 +30,7 @@ var dailyPrizes = {
         "INS_RF_GRR_5",
         "A_Evt_Winter_XIX_Candy_Cane_Factory",
         "INS_KP_AW_20",
+        "A_Evt_December_XXI_Magical_Supply_Station",
     ],
     
     "october_xxi_": [
