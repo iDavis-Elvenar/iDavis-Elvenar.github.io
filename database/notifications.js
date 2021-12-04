@@ -20,15 +20,15 @@ var notifications = {
     "3":{  // DAILY PRIZES VIDEO PROMO
         "id":3,
         "text":`<h4 class="alert-heading">Best Daily Prizes!</h4>
-  <p>Are you waiting for the best daily prizes in this event? In my newest video I'm showing you a selection of the best daily buildings of the Misty Forest Event!</p>
+  <p>Are you waiting for the best daily prizes in this event? In my newest video I'm showing you a selection of the best daily buildings of the Winter Magic Event!</p>
   <hr>
-  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/LqUrW3YtDrw"></iframe></p>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/TIKU54tbdJc"></iframe></p>
     <hr>
     <p>Isn't that what you look for? <a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to stay up-to-date with my latest videos!</p>`,
         "repeatAfter":604800,
         "style":"info",
         "duration":300,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "4":{  // NEW VIDEOS SOON
@@ -37,7 +37,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
-        "active":true,
+        "active":false,
         "priority":30
     },
     "5":{  // NEW FEATURE ON THE WEBSITE
