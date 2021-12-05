@@ -138,6 +138,13 @@ function readBuildingsJSON() {
                             <option value="1" ${tempArr[1]}>2</option>
                             <option value="0" ${tempArr[0]}>1</option>
                         </select>`;
+                    let h5hashtag = document.createElement('h5');
+                    h5hashtag.id = "#"+filteredData[i]['id'];
+                    h5hashtag.innerHTML = '<a class="text-link font-weight-bold" id="hash"><img src="images/general/share-symbol.png" class="pointer" title="Open in new tab and share" width="15px;"></a><br>';
+                    h5hashtag.addEventListener('click', function() {
+                        openInNewTab(location.href.split(`#`)[0]+h5hashtag.id);
+                    });
+                    td12.appendChild(h5hashtag);
                 } else {
                     let setDesc = "-";
                     if (filteredData[i].hasOwnProperty('setBuilding')) {
@@ -152,20 +159,17 @@ function readBuildingsJSON() {
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
                                     <b>${langUI("Expiring:")}</b> ${expiringDuration}`;
+                                    let h5hashtag = document.createElement('h5');
+                                    h5hashtag.id = "#"+filteredData[i]['id'];
+                                    h5hashtag.innerHTML = '<a class="text-link font-weight-bold" id="hash"><img src="images/general/share-symbol.png" class="pointer" title="Open in new tab and share" width="15px;"></a><br>';
+                                    h5hashtag.addEventListener('click', function() {
+                                        openInNewTab(location.href.split(`#`)[0]+h5hashtag.id);
+                                    });
+                                    td12.appendChild(h5hashtag);
                 }
                 t1r.appendChild(td11);
                 t1r.appendChild(td12);
-                let h5hashtag = document.createElement('h5');
-                h5hashtag.id = "#"+filteredData[i]['id'];
-                h5hashtag.style.textAlign = "left";
-                h5hashtag.style.position = "absolute";
-                h5hashtag.style.marginRight = "-55px";
-                h5hashtag.style.marginTop = "-35px";
-                h5hashtag.innerHTML = '<a class="text-link font-weight-bold" id="hash"><img src="images/general/share-symbol.png" class="pointer" title="Open in new tab and share" width="15px;"></a><br>';
-                h5hashtag.addEventListener('click', function() {
-                    openInNewTab(location.href.split(`#`)[0]+h5hashtag.id);
-                });
-                t1r.appendChild(h5hashtag);
+                
                 t1body.appendChild(t1r);
                 firstTable.appendChild(t1body);
                 div.appendChild(firstTable);
