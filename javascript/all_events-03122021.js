@@ -462,15 +462,16 @@ function insertVideo(selectedEvent) {
     h5.innerHTML = `..:: ${langUI("Event Video")} ::..<br>`;
     document.getElementById('column_with_tables').appendChild(h5);
     for (let i = 0; i < eventVideos[selectedEvent].split(";").length; i++) {
+        var center = document.createElement('center');
         var iframe = document.createElement('iframe');
-        iframe.className = 'center';
-        iframe.style.width = '560px';
-        iframe.style.height = '315.2px';
+        iframe.style.width = ""+Math.min(560, (window.innerWidth-50))+"px";//'560px';
+        iframe.style.height = ""+315.2*(Math.min(560, (window.innerWidth-50))/560)+"px";
         //iframe.allow = 'autoplay; encrypted-media';
         iframe.setAttribute('allowFullScreen', 'true');
         iframe.src = eventVideos[selectedEvent].split(";")[i];
         iframe.style.marginBottom = '15px';
-        document.getElementById('column_with_tables').appendChild(iframe);
+        center.appendChild(iframe);
+        document.getElementById('column_with_tables').appendChild(center);
     }
 }
 
