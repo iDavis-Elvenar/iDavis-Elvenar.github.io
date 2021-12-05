@@ -132,6 +132,7 @@
                     <h6 class="card-title text-center">Use this form if you have any questions, bug report or feedback for me.</h6>
                     <script type="text/javascript">
 
+                        let center = document.createElement('center');
                         let form = document.createElement('form');
                         form.name = "gform";
                         form.id = "gform";
@@ -145,8 +146,10 @@
                         form.appendChild(p1);
                         let input = document.createElement('input');
                         input.type = "text";
+                        input.style.marginBottom = "10px";
                         input.name = "entry.617066544";
                         input.id = "entry.617066544";
+                        input.style.width = "300px";
                         form.appendChild(input);
                         let p2 = document.createElement('p');
                         p2.id = "messageP";
@@ -157,7 +160,12 @@
                         textArea.type = "text";
                         textArea.name = "entry.333289760";
                         textArea.id = "entry.333289760";
+                        textArea.style.height = "200px";
+                        textArea.style.width = "300px";
+                        let br = document.createElement('br');
                         form.appendChild(textArea);
+                        form.appendChild(br);
+                        center.appendChild(form);
                         //button creation, if the spam delay is over
                         let iframe = document.createElement('iframe');
                         iframe.name = "hidden_iframe";
@@ -166,7 +174,7 @@
                         iframe.onload = function() {
                             if(submitted) {}
                         }
-                        document.getElementById('contact_body').appendChild(form);
+                        document.getElementById('contact_body').appendChild(center);
                         document.getElementById('contact_body').appendChild(iframe);
 
                         if (localStorage.getItem("contactLastSentMin") !== null &&
