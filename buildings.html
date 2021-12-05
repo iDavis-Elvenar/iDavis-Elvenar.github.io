@@ -17,14 +17,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap-4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/css/custom.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
+    crossorigin="anonymous">
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="javascript/jquery-3.5.1.min.js"></script>
     <script src="bootstrap-4.3.1/js/bootstrap.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- For language selector -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -50,19 +51,94 @@
 
     <!-- NAVIGATION -->
 
-    <nav class="navbar navbar-light fixed-top bg-dark highest1">
+    <div class="bg-dark">
+        <nav class="navbar navbar-light fixed-top bg-dark highest1 navbar-expand-lg navbar-dark">
+            <a id="home" class="navbar-brand text-white" style="margin-left: 20px;" href="index.html">
+                <img src="images/general/home.png" alt="Home" width="35" class="d-inline-block" style="margin-top: -5px;">
+                <span class="text-navbar_main"></span>
+            </a>
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#toggleMobileMenu" 
+                aria-controls="toggleMobileMenu" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="bigSpacing">
+                        <a href="buildings.html" class="nav-link text-warning" id="all_buildings"></a>
+                    </li>
+                    <li class="bigSpacing">
+                        <a href="events.html" class="nav-link text-warning" id="all_events"><!--<img src="images/general/calendar.png" alt="Home" width="30" class="d-inline-block align-top">--></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content">
+                        <a class="dropdown-item" href="contact.html">Contact & About Me</a>
+                        <a class="dropdown-item" href="donate-create.html">Donate</a>
+                        <!--<div class="dropdown-divider"></div>-->
+                    </div>
+                    </li>
+                    <li>
+                        <div class="nav-link" style="position: relative; display: inline-block;">
+                            <a href="donate-create.html"><img src="images/general/donate_button.png"></a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="#" id="chapters_dropdown_top" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="" id="preset_chapter" style="width: 28px; position: relative">
+                        </a>
+                        <div class="dropdown-menu pre-scrollable" aria-labelledby="navbarDropdown" style="width: max-content" id="chapters_dropdown"></div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/general/globe_big.png" style="width: 30px; position: relative">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content">
+                            <a class="dropdown-item" href="#" onclick="setLanguage('en')"><img src="images/general/lang_en.png" style="margin-right: 3px; margin-left: 3px;">EN</a>
+                            <a class="dropdown-item" href="#" onclick="setLanguage('cz')"><img src="images/general/lang_cz.png" style="margin-right: 3px; margin-left: 3px;">CZ</a>
+                            <a class="dropdown-item" href="#" onclick="setLanguage('de')"><img src="images/general/lang_de.png" style="margin-right: 3px; margin-left: 3px;">DE</a>
+                            <a class="dropdown-item" href="#" onclick="setLanguage('fr')"><img src="images/general/lang_fr.png" style="margin-right: 3px; margin-left: 3px;">FR</a>
+                            <a class="dropdown-item" href="#" onclick="setLanguage('pl')"><img src="images/general/lang_pl.png" style="margin-right: 3px; margin-left: 3px;">PL</a>
+                            <a class="dropdown-item" href="#" onclick="setLanguage('ru')"><img src="images/general/lang_ru.png" style="margin-right: 3px; margin-left: 3px;">RU</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/general/idavis.png" width="48" style="margin-left: 10px;right:8px;margin-top: -3px;">
+                    </li>
+                    <li style="visibility: hidden; display: block; display: none;">
+                        <a class="nav-link" href="#">Soon</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            document.getElementById("home").innerHTML += " "+langUI("Home");
+            document.getElementById("all_buildings").innerHTML = "&#x203A; "+langUI("All Buildings")+" &#x2039;";
+            document.getElementById("all_events").innerHTML = langUI("All Events");
+        </script>
+    </div>
+
+    <!--<nav class="navbar navbar-light fixed-top bg-dark highest1">
         <button class="navbar-toggler navbar-toggler-right bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" onclick="rollDownNavigation()">
             <span class="navbar-toggler-icon"> </span>
         </button>
         <a href="index.html" class="navbar-brand text-white"id="home"><img src="images/general/home.png" width="30" style="position: relative;"></a>
-        <!--<a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1" target="_blank">
+        <a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1" target="_blank">
             <button type="button" class="btn btn-outline-warning">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
                 <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
                 </svg>
                 <span class="visually-hidden">iDavis Youtube</span>
             </button>
-        </a>-->
+        </a>
         <a href="buildings.html" class="nav-link text-warning" id="all_buildings"></a>
         <a href="events.html" class="nav-link text-warning" id="all_events"></a>
 
@@ -105,10 +181,10 @@
                 <a class="nav-item nav-link text-white" href=#>Soon</a>
                 <a class="nav-item nav-link text-white" href="contact.html">Contact & About Me</a>
                 <a class="nav-item nav-link text-white" href="donate-create.html">Donate</a>
-                <!--<a class="nav-item nav-link text-white" href="privacyPolicy.html">Privacy Policy</a>-->
+                <a class="nav-item nav-link text-white" href="privacyPolicy.html">Privacy Policy</a>
             </div>
         </div>
-    </nav>
+    </nav>-->
 </head>
 <body onload="readBuildingsJSON()">
 
