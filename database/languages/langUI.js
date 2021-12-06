@@ -43,6 +43,7 @@ let ui = {
         "Finished": "Hotovo",
         "No recorded questline is available for this event": "Pre túto udalosť nie je zaevidovaný žiadny zoznam úloh",
         "Prepare": "Príprava",
+        "More": "Viac",
         //EVENTS
         "The Misty Forest":"Mlžný les",
         "Sorcerers' Homecoming":"Návrat kouzelníků domů",
@@ -109,6 +110,7 @@ let ui = {
         "Finished": "Fertig",
         "No recorded questline is available for this event": "Für dieses Event ist keine aufgezeichnete Questreihe verfügbar",
         "Prepare": "Vorbereitung",
+        "More": "Mehr",
         //EVENTS
         "The Misty Forest":"Nebelwald",
         "Sorcerers' Homecoming":"Die Heimkehr der Zauberer",
@@ -175,6 +177,7 @@ let ui = {
         "Finished": "Fini",
         "No recorded questline is available for this event": "Aucune série de quêtes enregistrée n'est disponible pour cet événement",
         "Prepare": "Préparation",
+        "More": "Suite",
         //EVENTS
         "The Misty Forest":"Forêt embrumée",
         "Sorcerers' Homecoming":"Retour des Sorciers",
@@ -241,6 +244,7 @@ let ui = {
         "Finished": "Skończone",
         "No recorded questline is available for this event": "Brak zarejestrowanej linii zadań dla tego wydarzenia",
         "Prepare": "Przygotowanie",
+        "More": "Więcej",
         //EVENTS
         "The Misty Forest":"Zamglony Las",
         "Sorcerers' Homecoming":"Powrót Czarowników",
@@ -307,6 +311,7 @@ let ui = {
         "Finished": "Законченный",
         "No recorded questline is available for this event": "Для этого события нет записанных цепочек заданий",
         "Prepare": "Подготовка",
+        "More": "Более",
         //EVENTS
         "The Misty Forest":"Туманный лес",
         "Sorcerers' Homecoming":"Возвращение Чародеев",

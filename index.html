@@ -74,12 +74,10 @@
                         <a href="events.html" class="nav-link text-warning" id="all_events"><!--<img src="images/general/calendar.png" alt="Home" width="30" class="d-inline-block align-top">--></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        More
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar_more" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content">
-                        <a class="dropdown-item" href="contact.html">Contact & About Me</a>
-                        <a class="dropdown-item" href="donate-create.html">Donate</a>
+                        <a class="dropdown-item" href="contact.html" id="navitem_contact">Contact & About Me</a>
+                        <a class="dropdown-item" href="donate-create.html" id="navitem_donate">Donate</a>
                         <!--<div class="dropdown-divider"></div>-->
                     </div>
                     </li>
@@ -120,6 +118,7 @@
             document.getElementById("home").innerHTML += " "+langUI("Home");
             document.getElementById("all_buildings").innerHTML = langUI("All Buildings");
             document.getElementById("all_events").innerHTML = langUI("All Events");
+            document.getElementById("navbar_more").innerHTML = langUI("More");
         </script>
     </div>
 </head>
