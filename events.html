@@ -46,7 +46,8 @@
     <script src="javascript/notificationHandler.js"></script>
     <script src="database/notifications.js"></script>
     <script src="database/quests.js"></script>
-    <script src="database/languages/quests_translations.js"></script>
+    <script src="database/languages/quests_translationsHandler.js"></script>
+    <script src="database/languages/quests_translationsDictionary.js"></script>
 
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/login.css">
@@ -147,6 +148,16 @@
     <!--<div class="justify-content-center box d-flex flex-column" style="height: 33%;"><span class="align-middle"><a class="text-link font-weight-bold" id="chests_left_panel" href="#events_top"><img src="images/general/chest_icon.png" width="30" style="margin-left: 5px; margin-right: 10px; position: relative;"></a></span></div>-->
 </div>
 
+<script>
+    /*if (window.innerWidth < 1300) {
+        let leftBar = document.getElementById("left_bar");
+        leftBar.className = "highest2 container bg-skin_transparent_background rounded-right75 border-bottom border-right border-top border-popup border-3";
+        leftBar.style.position = "relative";
+        leftBar.style.marginTop = "px";
+        leftBar.style.marginLeft = "0px";
+    }*/
+</script>
+
 <div style="padding-top: 59px;" id="calendar_top">
     <div style="width: 100%;">
         <div class="container-thick center bg-skin_astable_background rounded-bottom75" style="width: 100%; padding-top: 20px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px;">
@@ -199,7 +210,7 @@
     document.getElementById("order_daily_prizes_by_label").innerHTML = langUI("Order daily prizes by:");
     document.getElementById("calendar_top").innerHTML += langUI("Calendar");
     document.getElementById("quests_left_panel").innerHTML += langUI("Quests");
-    if (localStorage.getItem("lang") !== "cz") {document.getElementById("quests_left_panel").style.visibility = "hidden";}
+    //if (localStorage.getItem("lang") !== "cz") {document.getElementById("quests_left_panel").style.visibility = "hidden";}
     /*document.getElementById("quests_left_panel").innerHTML += langUI("Quests");
     document.getElementById("chests_left_panel").innerHTML += langUI("Chests");*/
     document.getElementById("generate_daily_prizes_button").innerHTML += langUI("Generate Daily Prizes");

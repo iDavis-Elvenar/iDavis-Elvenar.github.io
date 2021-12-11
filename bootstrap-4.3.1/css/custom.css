@@ -305,3 +305,7 @@ background-color: #b9881e;
 .navbar-nav > li {
     margin-bottom: -5px;
 }
+
+.bg-skin_transparent_background {
+    background-color: rgba(222, 224, 86, 0.3) !important;
+}
