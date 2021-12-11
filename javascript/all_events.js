@@ -611,7 +611,6 @@ function displayQuests() {
             div_info.style.visibility = "hidden";
             div_info.style.display = "none";
         }
-        center.appendChild(div_info)
         document.getElementById('column_with_tables').appendChild(center);
 
         var numberOfQuests = quests[selectedEvent].length;

@@ -612,6 +612,12 @@ function displayQuests() {
             div_info.style.visibility = "hidden";
             div_info.style.display = "none";
         }
+        if (localStorage.getItem("lang") !== "cz" && localStorage.getItem("lang") !== "en") {
+            var ph_translation_help = document.createElement('h6');
+            ph_translation_help.className = "card-title text-center";
+            ph_translation_help.innerHTML = `<br>Currently only EN and CZ languages are supported for the event questlines. I would like to add more languages into my dictionary (more specifically DE, FR, PL and RU languages). If you are from one of these communities and would like to contribute to development of this website by providing translations for around 60 already prepared short phrases, I will be more than happy if you leave me contact (either your Beta Forum nickname or your email) on my contact page on this website. <br>The translations will be used in all future events as well, so there is no need for recreating them every time.`;
+            center.appendChild(ph_translation_help);
+        }
         center.appendChild(div_info)
         document.getElementById('column_with_tables').appendChild(center);
 
