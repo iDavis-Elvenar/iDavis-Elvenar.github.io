@@ -1,4 +1,9 @@
 var dailyPrizes = {
+    
+    "january_xxii_": [
+        "A_Evt_June_XXI_Active_Fissure",
+        "A_Evt_June_XXI_Hungry_Treasure",
+    ],
 
     "december_xxi_": [
         "A_Evt_December_XX_GoblinGiftShop",
