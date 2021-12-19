@@ -8,6 +8,7 @@ var images_buildings = {
     "A_Evt_Set_January_XXII_Magic_Dragon_Tamer":"https://i.ibb.co/PZ6Xy39/magic-dragon-tamer.png",
     "A_Evt_Set_January_XXII_Mystical_Dreams":"https://i.ibb.co/89KrgqP/mystical-dreams.png",
     "A_Evt_Set_January_XXII_Secluded_Pond":"https://i.ibb.co/g9gq2P0/secluded-pond.png",
+    "A_Evt_Set_January_XXII_Sorcerers_Feast":"https://i.ibb.co/yB46q5G/sorcerers-feast.png",
     "A_Evt_BlackFriday_XXI_Gift_Dragon":"https://i.ibb.co/3vp79Sf/earth-dragon.png",
     "A_Evt_December_XXI_Frostberry_Bar":"https://i.ibb.co/1vDx9kh/frostberry-bar.png",
     "A_Evt_December_XXI_Magical_Supply_Station":"https://i.ibb.co/DPFq9CY/magical-supply-station.png",
