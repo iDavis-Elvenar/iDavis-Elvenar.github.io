@@ -1,4 +1,13 @@
 var images_buildings = {
+    "A_Evt_January_XXII_Ancient_Taste":"https://i.ibb.co/wMNL81N/ancient-taste.png",
+    "A_Evt_January_XXII_Mystic_Fiddler":"https://i.ibb.co/1MxFky1/mystic-fiddler.png",
+    "A_Evt_January_XXII_Spectral_Moths":"https://i.ibb.co/0BBmPRZ/spectral-moths.png",
+    "A_Evt_January_XXII_The_Sleepy_Titan":"https://i.ibb.co/2y3TpR6/sleepy-titan.png",
+    "A_Evt_Set_January_XXII_Enchanted_Crops":"https://i.ibb.co/cTcyHV0/enchanted-crops.png",
+    "A_Evt_Set_January_XXII_Forbidden_Ruins":"https://i.ibb.co/0Cg9xt2/forbidden-ruins.png",
+    "A_Evt_Set_January_XXII_Magic_Dragon_Tamer":"https://i.ibb.co/PZ6Xy39/magic-dragon-tamer.png",
+    "A_Evt_Set_January_XXII_Mystical_Dreams":"https://i.ibb.co/89KrgqP/mystical-dreams.png",
+    "A_Evt_Set_January_XXII_Secluded_Pond":"https://i.ibb.co/g9gq2P0/secluded-pond.png",
     "A_Evt_BlackFriday_XXI_Gift_Dragon":"https://i.ibb.co/3vp79Sf/earth-dragon.png",
     "A_Evt_December_XXI_Frostberry_Bar":"https://i.ibb.co/1vDx9kh/frostberry-bar.png",
     "A_Evt_December_XXI_Magical_Supply_Station":"https://i.ibb.co/DPFq9CY/magical-supply-station.png",
