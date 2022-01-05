@@ -83,8 +83,8 @@ let eventBetaStarts = { // MM/DD/YYYY
 }
 
 let questsLinks = {
-    "december_xxi_": "https://bit.ly/Quests-WinterMagic2021",
-    "january_xxii_": "https://bit.ly/ForbiddenRuins2022",
+    "december_xxi_": "bit.ly/Quests-WinterMagic2021",
+    "january_xxii_": "bit.ly/ForbiddenRuins2022",
 }
 
 let eventLiveStarts = {
