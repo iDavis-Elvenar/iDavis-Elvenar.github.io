@@ -649,6 +649,7 @@ function displayQuests() {
                 task.style.width = "90%";
                 task.id = "quest_task_"+(quest);
                 task.innerHTML = `${questTranslate(quests[selectedEvent][quest-1])}`;
+                task.className = "nocopy";
                 /*task.innerHTML += `<div class="myTest custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
                 <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
@@ -664,7 +665,7 @@ function displayQuests() {
                 input.id = "quest_finished_"+(quest);
                 if (Array(localStorage.getItem("quests_finished_"+selectedEvent)).join().split(',').includes(String(quest))) {
                     input.checked = true;
-                    task.className = "text-quest_completed";
+                    task.className = "text-quest_completed nocopy";
                 }
                 input.onchange = function() {
                     if (input.checked) {
@@ -674,7 +675,7 @@ function displayQuests() {
                             prepareCheckbox = document.getElementById("quest_prepare_"+(i));
 
                             checkbox.checked = true;
-                            tasktext.className = "text-quest_completed";
+                            tasktext.className = "text-quest_completed nocopy";
                             tasktext.style.fontWeight = "";
                         }
                     } else {
@@ -685,10 +686,10 @@ function displayQuests() {
 
                             checkbox.checked = false;
                                 if (prepareCheckbox.checked) {
-                                    tasktext.className = "text-prepare";
+                                    tasktext.className = "text-prepare nocopy";
                                     tasktext.style.fontWeight = "bold";
                                 } else {
-                                    tasktext.className = "";
+                                    tasktext.className = "nocopy";
                                 }
                         }
                     }
@@ -712,7 +713,7 @@ function displayQuests() {
                 if (Array(localStorage.getItem("quests_prepare_"+selectedEvent)).join().split(',').includes(String(quest))) {
                     input2.checked = true;
                     if (!Array(localStorage.getItem("quests_finished_"+selectedEvent)).join().split(',').includes(String(quest))) {
-                        task.className = "text-prepare";
+                        task.className = "text-prepare nocopy";
                         task.style.fontWeight = "bold";
                     }
                 }
@@ -721,10 +722,10 @@ function displayQuests() {
                     finishedCheckbox = document.getElementById("quest_finished_"+(quest));
                     if (!finishedCheckbox.checked) {
                         if (input2.checked) {
-                            tasktext.className = "text-prepare";
+                            tasktext.className = "text-prepare nocopy";
                             tasktext.style.fontWeight = "bold";
                         } else {
-                            tasktext.className = "";
+                            tasktext.className = "nocopy";
                             tasktext.style.fontWeight = "";
                         }
                     }

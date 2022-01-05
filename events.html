@@ -17,7 +17,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/css/custom-05122021.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/css/custom_v2.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
     <!--<script src="javascript/all_buildings.js"></script>-->
     <script src="database/variousData.js"></script>
     <script src="database/dailyPrizes.js"></script>
-    <script src="javascript/all_events-03122021.js"></script>
+    <script src="javascript/all_events_v2.js"></script>
     <script src="javascript/global_functions.js"></script>
     <script src="database/items.js"></script>
     <script src="database/languages/langUI.js"></script>
@@ -175,14 +175,7 @@
                             <center>
                                 <label for="input_orderBy" id="order_daily_prizes_by_label"></label>
                                 <select id="input_orderBy" class="custom-select" style="width: 30%;" onchange="">
-                                    <option value="day">Day</option>
-                                    <option value="providedCulture">Culture per square</option>
-                                    <option value="provided_population">Population per square</option>
-                                    <option value="money">Money per square per 1h</option>
-                                    <option value="supplies">Supplies per square per 1h</option>
-                                    <option value="orcs">Orcs per square per 1h</option>
-                                    <option value="mana">Mana per square per 1h</option>
-                                    <option value="seeds">Seeds per square per 1h</option>
+                                    
                                 </select>
                             </center>
                         </div>
@@ -216,6 +209,7 @@
     document.getElementById("generate_daily_prizes_button").innerHTML += langUI("Generate Daily Prizes");
 
     generateEventsForAllBuildings("input_event", "all_events");
+    generateOptionsForOrderBy("events");
 
     generateChapterDropdown();
 

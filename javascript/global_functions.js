@@ -262,3 +262,36 @@ function tempHint() {
 function chapterSelectionExplain() {
     create_exception(langUI("This is a new way of selecting your chapter on the website. You can now select your current in-game chapter using this new dropdown menu and it will get remembered by your browser - so that you won't have to do it everytime you use a sorting feature. Your chapter is used when sorting buildings in many ways ensuring that the final order will be always accurate for your current in-game progress!"), 25, 'warning');
 }
+
+function generateOptionsForOrderBy(flag) {
+    for (let i = 0; i < optionsForOrderBy.length; i++) {
+        if (optionsForOrderBy[i]["type"].split("&").includes(flag)) {
+            let option = document.createElement('option');
+            option.value = optionsForOrderBy[i]['value'];
+            option.innerHTML = langUI(optionsForOrderBy[i]['text']);
+            document.getElementById('input_orderBy').appendChild(option);
+        }
+    }
+}
+
+function generateOptionsForFilterBy() {
+    for (let i = 0; i < optionsForFilterBy.length; i++) {
+        let option = document.createElement('option');
+        option.value = optionsForFilterBy[i]['value'];
+        option.innerHTML = langUI(optionsForFilterBy[i]['text']);
+        document.getElementById('input_production').appendChild(option);
+    }
+}
+
+function generateOptionsForSetInput() {
+    let option = document.createElement('option');
+    option.value = "all_";
+    option.innerHTML = langUI("Choose a set");
+    document.getElementById('input_set').appendChild(option);
+    for (const [id, name] of Object.entries(setNames)) {
+        let option = document.createElement('option');
+        option.value = id;
+        option.innerHTML = langUI(name);
+        document.getElementById('input_set').appendChild(option);
+    }
+}

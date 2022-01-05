@@ -1,4 +1,7 @@
 function questTranslate(text) {
+    if (text === "") {
+        return "";
+    }
     let questParts = getQuestParts(text);
     let questPartsConnections = getQuestConnections(text);
     let translatedQuestPartsConnections = translateQuestConnections(questPartsConnections);

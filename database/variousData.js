@@ -16,6 +16,9 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ins_rf_cn_25", "ins_rf_cn_33", "ins_rf_cn_50", "ins_rf_cn_100", "ins_rf_spl_5", "ins_rf_spl_10", "ins_rf_spl_15",
     "ins_rf_spl_20", "ins_rf_spl_25", "ins_rf_spl_33", "ins_rf_spl_50", "ins_rf_spl_100", "ins_rf_grr_5",
     "ins_rf_grr_10", "ins_rf_grr_15", "ins_rf_grr_20", "ins_rf_grr_25", "ins_rf_grr_33", "ins_rf_grr_50", "ins_rf_grr_100",
+    "INS_TR_AMT_1", "INS_TR_AMT_3", "INS_TR_AMT_7", "INS_TR_AMT_10", "INS_TR_AMT_15", 
+    "INS_TR_AMT_20", "INS_TR_AMT_30", "INS_TR_AMT_45", "INS_TR_AMT_60", "INS_TR_AMT_120", 
+    "INS_TR_AMT_300", "INS_TR_AMT_480", "INS_TR_AMT_840", "INS_TR_AMT_1200", "INS_TR_AMT_2400", 
     "INS_KP_AW_1", "INS_KP_AW_3", "INS_KP_AW_5", "INS_KP_AW_7", "INS_KP_AW_10", "INS_KP_AW_15", "INS_KP_AW_20",
     "INS_KP_AW_30", "ins_rs_1", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
@@ -75,10 +78,13 @@ let eventBetaStarts = { // MM/DD/YYYY
     "september_xxi_": "08/19/2021",
     "october_xxi_": "09/30/2021",
     "december_xxi_": "11/11/2021",
+    "january_xxii_": "01/06/2022",
+    "february_xxii_": "02/22/2022",
 }
 
 let questsLinks = {
     "december_xxi_": "https://bit.ly/Quests-WinterMagic2021",
+    "january_xxii_": "https://bit.ly/ForbiddenRuins2022",
 }
 
 let eventLiveStarts = {
@@ -110,7 +116,8 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_July_XXI_Triumph_of_Tides": "1x Triumph of the Tides Artifact",
     "A_Evt_Evo_September_XXI_Red_Panda_Master": "1x Red Panda Master Artifact",
     "A_Evt_Evo_October_XXI_Witch_Summoning_Circle": "1x Witch Summoning Circle Artifact",
-    "A_Evt_Evo_December_XXI_Boblins_Express_Service": "1x Boblins Express Service Artifact"
+    "A_Evt_Evo_December_XXI_Boblins_Express_Service": "1x Boblins Express Service Artifact",
+    "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten": "1x Echoes of the Forgotten Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -160,20 +167,24 @@ var setNames = {
     "crafting_1_chess" : "Magical Chess Set",
     "spire_a_library" : "Moonstone Library Set",
     "june_xx" : "Air Traders Set",
-    "scroll_sorcerers" : "Pilgrim's Manor"
+    "scroll_sorcerers" : "Pilgrim's Manor",
+    "scroll_sorcerers_xxii": "Forbidden Ruins",
 }
 
 var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "january_xxii",
 ]
 
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
+        "2022" : [
+            ["The Buried City","february_xxii_",false,true],
+            ["Forbidden Ruins","january_xxii_",true,false],
+        ],
         "2021" : [
-            ["Winter Magic","december_xxi_",true,false],
+            ["Winter Magic","december_xxi_",false,false],
             ["The Misty Forest","october_xxi_",false,false],
             ["Autumn Zodiac","september_xxi_",false,false],
             ["Elvarian Games","july_xxi_",false,false],
@@ -202,8 +213,12 @@ var allEvents = {
         ]
     },
     "all_events" : {
+        "2022" : [
+            ["The Buried City","february_xxii_",false,true],
+            ["Forbidden Ruins","january_xxii_",true,false],
+        ],
         "2021" : [
-            ["Winter Magic","december_xxi_",true,false],
+            ["Winter Magic","december_xxi_",false,false],
             ["The Misty Forest","october_xxi_",false,false],
             ["Autumn Zodiac","september_xxi_",false,false],
             ["Elvarian Games","july_xxi_",false,false],
@@ -214,6 +229,33 @@ var allEvents = {
         ]
     }
 }
+
+var optionsForOrderBy = [
+    {"type": "buildings", "value": "all_", "text": "All"},
+    {"type": "events", "value": "day", "text": "Day"},
+    {"type": "buildings&events", "value": "providedCulture", "text": "Culture per square"},
+    {"type": "buildings&events", "value": "provided_population", "text": "Population per square"},
+    {"type": "buildings&events", "value": "money", "text": "Money per square per 1h"},
+    {"type": "buildings&events", "value": "supplies", "text": "Supplies per square per 1h"},
+    {"type": "buildings&events", "value": "orcs", "text": "Orcs per square per 1h"},
+    {"type": "buildings&events", "value": "mana", "text": "Mana per square per 1h"},
+    {"type": "buildings&events", "value": "seeds", "text": "Seeds per square per 1h"},
+]
+
+var optionsForFilterBy = [
+    {"value": "all_events", "text": "All"},
+    {"value": "only&providedCulture", "text": "Culture Only"},
+    {"value": "only&providedCulture&provided_population", "text": "Culture & Population Only"},
+    {"value": "boosted_plus_0_quality_1|boosted_plus_1_quality_1|boosted_plus_2_quality_1|marble|steel|planks", "text": "Standard Goods T1"},
+    {"value": "boosted_plus_0_quality_2|boosted_plus_1_quality_2|boosted_plus_2_quality_2|crystal|scrolls|silk", "text": "Standard Goods T2"},
+    {"value": "boosted_plus_0_quality_3|boosted_plus_1_quality_3|boosted_plus_2_quality_3|elixir|magic_dust|gems", "text": "Standard Goods T3"},
+    {"value": "orcs", "text": "Orcs"},
+    {"value": "mana", "text": "Mana"},
+    {"value": "seeds", "text": "Seeds"},
+    {"value": "boosted_sentient_plus_0_quality_1|boosted_sentient_plus_1_quality_1|boosted_sentient_plus_2_quality_1|sentientmarble|sentientsteel|sentientplanks", "text": "Sentient Goods T4"},
+    {"value": "boosted_sentient_plus_0_quality_2|boosted_sentient_plus_1_quality_2|boosted_sentient_plus_2_quality_2|sentientcrystal|sentientscrolls|sentientsilk", "text": "Sentient Goods T5"},
+    {"value": "boosted_sentient_plus_0_quality_3|boosted_sentient_plus_1_quality_3|boosted_sentient_plus_2_quality_3|sentientelixir|sentientmagic_dust|sentientgems", "text": "Sentient Goods T6"},
+]
 
 var goods_icons = {
     "providedCulture": "<img src='https://image.ibb.co/mEtRZq/culture.png' title='Culture'>",
@@ -326,10 +368,22 @@ var goods_icons = {
     "boosted_relic_plus_0_quality_2": "<img src='https://i.ibb.co/hWtPCSd/relics-t2-small.png' title='Boosted T2 Relic'><br>",
     "boosted_relic_plus_1_quality_2": "<img src='https://i.ibb.co/hWtPCSd/relics-t2-small.png' title='Boosted T2 + 1 Relic'><br>",
     "craft_spell_fragments": "<img src='https://i.ibb.co/fYLXgWP/spell-fragment.png' title='Spell Fragments'><br>",
-    "spell_combining_catalyst_1": "<img src='https://i.ibb.co/WnDfq7P/combining-catalyst.png' title='Combining Catalyst'><br>",
-    "": "",
-    "": "",
-    "": ""
+    "combiningcatalyst": "<img src='https://i.ibb.co/WnDfq7P/combining-catalyst.png' title='Combining Catalyst'><br>",
+    "INS_TR_AMT_1": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 1 min'><br>",
+    "INS_TR_AMT_3": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 3 min'><br>",
+    "INS_TR_AMT_7": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 7 min'><br>",
+    "INS_TR_AMT_10": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 10 min'><br>",
+    "INS_TR_AMT_15": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 15 min'><br>",
+    "INS_TR_AMT_20": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 20 min'><br>",
+    "INS_TR_AMT_30": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 30 min'><br>",
+    "INS_TR_AMT_45": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 45 min'><br>",
+    "INS_TR_AMT_60": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 1 h'><br>",
+    "INS_TR_AMT_120": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 2 h'><br>",
+    "INS_TR_AMT_300": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 5 h'><br>",
+    "INS_TR_AMT_480": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 8 h'><br>",
+    "INS_TR_AMT_840": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 14 h'><br>",
+    "INS_TR_AMT_1200": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 20 h'><br>",
+    "INS_TR_AMT_2400": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 40 h'><br>",
 }
 
 var chapter_icons = {

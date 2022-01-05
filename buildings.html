@@ -18,7 +18,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/css/custom-05122021.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/css/custom_v2.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
 
@@ -210,31 +210,13 @@
                 <div class="col-sm">
                     <center><label for="input_production" id="filter_production_label"></label>
                     <select id="input_production" class="custom-select" style="width: 50%; margin-bottom: 10px;" onchange="">
-                        <option value="all_events">All</option>
-                        <option value="only&providedCulture">Culture Only</option>
-                        <option value="only&providedCulture&provided_population">Culture & Population Only</option>
-                        <option value="boosted_plus_0_quality_1|boosted_plus_1_quality_1|boosted_plus_2_quality_1|marble|steel|planks">Standard Goods T1</option>
-                        <option value="boosted_plus_0_quality_2|boosted_plus_1_quality_2|boosted_plus_2_quality_2|crystal|scrolls|silk">Standard Goods T2</option>
-                        <option value="boosted_plus_0_quality_3|boosted_plus_1_quality_3|boosted_plus_2_quality_3|elixir|magic_dust|gems">Standard Goods T3</option>
-                        <option value="orcs">Orcs</option>
-                        <option value="mana">Mana</option>
-                        <option value="seeds">Seeds</option>
-                        <option value="boosted_sentient_plus_0_quality_1|boosted_sentient_plus_1_quality_1|boosted_sentient_plus_2_quality_1|sentientmarble|sentientsteel|sentientplanks">Sentient Goods T4</option>
-                        <option value="boosted_sentient_plus_0_quality_2|boosted_sentient_plus_1_quality_2|boosted_sentient_plus_2_quality_2|sentientcrystal|sentientscrolls|sentientsilk">Sentient Goods T5</option>
-                        <option value="boosted_sentient_plus_0_quality_3|boosted_sentient_plus_1_quality_3|boosted_sentient_plus_2_quality_3|sentientelixir|sentientmagic_dust|sentientgems">Sentient Goods T6</option>
+
                     </select></center>
                 </div>
                 <div class="col-sm">
                     <center><label for="input_orderBy" id="order_by_label"></label>
                     <select id="input_orderBy" class="custom-select" style="width: 30%; margin-bottom: 10px;" onchange="">
-                        <option value="all_">All</option>
-                        <option value="providedCulture">Culture per square</option>
-                        <option value="provided_population">Population per square</option>
-                        <option value="money">Money per square per 1h</option>
-                        <option value="supplies">Supplies per square per 1h</option>
-                        <option value="orcs">Orcs per square per 1h</option>
-                        <option value="mana">Mana per square per 1h</option>
-                        <option value="seeds">Seeds per square per 1h</option>
+
                     </select>
                     </center>
                 </div>
@@ -248,28 +230,10 @@
                     <button class="btn btn-sm btn-success btn-block text-uppercase" id="filter_and_generate_button" style="margin-top: 10px;" onclick="clearInputField(); clearURL(); readBuildingsJSON();"></button>
                 </div>
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
-                    <center><label for="input_chapter" id="for_chapter_label"></label>
-                        <select id="input_chapter" class="custom-select" style="width: 40%; margin-bottom: 10px;" onchange="" disabled>
-                            <option value="all_">All</option>
-                            <option value="18">18</option>
-                            <option value="17">17</option>
-                            <option value="16">16</option>
-                            <option value="15">15</option>
-                            <option value="14">14</option>
-                            <option value="13">13</option>
-                            <option value="12">12</option>
-                            <option value="11">11</option>
-                            <option value="10">10</option>
-                            <option value="9">9</option>
-                            <option value="8">8</option>
-                            <option value="7">7</option>
-                            <option value="6">6</option>
-                            <option value="5">5</option>
-                            <option value="4">4</option>
-                            <option value="3">3</option>
-                            <option value="2">2</option>
-                            <option value="1">1</option>
-                        </select><img src="images/general/request_sign.png" style="margin-left: 5px;" width="30px" class="pointer" onclick="tempHint()" >
+                    <center><label for="input_chapter" id="for_input_set_label"></label>
+                        <select id="input_set" class="custom-select" style="width: 40%; margin-bottom: 10px;" onchange="">
+                            
+                        </select>
                     </center>
                 </div>
             </div>
@@ -281,7 +245,7 @@
     document.getElementById("introduced_in_event_label").innerHTML = langUI("Introduced in event:");
     document.getElementById("filter_production_label").innerHTML = langUI("Filter production:");
     document.getElementById("order_by_label").innerHTML = langUI("Order By:");
-    document.getElementById("for_chapter_label").innerHTML = langUI("For chapter:");
+    document.getElementById("for_input_set_label").innerHTML = langUI("Filter by set buildings:");
     document.getElementById("set_evolving_label").innerHTML = langUI("Search:");
     document.getElementById("input_search").innerHTML = langUI("Start typing...");
     document.getElementById("filter_and_generate_button").innerHTML = langUI("Filter & Generate");
@@ -291,6 +255,9 @@
     });
 
     generateEventsForAllBuildings("input_event", "all_buildings");
+    generateOptionsForFilterBy();
+    generateOptionsForOrderBy("buildings");
+    generateOptionsForSetInput();
 
     generateChapterDropdown();
 

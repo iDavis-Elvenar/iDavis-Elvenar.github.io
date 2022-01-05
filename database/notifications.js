@@ -14,7 +14,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
-        "active":false,
+        "active":true,
         "priority":30
     },
     "3":{  // DAILY PRIZES VIDEO PROMO
@@ -28,7 +28,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":300,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "4":{  // NEW VIDEOS SOON
@@ -37,20 +37,20 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
-        "active":false,
+        "active":true,
         "priority":30
     },
     "5":{  // NEW FEATURE ON THE WEBSITE
         "id":5,
-        "text":`<h4 class="alert-heading">New feature on the website!</h4>
-        <p>You can now preset your chapter for the website, so that you won't have to select one everytime you use a sorting feature. Simply head to the top menu bar (next to the language selector) and select your chapter <img src="images/general/chapter_icons/ch17.png"> / <img src="images/general/chapter_icons/ch15.png"> / <img src="images/general/chapter_icons/ch14.png"> - all the sorting calculations on the website will depend on this chapter, so that you always get the accurate info for your current in-game progress!</p>
+        "text":`<h4 class="alert-heading">Introducing: Interactive Quest Lists!</h4>
+        <p>From now on, you will be able to find quest lists <img src="images/general/event_guide.png"> for every event in the All Events subpage. These new quest lists are made in an interactive way - you can mark the quests you have already completed and check those for which you still need some preparation - making it even easier for you to prepare for the event!</p>
         <hr>
-        <p>This feature was inspired by the suggestion that one of the players sent me using my <a href='contact.html' class='alert-link'>Contact Page</a>. Feel free to share your feedback if you have any ideas for future improvements!</p>`,
-        "repeatAfter":86400,
+        <p>These 2 interactive features are my current ideas. Do you have any other habits that you keep with when following quest lists during the events and would like to see them implemented in the portal? Share your ideas using the form in my <a href='contact.html' class='alert-link'>Contact Page</a> and they might become a future addition of this website!</p>`,
+        "repeatAfter":172800,
         "style":"warning",
         "duration":45,
-        "active":false,
-        "priority":10
+        "active":true,
+        "priority":40
     },
     "6":{  // DONATE
         "id":6,

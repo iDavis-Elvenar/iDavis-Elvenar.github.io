@@ -24,6 +24,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_September_XXI_Red_Panda_Master": 9,
     "A_Evt_Evo_October_XXI_Witch_Summoning_Circle": 9,
     "A_Evt_Evo_December_XXI_Boblins_Express_Service": 9,
+    "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten": 9,
 }
 
 function setAndReload(id) {
@@ -52,7 +53,8 @@ function readBuildingsJSON() {
             let orderByOption = orderBySelect.options[orderBySelect.selectedIndex].value;
             let isTriggeredOrderBy = orderByOption !== 'all_';
             let chapterSelect = document.getElementById('input_chapter');
-            let chapterOption = chapterSelect.options[chapterSelect.selectedIndex].value;
+            let buildingSetSelect = document.getElementById('input_set');
+            let selectedBuildingSet = buildingSetSelect.options[buildingSetSelect.selectedIndex].value;
             let inputField = document.getElementById('input_search');
             let inputValue = inputField.value;
 
@@ -64,7 +66,7 @@ function readBuildingsJSON() {
                 if (location.href.split('#').length > 1 && location.href.split('#')[1] !== "") {
                     filteredData = searchForBuildingID(data, location.href.split('#')[1]);
                 } else {
-                    filteredData = filterData(data, filterEventData, filterProductionData, includeAppearances);
+                    filteredData = filterData(data, filterEventData, filterProductionData, includeAppearances, selectedBuildingSet);
                 }
             } else {
                 filteredData = searchByInput(data, inputValue);
@@ -72,10 +74,6 @@ function readBuildingsJSON() {
 
             if (includeAppearances) {
                 filteredData = sortByDay(filteredData, filterEventData);
-            }
-
-            if (orderByOption === 'all_') {
-                chapterSelect.value = 'all_';
             }
 
             if (isTriggeredOrderBy) {
@@ -148,7 +146,7 @@ function readBuildingsJSON() {
                 } else {
                     let setDesc = "-";
                     if (filteredData[i].hasOwnProperty('setBuilding')) {
-                        setDesc = setNames[filteredData[i]['setBuilding']['setID']];
+                        setDesc = `<a class="text-link font-weight-bold" href="#" onclick="showFullSet('${filteredData[i]['setBuilding']['setID']}')">${langUI(setNames[filteredData[i]['setBuilding']['setID']])}</a>`;
                     }
                     let expiringDuration = `-`;
                     if (filteredData[i].hasOwnProperty("expiring")) {
@@ -551,13 +549,21 @@ function prepSetAlertElements() {
     html_text = document.getElementById('text');
 }
 
-function filterData(data, filterEventData, filterProductionData, includeAppearances) {
+function filterData(data, filterEventData, filterProductionData, includeAppearances, selectedBuildingSet) {
     let filteredData = [];
-    for (let i = 0; i < data.length; i++) {
-        if ((filterEvent(filterEventData, data[i]) && filterProduction(filterProductionData, data[i])) ||
-            (includeAppearances && hasAppearance(filterEventData, data[i]))) {
-            if (!excludeAsDisabled(data[i])) {
+    if (selectedBuildingSet !== "all_") {
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].hasOwnProperty("setBuilding") && data[i]["setBuilding"]["setID"] === selectedBuildingSet) {
                 filteredData.push(data[i]);
+            }
+        }
+    } else {
+        for (let i = 0; i < data.length; i++) {
+            if ((filterEvent(filterEventData, data[i]) && filterProduction(filterProductionData, data[i])) ||
+                (includeAppearances && hasAppearance(filterEventData, data[i]))) {
+                if (!excludeAsDisabled(data[i])) {
+                    filteredData.push(data[i]);
+                }
             }
         }
     }
@@ -673,4 +679,15 @@ function searchByInput(data, inputValue) {
         }
     }
     return result;
+}
+
+function showFullSet(setID) {
+    let select = document.getElementById('input_set');
+    let options = select.options;
+    for (let i = 0; i < options.length; i++) {
+        if (options[i].value === setID) {
+            options.selectedIndex = i;
+        }
+    }
+    document.getElementById('filter_and_generate_button').click();
 }
