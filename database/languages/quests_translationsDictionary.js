@@ -41,7 +41,7 @@ let questsDictionary = {
         "opar vidění" : "vision vapor",
         "provinciu" : "province",
         "košík jedla" : "basket of groceries",
-        "u obchodníka" : "with a seller man",
+        "u obchodníka" : "with a wholesaler",
         "požehnání na jednotky" : "unit instants",
         "strety vo veži" : "spire encounters",
         "štandardného zboží" : "standard goods",
@@ -121,7 +121,64 @@ let questsDictionary = {
         "budovy na level 5 alebo vyšší" : "buildings to level 5 or higher", // use regex*/
     },
     "fr" : {
-
+        // CONNECTIONS
+        "alebo" : "ou",
+        // VERBS
+        "získaj" : "collecter",
+        "vyrob" : "produire",
+        "utrať" : "dépenser",
+        "použi" : "utiliser",
+        "vyrieš" : "résoudre",
+        "vytvor" : "créer",
+        "trénuj" : "recruter",
+        "preskúmaj" : "explorer",
+        "obchoduj" : "commercer",
+        "kúp" : "acheter",
+        "vylepši" : "améliorer",
+        "vlož" : "investir",
+        "vykonaj" : "faire",
+        "vyskúmaj" : "rechercher",
+        // PRODUCTS
+        "mincí" : "pièces",
+        "nápoje" : "breuvages",
+        "vb" : "pc",
+        "produkt základnej manufaktury (3-hodinový)" : "marchandise de base (3 heures)", // use regex
+        "produkt základnej manufaktury (9-hodinový)" : "marchandise de base (9 heures)", // use regex
+        "produkt základnej manufaktury (24-hodinový)" : "marchandise de base (24 heures)", // use regex
+        "produkt základnej manufaktury (2-dňový)" : "marchandise de base (48 heures)", // use regex
+        "obyčajné nástroje" : "outils rudimentaires",
+        "ľubovoľné kúzlo" : "sortilège de votre choix",
+        "strety na mape" : "rencontres provinces",
+        "turnajové strety" : "rencontres tournooi",
+        "chlieb" : "pain",
+        "ponuku na trhu" : "offre marchandise",
+        "spojovací činidlo" : "catalyseur de combinaison",
+        "relikvie" : "reliques",
+        "pokročilé nástroje" : "outils avancés",
+        "zásob" : "matériaux",
+        "úlomky kouzel" : "fragments de sortilège",
+        "jednotiek" : "unités",
+        "opar vidění" : "vision vaporeuse",
+        "provinciu" : "province",
+        "košík jedla" : "panier de provisions",
+        "u obchodníka" : "avec le grossiste",
+        "požehnání na jednotky" : "bénédictions d’unités",
+        "strety vo veži" : "rencontres donjon",
+        "štandardného zboží" : "marchandise standart",
+        "relikvií" : "reliques",
+        "vb do ľubovoľného prastarého divu" : "PCs sur une merveille",
+        "stretov na mape" : "rencontres provinces",
+        "turnajových stretov" : "rencontres tournooi",
+        "susedskú výpomoc" : "aide aux voisins",
+        "stretov vo veži" : "rencontres donjon",
+        "technológiu" : "technologie",
+        "základného zboží" : "marchandises de base",
+        "krmení" : "nourriture pour familier",
+        "strety na mape bojom" : "rencontres provinces en combattant",
+        "strety na mape vyjednávaním" : "rencontres provinces en négociant",
+        "nejaké množstvo" : "quantité raisonnable de",
+        "budovu na level 5 alebo vyšší" : "bâtiment au moins au niveau 5", // use regex
+        "budovy na level 5 alebo vyšší" : "bâtiments au moins au niveau 5", // use regex
     },
     "pl" : {
 

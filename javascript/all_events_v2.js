@@ -649,6 +649,7 @@ function displayQuests() {
                 task.style.width = "90%";
                 task.id = "quest_task_"+(quest);
                 task.innerHTML = `${questTranslate(quests[selectedEvent][quest-1])}`;
+                //console.log(quest+". "+questTranslate(quests[selectedEvent][quest-1]))
                 task.className = "nocopy";
                 /*task.innerHTML += `<div class="myTest custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
