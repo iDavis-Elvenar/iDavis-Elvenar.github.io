@@ -121,7 +121,7 @@ let questsDictionary = {
         "budovy na level 5 alebo vyšší" : "buildings to level 5 or higher", // use regex*/
     },
     "fr" : {
-        // CONNECTIONS
+        /*// CONNECTIONS
         "alebo" : "ou",
         // VERBS
         "získaj" : "collecter",
@@ -178,7 +178,7 @@ let questsDictionary = {
         "strety na mape vyjednávaním" : "rencontres provinces en négociant",
         "nejaké množstvo" : "quantité raisonnable de",
         "budovu na level 5 alebo vyšší" : "bâtiment au moins au niveau 5", // use regex
-        "budovy na level 5 alebo vyšší" : "bâtiments au moins au niveau 5", // use regex
+        "budovy na level 5 alebo vyšší" : "bâtiments au moins au niveau 5", // use regex*/
     },
     "pl" : {
 
