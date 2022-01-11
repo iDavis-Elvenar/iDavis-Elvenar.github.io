@@ -46,7 +46,7 @@ var notifications = {
         <p>From now on, you will be able to find quest lists <img src="images/general/event_guide.png"> for every event in the All Events subpage. These new quest lists are made in an interactive way - you can mark the quests you have already completed and check those for which you still need some preparation - making it even easier for you to prepare for the event!</p>
         <hr>
         <p>These 2 interactive features are my current ideas. Do you have any other habits that you keep with when following quest lists during the events and would like to see them implemented in the portal? Share your ideas using the form in my <a href='contact.html' class='alert-link'>Contact Page</a> and they might become a future addition of this website!</p>`,
-        "repeatAfter":172800,
+        "repeatAfter":604800,
         "style":"warning",
         "duration":45,
         "active":true,
