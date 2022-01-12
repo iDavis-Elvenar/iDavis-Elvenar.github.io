@@ -211,8 +211,8 @@ let questsDictionary = {
         "produkt základnej manufaktury (2-dňový)" : "продукция базовой фабрики (3 дня)", // use regex
         "obyčajné nástroje" : "простые инструменты",
         "ľubovoľné kúzlo" : "заклинания",
-        "strety na mape" : "конфликты на карте",
-        "turnajové strety" : "турнирные конфликты",
+        "strety na mape" : "конфликта на карте",
+        "turnajové strety" : "турнирных конфликта",
         "chlieb" : "Хлеб",
         "ponuku na trhu" : "торговые предолжения",
         "spojovací činidlo" : "комбинирующий катализатор",
@@ -226,9 +226,9 @@ let questsDictionary = {
         "košík jedla" : "корзины с продуктами",
         "u obchodníka" : "товары у оптовика ",
         "požehnání na jednotky" : "мгновения юнитов",
-        "strety vo veži" : "конфликты в шпиле",
+        "strety vo veži" : "конфликта в шпиле",
         "štandardného zboží" : "обычные товары",
-        "relikvií" : "реликвии",
+        "relikvií" : "реликвий",
         "vb do ľubovoľného prastarého divu" : "ОЗ в любое древнее чудо",
         "stretov na mape" : "конфликтов на карте",
         "turnajových stretov" : "турнирных конфликтов",
@@ -237,8 +237,8 @@ let questsDictionary = {
         "technológiu" : "технологию",
         "základného zboží" : "обычные товары",
         "krmení" : "еду для питомцев",
-        "strety na mape bojom" : "конфликты на карте боем",
-        "strety na mape vyjednávaním" : "конфликты на карте выкупом",
+        "strety na mape bojom" : "конфликта на карте боем",
+        "strety na mape vyjednávaním" : "конфликта на карте выкупом",
         "nejaké množstvo" : "хорошее количество",
         "budovu na level 5 alebo vyšší" : "здание до уровня 5 или выше", // use regex
         "budovy na level 5 alebo vyšší" : "здания до уровня 5 или выше", // use regex
