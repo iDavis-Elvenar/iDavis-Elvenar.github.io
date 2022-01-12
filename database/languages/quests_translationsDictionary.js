@@ -202,7 +202,7 @@ let questsDictionary = {
         "vykonaj" : "окажите", // if used only in do NH
         "vyskúmaj" : "исследуйте",
         // PRODUCTS
-        "mincí" : "монеты",
+        "mincí" : "монет",
         "nápoje" : "напитки",
         "vb" : "ОЗ",
         "produkt základnej manufaktury (3-hodinový)" : "продукция базовой фабрики (3 часа)", // use regex
@@ -222,9 +222,9 @@ let questsDictionary = {
         "úlomky kouzel" : "фрагметы заклинаний",
         "jednotiek" : "юнитов",
         "opar vidění" : "затуманненого зрения",
-        "provinciu" : "провинция",
+        "provinciu" : "провинцию",
         "košík jedla" : "корзины с продуктами",
-        "u obchodníka" : "у оптовика ",
+        "u obchodníka" : "товары у оптовика ",
         "požehnání na jednotky" : "мгновения юнитов",
         "strety vo veži" : "конфликты в шпиле",
         "štandardného zboží" : "обычные товары",
@@ -234,7 +234,7 @@ let questsDictionary = {
         "turnajových stretov" : "турнирных конфликтов",
         "susedskú výpomoc" : "соседскую помощь",
         "stretov vo veži" : "конфликтов в шпиле",
-        "technológiu" : "technology",
+        "technológiu" : "технологию",
         "základného zboží" : "обычные товары",
         "krmení" : "еду для питомцев",
         "strety na mape bojom" : "конфликты на карте боем",
