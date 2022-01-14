@@ -612,10 +612,10 @@ function displayQuests() {
             div_info.style.visibility = "hidden";
             div_info.style.display = "none";
         }
-        if (localStorage.getItem("lang") !== "cz" && localStorage.getItem("lang") !== "en") {
+        if (localStorage.getItem("lang") == "pl") {
             var ph_translation_help = document.createElement('h6');
             ph_translation_help.className = "card-title text-center";
-            ph_translation_help.innerHTML = `<br>Currently only EN and CZ languages are supported for the event questlines. I would like to add more languages into my dictionary (I´m currently looking for PL and RU languages). If you are from one of these communities and would like to contribute to development of this website by providing translations for around 60 already prepared short phrases, I will be more than happy if you leave me contact (either your Beta Forum nickname or your email) on my <a href="https://idavis-elvenar.github.io/contact.html" class="text-link">contact page</a>. <br>The translations will be used in all future events, so there is no need for recreating them every time.<br>Nicknames of all contributors will be listed in the quest pages of respective languages (of course if you wish to).`;
+            ph_translation_help.innerHTML = `<br>Currently only EN, CZ, FR and RU languages are supported for the event questlines. I would like to add more languages into my dictionary (I´m currently looking for PL language). If you are from this community and would like to contribute to development of this website by providing translations for around 60 already prepared short phrases, I will be more than happy if you leave me contact (either your Beta Forum nickname or your email) on my <a href="https://idavis-elvenar.github.io/contact.html" class="text-link">contact page</a>. <br>The translations will be used in all future events, so there is no need for recreating them every time.<br>Nicknames of all contributors will be listed in the quest pages of respective languages (of course if you wish to).`;
             center.appendChild(ph_translation_help);
         }
         center.appendChild(div_info)

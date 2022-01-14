@@ -10,6 +10,8 @@ function questTranslate(text) {
     return mergeParts(translatedConditionParts, translatedQuestPartsConnections);
 }
 
+let endingWord = undefined;
+
 function getQuestParts(quest) {
     /* 
         returns array of quest parts (sorted by input)
@@ -120,6 +122,10 @@ function translateConditionParts(conditionParts) {
                 conditionParts[i][j] = translateCondition(conditionParts[i][j]);
             }
         }
+        if (endingWord !== undefined) {
+            conditionParts[i][conditionParts[i].length-1] += " " + endingWord;
+            endingWord = undefined;
+        }
     }
     return conditionParts;
 }
@@ -143,27 +149,35 @@ function translateCondition(cond) {
         if (questsDictionary[localStorage.getItem("lang")].hasOwnProperty(cond.toLowerCase())) {
             if (startsWithCapital(cond)) {
                 if (isAllCapitals(cond)) {
-                    return questsDictionary[localStorage.getItem("lang")][cond.toLowerCase()].toUpperCase();
+                    return takeFromDictionary(questsDictionary[localStorage.getItem("lang")][cond.toLowerCase()].toUpperCase());
                 } else {
-                    return questsDictionary[localStorage.getItem("lang")][cond.toLowerCase()].charAt(0).toUpperCase() + questsDictionary[localStorage.getItem("lang")][cond.toLowerCase()].slice(1);
+                    return takeFromDictionary(questsDictionary[localStorage.getItem("lang")][cond.toLowerCase()].charAt(0).toUpperCase() + questsDictionary[localStorage.getItem("lang")][cond.toLowerCase()].slice(1));
                 }
             } else {
-                return questsDictionary[localStorage.getItem("lang")][cond];
+                return takeFromDictionary(questsDictionary[localStorage.getItem("lang")][cond]);
             }
         } else {
             if (startsWithCapital(cond)) {
                 if (isAllCapitals(cond)) {
-                    return questsDictionary["en"][cond.toLowerCase()].toUpperCase();
+                    return takeFromDictionary(questsDictionary["en"][cond.toLowerCase()].toUpperCase());
                 } else {
-                    return questsDictionary["en"][cond.toLowerCase()].charAt(0).toUpperCase() + questsDictionary["en"][cond.toLowerCase()].slice(1);
+                    return takeFromDictionary(questsDictionary["en"][cond.toLowerCase()].charAt(0).toUpperCase() + questsDictionary["en"][cond.toLowerCase()].slice(1));
                 }
             } else {
-                return questsDictionary["en"][cond];
+                return takeFromDictionary(questsDictionary["en"][cond]);
             }
         }
     } else {
         return "NO LANGUAGE SET (you can set your language using the globe button in the navigation bar)";
     }
+}
+
+function takeFromDictionary(input) {
+    if (input.split("...").length > 1) {
+        endingWord = input.split("...")[1];
+        return input.split("...")[0];
+    }
+    return input;
 }
 
 function startsWithCapital(word){

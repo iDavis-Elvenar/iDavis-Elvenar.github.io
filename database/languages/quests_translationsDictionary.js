@@ -52,7 +52,7 @@ let questsDictionary = {
         "susedskú výpomoc" : "neighbourly help",
         "stretov vo veži" : "spire encounters",
         "technológiu" : "technology",
-        "základného zboží" : "standard goods",
+        "základného zboží" : "basic goods",
         "krmení" : "pet food",
         "strety na mape bojom" : "world map encounters by fighting",
         "strety na mape vyjednávaním" : "world map encounters by negotiation",
@@ -66,73 +66,73 @@ let questsDictionary = {
         // VERBS
         "získaj" : "sammle",
         "vyrob" : "produziere",
-        "utrať" : "gib",
+        "utrať" : "gib...aus",
         "použi" : "benutze",
-        "vyrieš" : "schließe",
+        "vyrieš" : "schließe...ab",
         "vytvor" : "erstelle",
         "trénuj" : "rekrutiere",
         "preskúmaj" : "erkunde",
-        "obchoduj" : "akzeptiere",
+        "obchoduj" : "handle",
         "kúp" : "kaufe",
-        "vylepši" : "baue",
+        "vylepši" : "baue...aus",
         "vlož" : "investiere",
-        "vykonaj" : "gebe",
+        "vykonaj" : "gib",
         "vyskúmaj" : "erforsche",
         // PRODUCTS
-        "mincí" : "münzen",//
-        "nápoje" : "beverages",
-        "vb" : "kp",
-        "produkt základnej manufaktury (3-hodinový)" : "product of basic manufactory (3-hours)", // use regex
-        "produkt základnej manufaktury (9-hodinový)" : "product of basic manufactory (9-hours)", // use regex
-        "produkt základnej manufaktury (24-hodinový)" : "product of basic manufactory (24-hours)", // use regex
-        "produkt základnej manufaktury (2-dňový)" : "product of basic manufactory (2-days)", // use regex
-        "obyčajné nástroje" : "simple tools",
-        "ľubovoľné kúzlo" : "enchantment of your choice",
-        "strety na mape" : "world map encounters",
-        "turnajové strety" : "tournament encounters",
-        "chlieb" : "bread",
-        "ponuku na trhu" : "trade offer",
-        "spojovací činidlo" : "combining catalyst",
-        "relikvie" : "relics",
-        "pokročilé nástroje" : "advanced tools",
-        "zásob" : "supplies",
-        "úlomky kouzel" : "spell fragments",
-        "jednotiek" : "units",
-        "opar vidění" : "vision vapor",
-        "provinciu" : "province",
-        "košík jedla" : "basket of groceries",
-        "u obchodníka" : "with a seller man",
-        "požehnání na jednotky" : "unit instants",
-        "strety vo veži" : "spire encounters",
-        "štandardného zboží" : "standard goods",
-        "relikvií" : "relics",
-        "vb do ľubovoľného prastarého divu" : "kp into ancient wonder of your choice",
-        "stretov na mape" : "world map encounters",
-        "turnajových stretov" : "tournament encounters",
-        "susedskú výpomoc" : "neighbourly help",
-        "stretov vo veži" : "spire encounters",
-        "technológiu" : "technology",
-        "základného zboží" : "standard goods",
-        "krmení" : "pet food",
-        "strety na mape bojom" : "world map encounters by fighting",
-        "strety na mape vyjednávaním" : "world map encounters by negotiation",
-        "nejaké množstvo" : "some amount of",
-        "budovu na level 5 alebo vyšší" : "building to level 5 or higher", // use regex
-        "budovy na level 5 alebo vyšší" : "buildings to level 5 or higher", // use regex*/
+        "mincí" : "Münzen",//
+        "nápoje" : "Getränke",
+        "vb" : "wp",
+        "produkt základnej manufaktury (3-hodinový)" : "Produkt einer Basismanufaktur (3-Stunden)", // use regex
+        "produkt základnej manufaktury (9-hodinový)" : "Produkt einer Basismanufaktur (9-Stunden)", // use regex
+        "produkt základnej manufaktury (24-hodinový)" : "Produkt einer Basismanufaktur (24-Stunden)", // use regex
+        "produkt základnej manufaktury (2-dňový)" : "Produkt einer Basismanufaktur (48-Stunden)", // use regex
+        "obyčajné nástroje" : "einfache Wewrkzeuge",
+        "ľubovoľné kúzlo" : "Verzauberung deiner Wahl",
+        "strety na mape" : "Provinzbegegnungen",
+        "turnajové strety" : "Turnierbegegnungen",
+        "chlieb" : "Brot",
+        "ponuku na trhu" : "Handelsangebot",
+        "spojovací činidlo" : "Kombinationsauslöser",
+        "relikvie" : "Relikte",
+        "pokročilé nástroje" : "verbesserte Werkzeuge",
+        "zásob" : "Vorräte",
+        "úlomky kouzel" : "Zauberspruch-Fragmente",
+        "jednotiek" : "Einheiten",
+        "opar vidění" : "Visionsschwaden",
+        "provinciu" : "Provinz",
+        "košík jedla" : "Gemüsekörbe",
+        "u obchodníka" : "beim Händler",
+        "požehnání na jednotky" : "Einheitensegen",
+        "strety vo veži" : "Turmbegegnungen",
+        "štandardného zboží" : "Standardgüter",
+        "relikvií" : "Relikte",
+        "vb do ľubovoľného prastarého divu" : "WP in ein beliebiges Antikes Wunder",
+        "stretov na mape" : "Provinzbegegnungen",
+        "turnajových stretov" : "Turnierbegegnungen",
+        "susedskú výpomoc" : "Nachbarschaftshilfe",
+        "stretov vo veži" : "Turmbegegnungen",
+        "technológiu" : "Technologie",
+        "základného zboží" : "Basisgüter",
+        "krmení" : "Tierfutter",
+        "strety na mape bojom" : "Provinzbegegnungen im Kampf",
+        "strety na mape vyjednávaním" : "Provinzbegegnungen über Verhandlungen",
+        "nejaké množstvo" : "eine Menge",
+        "budovu na level 5 alebo vyšší" : "Gebäude auf Stufe 5 oder höher", // use regex
+        "budovy na level 5 alebo vyšší" : "Gebäude auf Stufe 5 oder höher", // use regex*/
     },
     "fr" : {
-        /*// CONNECTIONS
+        // CONNECTIONS
         "alebo" : "ou",
         // VERBS
         "získaj" : "collecter",
         "vyrob" : "produire",
         "utrať" : "dépenser",
-        "použi" : "utiliser",
+        "použi" : "lancer",
         "vyrieš" : "résoudre",
-        "vytvor" : "créer",
+        "vytvor" : "placer",
         "trénuj" : "recruter",
         "preskúmaj" : "explorer",
-        "obchoduj" : "commercer",
+        "obchoduj" : "échanger",
         "kúp" : "acheter",
         "vylepši" : "améliorer",
         "vlož" : "investir",
@@ -178,7 +178,7 @@ let questsDictionary = {
         "strety na mape vyjednávaním" : "rencontres provinces en négociant",
         "nejaké množstvo" : "quantité raisonnable de",
         "budovu na level 5 alebo vyšší" : "bâtiment au moins au niveau 5", // use regex
-        "budovy na level 5 alebo vyšší" : "bâtiments au moins au niveau 5", // use regex*/
+        "budovy na level 5 alebo vyšší" : "bâtiments au moins au niveau 5", // use regex
     },
     "pl" : {
 
