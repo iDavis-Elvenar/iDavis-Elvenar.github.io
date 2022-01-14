@@ -184,6 +184,63 @@ let questsDictionary = {
 
     },
     "ru" : {
-
+        // CONNECTIONS
+        "alebo" : "или",
+        // VERBS
+        "získaj" : "соберите",
+        "vyrob" : "произведите",
+        "utrať" : "потратьте",
+        "použi" : "используйте",
+        "vyrieš" : "решите",
+        "vytvor" : "разместите",// if used only in Place Trade Offers
+        "trénuj" : "обучите",
+        "preskúmaj" : "разведайте",
+        "obchoduj" : "купите",
+        "kúp" : "купите",
+        "vylepši" : "улучшите",
+        "vlož" : "вложите",
+        "vykonaj" : "окажите", // if used only in do NH
+        "vyskúmaj" : "исследуйте",
+        // PRODUCTS
+        "mincí" : "монет",
+        "nápoje" : "напитки",
+        "vb" : "ОЗ",
+        "produkt základnej manufaktury (3-hodinový)" : "продукция базовой фабрики (3 часа)", // use regex
+        "produkt základnej manufaktury (9-hodinový)" : "продукция базовой фабрики (9 часа)", // use regex
+        "produkt základnej manufaktury (24-hodinový)" : "продукция базовой фабрики (24 часа)", // use regex
+        "produkt základnej manufaktury (2-dňový)" : "продукция базовой фабрики (3 дня)", // use regex
+        "obyčajné nástroje" : "простые инструменты",
+        "ľubovoľné kúzlo" : "заклинания",
+        "strety na mape" : "конфликта на карте",
+        "turnajové strety" : "турнирных конфликта",
+        "chlieb" : "Хлеб",
+        "ponuku na trhu" : "торговые предолжения",
+        "spojovací činidlo" : "комбинирующий катализатор",
+        "relikvie" : "реликвии",
+        "pokročilé nástroje" : "профи-инструменты",
+        "zásob" : "запасы",
+        "úlomky kouzel" : "фрагметы заклинаний",
+        "jednotiek" : "юнитов",
+        "opar vidění" : "затуманненого зрения",
+        "provinciu" : "провинцию",
+        "košík jedla" : "корзины с продуктами",
+        "u obchodníka" : "товары у оптовика ",
+        "požehnání na jednotky" : "мгновения юнитов",
+        "strety vo veži" : "конфликта в шпиле",
+        "štandardného zboží" : "обычные товары",
+        "relikvií" : "реликвий",
+        "vb do ľubovoľného prastarého divu" : "ОЗ в любое древнее чудо",
+        "stretov na mape" : "конфликтов на карте",
+        "turnajových stretov" : "турнирных конфликтов",
+        "susedskú výpomoc" : "соседскую помощь",
+        "stretov vo veži" : "конфликтов в шпиле",
+        "technológiu" : "технологию",
+        "základného zboží" : "обычные товары",
+        "krmení" : "еду для питомцев",
+        "strety na mape bojom" : "конфликта на карте боем",
+        "strety na mape vyjednávaním" : "конфликта на карте выкупом",
+        "nejaké množstvo" : "хорошее количество",
+        "budovu na level 5 alebo vyšší" : "здание до уровня 5 или выше", // use regex
+        "budovy na level 5 alebo vyšší" : "здания до уровня 5 или выше", // use regex
     }
 }
