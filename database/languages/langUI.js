@@ -119,7 +119,7 @@ let ui = {
         "For chapter:" : "Für Kapitel:",
         "Filter soon:" : "Filter bald:",
         "Select event:" : "Ereignis Event:",
-        "Order daily prizes by:" : "Bestellen tägliche Preise bei:",
+        "Order daily prizes by:" : "Sortiere tägliche Preise nach:",
         "Daily Prizes Calendar" : "Täglicher Preiskalender",
         "day" : "Tag",
         "Event Video" : "Event Video",
