@@ -61,7 +61,7 @@ let questsDictionary = {
         "budovy na level 5 alebo vyšší" : "buildings to level 5 or higher", // use regex
     },
     "de" : {
-        /*// CONNECTIONS
+        // CONNECTIONS
         "alebo" : "oder",
         // VERBS
         "získaj" : "sammle",
@@ -86,7 +86,7 @@ let questsDictionary = {
         "produkt základnej manufaktury (9-hodinový)" : "Produkt einer Basismanufaktur (9-Stunden)", // use regex
         "produkt základnej manufaktury (24-hodinový)" : "Produkt einer Basismanufaktur (24-Stunden)", // use regex
         "produkt základnej manufaktury (2-dňový)" : "Produkt einer Basismanufaktur (48-Stunden)", // use regex
-        "obyčajné nástroje" : "einfache Wewrkzeuge",
+        "obyčajné nástroje" : "einfache Werkzeuge",
         "ľubovoľné kúzlo" : "Verzauberung deiner Wahl",
         "strety na mape" : "Provinzbegegnungen",
         "turnajové strety" : "Turnierbegegnungen",
@@ -118,7 +118,7 @@ let questsDictionary = {
         "strety na mape vyjednávaním" : "Provinzbegegnungen über Verhandlungen",
         "nejaké množstvo" : "eine Menge",
         "budovu na level 5 alebo vyšší" : "Gebäude auf Stufe 5 oder höher", // use regex
-        "budovy na level 5 alebo vyšší" : "Gebäude auf Stufe 5 oder höher", // use regex*/
+        "budovy na level 5 alebo vyšší" : "Gebäude auf Stufe 5 oder höher", // use regex
     },
     "fr" : {
         // CONNECTIONS

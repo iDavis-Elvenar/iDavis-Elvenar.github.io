@@ -589,33 +589,11 @@ function displayQuests() {
         var center = document.createElement('center');
         center.appendChild(shareLink);
         var div_info = document.createElement('div');
-        div_info.innerHTML = `<div class="card-spoiler border-spoiler mb-3" style="margin-top: 10px; padding-bottom: 10px; padding-top: 7px;" id="cz_disclaimer">
-        <div class="container"><center><span class="text-danger"><b>Skôr než prejdete k zoznamu úloh:</b><br>
-                        Uverejnené zoznamy úloh nemožno považovať za oficiálne, nakoľko autorom nie je žiadna osoba z tímu hry Elvenar! Jedná sa o informácie získané z testovania udalosti na bete a za prípadné nedostatky nie je nikto z tímu zodpovedný! Oficiálny zoznam úloh neexistuje, ani nikdy predtým neexistoval.
-                            Ak chcete zdieľať zoznamy úloh s ďalšími hráčmi, využite odkaz na zdieľanie uvedený vyššie.</span></center></div>
-        <!--<div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-                <button class="btn btn-spoiler btn-smbtn-danger " data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    <h7>Poznámky a vysvetlenia</h7>
-                </button>
-            </h2>
-        </div>
-
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
-            <div class="card-body">
-                text
-                
-            </div>
-        </div>-->
-    </div>`;
-        if (localStorage.getItem("lang") !== "cz") {
-            div_info.style.visibility = "hidden";
-            div_info.style.display = "none";
-        }
+        div_info.innerHTML = languageSpecificNotes[localStorage.getItem("lang")];
         if (localStorage.getItem("lang") == "pl") {
             var ph_translation_help = document.createElement('h6');
             ph_translation_help.className = "card-title text-center";
-            ph_translation_help.innerHTML = `<br>Currently only EN, CZ, FR and RU languages are supported for the event questlines. I would like to add more languages into my dictionary (I´m currently looking for PL language). If you are from this community and would like to contribute to development of this website by providing translations for around 60 already prepared short phrases, I will be more than happy if you leave me contact (either your Beta Forum nickname or your email) on my <a href="https://idavis-elvenar.github.io/contact.html" class="text-link">contact page</a>. <br>The translations will be used in all future events, so there is no need for recreating them every time.<br>Nicknames of all contributors will be listed in the quest pages of respective languages (of course if you wish to).`;
+            ph_translation_help.innerHTML = `<br>I would like to make PL language available for the quest lists. If you are from this community and would like to contribute to development of this website by providing translations for around 60 already prepared short phrases, I will be more than happy if you leave me contact (either your Beta Forum nickname or your email) on my <a href="https://idavis-elvenar.github.io/contact.html" class="text-link">contact page</a>. <br>The translations will be used in all future events, so there is no need for recreating them every time.<br>Nicknames of all contributors will be listed in the quest pages of respective languages (of course if you wish to).`;
             center.appendChild(ph_translation_help);
         }
         center.appendChild(div_info)
