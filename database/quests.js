@@ -23,7 +23,7 @@ var quests = {
         "Utrať 10 VB + vyrob 4x košík jedla ALEBO vyrob 4x produkt základnej manufaktury (9-hodinový)",
         "Vyrieš 4 strety na mape ALEBO vyrieš 4 strety vo veži + vyrob 2x košík jedla",
         "Kúp 12 VB + vyrob 10x obyčajné nástroje ALEBO vylepši 2 budovy na level 5 alebo vyšší",
-        "Získaj 8 relikvií + vyrob nejaké množstvo základného zboží",
+        "Získaj 8 relikvií + vyrob nejaké množstvo štandardného zboží",
         "Vyrob 6x produkt základnej manufaktury (3-hodinový) + obchoduj 3x u obchodníka",
         "Utrať 8 VB + vyrob 4x produkt základnej manufaktury (3-hodinový)",
         "Utrať 15 VB + trénuj nejaké množstvo jednotiek ALEBO vyrob 4x produkt základnej manufaktury (9-hodinový)",
