@@ -72,4 +72,18 @@ var notifications = {
         "active":false,
         "priority":40
     },
+    "8":{  // SPECIAL VIDEO PROMO
+        "id":8,
+        "text":`<h4 class="alert-heading">InnoGames Revenue Review in 2022!</h4>
+  <p>There was a lot happening at InnoGames in 2021. In my newest video we are taking a look at the revenue of InnoGames in 2021, compare the revenue and growth of different games and analyze the performance of the InnoGames' newest titles. Finally, we will also say something about their potential impact on the future of the existing games!</p>
+  <hr>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/nB6yfF73Fyg"></iframe><br><center>The premiere will begin on Tuesday 25th, 6 PM (CET). <a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Subscribe</a> to get a notification once the video is live!</center></p>
+    <hr>
+    <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
+        "repeatAfter":86400,
+        "style":"info",
+        "duration":1080,
+        "active":true,
+        "priority":50
+    },
 }
