@@ -55,7 +55,7 @@ function setFooter() {
     h7.id = "copyright";
     h7.className = "text-gray";
     let center = document.createElement('center');
-    center.innerHTML = 'Copyright &#169; 2021 iDavis';
+    center.innerHTML = 'Copyright &#169; 2022 iDavis';
     h7.appendChild(center);
     document.getElementById('footer').appendChild(h7);
 }
