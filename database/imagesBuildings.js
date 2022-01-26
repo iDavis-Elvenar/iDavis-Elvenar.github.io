@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_February_XXII_Amuni_Bar":"https://i.ibb.co/h1fC3wC/amuni-bar.png",
+    "A_Evt_February_XXII_Furry_Sands":"https://i.ibb.co/JnW31Pv/furry-sands.png",
+    "A_Evt_February_XXII_Desert_Watchtower":"https://i.ibb.co/cXDvqmz/desert-watchtower.png",
+    "A_Evt_February_XXII_Gates_to_the_Depths":"https://i.ibb.co/z2z0CkT/gates-to-the-depths.png",
+    "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten":"https://i.ibb.co/VT1xpDY/echoes-of-the-forgotten-artifact.png",
     "A_Evt_January_XXII_Ancient_Taste":"https://i.ibb.co/wMNL81N/ancient-taste.png",
     "A_Evt_January_XXII_Mystic_Fiddler":"https://i.ibb.co/1MxFky1/mystic-fiddler.png",
     "A_Evt_January_XXII_Spectral_Moths":"https://i.ibb.co/0BBmPRZ/spectral-moths.png",
