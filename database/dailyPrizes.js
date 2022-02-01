@@ -2,6 +2,7 @@ var dailyPrizes = {
     
     "february_xxii_": [
         "A_Evt_June_XX_Amuni_Ship",
+        "INS_UNIT_TG_LR_10",
     ],
     
     "january_xxii_": [
