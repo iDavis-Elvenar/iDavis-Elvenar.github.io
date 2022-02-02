@@ -295,3 +295,10 @@ function generateOptionsForSetInput() {
         document.getElementById('input_set').appendChild(option);
     }
 }
+
+function round(value) {
+    if (value % 1000 === 0 && value > 100000) {
+        return ""+(value/1000)+"K"
+    }
+    return value;
+}

@@ -216,9 +216,9 @@ function displayDailyPrizes() {
                             } else {
                                 if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
                                     if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]] === 'object') {
-                                        td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value']}`;
+                                        td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'])}`;
                                     } else {
-                                        td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]}`;
+                                        td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]])}`;
                                     }
                                 } else {
                                     td.innerHTML = `-`;
@@ -240,9 +240,9 @@ function displayDailyPrizes() {
                                 } else {
                                     if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
                                         if (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod]].hasOwnProperty('production_time')) {
-                                            tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['production_time'] / 3600)).toFixed(1)}</h7>`;
+                                            tdPerSquare.innerHTML = `<h7>${round((filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['production_time'] / 3600)).toFixed(1))}</h7>`;
                                         } else {
-                                            tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1)}</h7>`;
+                                            tdPerSquare.innerHTML = `<h7>${round((filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1))}</h7>`;
                                         }
                                     } else {
                                         tdPerSquare.innerHTML = `-`;
@@ -412,7 +412,7 @@ function createCalendar(filteredData, selectedEvent) {
         for (var i = 0; i < 7; i++) {
             var tdDay = document.createElement('td');
             if (daysCounter <= filteredData.length) {
-                if (getDaysFromStart(selectedEvent, "live")+1 === daysCounter) {
+                if (getDaysFromStart(selectedEvent, "")+1 === daysCounter) {
                     tdDay.innerHTML = `<b>${daysCounter}. ${langUI("day")}</b>`
                 } else {
                     tdDay.innerHTML = `<b>${daysCounter}. ${langUI("day")}</b>`
@@ -601,6 +601,8 @@ function displayQuests() {
 
         var numberOfQuests = quests[selectedEvent].length;
 
+        var nextQuestMarkedUnknown = false;
+
         for (let quest = 0; quest <= numberOfQuests; quest++) {
             if (quest === 0) {
                 let tr = document.createElement('tr');
@@ -626,7 +628,17 @@ function displayQuests() {
                 let task = document.createElement('td');
                 task.style.width = "90%";
                 task.id = "quest_task_"+(quest);
-                task.innerHTML = `${questTranslate(quests[selectedEvent][quest-1])}`;
+
+                if (questAvailable(quest, selectedEvent)) {
+                    task.innerHTML = `${questTranslate(quests[selectedEvent][quest-1])}`;
+                } else {
+                    if (!nextQuestMarkedUnknown) {
+                        task.innerHTML = `<h7 class="card-title text-center text-link"><i>${langUI("Reveals in")} ${getHoursTillNextDay()}h</i></h7>`;
+                        nextQuestMarkedUnknown = true;
+                    } else {
+                        task.innerHTML = `<h7 class="card-title text-center text-link"><i>???</i></h7>`;
+                    }
+                }
                 //console.log(quest+". "+questTranslate(quests[selectedEvent][quest-1]))
                 task.className = "nocopy";
                 /*task.innerHTML += `<div class="myTest custom-control custom-checkbox">
@@ -658,7 +670,7 @@ function displayQuests() {
                             tasktext.style.fontWeight = "";
                         }
                     } else {
-                        for (let i = quest; i <= numberOfQuests; i++) {
+                        for (let i = quest; i <= numberOfAvailableQuests(selectedEvent); i++) {
                             checkbox = document.getElementById("quest_finished_"+(i));
                             tasktext = document.getElementById("quest_task_"+(i));
                             prepareCheckbox = document.getElementById("quest_prepare_"+(i));
@@ -717,8 +729,10 @@ function displayQuests() {
                 div2.appendChild(input2);
                 div2.appendChild(label2);
 
-                finished.appendChild(div);
-                prepare.appendChild(div2);
+                if (questAvailable(quest, selectedEvent)) {
+                    finished.appendChild(div);
+                    prepare.appendChild(div2);
+                }
                 tr.appendChild(task);
                 tr.appendChild(finished);
                 tr.appendChild(prepare);
@@ -736,7 +750,7 @@ function displayQuests() {
 
 function recordFinishedQuests(selectedEvent, numberOfQuests) {
     finished = [];
-    for (let quest = 1; quest <= numberOfQuests; quest++) {
+    for (let quest = 1; quest <= numberOfAvailableQuests(selectedEvent); quest++) {
         if (document.getElementById("quest_finished_"+quest).checked) {
             finished.push(quest);
         }
@@ -750,10 +764,18 @@ function recordFinishedQuests(selectedEvent, numberOfQuests) {
 
 function recordPrepareQuests(selectedEvent, numberOfQuests) {
     prepare = [];
-    for (let quest = 1; quest <= numberOfQuests; quest++) {
+    for (let quest = 1; quest <= numberOfAvailableQuests(selectedEvent); quest++) {
         if (document.getElementById("quest_prepare_"+quest).checked) {
             prepare.push(quest);
         }
     }
     localStorage.setItem("quests_prepare_"+selectedEvent, prepare);
+}
+
+function questAvailable(quest, selectedEvent) {
+    return (quest - (quests[selectedEvent].length - eventsDurations[selectedEvent])) <= getDaysFromStart(selectedEvent)+1;
+}
+
+function numberOfAvailableQuests(selectedEvent) {
+    return quests[selectedEvent].length - eventsDurations[selectedEvent] + getDaysFromStart(selectedEvent)+1;
 }

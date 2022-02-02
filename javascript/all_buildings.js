@@ -212,9 +212,9 @@ function readBuildingsJSON() {
                             } else {
                                 if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
                                     if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]] === 'object') {
-                                        td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value']}`;
+                                        td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'])}`;
                                     } else {
-                                        td.innerHTML = `${filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]}`;
+                                        td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]])}`;
                                     }
                                 } else {
                                     td.innerHTML = `-`;
@@ -236,9 +236,9 @@ function readBuildingsJSON() {
                                 } else {
                                     if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
                                         if (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]].hasOwnProperty('production_time')) {
-                                            tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['production_time'] / 3600)).toFixed(1)}</h7>`;
+                                            tdPerSquare.innerHTML = `<h7>${round((filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['production_time'] / 3600)).toFixed(1))}</h7>`;
                                         } else {
-                                            tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1)}</h7>`;
+                                            tdPerSquare.innerHTML = `<h7>${round((filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1))}</h7>`;
                                         }
                                     } else {
                                         tdPerSquare.innerHTML = `-`;
@@ -355,9 +355,9 @@ function readBuildingsJSON() {
                                 } else {
                                     if (filteredData[i]['chapters'][ch][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
                                         if (typeof filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]] === 'object') {
-                                            td.innerHTML = `${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value']).toFixed(0)}`;
+                                            td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value']).toFixed(0))}`;
                                         } else {
-                                            td.innerHTML = `${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]).toFixed(0)}`;
+                                            td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]).toFixed(0))}`;
                                         }
                                     } else {
                                         td.innerHTML = `-`;

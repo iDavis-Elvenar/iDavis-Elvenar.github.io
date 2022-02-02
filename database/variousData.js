@@ -90,10 +90,10 @@ let questsLinks = {
     "february_xxii_": "bit.ly/TheBuriedCity2022",
 }
 
-let eventLiveStarts = {
-    "february_xxi_": "02/09/2021",
-    "march_xxi_": "03/23/2021",
-    "may_xxi_": "05/04/2021"
+let eventsDurations = {
+    "december_xxi_": 30,
+    "january_xxii_": 22,
+    "february_xxii_": 22,
 }
 
 let evoUpgradeCosts = {
