@@ -80,6 +80,7 @@ let ui = {
         "Pilgrim's Manor": "Panství poutníka",
         "Forbidden Ruins": "Zapovězené ruiny",
         //EVENTS
+        "The Buried City":"Pohřbené město",
         "The Misty Forest":"Mlžný les",
         "Sorcerers' Homecoming":"Návrat kouzelníků domů",
         "Queen Fairy's Garden":"Zahrada královny víl",
@@ -182,6 +183,7 @@ let ui = {
         "Pilgrim's Manor": "Herrenhaus der Pilger",
         "Forbidden Ruins": "Verbotene Ruinen",
         //EVENTS
+        "The Buried City":"Die begrabene Stadt",
         "The Misty Forest":"Nebelwald",
         "Sorcerers' Homecoming":"Die Heimkehr der Zauberer",
         "Queen Fairy's Garden":"Garten der Feenkönigin",
@@ -284,6 +286,7 @@ let ui = {
         "Pilgrim's Manor": "Manoir du pèlerin",
         "Forbidden Ruins": "Ruines interdites",
         //EVENTS
+        "The Buried City":"La ville enterrée",
         "The Misty Forest":"Forêt embrumée",
         "Sorcerers' Homecoming":"Retour des Sorciers",
         "Queen Fairy's Garden":"Le Jardin de la reine féerique",
@@ -386,6 +389,7 @@ let ui = {
         "Pilgrim's Manor": "Dwór Pielgrzyma",
         "Forbidden Ruins": "Zakazane Ruiny",
         //EVENTS
+        "The Buried City":"Pogrzebane miasto",
         "The Misty Forest":"Zamglony Las",
         "Sorcerers' Homecoming":"Powrót Czarowników",
         "Queen Fairy's Garden":"Ogród Królowej Wróżek",
@@ -488,6 +492,7 @@ let ui = {
         "Pilgrim's Manor": "Особняк пилигрима",
         "Forbidden Ruins": "Запретные руины",
         //EVENTS
+        "The Buried City":"Погребенный город",
         "The Misty Forest":"Туманный лес",
         "Sorcerers' Homecoming":"Возвращение Чародеев",
         "Queen Fairy's Garden":"Сад королевы Фей",

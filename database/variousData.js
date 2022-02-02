@@ -81,12 +81,13 @@ let eventBetaStarts = { // MM/DD/YYYY
     "october_xxi_": "09/30/2021",
     "december_xxi_": "11/11/2021",
     "january_xxii_": "01/06/2022",
-    "february_xxii_": "02/22/2022",
+    "february_xxii_": "02/03/2022",
 }
 
 let questsLinks = {
     "december_xxi_": "bit.ly/Quests-WinterMagic2021",
     "january_xxii_": "bit.ly/ForbiddenRuins2022",
+    "february_xxii_": "bit.ly/TheBuriedCity2022",
 }
 
 let eventLiveStarts = {
@@ -182,8 +183,8 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
-            ["The Buried City","february_xxii_",false,true],
-            ["Forbidden Ruins","january_xxii_",true,false],
+            ["The Buried City","february_xxii_",true,false],
+            ["Forbidden Ruins","january_xxii_",false,false],
         ],
         "2021" : [
             ["Winter Magic","december_xxi_",false,false],
@@ -216,8 +217,8 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
-            ["The Buried City","february_xxii_",false,true],
-            ["Forbidden Ruins","january_xxii_",true,false],
+            ["The Buried City","february_xxii_",true,false],
+            ["Forbidden Ruins","january_xxii_",false,false],
         ],
         "2021" : [
             ["Winter Magic","december_xxi_",false,false],
