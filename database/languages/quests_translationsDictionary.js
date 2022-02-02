@@ -120,7 +120,7 @@ let questsDictionary = {
         "nejaké množstvo" : "eine Menge",
         "budovu na level 5 alebo vyšší" : "Gebäude auf Stufe 5 oder höher", // use regex
         "budovy na level 5 alebo vyšší" : "Gebäude auf Stufe 5 oder höher", // use regex
-        "ľubovoľný zesilovač" : "time booster of your choice",
+        "ľubovoľný zesilovač" : "Zeit-Booster deiner Wahl",
     },
     "fr" : {
         // CONNECTIONS
@@ -181,7 +181,7 @@ let questsDictionary = {
         "nejaké množstvo" : "quantité raisonnable de",
         "budovu na level 5 alebo vyšší" : "bâtiment au moins au niveau 5", // use regex
         "budovy na level 5 alebo vyšší" : "bâtiments au moins au niveau 5", // use regex
-        "ľubovoľný zesilovač" : "time booster of your choice",
+        "ľubovoľný zesilovač" : "Boost de votre choix",
     },
     "pl" : {
 
@@ -245,6 +245,6 @@ let questsDictionary = {
         "nejaké množstvo" : "хорошее количество",
         "budovu na level 5 alebo vyšší" : "здание до уровня 5 или выше", // use regex
         "budovy na level 5 alebo vyšší" : "здания до уровня 5 или выше", // use regex
-        "ľubovoľný zesilovač" : "time booster of your choice",
+        "ľubovoľný zesilovač" : "Ускоритель",
     }
 }
