@@ -14,7 +14,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
-        "active":false,
+        "active":true,
         "priority":30
     },
     "3":{  // DAILY PRIZES VIDEO PROMO
