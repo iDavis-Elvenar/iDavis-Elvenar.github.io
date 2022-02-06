@@ -8,6 +8,7 @@ var dailyPrizes = {
         "A_Evt_June_XX_Wood_Elf_Ship",
         "A_Evt_June_XX_Fairy_Ship",
         "INS_KP_AW_20",
+        "A_Evt_June_XX_Orc_Ship",
     ],
     
     "january_xxii_": [
