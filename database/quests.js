@@ -59,7 +59,7 @@ var quests = {
         "Získaj 8 relikvií + získaj 1x spojovací činidlo",
         "Použi 1x ľubovoľné kúzlo + preskúmaj 1 provinciu ALEBO vylepši 1 budovu na level 5 alebo vyšší",
         "Vyrieš 8 stretov na mape ALEBO vyrieš 8 turnajových stretov + získaj 20x opar vidění ALEBO preskúmaj 1 provinciu",
-        "Získaj nejaké množstvo mincí + získaj 2x ľubovoľné kúzlo",
+        "Získaj nejaké množstvo mincí + použi 2x ľubovoľné kúzlo",
         "Vyrob nejaké množstvo štandardného zboží + vyrob nejaké množstvo zásob ALEBO trénuj nejaké množstvo jednotiek",
         "Vyrieš 10 stretov na mape ALEBO vyrieš 10 stretov vo veži + vyrob nejaké množstvo zásob",
         "Utrať 16 VB + vyrob nejaké množstvo štandardného zboží",
