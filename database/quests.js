@@ -70,7 +70,7 @@ var quests = {
         "Utrať 16 VB + vyrob nejaké množstvo štandardného zboží",
         "Získaj nejaké množstvo mincí + použi 2x ľubovoľné kúzlo",
         "Získaj 16 relikvií + vyskúmaj 1 technológiu ALEBO získaj 25x opar vidění",
-        "",
+        "Vyrieš 10 stretov na mape ALEBO vyrieš 10 stretov vo veži + vyrob nejaké množstvo zásob",
         "",
         "",
         "",
