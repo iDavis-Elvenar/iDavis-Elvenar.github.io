@@ -18,6 +18,7 @@ var dailyPrizes = {
         "A_Evt_February_XXII_Desert_Watchtower",
         "INS_RF_GRR_5",
         "A_Evt_June_XX_Human_Ship",
+        "A_Evt_Passageway",
     ],
     
     "january_xxii_": [
