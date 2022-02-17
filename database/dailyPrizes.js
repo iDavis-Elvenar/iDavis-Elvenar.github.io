@@ -19,6 +19,7 @@ var dailyPrizes = {
         "INS_RF_GRR_5",
         "A_Evt_June_XX_Human_Ship",
         "A_Evt_Passageway",
+        "INS_UNIT_TG_MA_10",
     ],
     
     "january_xxii_": [
