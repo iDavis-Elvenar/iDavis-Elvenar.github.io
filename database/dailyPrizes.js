@@ -20,6 +20,7 @@ var dailyPrizes = {
         "A_Evt_June_XX_Human_Ship",
         "A_Evt_Passageway",
         "INS_UNIT_TG_MA_10",
+        "A_Evt_February_XXII_Furry_Sands",
     ],
     
     "january_xxii_": [
