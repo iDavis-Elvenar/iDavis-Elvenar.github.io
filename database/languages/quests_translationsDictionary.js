@@ -95,7 +95,7 @@ let questsDictionary = {
         "ponuku na trhu" : "Handelsangebot",
         "spojovací činidlo" : "Kombinationsauslöser",
         "relikvie" : "Relikte",
-        "pokročilé nástroje" : "verbesserte Werkzeuge",
+        "pokročilé nástroje" : "bessere Werkzeuge",
         "zásob" : "Vorräte",
         "úlomky kouzel" : "Zauberspruch-Fragmente",
         "jednotiek" : "Einheiten",
