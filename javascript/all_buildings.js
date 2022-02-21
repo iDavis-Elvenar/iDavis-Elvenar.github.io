@@ -25,6 +25,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_October_XXI_Witch_Summoning_Circle": 9,
     "A_Evt_Evo_December_XXI_Boblins_Express_Service": 9,
     "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten": 9,
+    "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": 9,
 }
 
 function setAndReload(id) {

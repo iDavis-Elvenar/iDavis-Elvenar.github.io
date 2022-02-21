@@ -90,6 +90,7 @@ let questsLinks = {
     "december_xxi_": "bit.ly/Quests-WinterMagic2021",
     "january_xxii_": "bit.ly/ForbiddenRuins2022",
     "february_xxii_": "bit.ly/TheBuriedCity2022",
+    "easter_xxii_": "bit.ly/DawnOfThePhoenix2022",
 }
 
 let eventsDurations = {
@@ -180,11 +181,14 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
+    "A_Evt_Evo_Autumn_XIX_Bear_Ice",
+    "A_Evt_Evo_Summer_XIX_Stonehenge",
 ]
 
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
+            ["Dawn of the Phoenix","easter_xxii_",false,true],
             ["The Buried City","february_xxii_",true,false],
             ["Forbidden Ruins","january_xxii_",false,false],
         ],
@@ -219,6 +223,7 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
+            ["Dawn of the Phoenix","easter_xxii_",false,true],
             ["The Buried City","february_xxii_",true,false],
             ["Forbidden Ruins","january_xxii_",false,false],
         ],
