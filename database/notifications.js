@@ -27,7 +27,7 @@ var notifications = {
     <p>Isn't that what you look for? <a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to stay up-to-date with my latest videos!</p>`,
         "repeatAfter":604800,
         "style":"info",
-        "duration":300,
+        "duration":420,
         "active":true,
         "priority":40
     },
