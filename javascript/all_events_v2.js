@@ -751,6 +751,7 @@ function displayQuests() {
 function recordFinishedQuests(selectedEvent, numberOfQuests) {
     finished = [];
     for (let quest = 1; quest <= numberOfAvailableQuests(selectedEvent); quest++) {
+        console.log(numberOfAvailableQuests(selectedEvent))
         if (document.getElementById("quest_finished_"+quest).checked) {
             finished.push(quest);
         }
@@ -777,5 +778,6 @@ function questAvailable(quest, selectedEvent) {
 }
 
 function numberOfAvailableQuests(selectedEvent) {
-    return quests[selectedEvent].length - eventsDurations[selectedEvent] + getDaysFromStart(selectedEvent)+1;
+    return Math.min(quests[selectedEvent].length - eventsDurations[selectedEvent] + getDaysFromStart(selectedEvent)+1,
+            quests[selectedEvent].length);
 }
