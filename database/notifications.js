@@ -14,20 +14,20 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
-        "active":true,
+        "active":false,
         "priority":30
     },
     "3":{  // DAILY PRIZES VIDEO PROMO
         "id":3,
         "text":`<h4 class="alert-heading">Best Daily Prizes!</h4>
-  <p>Are you waiting for the best daily prizes in this event? In my newest video I'm showing you a selection of the best daily buildings of the Winter Magic Event!</p>
+  <p>Are you waiting for the best daily prizes in this event? In my newest video I'm showing you a selection of the best daily buildings of The Buried City event!</p>
   <hr>
-  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/NOk4Q_u3BL8"></iframe></p>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/uVduxQ4yhdo"></iframe></p>
     <hr>
     <p>Isn't that what you look for? <a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to stay up-to-date with my latest videos!</p>`,
         "repeatAfter":604800,
         "style":"info",
-        "duration":300,
+        "duration":420,
         "active":false,
         "priority":40
     },
@@ -37,7 +37,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":15,
-        "active":true,
+        "active":false,
         "priority":30
     },
     "5":{  // NEW FEATURE ON THE WEBSITE
@@ -84,6 +84,21 @@ var notifications = {
         "style":"info",
         "duration":1080,
         "active":true,
-        "priority":50
+        "priority":30
+    },
+    "9":{  // SPECIAL VIDEO PROMO #2
+        "id":9,
+        "text":`<h4 class="alert-heading">Strategies for The Buried City event 2022!</h4>
+  <p>Are you looking for some strategies in the Buried City minigame? Check out the newest video on the Elvenar channel to find 5 tips for succeeding in this event!</p>
+  <hr>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/vhMIN4AI9YY"></iframe></p><br>
+  <center><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Subscribe</a> to stay with the latest Elvenar videos!</center>
+    <hr>
+    <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
+        "repeatAfter":302400,
+        "style":"info",
+        "duration":300,
+        "active":true,
+        "priority":40
     },
 }

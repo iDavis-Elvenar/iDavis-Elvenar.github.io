@@ -64,7 +64,7 @@ let eventVideos = {
     "october_xxi_": "https://www.youtube.com/embed/LqUrW3YtDrw;https://www.youtube.com/embed/PzUHa4Bat2k",
     "december_xxi_": "https://www.youtube.com/embed/TIKU54tbdJc",
     "january_xxii_": "https://www.youtube.com/embed/NOk4Q_u3BL8",
-    "february_xxii_": "https://www.youtube.com/embed/yXV73a8pla4",
+    "february_xxii_": "https://www.youtube.com/embed/uVduxQ4yhdo;https://www.youtube.com/embed/yXV73a8pla4",
 }
 
 let eventNames = {
