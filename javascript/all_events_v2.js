@@ -751,7 +751,6 @@ function displayQuests() {
 function recordFinishedQuests(selectedEvent, numberOfQuests) {
     finished = [];
     for (let quest = 1; quest <= numberOfAvailableQuests(selectedEvent); quest++) {
-        console.log(numberOfAvailableQuests(selectedEvent))
         if (document.getElementById("quest_finished_"+quest).checked) {
             finished.push(quest);
         }
