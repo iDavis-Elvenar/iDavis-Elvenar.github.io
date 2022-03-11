@@ -1,4 +1,10 @@
 var images_buildings = {
+    "A_Evt_Easter_XXII_Infirmary_of_the_White_Flame":"https://i.ibb.co/NjbJG2R/infirmary-of-the-white-flame.png",
+    "A_Evt_Easter_XXII_Ludibria_Ventis":"https://i.ibb.co/sqqfBt9/ludibria-ventis.png",
+    "A_Evt_Easter_XXII_Rod_of_Ascleptius":"https://i.ibb.co/qrN7wTC/rod-of-ascleptius.png",
+    "A_Evt_Easter_XXII_Shamanic_Healing_Grounds":"https://i.ibb.co/3FgCSLm/shamanic-healing-grounds.png",
+    "A_Evt_Easter_XXII_Voice_of_the_Prophet":"https://i.ibb.co/wsm7Rrp/voice-of-the-prophet.png",
+    "A_Evt_Evo_Easter_XXII_Twilight_Phoenix":"https://i.ibb.co/7XXSk5S/twilight-phoenix.png",
     "A_Evt_February_XXII_Amuni_Bar":"https://i.ibb.co/h1fC3wC/amuni-bar.png",
     "A_Evt_February_XXII_Furry_Sands":"https://i.ibb.co/JnW31Pv/furry-sands.png",
     "A_Evt_February_XXII_Desert_Watchtower":"https://i.ibb.co/cXDvqmz/desert-watchtower.png",
