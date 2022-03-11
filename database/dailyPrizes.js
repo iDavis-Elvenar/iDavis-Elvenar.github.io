@@ -2,6 +2,7 @@ var dailyPrizes = {
     
     "easter_xxii_": [
         "A_Evt_Phoenix_Lake",
+        "A_Evt_Easter_XXII_Voice_of_the_Prophet",
     ],
     
     "february_xxii_": [
