@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_Easter_XXII_Voice_of_the_Prophet",
         "INS_UNIT_TG_LM_10",
         "A_Evt_Easter_XXII_Rod_of_Ascleptius",
+        "A_Evt_Easter_XX_Phoenix_Lava",
     ],
     
     "february_xxii_": [
