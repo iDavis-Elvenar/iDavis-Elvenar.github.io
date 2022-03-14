@@ -676,7 +676,9 @@ function searchByInput(data, inputValue) {
     let result = [];
     for (let i = 0; i < data.length; i++) {
         if (langBuildings(data[i]).toLowerCase().includes(inputValue.toLowerCase())) {
-            result.push(data[i]);
+            if (!discardBuildings.some((element) => data[i]['id'].toLowerCase().includes(element))) {
+                result.push(data[i]);
+            }
         }
     }
     return result;

@@ -139,6 +139,7 @@ function handleBuildingsJSON() {
                                         }
                                     }
                                     for (let stage = 0; stage < 10; stage++) {
+                                        console.log(b['id'])
                                         for (let prod = 0; prod < evoObject['stages'][stage]['products'].length; prod++) {
                                             if (evoObject['stages'][stage]['products'][prod].hasOwnProperty('goodId')) {
                                                 setOfAllProductions.add(evoObject['stages'][stage]['products'][prod]['goodId']);
@@ -536,6 +537,9 @@ function generateEffectConfigs() {
                     if (data[i].hasOwnProperty("metadata")) {
                         if (data[i]["metadata"].hasOwnProperty("iconId")) {
                             pet["iconId"] = data[i]["metadata"]["iconId"];
+                        } else {
+                            if (data[i]["metadata"].hasOwnProperty("action"))
+                            pet["iconId"] = data[i]["metadata"]["action"];
                         }
                         if (data[i]["metadata"].hasOwnProperty("format")) {
                             pet["format"] = data[i]["metadata"]["format"];

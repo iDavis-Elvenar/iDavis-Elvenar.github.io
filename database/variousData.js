@@ -84,6 +84,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "december_xxi_": "11/11/2021",
     "january_xxii_": "01/06/2022",
     "february_xxii_": "02/03/2022",
+    "easter_xxii_": "03/17/2022",
 }
 
 let questsLinks = {
@@ -91,12 +92,14 @@ let questsLinks = {
     "january_xxii_": "bit.ly/ForbiddenRuins2022",
     "february_xxii_": "bit.ly/TheBuriedCity2022",
     "easter_xxii_": "bit.ly/DawnOfThePhoenix2022",
+    "may_xxii": "bit.ly/NaturallyAmazing2022",
 }
 
 let eventsDurations = {
     "december_xxi_": 30,
     "january_xxii_": 22,
     "february_xxii_": 22,
+    "easter_xxii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -124,6 +127,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_October_XXI_Witch_Summoning_Circle": "1x Witch Summoning Circle Artifact",
     "A_Evt_Evo_December_XXI_Boblins_Express_Service": "1x Boblins Express Service Artifact",
     "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten": "1x Echoes of the Forgotten Artifact",
+    "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": "1x Twilight Phoenix Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -137,7 +141,8 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_Easter_XIX_Phoenix_Blue" : `<img src="https://i.ibb.co/J749d95/mm-boost.png">`,
     "A_Evt_Evo_December_XX_Watchful_Winter_Owl" : `<img src="https://i.ibb.co/gvPd8Mv/boosted-plus-0-quality-1.png">`,
     "A_Evt_Evo_Autumn_XIX_Bear_Panda" : `<img src="https://i.ibb.co/0YD0JRZ/boosted-quality-1.png">`,
-    "A_Evt_Evo_September_XXI_Red_Panda_Master" : `<img src="https://i.ibb.co/hYXr3HW/vision-vapor-small.png">`
+    "A_Evt_Evo_September_XXI_Red_Panda_Master" : `<img src="https://i.ibb.co/hYXr3HW/vision-vapor-small.png">`,
+    "A_Evt_Evo_Easter_XXII_Twilight_Phoenix" : `<img src="https://i.ibb.co/Yy21rpT/health-points.png">`,
 }
 
 var allowedFeedingMultiplicators = {
@@ -150,6 +155,7 @@ var iconsImages = {
     "aw_hitpoints":`<img src="https://i.ibb.co/Yy21rpT/health-points.png" title="Troops Health">`,
     "damage_boost":`<img src="https://i.ibb.co/3TG2xv7/unit-attack-enhance.png">`,
     "damage_boost":`<img src="https://i.ibb.co/3TG2xv7/unit-attack-enhance.png">`,
+    "barrack_small_boosted":`<img src="https://i.ibb.co/zVZk0Hy/barrack-small-boosted.png" title="Unit Production Boost">`,
 }
 
 var buildingTypes = {
@@ -183,11 +189,14 @@ var discardBuildings = [
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Evo_Autumn_XIX_Bear_Ice",
     "A_Evt_Evo_Summer_XIX_Stonehenge",
+    "may_xxii",
+    "easter_xxii",
 ]
 
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
+            ["Naturally Amazing","may_xxii",false,true],
             ["Dawn of the Phoenix","easter_xxii_",false,true],
             ["The Buried City","february_xxii_",true,false],
             ["Forbidden Ruins","january_xxii_",false,false],
@@ -223,6 +232,7 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
+            ["Naturally Amazing","may_xxii",false,true],
             ["Dawn of the Phoenix","easter_xxii_",false,true],
             ["The Buried City","february_xxii_",true,false],
             ["Forbidden Ruins","january_xxii_",false,false],

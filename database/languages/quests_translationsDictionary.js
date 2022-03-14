@@ -60,6 +60,8 @@ let questsDictionary = {
         "budovu na level 5 alebo vyšší" : "building to level 5 or higher", // use regex
         "budovy na level 5 alebo vyšší" : "buildings to level 5 or higher", // use regex
         "ľubovoľný zesilovač" : "time booster of your choice",
+        "dešť mincí" : "coin rain",
+        "příděl zásob" : "supply windfall",
     },
     "de" : {
         // CONNECTIONS
@@ -121,6 +123,8 @@ let questsDictionary = {
         "budovu na level 5 alebo vyšší" : "Gebäude auf Stufe 5 oder höher", // use regex
         "budovy na level 5 alebo vyšší" : "Gebäude auf Stufe 5 oder höher", // use regex
         "ľubovoľný zesilovač" : "Zeit-Booster deiner Wahl",
+        "dešť mincí" : "Münzregen",
+        "příděl zásob" : "Vorratsregen",
     },
     "fr" : {
         // CONNECTIONS
@@ -182,6 +186,8 @@ let questsDictionary = {
         "budovu na level 5 alebo vyšší" : "bâtiment au moins au niveau 5", // use regex
         "budovy na level 5 alebo vyšší" : "bâtiments au moins au niveau 5", // use regex
         "ľubovoľný zesilovač" : "Boost de votre choix",
+        "dešť mincí" : "Pluie de pièces",
+        "příděl zásob" : "Abondance de matériaux",
     },
     "pl" : {
 
@@ -246,5 +252,7 @@ let questsDictionary = {
         "budovu na level 5 alebo vyšší" : "здание до уровня 5 или выше", // use regex
         "budovy na level 5 alebo vyšší" : "здания до уровня 5 или выше", // use regex
         "ľubovoľný zesilovač" : "Ускоритель",
+        "dešť mincí" : "Дождь из монет",
+        "příděl zásob" : "Доход запасов",
     }
 }
