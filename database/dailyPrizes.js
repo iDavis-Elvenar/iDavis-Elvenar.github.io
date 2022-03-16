@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_Easter_XXII_Rod_of_Ascleptius",
         "A_Evt_Easter_XX_Phoenix_Lava",
         "kp_15",
+        //1x vitality surge 25%
     ],
     
     "february_xxii_": [
