@@ -146,5 +146,17 @@ var instants = {
         "image_big": "https://i.ibb.co/bKkGCKx/petfood-big.png",
         "image_small": "https://i.ibb.co/1GNjFQN/petfood-small.png",
         "production_type": ""
+    },
+    "kp_": {
+        "name": "Knowledge Points",
+        "image_big": "https://i.ibb.co/Y3tCgcw/knowledge-points-big.png",
+        "image_small": "https://i.ibb.co/CB7JkFY/knowledge-points-new.png",
+        "production_type": "x"
+    },
+    "INS_REV_SQD_": {
+        "name": "Vitality Surge",
+        "image_big": "https://i.ibb.co/M7ypGhv/vitality-surge-big.png",
+        "image_small": "https://i.ibb.co/FHcY7ML/vitality-surge-small.png",
+        "production_type": "%"
     }
 }

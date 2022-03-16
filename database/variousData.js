@@ -190,15 +190,14 @@ var discardBuildings = [
     "A_Evt_Evo_Autumn_XIX_Bear_Ice",
     "A_Evt_Evo_Summer_XIX_Stonehenge",
     "may_xxii",
-    "easter_xxii",
 ]
 
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
             ["Naturally Amazing","may_xxii",false,true],
-            ["Dawn of the Phoenix","easter_xxii_",false,true],
-            ["The Buried City","february_xxii_",true,false],
+            ["Dawn of the Phoenix","easter_xxii_",true,false],
+            ["The Buried City","february_xxii_",false,false],
             ["Forbidden Ruins","january_xxii_",false,false],
         ],
         "2021" : [
@@ -233,8 +232,8 @@ var allEvents = {
     "all_events" : {
         "2022" : [
             ["Naturally Amazing","may_xxii",false,true],
-            ["Dawn of the Phoenix","easter_xxii_",false,true],
-            ["The Buried City","february_xxii_",true,false],
+            ["Dawn of the Phoenix","easter_xxii_",true,false],
+            ["The Buried City","february_xxii_",false,false],
             ["Forbidden Ruins","january_xxii_",false,false],
         ],
         "2021" : [
