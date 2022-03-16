@@ -1,5 +1,5 @@
 var quests = {
-    "easter_xxii_": [
+    /*"easter_xxii_": [
         "Získaj nejaké množstvo mincí",
         "Vyrob 8x nápoje",
         "Utrať 18 VB",
@@ -76,7 +76,7 @@ var quests = {
         "",
         "",
         "",
-    ],
+    ],*/
     "february_xxii_": [
         "Získaj nejaké množstvo mincí",
         "Vyrob 4x nápoje",
