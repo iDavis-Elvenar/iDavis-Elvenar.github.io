@@ -570,7 +570,7 @@ function displayQuests() {
     table.style.width = '100%';
     var tbody = document.createElement('tbody');
 
-    if (quests[selectedEvent] === undefined) {
+    if (quests[selectedEvent] === undefined || getDaysFromStart(selectedEvent) < 0) {
         var h7 = document.createElement('h7');
         h7.id = 'quests_noQuests';
         h7.className = "card-title text-center";
