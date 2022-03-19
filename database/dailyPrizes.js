@@ -10,6 +10,7 @@ var dailyPrizes = {
         "INS_REV_SQD_25",
         "A_Evt_Easter_XXII_Shamanic_Healing_Grounds",
         "kp_15",
+        "A_Evt_Golden_Palace",
     ],
     
     "february_xxii_": [
