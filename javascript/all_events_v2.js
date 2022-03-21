@@ -63,14 +63,17 @@ function displayDailyPrizes() {
             }
 
             for (var i = 0; i < Math.min(Object.keys(dailyPrizes[selectedEvent]).length, days); i++) {
-                if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_' || dailyPrizes[selectedEvent][i].toLowerCase().includes("petfood")
-                || dailyPrizes[selectedEvent][i].toLowerCase().includes("kp")) {
+                if (dailyPrizes[selectedEvent][i].substring(0, 4) === 'INS_' || 
+                Object.keys(instants).some((element) => dailyPrizes[selectedEvent][i].toLowerCase().includes(element.substring(0, element.lastIndexOf("_"))))) {
                     var baseID = dailyPrizes[selectedEvent][i].substring(0, dailyPrizes[selectedEvent][i].lastIndexOf('_')+1);
                     var instantObject = {};
                     instantObject['id'] = baseID;
                     instantObject['name'] = instants[baseID]['name'];
                     instantObject['image_big'] = instants[baseID]['image_big'];
                     instantObject['image_small'] = instants[baseID]['image_small'];
+                    if (instants[baseID].hasOwnProperty('title')) {
+                        instantObject['title'] = instants[baseID]['title'];
+                    }
                     if (instants[baseID].hasOwnProperty('image_big_secondary')) {
                         instantObject['image_big_secondary'] = instants[baseID]['image_big_secondary'];
                     }
@@ -346,7 +349,7 @@ function displayDailyPrizes() {
                                     <img src="${filteredData[i]['image_small']}">/<img src="${filteredData[i]['image_small_secondary']}">`;
                             } else {
                                 td.innerHTML = `${filteredData[i]['value']}${filteredData[i]['production_type']}<br>
-                                            <img src="${filteredData[i]['image_small']}">`;
+                                            <img src="${filteredData[i]['image_small']}" title="${filteredData[i]['title']}">`;
                             }
                         } else {
                             td.innerHTML = `1`;

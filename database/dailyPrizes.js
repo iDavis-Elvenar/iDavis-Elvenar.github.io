@@ -12,6 +12,7 @@ var dailyPrizes = {
         "kp_15",
         "A_Evt_Golden_Palace",
         "INS_KP_AW_20",
+        "runeshards-1_2",
     ],
     
     "february_xxii_": [
