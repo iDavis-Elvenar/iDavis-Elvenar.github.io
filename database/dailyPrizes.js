@@ -6,13 +6,13 @@ var dailyPrizes = {
         "INS_UNIT_TG_LM_10",
         "A_Evt_Easter_XXII_Rod_of_Ascleptius",
         "A_Evt_Easter_XX_Phoenix_Lava",
-        "kp_15",
+        "kp_{15}",
         "INS_REV_SQD_25",
         "A_Evt_Easter_XXII_Shamanic_Healing_Grounds",
-        "kp_15",
+        "kp_{15}",
         "A_Evt_Golden_Palace",
         "INS_KP_AW_20",
-        "runeshards-1_2",
+        "runeshards-1_{2}",  //instantname_value-or-""_{quantity}-or-""-if-quantity==1
     ],
     
     "february_xxii_": [

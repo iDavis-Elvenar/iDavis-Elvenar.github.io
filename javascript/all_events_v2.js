@@ -81,7 +81,13 @@ function displayDailyPrizes() {
                         instantObject['image_small_secondary'] = instants[baseID]['image_small_secondary'];
                     }
                     instantObject['production_type'] = instants[baseID]['production_type'];
-                    instantObject['value'] = parseInt(dailyPrizes[selectedEvent][i].substring(dailyPrizes[selectedEvent][i].lastIndexOf('_')+1, dailyPrizes[selectedEvent][i].length));
+                    if (dailyPrizes[selectedEvent][i].includes("{")) {
+                        instantObject['value'] = parseInt(dailyPrizes[selectedEvent][i].substring(dailyPrizes[selectedEvent][i].lastIndexOf('_')+1, dailyPrizes[selectedEvent][i].indexOf("{")));
+                        instantObject['quantity'] = parseInt(dailyPrizes[selectedEvent][i].substring(dailyPrizes[selectedEvent][i].indexOf('{')+1, dailyPrizes[selectedEvent][i].indexOf("}")));
+                    } else {
+                        instantObject['value'] = parseInt(dailyPrizes[selectedEvent][i].substring(dailyPrizes[selectedEvent][i].lastIndexOf('_')+1, dailyPrizes[selectedEvent][i].length));
+                        instantObject['quantity'] = 1;
+                    }
                     if (instantObject['production_type'] === 'h') {
                         instantObject['value'] /= 60;
                     }
@@ -318,7 +324,11 @@ function displayDailyPrizes() {
                     }
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
-                    td12.innerHTML = `<b>Type:</b> Instant<br>`;
+                    if (filteredData[i]['id'].toLowerCase().includes("ins_")) {
+                        td12.innerHTML = `<b>Type:</b> Instant<br>`;
+                    } else {
+                        td12.innerHTML = `<b>Type:</b> Item<br>`;
+                    }
                     t1r.appendChild(td11);
                     t1r.appendChild(td12);
                     t1body.appendChild(t1r);
@@ -345,14 +355,14 @@ function displayDailyPrizes() {
                         var td = document.createElement('td');
                         if (ch === 0) {
                             if (filteredData[i].hasOwnProperty('image_small_secondary')) {
-                                td.innerHTML = `${filteredData[i]['value']}${filteredData[i]['production_type']}<br>
+                                td.innerHTML = `${Number.isNaN(filteredData[i]['value']) ? "" : filteredData[i]['value']}${Number.isNaN(filteredData[i]['value']) ? "" : filteredData[i]['production_type']+"<br>"}
                                     <img src="${filteredData[i]['image_small']}">/<img src="${filteredData[i]['image_small_secondary']}">`;
                             } else {
-                                td.innerHTML = `${filteredData[i]['value']}${filteredData[i]['production_type']}<br>
+                                td.innerHTML = `${Number.isNaN(filteredData[i]['value']) ? "" : filteredData[i]['value']}${Number.isNaN(filteredData[i]['value']) ? "" : filteredData[i]['production_type']+"<br>"}
                                             <img src="${filteredData[i]['image_small']}" title="${filteredData[i]['title']}">`;
                             }
                         } else {
-                            td.innerHTML = `1`;
+                            td.innerHTML = `${filteredData[i]['quantity']}`;
                         }
                         tr.appendChild(td);
                     }
@@ -437,7 +447,7 @@ function createCalendar(filteredData, selectedEvent) {
             if (prizesCounter <= filteredData.length) {
                 if (filteredData[prizesCounter-1].hasOwnProperty('value')) {
                     tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${filteredData[prizesCounter - 1]['name']} 
-                            (${filteredData[prizesCounter-1]['value']}${filteredData[prizesCounter-1]['production_type']})</a>`;
+                            (${Number.isNaN(filteredData[prizesCounter-1]['value']) ? filteredData[prizesCounter-1]['quantity'] : filteredData[prizesCounter-1]['value']}${Number.isNaN(filteredData[prizesCounter-1]['value']) ? "" : filteredData[prizesCounter-1]['production_type']})</a>`;
                 } else {
                     tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langBuildings(filteredData[prizesCounter - 1])}</a>`;
                 }
