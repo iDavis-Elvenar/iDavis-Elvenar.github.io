@@ -12,8 +12,9 @@ var dailyPrizes = {
         "kp_{15}",
         "A_Evt_Golden_Palace",
         "INS_KP_AW_20",
-        "runeshards-1_{2}",  //instantname_value-or-""_{quantity}-or-""-if-quantity==1
+        "runeshards-1_{2}",  //instantname_value-or-""{quantity}-or-""-if-quantity==1
         "A_Evt_Easter_XXII_Rod_of_Ascleptius",
+        "INS_UNIT_TG_HM_10",
     ],
     
     "february_xxii_": [
