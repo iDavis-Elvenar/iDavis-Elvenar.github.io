@@ -139,7 +139,7 @@ function handleBuildingsJSON() {
                                         }
                                     }
                                     for (let stage = 0; stage < 10; stage++) {
-                                        console.log(b['id'])
+                                        //console.log(b['id'])
                                         for (let prod = 0; prod < evoObject['stages'][stage]['products'].length; prod++) {
                                             if (evoObject['stages'][stage]['products'][prod].hasOwnProperty('goodId')) {
                                                 setOfAllProductions.add(evoObject['stages'][stage]['products'][prod]['goodId']);
@@ -228,7 +228,15 @@ function handleBuildingsJSON() {
                                                                 c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod]];
                                                                 if (evoObject['stages'][stage]['products'][o].hasOwnProperty('value')) {
                                                                     c['value'] = evoObject['stages'][stage]['products'][o]['value'];
+                                                                    /*if (allBuildings[k]['id'].includes("A_Evt_Evo_Autumn_XIX_Bear_Ice")) {
+                                                                        console.log(allBuildings[k]['production'])
+                                                                        console.log(allBuildings[k]['production']['products'][o])
+                                                                    }*/
                                                                     c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
+                                                                    if (c['production_time'] === undefined) {
+                                                                        c['production_time'] = allBuildings[k]['production']['products'][0]['production_time'];
+                                                                    }
+                                                                    //console.log(allBuildings[k]['id']+"          "+c['production_time'])
                                                                     if (allBuildings[k]['production']['__class__'] === 'SwitchableProductionVO') {
                                                                         for (let allp2 = 0; allp2 < b['all_productions'].length; allp2++) {
                                                                             if (b['all_productions'][allp2][0] === allDifferentProductions[prod]) {
@@ -248,6 +256,9 @@ function handleBuildingsJSON() {
                                                                     if (evoObject['stages'][stage]['products'][o].hasOwnProperty('factor')) {
                                                                         c['value'] *= evoObject['stages'][stage]['products'][o]['factor'];
                                                                         c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
+                                                                        if (c['production_time'] === undefined) {
+                                                                            c['production_time'] = allBuildings[k]['production']['products'][0]['production_time'];
+                                                                        }
                                                                         if (allBuildings[k]['production']['__class__'] === 'SwitchableProductionVO') {
                                                                             for (let allp2 = 0; allp2 < b['all_productions'].length; allp2++) {
                                                                                 if (b['all_productions'][allp2][0] === allDifferentProductions[prod]) {

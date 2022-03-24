@@ -188,8 +188,8 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "A_Evt_Evo_Autumn_XIX_Bear_Ice",
-    "A_Evt_Evo_Summer_XIX_Stonehenge",
+    //"A_Evt_Evo_Autumn_XIX_Bear_Ice",
+    //"A_Evt_Evo_Summer_XIX_Stonehenge",
 ]
 
 var allEvents = {
