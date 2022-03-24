@@ -15,6 +15,7 @@ var dailyPrizes = {
         "runeshards-1_{2}",  //instantname_value-or-""{quantity}-or-""-if-quantity==1
         "A_Evt_Easter_XXII_Rod_of_Ascleptius",
         "INS_UNIT_TG_HM_10",
+        "A_Evt_March_XXI_Temple_of_Embers",
     ],
     
     "february_xxii_": [
