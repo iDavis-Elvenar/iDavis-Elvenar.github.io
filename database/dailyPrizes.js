@@ -18,6 +18,7 @@ var dailyPrizes = {
         "A_Evt_March_XXI_Temple_of_Embers",
         "INS_RF_GRR_5",
         "A_Evt_Easter_XXII_Voice_of_the_Prophet",
+        "A_Evt_March_XXI_Phoenix_Chick",
     ],
     
     "february_xxii_": [
