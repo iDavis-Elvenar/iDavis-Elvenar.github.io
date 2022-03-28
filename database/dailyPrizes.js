@@ -19,6 +19,7 @@ var dailyPrizes = {
         "INS_RF_GRR_5",
         "A_Evt_Easter_XXII_Voice_of_the_Prophet",
         "A_Evt_March_XXI_Phoenix_Chick",
+        "INS_UNIT_MA_10",
     ],
     
     "february_xxii_": [
