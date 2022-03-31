@@ -22,6 +22,7 @@ var dailyPrizes = {
         "INS_UNIT_MA_10",
         "A_Evt_Easter_XX_Phoenix_Anatomy",
         "INS_REV_SQD_10{2}",
+        "A_Evt_Easter_XXII_Shamanic_Healing_Grounds",
     ],
     
     "february_xxii_": [
