@@ -314,3 +314,13 @@ background-color: #b9881e;
     -ms-user-select: none;
     user-select: none;
 }
+
+.btn-astable {
+    color:#fff;
+    background-color:#9f8a5b;
+    border-color:#f7dea7
+}
+
+.bg-skin_guestRaces_background {
+    background-color: #e1c9b3 !important;
+}

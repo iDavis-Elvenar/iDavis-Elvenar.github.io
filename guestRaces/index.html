@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta id="chapterRedirect" http-equiv="refresh" content="" />
+
+    <script src="../javascript/global_functions.js"></script>
+    <script src="../javascript/exception_handler.js"></script>
+
+    <script>
+
+        createException("Loading...", 10, "primary");
+
+        chapts = {
+            "6": "dwarves",
+            "7": "fairies",
+        }
+
+        var chapterToLoad = chapts[getPresetChapter()];
+
+        if (typeof chapterToLoad !== 'undefined') {
+            document.getElementById("chapterRedirect").content = "0; url="+chapterToLoad+".html";
+        } else {
+            document.getElementById("chapterRedirect").content = "0; url="+Object.values(chapts)[0]+".html";
+        }
+        
+    </script>
+    
+</head>
+
+<body>
+
+</body>
+
+</html>

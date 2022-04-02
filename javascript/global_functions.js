@@ -213,8 +213,9 @@ function getPresetChapter() {
     }
 }
 
-function generateChapterDropdown() {
-    document.getElementById("preset_chapter").src = "images/general/chapter_icons/ch"+getPresetChapter()+".png";
+function generateChapterDropdown(folderIndent=0) {
+    let filePrefix = "../".repeat(folderIndent);
+    document.getElementById("preset_chapter").src = filePrefix+"images/general/chapter_icons/ch"+getPresetChapter()+".png";
     for (let i = 0; i <= numberOfChapters; i++) {
         if (i == 0) {
             let item = document.createElement('li');
@@ -226,7 +227,7 @@ function generateChapterDropdown() {
             p.innerHTML = "How does this work?"
             p.onclick = function() {chapterSelectionExplain()};
             let img = document.createElement('img');
-            img.src = "images/general/request_sign_info.png";
+            img.src = filePrefix+"images/general/request_sign_info.png";
             img.style.marginLeft = "5px";
             img.style.width = "30px";
             img.className = "pointer";
@@ -244,7 +245,7 @@ function generateChapterDropdown() {
             a.onclick = function() {setChapter(i)};
             a.innerHTML = chapterNames[i];
             let img = document.createElement('img');
-            img.src = `images/general/chapter_icons/ch${i}.png`;
+            img.src = filePrefix+`images/general/chapter_icons/ch${i}.png`;
             img.style.marginRight = "3px";
             img.style.marginLeft = "3px";
             img.style.width = "20px";
