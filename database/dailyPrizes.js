@@ -1,7 +1,7 @@
 var dailyPrizes = {
     
     "may_xxii_": [
-        //Tender Tag Team,
+        "A_Evt_May_XXII_Tender_Tag_Team",
         "A_Evt_May_XXI_Bumblebee_Stables",
     ],
     
