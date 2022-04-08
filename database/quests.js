@@ -50,7 +50,7 @@ var quests = {
         "Vyrieš 6 stretov na mape ALEBO vyrieš 6 turnajových stretov ALEBO vyrieš 6 stretov vo veži + získaj 600x úlomky kouzel",
         "Kúp 8 VB + vykonaj 7x susedskú výpomoc",
         "Vyrob nejaké množstvo zásob + získaj 2x spojovací činidlo ALEBO získaj 24x opar vidění",
-        "Vyrob nejaké množstvo základného zboží + získaj 1x ľubovoľné kúzlo ALEBO získaj 600x úlomky kouzel",
+        "Vyrob nejaké množstvo štandardného zboží + získaj 1x ľubovoľné kúzlo ALEBO získaj 600x úlomky kouzel",
         "Použi 3x ľubovoľné kúzlo + vyrob nejaké množstvo zásob",
         "Získaj 1x spojovací činidlo ALEBO získaj 12 relikvií + vylepši 1 budovu na level 5 alebo vyšší ALEBO použi 3x příděl zásob",
         "Získaj 600x úlomky kouzel + obchoduj 3x u obchodníka",
