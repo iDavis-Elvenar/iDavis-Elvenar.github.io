@@ -56,7 +56,7 @@ var quests = {
         "Získaj 600x úlomky kouzel + obchoduj 3x u obchodníka",
         "Vyrob nejaké množstvo zásob + vyrieš 1 provinciu ALEBO vyrieš 6 turnajových stretov",
         "Kúp 16 VB + preskúmaj 1 provinciu ALEBO vylepši 1 budovu na level 5 alebo vyšší",
-        "Získaj nejaké množstvo mincí + vyrob nejaké množstvo základného zboží",
+        "Získaj nejaké množstvo mincí + vyrob nejaké množstvo štandardného zboží",
         "Vyrieš 10 stretov na mape ALEBO vyrieš 10 turnajových stretov ALEBO vyrieš 10 stretov vo veži + použi 3x ľubovoľné kúzlo",
         "Získaj 800x úlomky kouzel + použi 2x krmení ALEBO získaj 3x ľubovoľné kúzlo",
         "Získaj 20 relikvií + získaj 2x spojovací činidlo",
