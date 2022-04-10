@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_May_XXII_Tender_Tag_Team",
         "A_Evt_May_XXI_Bumblebee_Stables",
         "goods_standard_sentient_{1}",  //A pack of standard or sentient goods (depending on chapter)
+        "A_Evt_May_XX_Food_Market",
     ],
     
     "easter_xxii_": [
