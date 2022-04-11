@@ -87,6 +87,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "january_xxii_": "01/06/2022",
     "february_xxii_": "02/03/2022",
     "easter_xxii_": "03/17/2022",
+    "may_xxii_": "04/14/2022",
 }
 
 let questsLinks = {
@@ -102,6 +103,7 @@ let eventsDurations = {
     "january_xxii_": 22,
     "february_xxii_": 22,
     "easter_xxii_": 22,
+    "may_xxii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -130,6 +132,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_December_XXI_Boblins_Express_Service": "1x Boblins Express Service Artifact",
     "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten": "1x Echoes of the Forgotten Artifact",
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": "1x Twilight Phoenix Artifact",
+    "A_Evt_Evo_May_XXII_Flower_Goblin_Epiphany": "1x Flower Goblin Epiphany Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -152,12 +155,18 @@ var allowedFeedingMultiplicators = {
 }
 
 var iconsImages = {
-    "damage_boost":`<img src="https://i.ibb.co/3TG2xv7/unit-attack-enhance.png" title="Damage Boost">`,
-    "event_currency_1":`<img src="https://i.ibb.co/cYv1Scg/EL-akcia-ve-k-noc-2019-event-currency.png" title="Event Currency">`,
-    "aw_hitpoints":`<img src="https://i.ibb.co/Yy21rpT/health-points.png" title="Troops Health">`,
-    "damage_boost":`<img src="https://i.ibb.co/3TG2xv7/unit-attack-enhance.png">`,
-    "damage_boost":`<img src="https://i.ibb.co/3TG2xv7/unit-attack-enhance.png">`,
-    "barrack_small_boosted":`<img src="https://i.ibb.co/zVZk0Hy/barrack-small-boosted.png" title="Unit Production Boost">`,
+    "damage_boost":"https://i.ibb.co/3TG2xv7/unit-attack-enhance.png",
+    "event_currency_1":"https://i.ibb.co/cYv1Scg/EL-akcia-ve-k-noc-2019-event-currency.png",
+    "aw_hitpoints":"https://i.ibb.co/Yy21rpT/health-points.png",
+    "trader_small":"https://i.ibb.co/qjRgfSK/trader-small.png",
+    "time_boosted":"https://i.ibb.co/kQhsyfn/time-boosted.png",
+    "training_queue_slots":"https://i.ibb.co/V30rvS3/training-queue-slots.png",
+}
+
+var iconsTitles = {
+    "damage_boost":"Damage Boost",
+    "event_currency_1":"Event Currency",
+    "aw_hitpoints":"Troops Health",
 }
 
 var buildingTypes = {

@@ -354,6 +354,9 @@ function handleBuildingsJSON() {
                                         if (effectConfigs[exp].hasOwnProperty("format")) {
                                             expObj["format"] = effectConfigs[exp]["format"];
                                         }
+                                        if (effectConfigs[exp].hasOwnProperty("description") && effectConfigs[exp]["description"] !== undefined) {
+                                            expObj["description"] = effectConfigs[exp]["description"];
+                                        }
                                         b["expiring"] = expObj;
                                     }
                                 }
@@ -580,6 +583,14 @@ function generateEffectConfigs() {
                         expiring["iconID"] = data[i]["metadata"]["iconId"];
                         expiring["name"] = data[i]["metadata"]["name"];
                         expiring["format"] = data[i]["metadata"]["format"];
+                    }
+                    for (let j = 0; j < data2.length; j++) {
+                        if (data2[j].hasOwnProperty("effectConfigId") &&
+                        data2[j]["effectConfigId"] === data[i]["id"].toString()) {
+                            expiring["title"] = data2[j]["title"];
+                            expiring["description"] = data2[j]["description"];
+                            break;
+                        }
                     }
                     result.push(expiring);
                 }

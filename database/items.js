@@ -168,5 +168,12 @@ var instants = {
         "image_small": "https://i.ibb.co/WkVpfDR/runeshard-small.png",
         "title": "Random rune shard of the previous chapter",
         "production_type": "x"
+    },
+    "goods_standard_sentient_": {
+        "name": "Goods",
+        "image_big": "https://i.ibb.co/WndLSNt/goods-general-medium.png",
+        "image_small": "https://i.ibb.co/yFZD0dM/goods-general-small.png",
+        "title": "A pack of standard or sentient goods (depending on chapter)",
+        "production_type": "x"
     }
 }

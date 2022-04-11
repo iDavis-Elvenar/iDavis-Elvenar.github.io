@@ -257,7 +257,11 @@ function readBuildingsJSON() {
                             for (var ch = 0; ch < numberOfChapters + 1; ch++) {
                                 var tdEffect = document.createElement('td');
                                 if (ch === 0) {
-                                    tdEffect.innerHTML = `${iconsImages[filteredData[i]["expiring"]["iconID"]]}`;
+                                    if (filteredData[i]["expiring"].hasOwnProperty("description")) {
+                                        tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${filteredData[i]["expiring"]["description"].replaceAll("\"", "")}">`;
+                                    } else {
+                                        tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${iconsTitles[filteredData[i]["expiring"]["iconID"]]}">`;
+                                    }
                                 } else {
                                     if (filteredData[i]["expiring"].hasOwnProperty("format") &&
                                     filteredData[i]["expiring"]["format"].toLowerCase().includes("percentage")) {
