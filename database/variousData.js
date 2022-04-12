@@ -161,6 +161,7 @@ var iconsImages = {
     "trader_small":"https://i.ibb.co/qjRgfSK/trader-small.png",
     "time_boosted":"https://i.ibb.co/kQhsyfn/time-boosted.png",
     "training_queue_slots":"https://i.ibb.co/V30rvS3/training-queue-slots.png",
+    "barrack_small_boosted":"https://i.ibb.co/zVZk0Hy/barrack-small-boosted.png",
 }
 
 var iconsTitles = {
