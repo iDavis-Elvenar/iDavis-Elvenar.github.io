@@ -621,9 +621,15 @@ function switchView(type) {
     } else if (type !== "calendar" && type !== "quests") {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
-        $(function(){
-            $("#column_with_tables").load("eventTabs/mergeymerge.html"); 
-          });
+        for (var event in additionalTabsEvents) {
+            for (let tab = 0; tab < additionalTabsEvents[event].length; tab++) {
+                if (additionalTabsEvents[event][tab]["id"] === type) {
+                    $(function(){
+                        $("#column_with_tables").load("eventTabs/"+additionalTabsEvents[event][tab]["file"]); 
+                    });
+                }
+            }
+        }
     }
 }
 

@@ -207,6 +207,7 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
+            ["june","june_xxii_",false,true],
             ["Naturally Amazing","may_xxii_",true,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
@@ -243,6 +244,7 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
+            ["june","june_xxii_",false,true],
             ["Naturally Amazing","may_xxii_",true,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
@@ -268,7 +270,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "june_xxii_": [
-        {"id":"guide", "name":"Written Guide", "img":"images/general/event_guide.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#guide", "onclick":"guide"},
+        {"id":"guide", "name":"Written Guide", "img":"images/general/event_guide.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#guide", "onclick":"guide", "file":"mergeymerge.html"},
     ],
 }
 

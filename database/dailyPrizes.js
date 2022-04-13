@@ -1,4 +1,8 @@
 var dailyPrizes = {
+
+    "june_xxii_": [ //dummy data
+        "kp_{15}",
+    ],
     
     "may_xxii_": [
         "A_Evt_May_XXII_Tender_Tag_Team",
