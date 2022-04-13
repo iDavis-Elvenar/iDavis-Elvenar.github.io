@@ -88,17 +88,17 @@ var notifications = {
     },
     "9":{  // SPECIAL VIDEO PROMO #2
         "id":9,
-        "text":`<h4 class="alert-heading">Strategies for The Buried City event 2022!</h4>
-  <p>Are you looking for some strategies in the Buried City minigame? Check out the newest video on the Elvenar channel to find 5 tips for succeeding in this event!</p>
+        "text":`<h4 class="alert-heading">Get the Most Out of Dawn of the Phoenix event 2022!</h4>
+  <p>The Dawn of the Phoenix event is coming with some unique buildings such as Twilight Phoenix or Ludibria Ventis. In this video, I'm sharing some tips to help you to get the most out of these buildings.</p>
   <hr>
-  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/vhMIN4AI9YY"></iframe></p><br>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/GKw2p32jYdY"></iframe></p><br>
   <center><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Subscribe</a> to stay with the latest Elvenar videos!</center>
     <hr>
     <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
         "repeatAfter":302400,
         "style":"info",
         "duration":300,
-        "active":false,
+        "active":true,
         "priority":40
     },
 }
