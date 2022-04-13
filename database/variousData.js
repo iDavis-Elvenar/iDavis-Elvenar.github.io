@@ -53,6 +53,7 @@ let eventBanners = {
     "january_xxii_": "https://i.ibb.co/Wc4RLZt/EL-akcia-janu-r-2022-banner.png",
     "february_xxii_": "https://i.ibb.co/BnmPn0x/EL-akcia-febru-r-2022-banner.png",
     "easter_xxii_": "https://i.ibb.co/ZYkfV9P/EL-akcia-ve-k-noc-2022-banner.png",
+    "may_xxii_": "https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png",
 }
 
 let eventVideos = {
