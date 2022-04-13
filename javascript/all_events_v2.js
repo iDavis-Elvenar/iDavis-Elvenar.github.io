@@ -27,6 +27,80 @@ function loadPage() {
     }
 }
 
+function setLeftBar() {
+    let leftBar = document.getElementById("left_bar");
+    let selectedEvent = getSelectedEvent();
+    leftBar.innerHTML = "";
+
+    //Povodny staticky HTML content:
+    // <div class="justify-content-center box d-flex flex-column" style="height: 50%;" id="calendar_top_div"><span class="align-middle"><a class="text-link font-weight-bold" id="calendar_top" href="#calendar" onclick="switchView('calendar')"><img src="images/general/calendar.png" width="45" style="margin-left: -10px; margin-right: 2px; position: relative;"></a></span></div>
+    // <div class="justify-content-center box d-flex flex-column" style="height: 50%;" id="quests_left_panel_div"><span class="align-middle"><a class="text-link font-weight-bold" id="quests_left_panel" href="#quests" onclick="switchView('quests')"><img src="images/general/event_guide.png" width="28" style="margin-left: 0px; margin-right: 10px; position: relative;"></a></span></div>
+
+    let numberOfAdditionalItems = 0;
+    if (additionalTabsEvents.hasOwnProperty(selectedEvent)) {
+        numberOfAdditionalItems = additionalTabsEvents[selectedEvent].length;
+    }
+
+    let numberOfBaseItems = baseTabsEvents.length;
+
+    leftBar.style.height = ""+((numberOfBaseItems*50)+(numberOfAdditionalItems*50))+"px";
+
+    for (let b = 0; b < numberOfBaseItems; b++) {
+        let div = document.createElement("div");
+        div.className = "justify-content-center box d-flex flex-column";
+        div.style.height = ""+(100/(numberOfAdditionalItems+numberOfBaseItems))+"%";
+        div.id = baseTabsEvents[b]["id"];
+        let span = document.createElement("span");
+        span.className = "allign-middle";
+        let a = document.createElement("a");
+        a.className = "text-link font-weight-bold";
+        a.id = baseTabsEvents[b]["id"].substring(0, baseTabsEvents[b]["id"].lastIndexOf("_"));
+        a.href = baseTabsEvents[b]["href"];
+        if (a.href.includes("quests")) {
+            a.href += "-"+getSelectedEvent();
+        }
+        a.onclick = function() {
+            switchView(baseTabsEvents[b]["onclick"]);
+        }
+        a.innerHTML = langUI(baseTabsEvents[b]["name"]);
+        let img = document.createElement("img");
+        img.src = baseTabsEvents[b]["img"];
+        img.style = "width: "+baseTabsEvents[b]["img_width"]+"px; "+baseTabsEvents[b]["img_style"];
+        a.prepend(img);
+        span.appendChild(a);
+        div.appendChild(span);
+        leftBar.appendChild(div);
+    }
+
+    for (let i = 0; i < numberOfAdditionalItems; i++) {
+        let newDiv = document.createElement("div");
+        newDiv.className = "justify-content-center box d-flex flex-column";
+        newDiv.style.height = ""+(100/(numberOfAdditionalItems+2))+"%";
+        newDiv.id = additionalTabsEvents[selectedEvent][i]["id"];
+        let newSpan = document.createElement("span");
+        newSpan.className = "allign-middle";
+        let newA = document.createElement("a");
+        newA.className = "text-link font-weight-bold";
+        newA.href = additionalTabsEvents[selectedEvent][i]["href"];
+        newA.onclick = function() {
+            switchView(additionalTabsEvents[selectedEvent][i]["id"]);
+        }
+        newA.innerHTML = additionalTabsEvents[selectedEvent][i]["name"];
+        let newImg = document.createElement("img");
+        newImg.src= additionalTabsEvents[selectedEvent][i]["img"];
+        newImg.style = "width: "+additionalTabsEvents[selectedEvent][i]["img_width"]+"px; "+additionalTabsEvents[selectedEvent][i]["img_style"];
+        newA.prepend(newImg);
+        newSpan.appendChild(newA);
+        newDiv.appendChild(newSpan);
+        leftBar.appendChild(newDiv);
+    }
+}
+
+function getSelectedEvent() {
+    var selectEvent = document.getElementById("input_event");
+    return selectEvent.options[selectEvent.selectedIndex].value;
+}
+
 function displayDailyPrizes() {
     html_alert = document.getElementById('alert');
     html_close = document.getElementById('close');
@@ -544,6 +618,12 @@ function switchView(type) {
     } else if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
+    } else if (type !== "calendar" && type !== "quests") {
+        document.getElementById("column_with_tables").innerHTML = "";
+        view = type;
+        $(function(){
+            $("#column_with_tables").load("eventTabs/mergeymerge.html"); 
+          });
     }
 }
 
@@ -794,3 +874,5 @@ function numberOfAvailableQuests(selectedEvent) {
     return Math.min(quests[selectedEvent].length - eventsDurations[selectedEvent] + getDaysFromStart(selectedEvent)+1,
             quests[selectedEvent].length);
 }
+
+window.onload

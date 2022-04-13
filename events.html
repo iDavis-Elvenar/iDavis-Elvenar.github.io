@@ -143,21 +143,7 @@
     </button>
 </div>
 
-<div class="hide-show highest2 container bg-skin_background rounded-right75 border-bottom border-right border-top border-popup" style="width: 155px; height: 100px; margin-top: 274px; margin-left: 0px; position: fixed" id="left_bar">
-    <div class="justify-content-center box d-flex flex-column" style="height: 50%;"><span class="align-middle"><a class="text-link font-weight-bold" id="calendar_top" href="#calendar" onclick="switchView('calendar')"><img src="images/general/calendar.png" width="45" style="margin-left: -10px; margin-right: 2px; position: relative;"></a></span></div>
-    <div class="justify-content-center box d-flex flex-column" style="height: 50%;"><span class="align-middle"><a class="text-link font-weight-bold" id="quests_left_panel" href="#quests" onclick="switchView('quests')"><img src="images/general/event_guide.png" width="28" style="margin-left: 0px; margin-right: 10px; position: relative;"></a></span></div>
-    <!--<div class="justify-content-center box d-flex flex-column" style="height: 33%;"><span class="align-middle"><a class="text-link font-weight-bold" id="chests_left_panel" href="#events_top"><img src="images/general/chest_icon.png" width="30" style="margin-left: 5px; margin-right: 10px; position: relative;"></a></span></div>-->
-</div>
-
-<script>
-    /*if (window.innerWidth < 1300) {
-        let leftBar = document.getElementById("left_bar");
-        leftBar.className = "highest2 container bg-skin_transparent_background rounded-right75 border-bottom border-right border-top border-popup border-3";
-        leftBar.style.position = "relative";
-        leftBar.style.marginTop = "px";
-        leftBar.style.marginLeft = "0px";
-    }*/
-</script>
+<div class="hide-show highest2 container bg-skin_background rounded-right75 border-bottom border-right border-top border-popup" style="width: max-content; height: 100px; margin-top: 274px; margin-left: 0px; position: fixed" id="left_bar"></div>
 
 <div style="padding-top: 59px;" id="calendar_top">
     <div style="width: 100%;">
@@ -185,7 +171,7 @@
 
                     </div>
                     <div class="col text-center" style="height: 33%; position: relative" >
-                        <button class="btn btn-sm btn-success btn-block text-uppercase center" id="generate_daily_prizes_button" style="width: 50%; align-content: center" onclick="clearURL(); displayDailyPrizes();"></button>
+                        <button class="btn btn-sm btn-success btn-block text-uppercase center" id="generate_daily_prizes_button" style="width: 50%; align-content: center" onclick="clearURL(); displayDailyPrizes(); setLeftBar();"></button>
                     </div>
                 </div>
                 <!--<div class="col-sm">
@@ -217,8 +203,9 @@
     
     document.getElementById("select_event_label").innerHTML = langUI("Select event:");
     document.getElementById("order_daily_prizes_by_label").innerHTML = langUI("Order daily prizes by:");
-    document.getElementById("calendar_top").innerHTML += langUI("Calendar");
-    document.getElementById("quests_left_panel").innerHTML += langUI("Quests");
+    //document.getElementById("calendar_top").innerHTML += langUI("Calendar");
+    //document.getElementById("quests_left_panel").innerHTML += langUI("Quests");
+    
     //if (localStorage.getItem("lang") !== "cz") {document.getElementById("quests_left_panel").style.visibility = "hidden";}
     /*document.getElementById("quests_left_panel").innerHTML += langUI("Quests");
     document.getElementById("chests_left_panel").innerHTML += langUI("Chests");*/
@@ -228,6 +215,7 @@
     generateOptionsForOrderBy("events");
 
     generateChapterDropdown();
+    setLeftBar();
 
 </script>
 

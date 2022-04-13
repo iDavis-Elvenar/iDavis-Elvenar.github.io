@@ -80,6 +80,7 @@ let ui = {
         "Pilgrim's Manor": "Panství poutníka",
         "Forbidden Ruins": "Zapovězené ruiny",
         //EVENTS
+        "Naturally Amazing":"Přirozeně úžasné",
         "Dawn of the Phoenix":"Úsvit fénixe",
         "The Buried City":"Pohřbené město",
         "The Misty Forest":"Mlžný les",
@@ -184,6 +185,7 @@ let ui = {
         "Pilgrim's Manor": "Herrenhaus der Pilger",
         "Forbidden Ruins": "Verbotene Ruinen",
         //EVENTS
+        "Naturally Amazing":"Naturally Amazing",
         "Dawn of the Phoenix":"Die Dämmerung des Phönix",
         "The Buried City":"Die begrabene Stadt",
         "The Misty Forest":"Nebelwald",
@@ -288,6 +290,7 @@ let ui = {
         "Pilgrim's Manor": "Manoir du pèlerin",
         "Forbidden Ruins": "Ruines interdites",
         //EVENTS
+        "Naturally Amazing":"Naturally Amazing",
         "Dawn of the Phoenix":"L'aube du phénix",
         "The Buried City":"La ville enterrée",
         "The Misty Forest":"Forêt embrumée",
@@ -392,6 +395,7 @@ let ui = {
         "Pilgrim's Manor": "Dwór Pielgrzyma",
         "Forbidden Ruins": "Zakazane Ruiny",
         //EVENTS
+        "Naturally Amazing":"Naturally Amazing",
         "Dawn of the Phoenix":"Brzask Feniksa",
         "The Buried City":"Pogrzebane miasto",
         "The Misty Forest":"Zamglony Las",
@@ -496,6 +500,7 @@ let ui = {
         "Pilgrim's Manor": "Особняк пилигрима",
         "Forbidden Ruins": "Запретные руины",
         //EVENTS
+        "Naturally Amazing":"Naturally Amazing",
         "Dawn of the Phoenix":"Заря Феникса",
         "The Buried City":"Погребенный город",
         "The Misty Forest":"Туманный лес",

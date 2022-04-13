@@ -101,4 +101,14 @@ var notifications = {
         "active":true,
         "priority":40
     },
+    "10":{  // EVENTS SIMULTANEOUSLY
+        "id":10,
+        "text":`<h4 class="alert-heading">Naturally Amazing Event starts on Beta!</h4>
+        <p>Since a new event is starting on Beta, the default filter has been changed so that the new event appears first. But don't worry - you can access the <b>Dawn of the Phoenix</b> event using the drop-down menu on the top of the website - just like any other event from the past!</p>`,
+        "repeatAfter":18000,
+        "style":"warning",
+        "duration":60,
+        "active":true,
+        "priority":100
+    },
 }

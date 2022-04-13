@@ -207,8 +207,8 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
-            ["Naturally Amazing","may_xxii_",false,true],
-            ["Dawn of the Phoenix","easter_xxii_",true,false],
+            ["Naturally Amazing","may_xxii_",true,false],
+            ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
             ["Forbidden Ruins","january_xxii_",false,false],
         ],
@@ -243,8 +243,8 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
-            ["Naturally Amazing","may_xxii_",false,true],
-            ["Dawn of the Phoenix","easter_xxii_",true,false],
+            ["Naturally Amazing","may_xxii_",true,false],
+            ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
             ["Forbidden Ruins","january_xxii_",false,false],
         ],
@@ -259,6 +259,17 @@ var allEvents = {
             ["Elvarian Carnival","february_xxi_",false,false]
         ]
     }
+}
+
+var baseTabsEvents = [
+    {"id":"calendar_top_div", "name":"Calendar", "img":"images/general/calendar.png", "img_width":"45", "img_style":"margin-left: -10px; margin-right: 2px; position: relative;", "href":"#calendar", "onclick":"calendar"},
+    {"id":"quests_left_panel_div", "name":"Quests", "img":"images/general/event_guide.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},
+] 
+
+var additionalTabsEvents = {
+    "june_xxii_": [
+        {"id":"guide", "name":"Written Guide", "img":"images/general/event_guide.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#guide", "onclick":"guide"},
+    ],
 }
 
 var optionsForOrderBy = [
