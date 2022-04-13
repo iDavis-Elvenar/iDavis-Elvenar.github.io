@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_May_XX_Food_Market",
         "INS_UNIT_MA_10",
         "A_Evt_May_XXII_Soothing_Pond",
+        "kp_{15}",
     ],
     
     "easter_xxii_": [
