@@ -13,6 +13,7 @@ var dailyPrizes = {
         "A_Evt_May_XXII_Soothing_Pond",
         "kp_{15}",
         "A_Evt_May_XXII_Primordial_Gecko",
+        "runeshards-1_{4}",
     ],
     
     "easter_xxii_": [
