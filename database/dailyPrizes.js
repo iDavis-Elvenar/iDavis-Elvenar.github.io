@@ -15,6 +15,7 @@ var dailyPrizes = {
         "A_Evt_May_XXII_Primordial_Gecko",
         "runeshards-1_{4}",
         "A_Evt_May_XXII_Tender_Tag_Team",
+        "INS_KP_AW_20",
     ],
     
     "easter_xxii_": [
