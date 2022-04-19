@@ -25,9 +25,11 @@ function loadPage() {
     } else {
         displayDailyPrizes();
     }
+    setLeftBar();
 }
 
 function setLeftBar() {
+    console.log("RAZ")
     let leftBar = document.getElementById("left_bar");
     let selectedEvent = getSelectedEvent();
     leftBar.innerHTML = "";
@@ -56,9 +58,7 @@ function setLeftBar() {
         a.className = "text-link font-weight-bold";
         a.id = baseTabsEvents[b]["id"].substring(0, baseTabsEvents[b]["id"].lastIndexOf("_"));
         a.href = baseTabsEvents[b]["href"];
-        if (a.href.includes("quests")) {
-            a.href += "-"+getSelectedEvent();
-        }
+        a.href += "-"+getSelectedEvent();
         a.onclick = function() {
             switchView(baseTabsEvents[b]["onclick"]);
         }
@@ -82,6 +82,7 @@ function setLeftBar() {
         let newA = document.createElement("a");
         newA.className = "text-link font-weight-bold";
         newA.href = additionalTabsEvents[selectedEvent][i]["href"];
+        newA.href += "-"+selectedEvent;
         newA.onclick = function() {
             switchView(additionalTabsEvents[selectedEvent][i]["id"]);
         }
@@ -625,7 +626,7 @@ function switchView(type) {
             for (let tab = 0; tab < additionalTabsEvents[event].length; tab++) {
                 if (additionalTabsEvents[event][tab]["id"] === type) {
                     $(function(){
-                        $("#column_with_tables").load("eventTabs/"+additionalTabsEvents[event][tab]["file"]); 
+                        $("#column_with_tables").load("eventTabs/"+event+"/"+additionalTabsEvents[event][tab]["file"]); 
                     });
                 }
             }
