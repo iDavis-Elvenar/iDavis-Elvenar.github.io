@@ -29,7 +29,6 @@ function loadPage() {
 }
 
 function setLeftBar() {
-    console.log("RAZ")
     let leftBar = document.getElementById("left_bar");
     let selectedEvent = getSelectedEvent();
     leftBar.innerHTML = "";
@@ -58,7 +57,7 @@ function setLeftBar() {
         a.className = "text-link font-weight-bold";
         a.id = baseTabsEvents[b]["id"].substring(0, baseTabsEvents[b]["id"].lastIndexOf("_"));
         a.href = baseTabsEvents[b]["href"];
-        a.href += "-"+getSelectedEvent();
+        //a.href += "-"+getSelectedEvent();
         a.onclick = function() {
             switchView(baseTabsEvents[b]["onclick"]);
         }

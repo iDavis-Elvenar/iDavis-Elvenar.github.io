@@ -54,6 +54,7 @@ let eventBanners = {
     "february_xxii_": "https://i.ibb.co/BnmPn0x/EL-akcia-febru-r-2022-banner.png",
     "easter_xxii_": "https://i.ibb.co/ZYkfV9P/EL-akcia-ve-k-noc-2022-banner.png",
     "may_xxii_": "https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png",
+    "june_xxii_": "https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png",
 }
 
 let eventVideos = {
@@ -428,6 +429,9 @@ var goods_icons = {
     "INS_TR_AMT_840": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 14 h'><br>",
     "INS_TR_AMT_1200": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 20 h'><br>",
     "INS_TR_AMT_2400": "<img src='https://i.ibb.co/8dBhcrH/ins-tr-amt-small.png' title='Time Booster 40 h'><br>",
+    "daily_reward": "<img src='https://i.ibb.co/7YDJFZN/daily-reward.png' title='Daily Prize'><br>",
+    "rune_shard": "<img src='https://i.ibb.co/jJ1x14f/runeshard-small.png' title='Rune Shard'><br>",
+    "spell_knowledge_boost_1": "<img src='https://i.ibb.co/cxTn3yM/Spell-knowledge-boost-1-small.png' title='Inspiring Meditation'><br>",
 }
 
 var chapter_icons = {
