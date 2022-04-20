@@ -625,6 +625,8 @@ function switchView(type) {
             for (let tab = 0; tab < additionalTabsEvents[event].length; tab++) {
                 if (additionalTabsEvents[event][tab]["id"] === type) {
                     $(function(){
+                        $.getScript("eventTabs/_general/chests/chests_database.js", function() {});
+                        $.getScript("eventTabs/_general/chests/chests_handler.js", function() {});
                         $("#column_with_tables").load("eventTabs/"+event+"/"+additionalTabsEvents[event][tab]["file"]); 
                     });
                 }
