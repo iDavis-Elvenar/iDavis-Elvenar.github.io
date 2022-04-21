@@ -19,6 +19,7 @@ var dailyPrizes = {
         "INS_RF_GRR_5{2}",
         "A_Evt_May_XX_Cotton_Candy_Magic",
         "INS_UNIT_TG_HR_10",
+        "A_Evt_May_XXII_Tender_Tag_Team",
     ],
     
     "easter_xxii_": [
