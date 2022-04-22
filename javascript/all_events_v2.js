@@ -101,6 +101,12 @@ function getSelectedEvent() {
     return selectEvent.options[selectEvent.selectedIndex].value;
 }
 
+function getSelectedEventName() {
+    let eventSelect = document.getElementById('input_event');
+    let selectedEvent = eventSelect.options[eventSelect.selectedIndex].value;
+    return eventSelect.options[eventSelect.selectedIndex].text;
+}
+
 function displayDailyPrizes() {
     html_alert = document.getElementById('alert');
     html_close = document.getElementById('close');
@@ -618,7 +624,7 @@ function switchView(type) {
     } else if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
-    } else if (type !== "calendar" && type !== "quests") {
+    } else if (type !== "calendar" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
         for (var event in additionalTabsEvents) {
