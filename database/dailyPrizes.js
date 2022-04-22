@@ -20,7 +20,7 @@ var dailyPrizes = {
         "A_Evt_May_XX_Cotton_Candy_Magic",
         "INS_UNIT_TG_HR_10",
         "A_Evt_May_XXII_Tender_Tag_Team",
-        "goods_standard_sentient_{1}",  //create this as a flexible reward: ch19 = 29000x t6 boosted+1, ch14 = 8700x t6 boosted+1, ch13 = 20000x t3 boosted+1
+        "goods_standard_sentient_{1}",  //10x frog_sentient_q_3_plus_1
     ],
     
     "easter_xxii_": [
