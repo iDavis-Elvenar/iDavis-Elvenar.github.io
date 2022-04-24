@@ -22,6 +22,7 @@ var dailyPrizes = {
         "A_Evt_May_XXII_Tender_Tag_Team",
         "goods_standard_sentient_{1}",  //10x frog_sentient_q_3_plus_1
         "A_Evt_May_XXII_Primordial_Gecko",
+        "goods_standard_sentient_{1}",
     ],
     
     "easter_xxii_": [
