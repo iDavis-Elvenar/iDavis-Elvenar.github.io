@@ -80,7 +80,7 @@ var notifications = {
   <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/nB6yfF73Fyg"></iframe></p>
     <hr>
     <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
-        "repeatAfter":604800,
+        "repeatAfter":1209600,
         "style":"info",
         "duration":1080,
         "active":true,
@@ -98,7 +98,7 @@ var notifications = {
         "repeatAfter":302400,
         "style":"info",
         "duration":500,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "10":{  // EVENTS SIMULTANEOUSLY
