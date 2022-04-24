@@ -88,10 +88,10 @@ var notifications = {
     },
     "9":{  // SPECIAL VIDEO PROMO #2
         "id":9,
-        "text":`<h4 class="alert-heading">Get the Most Out of Dawn of the Phoenix event 2022!</h4>
-  <p>The Dawn of the Phoenix event is coming with some unique buildings such as Twilight Phoenix or Ludibria Ventis. In this video, I'm sharing some tips to help you to get the most out of these buildings.</p>
+        "text":`<h4 class="alert-heading">Prepare for the Naturally Amazing event 2022!</h4>
+  <p>The Naturally Amazing event is just around the corner! It's time to get prepared so that you can get most of the rewards possible, including brand new flower decorations to enhance various boosts in your city! I'm sharing the ways how you can prepare for this event as well as strategies for obtaining Naturally Amazing rewards in the video below.</p>
   <hr>
-  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/GKw2p32jYdY"></iframe></p><br>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/?"></iframe></p><br>
   <center><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Subscribe</a> to stay with the latest Elvenar videos!</center>
     <hr>
     <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
