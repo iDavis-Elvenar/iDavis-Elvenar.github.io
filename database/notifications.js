@@ -28,7 +28,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"info",
         "duration":420,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "4":{  // NEW VIDEOS SOON
