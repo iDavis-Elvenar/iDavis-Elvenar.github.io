@@ -23,6 +23,7 @@ var dailyPrizes = {
         "goods_standard_sentient_{1}",  //10x frog_sentient_q_3_plus_1
         "A_Evt_May_XXII_Primordial_Gecko",
         "goods_standard_sentient_{1}",
+        "INS_KP_AW_30",
     ],
     
     "easter_xxii_": [
