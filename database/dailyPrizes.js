@@ -24,6 +24,7 @@ var dailyPrizes = {
         "A_Evt_May_XXII_Primordial_Gecko",
         "goods_standard_sentient_{1}",
         "INS_KP_AW_30",
+        "A_Evt_February_XXI_Aureate_Willow",
     ],
     
     "easter_xxii_": [
