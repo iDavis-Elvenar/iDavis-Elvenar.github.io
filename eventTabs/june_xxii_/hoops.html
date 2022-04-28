@@ -1,21 +1,20 @@
-<div id="main">
+<!-- HTML -->
 
-  <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Lucky Little Fin ::..<br></h5>
-  <img id="event_banner" src="https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png" alt="undefined" class="center " style="margin-bottom: 15px; width: 50%;">
+<div id="main">
 
   <div class="container">
     <div class="card-spoiler border-spoiler mb-3">
         <div class="card-header" id="headingOne">
             <h2 class="mb-0">
               <center><button class="btn btn-spoiler btn-smbtn-danger " data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  <h7><img src="https://i.ibb.co/DbMvM6K/EL-akcia-j-l-2021-payback.png" width="27px;"> Feature Introduction</h7>
+                  <h7>🔔 Feature Introduction 🔔</h7>
               </button></center>
             </h2>
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
               <div class="card-body">
-                Hello! My name is iDavis and for this event I'm trying a brand new feature on my website - <b>the chests comparator!</b><br><br>
-                Below, you can see all the available chests (or as they are called this time - hoops) during the Lucky Little Fin event including all their prices, chances and rewards!
-                The values are - as always on this website - automatically generated from the game, so it ensures quick updates in case anything in the game gets changed.<br><br>
+                Hello! My name is iDavis and for this event I'm trying a brand new feature on my website - the <b>Chests Comparator</b>!<br><br>
+                You can see all the available chests below (or as they are called this time - hoops <img src="https://i.ibb.co/frWgY04/EL-stranka-scroll-aquatic-chest1.png" width="20px;">) during the <b>Lucky Little Fin</b> event including all their prices, chances and rewards!
+                The values are - as always on my website - automatically generated from the game, so it ensures quick updates if anything in the game gets changed.<br><br>
                 At the same time I'm also introducing new sorting feature, which can be used to sort these chests to help
                 you find the bests chests for obtaining either Grand Prizes or Daily Prizes of this event!
                 The values of chests' rewards work together with the chapter system on this website, so make sure 
@@ -32,6 +31,9 @@
     </div>
   </div>
 
+ <!-- <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Lucky Little Fin ::..<br></h5>
+  <img id="event_banner" src="https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png" alt="undefined" class="center " style="margin-bottom: 15px; width: 50%;">
+ -->
   <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Hoops Overview ::..<br></h5>
   <img id="event_banner" src="https://i.ibb.co/fqXfxk1/EL-stranka-scroll-aquatic-all-chests.png" alt="undefined" class="center " style="margin-bottom: 15px;">
 
@@ -49,34 +51,7 @@
 
 </div>
 
-<!--<div style="text-align: center">
-                    <div class="bbTable">
-                        <table class="table-primary" style="width: 100%">
-                            <tbody>
-                            <tr>
-                                <td rowspan="3"><img src="https://i.ibb.co/frWgY04/EL-stranka-scroll-aquatic-chest1.png"></td>
-                                <td>50x EC</td>
-                                <td>3x EP</td>
-                                <td colspan="3"></td>
-                            </tr>
-                            <tr>
-                                <th>10%</th>
-                                <th>30%</th>
-                                <th>20%</th>
-                                <th>25%</th>
-                                <th>15%</th>
-                            </tr>
-                            <tr>
-                                <td>obj1</td>
-                                <td>obj2</td>
-                                <td>obj3</td>
-                                <td>obj4</td>
-                                <td>obj5</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>-->
+<!-- JS DATABASE -->
 
 <script>
 var currencies = {
@@ -427,7 +402,9 @@ var chests = {
     ]
 }
 
-    generateChests();
+// JS CODE
+
+generateChests();
 
 if (typeof rewardMultiplicator === "undefined") {
     var rewardMultiplicator = 1;
@@ -461,6 +438,9 @@ function draw(chestsData, sort="") {
       table.style.width = "100%";
       table.style.marginBottom = "10px";
       let tbody = document.createElement("tbody");
+      let maxRewards = Array.from(new Array(chestsData.length),(val,index) => chestsData[index]["chances"].length).reduce(function(a,b) {
+          return Math.max(a,b);
+      });
       
       for (let r = 1; r <= 3; r++) {
 
@@ -477,17 +457,17 @@ function draw(chestsData, sort="") {
               tr.appendChild(td1);
 
               let td2 = document.createElement("td");
-              td2.innerHTML = chestsData[i]["ec"]+` <img src="`+currencies[getSelectedEvent()]["ec"]+`">`;
-              td2.style.width = 70/chestsData[i]["chances"].length+"%";
+              td2.innerHTML = `<i><b>Costs:</b></i> `+chestsData[i]["ec"]+` <img src="`+currencies[getSelectedEvent()]["ec"]+`">`;
+              td2.style.width = 70/maxRewards+"%";
               tr.appendChild(td2);
 
               let td3 = document.createElement("td");
-              td3.innerHTML = chestsData[i]["ep"]+` <img src="`+currencies[getSelectedEvent()]["ep"]+`">`;
-              td3.style.width = 70/chestsData[i]["chances"].length+"%";
+              td3.innerHTML = `<i>Gives:</i> `+chestsData[i]["ep"]+` <img src="`+currencies[getSelectedEvent()]["ep"]+`">`;
+              td3.style.width = 70/maxRewards+"%";
               tr.appendChild(td3);
 
               let td4 = document.createElement("td");
-              td4.colSpan = chestsData[i]["chances"].length-2;
+              td4.colSpan = maxRewards-2;
               if (sort === "dp") {
                   td4.innerHTML = `<h7><i>`+(100/chestsData[i]["chances"].filter(chance => chance["subType"].startsWith("daily_reward"))[0]["percentage"]*chestsData[i]["ec"]).toFixed(1)
                   +` <img src='${currencies[getSelectedEvent()]["ec"]}'> per Daily Prize`+`</i></h7>`;
@@ -499,25 +479,29 @@ function draw(chestsData, sort="") {
 
           } else if (r === 2) {
 
-              for (let d = 0; d < chestsData[i]["chances"].length; d++) {
+              for (let d = 0; d < maxRewards; d++) {
                   
                   let th = document.createElement("th");
-                  th.innerHTML = chestsData[i]["chances"][d]["percentage"]+"%";
-                  th.style.width = 70/chestsData[i]["chances"].length+"%";
+                  if (d < chestsData[i]["chances"].length) {
+                      th.innerHTML = chestsData[i]["chances"][d]["percentage"]+"%";
+                  }
+                  th.style.width = 70/maxRewards+"%";
                   tr.appendChild(th);
 
               }
 
           } else {
 
-              for (let d = 0; d < chestsData[i]["chances"].length; d++) {
+              for (let d = 0; d < maxRewards; d++) {
 
                   let td = document.createElement("td");
-                  $.getScript('database/flexibleRewards.js', function() {
-                      let reward = getReward(chestsData, i, d);
-                      td.innerHTML = (rewardMultiplicator*getAmount(chestsData, i, d))+"x "+reward;
+                  $.getScript('database/flexibleRewards.js', function() {  //zrejme kvoli tomuto loadovaniu sa furt prehadzuje to poradie
+                      if (d < chestsData[i]["chances"].length) {
+                          let reward = getReward(chestsData, i, d);
+                          td.innerHTML = (rewardMultiplicator*getAmount(chestsData, i, d))+"x "+reward;
+                      }
                       rewardMultiplicator = 1;
-                      td.style.width = 70/chestsData[i]["chances"].length+"%";
+                      td.style.width = 70/maxRewards+"%";
                       tr.appendChild(td);
                   });
 
