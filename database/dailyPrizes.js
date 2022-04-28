@@ -26,6 +26,7 @@ var dailyPrizes = {
         "INS_KP_AW_30",
         "A_Evt_February_XXI_Aureate_Willow",
         "kp_{15}",
+        "A_Evt_May_XXII_Soothing_Pond",
     ],
     
     "easter_xxii_": [
