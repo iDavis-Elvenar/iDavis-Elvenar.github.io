@@ -39,7 +39,10 @@
     <script src="../database/variousData.js"></script>
     <script src="../database/languages/langUI.js"></script>
     <script src="../javascript/notificationHandler.js"></script>
-    <script src="../database//notifications.js"></script>
+    <script src="../database/notifications.js"></script>
+    <script src="database/mixedData.js"></script>
+    <script src="javascript/utils.js"></script>
+    <script src="javascript/quests_handler.js"></script>
 
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="../css/config.css">
@@ -67,14 +70,19 @@
             </button>
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto text-center">
+                    <li class="bigSpacing nav-item dropdown">
+                        <a class="nav-link text-warning dropdown-toggle" href="#" id="navbar_guestraces" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content">
+                        <a class="dropdown-item" href="dwarves.html" id="navitem_dwarves">Dwarves</a>
+                        <a class="dropdown-item" href="fairies.html" id="navitem_fairies">Fairies</a>
+                        <!--<div class="dropdown-divider"></div>-->
+                    </div>
+                    </li>
                     <li class="bigSpacing">
                         <a href="../buildings.html" class="nav-link text-warning" id="all_buildings"></a>
                     </li>
                     <li class="bigSpacing">
                         <a href="../events.html" class="nav-link text-warning" id="all_events"><!--<img src="images/general/calendar.png" alt="Home" width="30" class="d-inline-block align-top">--></a>
-                    </li>
-                    <li class="bigSpacing">
-                        <a href="index.html" class="nav-link text-warning" id="all_chapters"><!--<img src="images/general/calendar.png" alt="Home" width="30" class="d-inline-block align-top">--></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbar_more" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
@@ -121,13 +129,13 @@
             document.getElementById("home").innerHTML += " "+langUI("Home");
             document.getElementById("all_buildings").innerHTML = langUI("All Buildings");
             document.getElementById("all_events").innerHTML = langUI("All Events");
-            document.getElementById("all_chapters").innerHTML = "&#x203A; "+langUI("All Chapters")+" &#x2039;";
             document.getElementById("navbar_more").innerHTML = langUI("More");
+            document.getElementById("navbar_guestraces").innerHTML = langUI("All Questlines");
         </script>
     </div>
 
 </head>
-<body>
+<body onload="loadPage()">
 
 <!-- EXCEPTION HANDLER -->
 
@@ -138,18 +146,11 @@
     </button>
 </div>
 
-<div class="hide-show highest2 container bg-skin_background rounded-right75 border-bottom border-right border-top border-popup" style="width: 155px; height: 300px; margin-top: 274px; margin-left: 0px; position: fixed" id="left_bar">
-    <div class="justify-content-center box d-flex flex-column" style="height: 16%;"><span class="align-middle"><a class="text-link font-weight-bold" id="content1" href="#calendar" onclick="switchView('calendar')"><img src="../images/general/calendar.png" width="45" style="margin-left: -10px; margin-right: 2px; position: relative;"></a></span></div>
-    <div class="justify-content-center box d-flex flex-column" style="height: 16%;"><span class="align-middle"><a class="text-link font-weight-bold" id="content2" href="#quests" onclick="switchView('quests')"><img src="../images/general/event_guide.png" width="28" style="margin-left: 0px; margin-right: 10px; position: relative;"></a></span></div>
-    <div class="justify-content-center box d-flex flex-column" style="height: 16%;"><span class="align-middle"><a class="text-link font-weight-bold" id="content3" href="#quests" onclick="switchView('quests')"><img src="../images/general/event_guide.png" width="28" style="margin-left: 0px; margin-right: 10px; position: relative;"></a></span></div>
-    <div class="justify-content-center box d-flex flex-column" style="height: 16%;"><span class="align-middle"><a class="text-link font-weight-bold" id="content4" href="#quests" onclick="switchView('quests')"><img src="../images/general/event_guide.png" width="28" style="margin-left: 0px; margin-right: 10px; position: relative;"></a></span></div>
-    <div class="justify-content-center box d-flex flex-column" style="height: 16%;"><span class="align-middle"><a class="text-link font-weight-bold" id="content5" href="#quests" onclick="switchView('quests')"><img src="../images/general/event_guide.png" width="28" style="margin-left: 0px; margin-right: 10px; position: relative;"></a></span></div>
-    <div class="justify-content-center box d-flex flex-column" style="height: 16%;"><span class="align-middle"><a class="text-link font-weight-bold" id="content6" href="#quests" onclick="switchView('quests')"><img src="../images/general/event_guide.png" width="28" style="margin-left: 0px; margin-right: 10px; position: relative;"></a></span></div>
-</div>
+<div class="hide-show highest2 container bg-skin_background rounded-right75 border-bottom border-right border-top border-popup" style="width: max-content; height: 100px; margin-top: 274px; margin-left: 0px; position: fixed" id="left_bar"></div>
 
 <div style="padding-top: 59px;" id="calendar_top">
     <div style="width: 100%;">
-        <div class="container-thick center bg-skin_guestRaces_background rounded-bottom75" style="width: 100%; padding-top: 20px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px;">
+        <!--<div class="container-thick center bg-skin_guestRaces_background rounded-bottom75" style="width: 100%; padding-top: 20px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px;">
             <div class="row">
                 <div class="col-sm">
                     <div class="row center" style="height: 33%; vertical-align: middle">
@@ -168,14 +169,14 @@
                         <button class="btn btn-sm btn-success btn-block text-uppercase center" id="generate_chapter" style="width: 50%; align-content: center; margin-bottom: 10px; " onclick="clearURL(); displayDailyPrizes();"></button>
                     </div>
                 </div>
-                <!--<div class="col-sm">
+                <<div class="col-sm">
                     <center>
                     <img id="event_banner" src="https://i.ibb.co/m0hGLdm/EL-akcia-ve-k-noc-2021-banner.png" style="width: 50%;">
                     </center>
-                </div>-->
+                </div>
             </div>
 
-        </div>
+        </div>-->
     </div>
 </div>
 
@@ -195,24 +196,10 @@
         $('.hide-show').toggle('slow');
     });
 
-    document.getElementById("select_chapter_label").innerHTML = langUI("Select chapter:");
-    document.getElementById("generate_chapter").innerHTML += langUI("GENERATE");
+    //document.getElementById("select_chapter_label").innerHTML = langUI("Select chapter:");
+    //document.getElementById("generate_chapter").innerHTML += langUI("GENERATE");
     
-    document.getElementById("content1").innerHTML += langUI("content1");
-    document.getElementById("content2").innerHTML += langUI("content2");
-    document.getElementById("content3").innerHTML += langUI("content3");
-    document.getElementById("content4").innerHTML += langUI("content4");
-    document.getElementById("content5").innerHTML += langUI("content5");
-    document.getElementById("content6").innerHTML += langUI("content6");
-
-    document.getElementById("input_search").addEventListener('input', function() {
-        readBuildingsJSON();
-    });
-
-    generateEventsForAllBuildings("input_event", "all_buildings");
-    generateOptionsForFilterBy();
-    generateOptionsForOrderBy("buildings");
-    generateOptionsForSetInput();
+    //document.getElementById("content1").innerHTML += langUI("content1");
 
     generateChapterDropdown(1);
 
@@ -223,7 +210,10 @@
         <div class="container center bg-skin_light_background rounded-bottom75 rounded-top75" style="width: 100%; padding-top: 20px; padding-bottom: 20px;">
             <div class="row">
                 <div id="column_with_tables" class="col-sm">
-                    content 1 bude defaultna textova html stranka, ostatne budu generovane z db pomocou js
+                    
+                    <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Dwarves ::..<br></h5>
+                    <img id="gr_banner" src="https://i.ibb.co/SPKXGVT/ch6-banner.png" alt="undefined" class="center " style="margin-bottom: 15px; width: 50%;">
+
                 </div>
             </div>
         </div>
