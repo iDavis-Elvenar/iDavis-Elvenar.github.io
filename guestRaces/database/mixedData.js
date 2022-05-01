@@ -17,3 +17,8 @@ var grIds = {
     "dwarves": "ch6",
     "fairies": "ch7",
 }
+
+var grBanners = {
+    "ch6": "https://i.ibb.co/SPKXGVT/ch6-banner.png",
+    "ch7": "https://i.ibb.co/Wcv4xNx/ch7-banner.png",
+}

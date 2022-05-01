@@ -35,7 +35,7 @@ function switchView(type) {
 
 function setLeftBar() {
     let leftBar = document.getElementById("left_bar");
-    let guestRace = getGrIdFromName(location.href.split('#')[0].substring(location.href.split('#')[0].lastIndexOf("/")+1, location.href.split('#')[0].indexOf(".html")));
+    let guestRace = getSelectedGuestRace();
     console.log(guestRace)
     leftBar.innerHTML = "";
 
@@ -99,4 +99,29 @@ function setLeftBar() {
 
 function getGrIdFromName(name) {
     return grIds[name];
+}
+
+function getGrNameFromId(id) {
+    let name_small = Object.keys(grIds).find(key => grIds[key] === id);
+    return name_small.charAt(0).toUpperCase() + name_small.slice(1);
+}
+
+function getSelectedGuestRace() {
+    return getGrIdFromName(location.href.split('#')[0].substring(location.href.split('#')[0].lastIndexOf("/")+1, location.href.split('#')[0].indexOf(".html")));
+}
+
+function createGuestRaceHeader(guestRace) {
+    var h5 = document.createElement('h5');
+    h5.id = 'header';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: ${getGrNameFromId(guestRace)} ::..<br>`;
+    document.getElementById('column_with_tables').appendChild(h5);
+    var grImg = document.createElement("img");
+    grImg.id = `gr_banner`;
+    grImg.src = `${grBanners[guestRace]}`;
+    grImg.className = `center `;
+    grImg.style.marginBottom = `15px`;
+    grImg.style.width = `50%`;
+    document.getElementById('column_with_tables').appendChild(grImg);
 }
