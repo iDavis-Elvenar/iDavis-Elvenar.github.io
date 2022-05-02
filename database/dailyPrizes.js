@@ -1,6 +1,6 @@
 var dailyPrizes = {
 
-    "june_xxii_": [ //dummy data
+    "july_xxii_": [ //dummy data
         "kp_{15}",
     ],
     

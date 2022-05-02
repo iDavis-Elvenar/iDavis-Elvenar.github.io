@@ -54,7 +54,7 @@ let eventBanners = {
     "february_xxii_": "https://i.ibb.co/BnmPn0x/EL-akcia-febru-r-2022-banner.png",
     "easter_xxii_": "https://i.ibb.co/ZYkfV9P/EL-akcia-ve-k-noc-2022-banner.png",
     "may_xxii_": "https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png",
-    "june_xxii_": "https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png",
+    "july_xxii_": "https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png",
 }
 
 let eventVideos = {
@@ -209,7 +209,7 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
-            ["Lucky Little Fin","june_xxii_",false,true],
+            ["Lucky Little Fin","july_xxii_",false,true],
             ["Naturally Amazing","may_xxii_",true,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
@@ -246,7 +246,7 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
-            ["Lucky Little Fin","june_xxii_",false,true],
+            ["Lucky Little Fin","july_xxii_",false,true],
             ["Naturally Amazing","may_xxii_",true,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
@@ -271,7 +271,7 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
-    "june_xxii_": [
+    "july_xxii_": [
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},
     ],
 }
