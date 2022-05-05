@@ -17,7 +17,7 @@ var dailyPrizes = {
         "A_Evt_May_XXII_Soothing_Pond",
         "INS_KP_AW_20",
         "INS_RF_GRR_5{2}",
-        "A_Evt_May_XX_Cotton_Candy_Magic",
+        "A_Evt_May_XXI_Petal_Bridge",
         "INS_UNIT_TG_HR_10",
         "A_Evt_May_XXII_Tender_Tag_Team",
         "goods_standard_sentient_{1}",  //10x frog_sentient_q_3_plus_1
