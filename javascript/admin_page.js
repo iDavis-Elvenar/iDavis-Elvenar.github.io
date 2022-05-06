@@ -364,7 +364,6 @@ function handleBuildingsJSON() {
                                 for (let wr = 0; wr < weightedRewards.length; wr++) {
                                     if (weightedRewards[wr]["buildingID"].substring(0, weightedRewards[wr]["buildingID"].lastIndexOf("_"))
                                     === b["id"]) {
-                                        console.log(weightedRewards[wr]["buildingID"].substring(0, weightedRewards[wr]["buildingID"].lastIndexOf("_")))
                                         if (b.hasOwnProperty("weightedRewards")) {
                                             b["weightedRewards"].push(weightedRewards[wr]);
                                         } else {
