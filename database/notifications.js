@@ -42,14 +42,13 @@ var notifications = {
     },
     "5":{  // NEW FEATURE ON THE WEBSITE
         "id":5,
-        "text":`<h4 class="alert-heading">Introducing: Interactive Quest Lists!</h4>
-        <p>From now on, you will be able to find quest lists <img src="images/general/event_guide.png"> for every event in the All Events subpage. These new quest lists are made in an interactive way - you can mark the quests you have already completed and check those for which you still need some preparation - making it even easier for you to prepare for the event!</p>
-        <hr>
-        <p>These 2 interactive features are my current ideas. Do you have any other habits that you keep with when following quest lists during the events and would like to see them implemented in the portal? Share your ideas using the form in my <a href='contact.html' class='alert-link'>Contact Page</a> and they might become a future addition of this website!</p>`,
+        "text":`<h4 class="alert-heading">Introducing: Random Rewards!</h4>
+        <p>Finally, all the buildings that feature random productions <img src='https://i.ibb.co/4Y4qbR1/random-questionmark.png' width='24px'> are now properly displayed on the website. These include <a href='buildings.html#A_Evt_Wishing_Well' target="_blank" class='alert-link'>Wishing Well</a>, <a href='buildings.html#A_Evt_Godess_Of_Wishes' target="_blank" class='alert-link'>Goddess of Wishes</a>, <a href='buildings.html#A_Evt_Djinn' target="_blank" class='alert-link'>Genie</a> and all buildings that will be added in the future!</p>
+        <p>Stay tuned for more updates on the website soon!</p>`,
         "repeatAfter":604800,
         "style":"warning",
         "duration":45,
-        "active":false,
+        "active":true,
         "priority":30
     },
     "6":{  // DONATE
