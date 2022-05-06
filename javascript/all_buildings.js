@@ -468,6 +468,53 @@ function readBuildingsJSON() {
                     petDiv.appendChild(petTable);
                     div.appendChild(petDiv);
                 }
+                //WEIGHTED REWARDS
+                if (filteredData[i].hasOwnProperty("weightedRewards")) {
+                    let wrJSON = filteredData[i]["weightedRewards"]; //V PRIPADE EVO TU LEN VYTIAHNUT PRISLUSNY WRJSON PODLA SELECTED STAGE
+                    var wrDiv = document.createElement("div");
+                    wrDiv.className = 'bbTable';
+                    wrDiv.style.marginTop = "20px";
+
+                    var wrCenter = document.createElement('center');
+                    var wrImg = document.createElement('img');
+                    wrImg.src = "https://i.ibb.co/4Y4qbR1/random-questionmark.png";
+                    wrImg.style.marginBottom = "15px";
+                    wrCenter.appendChild(wrImg);
+                    wrDiv.appendChild(wrCenter);
+                    var wrTable = document.createElement('table');
+                    wrTable.className = 'table-primary text-center';
+                    wrTable.style.width = "100%";
+                    var wrBody = document.createElement('tbody');
+                    var wrTr1 = document.createElement('tr');
+                    for (let col = -1; col < wrJSON[getPresetChapter()]["chances"].length; col++) {
+                        var wrTh = document.createElement('th');
+                        if (col === -1) {
+                            wrTh.innerHTML = `${langUI("Chance")}`;
+                            wrTh.style.width = "40%";
+                        } else {
+                            wrTh.innerHTML = `${wrJSON[getPresetChapter()]["chances"][col]["percentage"]}%`;
+                            wrTh.style.width = ""+(60/wrJSON[getPresetChapter()]["chances"].length)+"%";
+                        }
+                        wrTr1.appendChild(wrTh);
+                    }
+                    wrBody.appendChild(wrTr1);
+                    let wrTr = document.createElement("tr");
+                    for (let col = -1; col < wrJSON[getPresetChapter()]["chances"].length; col++) {
+                        let wrTd = document.createElement("td");
+                        if (col === -1) {
+                            wrTd.innerHTML = `<img src="${chapter_icons[getPresetChapter()]}" title="Your selected chapter on the website"> / ${langUI("Bonus")}`;
+                        } else {
+                            wrTd.innerHTML = `${wrJSON[getPresetChapter()]["chances"][col]["amount"]} ${goods_icons[
+                                Object.keys(goods_icons).find(key => 
+                                    key.toLowerCase() === wrJSON[getPresetChapter()]["chances"][col]["subType"].toLowerCase())]}`;
+                        }
+                        wrTr.appendChild(wrTd);
+                    }
+                    wrBody.appendChild(wrTr);
+                    wrTable.appendChild(wrBody);
+                    wrDiv.appendChild(wrTable);
+                    div.appendChild(wrDiv);
+                }
                 document.getElementById('column_with_tables').appendChild(div);
             }
             create_exception("Buildings Generated!", 3, 'success');

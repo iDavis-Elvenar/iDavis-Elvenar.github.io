@@ -64,6 +64,8 @@ let ui = {
         "Sentient Goods T6": "Živoucí zboží T6",
         "Filter by set buildings:": "Filter podľa setov:",
         "Choose a set": "Vyber set",
+        "Chance": "Šanca",
+        "Bonus": "Bonus",
         //SETS
         "Winter Set": "Zimní sada",
         "Phoenix Cult Set": "Sada Kultu fénixe",
@@ -169,6 +171,8 @@ let ui = {
         "Sentient Goods T6": "Waren T6",
         "Filter by set buildings:": "Nach Sets filtern:",
         "Choose a set": "Wähle ein Set",
+        "Chance": "Chance",
+        "Bonus": "Bonus",
         //SETS
         "Winter Set": "Winter-Set",
         "Phoenix Cult Set": "Phönixkult-Set",
@@ -185,7 +189,7 @@ let ui = {
         "Pilgrim's Manor": "Herrenhaus der Pilger",
         "Forbidden Ruins": "Verbotene Ruinen",
         //EVENTS
-        "Naturally Amazing":"Naturally Amazing",
+        "Naturally Amazing":"Einfach Natürlich",
         "Dawn of the Phoenix":"Die Dämmerung des Phönix",
         "The Buried City":"Die begrabene Stadt",
         "The Misty Forest":"Nebelwald",
@@ -274,6 +278,8 @@ let ui = {
         "Sentient Goods T6": "Des biens T6",
         "Filter by set buildings:": "Filtrer par ensembles:",
         "Choose a set": "Choisissez un ensemble",
+        "Chance": "Chance",
+        "Bonus": "Prime",
         //SETS
         "Winter Set": "Set hivernal",
         "Phoenix Cult Set": "Set du culte du phénix",
@@ -379,6 +385,8 @@ let ui = {
         "Sentient Goods T6": "Towary T6",
         "Filter by set buildings:": "Filtruj według zestawów:",
         "Choose a set": "Wybierz zestaw",
+        "Chance": "Szansa",
+        "Bonus": "Premia",
         //SETS
         "Winter Set": "Zimowy zestaw",
         "Phoenix Cult Set": "Zestaw Kultu Feniksa",
@@ -395,7 +403,7 @@ let ui = {
         "Pilgrim's Manor": "Dwór Pielgrzyma",
         "Forbidden Ruins": "Zakazane Ruiny",
         //EVENTS
-        "Naturally Amazing":"Naturally Amazing",
+        "Naturally Amazing":"Z Natury Zadziwiające",
         "Dawn of the Phoenix":"Brzask Feniksa",
         "The Buried City":"Pogrzebane miasto",
         "The Misty Forest":"Zamglony Las",
@@ -484,6 +492,8 @@ let ui = {
         "Sentient Goods T6": "Товары T6",
         "Filter by set buildings:": "Фильтр по наборам:",
         "Choose a set": "Выбрать набор",
+        "Chance": "Шанс",
+        "Bonus": "Бонус",
         //SETS
         "Winter Set": "Зимний набор",
         "Phoenix Cult Set": "Набор «Культ Феникса»",

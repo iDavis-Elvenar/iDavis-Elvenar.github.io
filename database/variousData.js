@@ -24,7 +24,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
-    "", "", "", "", "", "", "", "", "", "", "" ];
+    "", "", "", "", "", "", "", "", "", "", "random" ];
 
 var numberOfChapters = 19;
 
@@ -202,8 +202,7 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    //"A_Evt_Evo_Autumn_XIX_Bear_Ice",
-    //"A_Evt_Evo_Summer_XIX_Stonehenge",
+    "july_xxii",
 ]
 
 var allEvents = {
@@ -433,6 +432,8 @@ var goods_icons = {
     "daily_reward": "<img src='https://i.ibb.co/7YDJFZN/daily-reward.png' title='Daily Prize'><br>",
     "rune_shard": "<img src='https://i.ibb.co/jJ1x14f/runeshard-small.png' title='Rune Shard'><br>",
     "spell_knowledge_boost_1": "<img src='https://i.ibb.co/cxTn3yM/Spell-knowledge-boost-1-small.png' title='Inspiring Meditation'><br>",
+    "random": "<img src='https://i.ibb.co/4Y4qbR1/random-questionmark.png' title='Random'><br>",
+    "premium": "<img src='https://i.ibb.co/cYyST31/Premium-small.png' title='Diamonds'><br>",
 }
 
 var chapter_icons = {

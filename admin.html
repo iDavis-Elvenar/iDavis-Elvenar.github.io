@@ -27,6 +27,7 @@
     <script src="database/imagesItems.js"></script>
     <script src="database/items.js"></script>
     <script src="database/effectConfigs.js"></script>
+    <script src="database/weightedRewards.js"></script>
     <!-- Modified Bootstrap CSS -->
     <link rel="stylesheet" href="css/login.css">
     <title>Administrator Page</title>
@@ -116,6 +117,15 @@
     EffectConfigs: <input class="form-control-file" type="file" id="effectConfigs" name="filename">
     EffectConfigsTooltips: <input class="form-control-file" type="file" id="effectConfigsTooltips" name="filename">
     <button class="btn btn-lg btn-warning btn-block text-uppercase"  onclick="generateEffectConfigs()">GENERATE</button>
+
+</div>
+
+<div class="container" style="margin-bottom: 20px;">
+    <p>Weighted Rewards pre A_Evt buildings:</p>
+
+
+    WeightedRewards: <input class="form-control-file" type="file" id="weightedRewards" name="filename">
+    <button class="btn btn-lg btn-warning btn-block text-uppercase"  onclick="generateWeightedRewards()">GENERATE</button>
 
 </div>
 

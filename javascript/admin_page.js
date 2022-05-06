@@ -360,6 +360,18 @@ function handleBuildingsJSON() {
                                         b["expiring"] = expObj;
                                     }
                                 }
+                                //PRIDAJ WEIGHTED REWARD AK EXISTUJE
+                                for (let wr = 0; wr < weightedRewards.length; wr++) {
+                                    if (weightedRewards[wr]["buildingID"].substring(0, weightedRewards[wr]["buildingID"].lastIndexOf("_"))
+                                    === b["id"]) {
+                                        console.log(weightedRewards[wr]["buildingID"].substring(0, weightedRewards[wr]["buildingID"].lastIndexOf("_")))
+                                        if (b.hasOwnProperty("weightedRewards")) {
+                                            b["weightedRewards"].push(weightedRewards[wr]);
+                                        } else {
+                                            b["weightedRewards"] = [weightedRewards[wr]];
+                                        }
+                                    }
+                                }
                                 result.push(b);
                             }
                         }
@@ -599,5 +611,35 @@ function generateEffectConfigs() {
             saveJSON( JSON.stringify(result), "effectConfigs.json" );
             create_exception("Data Generated!",10,'success');
         }
+    }
+}
+
+function generateWeightedRewards() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('weightedRewards').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = [];
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].hasOwnProperty("id") && data[i]["id"].toLowerCase().includes("a_evt")) {
+                var weightedReward = {};
+                weightedReward['buildingID'] = data[i]["id"];
+                weightedReward['chances'] = [];
+                for (let j = 0; j < data[i]["chances"].length; j++) {
+                    let chance = {};
+                    chance["percentage"] = data[i]["chances"][j]["percentage"];
+                    chance["type"] = data[i]["chances"][j]["type"];
+                    chance["subType"] = data[i]["chances"][j]["subType"];
+                    chance["amount"] = data[i]["chances"][j]["amount"];
+                    weightedReward["chances"].push(chance);
+                }
+                result.push(weightedReward);
+            }
+        }
+        console.log(result)
+        saveJSON( JSON.stringify(result), "weightedRewards.js" );   // USE VARIABLE NAME: weightedRewards
+        create_exception("Data Generated!",10,'success');
     }
 }
