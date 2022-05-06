@@ -99,7 +99,7 @@ let questsLinks = {
     "february_xxii_": "bit.ly/TheBuriedCity2022",
     "easter_xxii_": "bit.ly/DawnOfThePhoenix2022",
     "may_xxii_": "bit.ly/NaturallyAmazing2022",
-    "july_xxii_" "bit.ly/LuckyLittleFin2022",
+    "july_xxii_": "bit.ly/LuckyLittleFin2022",
 }
 
 let eventsDurations = {
