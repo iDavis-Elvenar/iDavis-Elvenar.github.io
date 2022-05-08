@@ -82,7 +82,7 @@ var notifications = {
         "repeatAfter":1209600,
         "style":"info",
         "duration":1080,
-        "active":true,
+        "active":false,
         "priority":30
     },
     "9":{  // SPECIAL VIDEO PROMO #2
