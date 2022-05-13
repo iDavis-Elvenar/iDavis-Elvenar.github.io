@@ -40,13 +40,13 @@ function displayQuests() {
 
     } else {
 
-        /*var shareLink = document.createElement('h7');
-        shareLink.id = 'quests_shareLink';
-        shareLink.className = "card-title text-center";
-        shareLink.style.textAlign = "left";
-        shareLink.innerHTML = `${langUI('You can send the quest list to other players by sharing the following link')}: <i class='text-title'><b>${questsLinks[selectedEvent]}</b></i>`;*/
+        var noteInfo = document.createElement('h7');
+        noteInfo.id = 'quests_noteInfo';
+        noteInfo.className = "card-title text-center";
+        noteInfo.style.textAlign = "left";
+        noteInfo.innerHTML = `${langUI("This quest list contains mandatory (story) quests of the chapter. These are not skipable, but in each chapter there might appear some additional quests that are skipable.")}`;
         var center = document.createElement('center');
-        //center.appendChild(shareLink);
+        center.appendChild(noteInfo);
         var div_info = document.createElement('div');
         /*div_info.innerHTML = languageSpecificNotes[localStorage.getItem("lang")];
         if (localStorage.getItem("lang") == "pl") {

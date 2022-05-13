@@ -324,3 +324,7 @@ background-color: #b9881e;
 .bg-skin_guestRaces_background {
     background-color: #e1c9b3 !important;
 }
+
+.bg-gradient_skin_background_to_skin_light_background {
+    background-image: linear-gradient(to top right,#ecdec0, #ffffff, #ecdec0) !important;
+}

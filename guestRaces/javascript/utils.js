@@ -102,8 +102,7 @@ function getGrIdFromName(name) {
 }
 
 function getGrNameFromId(id) {
-    let name_small = Object.keys(grIds).find(key => grIds[key] === id);
-    return name_small.charAt(0).toUpperCase() + name_small.slice(1);
+    return chapterNames[id.substring(2)];
 }
 
 function getSelectedGuestRace() {

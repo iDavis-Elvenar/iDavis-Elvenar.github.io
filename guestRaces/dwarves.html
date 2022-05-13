@@ -73,9 +73,7 @@
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="bigSpacing nav-item dropdown">
                         <a class="nav-link text-warning dropdown-toggle" href="#" id="navbar_guestraces" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content">
-                        <a class="dropdown-item" href="dwarves.html" id="navitem_dwarves">Dwarves</a>
-                        <a class="dropdown-item" href="fairies.html" id="navitem_fairies">Fairies</a>
+                    <div class="dropdown-menu bg-gradient_skin_background_to_skin_light_background" id="guestRacesDropdown" aria-labelledby="navbarDropdown" style="width: max-content">
                         <!--<div class="dropdown-divider"></div>-->
                     </div>
                     </li>
@@ -132,6 +130,8 @@
             document.getElementById("all_events").innerHTML = langUI("All Events");
             document.getElementById("navbar_more").innerHTML = langUI("More");
             document.getElementById("navbar_guestraces").innerHTML = langUI("All Questlines");
+
+            generateGuestRacesDropdown();
         </script>
     </div>
 
@@ -212,9 +212,8 @@
             <div class="row">
                 <div id="column_with_tables" class="col-sm">
                     
-                    <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Dwarves ::..<br></h5>
-                    <img id="gr_banner" src="https://i.ibb.co/SPKXGVT/ch6-banner.png" alt="undefined" class="center " style="margin-bottom: 15px; width: 50%;">
-
+                    <script>createGuestRaceHeader(getSelectedGuestRace());</script>
+                    
                     Intro
                     <br><br>
                     This subpage has not implemented the translation system yet. Therefore, you can use the automatic

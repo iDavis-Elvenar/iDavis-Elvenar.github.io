@@ -303,3 +303,19 @@ function round(value) {
     }
     return value;
 }
+
+function generateGuestRacesDropdown() {
+    let mainDiv = document.getElementById("guestRacesDropdown");
+    for (let i = numberOfChapters; i >= 6; i--) {
+        let a = document.createElement("a");
+        a.className = "dropdown-item";
+        a.href = Object.keys(grIds).find(key => grIds[key] === "ch"+i)+".html";
+        a.id = "navitem_"+Object.keys(grIds).find(key => grIds[key] === i);
+        a.innerHTML = chapterNames[i];
+        let img = document.createElement("img");
+        img.src = chapter_icons[i].substring(0, chapter_icons[i].indexOf(" "));
+        img.style.marginRight = "5px";
+        a.prepend(img);
+        mainDiv.appendChild(a);
+    }
+}
