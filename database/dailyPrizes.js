@@ -10,7 +10,7 @@ var dailyPrizes = {
         "goods_standard_sentient_{1}",  //A pack of standard or sentient goods (depending on chapter)
         "A_Evt_May_XXI_Blossom_Light_post",
         "INS_UNIT_MA_10",
-        "A_Evt_May_XXII_Soothing_Pond",
+        "A_Evt_May_XXII_Primordial_Gecko",
         "kp_{15}",
         "A_Evt_May_XX_Halfling_Stage",
         "runeshards-1_{4}",
