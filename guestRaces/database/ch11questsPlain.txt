@@ -1,0 +1,190 @@
+Gain 100000 Mana
+50000x coins
+10000x supplies
+200x diamonds
+
+Research Spring Grove
+1000x orcs
+15000x mana
+
+Build the Spring Grove
+2x knowledge_points
+
+Produce Bread 5 times + Produce Beverages 20 times
+10000x supplies
+
+Scout 2 Provinces
+20000x supplies
+
+Unlock Improved Trader
+1000x elixir
+1000x magic_dust
+1000x gems
+
+Upgrade your Trader
+200000x coins
+
+Place 5 Trade Offers + Accept 5 Trade Offers
+5000x marble
+5000x steel
+5000x planks
+
+Gain 10,000 Divine Seeds
+2x knowledge_points
+
+Complete a Province
+10000x supplies
+
+Unlock Irrigation Canal
+200000x coins
+
+Have at least 10 Irrigation Canals
+
+Unlock the Halflings Farm
+2x relic_elixir
+
+Have 6 Farms
+2x relic_magicdust
+
+Collect 600 Fertilizer
+2x relic_gems
+
+Produce Basket of Groceries 20 times
+120000x coins
+
+Unlock Agriculture
+15000x supplies
+
+Have 6 Fields
+1x rune_shard
+
+Collect 5000 Grain
+300x fertilizer
+
+Have 5 Fields Level 2
+10000x mana
+
+Collect 1,000 Carrots
+50000x coins
+10000x supplies
+
+Collect 200 Tingle Breads
+2500x crystal
+2500x scrolls
+2500x silk
+
+Have 2 Farms Level 2 + Have 9 Fields
+150000x coins
+
+Unlock City Expansion 41
+10000x supplies
+
+Have 4 Fields Level 3 + Have 12 Fields
+10000x mana
+
+Collect 400 Tingle Breads + Collect 600 Savvy Soups
+2x knowledge_points
+
+Deliver 1,000 Orcs + Unlock Orc Strategist Promotion
+20000x supplies
+
+Have 3 Fields Level 4 + Have 15 Fields
+1x rune_shard
+
+Have a Grape Farm
+12000x mana
+
+Research Rearranged Residences
+200000x coins
+
+Have 3 Grain Fields + Have 3 Carrot Fields + Have 3 Pumpkin Fields
+1x relic_marble
+1x relic_steel
+1x relic_planks
+
+Upgrade the Spring Grove to Level 2
+150000x coins
+15000x supplies
+
+Have 3 Farms Level 3
+120000x coins
+1x ins_kp_aw_?
+
+Research Rearranged Main Hall
+30000x mana
+
+Upgrade your Main Hall to level 26 or higher
+2x relic_crystal
+2x relic_scrolls
+2x relic_planks
+
+Collect 600 Tingle Breads + Collect 900 Savvy Soups + Collect 1500 Jolly Jellies
+2x spell_good_production_boost_1
+2x spell_ensorcelled_endowment
+
+Deliver 20,000 Divine Seeds
+40000x mana
+
+Upgrade the Spring Grove to Level 3
+1x broken_shards
+
+Produce Beverages 40 times + Produce Bread 20 times + Produce Basket of Groceries 10 times
+3000x seeds
+
+Gain 5,000 Elixir
+3x relic_elixir
+200x fertilizer
+
+Research Halflings Elixir Manufactory
+5000x elixir
+400x fertilizer
+
+Gain 10,000 Magic Dust
+3x relic_magic_dust
+600x orcs
+
+Research Goblins' Magic Dust Manufactory Upgrades
+5000x magic_dust
+1200x orcs
+
+Gain 15,000 Gems
+100000x coins
+3x relic_gems
+
+Research Gems Manufactory Upgrades
+200000x coins
+5000x gems
+
+Collect 10,000,000 Coins
+20000x supplies
+
+Upgrade the Spring Grove to Level 4
+3x knowledge_points
+
+Have 4 Farms Level 4
+18000x mana
+
+Research Halflings Style Mercenary Camp
+150000x coins
+15000x supplies
+
+Research Faineant Frogs
+1000x mc_hr
+
+Have 30 Country Lanes
+20000x mana
+
+Have 2 Grapevines
+200000x coins
+
+Produce Beverages 4 times + Produce Bread 2 times
+10000x supplies
+
+Research Ranger Promotion
+1000x apple
+
+Gain 200,000 Mana + Deliver 20,000 Divine Seeds
+5x knowledge_points
+
+Research the Ancient Wonders of the Halflings
+1x broken_shards

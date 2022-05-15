@@ -326,5 +326,5 @@ background-color: #b9881e;
 }
 
 .bg-gradient_skin_background_to_skin_light_background {
-    background-image: linear-gradient(to top right,#ecdec0, #ffffff, #ecdec0) !important;
+    background-image: linear-gradient(to top right,#ecdec0, #ffffff) !important;
 }

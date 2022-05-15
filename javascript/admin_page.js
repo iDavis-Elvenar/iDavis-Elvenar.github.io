@@ -642,3 +642,30 @@ function generateWeightedRewards() {
         create_exception("Data Generated!",10,'success');
     }
 }
+
+function generateJSWithStoryQuests() {
+    let plainContent = document.getElementById("ulohy").value;
+    let plainQuests = plainContent.split("\n\n");
+    let content = plainQuests.map(x => x.split("\n"));
+    
+    let result = [];
+    for (let i = 0; i < content.length; i++) {
+        let quest = {};
+        quest["task"] = content[i][0];
+        for (let j = 1; j < content[i].length; j++) {
+            if (quest.hasOwnProperty("rewards")) {
+                quest["rewards"].push(content[i][j]);
+            } else {
+                quest["rewards"] = [content[i][j]];
+            }
+        }
+        result.push(quest);
+    }
+
+    saveJSON( JSON.stringify(result), "storyQuests.js" );
+    create_exception("Data Generated!",10,'success');
+}
+
+function saveContentQuests() {
+    localStorage.setItem("contentQuests", document.getElementById("ulohy").value);
+}

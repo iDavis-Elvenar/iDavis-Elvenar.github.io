@@ -129,6 +129,34 @@
 
 </div>
 
+<div class="container" style="margin-bottom: 20px;">
+    <p>JSON Ulohy:</p>
+
+
+    Format: <br>
+    <h7>Zadanie1<br>
+    Odmena1<br>
+Odmena2<br>
+<br>
+Zadanie2<br>
+Odmena1<br></h7>
+<form>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Text:</label>
+        <textarea class="form-control" id="ulohy" style="height: 1000px;" rows="3" oninput="saveContentQuests()"></textarea>
+    </div>
+</form>
+    <button class="btn btn-lg btn-warning btn-block text-uppercase"  onclick="generateJSWithStoryQuests()">GENERATE</button>
+
+</div>
+
+<script>
+    if (localStorage.getItem("contentQuests") !== undefined) {
+        document.getElementById("ulohy").value = localStorage.getItem("contentQuests");
+    
+    }
+</script>
+
 
     
 
