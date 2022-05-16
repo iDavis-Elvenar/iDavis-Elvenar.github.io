@@ -1,0 +1,248 @@
+Buy 5 Knowledge Points
+2x INS_TR_AMT_60
+
+Use 10 Instants
+150000x mana
+
+Gain 20 Relics
+1x b_gr11_aw1_shards
+
+Scout a Province
+3x INS_RF_CN_5
+
+Produce Advanced Tools 10 times
+20000x sentientmarble
+
+Unlock Advanced Trader 4
+3x knowledge_points
+
+Gain 500,000 Mana
+20000x sentientsteel
+
+Upgrade the Trader to Level 6
+1x b_gr11_aw2_shards
+
+Gain 50,000 Divine Seeds + Gain 50,000 Unurium
+3x INS_TR_AMT_120
+
+Train 5000 Units
+10000x orcs
+
+Produce Beverages 10 times
+2x INS_RF_SPL_5
+
+Gain 5,000,000 Coins
+20000x sentientcrystal
+
+Gain 20,000 Unurium
+12000x seeds
+
+Donate 5000 Spell Fragments
+10000x unurium
+
+Unlock Trading Center
+3x spell_neighborly_help_boost_1
+
+Scout a Province
+20000x sentientplanks
+
+Spend 50 Knowledge Points
+2x INS_KP_AW_5
+
+Build the Trading Center
+2x spell_good_production_boost_1
+
+Unlock the Pirate Flag Ship
+50000x planks
+
+Let the "Red Pearl" drop anchor
+2x INS_RF_CN_15
+
+Collect 1000 Luxurious Luxuries
+20000x sentientsilk
+
+Unlock the Gourmet Flag Ship
+50000x marble
+
+Let the "Gentle Sorena" drop anchor
+2x spell_knowledge_boost_1
+
+Collect 2000 Delicious Delicacies
+20000x sentientmagic_dust
+
+Unlock the Collectors Flag Ship
+50000x steel
+
+Let the "Esperia" drop anchor
+2x INS_RF_SPL_15
+
+Collect 500 Antique Artifacts
+20000x sentientgems
+
+Collect 40,000 Elvenarin Zero
+50000x crystal
+
+Unlock Trading Center Level 2 + Have 490 completed provinces
+2x INS_TR_AMT_480
+
+Upgrade the Trading Center to Level 2
+20000x sentientelixir
+
+Unlock Large Pirate Ships
+400x ch17_luxuries
+
+Unlock Large Collector Ships
+200x ch17_artifacts
+
+Unlock Large Gourmet Ships
+800x ch17_delicacies
+
+Have at least 1 large Pirate Ship + Have at least 1 large Gourmet Ship + Have at least 1 large Collector Ship
+160000x mana
+
+Collect 2000 Luxurious Luxuries + Collect 4000 Delicious Delicacies + Collect 1000 Antique Artifacts
+1x INS_KP_AW_30
+
+Use 10 Boosters
+20000x sentientscrolls
+
+Have 3 large Pirate Ships + Have 3 large Gourmet Ships + Have 3 large Collector Ships
+1x A_Gr10_Premium_Small1
+
+Unlock Trading Center Level 3
+3x knowledge_points
+
+Upgrade the Trading Center to Level 3
+3x spell_supply_production_boost_1
+
+Trade with the Wholesaler 10 times + Place 10 Trade Offers + Accept 10 Trade Offers
+10x INS_TR_AMT_3
+
+Unlock Small Pirate Ships
+5x relic_marble
+
+Unlock Small Collector Ships
+5x relic_steel
+
+Unlock Small Gourmet Ships
+5x relic_planks
+
+Call in at least 3 small Pirate Ships + Call in at least 3 small Gourmet Ships + Call in at least 3 small Collector Ships
+2x broken_shards
+
+Give Neighborly Help 20 times
+1x INS_RF_SPL_33
+
+Unlock Trading Center Level 4 + Have 500 completed provinces
+5x relic_crystal
+
+Upgrade the Trading Center to Level 4
+1x INS_KP_AW_10
+
+Spend 100 Knowledge Points
+5x relic_scrolls
+
+Scout a Province
+50000x scrolls
+
+Solve 40 Encounters or solve 40 tournament encounters
+5x relic_silk
+
+Donate 50,000,000 Coins
+2x ins_rs_1
+
+Unlock Traditional Elixir Manufactory Upgrades + Unlock Goblins' Magic Dust Manufactory Upgrades + Unlock Core-Cracking Gems Manufactory Upgrades
+6x spell_good_production_boost_1
+
+Have at least 2 Magic Dust, Elixir and/or Gems Manufactories at level 28 or higher
+1x INS_TR_AMT_840
+
+Gain 20 Relics
+3x knowledge_points
+
+Call in at least 6 small Collector Ships
+1x INS_KP_AW_20
+
+Unlock a Fortress, a Fountain and a Palace
+180000x mana
+
+Build any of the three new Culture buildings
+20000x seeds
+
+Unlock Traders' Style Barracks
+10000x orcs
+
+Collect 16000 Antique Artifacts OR Donate 4000 Antique Artifacts
+15000x unurium
+
+Unlock City Expansion 51
+50000x silk
+
+Sell at least 3 small Collector Ships + Call in at least 6 small Gourmet Ships
+3x INS_TR_AMT_300
+
+Unlock Traders' Style Armories
+1x broken_shards
+
+Upgrade at least 1 Armory to level 38
+4x INS_TR_AMT_30
+
+Unlock Final Elvenar Style Residences
+5x relic_elixir
+
+Have 10 Residences at level 38 or higher
+1x INS_RF_CN_33
+
+Unlock Traders' Style Training Grounds
+2x spell_pet_food_1
+
+Sell at least 3 small Gourmet Ships + Call in at least 6 small Pirate Ships
+2x ins_rs_1
+
+Collect 40000 Luxurious Luxuries OR Donate 10000 Luxurious Luxuries
+2x combining_catalyst
+
+Unlock Traders' Style Mercenary Camp
+50000x gems
+
+Upgrade your Mercenary Camp to level 21
+8x INS_TR_AMT_15
+
+Have 510 completed provinces
+5x relic_magic_dust
+
+Use 10 Boosters
+50000x elixir
+
+Have at least 4 Workshops at level 39 or higher
+6x spell_supply_production_boost_1
+
+Donate 600,000 Mana
+2x spell_teleport_1
+
+Donate 60,000 Divine Seeds
+2x spell_pet_food_1
+
+Unlock Final Elvenar Style Main Hall
+5x relic_gems
+
+Gain 20 Relics
+18000x seeds
+
+Use 20 Enchantments
+2x combining_catalyst
+
+Produce Beverages 20 times + Produce 10 Bread + Produce Basket of Groceries 5 times
+2x spell_knowledge_boost_1
+
+Gain 60,000 Unurium
+200x diamonds
+
+Sell your Trading Center
+50000x magic_dust
+
+Invest 100 Knowledge Points in an Ancient Wonder of another player
+2x INS_KP_AW_15
+
+Give Neighbourly Help 50 times
+5x spell_neighborly_help_boost_1

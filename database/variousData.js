@@ -307,6 +307,7 @@ var goods_icons = {
     "providedCulture": "<img src='https://image.ibb.co/mEtRZq/culture.png' title='Culture'>",
     "provided_population": "<img src='https://image.ibb.co/ipAZLV/population.png' title='Population'>",
     "money": "<img src='https://image.ibb.co/g5ErZq/money.png' title='Coins'><br>",
+    "coins": "<img src='https://image.ibb.co/g5ErZq/money.png' title='Coins'><br>",
     "supplies": "<img src='https://image.ibb.co/gtNH7A/supplies.png' title='Supplies'><br>",
     "marble": "<img src='https://i.ibb.co/mtYStcp/good-marble-big.png' title='Marble'><br>",
     "steel": "<img src='https://i.ibb.co/Lds7D9z/good-steel-big.png' title='Steel'><br>",

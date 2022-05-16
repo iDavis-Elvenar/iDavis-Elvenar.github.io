@@ -69,12 +69,14 @@ function displayQuests() {
                 let task = document.createElement('th');
                 task.innerHTML = `${langUI("Task")}`;
                 tr.appendChild(task);
+                let rewards = document.createElement('th');
+                rewards.innerHTML = `${langUI("Rewards")}`;
+                rewards.style.width = "30%";
+                tr.appendChild(rewards);
                 let finished = document.createElement('th');
                 finished.innerHTML = `${langUI("Finished")}`;
+                finished.style.width = "5%";
                 tr.appendChild(finished);
-                let prep = document.createElement('th');
-                prep.innerHTML = `${langUI("Prepare")}`;
-                tr.appendChild(prep);
                 tbody.appendChild(tr);
             } else {
                 let tr = document.createElement('tr');
@@ -83,9 +85,9 @@ function displayQuests() {
                 number.innerHTML = quest;
                 tr.appendChild(number);
                 let task = document.createElement('td');
-                task.style.width = "90%";
+                task.style.width = "60%";
                 task.id = "quest_task_"+(quest);
-                task.innerHTML = `${grQuests[guestRace][quest-1]}`;
+                task.innerHTML = `${grQuests[guestRace][quest-1]["task"]}`;
 
                 /*if (questAvailable(quest, selectedEvent)) {
                     task.innerHTML = `${questTranslate(quests[selectedEvent][quest-1])}`;
@@ -105,6 +107,11 @@ function displayQuests() {
               </div>`;*/
                 /*task.className = "text-left";
                 task.style.paddingLeft = "10px";*/
+
+                let rewards = document.createElement('td');
+                rewards.id = "quest_reward_"+(quest);
+                console.log(grQuests[guestRace][quest-1]["rewards"])
+                rewards.innerHTML = `${grQuests[guestRace][quest-1]["rewards"].map(x => x.split(" ")[0].substring(0, x.split(" ")[0].length-1)+" "+goods_icons[x.split(" ")[1]]).join(" ").replaceAll("<br>", " ")}`;
                 let finished = document.createElement('td');
                 let div = document.createElement('div');
                 div.className = "form-check";
@@ -121,28 +128,27 @@ function displayQuests() {
                         for (let i = 1; i <= quest; i++) {
                             checkbox = document.getElementById("quest_finished_"+(i));
                             tasktext = document.getElementById("quest_task_"+(i));
+                            rewardstext = document.getElementById("quest_reward_"+(i));
                             prepareCheckbox = document.getElementById("quest_prepare_"+(i));
 
                             checkbox.checked = true;
                             tasktext.className = "text-quest_completed nocopy";
                             tasktext.style.fontWeight = "";
+                            rewardstext.className = "text-quest_completed nocopy";
+                            rewardstext.style.fontWeight = "";
                         }
                     } else {
-                        for (let i = quest; i <= grQuests[guestRace].length; i++) {
+                        for (let i = quest; i <= numberOfQuests; i++) {
                             checkbox = document.getElementById("quest_finished_"+(i));
                             tasktext = document.getElementById("quest_task_"+(i));
+                            rewardstext = document.getElementById("quest_reward_"+(i));
                             prepareCheckbox = document.getElementById("quest_prepare_"+(i));
 
                             checkbox.checked = false;
-                                if (prepareCheckbox.checked) {
-                                    tasktext.className = "text-prepare nocopy";
-                                    tasktext.style.fontWeight = "bold";
-                                } else {
-                                    tasktext.className = "nocopy";
-                                }
+                            tasktext.className = "nocopy";
+                            rewardstext.className = "nocopy";                                
                         }
                     }
-                    
                     recordFinishedQuests(guestRace, numberOfQuests);
                 };
                 let label = document.createElement('label');
@@ -152,45 +158,10 @@ function displayQuests() {
                 div.appendChild(input);
                 div.appendChild(label);
 
-                let prepare = document.createElement('td');
-                let div2 = document.createElement('div');
-                div2.className = "form-check";
-                let input2 = document.createElement('input');
-                input2.className = "form-check-input";
-                input2.type = "checkbox";
-                input2.id = "quest_prepare_"+(quest);
-                if (Array(localStorage.getItem("quests_prepare_"+guestRace)).join().split(',').includes(String(quest))) {
-                    input2.checked = true;
-                    if (!Array(localStorage.getItem("quests_finished_"+guestRace)).join().split(',').includes(String(quest))) {
-                        task.className = "text-prepare nocopy";
-                        task.style.fontWeight = "bold";
-                    }
-                }
-                input2.onchange = function() {
-                    tasktext = document.getElementById("quest_task_"+(quest));
-                    finishedCheckbox = document.getElementById("quest_finished_"+(quest));
-                    if (!finishedCheckbox.checked) {
-                        if (input2.checked) {
-                            tasktext.className = "text-prepare nocopy";
-                            tasktext.style.fontWeight = "bold";
-                        } else {
-                            tasktext.className = "nocopy";
-                            tasktext.style.fontWeight = "";
-                        }
-                    }
-                    recordPrepareQuests(guestRace, numberOfQuests);
-                };
-                let label2 = document.createElement('label');
-                label2.className = "form-check-label";
-                label2.htmlFor = quest;
-                label2.innerHTML = "";
-                div2.appendChild(input2);
-                div2.appendChild(label2);
                 finished.appendChild(div);
-                prepare.appendChild(div2);
                 tr.appendChild(task);
+                tr.appendChild(rewards);
                 tr.appendChild(finished);
-                tr.appendChild(prepare);
                 tbody.appendChild(tr);
             }
         }

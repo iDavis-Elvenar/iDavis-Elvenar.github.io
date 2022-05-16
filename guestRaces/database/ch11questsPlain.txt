@@ -39,6 +39,8 @@ Unlock Irrigation Canal
 200000x coins
 
 Have at least 10 Irrigation Canals
+100000x coins
+15000x supplies
 
 Unlock the Halflings Farm
 2x relic_elixir
