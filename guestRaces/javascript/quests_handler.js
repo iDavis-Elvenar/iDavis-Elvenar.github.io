@@ -110,7 +110,6 @@ function displayQuests() {
 
                 let rewards = document.createElement('td');
                 rewards.id = "quest_reward_"+(quest);
-                console.log(grQuests[guestRace][quest-1]["rewards"])
                 rewards.innerHTML = `${grQuests[guestRace][quest-1]["rewards"].map(x => x.split(" ")[0].substring(0, x.split(" ")[0].length-1)+" "+goods_icons[x.split(" ")[1]]).join(" ").replaceAll("<br>", " ")}`;
                 let finished = document.createElement('td');
                 let div = document.createElement('div');
