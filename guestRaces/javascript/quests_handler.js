@@ -44,7 +44,11 @@ function displayQuests() {
         noteInfo.id = 'quests_noteInfo';
         noteInfo.className = "card-title text-center";
         noteInfo.style.textAlign = "left";
-        noteInfo.innerHTML = `${langUI("This quest list contains mandatory (story) quests of the chapter. These are not skipable, but in each chapter there might appear some additional quests that are skipable.")}`;
+        let infoText = `
+        This quest list contains the story quests of the chapter. These are not skipable, but each
+        chapter usually contains a few additional quests that are skipable. Nonmandatory quests are not included.
+        `;
+        noteInfo.innerHTML = `${langUI(infoText)}`;
         var center = document.createElement('center');
         center.appendChild(noteInfo);
         var div_info = document.createElement('div');
@@ -71,12 +75,16 @@ function displayQuests() {
                 tr.appendChild(task);
                 let rewards = document.createElement('th');
                 rewards.innerHTML = `${langUI("Rewards")}`;
-                rewards.style.width = "30%";
+                rewards.style.width = "25%";
                 tr.appendChild(rewards);
                 let finished = document.createElement('th');
                 finished.innerHTML = `${langUI("Finished")}`;
                 finished.style.width = "5%";
                 tr.appendChild(finished);
+                let prep = document.createElement('th');
+                prep.innerHTML = `${langUI("Prepare")}`;
+                prep.style.width = "5%";
+                tr.appendChild(prep);
                 tbody.appendChild(tr);
             } else {
                 let tr = document.createElement('tr');
@@ -100,7 +108,7 @@ function displayQuests() {
                     }
                 }*/
                 //console.log(quest+". "+questTranslate(quests[selectedEvent][quest-1]))
-                task.className = "nocopy";
+                task.className = "";
                 /*task.innerHTML += `<div class="myTest custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
                 <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
@@ -120,7 +128,7 @@ function displayQuests() {
                 input.id = "quest_finished_"+(quest);
                 if (Array(localStorage.getItem("quests_finished_"+guestRace)).join().split(',').includes(String(quest))) {
                     input.checked = true;
-                    task.className = "text-quest_completed nocopy";
+                    task.className = "text-quest_completed";
                 }
                 input.onchange = function() {
                     if (input.checked) {
@@ -131,9 +139,9 @@ function displayQuests() {
                             prepareCheckbox = document.getElementById("quest_prepare_"+(i));
 
                             checkbox.checked = true;
-                            tasktext.className = "text-quest_completed nocopy";
+                            tasktext.className = "text-quest_completed";
                             tasktext.style.fontWeight = "";
-                            rewardstext.className = "text-quest_completed nocopy";
+                            rewardstext.className = "text-quest_completed";
                             rewardstext.style.fontWeight = "";
                         }
                     } else {
@@ -144,8 +152,13 @@ function displayQuests() {
                             prepareCheckbox = document.getElementById("quest_prepare_"+(i));
 
                             checkbox.checked = false;
-                            tasktext.className = "nocopy";
-                            rewardstext.className = "nocopy";                                
+                            if (prepareCheckbox.checked) {
+                                tasktext.className = "text-prepare";
+                                tasktext.style.fontWeight = "bold";
+                            } else {
+                                tasktext.className = "";
+                            }                  
+                            rewardstext.className = "";                                          
                         }
                     }
                     recordFinishedQuests(guestRace, numberOfQuests);
@@ -157,10 +170,47 @@ function displayQuests() {
                 div.appendChild(input);
                 div.appendChild(label);
 
+                let prepare = document.createElement('td');
+                let div2 = document.createElement('div');
+                div2.className = "form-check";
+                let input2 = document.createElement('input');
+                input2.className = "form-check-input";
+                input2.type = "checkbox";
+                input2.id = "quest_prepare_"+(quest);
+                if (Array(localStorage.getItem("quests_prepare_"+guestRace)).join().split(',').includes(String(quest))) {
+                    input2.checked = true;
+                    if (!Array(localStorage.getItem("quests_finished_"+guestRace)).join().split(',').includes(String(quest))) {
+                        task.className = "text-prepare";
+                        task.style.fontWeight = "bold";
+                    }
+                }
+                input2.onchange = function() {
+                    tasktext = document.getElementById("quest_task_"+(quest));
+                    finishedCheckbox = document.getElementById("quest_finished_"+(quest));
+                    if (!finishedCheckbox.checked) {
+                        if (input2.checked) {
+                            tasktext.className = "text-prepare";
+                            tasktext.style.fontWeight = "bold";
+                        } else {
+                            tasktext.className = "";
+                            tasktext.style.fontWeight = "";
+                        }
+                    }
+                    recordPrepareQuests(guestRace, numberOfQuests);
+                };
+                let label2 = document.createElement('label');
+                label2.className = "form-check-label";
+                label2.htmlFor = quest;
+                label2.innerHTML = "";
+                div2.appendChild(input2);
+                div2.appendChild(label2);
+
                 finished.appendChild(div);
+                prepare.appendChild(div2);
                 tr.appendChild(task);
                 tr.appendChild(rewards);
                 tr.appendChild(finished);
+                tr.appendChild(prepare);
                 tbody.appendChild(tr);
             }
         }

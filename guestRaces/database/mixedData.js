@@ -25,7 +25,7 @@ var grIds = {
     "constructs": "ch14",
     "elvenar": "ch15",
     "embassies": "ch16",
-    "traders": "ch17",
+    "tradersofunur": "ch17",
     "teamspirit": "ch18",
     "revengeofexile": "ch19",
 }
