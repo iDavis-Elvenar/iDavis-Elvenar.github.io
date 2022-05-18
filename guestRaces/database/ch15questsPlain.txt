@@ -2,16 +2,16 @@ Research Advanced Scouts
 28000x mana
 
 Recruit a huge amount of Units
-1x runeshard_vortex_of_storage
+1x b_gr9_aw1_shards
 
 Spend 10 Knowledge Points
-1x rune_shards
+1x rune_shard
 
 Buy 8 Knowledge Points
-2x spell_ensorcelled_endowment
+2x spell_neighborly_help_boost_1
 
 Research Council Hall
-1x runeshard_thermal_spring_of_youth
+1x b_gr9_aw2_shards
 
 Have a Council Hall at level 1 or higher
 1x INS_TR_AMT_840
@@ -59,7 +59,7 @@ Gain a big amount of Supplies
 1x broken_shards
 
 Have an Atelier of the Elvenar at level 1 or higher + Have an Agriculture of the Elvenar at level 1 or higher + Have a Factory of the Elvenar at level 1 or higher
-1x spell_ensorcelled_endowment
+1x spell_neighborly_help_boost_1
 
 Produce Bread 18 times + Produce Basket of Groceries 5 times
 1x INS_TR_AMT_480
@@ -95,7 +95,7 @@ Have a Council Hall at level 3 or higher
 1x INS_KP_AW_10
 
 Research Elvenar Style Main Hall
-3x spell_ensorcelled_endowment
+3x spell_neighborly_help_boost_1
 
 Have a Main Hall at level 34 or higher
 1x INS_TR_AMT_480

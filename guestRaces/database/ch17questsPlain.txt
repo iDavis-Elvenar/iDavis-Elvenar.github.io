@@ -8,7 +8,7 @@ Gain 20 Relics
 1x b_gr11_aw1_shards
 
 Scout a Province
-3x INS_RF_CN_5
+3x ins_rf_cn_5
 
 Produce Advanced Tools 10 times
 20000x sentientmarble
@@ -29,7 +29,7 @@ Train 5000 Units
 10000x orcs
 
 Produce Beverages 10 times
-2x INS_RF_SPL_5
+2x ins_rf_spl_5
 
 Gain 5,000,000 Coins
 20000x sentientcrystal
@@ -56,7 +56,7 @@ Unlock the Pirate Flag Ship
 50000x planks
 
 Let the "Red Pearl" drop anchor
-2x INS_RF_CN_15
+2x ins_rf_cn_15
 
 Collect 1000 Luxurious Luxuries
 20000x sentientsilk
@@ -74,7 +74,7 @@ Unlock the Collectors Flag Ship
 50000x steel
 
 Let the "Esperia" drop anchor
-2x INS_RF_SPL_15
+2x ins_rf_spl_15
 
 Collect 500 Antique Artifacts
 20000x sentientgems
@@ -131,7 +131,7 @@ Call in at least 3 small Pirate Ships + Call in at least 3 small Gourmet Ships +
 2x broken_shards
 
 Give Neighborly Help 20 times
-1x INS_RF_SPL_33
+1x ins_rf_spl_33
 
 Unlock Trading Center Level 4 + Have 500 completed provinces
 5x relic_crystal
@@ -191,7 +191,7 @@ Unlock Final Elvenar Style Residences
 5x relic_elixir
 
 Have 10 Residences at level 38 or higher
-1x INS_RF_CN_33
+1x ins_rf_cn_33
 
 Unlock Traders' Style Training Grounds
 2x spell_pet_food_1
@@ -200,7 +200,7 @@ Sell at least 3 small Gourmet Ships + Call in at least 6 small Pirate Ships
 2x ins_rs_1
 
 Collect 40000 Luxurious Luxuries OR Donate 10000 Luxurious Luxuries
-2x combining_catalyst
+2x combiningcatalyst
 
 Unlock Traders' Style Mercenary Camp
 50000x gems
@@ -230,7 +230,7 @@ Gain 20 Relics
 18000x seeds
 
 Use 20 Enchantments
-2x combining_catalyst
+2x combiningcatalyst
 
 Produce Beverages 20 times + Produce 10 Bread + Produce Basket of Groceries 5 times
 2x spell_knowledge_boost_1

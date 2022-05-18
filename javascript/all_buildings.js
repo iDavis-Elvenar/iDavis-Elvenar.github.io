@@ -27,6 +27,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten": 9,
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": 9,
     "A_Evt_Evo_May_XXII_Flower_Goblin_Epiphany": 9,
+    "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": 9,
 }
 
 function setAndReload(id) {
@@ -470,7 +471,13 @@ function readBuildingsJSON() {
                 }
                 //WEIGHTED REWARDS
                 if (filteredData[i].hasOwnProperty("weightedRewards")) {
-                    let wrJSON = filteredData[i]["weightedRewards"]; //V PRIPADE EVO TU LEN VYTIAHNUT PRISLUSNY WRJSON PODLA SELECTED STAGE
+                    let wrJSON = undefined;
+                    if (filteredData[i]["id"].toLowerCase().includes("_evo_")) {
+                        wrJSON = filteredData[i]["weightedRewards"]["Stage_"+(selectedEvoStages[filteredData[i]['id']]+1)];
+                    } else {
+                        wrJSON = filteredData[i]["weightedRewards"];
+                    }
+                    console.log(wrJSON)
                     var wrDiv = document.createElement("div");
                     wrDiv.className = 'bbTable';
                     wrDiv.style.marginTop = "20px";
@@ -486,27 +493,27 @@ function readBuildingsJSON() {
                     wrTable.style.width = "100%";
                     var wrBody = document.createElement('tbody');
                     var wrTr1 = document.createElement('tr');
-                    for (let col = -1; col < wrJSON[getPresetChapter()]["chances"].length; col++) {
+                    for (let col = -1; col < wrJSON[getPresetChapter()-1]["chances"].length; col++) {
                         var wrTh = document.createElement('th');
                         if (col === -1) {
                             wrTh.innerHTML = `${langUI("Chance")}`;
                             wrTh.style.width = "40%";
                         } else {
-                            wrTh.innerHTML = `${wrJSON[getPresetChapter()]["chances"][col]["percentage"]}%`;
-                            wrTh.style.width = ""+(60/wrJSON[getPresetChapter()]["chances"].length)+"%";
+                            wrTh.innerHTML = `${wrJSON[getPresetChapter()-1]["chances"][col]["percentage"]}%`;
+                            wrTh.style.width = ""+(60/wrJSON[getPresetChapter()-1]["chances"].length)+"%";
                         }
                         wrTr1.appendChild(wrTh);
                     }
                     wrBody.appendChild(wrTr1);
                     let wrTr = document.createElement("tr");
-                    for (let col = -1; col < wrJSON[getPresetChapter()]["chances"].length; col++) {
+                    for (let col = -1; col < wrJSON[getPresetChapter()-1]["chances"].length; col++) {
                         let wrTd = document.createElement("td");
                         if (col === -1) {
                             wrTd.innerHTML = `<img src="${chapter_icons[getPresetChapter()]}" title="Your selected chapter on the website"> / ${langUI("Bonus")}`;
                         } else {
-                            wrTd.innerHTML = `${wrJSON[getPresetChapter()]["chances"][col]["amount"]} ${goods_icons[
+                            wrTd.innerHTML = `${wrJSON[getPresetChapter()-1]["chances"][col]["amount"]} ${goods_icons[
                                 Object.keys(goods_icons).find(key => 
-                                    key.toLowerCase() === wrJSON[getPresetChapter()]["chances"][col]["subType"].toLowerCase())]}`;
+                                    key.toLowerCase() === wrJSON[getPresetChapter()-1]["chances"][col]["subType"].toLowerCase())]}`;
                         }
                         wrTr.appendChild(wrTd);
                     }

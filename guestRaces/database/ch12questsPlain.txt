@@ -5,9 +5,9 @@ Deliver 100,000 Mana
 1x rune_shard
 
 Spend 20 Knowledge Points
-1x marble
-1x steel
-1x planks
+1x relic_marble
+1x relic_steel
+1x relic_planks
 
 Research Advanced Scouts
 150000x coins
@@ -32,7 +32,7 @@ Research Dwarven Steel Manufactory Upgrades
 300000x coins
 
 Collect 30,000 Steel
-2x steel
+2x relic_steel
 
 Collect 1,000,000 Supplies
 1x INS_TR_AMT_10
@@ -41,7 +41,7 @@ Research Growing Planks Manufactory Upgrades
 20000x mana
 
 Collect 30,000 Planks
-2x planks
+2x relic_planks
 
 Collect 1000 Sentient Goods of your Normal Boosted Good
 1x broken_shards
@@ -72,7 +72,7 @@ Have 4 Canals
 30000x supplies
 
 Research Early Elemental Manifestations
-2000x minerals
+2000x gr7_toll
 
 Build an Air Manifestation + Build a Fire Manifestation
 2500x seeds
@@ -103,7 +103,7 @@ Collect 200 Elvenar Essences
 1x broken_shards
 
 Research Modernized Residences
-2x spell_power_of_provision
+2x spell_supply_production_boost_1
 
 Have 10 Residences at level 28
 5x knowledge_points
@@ -154,7 +154,7 @@ Produce 40 Beverages + Produce 10 Bread
 400000x coins
 
 Have at least 5 Workshops at level 20 + Produce 20 Toolboxes
-3x spell_power_of_provision
+3x spell_supply_production_boost_1
 
 Collect 25,000 Minerals
 22000x mana
@@ -166,7 +166,7 @@ Buy 1 Knowledge Point
 150000x coins
 
 Spend 1 Knowledge Point
-3x spell_ensorcelled_endowment
+3x spell_neighborly_help_boost_1
 
 Research a Monument, a Statue and a Temple
 2x spell_good_production_boost_1
@@ -184,7 +184,7 @@ Have 1 Torch Fountain
 30000x supplies
 
 Deliver 20,000 [T1 Senteint Goods Boost]
-10000x minerals
+10000x gr7_toll
 
 Research Final Elemental Manifestations
 200000x coins

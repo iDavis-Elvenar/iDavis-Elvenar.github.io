@@ -24,7 +24,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
-    "", "", "", "", "", "", "", "", "", "", "random" ];
+    "", "", "", "", "", "", "", "", "", "spell_pet_food_1", "random" ];
 
 var numberOfChapters = 19;
 
@@ -137,6 +137,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten": "1x Echoes of the Forgotten Artifact",
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": "1x Twilight Phoenix Artifact",
     "A_Evt_Evo_May_XXII_Flower_Goblin_Epiphany": "1x Flower Goblin Epiphany Artifact",
+    "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": "1x Glory of the Nimble Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -203,7 +204,7 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "july_xxii",
+    //"july_xxii",
 ]
 
 var allEvents = {
@@ -436,6 +437,57 @@ var goods_icons = {
     "spell_knowledge_boost_1": "<img src='https://i.ibb.co/cxTn3yM/Spell-knowledge-boost-1-small.png' title='Inspiring Meditation'><br>",
     "random": "<img src='https://i.ibb.co/4Y4qbR1/random-questionmark.png' title='Random'><br>",
     "premium": "<img src='https://i.ibb.co/cYyST31/Premium-small.png' title='Diamonds'><br>",
+    "diamonds": "<img src='https://i.ibb.co/cYyST31/Premium-small.png' title='Diamonds'><br>",
+    "gr6_fertilizer": "<img src='https://i.ibb.co/pPHTWTT/gr6-fertilizer.png' title='Fertilizer'><br>",
+    "gr6_apples": "<img src='https://i.ibb.co/Y7c1L9J/gr6-apple.png' title='Apple'><br>",
+    "spell_neighborly_help_boost_1": "<img src='https://i.ibb.co/8BsQZ4W/Spell-neighborly-help-boost-1-small.png' title='Ensorcelled Endowment'><br>",
+    "gr7_toll": "<img src='https://i.ibb.co/yB6PYm2/gr7-toll.png' title='Minerals'><br>",
+    "spell_supply_production_boost_1": "<img src='https://i.ibb.co/JcGk0d7/Spell-supply-production-boost-1-small.png' title='Power of Provision'><br>",
+    "gr8_gravegoods": "<img src='https://i.ibb.co/GpfW8tQ/gr8-gravegoods.png' title='Grave Goods'><br>",
+    "b_gr8_aw1_shards": "<img src='https://i.ibb.co/b3YfVpy/b-gr8-aw1-shards.png' title='Rune Shard for Pyramid of Purification'><br>",
+    "b_gr8_aw2_shards": "<img src='https://i.ibb.co/Z6gcjn4/b-gr8-aw2-shards.png' title='Rune Shard for Lighthouse of good Neighborhood'><br>",
+    "gr9_constructzero": "<img src='https://i.ibb.co/Gdkh3tQ/gr9-constructzero.png' title='c001-F_Basic'><br>",
+    "gr9_constructa": "<img src='https://i.ibb.co/fDBXrxx/gr9-constructa.png' title='c724-d_Breeze'><br>",
+    "gr9_constructc": "<img src='https://i.ibb.co/tBKqhgJ/gr9-constructc.png' title='c408-b_Mechatron'><br>",
+    "gr9_constructb": "<img src='https://i.ibb.co/CbzHP94/gr9-constructb.png' title='c331-m_Blossom'><br>",
+    "gr9_constructd": "<img src='https://i.ibb.co/nzLSHMg/gr9-constructd.png' title='c259-h_Shepherd'><br>",
+    "gr9_elvenarin": "<img src='https://i.ibb.co/ykhzkKw/gr9-elvenarin.png' title='Elvenarin'><br>",
+    "gr9_humanium": "<img src='https://i.ibb.co/kxDzSm4/gr9-humanium.png' title='Humanium'><br>",
+    "gr9_elvarium": "<img src='https://i.ibb.co/wJ4CZfQ/gr9-elvarium.png' title='Elvarium'><br>",
+    "b_gr9_aw1_shards": "<img src='https://i.ibb.co/cgJgpbH/b-gr9-aw1-shards.png' title='Rune Shard for D111 - Timewarp'><br>",
+    "b_gr9_aw2_shards": "<img src='https://i.ibb.co/hXsWbSR/b-gr9-aw2-shards.png' title='Rune Shard for D222 - Simia Sapiens'><br>",
+    "spell_teleport_1": "<img src='https://i.ibb.co/G53d8kw/Spell-Teleport-small.png' title='Teleport'><br>",
+    "spell_pet_food_1": "<img src='https://i.ibb.co/58fnvtJ/pet-food-small.png' title='Pet Food'><br>",
+    "b_gr10_aw1_shards": "<img src='https://i.ibb.co/B6cTs5S/b-gr10-aw1-shards.png' title='Rune Shard for Vortex of Storage'><br>",
+    "b_gr10_aw2_shards": "<img src='https://i.ibb.co/nr2YsH1/b-gr10-aw2-shards.png' title='Rune Shard for Thermal Springs of Youth'><br>",
+    "b_gr11_aw1_shards": "<img src='https://i.ibb.co/6ZqDpy6/b-gr11-aw1-shards.png' title='Rune Shard for Spire Library'><br>",
+    "b_gr11_aw2_shards": "<img src='https://i.ibb.co/4KW0Vnr/b-gr11-aw2-shards.png' title='Rune Shard for Tournament Arena'><br>",
+    "ch17_luxuries": "<img src='https://i.ibb.co/P4gVCFy/ch17-luxuries.png' title='Luxurious Luxuries'><br>",
+    "ch17_artifacts": "<img src='https://i.ibb.co/F78mpLp/ch17-artifacts.png' title='Antique Artifacts'><br>",
+    "ch17_delicacies": "<img src='https://i.ibb.co/QcFxvbR/ch17-delicacies.png' title='Delicious Delicacies'><br>",
+    "b_ch17_aw1_shards": "<img src='https://i.ibb.co/B3ZYhZ6/b-ch17-aw1-shards.png' title='Rune Shard for Dragon Ark'><br>",
+    "b_ch17_aw2_shards": "<img src='https://i.ibb.co/cQ55cpw/b-ch17-aw2-shards.png' title='Rune Shard for Oracle of Fortune'><br>",
+    "ch18_fire": "<img src='https://i.ibb.co/YdV5CL7/ch18-fire.png' title='Fire Elementals'><br>",
+    "ch18_water": "<img src='https://i.ibb.co/2NgbLCS/ch18-water.png' title='Water Elementals'><br>",
+    "ch18_wind": "<img src='https://i.ibb.co/v1tGqGx/ch18-wind.png' title='Wind Elementals'><br>",
+    "ch18_earth": "<img src='https://i.ibb.co/vq6WCW2/ch18-earth.png' title='Earth Elementals'><br>",
+    "ch18_badge": "<img src='https://i.ibb.co/f0pd5Qk/ch18-badge.png' title='Badge of Team Spirit'><br>",
+    "b_ch18_aw1_shards": "<img src='https://i.ibb.co/BKrD5zt/b-ch18-aw1-shards.png' title='Rune Shard for Shrine of the Champions'><br>",
+    "b_ch18_aw2_shards": "<img src='https://i.ibb.co/JCWGPGs/b-ch18-aw2-shards.png' title='Rune Shard for Temple of Spirits'><br>",
+    "crafting_slots_refresh": "<img src='https://i.ibb.co/MBGNBL9/Sipof-Clarity-small.png' title='Sip of Clarity'><br>",
+    "ch19_magic1": "<img src='https://i.ibb.co/b7qh27Z/ch19-magic1.png' title='White Magic'><br>",
+    "ch19_magic2": "<img src='https://i.ibb.co/c1PXS1v/ch19-magic2.png' title='Black Magic'><br>",
+    "ch19_creatures1": "<img src='https://i.ibb.co/v33tCFC/ch19-creatures1.png' title='Creature of the Light'><br>",
+    "ch19_creatures2": "<img src='https://i.ibb.co/QnKVhbn/ch19-creatures2.png' title='Creature of the Night'><br>",
+    "ascendedmarble": "<img src='https://i.ibb.co/pZtPMZ6/ascendedmarble.png' title='Primordial Minerals'><br>",
+    "ascendedsteel": "<img src='https://i.ibb.co/XXm5hc5/ascendedsteel.png' title='Ignited Ingots'><br>",
+    "ascendedplanks": "<img src='https://i.ibb.co/YPd0YnB/ascendedplanks.png' title='Scholarly Sprouts'><br>",
+    "ascendedcrystal": "<img src='https://i.ibb.co/1rYyB1N/ascendedcrystal.png' title='Ethereal Aerosols'><br>",
+    "ascendedscrolls": "<img src='https://i.ibb.co/RcdYQM8/ascendedscrolls.png' title='Wonder Wax'><br>",
+    "ascendedsilk": "<img src='https://i.ibb.co/7p27kv6/ascendedsilk.png' title='Finest Flying Powder'><br>",
+    "ascendedelixir": "<img src='' title='ascendedelixir'><br>",
+    "ascendedmagic_dust": "<img src='' title='ascendedmagic_dust'><br>",
+    "ascendedgems": "<img src='' title='ascendedgems'><br>",
 }
 
 var chapter_icons = {

@@ -33,19 +33,19 @@ Spend 10 Knowledge Points
 1x ins_rf_cn_10
 
 Research Dune Crystal Manufactories
-5000x obsidian
+5000x sentientcrystal
 
 Scout 1 Province
 5000x crystal
 
 Research Dragon Scrolls Manufactory Upgrades
-5000x arcane_ink
+5000x sentientscrolls
 
 Gain 200,000 Mana
 5000x scrolls
 
 Research Fairy Silk Manufactory Upgrades
-5000x royal_velvet
+5000x sentientsilk
 
 Place 3 Trade Offers Accept 3 Trade Offers
 5000x silk
@@ -54,12 +54,12 @@ Research Sentient Goods Production Boost
 2x INS_TR_AMT_300
 
 Upgrade your Trader to level 4 + Have 1 [T2 Sentient Goods Boost] Manufactory level 12 or higher
-3000x moonstone
-3000x platinum
-3000x tree_gum
+3000x sentientmarble
+3000x sentientsteel
+3000x sentientplanks
 
 Give Neighborly Help 20 Times + Have 1 [T2 Sentient Goods Boost] Manufactory level 16 or higher
-4x spell_ensorcelled_endowment
+4x spell_neighborly_help_boost_1
 
 Unlock Goldsmith Technology + Have 1 [T2 Sentient Goods Boost] Manufactory level 20 or higher
 2x INS_TR_AMT_840
@@ -102,7 +102,7 @@ Have 6 Goldsmiths Level 2 + Have 3 Trap Makers Level 2
 48000x supplies
 
 Unlock Robust Workshops 2
-3x spell_power_of_provision
+3x spell_supply_production_boost_1
 
 Upgrade the Temple of the Dunes to level 3
 1x rune_shard
@@ -170,15 +170,15 @@ Research the Temple of Sustainability
 30000x supplies
 
 Build the Temple of Sustainability
-2000x obsidian
-2000x arcane_ink
-2000x royal_velvet
+2000x sentientcrystal
+2000x sentientscrolls
+2000x sentientsilk
 
 Have 8 Goldsmiths Level 4 + Have 4 Trap Makers Level 4
 7000x seeds
 
-Collect 20,000 Traps
-10000x grave_goods
+Collect 20,000 Traps OR Deliver 5000 Traps
+10000x gr8_gravegoods
 
 Research The Venom Drone Rider
 4000x mc_lm

@@ -3,6 +3,7 @@ var images_buildings = {
     "A_Evt_July_XXII_Coral_Fountain":"https://i.ibb.co/b29Rhpk/coral-fountain.png",
     "A_Evt_July_XXII_Savory_Bites":"https://i.ibb.co/1RrHv2D/savory-bites.png",
     "A_Evt_July_XXII_Winners_Parade":"https://i.ibb.co/SxM2L4w/winners-parade.png",
+    "A_Evt_Evo_July_XXII_Glory_of_the_Nimble":"https://i.ibb.co/6WJPfRk/glory-of-the-nimble.png",
     "A_Evt_May_XXII_Hummingbird_Temple":"https://i.ibb.co/M7fkC3Z/hummingbird-temple.png",
     "A_Evt_May_XXII_Primordial_Gecko":"https://i.ibb.co/cQHJCPQ/primordial-gecko.png",
     "A_Evt_May_XXII_Soothing_Pond":"https://i.ibb.co/BsqLx1P/soothing-pond.png",

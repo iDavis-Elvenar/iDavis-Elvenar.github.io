@@ -32,7 +32,7 @@ Have a [T3 Boost+1 ] Manufactory at level 12 or higher + Unlock Advanced Trader 
 2x INS_TR_AMT_840
 
 Upgrade your Trader to level 5 + Place 5 Trade Offers + Accept 5 Trade Offers
-1x runeshard_pyramid_of_purification
+1x b_gr8_aw1_shards
 
 Collect 15,000 Seeds + Collect 20,000 Elixir
 3x knowledge_points
@@ -56,13 +56,13 @@ Have a [T3 Boost+1 ] Manufactory at level 24 or higher + Research Sentient Good 
 10x relic_elixir
 
 Build a port for D000-b "Core"
-1x runeshard_lighthouse_of_good_neighborhood
+1x b_gr8_aw2_shards
 
 Collect 1,000 C001-f "Basic"
-200x c001-F_Basic
+200x gr9_constructzero
 
 Collect 400 c724-d "Breeze" + Collect 400 c331-m "Blossom"
-3x spell_ensorcelled_endowment
+3x spell_neighborly_help_boost_1
 
 Collect 400 C408-b "Mechatron" + Collect 400 C259-h "Shepherd"
 20000x mana
@@ -71,9 +71,9 @@ Unlock the Ports of the Production Islands
 1x INS_KP_AW_5
 
 Gain 10,000 Silly Soap + Gain 10,000 Alloy Shrooms + Gain 10,000 Cosmic Bismuth
-3000x silly_soap
-3000x alloy_shrooms
-3000x cosmic_bismuth
+3000x sentientelixir
+3000x sentientmagic_dust
+3000x sentientgems
 
 Build a port for D001-o "Engine" + Build a port for D003-r "Assembly"
 2x INS_TR_AMT_120
@@ -91,19 +91,19 @@ Have 8 Residences level 32 + Have 4 Workshops level 32 + Have 12 Ports for Produ
 1x INS_KP_AW_15
 
 Produce 750 Air Filters
-200x c724-d_Breeze
+200x gr9_constructa
 
 Produce 520 Electric Shocks
-200x c408-b_Mechatron
+200x gr9_constructc
 
 Produce 670 Rain Jellyfish	
-200x c331-m_Blossom
+200x gr9_constructb
 
 Product 600 Protein Bars
-200x c259-h_Shepherd
+200x gr9_constructd
 
 Collect 100 Humanium + Collect 100 Elvarium
-10000x elvenarin
+10000x gr9_elvenarin
 
 Have 16 Ports for Production Islands + Upgrade D000-b "Core" to level 2
 2x INS_TR_AMT_480
@@ -118,7 +118,7 @@ Gain 20,000 Gems + Gain 20,000 Cosmic Bismuth
 5x knowledge_points
 
 Unlock the First Upgrades of the Production Islands
-500x c001-f_Basic
+500x gr9_constructzero
 
 Have 4 Production Islands at level 2
 1x INS_TR_AMT_1200
@@ -133,7 +133,7 @@ Gain 80,000 Mana
 5000x seeds
 
 Collect 400 Humanium + Collect 400 Elvarium
-12000x elvenarin
+12000x gr9_elvenarin
 
 Unlock Evolved Main Hall
 30000x mana
@@ -142,7 +142,7 @@ Upgrade your Main Hall to level 32
 40000x mana
 
 Have 30 Enigma Avenues
-3x spell_ensorcelled_endowment
+3x spell_neighborly_help_boost_1
 
 Upgrade D000-b "Core" to level 3
 3x knowledge_points
@@ -157,7 +157,7 @@ Have 16 Production Islands at level 3
 4000x seeds
 
 Have 1 Step Stones + Have 1 Recharge Bay
-14000x elvenarin
+14000x gr9_elvenarin
 
 Upgrade D000-b "Core" to level 4 + Collect 5,000 C001-f "Basic"
 1x INS_KP_AW_10
@@ -169,19 +169,19 @@ Collect 20,000,000 Coins + Unlock the Final Upgrades of the Production Islands
 1x INS_TR_AMT_840
 
 Gain 20 Relics + Collect 500 Elvarium
-200x humanium
+200x gr9_humanium
 
 Collect 20,000 Divine Seeds + Have 4 Production Islands at level 4
 1x ins_rf_spl_25
 
 Gain 2,000,000 Supplies + Collect 500 Humanium
-200x elvarium
+200x gr9_elvarium
 
 Collect 200,000 Mana + Have 8 Production Islands at level 4
 3x INS_KP_AW_3
 
 Have six Manufactories at level 25 or higher
-1x building_butterfly_shrub(1x1)
+1x A_Gr7_Premium_Small1
 
 Have 12 Production Islands at level 4
 4x relic_elixir
@@ -192,15 +192,15 @@ Scout 1 Province + Buy 5 Knowledge Points
 1x spell_knowledge_boost_1
 
 Unlock Evolved Workshops 2 + Have at least 1 Workshop at level 33
-4x spell_ensorcelled_endowment
+4x spell_neighborly_help_boost_1
 
 Unlock Evolved Residences 2 + Have at least 1 Residence at level 33
 3x spell_good_production_boost_1
 
 Place 10 Trade Offers + Accept 10 Trade Offers
-2500x silly_soap
-2500x alloy_shrooms
-2500x cosmic_bismuth
+2500x sentientelixir
+2500x sentientmagic_dust
+2500x sentientgems
 
 Unlock the Senior Orc Strategist + Solve 4 encounters
 5000x tg_hm
@@ -217,7 +217,7 @@ Give Neighborly Help 25 times
 25x INS_TR_AMT_3
 
 Deliver 200,000 Elvenarin + Deliver 20,000 Divine Seeds
-1000x c001-F_Basic
+1000x gr9_constructzero
 
 Deliver 5,000 C724-d "Breeze" + Deliver 5,000 C408-b "Mechatron"
 5x INS_TR_AMT_45

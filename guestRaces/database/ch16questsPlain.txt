@@ -2,7 +2,7 @@ Spend 10 Knowledge Points
 1x INS_KP_AW_5
 
 Produce Beverages 15 times
-3x spell_power_of_provision
+3x spell_supply_production_boost_1
 
 Collect 300,000 Mana
 1x ins_rf_cn_25
@@ -11,7 +11,7 @@ Solve 4 encounters
 2x INS_TR_AMT_120
 
 Produce 10 Bread
-5x spell_power_of_provision
+5x spell_supply_production_boost_1
 
 Research Senate
 3x knowledge_points
@@ -38,22 +38,22 @@ Spend 20 Knowledge Points
 3x INS_TR_AMT_60
 
 Research Beer Festival
-12000x obsidian
+12000x sentientcrystal
 
 Have at least 5 Beer Festivals
 5x INS_TR_AMT_10
 
 Produce 2,000 Strawberry Beer
-3x spell_ensorcelled_endowment
+3x spell_neighborly_help_boost_1
 
 Research Tea House
 10000x mc_ma
 
 Have at least 5 Tea Houses
-12000x velvet
+12000x sentientsilk
 
 Produce 2,000 Purple Tea
-3x spell_ensorcelled_endowment
+3x spell_neighborly_help_boost_1
 
 Scout 1 Province
 1x INS_KP_AW_5
@@ -80,7 +80,7 @@ Upgrade the Fairy Embassy to level 2
 1x broken_shards
 
 Discuss 1,000 Dwarven Amendments
-12000x arcane_ink
+12000x sentientscrolls
 
 Discuss 1,000 Fairy Amendments + Serve 5 Purple Teas
 100000x mana
@@ -89,7 +89,7 @@ Research Senate level 3
 2x INS_TR_AMT_300
 
 Upgrade the Senate to level 3
-1000x spell_fragments
+1000x craft_spell_fragments
 
 Donate 500,000 Mana
 1x INS_KP_AW_10
@@ -101,31 +101,31 @@ Unlock the Meditation Circle
 4x relic_silk
 
 Build the Meditation Circle
-2x combining_catalyst
+2x combiningcatalyst
 
 Collect 200 Inspirations
-1x teleport
+1x spell_teleport_1
 
 Solve 4 Encounters
 5x INS_TR_AMT_30
 
 Have 4 Manufactories at level 28 or higher
-1x pet_food
+1x spell_pet_food_1
 
 Unlock the Dwarven Embassy and Beer Festival level 3
 4x relic_crystal
 
 Have 3 Beer Festivals at level 3 or higher
-1x runeshard_vortex_of_storage
+1x b_gr10_aw1_shards
 
 Produce 5000 Strawberry Beer
 3x INS_TR_AMT_120
 
 Have 3 Tea Houses at level 3 or higher
-1x runeshard_thermal_springs_of_youth
+1x b_gr10_aw2_shards
 
 Collect 5000 Dwarven Propositions + Collect 5000 Fairy Propositions
-3x INS_RF_CN_10
+3x ins_rf_cn_10
 
 Have 10 Residences of at least level 36
 6x spell_supply_production_boost_1
@@ -134,7 +134,7 @@ Discuss 2000 Fairy Amendments + Discuss 2000 Dwarven Amendments
 5x knowledge_points
 
 Upgrade the Senate to level 4 + Upgrade the Meditation Circle to level 3
-1x building_dancing_fountain(A_Gr9_Premium_Small1)
+1x A_Gr9_Premium_Small1
 
 Donate 1000 Purple Tea + Donate 1000 Strawberry Beers
 10x INS_TR_AMT_3
@@ -143,13 +143,13 @@ Have a Boosted T5 Manufactory at level 29 or higher
 3x spell_good_production_boost_1
 
 Produce Basket of Groceries 10 times + Upgrade 4 Workshops to level 36 or higher
-1x INS_RF_SPL_50
+1x ins_rf_spl_50
 
 Declare 2000 Statutes
 120000x mana
 
 Unlock Main Hall level 36
-2x combining_catalyst
+2x combiningcatalyst
 
 Upgrade your Main Hall to level 36
 1x ins_rs_1
@@ -176,7 +176,7 @@ Collect 40,000,000 Coins
 4x relic_scrolls
 
 Brew Beer 5 times
-3x INS_RF_SPL_10
+3x ins_rf_spl_10
 
 Solve 5 Tournament Encounters
 2x INS_KP_AW_5
@@ -200,16 +200,16 @@ Donate 20,000,000 Coins
 1x knowledge_points
 
 Invest 100 Knowledge Points in an Ancient Wonder of another player
-3x combining_catalyst
+3x combiningcatalyst
 
 Unlock Residences level 37
 1x spell_teleport_1
 
 Collect 1000 Inspirations OR Dismiss 250 Inspirations
-4x INS_RF_SPL_5
+4x ins_rf_spl_5
 
 Declare 5000 Statutes OR Dismiss 1250 Statutes
-4x INS_RF_CN_5
+4x ins_rf_cn_5
 
 Collect 500,000 Mana
 15000x seeds

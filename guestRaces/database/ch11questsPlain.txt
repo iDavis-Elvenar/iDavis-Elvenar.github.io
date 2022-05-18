@@ -46,7 +46,7 @@ Unlock the Halflings Farm
 2x relic_elixir
 
 Have 6 Farms
-2x relic_magicdust
+2x relic_magic_dust
 
 Collect 600 Fertilizer
 2x relic_gems
@@ -61,7 +61,7 @@ Have 6 Fields
 1x rune_shard
 
 Collect 5000 Grain
-300x fertilizer
+300x gr6_fertilizer
 
 Have 5 Fields Level 2
 10000x mana
@@ -110,7 +110,7 @@ Upgrade the Spring Grove to Level 2
 
 Have 3 Farms Level 3
 120000x coins
-1x ins_kp_aw_?
+1x spell_knowledge_boost_1
 
 Research Rearranged Main Hall
 30000x mana
@@ -122,7 +122,7 @@ Upgrade your Main Hall to level 26 or higher
 
 Collect 600 Tingle Breads + Collect 900 Savvy Soups + Collect 1500 Jolly Jellies
 2x spell_good_production_boost_1
-2x spell_ensorcelled_endowment
+4x spell_neighborly_help_boost_1
 
 Deliver 20,000 Divine Seeds
 40000x mana
@@ -135,11 +135,11 @@ Produce Beverages 40 times + Produce Bread 20 times + Produce Basket of Grocerie
 
 Gain 5,000 Elixir
 3x relic_elixir
-200x fertilizer
+200x gr6_fertilizer
 
 Research Halflings Elixir Manufactory
 5000x elixir
-400x fertilizer
+400x gr6_fertilizer
 
 Gain 10,000 Magic Dust
 3x relic_magic_dust
@@ -183,7 +183,7 @@ Produce Beverages 4 times + Produce Bread 2 times
 10000x supplies
 
 Research Ranger Promotion
-1000x apple
+1000x gr6_apples
 
 Gain 200,000 Mana + Deliver 20,000 Divine Seeds
 5x knowledge_points

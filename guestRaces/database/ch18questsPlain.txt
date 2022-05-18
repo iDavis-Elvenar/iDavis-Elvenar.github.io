@@ -2,7 +2,7 @@ Collect 25,000 Seeds
 20000x unurium
 
 Buy 8 Knowledge Points
-2x combining_catalyst
+2x combiningcatalyst
 
 Collect 30,000 Unurium
 15000x seeds
@@ -35,13 +35,13 @@ Have a Boosted+2 T1 Manufactory of at least level 32 + Use 10 Instants
 3x INS_KP_AW_5
 
 Collect 1000 Ascended Goods + Have at least 3 Basic Manufactories of level 32 or higher
-4x INS_RF_CN_10
+4x ins_rf_cn_10
 
 Donate 1000 Primordial Minerals
 15000x unurium
 
 Unlock the Superior Trader
-2x INS_RF_SPL_20
+2x ins_rf_spl_20
 
 Accept 6 Trade Offers
 1x spell_pet_food_1
@@ -62,7 +62,7 @@ Collect 40,000,000 Coins
 5x spell_neighborly_help_boost_1
 
 Unlock the Elemental Park Street + Have at least 12 tiles of the Elemental Park Street
-2x combining_catalyst
+2x combiningcatalyst
 
 Unlock the Authentic Main Hall
 3x knowledge_points
@@ -104,7 +104,7 @@ Have a Gate of Dimensions Level 2
 15000x mc_lm
 
 Earn 50 Badges of Team Spirit
-2x INS_RF_SPL_33
+2x ins_rf_spl_33
 
 Unlock the Element Hubs Level 2
 5x INS_TR_AMT_60
@@ -116,7 +116,7 @@ Welcome 5000 Elves to the Park
 4x spell_good_production_boost_1
 
 Have a Gate of Dimensions Level 3
-2x combining_catalyst
+2x combiningcatalyst
 
 Earn 100 Badges of Team Spirit + Welcome 10,000 Visitors to the Park
 2x ins_rs_1
@@ -146,7 +146,7 @@ Have a Gate of Dimensions Level 4 + Have 540 completed provinces
 200000x mana
 
 Unlock the Element Hubs Level 3
-3x INS_RF_CN_15
+3x ins_rf_cn_15
 
 Have at least 12 Element Hubs on Level 3 + Welcome 10,000 Humans to the Park
 20x diamonds
@@ -155,7 +155,7 @@ Do 1 Trial
 25x ch18_badge
 
 Have at least 50 tiles of the Team Street in your city
-1x INS_RF_SPL_50
+1x ins_rf_spl_50
 
 Have at least 4 Workshops of level 41 or higher
 2x spell_teleport_1

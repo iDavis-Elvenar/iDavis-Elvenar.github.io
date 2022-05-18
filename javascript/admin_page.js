@@ -362,12 +362,33 @@ function handleBuildingsJSON() {
                                 }
                                 //PRIDAJ WEIGHTED REWARD AK EXISTUJE
                                 for (let wr = 0; wr < weightedRewards.length; wr++) {
-                                    if (weightedRewards[wr]["buildingID"].substring(0, weightedRewards[wr]["buildingID"].lastIndexOf("_"))
-                                    === b["id"]) {
-                                        if (b.hasOwnProperty("weightedRewards")) {
-                                            b["weightedRewards"].push(weightedRewards[wr]);
-                                        } else {
-                                            b["weightedRewards"] = [weightedRewards[wr]];
+                                    if (weightedRewards[wr]["buildingID"].includes("::Stage_")) {
+                                        let stage = weightedRewards[wr]["buildingID"].split("::")[1];
+                                        if (weightedRewards[wr]["buildingID"].substring(0, weightedRewards[wr]["buildingID"].split("::")[0].lastIndexOf("_"))
+                                        === b["id"]) {
+                                            var wrSpecificObject = JSON.parse(JSON.stringify(weightedRewards[wr]));
+                                            wrSpecificObject["buildingID"] = wrSpecificObject["buildingID"].split("::")[0];
+
+                                            if (b.hasOwnProperty("weightedRewards")) {
+                                                if (b["weightedRewards"].hasOwnProperty(stage)) {
+                                                    b["weightedRewards"][stage].push(wrSpecificObject);
+                                                } else {
+                                                    b["weightedRewards"][stage] = [wrSpecificObject];
+                                                }
+                                            } else {
+                                                b["weightedRewards"] = {};
+                                                b["weightedRewards"][stage] = [wrSpecificObject]
+                                            }
+                                        }
+                                    } else {
+                                        if (weightedRewards[wr]["buildingID"].substring(0, weightedRewards[wr]["buildingID"].lastIndexOf("_"))
+                                        === b["id"]) {
+                                            console.log("Ba")
+                                            if (b.hasOwnProperty("weightedRewards")) {
+                                                b["weightedRewards"].push(weightedRewards[wr]);
+                                            } else {
+                                                b["weightedRewards"] = [weightedRewards[wr]];
+                                            }
                                         }
                                     }
                                 }

@@ -5,7 +5,7 @@ Scout 1 Province OR Have 600 completed provinces
 2x broken_shards
 
 Unlock the Prepared Barracks
-15000x eb_lm
+15000x unit_1
 
 Have an Armory at level 41 or higher + Train Units
 10000x mc_lr
@@ -46,7 +46,7 @@ Unlock the Fortress of Revenge
 3x INS_TR_AMT_120
 
 Collect 2000000 Mana + Build the Fortress of Revenge
-2x combining_catalyst
+2x combiningcatalyst
 
 Use 10 Enchantments + Use 10 Instants
 1x crafting_slots_refresh
@@ -58,10 +58,10 @@ Collect 200000 White Magic
 28000x sentientcrystal
 
 Have 5 Towers
-2x INS_RF_GRR_5
+2x ins_rf_grr_5
 
 Unlock the Prepared Workshops
-3x INS_RF_CN_15
+3x ins_rf_cn_15
 
 Upgrade 4 Workshops to level 42 + Produce 10 Beverages + Produce 5 Bread
 1x b_ch18_aw2_shards
@@ -79,7 +79,7 @@ Have 4 Towers of Darkness + Collect 300000 Black Magic
 28000x sentientscrolls
 
 Unlock the Prepared Main Hall
-2x INS_RF_SPL_20
+2x ins_rf_spl_20
 
 Upgrade your Main Hall to Level 42
 20000x ascendedplanks
@@ -118,7 +118,7 @@ Have 580 Completed Provinces
 100000x ch19_magic1
 
 Unlock the Breeding Facilities
-1x INS_RF_CN_33
+1x ins_rf_cn_33
 
 Collect Unurium
 2x spell_teleport_1
@@ -177,7 +177,7 @@ Have 6 Breeding Facilities of at least Level 3
 4x spell_good_production_boost_1
 
 Unlock Optimally Prepared Workshops + Unlock Optimally Prepared Main Hall
-3x INS_RF_SPL_5
+3x ins_rf_spl_5
 
 Upgrade your Main Hall to Level 43 + Upgrade Workshops to level 43
 4x spell_supply_production_boost_1
@@ -226,10 +226,10 @@ Unlock the Vallorian Seal Tower OR Unlock the Tree of Enlightenment
 20000x ascendedmarble
 
 Forge a Rune
-3x combining_catalyst
+3x combiningcatalyst
 
 Give 30 Neighbourly Help
-2x INS_RF_SPL_10
+2x ins_rf_spl_10
 
 Unlock the Ultimate Fortress of Revenge
 30000x unurium
@@ -259,7 +259,7 @@ Collect 500000 Mana + Collect 50000 Seeds + Collect 100000 Unurium
 1x crafting_slots_refresh
 
 Produce a Feline Aromatherapy
-1x INS_RF_CN_20
+1x ins_rf_cn_20
 
 Solve 10 Encounters
 1x INS_KP_AW_30
