@@ -70,6 +70,12 @@
             </button>
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto text-center">
+                    <li class="bigSpacing nav-item dropdown">
+                        <a class="nav-link text-warning dropdown-toggle" href="#" id="navbar_guestraces" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <div class="dropdown-menu bg-gradient_skin_background_to_skin_light_background" id="guestRacesDropdown" aria-labelledby="navbarDropdown" style="width: max-content">
+                        <!--<div class="dropdown-divider"></div>-->
+                    </div>
+                    </li>
                     <li class="bigSpacing">
                         <a href="buildings.html" class="nav-link text-warning" id="all_buildings"></a>
                     </li>
@@ -122,6 +128,9 @@
             document.getElementById("all_buildings").innerHTML = "&#x203A; "+langUI("All Buildings")+" &#x2039;";
             document.getElementById("all_events").innerHTML = langUI("All Events");
             document.getElementById("navbar_more").innerHTML = langUI("More");
+            document.getElementById("navbar_guestraces").innerHTML = langUI("All Guest Races");
+
+            generateGuestRacesDropdown();
         </script>
     </div>
 

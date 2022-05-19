@@ -13,23 +13,6 @@ var additionalTabsGuestRaces = {
     ],*/
 }
 
-var grIds = {
-    "dwarves": "ch6",
-    "fairies": "ch7",
-    "orcs": "ch8",
-    "woodelves": "ch9",
-    "sorcerers": "ch10",
-    "halflings": "ch11",
-    "elementals": "ch12",
-    "amuni": "ch13",
-    "constructs": "ch14",
-    "elvenar": "ch15",
-    "embassies": "ch16",
-    "tradersofunur": "ch17",
-    "teamspirit": "ch18",
-    "revengeofexile": "ch19",
-}
-
 var grBanners = {
     "ch6": "https://i.ibb.co/SPKXGVT/ch6-banner.png",
     "ch7": "https://i.ibb.co/Wcv4xNx/ch7-banner.png",

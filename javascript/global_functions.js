@@ -309,7 +309,11 @@ function generateGuestRacesDropdown() {
     for (let i = numberOfChapters; i >= 6; i--) {
         let a = document.createElement("a");
         a.className = "dropdown-item";
-        a.href = Object.keys(grIds).find(key => grIds[key] === "ch"+i)+".html";
+        if(location.href.toLowerCase().includes("/guestraces/")) {
+            a.href = Object.keys(grIds).find(key => grIds[key] === "ch"+i)+".html";
+        } else {
+            a.href = "guestRaces/"+Object.keys(grIds).find(key => grIds[key] === "ch"+i)+".html";
+        }
         a.id = "navitem_"+Object.keys(grIds).find(key => grIds[key] === i);
         a.innerHTML = chapterNames[i];
         let img = document.createElement("img");

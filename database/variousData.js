@@ -511,3 +511,20 @@ var chapter_icons = {
     18: "https://i.ibb.co/ZxGJSVv/ch18.png title='Team Spirit'",
     19: "https://i.ibb.co/Y4gW0Vy/ch19.png title='Revenge of the Exile'",
 }
+
+var grIds = {
+    "dwarves": "ch6",
+    "fairies": "ch7",
+    "orcs": "ch8",
+    "woodelves": "ch9",
+    "sorcerers": "ch10",
+    "halflings": "ch11",
+    "elementals": "ch12",
+    "amuni": "ch13",
+    "constructs": "ch14",
+    "elvenar": "ch15",
+    "embassies": "ch16",
+    "tradersofunur": "ch17",
+    "teamspirit": "ch18",
+    "revengeofexile": "ch19",
+}

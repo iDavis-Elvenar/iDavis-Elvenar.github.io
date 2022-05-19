@@ -73,17 +73,17 @@ var notifications = {
     },
     "8":{  // SPECIAL VIDEO PROMO
         "id":8,
-        "text":`<h4 class="alert-heading">InnoGames Revenue Review in 2022!</h4>
-  <p>There was a lot happening at InnoGames in 2021. In my newest video we are taking a look at the revenue of InnoGames in 2021, compare the revenue and growth of different games and analyze the performance of the InnoGames' newest titles. Finally, we will also say something about their potential impact on the future of the existing games!</p>
+        "text":`<h4 class="alert-heading">New Feature on the Website: Guest Races!</h4>
+  <p>I'm introducing the brand-new feature for the website - the Guest Races Story Questlines! There is a new space under the <b>All Guest Races</b> subpage that will get updated by a lot of additional content in the future. Check the introduction video below.</p>
   <hr>
-  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/nB6yfF73Fyg"></iframe></p>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/oIbfeeplXXA"></iframe></p>
     <hr>
     <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
-        "repeatAfter":1209600,
+        "repeatAfter":259200,
         "style":"info",
         "duration":1080,
-        "active":false,
-        "priority":30
+        "active":true,
+        "priority":50
     },
     "9":{  // SPECIAL VIDEO PROMO #2
         "id":9,
@@ -97,7 +97,7 @@ var notifications = {
         "repeatAfter":302400,
         "style":"info",
         "duration":500,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "10":{  // EVENTS SIMULTANEOUSLY
