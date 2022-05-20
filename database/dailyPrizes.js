@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
-    "july_xxii_": [ //dummy data
-        "kp_{15}",
+    "july_xxii_": [
+        "A_Evt_MM_XIX_MantaRay",
     ],
     
     "may_xxii_": [
