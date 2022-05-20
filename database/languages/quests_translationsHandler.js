@@ -173,7 +173,6 @@ function translateCondition(cond) {
 }
 
 function takeFromDictionary(input) {
-    console.log(input)
     if (input.split("...").length > 1) {
         endingWord = input.split("...")[1];
         return input.split("...")[0];
