@@ -91,6 +91,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "february_xxii_": "02/03/2022",
     "easter_xxii_": "03/17/2022",
     "may_xxii_": "04/14/2022",
+    "july_xxii_": "05/24/2022",
 }
 
 let questsLinks = {
@@ -108,6 +109,7 @@ let eventsDurations = {
     "february_xxii_": 22,
     "easter_xxii_": 22,
     "may_xxii_": 22,
+    "july_xxii_": 22,
 }
 
 let evoUpgradeCosts = {
