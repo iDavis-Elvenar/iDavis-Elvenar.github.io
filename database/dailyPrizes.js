@@ -3,6 +3,7 @@ var dailyPrizes = {
     "july_xxii_": [
         "A_Evt_MM_XIX_MantaRay",
         "A_Evt_MM_XIX_SharkTower",
+        "goods_standard_sentient_{1}", //frog_default3
     ],
     
     "may_xxii_": [
