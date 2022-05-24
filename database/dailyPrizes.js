@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_MM_XIX_SharkTower",
         "goods_standard_sentient_{1}", //frog_default3
         "A_Evt_July_XXI_Leviathan_Ferry",
+        "kp_{10}",
     ],
     
     "may_xxii_": [
