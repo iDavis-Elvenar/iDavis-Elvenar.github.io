@@ -54,7 +54,7 @@ let eventBanners = {
     "february_xxii_": "https://i.ibb.co/BnmPn0x/EL-akcia-febru-r-2022-banner.png",
     "easter_xxii_": "https://i.ibb.co/ZYkfV9P/EL-akcia-ve-k-noc-2022-banner.png",
     "may_xxii_": "https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png",
-    "july_xxii_": "https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png",
+    "july_xxii_": "https://i.ibb.co/nw1K2Dm/EL-akcia-j-l-2022-banner.png",
 }
 
 let eventVideos = {
@@ -70,6 +70,7 @@ let eventVideos = {
     "february_xxii_": "https://www.youtube.com/embed/uVduxQ4yhdo;https://www.youtube.com/embed/yXV73a8pla4",
     "easter_xxii_": "https://www.youtube.com/embed/tfQa9VOXeRA",
     "may_xxii_": "https://www.youtube.com/embed/AFkAsMvABP0",
+    //"july_xxii_": "https://www.youtube.com/embed/zqgJUn2kRNA",
 }
 
 let eventNames = {
@@ -91,7 +92,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "february_xxii_": "02/03/2022",
     "easter_xxii_": "03/17/2022",
     "may_xxii_": "04/14/2022",
-    "july_xxii_": "05/24/2022",
+    "july_xxii_": "05/25/2022",
 }
 
 let questsLinks = {
@@ -206,14 +207,13 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    //"july_xxii",
 ]
 
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
-            ["Lucky Little Fin","july_xxii_",false,true],
-            ["Naturally Amazing","may_xxii_",true,false],
+            ["Lucky Little Fin","july_xxii_",true,false],
+            ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
             ["Forbidden Ruins","january_xxii_",false,false],
@@ -249,8 +249,8 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
-            ["Lucky Little Fin","july_xxii_",false,true],
-            ["Naturally Amazing","may_xxii_",true,false],
+            ["Lucky Little Fin","july_xxii_",true,false],
+            ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
             ["Forbidden Ruins","january_xxii_",false,false],
