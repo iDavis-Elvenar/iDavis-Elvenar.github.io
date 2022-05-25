@@ -83,21 +83,21 @@ var notifications = {
         "style":"info",
         "duration":1080,
         "active":true,
-        "priority":50
+        "priority":10
     },
     "9":{  // SPECIAL VIDEO PROMO #2
         "id":9,
-        "text":`<h4 class="alert-heading">Prepare for the Naturally Amazing event 2022!</h4>
-  <p>The Naturally Amazing event has started! It's time to get as many rewards as possible, including brand new flower decorations to enhance various boosts in your city! I'm sharing the ways how you can prepare for this event as well as strategies for obtaining Naturally Amazing rewards in the video below.</p>
+        "text":`<h4 class="alert-heading">Introducing: Chests Comparator on the website!</h4>
+  <p>The Lucky Little Fin event comes with the chests rotation system and together with this event I'm introducing to you the brand-new tool on my website - the Chests Comparator. All the details can be found in the video below!</p>
   <hr>
-  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/TJ-byJvCf-4"></iframe></p><br>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/zqgJUn2kRNA"></iframe></p><br>
   <center><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Subscribe</a> to stay with the latest Elvenar videos!</center>
     <hr>
     <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
-        "repeatAfter":302400,
+        "repeatAfter":172800,
         "style":"info",
         "duration":500,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "10":{  // EVENTS SIMULTANEOUSLY
