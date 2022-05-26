@@ -7,6 +7,22 @@ var dailyPrizes = {
         "A_Evt_July_XXI_Leviathan_Ferry",
         "kp_{10}",
         "A_Evt_July_XXI_Diving_Platform",
+        "INS_UNIT_TG_HM_10",
+        "A_Evt_July_XXI_Manta_Boat",
+        "INS_REV_SQD_25",
+        "A_Evt_July_XXII_Coral_Fountain",
+        "runeshards-1_{2}",  //frog_runeshards2
+        "A_Evt_July_XXI_Mechanical_Seahorse",
+        "INS_RF_GRR_10",  //frog_grr_10
+        "INS_UNIT_TG_HR_10",
+        "A_Evt_July_XXII_Azure_Stables",
+        "INS_KP_AW_20",
+        "A_Evt_MM_XIX_WaterBubble",
+        "goods_standard_sentient_{1}",  //frog_default2
+        "A_Evt_MM_XIX_Corals",
+        "A_Evt_MM_XIX_Seahorse",
+        "runeshards-1_{3}",  //frog_runeshards1
+        "A_Evt_MM_XIX_CrabHotel",
     ],
     
     "may_xxii_": [
