@@ -63,12 +63,12 @@ var notifications = {
     },
     "7":{  // NEW BUILDING
         "id":7,
-        "text":`<h4 class="alert-heading">Black Friday!</h4>
-        <p>Black Friday is coming to Elvenar and the new building will be available to claim! You can find the parameters of the upcoming Earth Dragon <a href='buildings.html#A_Evt_BlackFriday_XXI_Gift_Dragon' target="_blank" class='alert-link'>here</a>.</p>`,
+        "text":`<h4 class="alert-heading">Elvenar is turning 7!</h4>
+        <p>To thank us for spending Elvenar's 7th Birthday Celebration together, InnoGames have a gift for us - the <a href='buildings.html#A_Evt_Generic_Festive_Fountain' target="_blank" class='alert-link'>Festive Fountain</a> building. Every player who logs in between June 1st and the night of June 3rd will receive this gift!</p>`,
         "repeatAfter":86400,
         "style":"warning",
         "duration":20,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "8":{  // SPECIAL VIDEO PROMO
@@ -82,7 +82,7 @@ var notifications = {
         "repeatAfter":259200,
         "style":"info",
         "duration":1080,
-        "active":true,
+        "active":false,
         "priority":10
     },
     "9":{  // SPECIAL VIDEO PROMO #2
@@ -107,7 +107,7 @@ var notifications = {
         "repeatAfter":18000,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":100
     },
 }

@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Evt_Generic_Festive_Fountain":"https://i.ibb.co/KV3GmPd/festive-fountain.png",
     "A_Evt_July_XXII_Azure_Stables":"https://i.ibb.co/jTvmRh6/azure-stables.png",
     "A_Evt_July_XXII_Coral_Fountain":"https://i.ibb.co/b29Rhpk/coral-fountain.png",
     "A_Evt_July_XXII_Savory_Bites":"https://i.ibb.co/1RrHv2D/savory-bites.png",
