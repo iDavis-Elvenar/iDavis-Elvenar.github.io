@@ -40,6 +40,7 @@
     <script src="../database/languages/langUI.js"></script>
     <script src="../javascript/notificationHandler.js"></script>
     <script src="../database/notifications.js"></script>
+    <script src="../database/googleads.js"></script>
     <script src="database/mixedData.js"></script>
     <script src="javascript/utils.js"></script>
     <script src="javascript/quests_handler.js"></script>
@@ -202,7 +203,7 @@
                     
                     <script>createGuestRaceHeader(getSelectedGuestRace());</script>
 
-                    <div style="margin-left: 3%; margin-right: 3%;">
+                    <div id="intro_content" style="margin-left: 3%; margin-right: 3%;">
                         <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">Intro<br></h5>
                         Hello and welcome to the <b>All Guest Races</b> - the brand-new subpage on my website! Here I will go through
                         all different chapters that we have in the game and for each I will create a different content, covering
@@ -218,17 +219,7 @@
                         the game! These lists include tasks, rewards and interactive tools for marking your quests as completed, as well as
                         highlighting them for your further preparation. 
                         <br><br>
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4154227292627045"
-                            crossorigin="anonymous"></script> <!-- In-article -->
-                        <ins class="adsbygoogle"
-                            style="display:block; text-align:center;"
-                            data-ad-layout="in-article"
-                            data-ad-format="fluid"
-                            data-ad-client="ca-pub-4154227292627045"
-                            data-ad-slot="9774392946"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                        <script>placeAd("horizontal", "intro_content")</script>
                         <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">How about the translations?<br></h5>
                         The <b>All Guest Races</b> subpage does not work with translation system of this website. For this reason,
                         I can't use your selected language for all of the content included. However, you are free to use any tool that comes
