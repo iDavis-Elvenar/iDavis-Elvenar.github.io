@@ -328,3 +328,17 @@ background-color: #b9881e;
 .bg-gradient_skin_background_to_skin_light_background {
     background-image: linear-gradient(to top right,#ecdec0, #ffffff) !important;
 }
+
+.midcontainer { width: 300px; height: 250px; display:block; margin:auto;  }
+.midcontainer2 { display:none; margin:auto; }
+.top-ad2{display:none;}
+
+@media(min-width: 768px) { 
+.midcontainer { width: 320px; height: 100px; }
+.midcontainer2 {  width: 320px; height: 100px; display:block; }
+}
+
+@media(min-width: 992px) { 
+.midcontainer { width: 300px; height: 250px; }
+.midcontainer2 { width: 300px; height: 250px;  } 
+ }
