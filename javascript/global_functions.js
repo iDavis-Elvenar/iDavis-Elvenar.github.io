@@ -323,3 +323,8 @@ function generateGuestRacesDropdown() {
         mainDiv.appendChild(a);
     }
 }
+
+function placeAd(adContentType, parentId) {
+    let parent = document.getElementById(parentId);
+    parent.innerHTML += googleads[adContentType];
+}
