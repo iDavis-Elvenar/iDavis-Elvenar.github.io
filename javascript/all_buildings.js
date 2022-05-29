@@ -477,7 +477,6 @@ function readBuildingsJSON() {
                     } else {
                         wrJSON = filteredData[i]["weightedRewards"];
                     }
-                    console.log(wrJSON)
                     var wrDiv = document.createElement("div");
                     wrDiv.className = 'bbTable';
                     wrDiv.style.marginTop = "20px";
