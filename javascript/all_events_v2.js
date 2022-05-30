@@ -458,7 +458,7 @@ function displayDailyPrizes() {
 
                 //CREATE AD SPACE
 
-                if (i !== 0 && i % 3 === 0 && i !== filteredData.length-1) {
+                if (i === 2 || (i !== 0 && i % 4 === 0 && i !== filteredData.length-1)) {
                     let divAd = document.createElement("div");
                     divAd.className = "adsense-inject";
                     document.getElementById('column_with_tables').appendChild(divAd);
