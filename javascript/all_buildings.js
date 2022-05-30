@@ -522,9 +522,30 @@ function readBuildingsJSON() {
                     div.appendChild(wrDiv);
                 }
                 document.getElementById('column_with_tables').appendChild(div);
+                
+                //CREATE AD SPACE
+
+                if (i !== 0 && i % 3 === 0) {
+                    let divAd = document.createElement("div");
+                    divAd.className = "adsense-inject";
+                    document.getElementById('column_with_tables').appendChild(divAd);
+                }
             }
             create_exception("Buildings Generated!", 3, 'success');
-            //create_exception("If the values are not displaying correctly, press CTRL+F5 to make full refresh of the website", 10, "warning");
+
+            //INJECT ADS
+
+            /*$(document).ready(function()
+            {
+                $(".adsense-inject").each(function () {
+                    $(this).append('<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3978524526870979" data-ad-slot="6927511035" data-ad-format="auto"></ins>');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                }); 
+            });*/
+            $(".adsense-inject").each(function () {
+                $(this).append('<ins class="adsbygoogle" style="display:block; width:40%; height:40%;" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-4154227292627045" data-ad-slot="7940520800"></ins>');
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            });
         })
 }
 
