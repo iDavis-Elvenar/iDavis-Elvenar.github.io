@@ -525,7 +525,7 @@ function readBuildingsJSON() {
                 
                 //CREATE AD SPACE
 
-                if (i === 2 || (i !== 0 && i % 4 === 0 && i !== filteredData.length-1)) {
+                if (currentSatisfiesAdPlacementBuildings(i, filteredData.length)) {
                     let divAd = document.createElement("div");
                     divAd.className = "adsense-inject";
                     document.getElementById('column_with_tables').appendChild(divAd);
@@ -772,4 +772,11 @@ function showFullSet(setID) {
         }
     }
     document.getElementById('filter_and_generate_button').click();
+}
+
+function currentSatisfiesAdPlacementBuildings(i, dataLength) {
+    if (dataLength < 10) {
+        return i !== 0 && i % 3 === 0;
+    }
+    return i !== 0 && i % 4 === 0;
 }

@@ -458,7 +458,7 @@ function displayDailyPrizes() {
 
                 //CREATE AD SPACE
 
-                if (i === 2 || (i !== 0 && i % 4 === 0 && i !== filteredData.length-1)) {
+                if (currentSatisfiesAdPlacementEvents(i, filteredData.length)) {
                     let divAd = document.createElement("div");
                     divAd.className = "adsense-inject";
                     document.getElementById('column_with_tables').appendChild(divAd);
@@ -479,6 +479,18 @@ function displayDailyPrizes() {
                 $(this).append('<div align="center"><ins class="adsbygoogle" style="display:block; width:40%; height:40%; margin-bottom:10px;" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-4154227292627045" data-ad-slot="7940520800"></ins></div>');
                 (adsbygoogle = window.adsbygoogle || []).push({});
             });
+            /*
+            ADBLOCKER PREVENTION:
+            let adBlockEnabled = false
+            const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+            try {
+                await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
+            } catch (e) {
+                adBlockEnabled = true
+            } finally {
+                console.log(`AdBlock Enabled: ${adBlockEnabled}`)
+            }
+            */
         })
 }
 
@@ -907,6 +919,10 @@ function questAvailable(quest, selectedEvent) {
 function numberOfAvailableQuests(selectedEvent) {
     return Math.min(quests[selectedEvent].length - eventsDurations[selectedEvent] + getDaysFromStart(selectedEvent)+1,
             quests[selectedEvent].length);
+}
+
+function currentSatisfiesAdPlacementEvents(i, dataLength) {
+    return i === 2 || (i !== 0 && (i-2) !== 0 && (i-2) % 4 === 0 && i !== dataLength-1)
 }
 
 window.onload
