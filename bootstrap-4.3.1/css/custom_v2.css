@@ -286,19 +286,24 @@ box-shadow: 0 0 0 1px #d67e19, 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
 background-color: #b9881e;
 }
 
-
-
-@media screen and (min-width: 1030px) {
+@media screen and (min-width: 1070px) {
     .navbar-nav > li.bigSpacing{
-        padding-left:50px;
-        padding-right:50px;
+        padding-left:20px;
+        padding-right:20px;
       }
 }
 
-@media screen and (min-width: 1230px) {
+@media screen and (min-width: 1250px) {
     .navbar-nav > li.bigSpacing{
-        padding-left:100px;
-        padding-right:100px;
+        padding-left:40px;
+        padding-right:40px;
+      }
+}
+
+@media screen and (min-width: 1430px) {
+    .navbar-nav > li.bigSpacing{
+        padding-left:80px;
+        padding-right:80px;
     }
 }
 
