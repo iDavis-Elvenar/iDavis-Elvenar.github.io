@@ -690,3 +690,32 @@ function generateJSWithStoryQuests() {
 function saveContentQuests() {
     localStorage.setItem("contentQuests", document.getElementById("ulohy").value);
 }
+
+function generateQuestsInTxt() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('questsjs').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = "";
+    reader.onload = function () {
+        let chapter = document.getElementById("chnumber").value;
+        let data = JSON.parse(reader.result);
+        for (let i = 0; i < data[chapter].length; i++) {
+            if (data[chapter][i].hasOwnProperty("task")) {
+                result += data[chapter][i]["task"];
+            }
+            if (data[chapter][i].hasOwnProperty("rewards")) {
+                for (let j = 0; j < data[chapter][i]["rewards"].length; j++) {
+                    result += "\n";
+                    result += data[chapter][i]["rewards"][j];
+                }
+            }
+            if (i !== data[chapter].length-1) {
+                result += "\n";
+                result += "\n";
+            }
+        }
+        document.getElementById("ulohy2").value = result;
+        create_exception("Data Generated!",10,'success');
+    }
+}

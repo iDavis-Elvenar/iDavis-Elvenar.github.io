@@ -102,6 +102,7 @@ let questsLinks = {
     "easter_xxii_": "bit.ly/DawnOfThePhoenix2022",
     "may_xxii_": "bit.ly/NaturallyAmazing2022",
     "july_xxii_": "bit.ly/LuckyLittleFin2022",
+    "august_xxii": "bit.ly/GatewayIntoThePast2022",
 }
 
 let eventsDurations = {
@@ -111,6 +112,7 @@ let eventsDurations = {
     "easter_xxii_": 22,
     "may_xxii_": 22,
     "july_xxii_": 22,
+    "august_xxii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -212,6 +214,7 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
+            ["A Gateway into the Past","august_xxii_",false,true],
             ["Lucky Little Fin","july_xxii_",true,false],
             ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
@@ -249,6 +252,7 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
+            ["A Gateway into the Past","august_xxii_",false,true],
             ["Lucky Little Fin","july_xxii_",true,false],
             ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
@@ -274,6 +278,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "august_xxii_": [
+        
+    ],
     "july_xxii_": [
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},
     ],

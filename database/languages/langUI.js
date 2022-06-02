@@ -296,7 +296,7 @@ let ui = {
         "Pilgrim's Manor": "Manoir du pèlerin",
         "Forbidden Ruins": "Ruines interdites",
         //EVENTS
-        "Naturally Amazing":"Naturally Amazing",
+        "Naturally Amazing":"Naturellement époustouflant",
         "Dawn of the Phoenix":"L'aube du phénix",
         "The Buried City":"La ville enterrée",
         "The Misty Forest":"Forêt embrumée",
@@ -510,7 +510,7 @@ let ui = {
         "Pilgrim's Manor": "Особняк пилигрима",
         "Forbidden Ruins": "Запретные руины",
         //EVENTS
-        "Naturally Amazing":"Naturally Amazing",
+        "Naturally Amazing":"Естественное изумление",
         "Dawn of the Phoenix":"Заря Феникса",
         "The Buried City":"Погребенный город",
         "The Misty Forest":"Туманный лес",
