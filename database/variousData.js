@@ -70,7 +70,7 @@ let eventVideos = {
     "february_xxii_": "https://www.youtube.com/embed/uVduxQ4yhdo;https://www.youtube.com/embed/yXV73a8pla4",
     "easter_xxii_": "https://www.youtube.com/embed/tfQa9VOXeRA",
     "may_xxii_": "https://www.youtube.com/embed/AFkAsMvABP0",
-    "july_xxii_": "https://www.youtube.com/embed/zqgJUn2kRNA",
+    "july_xxii_": "https://www.youtube.com/embed/GgjFAgr-pLU;https://www.youtube.com/embed/zqgJUn2kRNA",
 }
 
 let eventNames = {
