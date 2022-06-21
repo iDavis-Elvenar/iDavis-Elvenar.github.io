@@ -525,11 +525,11 @@ function readBuildingsJSON() {
                 
                 //CREATE AD SPACE
 
-                /*if (currentSatisfiesAdPlacementBuildings(i, filteredData.length)) {
+                if (currentSatisfiesAdPlacementBuildings(i, filteredData.length)) {
                     let divAd = document.createElement("div");
                     divAd.className = "adsense-inject";
                     document.getElementById('column_with_tables').appendChild(divAd);
-                }*/
+                }
             }
             create_exception("Buildings Generated!", 3, 'success');
 

@@ -458,11 +458,11 @@ function displayDailyPrizes() {
 
                 //CREATE AD SPACE
 
-                /*if (currentSatisfiesAdPlacementEvents(i, filteredData.length)) {
+                if (currentSatisfiesAdPlacementEvents(i, filteredData.length)) {
                     let divAd = document.createElement("div");
                     divAd.className = "adsense-inject";
                     document.getElementById('column_with_tables').appendChild(divAd);
-                }*/
+                }
             }
             create_exception("Buildings Generated!", 3, 'success');
 
