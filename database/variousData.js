@@ -272,6 +272,12 @@ var allEvents = {
     }
 }
 
+var allFas = {
+    "2022" : [
+        ["Fellowship Adventure - July 2022", "july_xxii_",true,false],
+    ]
+}
+
 var baseTabsEvents = [
     {"id":"calendar_top_div", "name":"Calendar", "img":"images/general/calendar.png", "img_width":"45", "img_style":"margin-left: -10px; margin-right: 2px; position: relative;", "href":"#calendar", "onclick":"calendar"},
     {"id":"quests_left_panel_div", "name":"Quests", "img":"images/general/event_guide.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},
@@ -285,6 +291,19 @@ var additionalTabsEvents = {
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},
     ],
 }
+
+var baseTabsFa = [
+    {"id":"base_left_panel_div", "name":"Base", "img":"https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#base", "onclick":"base"},
+    {"id":"base_left_panel_div", "name":"Base2", "img":"https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#ph", "onclick":"ph"},
+]
+
+var additionalTabsFa = {
+
+}
+
+var faBanners = [
+    {"all" : "https://i.ibb.co/fMX3t5B/fellowship-adventures-banner.png"},
+]
 
 var optionsForOrderBy = [
     {"type": "buildings", "value": "all_", "text": "All"},

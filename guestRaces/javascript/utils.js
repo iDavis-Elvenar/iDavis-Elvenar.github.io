@@ -36,7 +36,6 @@ function switchView(type) {
 function setLeftBar() {
     let leftBar = document.getElementById("left_bar");
     let guestRace = getSelectedGuestRace();
-    console.log(guestRace)
     leftBar.innerHTML = "";
 
     let numberOfAdditionalItems = 0;
