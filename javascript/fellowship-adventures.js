@@ -5,26 +5,26 @@ function loadPage() {
         foundView = location.href.split('#')[1];
         switchView(foundView);
     } else {
-        switchView("base");
+        switchView("info");
     }
     setLeftBar();
 }
 
 function switchView(type) {
-    if (type === "base" && view !== "base") {
+    if (type === "info" && view !== "info") {
         displayBase();
-        view = "base";
-    } else if (type === "ph" && view !== "ph") {
-        displayPH();
-        view = "ph";
-    } else if (type !== "base" && type !== "ph" && view !== type) {
+        view = "info";
+    } else if (type === "items" && view !== "items") {
+        displayItems();
+        view = "items";
+    } else if (type !== "info" && type !== "items" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
         for (var fa in additionalTabsFa) {
             for (let tab = 0; tab < additionalTabsFa[fa].length; tab++) {
-                if (additionalTabsFa[gr][tab]["id"] === type) {
+                if (additionalTabsFa[fa][tab]["id"] === type) {
                     $(function(){
-                        $("#column_with_tables").load("guestRacesTabs/"+fa+"/"+additionalTabsFa[fa][tab]["file"]); 
+                        $("#column_with_tables").load("faTabs/"+fa+"/"+additionalTabsFa[fa][tab]["file"]); 
                     });
                 }
             }
@@ -85,7 +85,7 @@ function setLeftBar() {
         let newA = document.createElement("a");
         newA.className = "text-link font-weight-bold";
         newA.href = additionalTabsFa[selectedFa][i]["href"];
-        newA.href += "-"+selectedFa;
+        //newA.href += "-"+selectedFa;
         newA.onclick = function() {
             switchView(additionalTabsFa[selectedFa][i]["id"]);
         }
@@ -152,11 +152,92 @@ function createFaHeader() {
 }
 
 function displayBase() {
-    document.getElementById("column_with_tables").innerHTML = "";
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = "";
     createFaHeader();
+    let center = document.createElement('center');
+    center.innerHTML += introductionText.replace("_", getSelectedFaName());
+
+    center.innerHTML += `<br><br><b>Start date:</b> `+dates[getSelectedFa()]["start_date"];
+    center.innerHTML += `<br><b>End date:</b> `+dates[getSelectedFa()]["end_date"]+`<br><br>`;
+
+    parent.appendChild(center);
+
+    var h5 = document.createElement('h5');
+    h5.id = 'video';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: ${langUI("Tutorial Video")} ::..<br>`;
+    parent.appendChild(h5);
+   
+    var center2 = document.createElement('center');
+    var iframe = document.createElement('iframe');
+    iframe.style.width = ""+Math.min(560, (window.innerWidth-50))+"px";//'560px';
+    iframe.style.height = ""+315.2*(Math.min(560, (window.innerWidth-50))/560)+"px";
+    //iframe.allow = 'autoplay; encrypted-media';
+    iframe.setAttribute('allowFullScreen', 'true');
+    iframe.src = tutorialVideo;
+    iframe.style.marginBottom = '15px';
+    center2.appendChild(iframe);
+    parent.appendChild(center2);
+
+    let subscribe = document.createElement('center');
+    subscribe.innerHTML = subscribeText;
+    parent.appendChild(subscribe);
 }
 
-function displayPH() {
-    document.getElementById("column_with_tables").innerHTML = "";
+function displayItems() {
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = "";
+
     createFaHeader();
+
+    let center = document.createElement('center');
+    center.style.marginTop = "20px";
+    let divCenter = document.createElement("div");
+    divCenter.id = "div_items";
+    divCenter.style.width = "80%";
+    divCenter.style.textAlign = "center";
+
+    let divBBTable = document.createElement("div");
+    divBBTable.className = "bbTable";
+
+    let table = document.createElement('table');
+    table.className = "table-primary";
+    table.style.width = "100%";
+    table.style.marginBottom = "10px";
+
+    let tbody = document.createElement("tbody");
+
+    for (let it = 0; it < items.length; it++) {
+        if (!excludeItems[getSelectedFa()].includes(it+1)) {
+            let tr = document.createElement('tr');
+            let td_icon = document.createElement('td');
+            td_icon.style.width = "10%";
+            let img_icon = document.createElement('img');
+            img_icon.src = items[it]["icon"];
+            img_icon.style.width = "28px";
+            td_icon.appendChild(img_icon);
+            tr.appendChild(td_icon);
+
+            let td_name = document.createElement('td');
+            td_name.style.width = "30%";
+            td_name.innerHTML = items[it]["name"];
+            tr.appendChild(td_name);
+
+            let td_requirement = document.createElement('td');
+            td_requirement.style.width = "60%";
+            td_requirement.innerHTML = items[it]["requirement"];
+            tr.appendChild(td_requirement);
+
+            tbody.appendChild(tr);
+        }
+    }
+
+    table.appendChild(tbody);
+    divBBTable.appendChild(table);
+    divCenter.appendChild(divBBTable);
+    center.appendChild(divCenter);
+    parent.appendChild(center);
+    
 }
