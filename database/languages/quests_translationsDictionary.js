@@ -189,8 +189,68 @@ let questsDictionary = {
         "dešť mincí" : "Pluie de pièces",
         "příděl zásob" : "Abondance de matériaux",
     },
-    "pl" : {
-
+    "pl" : {/*
+        // CONNECTIONS
+        "alebo" : "lub",
+        // VERBS
+        "získaj" : "zdobądź",
+        "vyrob" : "wyprodukuj",
+        "utrať" : "wydaj",
+        "použi" : "użyj",
+        "vyrieš" : "rozwiąż",
+        "vytvor" : "stwórz",
+        "trénuj" : "wyszkol",
+        "preskúmaj" : "rozwiąż",
+        "obchoduj" : "zaakceptuj",
+        "kúp" : "kup",
+        "vylepši" : "rozbuduj",
+        "vlož" : "wydaj",
+        "vykonaj" : "udziel",
+        "vyskúmaj" : "opracuj",
+        // PRODUCTS
+        "mincí" : "monety",
+        "nápoje" : "trunki",
+        "vb" : "pw",
+        "produkt základnej manufaktury (3-hodinový)" : "wyprodukuj towary podstawowe (3 godziny)", // use regex
+        "produkt základnej manufaktury (9-hodinový)" : "wyprodukuj towary podstawowe (9 godziny)", // use regex
+        "produkt základnej manufaktury (24-hodinový)" : "wyprodukuj towary podstawowe (24 godziny)", // use regex
+        "produkt základnej manufaktury (2-dňový)" : "wyprodukuj towary podstawowe (48 godziny)", // use regex
+        "obyčajné nástroje" : "proste narzędzia",
+        "ľubovoľné kúzlo" : "zaklęcia",
+        "strety na mape" : "konflikty na mapie",
+        "turnajové strety" : "konflikty w turnieju",
+        "chlieb" : "chleb",
+        "ponuku na trhu" : "oferty",
+        "spojovací činidlo" : "katalizator",
+        "relikvie" : "relikty",
+        "pokročilé nástroje" : "zaawansowane narzędzia",
+        "zásob" : "towarów",
+        "úlomky kouzel" : "fragmenty zaklęć",
+        "jednotiek" : "jednostki",
+        "opar vidění" : "mgła wizji",
+        "provinciu" : "prowincje",
+        "košík jedla" : "kosza zakupów",
+        "u obchodníka" : "oferty hurtownika",
+        "požehnání na jednotky" : "szybkie bonusy jednostek",
+        "strety vo veži" : "konflikty w iglicy",
+        "štandardného zboží" : "dowolnych surowców",
+        "relikvií" : "relikty",
+        "vb do ľubovoľného prastarého divu" : "pw w dowolny cud",
+        "stretov na mape" : "konfliktów na mapie",
+        "turnajových stretov" : "konfliktów w turnieju",
+        "susedskú výpomoc" : "pomoc sąsiedzka",
+        "stretov vo veži" : "konfliktów w iglicy",
+        "technológiu" : "technologie",
+        "základného zboží" : "towary podstawowe",
+        "krmení" : "karma dla zwierząt",
+        "strety na mape bojom" : "konflikty na mapie przez walkę",
+        "strety na mape vyjednávaním" : "konflikty na mapie przez negocjacje",
+        "nejaké množstvo" : "przyzwoitą ilość",
+        "budovu na level 5 alebo vyšší" : "budynek do pozimu 5 lub wyższego", // use regex
+        "budovy na level 5 alebo vyšší" : "budynki do poziomu 5 lub wyższego", // use regex
+        "ľubovoľný zesilovač" : "zaklęcia",
+        "dešť mincí" : "deszcz Monet",
+        "příděl zásob" : "strumień Zasobów",*/
     },
     "ru" : {
         // CONNECTIONS

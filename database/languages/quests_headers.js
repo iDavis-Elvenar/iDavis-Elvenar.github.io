@@ -112,8 +112,7 @@ let languageSpecificNotes = {
         jeśli wiesz, że twoje miasto wymaga przygotowania do określonego zadania. Wszystkie notatki, które wykonasz, 
         zostaną zapamiętane przez Twoją przeglądarkę, dzięki czemu po powrocie na stronę znajdziesz je w tym samym stanie.<br>
         Lista zadań jest dostępna w wielu językach (możesz wybrać swój język za pomocą przycisku z kulą ziemską 
-        w prawym górnym rogu strony). W tej chwili brakuje języka PL. Proszę zapoznać się z powyższym 
-        oświadczeniem, jeśli chciałbyś przyczynić się do rozwoju tej strony internetowej, dostarczając tłumaczenia wątków.<br>
+        w prawym górnym rogu strony).<br>
         Jeśli chcesz podzielić się listą zadań z innymi graczami, skorzystaj z linku wyświetlonego powyżej.
         </span></center></div>
         </div>

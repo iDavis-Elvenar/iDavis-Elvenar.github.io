@@ -730,12 +730,12 @@ function displayQuests() {
         center.appendChild(shareLink);
         var div_info = document.createElement('div');
         div_info.innerHTML = languageSpecificNotes[localStorage.getItem("lang")];
-        if (localStorage.getItem("lang") == "pl") {
+        /*if (localStorage.getItem("lang") == "pl") {
             var ph_translation_help = document.createElement('h6');
             ph_translation_help.className = "card-title text-center";
             ph_translation_help.innerHTML = `<br>I would like to make PL language available for the quest lists. If you are from this community and would like to contribute to development of this website by providing translations for around 60 already prepared short phrases, I will be more than happy if you leave me contact (either your Beta Forum nickname or your email) on my <a href="https://idavis-elvenar.github.io/contact.html" class="text-link">contact page</a>. <br>The translations will be used in all future events, so there is no need for recreating them every time.<br>Nicknames of all contributors will be listed in the quest pages of respective languages (of course if you wish to).`;
             center.appendChild(ph_translation_help);
-        }
+        }*/
         center.appendChild(div_info)
         document.getElementById('column_with_tables').appendChild(center);
 
@@ -779,7 +779,7 @@ function displayQuests() {
                         task.innerHTML = `<h7 class="card-title text-center text-link"><i>???</i></h7>`;
                     }
                 }
-                //console.log(quest+". "+questTranslate(quests[selectedEvent][quest-1]))
+                console.log(quest+". "+questTranslate(quests[selectedEvent][quest-1]))
                 task.className = "nocopy";
                 /*task.innerHTML += `<div class="myTest custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
