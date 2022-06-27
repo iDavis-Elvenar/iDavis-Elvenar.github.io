@@ -20,7 +20,7 @@ function switchView(type) {
     } else if (type !== "base" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
-        for (var gr in additionalTabsGuestRaces) {
+        for (let gr in additionalTabsGuestRaces) {
             for (let tab = 0; tab < additionalTabsGuestRaces[gr].length; tab++) {
                 if (additionalTabsGuestRaces[gr][tab]["id"] === type) {
                     $(function(){

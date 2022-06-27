@@ -661,7 +661,7 @@ function switchView(type) {
     } else if (type !== "calendar" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
-        for (var event in additionalTabsEvents) {
+        for (let event in additionalTabsEvents) {
             for (let tab = 0; tab < additionalTabsEvents[event].length; tab++) {
                 if (additionalTabsEvents[event][tab]["id"] === type) {
                     $(function(){

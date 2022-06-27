@@ -283,7 +283,7 @@ var additionalTabsEvents = {
         //^list of available chests (costs, rewards, EP)
         {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html"},
         //^types and tiers (+ how merging process works (+ some visualisation (machination??)))
-        {"id":"cups", "name":"Cups", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},
+        {"id":"cups", "name":"Cups", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#cups", "file":"cups.html"},
         //^
         {"id":"board", "name":"Board", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html"},
         //^the constant need of tidying the board up, bringing order out of chaos, board limitation, pieces management

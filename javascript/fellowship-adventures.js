@@ -20,7 +20,7 @@ function switchView(type) {
     } else if (type !== "info" && type !== "items" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
-        for (var fa in additionalTabsFa) {
+        for (let fa in additionalTabsFa) {
             for (let tab = 0; tab < additionalTabsFa[fa].length; tab++) {
                 if (additionalTabsFa[fa][tab]["id"] === type) {
                     $(function(){
