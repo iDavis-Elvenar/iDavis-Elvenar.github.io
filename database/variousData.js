@@ -214,7 +214,7 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
-            ["A Gateway into the Past","august_xxii_",false,false],
+            ["A Gateway into the Past","august_xxii_",false,true],
             ["Lucky Little Fin","july_xxii_",true,false],
             ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
@@ -252,7 +252,7 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
-            ["A Gateway into the Past","august_xxii_",false,false],
+            ["A Gateway into the Past","august_xxii_",false,true],
             ["Lucky Little Fin","july_xxii_",true,false],
             ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
