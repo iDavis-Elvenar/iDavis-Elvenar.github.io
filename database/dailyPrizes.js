@@ -1,4 +1,8 @@
 var dailyPrizes = {
+    
+    "august_xxii_": [
+        //lunar factory
+    ],
 
     "july_xxii_": [
         "A_Evt_MM_XIX_MantaRay",
