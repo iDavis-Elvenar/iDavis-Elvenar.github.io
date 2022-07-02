@@ -1,7 +1,8 @@
 var dailyPrizes = {
     
     "august_xxii_": [
-        //1. lunar factory 2. solar training grounds
+        "A_Evt_August_XXII_Lunar_Factory",
+        "A_Evt_August_XXII_Solar_Training_Grounds",
     ],
 
     "july_xxii_": [

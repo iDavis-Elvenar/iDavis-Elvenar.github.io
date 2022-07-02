@@ -93,6 +93,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "easter_xxii_": "03/17/2022",
     "may_xxii_": "04/14/2022",
     "july_xxii_": "05/25/2022",
+    "august_xxii_": "07/07/2022",
 }
 
 let questsLinks = {
@@ -203,6 +204,7 @@ var setNames = {
     "june_xx" : "Air Traders Set",
     "scroll_sorcerers" : "Pilgrim's Manor",
     "scroll_sorcerers_xxii": "Forbidden Ruins",
+    //"merge_dwarvengame": "Dwarven Citadel",
 }
 
 var discardBuildings = [
@@ -280,15 +282,10 @@ var baseTabsEvents = [
 var additionalTabsEvents = {
     "august_xxii_": [
         {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html"},
-        //^types and tiers (+ how merging process works (+ some visualisation (machination??)))
         {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html"},
-        //^list of available chests (costs, rewards, EP)
         {"id":"cups", "name":"Cups", "img":"https://i.ibb.co/vVMrWDx/EL-akcia-august-2022-cup-red.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#cups", "file":"cups.html"},
-        //^
         {"id":"cards", "name":"Cards", "img":"https://i.ibb.co/6YyLVtV/EL-akcia-august-2022-event-currency-2-big.png", "img_width":"35", "img_style":"margin-left: -5px; margin-right: 7px; position: relative;", "href":"#cards", "file":"cards.html"},
-        //^required number of EC for specific Piece (include number of tier1 pieces required, cost of one tier1 piece and the probability of getting it)
         {"id":"board", "name":"Board", "img":"https://i.ibb.co/7v3HmnM/EL-akcia-august-2022-piece-a4.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html"},
-        //^the constant need of tidying the board up, bringing order out of chaos, board limitation, pieces management
     ],
     "july_xxii_": [
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},
@@ -535,6 +532,72 @@ var goods_icons = {
     "b_gr6_aw2_shards": "<img src='https://i.ibb.co/y4P41xH/b-gr6-aw2-shards.png' title='Rune Shard for Elvenar Trade Center'><br>",
     "b_gr7_aw1_shards": "<img src='https://i.ibb.co/CvJGPnL/b-gr7-aw1-shards.png' title='Rune Shard for Sunset Towers'><br>",
     "b_gr7_aw2_shards": "<img src='https://i.ibb.co/473B4zP/b-gr7-aw2-shards.png' title='Rune Shard for Victory Springs'><br>",
+    "INS_UNIT_LM_5": "5 <br><img src='https://i.ibb.co/jfTTh1Q/barracks-lm.png' title='Light Melee Instant Squad Size'>/<img src='https://i.ibb.co/wCf7xkh/barracks-lm-2.png' title='Light Melee Instant Squad Size'><br>",
+    "INS_UNIT_LM_10": "10 <br><img src='https://i.ibb.co/jfTTh1Q/barracks-lm.png' title='Light Melee Instant Squad Size'>/<img src='https://i.ibb.co/wCf7xkh/barracks-lm-2.png' title='Light Melee Instant Squad Size'><br>",
+    "INS_UNIT_LM_15": "15 <br><img src='https://i.ibb.co/jfTTh1Q/barracks-lm.png' title='Light Melee Instant Squad Size'>/<img src='https://i.ibb.co/wCf7xkh/barracks-lm-2.png' title='Light Melee Instant Squad Size'><br>",
+    "INS_UNIT_LM_25": "25 <br><img src='https://i.ibb.co/jfTTh1Q/barracks-lm.png' title='Light Melee Instant Squad Size'>/<img src='https://i.ibb.co/wCf7xkh/barracks-lm-2.png' title='Light Melee Instant Squad Size'><br>",
+    "INS_UNIT_LR_5": "5 <br><img src='https://i.ibb.co/2jH3qG5/barracks-lr.png' title='Light Ranged Instant Squad Size'>/<img src='https://i.ibb.co/M8Wpzb5/barracks-lr-2.png' title='Light Ranged Instant Squad Size'><br>",
+    "INS_UNIT_LR_10": "10 <br><img src='https://i.ibb.co/2jH3qG5/barracks-lr.png' title='Light Ranged Instant Squad Size'>/<img src='https://i.ibb.co/M8Wpzb5/barracks-lr-2.png' title='Light Ranged Instant Squad Size'><br>",
+    "INS_UNIT_LR_15": "10 <br><img src='https://i.ibb.co/2jH3qG5/barracks-lr.png' title='Light Ranged Instant Squad Size'>/<img src='https://i.ibb.co/M8Wpzb5/barracks-lr-2.png' title='Light Ranged Instant Squad Size'><br>",
+    "INS_UNIT_LR_25": "25 <br><img src='https://i.ibb.co/2jH3qG5/barracks-lr.png' title='Light Ranged Instant Squad Size'>/<img src='https://i.ibb.co/M8Wpzb5/barracks-lr-2.png' title='Light Ranged Instant Squad Size'><br>",
+    "INS_UNIT_MA_5": "5 <br><img src='https://i.ibb.co/nMz9Zbz/barracks-ma.png' title='Mage Instant Squad Size'>/<img src='https://i.ibb.co/SvgLMw8/barracks-ma-2.png' title='Mage Instant Squad Size'><br>",
+    "INS_UNIT_MA_10": "10 <br><img src='https://i.ibb.co/nMz9Zbz/barracks-ma.png' title='Mage Instant Squad Size'>/<img src='https://i.ibb.co/SvgLMw8/barracks-ma-2.png' title='Mage Instant Squad Size'><br>",
+    "INS_UNIT_MA_15": "10 <br><img src='https://i.ibb.co/nMz9Zbz/barracks-ma.png' title='Mage Instant Squad Size'>/<img src='https://i.ibb.co/SvgLMw8/barracks-ma-2.png' title='Mage Instant Squad Size'><br>",
+    "INS_UNIT_MA_25": "25 <br><img src='https://i.ibb.co/nMz9Zbz/barracks-ma.png' title='Mage Instant Squad Size'>/<img src='https://i.ibb.co/SvgLMw8/barracks-ma-2.png' title='Mage Instant Squad Size'><br>",
+    "INS_UNIT_HM_5": "5 <br><img src='https://i.ibb.co/1GykVmT/barracks-hm.png' title='Heavy Melee Instant Squad Size'>/<img src='https://i.ibb.co/chCSJVS/barracks-hm-2.png' title='Heavy Melee Instant Squad Size'><br>",
+    "INS_UNIT_HM_10": "10 <br><img src='https://i.ibb.co/1GykVmT/barracks-hm.png' title='Heavy Melee Instant Squad Size'>/<img src='https://i.ibb.co/chCSJVS/barracks-hm-2.png' title='Heavy Melee Instant Squad Size'><br>",
+    "INS_UNIT_HM_15": "10 <br><img src='https://i.ibb.co/1GykVmT/barracks-hm.png' title='Heavy Melee Instant Squad Size'>/<img src='https://i.ibb.co/chCSJVS/barracks-hm-2.png' title='Heavy Melee Instant Squad Size'><br>",
+    "INS_UNIT_HM_25": "25 <br><img src='https://i.ibb.co/1GykVmT/barracks-hm.png' title='Heavy Melee Instant Squad Size'>/<img src='https://i.ibb.co/chCSJVS/barracks-hm-2.png' title='Heavy Melee Instant Squad Size'><br>",
+    "INS_UNIT_HR_5": "5 <br><img src='https://i.ibb.co/D9MNhSk/barracks-hr.png' title='Heavy Ranged Instant Squad Size'>/<img src='https://i.ibb.co/KqGV47d/barracks-hr-2.png' title='Heavy Ranged Instant Squad Size'><br>",
+    "INS_UNIT_HR_10": "10 <br><img src='https://i.ibb.co/D9MNhSk/barracks-hr.png' title='Heavy Ranged Instant Squad Size'>/<img src='https://i.ibb.co/KqGV47d/barracks-hr-2.png' title='Heavy Ranged Instant Squad Size'><br>",
+    "INS_UNIT_HR_15": "10 <br><img src='https://i.ibb.co/D9MNhSk/barracks-hr.png' title='Heavy Ranged Instant Squad Size'>/<img src='https://i.ibb.co/KqGV47d/barracks-hr-2.png' title='Heavy Ranged Instant Squad Size'><br>",
+    "INS_UNIT_HR_25": "25 <br><img src='https://i.ibb.co/D9MNhSk/barracks-hr.png' title='Heavy Ranged Instant Squad Size'>/<img src='https://i.ibb.co/KqGV47d/barracks-hr-2.png' title='Heavy Ranged Instant Squad Size'><br>",
+    "INS_UNIT_MC_LM_5": "5 <br><img src='https://i.ibb.co/85g0RHK/mc-lm-small.png' title='Drone Riders Instant Squad Size'><br>",
+    "INS_UNIT_MC_LM_10": "10 <br><img src='https://i.ibb.co/85g0RHK/mc-lm-small.png' title='Drone Riders Instant Squad Size'><br>",
+    "INS_UNIT_MC_LM_15": "10 <br><img src='https://i.ibb.co/85g0RHK/mc-lm-small.png' title='Drone Riders Instant Squad Size'><br>",
+    "INS_UNIT_MC_LM_25": "25 <br><img src='https://i.ibb.co/85g0RHK/mc-lm-small.png' title='Drone Riders Instant Squad Size'><br>",
+    "INS_UNIT_MC_LR_5": "5 <br><img src='https://i.ibb.co/8NRMqzq/mc-lr-small.png' title='Rangers Instant Squad Size'><br>",
+    "INS_UNIT_MC_LR_10": "10 <br><img src='https://i.ibb.co/8NRMqzq/mc-lr-small.png' title='Rangers Instant Squad Size'><br>",
+    "INS_UNIT_MC_LR_15": "10 <br><img src='https://i.ibb.co/8NRMqzq/mc-lr-small.png' title='Rangers Instant Squad Size'><br>",
+    "INS_UNIT_MC_LR_25": "25 <br><img src='https://i.ibb.co/8NRMqzq/mc-lr-small.png' title='Rangers Instant Squad Size'><br>",
+    "INS_UNIT_MC_MA_5": "5 <br><img src='https://i.ibb.co/9TKY6Pp/mc-ma-small.png' title='Blossom Mages Instant Squad Size'><br>",
+    "INS_UNIT_MC_MA_10": "10 <br><img src='https://i.ibb.co/9TKY6Pp/mc-ma-small.png' title='Blossom Mages Instant Squad Size'><br>",
+    "INS_UNIT_MC_MA_15": "10 <br><img src='https://i.ibb.co/9TKY6Pp/mc-ma-small.png' title='Blossom Mages Instant Squad Size'><br>",
+    "INS_UNIT_MC_MA_25": "25 <br><img src='https://i.ibb.co/9TKY6Pp/mc-ma-small.png' title='Blossom Mages Instant Squad Size'><br>",
+    "INS_UNIT_MC_HM_5": "5 <br><img src='https://i.ibb.co/MsCqywh/unit-valorian.png' title='Vallorian Guards Instant Squad Size'><br>",
+    "INS_UNIT_MC_HM_10": "10 <br><img src='https://i.ibb.co/MsCqywh/unit-valorian.png' title='Vallorian Guards Instant Squad Size'><br>",
+    "INS_UNIT_MC_HM_15": "10 <br><img src='https://i.ibb.co/MsCqywh/unit-valorian.png' title='Vallorian Guards Instant Squad Size'><br>",
+    "INS_UNIT_MC_HM_25": "25 <br><img src='https://i.ibb.co/MsCqywh/unit-valorian.png' title='Vallorian Guards Instant Squad Size'><br>",
+    "INS_UNIT_MC_HR_5": "5 <br><img src='https://i.ibb.co/c2x0pfJ/unit-frog.png' title='Faineant Frogs Instant Squad Size'><br>",
+    "INS_UNIT_MC_HR_10": "10 <br><img src='https://i.ibb.co/c2x0pfJ/unit-frog.png' title='Faineant Frogs Instant Squad Size'><br>",
+    "INS_UNIT_MC_HR_15": "10 <br><img src='https://i.ibb.co/c2x0pfJ/unit-frog.png' title='Faineant Frogs Instant Squad Size'><br>",
+    "INS_UNIT_MC_HR_25": "25 <br><img src='https://i.ibb.co/c2x0pfJ/unit-frog.png' title='Faineant Frogs Instant Squad Size'><br>",
+    "INS_UNIT_TG_LM_5": "5 <br><img src='https://i.ibb.co/c3PWGGn/tg-lm-small.png' title='Cerberi Instant Squad Size'><br>",
+    "INS_UNIT_TG_LM_10": "10 <br><img src='https://i.ibb.co/c3PWGGn/tg-lm-small.png' title='Cerberi Instant Squad Size'><br>",
+    "INS_UNIT_TG_LM_15": "10 <br><img src='https://i.ibb.co/c3PWGGn/tg-lm-small.png' title='Cerberi Instant Squad Size'><br>",
+    "INS_UNIT_TG_LM_25": "25 <br><img src='https://i.ibb.co/c3PWGGn/tg-lm-small.png' title='Cerberi Instant Squad Size'><br>",
+    "INS_UNIT_TG_LR_5": "5 <br><img src='https://i.ibb.co/80nbSKf/tg-lr-small.png' title='Dryads Instant Squad Size'><br>",
+    "INS_UNIT_TG_LR_10": "10 <br><img src='https://i.ibb.co/80nbSKf/tg-lr-small.png' title='Dryads Instant Squad Size'><br>",
+    "INS_UNIT_TG_LR_15": "10 <br><img src='https://i.ibb.co/80nbSKf/tg-lr-small.png' title='Dryads Instant Squad Size'><br>",
+    "INS_UNIT_TG_LR_25": "25 <br><img src='https://i.ibb.co/80nbSKf/tg-lr-small.png' title='Dryads Instant Squad Size'><br>",
+    "INS_UNIT_TG_MA_5": "5 <br><img src='https://i.ibb.co/LNVK6Js/tg-ma-small.png' title='Banshees Instant Squad Size'><br>",
+    "INS_UNIT_TG_MA_10": "10 <br><img src='https://i.ibb.co/LNVK6Js/tg-ma-small.png' title='Banshees Instant Squad Size'><br>",
+    "INS_UNIT_TG_MA_15": "10 <br><img src='https://i.ibb.co/LNVK6Js/tg-ma-small.png' title='Banshees Instant Squad Size'><br>",
+    "INS_UNIT_TG_MA_25": "25 <br><img src='https://i.ibb.co/LNVK6Js/tg-ma-small.png' title='Banshees Instant Squad Size'><br>",
+    "INS_UNIT_TG_HM_5": "5 <br><img src='https://i.ibb.co/q5ky4WS/unit-orc-warrior.png' title='Orc Warriors Instant Squad Size'><br>",
+    "INS_UNIT_TG_HM_10": "10 <br><img src='https://i.ibb.co/q5ky4WS/unit-orc-warrior.png' title='Orc Warriors Instant Squad Size'><br>",
+    "INS_UNIT_TG_HM_15": "10 <br><img src='https://i.ibb.co/q5ky4WS/unit-orc-warrior.png' title='Orc Warriors Instant Squad Size'><br>",
+    "INS_UNIT_TG_HM_25": "25 <br><img src='https://i.ibb.co/q5ky4WS/unit-orc-warrior.png' title='Orc Warriors Instant Squad Size'><br>",
+    "INS_UNIT_TG_HR_5": "5 <br><img src='https://i.ibb.co/Gds0422/unit-orc-strategist.png' title='Orc Strategists Instant Squad Size'><br>",
+    "INS_UNIT_TG_HR_10": "10 <br><img src='https://i.ibb.co/Gds0422/unit-orc-strategist.png' title='Orc Strategists Instant Squad Size'><br>",
+    "INS_UNIT_TG_HR_15": "10 <br><img src='https://i.ibb.co/Gds0422/unit-orc-strategist.png' title='Orc Strategists Instant Squad Size'><br>",
+    "INS_UNIT_TG_HR_25": "25 <br><img src='https://i.ibb.co/Gds0422/unit-orc-strategist.png' title='Orc Strategists Instant Squad Size'><br>",
+    "INS_REV_SQD_5": "5%<br><img src='https://i.ibb.co/PZCLq1S/vitality-surge-small.png' title='Vitality Surge 5%'><br>",
+    "INS_REV_SQD_10": "10%<br><img src='https://i.ibb.co/PZCLq1S/vitality-surge-small.png' title='Vitality Surge 10%'><br>",
+    "INS_REV_SQD_25": "25%<br><img src='https://i.ibb.co/PZCLq1S/vitality-surge-small.png' title='Vitality Surge 25%'><br>",
+    "INS_REV_SQD_50": "50%<br><img src='https://i.ibb.co/PZCLq1S/vitality-surge-small.png' title='Vitality Surge 50%'><br>",
+    "INS_REV_SQD_75": "75%<br><img src='https://i.ibb.co/PZCLq1S/vitality-surge-small.png' title='Vitality Surge 75%'><br>",
+    "INS_REV_SQD_100": "100%<br><img src='https://i.ibb.co/PZCLq1S/vitality-surge-small.png' title='Vitality Surge 100%'><br>",
 }
 
 var chapter_icons = {

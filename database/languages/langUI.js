@@ -82,6 +82,7 @@ let ui = {
         "Pilgrim's Manor": "Panství poutníka",
         "Forbidden Ruins": "Zapovězené ruiny",
         //EVENTS
+        "Lucky Little Fin":"Šťastná ploutvička",
         "Naturally Amazing":"Přirozeně úžasné",
         "Dawn of the Phoenix":"Úsvit fénixe",
         "The Buried City":"Pohřbené město",
@@ -189,6 +190,7 @@ let ui = {
         "Pilgrim's Manor": "Herrenhaus der Pilger",
         "Forbidden Ruins": "Verbotene Ruinen",
         //EVENTS
+        "Lucky Little Fin":"Flotte Flosse",
         "Naturally Amazing":"Einfach Natürlich",
         "Dawn of the Phoenix":"Die Dämmerung des Phönix",
         "The Buried City":"Die begrabene Stadt",
@@ -296,6 +298,7 @@ let ui = {
         "Pilgrim's Manor": "Manoir du pèlerin",
         "Forbidden Ruins": "Ruines interdites",
         //EVENTS
+        "Lucky Little Fin":"Le petit aileron porte-bonheur",
         "Naturally Amazing":"Naturellement époustouflant",
         "Dawn of the Phoenix":"L'aube du phénix",
         "The Buried City":"La ville enterrée",
@@ -403,6 +406,7 @@ let ui = {
         "Pilgrim's Manor": "Dwór Pielgrzyma",
         "Forbidden Ruins": "Zakazane Ruiny",
         //EVENTS
+        "Lucky Little Fin":"Mały Morski Szczęściarz",
         "Naturally Amazing":"Z Natury Zadziwiające",
         "Dawn of the Phoenix":"Brzask Feniksa",
         "The Buried City":"Pogrzebane miasto",
@@ -510,6 +514,7 @@ let ui = {
         "Pilgrim's Manor": "Особняк пилигрима",
         "Forbidden Ruins": "Запретные руины",
         //EVENTS
+        "Lucky Little Fin":"Маленький везунчик",
         "Naturally Amazing":"Естественное изумление",
         "Dawn of the Phoenix":"Заря Феникса",
         "The Buried City":"Погребенный город",
