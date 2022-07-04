@@ -636,6 +636,18 @@ function getDaysFromStart(selectedEvent, flag="") {
     return (tod-new Date(start))/1000/60/60/24;
 }
 
+function getDaysFromDate(date) {
+    let start = "";
+    start = date;
+    var today = new Date();
+    var dd = String(today.getUTCDate()).padStart(2, '0');
+    var mm = String(today.getUTCMonth() + 1).padStart(2, '0');
+    var yyyy = today.getUTCFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    let tod = new Date(today);
+    return (tod-new Date(start))/1000/60/60/24;
+}
+
 function getHoursTillNextDay() {
     let today = new Date();
     let hh = String(today.getUTCHours());
@@ -664,9 +676,15 @@ function switchView(type) {
         for (let event in additionalTabsEvents) {
             for (let tab = 0; tab < additionalTabsEvents[event].length; tab++) {
                 if (additionalTabsEvents[event][tab]["id"] === type) {
-                    $(function(){
-                        $("#column_with_tables").load("eventTabs/"+event+"/"+additionalTabsEvents[event][tab]["file"]); 
-                    });
+                    if (getDaysFromDate(additionalTabsEvents[event][tab]["releaseDate"]) >= 0) {
+                        $(function(){
+                            $("#column_with_tables").load("eventTabs/"+event+"/"+additionalTabsEvents[event][tab]["file"]); 
+                        });
+                    } else {
+                        $(function(){
+                            $("#column_with_tables").load("eventTabs/general/waitForTheDate.html"); 
+                        });
+                    }
                 }
             }
         }
