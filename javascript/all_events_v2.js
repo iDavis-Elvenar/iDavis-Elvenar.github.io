@@ -682,7 +682,7 @@ function switchView(type) {
                         });
                     } else {
                         $(function(){
-                            $("#column_with_tables").load("eventTabs/general/waitForTheDate.html"); 
+                            $("#column_with_tables").load("eventTabs/_general/waitForTheDate.html"); 
                         });
                     }
                 }
