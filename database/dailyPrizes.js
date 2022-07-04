@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_August_XXII_Lunar_Factory",
         "A_Evt_August_XXII_Solar_Training_Grounds",
         "INS_UNIT_MC_MA_10",
+        "A_Evt_August_XXII_Warriors_Gate",
     ],
 
     "july_xxii_": [
