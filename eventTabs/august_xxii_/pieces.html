@@ -27,7 +27,7 @@
               <th style="width: 10%; text-align: center;">Level 6</th>
             </tr>
             <tr>
-              <td style="width: 40%; text-align: center;">Figurine</td>
+              <td style="width: 40%; text-align: center;">Dwarven Figurines</td>
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/zmg9JHX/EL-akcia-august-2022-a1.png"></td>
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/ZcMgfDM/EL-akcia-august-2022-a2.png"></td>
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/2kySgfX/EL-akcia-august-2022-a3.png"></td>
@@ -36,7 +36,7 @@
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/gJTSHfM/EL-akcia-august-2022-a6.png"></td>
             </tr>
             <tr>
-              <td style="width: 40%; text-align: center;">Tool</td>
+              <td style="width: 40%; text-align: center;">Dwarven Tools</td>
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/WcBRqQq/EL-akcia-august-2022-b1.png"></td>
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/gjv64tP/EL-akcia-august-2022-b2.png"></td>
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/ryyNqQK/EL-akcia-august-2022-b3.png"></td>
@@ -45,7 +45,7 @@
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/x81jcHT/EL-akcia-august-2022-b6.png"></td>
             </tr>
             <tr>
-              <td style="width: 40%; text-align: center;">Dice</td>
+              <td style="width: 40%; text-align: center;">Dices</td>
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/MVtf1L0/EL-akcia-august-2022-c1.png"></td>
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/Hp5d6Mc/EL-akcia-august-2022-c2.png"></td>
               <td style="width: 10%; text-align: center;"><img src="https://i.ibb.co/54D6L5q/EL-akcia-august-2022-c3.png"></td>
@@ -75,7 +75,7 @@
        <iframe frameborder="0" width="100%" height="100%" src="https://my.machinations.io/d/Copy-of-Merge-Event---Visualisation/a7e025bcf85e11ec8c2902f943517e50" style="background-color: transparent; border-style: none; border-width: 0px; overflow: hidden;"></iframe>
      </div>
 
-     From the visualization we can easily see that the higher the item is, the more level 1 items you need and the whole process is much slower.
+     From the visualization we can easily see that the higher the item is, the more level 1 items you need and the whole process gets much slower.
      Now, let's realize, how many level <code-forum class="bbCodeInline">1</code-forum> items we need for a specific item of level <code-forum class="bbCodeInline">N</code-forum>.<br>
      We know that we need 2 items of level <code-forum class="bbCodeInline">L</code-forum> to merge one item of level <code-forum class="bbCodeInline">L+1</code-forum>. In other words, every following level doubles the required number
      of level <code-forum class="bbCodeInline">L</code-forum> items. Let's consider the following (binary) tree for merging the level <code-forum class="bbCodeInline">4</code-forum> item:<br>
@@ -89,7 +89,7 @@
      
      <center><img src="https://i.ibb.co/8zmGqgq/EL-akcia-august-2022-merging-tree-highlighted.png" style="margin-top: 10px;"></center><br>
 
-     Such a distance is 3, simply because the difference between <code-forum class="bbCodeInline">4</code-forum> and <code-forum class="bbCodeInline">1</code-forum> is 3. That makes it possible to realize the formula for how the 
+     Such a distance is 3, simply because the difference between <code-forum class="bbCodeInline">4</code-forum> and <code-forum class="bbCodeInline">1</code-forum> is 3. That makes it possible to realize how the 
      amount of level <code-forum class="bbCodeInline">1</code-forum> items to merge level <code-forum class="bbCodeInline">N</code-forum> can be calculated:<br><br>
 
     <center><div class="bbTable">
@@ -112,12 +112,13 @@
     The offer requires Tool level 3 and Dice level 6. The Tool level 3 requires <code-forum class="bbCodeInline">2^(3-1)</code-forum> tools level 1 (which is <code-forum class="bbCodeInline">4</code-forum>) and 
     the Dice level 6 requires <code-forum class="bbCodeInline">2^(6-1)</code-forum> dices level 1 (which is <code-forum class="bbCodeInline">32</code-forum>). In total, we need
     36 items level 1 to fulfill this offer, which, in the worst case scenario, would cost <code-forum class="bbCodeInline">36*5=180</code-forum> of event currency (dwarven chips).
-    Because the Cups can also generate the higher-level items than 1, we have a good chance that the final cost will be lower (see the <b>Cups</b> tab to see how exactly these items are generated).<br><br>
+    Because the Cups can also generate the higher-level items than 1, we have a good chance that the final cost will be lower (see the <b>Cups</b> tab to see how exactly these items are generated).
+    This is where the nice, randomized mechanic comes into play.<br><br>
 
     After all, it's important to point out that some offers may have different costs everytime they appear. You can see the list of all offers in the <b>Trades</b> tab and see, what
-    for the cost ranges they have (the costs' values are always displayed as the number of level <code-forum class="bbCodeInline">1</code-forum> items needed) and using the formula
-    above you can calculate whether your current offer is on the lower end of this range, or if it is more beneficial for you to decline
-    the offer and complete other tasks in the meantime.
+    for the cost ranges they have (the costs' values are always displayed as the number of level <code-forum class="bbCodeInline">1</code-forum> items needed) and so you can 
+    find yourself whether your current offer is on the lower end of this range, or if it is more beneficial for you to decline
+    the offer and complete some other tasks in the meantime.
 
     </div>
     

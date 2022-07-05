@@ -676,7 +676,7 @@ function switchView(type) {
         for (let event in additionalTabsEvents) {
             for (let tab = 0; tab < additionalTabsEvents[event].length; tab++) {
                 if (additionalTabsEvents[event][tab]["id"] === type) {
-                    if (getDaysFromDate(additionalTabsEvents[event][tab]["releaseDate"]) >= 0) {
+                    if (!additionalTabsEvents[event][tab].hasOwnProperty("releaseDate") || getDaysFromDate(additionalTabsEvents[event][tab]["releaseDate"]) >= 0) {
                         $(function(){
                             $("#column_with_tables").load("eventTabs/"+event+"/"+additionalTabsEvents[event][tab]["file"]); 
                         });
