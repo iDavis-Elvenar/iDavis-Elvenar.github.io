@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_August_XXII_Solar_Training_Grounds",
         "INS_UNIT_MC_MA_10",
         "A_Evt_August_XXII_Warriors_Gate",
+        "runeshards-1_{2}",
     ],
 
     "july_xxii_": [
