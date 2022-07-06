@@ -6,6 +6,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_MA_10",
         "A_Evt_August_XXII_Warriors_Gate",
         "runeshards-1_{2}",
+        "A_Evt_February_XXI_Sun_Loop",
     ],
 
     "july_xxii_": [

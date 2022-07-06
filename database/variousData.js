@@ -205,7 +205,7 @@ var setNames = {
     "june_xx" : "Air Traders Set",
     "scroll_sorcerers" : "Pilgrim's Manor",
     "scroll_sorcerers_xxii": "Forbidden Ruins",
-    //"merge_dwarvengame": "Dwarven Citadel",
+    "merge_dwarvengame": "Dwarven Citadel",
 }
 
 var discardBuildings = [
@@ -217,8 +217,8 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
-            ["A Gateway into the Past","august_xxii_",false,true],
-            ["Lucky Little Fin","july_xxii_",true,false],
+            ["A Gateway into the Past","august_xxii_",true,false],
+            ["Lucky Little Fin","july_xxii_",false,false],
             ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
@@ -255,8 +255,8 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
-            ["A Gateway into the Past","august_xxii_",false,true],
-            ["Lucky Little Fin","july_xxii_",true,false],
+            ["A Gateway into the Past","august_xxii_",true,false],
+            ["Lucky Little Fin","july_xxii_",false,false],
             ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
             ["The Buried City","february_xxii_",false,false],
