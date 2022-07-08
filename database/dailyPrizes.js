@@ -7,6 +7,8 @@ var dailyPrizes = {
         "A_Evt_August_XXII_Warriors_Gate",
         "runeshards-1_{2}",
         "A_Evt_February_XXI_Sun_Loop",
+        "kp_{15}",
+        "A_Evt_Summer_XVIII_Mystical_Lace",
     ],
 
     "july_xxii_": [
