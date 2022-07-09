@@ -75,8 +75,11 @@
        <iframe frameborder="0" width="100%" height="100%" src="https://my.machinations.io/d/Copy-of-Merge-Event---Visualisation/a7e025bcf85e11ec8c2902f943517e50" style="background-color: transparent; border-style: none; border-width: 0px; overflow: hidden;"></iframe>
      </div>
 
-     From the visualization we can easily see that the higher the pieces is, the more level 1 pieces you need and the whole process gets much slower.
-     Now, let's realize, how many level <code-forum class="bbCodeInline">1</code-forum> pieces we need for a specific piece of level <code-forum class="bbCodeInline">N</code-forum>.<br>
+     From the visualization we can easily see that the higher the pieces is, the more level 1 pieces you need and the whole process gets much slower. Let's realize the cost of high-level pieces.<br><br>
+
+     <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Worst-case scenario ::..<br></h5><br>
+
+    Let's consider, how many level <code-forum class="bbCodeInline">1</code-forum> pieces we need for a specific piece of level <code-forum class="bbCodeInline">N</code-forum>.<br>
      We know that we need 2 pieces of level <code-forum class="bbCodeInline">L</code-forum> to merge one piece of level <code-forum class="bbCodeInline">L+1</code-forum>. In other words, every following level doubles the required number
      of level <code-forum class="bbCodeInline">L</code-forum> pieces. Let's consider the following tree for merging the level <code-forum class="bbCodeInline">4</code-forum> piece:<br>
 
@@ -140,8 +143,43 @@
     Because the Cups can also generate the higher-level pieces than 1, we have a good chance that the final cost will be lower (see the <b>Cups</b> tab to see how exactly these pieces are generated).
     This is where the nice, randomized mechanic comes into play.<br><br>
 
-    It makes sense to realize the following table if we want to be a bit more optimistic with our drop rate and consider that we most likely won't need
-    to put level 6 together from lots of level 1 pieces only. The following table shows the approximate costs of respective levels (in the value of required dwarven chips):<br>
+    <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Average scenario ::..<br></h5><br>
+
+    Now, it makes sense to realize a bit more realistic numbers and consider that we most likely won't need
+    to put level 6 together from lots of level 1 pieces only. Let's get away from the worst-case scenario and let's calculate the approximate costs
+    of specific levels.<br><br>
+
+    Let's consider we have 500 dwarven chips at our disposal, which makes it possible to open a cup 100 items. Sticking with the percentual values
+    (from the <b>Cups</b> tab), we get the following:<br><br>
+    <ul>
+      <li>38x piece level 1</li>
+      <li>30x piece level 2</li>
+      <li>15x piece level 3</li>
+      <li>10x piece level 4</li>
+      <li>5x piece level 5</li>
+      <li>2x piece level 6</li>
+    </ul>
+
+    We have received 38x piece level 1 from the spawning process only, which means we clicked the cup to get this number 38 times. Each time
+    we paid 5 dwarven chips, so 38 pieces level 1 cost <code-forum class="bbCodeInline">38*5=190</code-forum> dwarven chips in total. Because
+    we earned 38 pieces in total, it makes <code-forum class="bbCodeInline">190/38=5</code-forum> dwarven chips per one level 1 piece.<br><br>
+
+    Let's calculate the level 2, assuming we want to get the maximal number of level 2 pieces from our stack above. We have 38 pieces level 1
+    for which we paid 190 chips. Out of these we can merge 19 pieces level 2. We already have 30 pieces level 2, for which we paid
+    <code-forum class="bbCodeInline">30*5=150</code-forum> dwarven chips, so in total, we have <code-forum class="bbCodeInline">19+30=49</code-forum>
+    pieces level 2, which cost us <code-forum class="bbCodeInline">190+150=340</code-forum> dwarven chips. From that we get
+    <code-forum class="bbCodeInline">340/49=6.9</code-forum> dwarven chips per one level 2 piece.<br><br>
+
+    Let's go with one more, calculating the level 3. We have 38 pieces level 1, which we can merge into 19 pieces level 2, that
+    can be further merged into 9 pieces level 3 (now realize that we only needed 36 pieces level 1, so this cost us 
+    <code-forum class="bbCodeInline">36*5=180</code-forum> dwarven chips). We also have 30 pieces level 2, out of which we can
+    merge 15 pieces level 3 (we paid <code-forum class="bbCodeInline">30*5=150</code-forum> dwarven chips for 30 pieces level 2).
+    Finally, we have 15 pieces level 3, for which we paid <code-forum class="bbCodeInline">15*5=75</code-forum> dwarven chips. That 
+    makes <code-forum class="bbCodeInline">180+150+75=405</code-forum> dwarven chips and 
+    <code-forum class="bbCodeInline">9+15+15=39</code-forum> pieces level 3 in total. So, we get 
+    <code-forum class="bbCodeInline">405/39=10.4</code-forum> dwarven chips per one level 3 piece.<br><br>
+
+    Similarly, we can calculate all the remaining levels and get the following table:
 
     <div class="bbTable">
       <table class="table-primary" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">
@@ -155,18 +193,19 @@
             <th style="width: 16%; text-align: center;">Level 6</th>
           </tr>
           <tr>
-            <td style="width: 16%; text-align: center;">5</td>
-            <td style="width: 16%; text-align: center;">6.9</td>
-            <td style="width: 16%; text-align: center;">10.5</td>
-            <td style="width: 16%; text-align: center;">15.6</td>
-            <td style="width: 16%; text-align: center;">24.7</td>
-            <td style="width: 16%; text-align: center;">41.9</td>
+            <td style="width: 16%; text-align: center;">5 <img src="https://i.ibb.co/4tYSS6K/EL-akcia-august-2022-event-currency-1.png" style="width: 22px; margin-bottom: 3px;"></td>
+            <td style="width: 16%; text-align: center;">6.9 <img src="https://i.ibb.co/4tYSS6K/EL-akcia-august-2022-event-currency-1.png" style="width: 22px; margin-bottom: 3px;"></td>
+            <td style="width: 16%; text-align: center;">10.4 <img src="https://i.ibb.co/4tYSS6K/EL-akcia-august-2022-event-currency-1.png" style="width: 22px; margin-bottom: 3px;"></td>
+            <td style="width: 16%; text-align: center;">15 <img src="https://i.ibb.co/4tYSS6K/EL-akcia-august-2022-event-currency-1.png" style="width: 22px; margin-bottom: 3px;"></td>
+            <td style="width: 16%; text-align: center;">22.1 <img src="https://i.ibb.co/4tYSS6K/EL-akcia-august-2022-event-currency-1.png" style="width: 22px; margin-bottom: 3px;"></td>
+            <td style="width: 16%; text-align: center;">31.9 <img src="https://i.ibb.co/4tYSS6K/EL-akcia-august-2022-event-currency-1.png" style="width: 22px; margin-bottom: 3px;"></td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    After all, it's important to point out that some offers may have different costs everytime they appear. You can see the list of all offers in the <b>Trades</b> tab and see, what
+    Last but not least, it's important to point out that some trade rewards may ask for different combinations of items everytime they appear.
+    You can see the list of all offers in the <b>Trades</b> tab and see, what
     for the cost ranges they have (the costs' values are always displayed as the number of level <code-forum class="bbCodeInline">1</code-forum> pieces needed) and so you can 
     find yourself whether your current offer is on the lower end of this range, or if it is more beneficial for you to decline
     the offer and complete some other tasks in the meantime.
