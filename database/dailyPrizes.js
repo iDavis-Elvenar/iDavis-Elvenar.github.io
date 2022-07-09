@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_February_XXI_Sun_Loop",
         "kp_{15}",
         "A_Evt_Summer_XVIII_Mystical_Lace",
+        "INS_REV_SQD_50",
     ],
 
     "july_xxii_": [
