@@ -282,11 +282,11 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "august_xxii_": [
+        {"id":"board", "name":"Board", "img":"https://i.ibb.co/7v3HmnM/EL-akcia-august-2022-piece-a4.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html"},
         {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html"},
         {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html"},
         {"id":"cups", "name":"Cups", "img":"https://i.ibb.co/vVMrWDx/EL-akcia-august-2022-cup-red.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#cups", "file":"cups.html"},
         {"id":"cards", "name":"Cards", "img":"https://i.ibb.co/6YyLVtV/EL-akcia-august-2022-event-currency-2-big.png", "img_width":"35", "img_style":"margin-left: -5px; margin-right: 7px; position: relative;", "href":"#cards", "file":"cards.html"},
-        {"id":"board", "name":"Board", "img":"https://i.ibb.co/7v3HmnM/EL-akcia-august-2022-piece-a4.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html"},
     ],
     "july_xxii_": [
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},

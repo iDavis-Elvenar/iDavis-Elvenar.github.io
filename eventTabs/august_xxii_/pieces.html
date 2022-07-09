@@ -57,40 +57,40 @@
         </table>
       </div>
 
-      When you take a closer look at the <b>Cups</b> tab, you can see more closely how the items are spawned on your board. Generally speaking,
-      it is more likely that you receive some of the low-level items from the spawning process and you need to start the merging process
+      When you take a closer look at the <b>Cups</b> tab, you can see more closely how the pieces are spawned on your board. Generally speaking,
+      it is more likely that you receive some of the low-level pieces from the spawning process and you need to start the merging process
       to get the following tiers. The merging process is where the core of this mechanic lies!<br><br>
 
-      In order to start the merging process, you need to have 2 items of the <b>same type</b> and the <b>same level</b> on your board.
-      By dragging one of these items and dropping onto the other, you merge these items and out of this process one item of the following
+      In order to start the merging process, you need to have 2 pieces of the <b>same type</b> and the <b>same level</b> on your board.
+      By dragging one of these pieces and dropping onto the other, you merge these pieces and out of this process one piece of the following
       level (and the same type, of course) is created!<br>
 
       <center><img src="https://i.ibb.co/QYL9P8W/EL-akcia-august-2022-merging-process.png"></center><br>
 
-      By adding the low-level items to your board and repeating the merging process on these items, you can receive the required pieces
-      for fulfilling your tasks. You can use the interactive visualization below to see how the merging process works (click the <b>Play</b> button below
-      to start the animation and use the respective <b>Merge</b> nodes to merge your generated items (if the required low-level items are available, of course)).
+      By adding the low-level pieces to your board and repeating the merging process on these pieces, you can receive the required pieces
+      to fulfill your tasks. You can use the interactive visualization below to see how the merging process works (click the <b>Play</b> button below
+      to start the animation and use the respective <b>Merge</b> nodes to merge your generated pieces (if the required low-level pieces are available, of course)).
    
      <div class="row" style="height: 450px; margin-top: 20px; margin-bottom: 15px;">
        <iframe frameborder="0" width="100%" height="100%" src="https://my.machinations.io/d/Copy-of-Merge-Event---Visualisation/a7e025bcf85e11ec8c2902f943517e50" style="background-color: transparent; border-style: none; border-width: 0px; overflow: hidden;"></iframe>
      </div>
 
-     From the visualization we can easily see that the higher the item is, the more level 1 items you need and the whole process gets much slower.
-     Now, let's realize, how many level <code-forum class="bbCodeInline">1</code-forum> items we need for a specific item of level <code-forum class="bbCodeInline">N</code-forum>.<br>
-     We know that we need 2 items of level <code-forum class="bbCodeInline">L</code-forum> to merge one item of level <code-forum class="bbCodeInline">L+1</code-forum>. In other words, every following level doubles the required number
-     of level <code-forum class="bbCodeInline">L</code-forum> items. Let's consider the following tree for merging the level <code-forum class="bbCodeInline">4</code-forum> item:<br>
+     From the visualization we can easily see that the higher the pieces is, the more level 1 pieces you need and the whole process gets much slower.
+     Now, let's realize, how many level <code-forum class="bbCodeInline">1</code-forum> pieces we need for a specific piece of level <code-forum class="bbCodeInline">N</code-forum>.<br>
+     We know that we need 2 pieces of level <code-forum class="bbCodeInline">L</code-forum> to merge one piece of level <code-forum class="bbCodeInline">L+1</code-forum>. In other words, every following level doubles the required number
+     of level <code-forum class="bbCodeInline">L</code-forum> pieces. Let's consider the following tree for merging the level <code-forum class="bbCodeInline">4</code-forum> piece:<br>
 
      <center><img src="https://i.ibb.co/R06X0zB/EL-akcia-august-2022-merging-tree.png" style="margin-top: 10px;"></center><br>
 
-     How many level <code-forum class="bbCodeInline">1</code-forum> items we need for one item of level <code-forum class="bbCodeInline">N</code-forum>.
+     How many level <code-forum class="bbCodeInline">1</code-forum> pieces we need for one piece of level <code-forum class="bbCodeInline">N</code-forum>.
      From the tree visualization above we can see how many times we have doubled the amount - this can be read from the number of arrows between
-     the item of level <code-forum class="bbCodeInline">N</code-forum> (which in our case is <code-forum class="bbCodeInline">4</code-forum>) and 
-     the item we want to find the amount of, which is <code-forum class="bbCodeInline">1</code-forum>:<br>
+     the piece of level <code-forum class="bbCodeInline">N</code-forum> (which in our case is <code-forum class="bbCodeInline">4</code-forum>) and 
+     the piece we want to find the amount of, which is <code-forum class="bbCodeInline">1</code-forum>:<br>
      
      <center><img src="https://i.ibb.co/8zmGqgq/EL-akcia-august-2022-merging-tree-highlighted.png" style="margin-top: 10px;"></center><br>
 
      Such a distance is 3, simply because the difference between <code-forum class="bbCodeInline">4</code-forum> and <code-forum class="bbCodeInline">1</code-forum> is 3. That makes it possible to realize how the 
-     amount of level <code-forum class="bbCodeInline">1</code-forum> items to merge level <code-forum class="bbCodeInline">N</code-forum> can be calculated:<br><br>
+     amount of level <code-forum class="bbCodeInline">1</code-forum> pieces to merge level <code-forum class="bbCodeInline">N</code-forum> can be calculated:<br><br>
 
     <center><div class="bbTable">
       <table class="table-primary" style="width: 20%; margin-bottom: 20px;">
@@ -136,8 +136,8 @@
 
     The offer requires Tool level 3 and Dice level 6. The Tool level 3 requires <code-forum class="bbCodeInline">2^(3-1)</code-forum> tools level 1 (which is <code-forum class="bbCodeInline">4</code-forum>) and 
     the Dice level 6 requires <code-forum class="bbCodeInline">2^(6-1)</code-forum> dices level 1 (which is <code-forum class="bbCodeInline">32</code-forum>). In total, we need
-    36 items level 1 to fulfill this offer, which, in the worst case scenario, would cost <code-forum class="bbCodeInline">36*5=180</code-forum> of event currency (dwarven chips).
-    Because the Cups can also generate the higher-level items than 1, we have a good chance that the final cost will be lower (see the <b>Cups</b> tab to see how exactly these items are generated).
+    36 pieces of level 1 to fulfill this offer, which, in the worst case scenario, would cost <code-forum class="bbCodeInline">36*5=180</code-forum> of event currency (dwarven chips).
+    Because the Cups can also generate the higher-level pieces than 1, we have a good chance that the final cost will be lower (see the <b>Cups</b> tab to see how exactly these pieces are generated).
     This is where the nice, randomized mechanic comes into play.<br><br>
 
     It makes sense to realize the following table if we want to be a bit more optimistic with our drop rate and consider that we most likely won't need
@@ -167,7 +167,7 @@
     </div>
 
     After all, it's important to point out that some offers may have different costs everytime they appear. You can see the list of all offers in the <b>Trades</b> tab and see, what
-    for the cost ranges they have (the costs' values are always displayed as the number of level <code-forum class="bbCodeInline">1</code-forum> items needed) and so you can 
+    for the cost ranges they have (the costs' values are always displayed as the number of level <code-forum class="bbCodeInline">1</code-forum> pieces needed) and so you can 
     find yourself whether your current offer is on the lower end of this range, or if it is more beneficial for you to decline
     the offer and complete some other tasks in the meantime.
 
