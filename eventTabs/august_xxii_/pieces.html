@@ -83,14 +83,14 @@
      We know that we need 2 pieces of level <code-forum class="bbCodeInline">L</code-forum> to merge one piece of level <code-forum class="bbCodeInline">L+1</code-forum>. In other words, every following level doubles the required number
      of level <code-forum class="bbCodeInline">L</code-forum> pieces. Let's consider the following tree for merging the level <code-forum class="bbCodeInline">4</code-forum> piece:<br>
 
-     <center><img src="https://i.ibb.co/R06X0zB/EL-akcia-august-2022-merging-tree.png" style="margin-top: 10px;"></center><br>
+     <center><img src="https://i.ibb.co/R06X0zB/EL-akcia-august-2022-merging-tree.png" style="margin-top: 10px; max-width: 100%;"></center><br>
 
      How many level <code-forum class="bbCodeInline">1</code-forum> pieces we need for one piece of level <code-forum class="bbCodeInline">N</code-forum>.
      From the tree visualization above we can see how many times we have doubled the amount - this can be read from the number of arrows between
      the piece of level <code-forum class="bbCodeInline">N</code-forum> (which in our case is <code-forum class="bbCodeInline">4</code-forum>) and 
      the piece we want to find the amount of, which is <code-forum class="bbCodeInline">1</code-forum>:<br>
      
-     <center><img src="https://i.ibb.co/8zmGqgq/EL-akcia-august-2022-merging-tree-highlighted.png" style="margin-top: 10px;"></center><br>
+     <center><img src="https://i.ibb.co/8zmGqgq/EL-akcia-august-2022-merging-tree-highlighted.png" style="margin-top: 10px; max-width: 100%;"></center><br>
 
      Such a distance is 3, simply because the difference between <code-forum class="bbCodeInline">4</code-forum> and <code-forum class="bbCodeInline">1</code-forum> is 3. That makes it possible to realize how the 
      amount of level <code-forum class="bbCodeInline">1</code-forum> pieces to merge level <code-forum class="bbCodeInline">N</code-forum> can be calculated:<br><br>
