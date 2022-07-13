@@ -13,6 +13,7 @@ var dailyPrizes = {
         "A_Evt_Car_XX_Dwarven_Wagon",
         "INS_KP_AW_20",
         "A_Evt_Astronomi_XVIII_StoneOfTheStars",
+        "INS_RF_GRR_5",
     ],
 
     "july_xxii_": [
