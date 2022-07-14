@@ -14,6 +14,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_Astronomi_XVIII_StoneOfTheStars",
         "INS_RF_GRR_5",
+        "INS_UNIT_TG_HR_10",
     ],
 
     "july_xxii_": [
