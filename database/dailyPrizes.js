@@ -19,6 +19,7 @@ var dailyPrizes = {
         //16.7.,
         //17.7,,
         "A_Evt_August_XXII_Warriors_Gate",
+        "INS_UNIT_MC_LR_10",
     ],
 
     "july_xxii_": [
