@@ -15,6 +15,10 @@ var dailyPrizes = {
         "A_Evt_Astronomi_XVIII_StoneOfTheStars",
         "INS_RF_GRR_5",
         "INS_UNIT_TG_HR_10",
+        //15.7.,
+        //16.7.,
+        //17.7,,
+        "A_Evt_August_XXII_Warriors_Gate",
     ],
 
     "july_xxii_": [
