@@ -192,14 +192,22 @@ function displayItems() {
 
     createFaHeader();
 
-    let center = document.createElement('center');
-    center.style.marginTop = "20px";
+    var note = document.createElement('h7');
+    note.id = 'note_h7';
+    note.className = "card-title text-center";
+    note.style.textAlign = "left";
+    note.innerHTML = `${langUI('The following table contains the list of items present in this fellowship adventure.')}`;
+    var center = document.createElement('center');
+    center.appendChild(note);
+    parent.appendChild(center);
+    
     let divCenter = document.createElement("div");
     divCenter.id = "div_items";
     divCenter.style.width = "80%";
     divCenter.style.textAlign = "center";
 
     let divBBTable = document.createElement("div");
+    divBBTable.style.marginTop = "10px";
     divBBTable.className = "bbTable";
 
     let table = document.createElement('table');
@@ -214,10 +222,7 @@ function displayItems() {
             let tr = document.createElement('tr');
             let td_icon = document.createElement('td');
             td_icon.style.width = "10%";
-            let img_icon = document.createElement('img');
-            img_icon.src = items[it]["icon"];
-            img_icon.style.width = "28px";
-            td_icon.appendChild(img_icon);
+            td_icon.innerHTML = `${goods_icons[items[it]["id"]]}`;
             tr.appendChild(td_icon);
 
             let td_name = document.createElement('td');

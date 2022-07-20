@@ -719,3 +719,21 @@ function generateQuestsInTxt() {
         create_exception("Data Generated!",10,'success');
     }
 }
+
+function generateMpeChestsCosts() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('chestsCosts').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = [];
+    var selectedFaType = "mpe_"+document.getElementById("mpe_type").value;
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        for (let i = 0; i < data.length; i++) {
+            
+        }
+        console.log(result)
+        saveJSON( JSON.stringify(result), "weightedRewards.json" );   // paste it into variable in the current FS respective html file
+        create_exception("Data Generated!",10,'success');
+    }
+}
