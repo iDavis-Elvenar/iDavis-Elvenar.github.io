@@ -21,6 +21,8 @@ var dailyPrizes = {
         "A_Evt_August_XXII_Warriors_Gate",
         "INS_UNIT_MC_LR_10",
         "A_Evt_Summer_XVIII_Monopteros",
+        "kp_{10}",
+        "A_Evt_August_XXII_Solar_Training_Grounds",
     ],
 
     "july_xxii_": [
