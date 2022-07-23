@@ -17,7 +17,7 @@ var dailyPrizes = {
         "INS_UNIT_TG_HR_10",
         "A_Evt_May_XX_Cake_Counter",
         "INS_REV_SQD_25{2}",
-        //17.7,,
+        "A_Evt_August_XXII_Lunar_Factory",
         "A_Evt_August_XXII_Warriors_Gate",
         "INS_UNIT_MC_LR_10",
         "A_Evt_Summer_XVIII_Monopteros",
