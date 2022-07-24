@@ -189,7 +189,7 @@ let questsDictionary = {
         "dešť mincí" : "Pluie de pièces",
         "příděl zásob" : "Abondance de matériaux",
     },
-    "pl" : {/*
+    "pl" : {
         // CONNECTIONS
         "alebo" : "lub",
         // VERBS
@@ -250,7 +250,7 @@ let questsDictionary = {
         "budovy na level 5 alebo vyšší" : "budynki do poziomu 5 lub wyższego", // use regex
         "ľubovoľný zesilovač" : "zaklęcia",
         "dešť mincí" : "deszcz Monet",
-        "příděl zásob" : "strumień Zasobów",*/
+        "příděl zásob" : "strumień Zasobów",
     },
     "ru" : {
         // CONNECTIONS
