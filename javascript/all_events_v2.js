@@ -778,6 +778,7 @@ function displayQuests() {
                 tr.appendChild(prep);
                 tbody.appendChild(tr);
             } else {
+                insertQuestsAd(quest, tbody);
                 let tr = document.createElement('tr');
                 let number = document.createElement('td');
                 number.style.width = "5%";
@@ -903,6 +904,11 @@ function displayQuests() {
     div.appendChild(divBBTable);
     document.getElementById('column_with_tables').appendChild(div);
 
+    $(".adsense-inject").each(function () {
+        $(this).append('<div align="center"><ins class="adsbygoogle" style="display:block; width:30%; height:30%;" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-4154227292627045" data-ad-slot="7940520800"></ins></div>');
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+
     create_exception("Quests Generated!", 3, 'success');
 }
 
@@ -941,6 +947,19 @@ function numberOfAvailableQuests(selectedEvent) {
 
 function currentSatisfiesAdPlacementEvents(i, dataLength) {
     return i === 2 || (i !== 0 && (i-2) !== 0 && (i-2) % 4 === 0 && i !== dataLength-1)
+}
+
+function insertQuestsAd(questNumber, parent) {
+    if ((questNumber-1) % 30 == 0) {
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+        td.colSpan = 4;
+        let divAd = document.createElement("div");
+        divAd.className = "adsense-inject";
+        td.appendChild(divAd);
+        tr.appendChild(td);
+        parent.appendChild(tr);
+    }
 }
 
 window.onload
