@@ -950,7 +950,7 @@ function currentSatisfiesAdPlacementEvents(i, dataLength) {
 }
 
 function insertQuestsAd(questNumber, parent) {
-    if ((questNumber-1) % 30 == 0) {
+    if (questNumber !== 1 && (questNumber-1) % 30 == 0) {
         let tr = document.createElement('tr');
         let td = document.createElement('td');
         td.colSpan = 4;
