@@ -82,7 +82,9 @@ let ui = {
         "Air Traders Set": "Sada vzdušných obchodníků",
         "Pilgrim's Manor": "Panství poutníka",
         "Forbidden Ruins": "Zapovězené ruiny",
+        "Dwarven Citadel": "Trpasličí citadela",
         //EVENTS
+        "A Gateway into the Past": "Brána do minulosti",
         "Lucky Little Fin":"Šťastná ploutvička",
         "Naturally Amazing":"Přirozeně úžasné",
         "Dawn of the Phoenix":"Úsvit fénixe",
@@ -191,7 +193,9 @@ let ui = {
         "Air Traders Set": "Himmelshändler-Set",
         "Pilgrim's Manor": "Herrenhaus der Pilger",
         "Forbidden Ruins": "Verbotene Ruinen",
+        "Dwarven Citadel": "Zwergen-Zitadelle",
         //EVENTS
+        "A Gateway into the Past": "Ein Tor in die Vergangenheit",
         "Lucky Little Fin":"Flotte Flosse",
         "Naturally Amazing":"Einfach Natürlich",
         "Dawn of the Phoenix":"Die Dämmerung des Phönix",
@@ -300,7 +304,9 @@ let ui = {
         "Air Traders Set": "Set des Marchands des cieux",
         "Pilgrim's Manor": "Manoir du pèlerin",
         "Forbidden Ruins": "Ruines interdites",
+        "Dwarven Citadel": "Citadelle naine",
         //EVENTS
+        //"A Gateway into the Past": "",
         "Lucky Little Fin":"Le petit aileron porte-bonheur",
         "Naturally Amazing":"Naturellement époustouflant",
         "Dawn of the Phoenix":"L'aube du phénix",
@@ -409,7 +415,9 @@ let ui = {
         "Air Traders Set": "Zestaw Powietrznych Kupców",
         "Pilgrim's Manor": "Dwór Pielgrzyma",
         "Forbidden Ruins": "Zakazane Ruiny",
+        "Dwarven Citadel": "Krasnoludzka Cytadela",
         //EVENTS
+        //"A Gateway into the Past": "",
         "Lucky Little Fin":"Mały Morski Szczęściarz",
         "Naturally Amazing":"Z Natury Zadziwiające",
         "Dawn of the Phoenix":"Brzask Feniksa",
@@ -518,7 +526,9 @@ let ui = {
         "Air Traders Set": "Набор Воздушных торговцев",
         "Pilgrim's Manor": "Особняк пилигрима",
         "Forbidden Ruins": "Запретные руины",
+        "Dwarven Citadel": "Гномья цитадель",
         //EVENTS
+        //"A Gateway into the Past": "",
         "Lucky Little Fin":"Маленький везунчик",
         "Naturally Amazing":"Естественное изумление",
         "Dawn of the Phoenix":"Заря Феникса",
