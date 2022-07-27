@@ -475,10 +475,17 @@ function displayDailyPrizes() {
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 }); 
             });*/
-            $(".adsense-inject").each(function () {
-                $(this).append('<div align="center"><ins class="adsbygoogle" style="display:block; width:40%; height:40%; margin-bottom:10px;" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-4154227292627045" data-ad-slot="7940520800"></ins></div>');
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            });
+            try {
+                $(".adsense-inject").each(function () {
+                    $(this).append('<div align="center"><ins class="adsbygoogle" style="display:block; width:40%; height:40%; margin-bottom:10px;" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-4154227292627045" data-ad-slot="7940520800"></ins></div>');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                });
+            } catch (error) {
+                $(".adsense-inject").each(function () {
+                    $(this).append('<div align="center"><ins class="adsbygoogle" style="display:block; width:250px; margin-bottom:10px;" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-4154227292627045" data-ad-slot="7940520800"></ins></div>');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                });
+            }
             /*
             ADBLOCKER PREVENTION:
             let adBlockEnabled = false
