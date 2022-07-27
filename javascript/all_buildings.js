@@ -28,6 +28,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": 9,
     "A_Evt_Evo_May_XXII_Flower_Goblin_Epiphany": 9,
     "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": 9,
+    "A_Evt_Evo_Autumn_XXII_WittyCoon": 9,
 }
 
 function setAndReload(id) {

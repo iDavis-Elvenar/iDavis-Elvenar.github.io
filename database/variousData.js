@@ -94,7 +94,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "easter_xxii_": "03/17/2022",
     "may_xxii_": "04/14/2022",
     "july_xxii_": "05/25/2022",
-    "august_xxii_": "06/07/2022",//"07/07/2022",
+    "august_xxii_": "07/07/2022",
 }
 
 let questsLinks = {
@@ -115,6 +115,7 @@ let eventsDurations = {
     "may_xxii_": 22,
     "july_xxii_": 22,
     "august_xxii_": 22,
+    "autumn_xxii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -145,6 +146,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": "1x Twilight Phoenix Artifact",
     "A_Evt_Evo_May_XXII_Flower_Goblin_Epiphany": "1x Flower Goblin Epiphany Artifact",
     "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": "1x Glory of the Nimble Artifact",
+    "A_Evt_Evo_Autumn_XXII_WittyCoon": "1x Witty Coon Artifact"
 }
 
 var feedingEffectsDescriptions = {
@@ -217,6 +219,7 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
+            ["Autumn Zodiac","autumn_xxii_",false,true],
             ["A Gateway into the Past","august_xxii_",true,false],
             ["Lucky Little Fin","july_xxii_",false,false],
             ["Naturally Amazing","may_xxii_",false,false],
@@ -255,6 +258,7 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
+            ["Autumn Zodiac","autumn_xxii_",false,true],
             ["A Gateway into the Past","august_xxii_",true,false],
             ["Lucky Little Fin","july_xxii_",false,false],
             ["Naturally Amazing","may_xxii_",false,false],
@@ -281,6 +285,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "autumn_xxii_": [
+        {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html"},
+    ],
     "august_xxii_": [
         {"id":"board", "name":"Board", "img":"https://i.ibb.co/7v3HmnM/EL-akcia-august-2022-piece-a4.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html"},
         {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html"},
@@ -303,6 +310,7 @@ var optionsForOrderBy = [
     {"type": "buildings&events", "value": "orcs", "text": "Orcs per square per 1h"},
     {"type": "buildings&events", "value": "mana", "text": "Mana per square per 1h"},
     {"type": "buildings&events", "value": "seeds", "text": "Seeds per square per 1h"},
+    {"type": "buildings&events", "value": "unurium", "text": "Unurium per square per 1h"},
 ]
 
 var optionsForFilterBy = [
@@ -318,6 +326,7 @@ var optionsForFilterBy = [
     {"value": "boosted_sentient_plus_0_quality_1|boosted_sentient_plus_1_quality_1|boosted_sentient_plus_2_quality_1|sentientmarble|sentientsteel|sentientplanks", "text": "Sentient Goods T4"},
     {"value": "boosted_sentient_plus_0_quality_2|boosted_sentient_plus_1_quality_2|boosted_sentient_plus_2_quality_2|sentientcrystal|sentientscrolls|sentientsilk", "text": "Sentient Goods T5"},
     {"value": "boosted_sentient_plus_0_quality_3|boosted_sentient_plus_1_quality_3|boosted_sentient_plus_2_quality_3|sentientelixir|sentientmagic_dust|sentientgems", "text": "Sentient Goods T6"},
+    {"value": "unurium", "text": "Unurium"},
 ]
 
 var goods_icons = {
