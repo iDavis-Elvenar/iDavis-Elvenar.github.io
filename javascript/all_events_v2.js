@@ -218,7 +218,7 @@ function displayDailyPrizes() {
             if (orderByOption === 'day') {
                 createCalendar(filteredData, selectedEvent);
                 if (eventVideos.hasOwnProperty(selectedEvent) && eventVideos[selectedEvent] !== "") {
-                    insertVideo(selectedEvent);
+                    insertVideo(selectedEvent, document.getElementById('column_with_tables'));
                 }
             }
             for (var i = 0; i < filteredData.length; i++) {
@@ -486,18 +486,9 @@ function displayDailyPrizes() {
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 });
             }
-            /*
-            ADBLOCKER PREVENTION:
-            let adBlockEnabled = false
-            const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-            try {
-                await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
-            } catch (e) {
-                adBlockEnabled = true
-            } finally {
-                console.log(`AdBlock Enabled: ${adBlockEnabled}`)
-            }
-            */
+
+            //checkAdBlocker();
+            
         })
 }
 
@@ -589,7 +580,7 @@ function createCalendar(filteredData, selectedEvent) {
     document.getElementById('column_with_tables').appendChild(div);
 }
 
-function insertVideo(selectedEvent) {
+function insertVideo(selectedEvent, parent) {
     var h5 = document.createElement('h5');
     h5.id = 'video';
     h5.className = "card-title text-center text-title font-weight-bold";
@@ -606,7 +597,7 @@ function insertVideo(selectedEvent) {
         iframe.src = eventVideos[selectedEvent].split(";")[i];
         iframe.style.marginBottom = '15px';
         center.appendChild(iframe);
-        document.getElementById('column_with_tables').appendChild(center);
+        parent.appendChild(center);
     }
 }
 
@@ -677,6 +668,7 @@ function switchView(type) {
     } else if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
+        //checkAdBlocker();
     } else if (type !== "calendar" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
@@ -695,6 +687,7 @@ function switchView(type) {
                 }
             }
         }
+        //checkAdBlocker();
     }
 }
 
