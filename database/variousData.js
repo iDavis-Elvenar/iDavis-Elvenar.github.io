@@ -31,14 +31,14 @@ var numberOfChapters = 19;
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
     11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII', 18: 'XVIII',
-    19: 'XIX'
+    19: 'XIX', 20: 'XX'
 }
 
 var chapterNames = {
     1: 'Chapter 1', 2: 'Chapter 2', 3: 'Chapter 3', 4: 'Chapter 4', 5: 'Chapter 5', 6: 'Dwarves', 7: 'Fairies', 
     8: 'Orcs and Goblins', 9: 'Woodelves', 10: 'Sorcerers and Dragons',
     11: 'Halflings', 12: 'Elementals', 13: 'Amuni', 14: 'Constructs', 15: 'Elvenar', 16: 'Embassies', 
-    17: 'Traders of Unur', 18: 'Team Spirit', 19: 'Revenge of the Exile'
+    17: 'Traders of Unur', 18: 'Team Spirit', 19: 'Revenge of the Exile', 20: 'The Power of Music'
 }
 
 let eventBanners = {
@@ -652,6 +652,7 @@ var chapter_icons = {
     17: "https://i.ibb.co/W5CtfR2/ch17.png title='Traders of Unur'",
     18: "https://i.ibb.co/ZxGJSVv/ch18.png title='Team Spirit'",
     19: "https://i.ibb.co/Y4gW0Vy/ch19.png title='Revenge of the Exile'",
+    20: "https://i.ibb.co/Vv6rC8r/ch20.png title='The Power of Music'",
 }
 
 var grIds = {
@@ -669,4 +670,5 @@ var grIds = {
     "tradersofunur": "ch17",
     "teamspirit": "ch18",
     "revengeofexile": "ch19",
+    "powerofmusic": "ch20",
 }
