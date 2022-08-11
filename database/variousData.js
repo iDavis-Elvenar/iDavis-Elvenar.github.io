@@ -147,7 +147,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": "1x Twilight Phoenix Artifact",
     "A_Evt_Evo_May_XXII_Flower_Goblin_Epiphany": "1x Flower Goblin Epiphany Artifact",
     "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": "1x Glory of the Nimble Artifact",
-    "A_Evt_Evo_Autumn_XXII_WittyCoon": "1x Witty Coon Artifact"
+    "A_Evt_Evo_Autumn_XXII_WittyCoon": "1x Witty Raccoon Artifact"
 }
 
 var feedingEffectsDescriptions = {
@@ -163,6 +163,7 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_Autumn_XIX_Bear_Panda" : `<img src="https://i.ibb.co/0YD0JRZ/boosted-quality-1.png">`,
     "A_Evt_Evo_September_XXI_Red_Panda_Master" : `<img src="https://i.ibb.co/hYXr3HW/vision-vapor-small.png">`,
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix" : `<img src="https://i.ibb.co/Yy21rpT/health-points.png">`,
+    "A_Evt_Evo_Autumn_XXII_WittyCoon" : `<img src="https://i.ibb.co/s5zgfs4/goods-production.png">`,
 }
 
 var allowedFeedingMultiplicators = {

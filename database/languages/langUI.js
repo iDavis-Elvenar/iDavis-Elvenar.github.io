@@ -306,7 +306,7 @@ let ui = {
         "Forbidden Ruins": "Ruines interdites",
         "Dwarven Citadel": "Citadelle naine",
         //EVENTS
-        //"A Gateway into the Past": "",
+        "A Gateway into the Past": "Un passage vers le passé",
         "Lucky Little Fin":"Le petit aileron porte-bonheur",
         "Naturally Amazing":"Naturellement époustouflant",
         "Dawn of the Phoenix":"L'aube du phénix",
@@ -417,7 +417,7 @@ let ui = {
         "Forbidden Ruins": "Zakazane Ruiny",
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         //EVENTS
-        //"A Gateway into the Past": "",
+        "A Gateway into the Past": "Brama do Przeszłości",
         "Lucky Little Fin":"Mały Morski Szczęściarz",
         "Naturally Amazing":"Z Natury Zadziwiające",
         "Dawn of the Phoenix":"Brzask Feniksa",
@@ -528,7 +528,7 @@ let ui = {
         "Forbidden Ruins": "Запретные руины",
         "Dwarven Citadel": "Гномья цитадель",
         //EVENTS
-        //"A Gateway into the Past": "",
+        "A Gateway into the Past": "Врата в прошлое",
         "Lucky Little Fin":"Маленький везунчик",
         "Naturally Amazing":"Естественное изумление",
         "Dawn of the Phoenix":"Заря Феникса",

@@ -340,8 +340,8 @@ async function checkAdBlocker() {
     } finally {
         //console.log(`AdBlock Enabled: ${adBlockEnabled}`)
         if (adBlockEnabled) {
-            create_exception("It seems that your <b>AdBlocker</b> is running on this website. Please consider disabling your AdBlocker"+
-            " or adding this website to your whitelist, to help iDavis-Elvenar website continue providing tips and resources"+
+            create_exception("It seems like your <b>AdBlocker</b> is running on this website. Please consider disabling your AdBlocker"+
+            " or adding this website to your whitelist, to help <b>iDavis-Elvenar</b> website continue providing tips and resources"+
             " for the community.<p class='mb-0'><center><img src='https://i.ibb.co/zQ9S4sc/EL-str-nka-adblocker-disable.png' style='width:70%; border:3px solid black; margin-bottom: -7px;'></center></p>"+
             "<ul><li> If you feel like no AdBlocker is used on your side and this message appeared by mistake, "+
             " let me know by filling the form on my <a href='https://idavis-elvenar.com/contact.html' class='alert-link'>Contact page</a>.</li></ul>"+
