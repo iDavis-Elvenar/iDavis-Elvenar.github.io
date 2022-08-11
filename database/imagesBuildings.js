@@ -1,4 +1,12 @@
 var images_buildings = {
+    "A_Evt_Autumn_XXII_Bear_Booster_A":"https://i.ibb.co/yWpFMs8/bear-booster-a.png",
+    "A_Evt_Autumn_XXII_Bear_Booster_B":"https://i.ibb.co/HPY3D5w/bear-booster-b.png",
+    "A_Evt_Autumn_XXII_Bear_Booster_C":"https://i.ibb.co/whk51gn/bear-booster-c.png",
+    "A_Evt_Autumn_XXII_Luscious_Cakes":"https://i.ibb.co/FxHGCv5/luscious-cakes.png",
+    "A_Evt_Autumn_XXII_Succulent_Crabs":"https://i.ibb.co/5cG6KXc/succulent-crabs.png",
+    "A_Evt_Autumn_XXII_The_Flying_Chopsticks":"https://i.ibb.co/236BsVB/the-flying-chopsticks.png",
+    "A_Evt_Autumn_XXII_The_Ingenious_Bakery":"https://i.ibb.co/G5kNVx6/the-ingenious-bakery.png",
+    "A_Evt_Evo_Autumn_XXII_WittyCoon":"https://i.ibb.co/yYPqYvv/wittycoon.png",
     "A_Evt_August_XXII_Eclipse_Bridge":"https://i.ibb.co/4TJzXRV/eclipse-bridge.png",
     "A_Evt_August_XXII_Lunar_Factory":"https://i.ibb.co/rxb56V1/lunar-factory.png",
     "A_Evt_August_XXII_Solar_Training_Grounds":"https://i.ibb.co/WyTkBhT/solar-training-grounds.png",
