@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_September_XXI_Calligraphy_Class",
         "A_Evt_Autumn_XXII_Succulent_Crabs",
         "INS_UNIT_MC_LM_10",
+        "A_Evt_Autumn_XVIII_Tomato_Jury",
     ],
     
     "august_xxii_": [
