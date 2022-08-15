@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_Autumn_XXII_Succulent_Crabs",
         "INS_UNIT_MC_LM_10",
         "A_Evt_Autumn_XVIII_Tomato_Jury",
+        "kp_{15}",
     ],
     
     "august_xxii_": [
