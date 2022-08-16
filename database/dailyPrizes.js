@@ -6,6 +6,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_LM_10",
         "A_Evt_Autumn_XVIII_Tomato_Jury",
         "kp_{15}",
+        "A_Evt_Autumn_XXII_The_Flying_Chopsticks",
     ],
     
     "august_xxii_": [
@@ -23,7 +24,7 @@ var dailyPrizes = {
         "A_Evt_Astronomi_XVIII_StoneOfTheStars",
         "INS_RF_GRR_5",
         "INS_UNIT_TG_HR_10",
-        "A_Evt_May_XX_Cake_Counter",
+        "A_Evt_May_XX_Food_Market",
         "INS_REV_SQD_25{2}",
         "A_Evt_August_XXII_Lunar_Factory",
         "A_Evt_August_XXII_Warriors_Gate",
