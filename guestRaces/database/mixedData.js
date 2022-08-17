@@ -28,4 +28,5 @@ var grBanners = {
     "ch17": "https://i.ibb.co/vcKTdD2/ch17-banner.png",
     "ch18": "https://i.ibb.co/s5BLz8N/ch18-banner.png",
     "ch19": "https://i.ibb.co/NTmBDJ6/ch19-banner.png",
+    "ch20": "https://i.ibb.co/kxJQxbn/ch20-banner.png",
 }
