@@ -224,8 +224,8 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
-            ["Autumn Zodiac","autumn_xxii_",false,false],
-            ["A Gateway into the Past","august_xxii_",true,false],
+            ["Autumn Zodiac","autumn_xxii_",true,false],
+            ["A Gateway into the Past","august_xxii_",false,false],
             ["Lucky Little Fin","july_xxii_",false,false],
             ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
