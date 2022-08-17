@@ -102,12 +102,12 @@ var notifications = {
     },
     "10":{  // EVENTS SIMULTANEOUSLY
         "id":10,
-        "text":`<h4 class="alert-heading">Lucky Little Fin Event starts on Beta!</h4>
-        <p>Since a new event is starting on Beta, the default filter has been changed so that the new event appears first. But don't worry - you can access the <b>Naturally Amazing</b> event using the drop-down menu on the top of the website - just like any other event from the past!</p>`,
+        "text":`<h4 class="alert-heading">Autumn Zodiac Event starts on Beta!</h4>
+        <p>Since a new event is starting on Beta, the default filter has been changed so that the new event appears first. But don't worry - you can access the <b>Gateway into the Past</b> event using the drop-down menu on the top of the website - just like any other event from the past!</p>`,
         "repeatAfter":18000,
         "style":"warning",
         "duration":60,
-        "active":false,
+        "active":true,
         "priority":100
     },
 }
