@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_Autumn_XVIII_Tomato_Jury",
         "kp_{15}",
         "A_Evt_Autumn_XXII_The_Flying_Chopsticks",
+        "runeshards-1_{2}",
     ],
     
     "august_xxii_": [

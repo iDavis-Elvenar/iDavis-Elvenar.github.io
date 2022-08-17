@@ -56,6 +56,7 @@ let eventBanners = {
     "may_xxii_": "https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png",
     "july_xxii_": "https://i.ibb.co/nw1K2Dm/EL-akcia-j-l-2022-banner.png",
     "august_xxii_": "https://i.ibb.co/XV9cdnC/EL-akcia-august-2022-banner.png",
+    "autumn_xxii_": "https://i.ibb.co/8Yp9YqV/EL-akcia-september-2022-banner.png",
 }
 
 let eventVideos = {
@@ -96,6 +97,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "may_xxii_": "04/14/2022",
     "july_xxii_": "05/25/2022",
     "august_xxii_": "07/07/2022",
+    "autumn_xxii_": "08/18/2022",
 }
 
 let questsLinks = {
@@ -106,6 +108,7 @@ let questsLinks = {
     "may_xxii_": "bit.ly/NaturallyAmazing2022",
     "july_xxii_": "bit.ly/LuckyLittleFin2022",
     "august_xxii_": "bit.ly/GatewayIntoThePast2022",
+    "autumn_xxii_": "bit.ly/AutumnZodiac2022",
 }
 
 let eventsDurations = {
@@ -221,8 +224,8 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
-            ["Autumn Zodiac","autumn_xxii_",false,true],
-            ["A Gateway into the Past","august_xxii_",true,false],
+            ["Autumn Zodiac","autumn_xxii_",true,false],
+            ["A Gateway into the Past","august_xxii_",false,false],
             ["Lucky Little Fin","july_xxii_",false,false],
             ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
@@ -260,8 +263,8 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
-            ["Autumn Zodiac","autumn_xxii_",false,true],
-            ["A Gateway into the Past","august_xxii_",true,false],
+            ["Autumn Zodiac","autumn_xxii_",true,false],
+            ["A Gateway into the Past","august_xxii_",false,false],
             ["Lucky Little Fin","july_xxii_",false,false],
             ["Naturally Amazing","may_xxii_",false,false],
             ["Dawn of the Phoenix","easter_xxii_",false,false],
