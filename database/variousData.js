@@ -635,7 +635,8 @@ var goods_icons = {
     "enchanted_tiara": "<img src='https://i.ibb.co/Y3xnddG/fellowship-adventures-item21.png' title='Enchanted Tiara' style='width: 28px;'><br>",
     "wand": "<img src='https://i.ibb.co/Kqk0VBJ/fellowship-adventures-item11.png' title='Wand' style='width: 28px;'><br>",
     "b_ch20_aw1_shards": "<img src='https://i.ibb.co/Yh32gVQ/b-ch20-aw1-shards-small.png' title='Rune Shard for Ancestral Resting Place'><br>",
-    "b_ch20_aw2_shards": "<img src='https://i.ibb.co/0cSGf3B/b-ch20-aw2-shards-small.png' title='Rune Shard for Scout´s Tavern'><br>",
+    "b_ch20_aw2_shards": "<img src='https://i.ibb.co/0cSGf3B/b-ch20-aw2-shards-small.png' title='Rune Shard for Scouts Tavern'><br>",
+    "spire_diplomacy_joker": "<img src='https://i.ibb.co/Fgkb1HS/spire-diplomacy-joker.png' title='Spectral Stone'><br>",
 }
 
 var chapter_icons = {
