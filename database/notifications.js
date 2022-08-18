@@ -42,13 +42,15 @@ var notifications = {
     },
     "5":{  // NEW FEATURE ON THE WEBSITE
         "id":5,
-        "text":`<h4 class="alert-heading">Introducing: Random Rewards!</h4>
-        <p>Finally, all the buildings that feature random productions <img src='https://i.ibb.co/4Y4qbR1/random-questionmark.png' width='24px'> are now properly displayed on the website. These include <a href='buildings.html#A_Evt_Wishing_Well' target="_blank" class='alert-link'>Wishing Well</a>, <a href='buildings.html#A_Evt_Godess_Of_Wishes' target="_blank" class='alert-link'>Goddess of Wishes</a>, <a href='buildings.html#A_Evt_Djinn' target="_blank" class='alert-link'>Genie</a> and all buildings that will be added in the future!</p>
-        <p>Stay tuned for more updates on the website soon!</p>`,
-        "repeatAfter":604800,
+        "text":`<h4 class="alert-heading">Chapter 20 has arrived in Beta!</h4>
+        <hr>
+        <p><center><img src="https://i.ibb.co/kxJQxbn/ch20-banner.png" style="width: 40%;">
+        <br><br>You can visit the respective page of <a href="https://idavis-elvenar.com/guestRaces/powerofmusic.html" class='alert-link'>Chapter 20 - The Power of Music</a> to see the questline of this chapter. More details will follow, so stay tuned!
+        <br>If the process goes as usual, we may expect this chapter to hit Live servers in the upcoming weeks!</center></p>`,
+        "repeatAfter":172800,
         "style":"warning",
         "duration":45,
-        "active":false,
+        "active":true,
         "priority":30
     },
     "6":{  // DONATE
