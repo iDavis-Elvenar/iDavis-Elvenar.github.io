@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_Autumn_XXII_The_Flying_Chopsticks",
         "runeshards-1_{2}",
         "A_Evt_Prod_Nutcracker",
+        "INS_UNIT_MC_MA_10",
     ],
     
     "august_xxii_": [
