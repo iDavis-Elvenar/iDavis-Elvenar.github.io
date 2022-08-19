@@ -17,6 +17,9 @@ function switchView(type) {
     } else if (type === "items" && view !== "items") {
         displayItems();
         view = "items";
+    } else if (type === "rewards" && view !== "rewards") {
+        displayRewards();
+        view = "rewards";
     } else if (type !== "info" && type !== "items" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
@@ -196,7 +199,7 @@ function displayItems() {
     note.id = 'note_h7';
     note.className = "card-title text-center";
     note.style.textAlign = "left";
-    note.innerHTML = `${langUI('The following table contains the list of items present in this fellowship adventure.')}`;
+    note.innerHTML = `The following table contains the list of items you will need to produce during <b>this</b> fellowship adventure.`;
     var center = document.createElement('center');
     center.appendChild(note);
     parent.appendChild(center);
@@ -245,4 +248,76 @@ function displayItems() {
     center.appendChild(divCenter);
     parent.appendChild(center);
     
+}
+
+function displayRewards() {
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = "";
+    createFaHeader();
+
+    let center = document.createElement('center');
+
+    let h5stageRewards = document.createElement('h5');
+    h5stageRewards.className = "card-title text-center text-title font-weight-bold";
+    h5stageRewards.style.textAlign = "left";
+    h5stageRewards.innerHTML = `..:: Stage Rewards ::..`;
+    parent.appendChild(h5stageRewards);
+
+    let divBBTable = document.createElement("div");
+    divBBTable.style.marginTop = "10px";
+    divBBTable.className = "bbTable";
+
+    let table = document.createElement('table');
+    table.className = "table-primary";
+    table.style.width = "50%";
+    table.style.marginBottom = "10px";
+
+    let tbody = document.createElement("tbody");
+
+    for (let st = 0; st < stageRewards[getSelectedFa()].length; st++) {
+        let tr1 = document.createElement('tr');
+        let th = document.createElement('th');
+        th.className = "text-center";
+        th.colSpan = 3;
+        th.innerHTML = `Stage ${st+1}`;
+        tr1.appendChild(th);
+        tbody.appendChild(tr1);
+
+        let tr2 = document.createElement('tr');
+        for (let re = 0; re < stageRewards[getSelectedFa()][st].length; re++) {
+            let td = document.createElement('td');
+            td.className = "text-center";
+            td.style.width = "33%";
+            td.innerHTML = `<img src="${stageRewards[getSelectedFa()][st][re]["img"]}">`;
+            tr2.appendChild(td);
+        }
+        tbody.appendChild(tr2);
+
+        let tr3 = document.createElement('tr');
+        for (let re = 0; re < stageRewards[getSelectedFa()][st].length; re++) {
+            let td = document.createElement('td');
+            td.className = "text-center";
+            td.style.width = "33%";
+            if (stageRewards[getSelectedFa()][st][re]["link"] !== "") {
+                td.innerHTML = `<a href="${stageRewards[getSelectedFa()][st][re]["link"]}" class="text-link font-weight-bold" target="_blank">${stageRewards[getSelectedFa()][st][re]["text"]}</a>`;
+            } else {
+                td.innerHTML = `${stageRewards[getSelectedFa()][st][re]["text"]}`;
+            }
+            tr3.appendChild(td);
+        }
+        tbody.appendChild(tr3);
+    }
+
+    table.appendChild(tbody);
+    divBBTable.appendChild(table);
+    center.appendChild(divBBTable);
+    parent.appendChild(center);
+
+    let h5rankingRewards = document.createElement('h5');
+    h5rankingRewards.className = "card-title text-center text-title font-weight-bold";
+    h5rankingRewards.style.textAlign = "left";
+    h5rankingRewards.innerHTML = `..:: Ranking Rewards ::..`;
+
+    parent.appendChild(h5rankingRewards);
+  
 }

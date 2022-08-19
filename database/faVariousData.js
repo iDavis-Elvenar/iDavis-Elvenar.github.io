@@ -7,11 +7,11 @@ var allFas = {
 var baseTabsFa = [
     {"id":"base_left_panel_div", "name":"Info", "img":"https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#info", "onclick":"info"},
     {"id":"base_left_panel_div", "name":"Items", "img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#items", "onclick":"items"},
+    {"id":"base_left_panel_div", "name":"Rewards", "img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#rewards", "onclick":"rewards"},
 ]
 
 var additionalTabsFa = {
     "july_xxii_": [
-        {"id":"rewards", "name":"Rewards", "img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#rewards", "file":"rewards.html"},
         {"id":"waypoints", "name":"Waypoints", "img":"https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#waypoints", "file":"waypoints.html"},
     ],
 }
@@ -59,4 +59,24 @@ var items = [
 
 var excludeItems = {
     "july_xxii_": [2,3,7,11,12]
+}
+
+var stageRewards = {
+    "july_xxii_": [
+        [
+            {"img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "text":"1x Ancient Knowledge (20 KP)", "link":"https://idavis-elvenar.com"},
+            {"img":"", "text":"", "link":""},
+            {"img":"", "text":"", "link":""},
+        ],
+        [
+            {"img":"", "text":"", "link":""},
+            {"img":"", "text":"", "link":""},
+            {"img":"", "text":"", "link":""},
+        ],
+        [
+            {"img":"", "text":"", "link":""},
+            {"img":"", "text":"", "link":""},
+            {"img":"", "text":"", "link":""},
+        ]
+    ],
 }
