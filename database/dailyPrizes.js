@@ -10,6 +10,7 @@ var dailyPrizes = {
         "runeshards-1_{2}",
         "A_Evt_Prod_Nutcracker",
         "INS_UNIT_MC_MA_10",
+        "A_Evt_September_XXI_Training_Dojo",
     ],
     
     "august_xxii_": [
