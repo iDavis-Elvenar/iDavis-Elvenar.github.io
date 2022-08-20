@@ -20,6 +20,9 @@ function switchView(type) {
     } else if (type === "rewards" && view !== "rewards") {
         displayRewards();
         view = "rewards";
+    } else if (type === "waypoints" && view !== "waypoints") {
+        displayWaypoints();
+        view = "waypoints";
     } else if (type !== "info" && type !== "items" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
@@ -81,7 +84,7 @@ function setLeftBar() {
     for (let i = 0; i < numberOfAdditionalItems; i++) {
         let newDiv = document.createElement("div");
         newDiv.className = "justify-content-center box d-flex flex-column";
-        newDiv.style.height = ""+(100/(numberOfAdditionalItems+2))+"%";
+        newDiv.style.height = ""+(100/(numberOfAdditionalItems+3))+"%";
         newDiv.id = additionalTabsFa[selectedFa][i]["id"];
         let newSpan = document.createElement("span");
         newSpan.className = "allign-middle";
@@ -320,4 +323,359 @@ function displayRewards() {
 
     parent.appendChild(h5rankingRewards);
   
+}
+
+// WAYPOINTS
+
+function displayWaypoints() {
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = "";
+    createFaHeader();
+
+    for (let map = 1; map <= 3; map++) {
+        let h5map = document.createElement('h5');
+        h5map.className = "card-title text-center text-title font-weight-bold";
+        h5map.style.textAlign = "left";
+        h5map.innerHTML = `..:: Map ${map} ::..`;
+        parent.appendChild(h5map);
+
+        let cent = document.createElement('center');
+        createRemainingsDiv(cent, map);
+        parent.appendChild(cent);
+
+        createWaypointsTable(parent, map);
+    }
+
+    calculateRemainings([1,2,3], waypointsData[getSelectedFa()]);
+}
+
+function calculateRemainings(maps, wpData) {
+    console.log("CALCULATING REMAININGS ON MAPS", maps);
+    for (const map of maps) {
+        var remainings = [];
+        if (document.getElementById('calculate_all_'+map).checked) {
+            for (let color = 0; color < Object.keys(wpData[map]).length; color++) {
+                let currentPath = Object.keys(wpData[map])[color];
+                for (let encounter = 0; encounter < Object.keys(wpData[map][currentPath]).length; encounter++) {
+                    let currentEncounter = Object.keys(wpData[map][currentPath])[encounter];
+                    for (let req = 0; req < wpData[map][currentPath][currentEncounter].length; req++) {
+                        for (const key in wpData[map][currentPath][currentEncounter][req]) {
+                            let requiredNumber = wpData[map][currentPath][currentEncounter][req][key];
+                            requiredNumber = Math.max(requiredNumber - parseInt(document.getElementById("input_"+map+"_"+currentPath+"_"+currentEncounter+"_"+req).value), 0);
+                            for (let numPush = 0; numPush < requiredNumber; numPush++) {
+                                remainings.push(key)
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            let paths = ["all"];
+            if (document.getElementById('calculate_orange_'+map).checked) {
+                paths.push("orange");
+            } else if (document.getElementById('calculate_blue_'+map).checked) {
+                paths.push("blue");
+            } else if (document.getElementById('calculate_green_'+map).checked) {
+                paths.push("green");
+            }
+            for (let p = 0; p < paths.length; p++) {
+                let currentPath = paths[p];
+                for (let encounter = 0; encounter < Object.keys(wpData[map][currentPath]).length; encounter++) {
+                    let currentEncounter = Object.keys(wpData[map][currentPath])[encounter];
+                    for (let req = 0; req < wpData[map][currentPath][currentEncounter].length; req++) {
+                        for (const key in wpData[map][currentPath][currentEncounter][req]) {
+                            let requiredNumber = wpData[map][currentPath][currentEncounter][req][key];
+                            requiredNumber = Math.max(requiredNumber - parseInt(document.getElementById("input_"+map+"_"+currentPath+"_"+currentEncounter+"_"+req).value), 0);
+                            for (let numPush = 0; numPush < requiredNumber; numPush++) {
+                                remainings.push(key)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        let remainingsForMap = getOccurrencesDict(remainings);
+        updateRemainings(map, remainingsForMap);
+    }
+}
+
+function updateRemainings(map, remainings) {
+    let parent = document.getElementById("remaining_items_"+map);
+    parent.innerHTML = ``;
+    for (const key in remainings) {
+        parent.innerHTML += `${remainings[key]}x ${goods_icons[key].replace("style='width: 28px", "style='width: 18px;").replace("<br>", "")}, `;
+    }
+    parent.innerHTML = parent.innerHTML.substring(0, parent.innerHTML.length-2);
+}
+
+function getOccurrencesDict(array) {
+    let result = {};
+    for (let i = 0; i < array.length; i++) {
+        if (result.hasOwnProperty(array[i])) {
+            result[array[i]] += 1;
+        } else {
+            result[array[i]] = 1;
+        }
+    }
+    return result;
+}
+
+function createWaypointsTable(parent, map) {
+    let divBBTable = document.createElement("div");
+    divBBTable.style.marginTop = "10px";
+    divBBTable.className = "bbTable";
+
+    let table = document.createElement('table');
+    table.className = "table-primary";
+    table.style.width = "100%";
+    table.style.marginBottom = "10px";
+
+    let tbody = document.createElement("tbody");
+
+    let wpData = waypointsData[getSelectedFa()][map];
+
+    console.log(wpData);
+
+    for (let encounter = 1; encounter <= Object.keys(wpData["blue"]).length+1; encounter++) {
+        if (encounter === 1) {
+            let trAll = document.createElement('tr');
+            createCellWaypoint(trAll, "all", encounter, 33, 3);
+            createCellCosts(trAll, wpData, "all", encounter, map, 33, 3);
+            createCellProgress(trAll, wpData, "all", encounter, map, 33, 3);
+            tbody.appendChild(trAll);
+
+            let trColors = document.createElement('tr');
+            createCellColor(trColors, "orange", 3);
+            createCellColor(trColors, "blue", 3);
+            createCellColor(trColors, "green", 3);
+            tbody.appendChild(trColors);
+        } else {
+            let tr = document.createElement('tr');
+            let colors = ["orange", "blue", "green"];
+            for (const col of colors) {
+                createCellWaypoint(tr, col, encounter, 20, 1);
+                createCellCosts(tr, wpData, col, encounter, map, 40, 1);
+                createCellProgress(tr, wpData, col, encounter, map, 40, 1);
+            }
+            tbody.appendChild(tr);
+        }
+    }
+
+
+    table.appendChild(tbody);
+    divBBTable.appendChild(table);
+    parent.appendChild(divBBTable);
+}
+
+function createCellWaypoint(parent, encounterType, encounter, width, colspan) {
+    let td = document.createElement('td');
+    td.style.textAlign = "center";
+    td.style.maxWidth = ""+width+"%";
+    td.colSpan = colspan;
+    if (encounter === 3 || encounter === 6) {
+        td.innerHTML = `<img src="${waypointsIcons["multi"]}">`;
+    } else {
+        td.innerHTML = `<img src="${waypointsIcons[encounterType]}">`;
+    }
+    parent.appendChild(td);
+}
+
+function createCellCosts(parent, wpData, color, encounter, map, width, colspan) {
+    let td = document.createElement('td');
+    td.style.textAlign = "center";
+    td.style.maxWidth = ""+width+"%";
+    td.colSpan = colspan;
+    td.id = "td_"+map+"_"+color+"_"+encounter;
+    //td.style.padding = "10px";
+    for (let i = 0; i < wpData[color][encounter].length; i++) {
+        for (const key in wpData[color][encounter][i]) {
+            td.innerHTML += `${wpData[color][encounter][i][key]}x ${goods_icons[key].replace("style='width: 28px", "style='width: 25px;")}`
+        }
+        if (i !== wpData[color][encounter].length-1) {
+            //td.innerHTML += `<br>`;
+        }
+    }
+    parent.appendChild(td);
+}
+
+function createCellProgress(parent, wpData, color, encounter, map, width, colspan) {
+    let td = document.createElement('td');
+    td.style.textAlign = "center";
+    td.style.maxWidth = ""+width+"%";
+    td.colSpan = colspan;
+    for (let i = 0; i < wpData[color][encounter].length; i++) {
+        for (const key in wpData[color][encounter][i]) {
+            let div = document.createElement('div');
+            //div.className = "form-outline form-group col-md-2";
+            let input = document.createElement('input');
+            input.type = "number";
+            input.id = "input_"+map+"_"+color+"_"+encounter+"_"+i;
+            //input.className = "form-control";
+            input.style.width = "40px";
+            input.min = 0;
+            input.max = wpData[color][encounter][i][key];
+            input.value = 0;
+            input.onchange = function() {
+                $("#"+"input_"+map+"_"+color+"_"+encounter+"_"+i).val(this.value);
+                calculateRemainings([map], waypointsData[getSelectedFa()]);
+                checkIfTaskCompleted(this.value, Object.values(wpData[color][encounter][i])[0], map, color, encounter, i);
+            }
+            let label = document.createElement('label');
+            //label.className = "form-label";
+            label.htmlFor = "input_"+map+"_"+color+"_"+encounter;
+            div.appendChild(input);
+            div.appendChild(label);
+            td.appendChild(div);
+        }
+        if (i !== wpData[color][encounter].length-1) {
+            //td.innerHTML += `<br>`;
+        }
+    }
+    parent.appendChild(td);
+}
+
+function checkIfTaskCompleted(currentValue, requiredValue, map, color, encounter, order) {
+    if (currentValue >= requiredValue) {
+        let requirement = document.getElementById("td_"+map+"_"+color+"_"+encounter);
+        if (!requirement.innerHTML.split("<br>")[order].includes('<p style="color')) {
+            let temp = requirement.innerHTML.split("<br>");
+            temp[order] = `<p style="color:#a89587; display:inline;">${temp[order]}</p>`;
+            temp = temp.join("<br>");
+            requirement.innerHTML = temp;
+        }
+    } else {
+        let requirement = document.getElementById("td_"+map+"_"+color+"_"+encounter);
+        let temp = requirement.innerHTML.split("<br>");
+        temp[order] = temp[order].substring(temp[order].indexOf(">")+1, temp[order].indexOf("</p>"));
+        temp = temp.join("<br>");
+        requirement.innerHTML = temp;
+    }
+}
+
+function createCellColor(parent, color, colspan) {
+    let td = document.createElement('th');
+    td.style.textDecorationColor = color;
+    td.style.textAlign = "center";
+    td.style.maxWidth = "33%";
+    td.colSpan = colspan;
+    td.innerHTML = `${color.charAt(0).toUpperCase() + color.slice(1)}`;
+    parent.appendChild(td);
+}
+
+function createRemainingsDiv(parent, map) {
+    let divRemainings = document.createElement('div');
+    divRemainings.className = "card-spoiler border-spoiler mb-3";
+    divRemainings.style.marginTop = "10px";
+    divRemainings.style.paddingBottom = "10px";
+    divRemainings.style.paddingTop = "7px";
+    divRemainings.style.paddingLeft = "20px";
+    divRemainings.style.paddingRight = "20px";
+    divRemainings.style.width = "70%";
+
+    let divRow1 = document.createElement('div');
+    divRow1.className = "row";
+    divRow1.innerHTML = `<b>Remaining items:</b>`;
+    divRow1.style.textAlign = "center";
+    divRemainings.appendChild(divRow1);
+
+    let divRow2 = document.createElement('div');
+    divRow2.className = "row";
+    let fieldset = document.createElement('fieldset');
+    let i = document.createElement('i');
+    let h7_1 = document.createElement('h7');
+    h7_1.innerHTML = `Calculate: `;
+    i.appendChild(h7_1);
+
+    let input1 = document.createElement('input');
+    input1.type = "radio";
+    input1.id = `calculate_all_${map}`;
+    input1.name = `calculate_${map}`;
+    input1.value = `all`;
+    input1.checked = true;
+    input1.onchange = function() {
+        calculateRemainings([map], waypointsData[getSelectedFa()]);
+    }
+    input1.style.marginLeft = "3px";
+    i.appendChild(input1);
+    let label1 = document.createElement('label');
+    label1.htmlFor = `calculate_all_${map}`;
+    label1.innerHTML = `<h7>all paths </h7>`;
+    i.appendChild(label1);
+
+    let input2 = document.createElement('input');
+    input2.type = "radio";
+    input2.id = `calculate_orange_${map}`;
+    input2.name = `calculate_${map}`;
+    input2.value = `orange`;
+    input2.checked = false;
+    input2.onchange = function() {
+        calculateRemainings([map], waypointsData[getSelectedFa()]);
+    }
+    input2.style.marginLeft = "3px";
+    i.appendChild(input2);
+    let label2 = document.createElement('label');
+    label2.htmlFor = `calculate_orange_${map}`;
+    label2.innerHTML = `<h7>orange path </h7>`;
+    i.appendChild(label2);
+
+    let input3 = document.createElement('input');
+    input3.type = "radio";
+    input3.id = `calculate_blue_${map}`;
+    input3.name = `calculate_${map}`;
+    input3.value = `blue`;
+    input3.checked = false;
+    input3.onchange = function() {
+        calculateRemainings([map], waypointsData[getSelectedFa()]);
+    }
+    input3.style.marginLeft = "3px";
+    i.appendChild(input3);
+    let label3 = document.createElement('label');
+    label3.htmlFor = `calculate_blue_${map}`;
+    label3.innerHTML = `<h7>blue path </h7>`;
+    i.appendChild(label3);
+
+    let input4 = document.createElement('input');
+    input4.type = "radio";
+    input4.id = `calculate_green_${map}`;
+    input4.name = `calculate_${map}`;
+    input4.value = `green`;
+    input4.checked = false;
+    input4.onchange = function() {
+        calculateRemainings([map], waypointsData[getSelectedFa()]);
+    }
+    input4.style.marginLeft = "3px";
+    i.appendChild(input4);
+    let label4 = document.createElement('label');
+    label4.htmlFor = `calculate_green_${map}`;
+    label4.innerHTML = `<h7>green path.</h7>`;
+    i.appendChild(label4);
+
+    fieldset.appendChild(i);
+    divRow2.appendChild(fieldset);
+    divRemainings.appendChild(divRow2);
+    /*divRow2.innerHTML = `<fieldset>
+    <i><h7>Calculate:</h7>
+      <input type="radio" id="calculate_all_${map}" name="calculate_${map}" value="all"
+             checked>
+      <label for="calculate_all_${map}"><h7>all paths</h7></label>
+
+      <input type="radio" id="calculate_orange_${map}" name="calculate_${map}" value="orange">
+      <label for="calculate_orange_${map}"><h7>orange path</h7></label>
+
+      <input type="radio" id="calculate_blue_${map}" name="calculate_${map}" value="blue">
+      <label for="calculate_blue_${map}"><h7>blue path</h7></label>
+      
+      <input type="radio" id="calculate_green_${map}" name="calculate_${map}" value="green">
+      <label for="calculate_green_${map}"><h7>green path.</h7></label></i>
+</fieldset>`;
+    divRemainings.appendChild(divRow2);*/
+
+    let divRow3 = document.createElement('div');
+    divRow3.className = "";
+    divRow3.innerHTML = ``;
+    divRow3.style.textAlign = "left";
+    divRow3.id = "remaining_items_"+map;
+    divRemainings.appendChild(divRow3);
+
+    parent.appendChild(divRemainings);
 }

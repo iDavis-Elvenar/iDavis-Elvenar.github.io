@@ -725,15 +725,57 @@ function generateMpeChestsCosts() {
     let file = document.getElementById('chestsCosts').files[0];
     let reader = new FileReader();
     reader.readAsText(file);
-    var result = [];
+    var result = {};
     var selectedFaType = "mpe_"+document.getElementById("mpe_type").value;
     reader.onload = function () {
         let data = JSON.parse(reader.result);
+        let chests = [];
         for (let i = 0; i < data.length; i++) {
-            
+            if (data[i]["chestId"].startsWith(selectedFaType) && !data[i]["chestId"].includes("endless")) {
+                let chest = {};
+                chest["map"] = data[i]["chestId"].split("_")[2];
+                if (data[i]["chestId"].includes("stage_start")) {
+                    chest["encounter"] = 1;
+                    chest["color"] = "all";
+                    chest["order"] = data[i]["chestId"].split("stage_start_")[1];
+                } else {
+                    let color;
+                    if (data[i]["chestId"].includes("orange")) {
+                        color = "orange";
+                    } else if (data[i]["chestId"].includes("blue")) {
+                        color = "blue";
+                    } else {
+                        color = "green";
+                    }
+                    chest["encounter"] = data[i]["chestId"].split(color)[1].split("_")[1];
+                    chest["color"] = color;
+                    chest["order"] = data[i]["chestId"].split(color)[1].split("_")[2];
+                }
+                for (const key in data[i]["costs"]["resources"]) {
+                    if (key !== "__class__") {
+                        if (!chest["costs"]) {
+                            chest["costs"] = {};
+                        }
+                        chest["costs"][key] = data[i]["costs"]["resources"][key];
+                    }
+                }
+                chests.push(chest);
+            }
+        }
+        for (let i = 0; i < chests.length; i++) {
+            if (!result[chests[i]["map"]]) {
+                result[chests[i]["map"]] = {};
+            }
+            if (!result[chests[i]["map"]][chests[i]["color"]]) {
+                result[chests[i]["map"]][chests[i]["color"]] = {};
+            }
+            if (!result[chests[i]["map"]][chests[i]["color"]][chests[i]["encounter"]]) {
+                result[chests[i]["map"]][chests[i]["color"]][chests[i]["encounter"]] = [];
+            }
+            result[chests[i]["map"]][chests[i]["color"]][chests[i]["encounter"]].push(chests[i]["costs"]);
         }
         console.log(result)
-        saveJSON( JSON.stringify(result), "weightedRewards.json" );   // paste it into variable in the current FS respective html file
+        saveJSON( JSON.stringify(result), "mpeChestsCosts.json" );   // paste it into variable in the current FS respective html file
         create_exception("Data Generated!",10,'success');
     }
 }
