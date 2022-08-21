@@ -84,7 +84,7 @@ function setLeftBar() {
     for (let i = 0; i < numberOfAdditionalItems; i++) {
         let newDiv = document.createElement("div");
         newDiv.className = "justify-content-center box d-flex flex-column";
-        newDiv.style.height = ""+(100/(numberOfAdditionalItems+3))+"%";
+        newDiv.style.height = ""+(100/(numberOfAdditionalItems+numberOfBaseItems))+"%";
         newDiv.id = additionalTabsFa[selectedFa][i]["id"];
         let newSpan = document.createElement("span");
         newSpan.className = "allign-middle";
@@ -353,48 +353,36 @@ function calculateRemainings(maps, wpData) {
     console.log("CALCULATING REMAININGS ON MAPS", maps);
     for (const map of maps) {
         var remainings = [];
+        let paths = ["all"];
         if (document.getElementById('calculate_all_'+map).checked) {
-            for (let color = 0; color < Object.keys(wpData[map]).length; color++) {
-                let currentPath = Object.keys(wpData[map])[color];
-                for (let encounter = 0; encounter < Object.keys(wpData[map][currentPath]).length; encounter++) {
-                    let currentEncounter = Object.keys(wpData[map][currentPath])[encounter];
-                    for (let req = 0; req < wpData[map][currentPath][currentEncounter].length; req++) {
-                        for (const key in wpData[map][currentPath][currentEncounter][req]) {
-                            let requiredNumber = wpData[map][currentPath][currentEncounter][req][key];
-                            requiredNumber = Math.max(requiredNumber - parseInt(document.getElementById("input_"+map+"_"+currentPath+"_"+currentEncounter+"_"+req).value), 0);
-                            for (let numPush = 0; numPush < requiredNumber; numPush++) {
-                                remainings.push(key)
-                            }
-                        }
-                    }
-                }
-            }
-        } else {
-            let paths = ["all"];
-            if (document.getElementById('calculate_orange_'+map).checked) {
-                paths.push("orange");
-            } else if (document.getElementById('calculate_blue_'+map).checked) {
-                paths.push("blue");
-            } else if (document.getElementById('calculate_green_'+map).checked) {
-                paths.push("green");
-            }
-            for (let p = 0; p < paths.length; p++) {
-                let currentPath = paths[p];
-                for (let encounter = 0; encounter < Object.keys(wpData[map][currentPath]).length; encounter++) {
-                    let currentEncounter = Object.keys(wpData[map][currentPath])[encounter];
-                    for (let req = 0; req < wpData[map][currentPath][currentEncounter].length; req++) {
-                        for (const key in wpData[map][currentPath][currentEncounter][req]) {
-                            let requiredNumber = wpData[map][currentPath][currentEncounter][req][key];
-                            requiredNumber = Math.max(requiredNumber - parseInt(document.getElementById("input_"+map+"_"+currentPath+"_"+currentEncounter+"_"+req).value), 0);
-                            for (let numPush = 0; numPush < requiredNumber; numPush++) {
-                                remainings.push(key)
-                            }
+            paths.push("orange", "blue", "green");
+        } else if (document.getElementById('calculate_orange_'+map).checked) {
+            paths.push("orange");
+        } else if (document.getElementById('calculate_blue_'+map).checked) {
+            paths.push("blue");
+        } else if (document.getElementById('calculate_green_'+map).checked) {
+            paths.push("green");
+        }
+        for (let p = 0; p < paths.length; p++) {
+            let currentPath = paths[p];
+            for (let encounter = 0; encounter < Object.keys(wpData[map][currentPath]).length; encounter++) {
+                let currentEncounter = Object.keys(wpData[map][currentPath])[encounter];
+                for (let req = 0; req < wpData[map][currentPath][currentEncounter].length; req++) {
+                    for (const key in wpData[map][currentPath][currentEncounter][req]) {
+                        let requiredNumber = wpData[map][currentPath][currentEncounter][req][key];
+                        requiredNumber = Math.max(requiredNumber - parseInt(document.getElementById("input_"+map+"_"+currentPath+"_"+currentEncounter+"_"+req).value), 0);
+                        for (let numPush = 0; numPush < requiredNumber; numPush++) {
+                            remainings.push(key)
                         }
                     }
                 }
             }
         }
         let remainingsForMap = getOccurrencesDict(remainings);
+        /*let res = Object.keys(remainingsForMap).sort().reduce(function (result, key) {
+            result[key] = remainingsForMap[key];
+            return result;
+        }, {});*/
         updateRemainings(map, remainingsForMap);
     }
 }
@@ -530,6 +518,10 @@ function createCellProgress(parent, wpData, color, encounter, map, width, colspa
         if (i !== wpData[color][encounter].length-1) {
             //td.innerHTML += `<br>`;
         }
+    }
+    if (color !== "green" && encounter > 1) {
+        td.style.borderRightWidth = "3px";
+        //td.style.borderRightColor = "#7a5e49";
     }
     parent.appendChild(td);
 }
