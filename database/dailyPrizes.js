@@ -13,6 +13,7 @@ var dailyPrizes = {
         "A_Evt_September_XXI_Training_Dojo",
         "INS_KP_AW_10{2}",
         "A_Evt_Autumn_XXII_Luscious_Cakes",
+        "INS_REV_SQD_50",
     ],
     
     "august_xxii_": [
