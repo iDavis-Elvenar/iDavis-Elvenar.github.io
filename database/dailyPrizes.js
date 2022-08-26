@@ -16,6 +16,7 @@ var dailyPrizes = {
         "INS_REV_SQD_50",
         "INS_UNIT_MC_LR_10",
         "A_Evt_Autumn_XVIII_Green_Pond",
+        "INS_RF_GRR_5",
     ],
     
     "august_xxii_": [
