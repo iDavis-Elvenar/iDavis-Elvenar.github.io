@@ -491,6 +491,7 @@ function createCellProgress(parent, wpData, color, encounter, map, width, colspa
     td.style.textAlign = "center";
     td.style.maxWidth = ""+width+"%";
     td.colSpan = colspan;
+    let loadedState = loadCurrentState();
     for (let i = 0; i < wpData[color][encounter].length; i++) {
         for (const key in wpData[color][encounter][i]) {
             let div = document.createElement('div');
@@ -502,11 +503,17 @@ function createCellProgress(parent, wpData, color, encounter, map, width, colspa
             input.style.width = "40px";
             input.min = 0;
             input.max = wpData[color][encounter][i][key];
-            input.value = 0;
+            if (loadedState !== null) {
+                input.value = loadedState[map][color][encounter].split(",")[i];
+                //checkIfTaskCompleted(this.value, Object.values(wpData[color][encounter][i])[0], map, color, encounter, i);
+            } else {
+                input.value = 0;
+            }
             input.onchange = function() {
                 $("#"+"input_"+map+"_"+color+"_"+encounter+"_"+i).val(this.value);
                 calculateRemainings([map], waypointsData[getSelectedFa()]);
                 checkIfTaskCompleted(this.value, Object.values(wpData[color][encounter][i])[0], map, color, encounter, i);
+                saveCurrentState(determineCurrentState());
             }
             let label = document.createElement('label');
             //label.className = "form-label";
@@ -670,4 +677,58 @@ function createRemainingsDiv(parent, map) {
     divRemainings.appendChild(divRow3);
 
     parent.appendChild(divRemainings);
+}
+
+function determineCurrentState() {
+    let result = {};
+    let maps = [1,2,3];
+    let colors = ["all", "orange", "blue", "green"];
+    let encounters = [1,2,3,4,5,6,7,8,9];
+    // map {1,2,3} -> color {all,orange,blue,green} -> encounter {1,2,3,4,5,6,7,8,9} -> "order1,order2,order3"
+    for (const map of maps) {
+        if (!result.hasOwnProperty(map)) {
+            result[map] = {};
+        }
+        for (const color of colors) {
+            if (!result[map].hasOwnProperty(color)) {
+                result[map][color] = {};
+            }
+            for (const encounter of encounters) {
+                if (color === "all" && encounter === 1) {
+                    if (!result[map][color].hasOwnProperty(encounter)) {
+                        result[map][color][encounter] = "";
+                    }
+                    let orderLabel = document.getElementById("input_"+map+"_"+color+"_"+encounter+"_0");
+                    let orderNumber = 0;
+                    while (orderLabel !== null) {
+                        result[map][color][encounter] += orderLabel.value+",";
+                        orderNumber++;
+                        orderLabel = document.getElementById("input_"+map+"_"+color+"_"+encounter+"_"+orderNumber);
+                    }
+                    result[map][color][encounter] = result[map][color][encounter].slice(0, result[map][color][encounter].length-1);
+                } else if (color !== "all" && encounter > 1) {
+                    if (!result[map][color].hasOwnProperty(encounter)) {
+                        result[map][color][encounter] = "";
+                    }
+                    let orderLabel = document.getElementById("input_"+map+"_"+color+"_"+encounter+"_0");
+                    let orderNumber = 0;
+                    while (orderLabel !== null) {
+                        result[map][color][encounter] += orderLabel.value+",";
+                        orderNumber++;
+                        orderLabel = document.getElementById("input_"+map+"_"+color+"_"+encounter+"_"+orderNumber);
+                    }
+                    result[map][color][encounter] = result[map][color][encounter].slice(0, result[map][color][encounter].length-1);
+                }
+            }
+        }
+    }
+    return result;
+}
+
+function saveCurrentState(state) {
+    localStorage.setItem("mpe_"+getSelectedFa(), JSON.stringify(state));
+}
+
+function loadCurrentState() {
+    return JSON.parse(localStorage.getItem("mpe_"+getSelectedFa()));
 }
