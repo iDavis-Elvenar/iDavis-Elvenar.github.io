@@ -160,7 +160,7 @@
                     <div class="row center" style="height: 33%; vertical-align: middle">
                         <div class="col-sm">
                             <center><label for="input_event" id="select_event_label" style="margin-left: 20px;"></label>
-                            <select id="input_event" class="custom-select" style="width: 50%;" onchange="setView('calendar')">
+                            <select id="input_event" class="custom-select" style="width: 50%;">
 
                             </select>
                             </center>
@@ -173,7 +173,7 @@
 
                     </div>
                     <div class="col text-center" style="height: 33%; position: relative" >
-                        <button class="btn btn-sm btn-success btn-block text-uppercase center" id="generate_daily_prizes_button" style="width: 50%; align-content: center" onclick="clearURL(); displayBase(); setLeftBar();"></button>
+                        <button class="btn btn-sm btn-success btn-block text-uppercase center" id="generate_daily_prizes_button" style="width: 50%; align-content: center" onclick="clearURL(); displayBase(); setLeftBar(); setView('calendar');"></button>
                     </div>
                 </div>
                 <!--<div class="col-sm">

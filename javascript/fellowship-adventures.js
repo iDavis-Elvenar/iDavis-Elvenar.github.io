@@ -10,6 +10,10 @@ function loadPage() {
     setLeftBar();
 }
 
+function setView(newView) {
+    view = newView;
+}
+
 function switchView(type) {
     if (type === "info" && view !== "info") {
         displayBase();
@@ -345,12 +349,28 @@ function displayWaypoints() {
 
         createWaypointsTable(parent, map);
     }
-
+    checkIfFinishedAll();
     calculateRemainings([1,2,3], waypointsData[getSelectedFa()]);
 }
 
+function checkIfFinishedAll() {
+    let wpData = waypointsData[getSelectedFa()];
+    for (const map of Object.keys(wpData)) {
+        for (const color of Object.keys(wpData[map])) {
+            for (const encounter of Object.keys(wpData[map][color])) {
+                for (const order of Object.keys(wpData[map][color][encounter])) {
+                    let currentValue = document.getElementById("input_"+map+"_"+color+"_"+encounter+"_"+order).value;
+                    let requiredValue = Object.values(wpData[map][color][encounter][order])[0];
+                    if (checkIfTaskCompleted(currentValue, requiredValue)) {
+                        setFinishedColor(true, map, color, encounter, order);
+                    }
+                }
+            }
+        }
+    }
+}
+
 function calculateRemainings(maps, wpData) {
-    console.log("CALCULATING REMAININGS ON MAPS", maps);
     for (const map of maps) {
         var remainings = [];
         let paths = ["all"];
@@ -421,8 +441,6 @@ function createWaypointsTable(parent, map) {
     let tbody = document.createElement("tbody");
 
     let wpData = waypointsData[getSelectedFa()][map];
-
-    console.log(wpData);
 
     for (let encounter = 1; encounter <= Object.keys(wpData["blue"]).length+1; encounter++) {
         if (encounter === 1) {
@@ -512,13 +530,28 @@ function createCellProgress(parent, wpData, color, encounter, map, width, colspa
             input.onchange = function() {
                 $("#"+"input_"+map+"_"+color+"_"+encounter+"_"+i).val(this.value);
                 calculateRemainings([map], waypointsData[getSelectedFa()]);
-                checkIfTaskCompleted(this.value, Object.values(wpData[color][encounter][i])[0], map, color, encounter, i);
+                setFinishedColor(checkIfTaskCompleted(this.value, Object.values(wpData[color][encounter][i])[0]), map, color, encounter, i);
                 saveCurrentState(determineCurrentState());
+                document.getElementById("inputcheck_"+map+"_"+color+"_"+encounter+"_"+i).checked = checkIfTaskCompleted(this.value, Object.values(wpData[color][encounter][i])[0]);
             }
             let label = document.createElement('label');
             //label.className = "form-label";
             label.htmlFor = "input_"+map+"_"+color+"_"+encounter;
+            let inputCheck = document.createElement('input');
+            inputCheck.type = "checkbox";
+            inputCheck.id = "inputcheck_"+map+"_"+color+"_"+encounter+"_"+i;
+            inputCheck.style.marginLeft = "10px";
+            inputCheck.style.marginRight = "-17px";
+            inputCheck.checked = checkIfTaskCompleted(input.value, Object.values(wpData[color][encounter][i])[0]);
+            inputCheck.onchange = function() {
+                if (inputCheck.checked) {
+                    setOrderInputValue(wpData, map, color, encounter, i, "max");
+                } else {
+                    setOrderInputValue(wpData, map, color, encounter, i, 0);
+                }
+            }
             div.appendChild(input);
+            div.appendChild(inputCheck);
             div.appendChild(label);
             td.appendChild(div);
         }
@@ -533,8 +566,24 @@ function createCellProgress(parent, wpData, color, encounter, map, width, colspa
     parent.appendChild(td);
 }
 
-function checkIfTaskCompleted(currentValue, requiredValue, map, color, encounter, order) {
-    if (currentValue >= requiredValue) {
+function setOrderInputValue(wpData, map, color, encounter, order, value) {
+    if (value === "max") {
+        value = Object.values(wpData[color][encounter][order])[0];
+        $("#input_"+map+"_"+color+"_"+encounter+"_"+order).val(value);
+    } else {
+        $("#input_"+map+"_"+color+"_"+encounter+"_"+order).val(value);
+    }
+    calculateRemainings([map], waypointsData[getSelectedFa()]);
+    setFinishedColor(checkIfTaskCompleted(value, Object.values(wpData[color][encounter][order])[0]), map, color, encounter, order);
+    saveCurrentState(determineCurrentState());
+}
+
+function checkIfTaskCompleted(currentValue, requiredValue) {
+    return currentValue >= requiredValue;
+}
+
+function setFinishedColor(completed, map, color, encounter, order) {
+    if (completed) {
         let requirement = document.getElementById("td_"+map+"_"+color+"_"+encounter);
         if (!requirement.innerHTML.split("<br>")[order].includes('<p style="color')) {
             let temp = requirement.innerHTML.split("<br>");
