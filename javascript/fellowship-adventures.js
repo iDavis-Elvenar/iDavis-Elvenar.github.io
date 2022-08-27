@@ -639,9 +639,14 @@ function createRemainingsDiv(parent, map) {
     input1.id = `calculate_all_${map}`;
     input1.name = `calculate_${map}`;
     input1.value = `all`;
-    input1.checked = true;
+    if (getPathCalculation()) {
+        input1.checked = getPathCalculation()[map-1] === input1.value;
+    } else {
+        input1.checked = true;
+    }
     input1.onchange = function() {
         calculateRemainings([map], waypointsData[getSelectedFa()]);
+        setPathCalculation(map, input1.value);
     }
     input1.style.marginLeft = "3px";
     i.appendChild(input1);
@@ -655,9 +660,14 @@ function createRemainingsDiv(parent, map) {
     input2.id = `calculate_orange_${map}`;
     input2.name = `calculate_${map}`;
     input2.value = `orange`;
-    input2.checked = false;
+    if (getPathCalculation()) {
+        input2.checked = getPathCalculation()[map-1] === input2.value;
+    } else {
+        input2.checked = false;
+    }
     input2.onchange = function() {
         calculateRemainings([map], waypointsData[getSelectedFa()]);
+        setPathCalculation(map, input2.value);
     }
     input2.style.marginLeft = "3px";
     i.appendChild(input2);
@@ -671,9 +681,14 @@ function createRemainingsDiv(parent, map) {
     input3.id = `calculate_blue_${map}`;
     input3.name = `calculate_${map}`;
     input3.value = `blue`;
-    input3.checked = false;
+    if (getPathCalculation()) {
+        input3.checked = getPathCalculation()[map-1] === input3.value;
+    } else {
+        input3.checked = false;
+    }
     input3.onchange = function() {
         calculateRemainings([map], waypointsData[getSelectedFa()]);
+        setPathCalculation(map, input3.value);
     }
     input3.style.marginLeft = "3px";
     i.appendChild(input3);
@@ -687,9 +702,14 @@ function createRemainingsDiv(parent, map) {
     input4.id = `calculate_green_${map}`;
     input4.name = `calculate_${map}`;
     input4.value = `green`;
-    input4.checked = false;
+    if (getPathCalculation()) {
+        input4.checked = getPathCalculation()[map-1] === input4.value;
+    } else {
+        input4.checked = false;
+    }
     input4.onchange = function() {
         calculateRemainings([map], waypointsData[getSelectedFa()]);
+        setPathCalculation(map, input4.value);
     }
     input4.style.marginLeft = "3px";
     i.appendChild(input4);
@@ -701,22 +721,6 @@ function createRemainingsDiv(parent, map) {
     fieldset.appendChild(i);
     divRow2.appendChild(fieldset);
     divRemainings.appendChild(divRow2);
-    /*divRow2.innerHTML = `<fieldset>
-    <i><h7>Calculate:</h7>
-      <input type="radio" id="calculate_all_${map}" name="calculate_${map}" value="all"
-             checked>
-      <label for="calculate_all_${map}"><h7>all paths</h7></label>
-
-      <input type="radio" id="calculate_orange_${map}" name="calculate_${map}" value="orange">
-      <label for="calculate_orange_${map}"><h7>orange path</h7></label>
-
-      <input type="radio" id="calculate_blue_${map}" name="calculate_${map}" value="blue">
-      <label for="calculate_blue_${map}"><h7>blue path</h7></label>
-      
-      <input type="radio" id="calculate_green_${map}" name="calculate_${map}" value="green">
-      <label for="calculate_green_${map}"><h7>green path.</h7></label></i>
-</fieldset>`;
-    divRemainings.appendChild(divRow2);*/
 
     let divRow3 = document.createElement('div');
     divRow3.className = "";
@@ -726,6 +730,25 @@ function createRemainingsDiv(parent, map) {
     divRemainings.appendChild(divRow3);
 
     parent.appendChild(divRemainings);
+}
+
+function setPathCalculation(map, path) {
+    if (getPathCalculation() === null) {
+        let result = ["all", "all", "all"];
+        result[map-1] = path;
+        localStorage.setItem("mpe_"+getSelectedFa()+"pathCalculation", result.join(","));
+    } else {
+        let result = getPathCalculation();
+        result[map-1] = path;
+        localStorage.setItem("mpe_"+getSelectedFa()+"pathCalculation", result.join(","));
+    }
+}
+
+function getPathCalculation() {
+    if (localStorage.getItem("mpe_"+getSelectedFa()+"pathCalculation") === null) {
+        return null;
+    }
+    return localStorage.getItem("mpe_"+getSelectedFa()+"pathCalculation").split(",");
 }
 
 function determineCurrentState() {
