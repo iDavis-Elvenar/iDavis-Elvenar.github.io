@@ -18,6 +18,7 @@ var dailyPrizes = {
         "A_Evt_Autumn_XVIII_Green_Pond",
         "INS_RF_GRR_5",
         "A_Evt_Autumn_XXII_Succulent_Crabs",
+        "A_Evt_Prod_NutStub",
     ],
     
     "august_xxii_": [
