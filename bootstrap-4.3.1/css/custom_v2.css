@@ -347,3 +347,7 @@ background-color: #b9881e;
 .midcontainer { width: 300px; height: 250px; }
 .midcontainer2 { width: 300px; height: 250px;  } 
  }
+
+ .bg-gradient_menu_dropdown {
+    background-image: linear-gradient(to bottom right,#ffffff, #ecdec0, #e5ca8f) !important;
+ }
