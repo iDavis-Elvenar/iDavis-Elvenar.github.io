@@ -168,8 +168,11 @@ function displayBase() {
     let center = document.createElement('center');
     center.innerHTML += introductionText.replace("_", getSelectedFaName());
 
-    center.innerHTML += `<br><br><b>Start date:</b> `+dates[getSelectedFa()]["start_date"];
-    center.innerHTML += `<br><b>End date:</b> `+dates[getSelectedFa()]["end_date"]+`<br><br>`;
+    center.innerHTML += `<br><br><b>Start date:</b> `+dates[getSelectedFa()]["live"]["start_date"];
+    center.innerHTML += `<br><b>End date:</b> `+dates[getSelectedFa()]["live"]["end_date"];
+    center.innerHTML += `<br><br><i>The following dates are for Beta server:</i><br>`
+    center.innerHTML += `<br><b>Start date:</b> `+dates[getSelectedFa()]["beta"]["start_date"];
+    center.innerHTML += `<br><b>End date:</b> `+dates[getSelectedFa()]["beta"]["end_date"]+`<br><br>`;
 
     parent.appendChild(center);
 

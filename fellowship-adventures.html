@@ -88,9 +88,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbar_more" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content">
-                        <a class="dropdown-item" href="fellowship-adventures.html" id="navitem_contact">Fellowship Adventures</a>
+                        <a class="dropdown-item" href="fellowship-adventures.html" id="navitem_contact"><img src="https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png" style="width: 25px; margin-right: 5px; margin-bottom: 4px;">&#x203A; Fellowship Adventures &#x2039;</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="contact.html" id="navitem_contact">Contact & About Me</a>
+                        <a class="dropdown-item" href="contact.html" id="navitem_contact">Contact</a>
+                        <a class="dropdown-item" href="about-me.html" id="navitem_contact">About Me</a>
                         <a class="dropdown-item" href="donate-create.html" id="navitem_donate">Donate</a>
                     </div>
                     </li>
@@ -130,8 +131,8 @@
         <script>
             document.getElementById("home").innerHTML += " "+langUI("Home");
             document.getElementById("all_buildings").innerHTML = langUI("All Buildings");
-            document.getElementById("all_events").innerHTML = "&#x203A; "+langUI("All Events")+" &#x2039;";
-            document.getElementById("navbar_more").innerHTML = langUI("More");
+            document.getElementById("all_events").innerHTML = langUI("All Events");
+            document.getElementById("navbar_more").innerHTML = `<img src="images/general/new_sign.png" style="width: 50px;"> ${langUI("More")}`;
             document.getElementById("navbar_guestraces").innerHTML = langUI("All Guest Races");
 
             generateGuestRacesDropdown();
@@ -204,7 +205,7 @@
     });
     
     document.getElementById("select_event_label").innerHTML = langUI("Select event:");
-    document.getElementById("generate_daily_prizes_button").innerHTML += langUI("Generate Daily Prizes");
+    document.getElementById("generate_daily_prizes_button").innerHTML += langUI("Select Fellowship Adventure");
 
     generateFas("input_event");
 
