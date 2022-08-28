@@ -448,9 +448,11 @@ function createWaypointsTable(parent, map) {
     for (let encounter = 1; encounter <= Object.keys(wpData["blue"]).length+1; encounter++) {
         if (encounter === 1) {
             let trAll = document.createElement('tr');
-            createCellWaypoint(trAll, "all", encounter, 33, 3);
-            createCellCosts(trAll, wpData, "all", encounter, map, 33, 3);
-            createCellProgress(trAll, wpData, "all", encounter, map, 33, 3);
+            createCellWaypoint(trAll, "empty", encounter, 33, 3);
+            createCellWaypoint(trAll, "all", encounter, 33, 1);
+            createCellCosts(trAll, wpData, "all", encounter, map, 33, 1);
+            createCellProgress(trAll, wpData, "all", encounter, map, 33, 1);
+            createCellWaypoint(trAll, "empty", encounter, 33, 3);
             tbody.appendChild(trAll);
 
             let trColors = document.createElement('tr');
@@ -481,6 +483,11 @@ function createCellWaypoint(parent, encounterType, encounter, width, colspan) {
     td.style.textAlign = "center";
     td.style.maxWidth = ""+width+"%";
     td.colSpan = colspan;
+    if (encounterType === "empty") {
+        td.innerHTML = ``;
+        parent.appendChild(td);
+        return;
+    }
     if (encounter === 3 || encounter === 6) {
         td.innerHTML = `<img src="${waypointsIcons["multi"]}">`;
     } else {

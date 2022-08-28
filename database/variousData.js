@@ -109,6 +109,7 @@ let questsLinks = {
     "july_xxii_": "bit.ly/LuckyLittleFin2022",
     "august_xxii_": "bit.ly/GatewayIntoThePast2022",
     "autumn_xxii_": "bit.ly/AutumnZodiac2022",
+    "october_xxii_": "bit.ly/MischievousTherapy2022",
 }
 
 let eventsDurations = {
@@ -120,6 +121,7 @@ let eventsDurations = {
     "july_xxii_": 22,
     "august_xxii_": 22,
     "autumn_xxii_": 22,
+    "october_xxii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -224,6 +226,7 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
+            ["Mischievous Therapy","october_xxii_",false,true],
             ["Autumn Zodiac","autumn_xxii_",true,false],
             ["A Gateway into the Past","august_xxii_",false,false],
             ["Lucky Little Fin","july_xxii_",false,false],
@@ -263,6 +266,7 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
+            ["Mischievous Therapy","october_xxii_",false,true],
             ["Autumn Zodiac","autumn_xxii_",true,false],
             ["A Gateway into the Past","august_xxii_",false,false],
             ["Lucky Little Fin","july_xxii_",false,false],
@@ -290,6 +294,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "october_xxii_": [
+        
+    ],
     "autumn_xxii_": [
         {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html"},
     ],
