@@ -20,6 +20,7 @@ var dailyPrizes = {
         "A_Evt_Autumn_XXII_Succulent_Crabs",
         "A_Evt_Prod_NutStub",
         "kp_{10}",
+        "A_Evt_Autumn_XXII_The_Flying_Chopsticks",
     ],
     
     "august_xxii_": [
