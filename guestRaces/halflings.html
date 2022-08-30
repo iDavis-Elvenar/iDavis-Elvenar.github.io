@@ -83,11 +83,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbar_more" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content">
-                        <a class="dropdown-item" href="../contact.html" id="navitem_contact">Contact</a>
-                        <a class="dropdown-item" href="../about-me.html" id="navitem_contact">About Me</a>
-                        <a class="dropdown-item" href="../donate-create.html" id="navitem_donate">Donate</a>
-                        <!--<div class="dropdown-divider"></div>-->
+                    <div class="dropdown-menu bg-gradient_menu_dropdown" id="more_navbar" aria-labelledby="navbarDropdown" style="width: max-content">
                     </div>
                     </li>
                     <li>
@@ -125,12 +121,13 @@
         </nav>
         <script>
             document.getElementById("home").innerHTML += " "+langUI("Home");
-            document.getElementById("all_buildings").innerHTML = langUI("All Buildings");
-            document.getElementById("all_events").innerHTML = langUI("All Events");
+            document.getElementById("all_buildings").innerHTML = `<img src="https://i.ibb.co/NC00fM1/all-buildings.png" style="width: 24px; margin-bottom: 4px;"> ${langUI("All Buildings")}`;
+            document.getElementById("all_events").innerHTML = `<img src="https://i.ibb.co/QkJ7qzP/all-events.png" style="width: 27px; margin-bottom: 1px;"> ${langUI("All Events")}`;
             document.getElementById("navbar_more").innerHTML = langUI("More");
-            document.getElementById("navbar_guestraces").innerHTML = langUI("All Guest Races");
+            document.getElementById("navbar_guestraces").innerHTML = `<img src="https://i.ibb.co/d40mvg2/all-guestraces.png" style="width: 25px; margin-bottom: 4px;"> ${langUI("All Guest Races")}`;
 
             generateGuestRacesDropdown();
+            generateMoreNavbar("../");
         </script>
     </div>
 

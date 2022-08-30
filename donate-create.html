@@ -86,11 +86,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbar_more" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content">
-                        <a class="dropdown-item" href="contact.html" id="navitem_contact">Contact</a>
-                        <a class="dropdown-item" href="about-me.html" id="navitem_contact">About Me</a>
-                        <a class="dropdown-item" href="donate-create.html" id="navitem_donate">&#x203A; Donate &#x2039;</a>
-                        <!--<div class="dropdown-divider"></div>-->
+                    <div class="dropdown-menu bg-gradient_menu_dropdown" id="more_navbar" aria-labelledby="navbarDropdown" style="width: max-content">
                     </div>
                     </li>
                     <li>
@@ -134,6 +130,7 @@
             document.getElementById("navbar_guestraces").innerHTML = langUI("All Guest Races");
 
             generateGuestRacesDropdown();
+            generateMoreNavbar();
         </script>
     </div>
 </head>

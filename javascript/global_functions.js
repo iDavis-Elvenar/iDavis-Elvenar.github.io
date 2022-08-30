@@ -349,3 +349,26 @@ async function checkAdBlocker() {
         }
     }
 }
+
+function generateMoreNavbar(filePrefix="") {
+    let parent = document.getElementById("more_navbar");
+    for (const item of moreNavbarContent) {
+        if (item["innerHTML"] === "Contact") {
+            let div = document.createElement('div');
+            div.className = "dropdown-divider";
+            div.style.height = "2px";
+            div.style.backgroundColor = "rgb(97, 83, 66)";
+            parent.appendChild(div);
+        }
+        let a = document.createElement('a');
+        a.className = item["className"];
+        a.href = filePrefix+item["href"];
+        a.id = item["id"];
+        a.innerHTML = item["innerHTML"];
+        parent.appendChild(a);
+    }
+}
+
+function generateNavbarContent(filePrefix="") {
+    let parent = document.getElementById("");
+}

@@ -686,3 +686,27 @@ var grIds = {
     "revengeofexile": "ch19",
     "powerofmusic": "ch20",
 }
+
+var moreNavbarContent = [
+    // FELLOWSHIP ADVENTURES
+    /*{   "className":    "dropdown-item", 
+        "href":         "fellowship-adventures.html", 
+        "id":           "navitem_fellowship_adventures", 
+        "innerHTML":    `<img src="https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png" style="width: 25px; margin-right: 5px; margin-bottom: 4px;">&#x203A; Fellowship Adventures &#x2039;`},*/
+    // ---------------
+    // CONTACT
+    {   "className":    "dropdown-item", 
+        "href":         "contact.html", 
+        "id":           "navitem_contact", 
+        "innerHTML":    `Contact`},
+    // ABOUT ME
+    {   "className":    "dropdown-item", 
+        "href":         "about-me.html", 
+        "id":           "navitem_about_me", 
+        "innerHTML":    `About Me`},
+    // DONATE
+    {   "className":    "dropdown-item", 
+        "href":         "donate-create.html", 
+        "id":           "navitem_donate", 
+        "innerHTML":    `Donate`},
+]
