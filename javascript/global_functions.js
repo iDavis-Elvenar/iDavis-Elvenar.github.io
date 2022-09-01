@@ -365,6 +365,12 @@ function generateMoreNavbar(filePrefix="") {
         a.href = filePrefix+item["href"];
         a.id = item["id"];
         a.innerHTML = item["innerHTML"];
+        if (item.hasOwnProperty("img")) {
+            let img = document.createElement('img');
+            img.src = item["img"]["src"];
+            img.style = item["img"]["style"];
+            a.prepend(img);
+        }
         parent.appendChild(a);
     }
 }

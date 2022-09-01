@@ -689,24 +689,36 @@ var grIds = {
 
 var moreNavbarContent = [
     // FELLOWSHIP ADVENTURES
-    /*{   "className":    "dropdown-item", 
+    /*{   
+        "className":    "dropdown-item text-dark", 
         "href":         "fellowship-adventures.html", 
         "id":           "navitem_fellowship_adventures", 
-        "innerHTML":    `<img src="https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png" style="width: 25px; margin-right: 5px; margin-bottom: 4px;">&#x203A; Fellowship Adventures &#x2039;`},*/
+        "innerHTML":    `&#x203A; Fellowship Adventures &#x2039;`,
+        "img":          {
+            "src":      "https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png",
+            "style":    "width: 25px; margin-right: 5px; margin-bottom: 4px;",
+        }
+    },*/
     // ---------------
     // CONTACT
-    {   "className":    "dropdown-item", 
+    {   
+        "className":    "dropdown-item text-dark", 
         "href":         "contact.html", 
         "id":           "navitem_contact", 
-        "innerHTML":    `Contact`},
+        "innerHTML":    `Contact`
+    },
     // ABOUT ME
-    {   "className":    "dropdown-item", 
+    {   
+        "className":    "dropdown-item text-dark", 
         "href":         "about-me.html", 
         "id":           "navitem_about_me", 
-        "innerHTML":    `About Me`},
+        "innerHTML":    `About Me`
+    },
     // DONATE
-    {   "className":    "dropdown-item", 
+    {   
+        "className":    "dropdown-item text-dark", 
         "href":         "donate-create.html", 
         "id":           "navitem_donate", 
-        "innerHTML":    `Donate`},
+        "innerHTML":    `Donate`
+    },
 ]
