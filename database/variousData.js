@@ -74,6 +74,7 @@ let eventVideos = {
     "may_xxii_": "https://www.youtube.com/embed/AFkAsMvABP0",
     "july_xxii_": "https://www.youtube.com/embed/GgjFAgr-pLU;https://www.youtube.com/embed/zqgJUn2kRNA",
     "august_xxii_": "https://www.youtube.com/embed/xxgTpJJw314",
+    "autumn_xxii_": "https://www.youtube.com/embed/vlPzSeNLfuQ",
 }
 
 let eventNames = {
