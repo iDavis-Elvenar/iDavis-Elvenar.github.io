@@ -689,15 +689,26 @@ var grIds = {
 }
 
 var moreNavbarContent = [
+    // SEASONS
+    /*{
+        "className":    "dropdown-item text-dark",
+        "href":         "seasons.html",
+        "id":           "navitem_seasons",
+        "innerHTML":    "Seasons",
+        "img": {
+            "src":      "https://oxzz.innogamescdn.com/frontend//assets/season_daily_keys-4bbc493cea0326f5b9318eef92aa9ece.png",
+            "style":    "width: 25px; margin-right: 7px; margin-bottom: 4px; margin-left: -2px;",
+        }
+    },
     // FELLOWSHIP ADVENTURES
-    /*{   
+    {   
         "className":    "dropdown-item text-dark", 
         "href":         "fellowship-adventures.html", 
         "id":           "navitem_fellowship_adventures", 
-        "innerHTML":    `&#x203A; Fellowship Adventures &#x2039;`,
+        "innerHTML":    `Fellowship Adventures`,
         "img":          {
             "src":      "https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png",
-            "style":    "width: 25px; margin-right: 5px; margin-bottom: 4px;",
+            "style":    "width: 24px; margin-right: 6px; margin-bottom: 4px;",
         }
     },*/
     // ---------------

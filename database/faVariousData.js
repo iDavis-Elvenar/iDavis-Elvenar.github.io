@@ -1,5 +1,5 @@
 var allFas = {
-    "2022" : [
+    "2022" : [ //NAME,ID,SELECTED,DISABLED == HIDDEN
         ["Fellowship Adventures - October 2022", "october_xxii_",true,false],
     ]
 }
