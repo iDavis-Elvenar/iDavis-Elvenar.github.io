@@ -170,6 +170,35 @@ function displayBase() {
     let p = document.createElement('p');
     p.innerHTML += introductionText.replace("_", getSelectedFaName());
 
+    /*let divDates = document.createElement('div');
+    divDates.className = "card-spoiler border-spoiler mb-3";
+    divDates.style.marginTop = "10px";
+    divDates.style.padding = "7px 20px 10px";
+    divDates.style.width = "60%";
+    let divRow1 = document.createElement('div');
+    divRow1.className = "row";
+    let divCol1 = document.createElement('div');
+    let divCol2 = document.createElement('div');
+    divCol1.className = "col-sm-6";
+    divCol1.innerHTML = `<b>Live servers:<b>`;
+    divCol2.className = "col-sm-6";
+    divCol2.innerHTML = `<b>Beta server:<b>`;
+    let divRow2 = document.createElement('div');
+    divRow2.className = "row";
+    let divCol3 = document.createElement('div');
+    let divCol4 = document.createElement('div');
+    divCol3.className = "col-sm-6";
+    divCol4.className = "col-sm-6";
+    divCol3.innerHTML = `<h7><i><b>Start date:</b> ${dates[getSelectedFa()]["live"]["start_date"]}<br><b>End date:</b> ${dates[getSelectedFa()]["live"]["end_date"]}</i></h7>`;
+    divCol4.innerHTML = `<h7><i><b>Start date:</b> ${dates[getSelectedFa()]["beta"]["start_date"]}<br><b>End date:</b> ${dates[getSelectedFa()]["beta"]["end_date"]}</i></h7>`;
+    divRow1.appendChild(divCol1);
+    divRow1.appendChild(divCol2);
+    divRow2.appendChild(divCol3);
+    divRow2.appendChild(divCol4);
+    divDates.appendChild(divRow1);
+    divDates.appendChild(divRow2);
+    center.appendChild(divDates);*/
+
     var h5Dates = document.createElement('h5');
     h5Dates.className = "card-title text-center text-title font-weight-bold";
     h5Dates.style.textAlign = "left";
