@@ -688,6 +688,14 @@ var grIds = {
     "powerofmusic": "ch20",
 }
 
+var navbarNew = {
+    "active": false,
+    "img": {
+        "src": "https://i.ibb.co/n0KBPgt/new-sign.png",
+        "style": "width: 50px;",
+    }
+}
+
 var moreNavbarContent = [
     // SEASONS
     /*{

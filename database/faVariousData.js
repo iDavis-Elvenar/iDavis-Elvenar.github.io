@@ -24,17 +24,18 @@ var faBanners = [
 var dates = {
     "october_xxii_": {
         "live": {
-            "start_date": "October 6th 2022",
-            "end_date": "October 12th 2022"
+            "start_date": "October __th 2022",
+            "end_date": "October __th 2022"
         },
         "beta": {
-            "start_date": "??? ?th 2022",
-            "end_date": "??? ?th 2022"
+            "start_date": "September 15th 2022",
+            "end_date": "September 21st 2022"
         }
     },
 }
 
-var introductionText = `This page is an overview for the _. You can find various information about this adventure in the left panel of this site.`;
+var introductionText = `This page is an overview for the _. You can find various information about this adventure in the left panel of this site.
+<br><br>For easy access you can use the hotkey <b>CTRL+D</b> to save this page into your bookmarks and easily access the content in the future.`;
 
 var tutorialVideo = "https://www.youtube.com/embed/wIISaa2TiCk";
 
@@ -71,19 +72,19 @@ var excludeItems = {
 var stageRewards = {
     "october_xxii_": [
         [
-            {"img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "text":"1x Ancient Knowledge (20 KP)", "link":"https://idavis-elvenar.com"},
-            {"img":"", "text":"", "link":""},
-            {"img":"", "text":"", "link":""},
+            {"img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "text":"1x Ancient Knowledge (20 KP)", "link":"https://idavis-elvenar.com", "description":"Allows to select between <b>A</b> and <b>B</b> buildings."},
+            {"img":"", "text":"", "link":"", "description":""},
+            {"img":"", "text":"", "link":"", "description":""},
         ],
         [
-            {"img":"", "text":"", "link":""},
-            {"img":"", "text":"", "link":""},
-            {"img":"", "text":"", "link":""},
+            {"img":"", "text":"", "link":"", "description":""},
+            {"img":"", "text":"", "link":"", "description":""},
+            {"img":"", "text":"", "link":"", "description":""},
         ],
         [
-            {"img":"", "text":"", "link":""},
-            {"img":"", "text":"", "link":""},
-            {"img":"", "text":"", "link":""},
+            {"img":"", "text":"", "link":"", "description":""},
+            {"img":"", "text":"", "link":"", "description":""},
+            {"img":"", "text":"", "link":"", "description":""},
         ]
     ],
 }

@@ -166,14 +166,50 @@ function displayBase() {
     parent.innerHTML = "";
     createFaHeader();
     let center = document.createElement('center');
-    center.innerHTML += introductionText.replace("_", getSelectedFaName());
+    center.style.marginBottom = "30px";
+    let p = document.createElement('p');
+    p.innerHTML += introductionText.replace("_", getSelectedFaName());
 
-    center.innerHTML += `<br><br><b>Start date:</b> `+dates[getSelectedFa()]["live"]["start_date"];
-    center.innerHTML += `<br><b>End date:</b> `+dates[getSelectedFa()]["live"]["end_date"];
-    center.innerHTML += `<br><br><i>The following dates are for Beta server:</i><br>`
-    center.innerHTML += `<br><b>Start date:</b> `+dates[getSelectedFa()]["beta"]["start_date"];
-    center.innerHTML += `<br><b>End date:</b> `+dates[getSelectedFa()]["beta"]["end_date"]+`<br><br>`;
+    var h5Dates = document.createElement('h5');
+    h5Dates.className = "card-title text-center text-title font-weight-bold";
+    h5Dates.style.textAlign = "left";
+    h5Dates.style.marginTop = "35px";
+    h5Dates.innerHTML = `..:: ${langUI("When does the adventure begin?")} ::..`;
+    h5Dates.style.marginBottom = "30px";
 
+    center.appendChild(p);
+    center.appendChild(h5Dates);
+
+    let divBBTable = document.createElement("div");
+    divBBTable.style.marginTop = "10px";
+    divBBTable.className = "bbTable";
+
+    let table = document.createElement('table');
+    table.className = "table-primary text-center";
+    table.style.minWidth = "600px";
+    table.style.marginBottom = "10px";
+
+    let tbody = document.createElement("tbody");
+    let tr1 = document.createElement('tr');
+    let th1 = document.createElement('th');
+    th1.innerHTML = `Live servers`;
+    let th2 = document.createElement('th');
+    th2.innerHTML = `Beta server`;
+    tr1.appendChild(th1);
+    tr1.appendChild(th2);
+    tbody.appendChild(tr1);
+    let tr2 = document.createElement('tr');
+    let td1 = document.createElement('td');
+    td1.innerHTML = `<b>Start date:</b> ${dates[getSelectedFa()]["live"]["start_date"]}<br><b>End date:</b> ${dates[getSelectedFa()]["live"]["end_date"]}`;
+    let td2 = document.createElement('td');
+    td2.innerHTML = `<b>Start date:</b> ${dates[getSelectedFa()]["beta"]["start_date"]}<br><b>End date:</b> ${dates[getSelectedFa()]["beta"]["end_date"]}`;
+    tr2.appendChild(td1);
+    tr2.appendChild(td2);
+    tbody.appendChild(tr2);
+    table.appendChild(tbody);
+    divBBTable.appendChild(table);
+
+    center.append(divBBTable);
     parent.appendChild(center);
 
     var h5 = document.createElement('h5');
@@ -209,7 +245,7 @@ function displayItems() {
     note.id = 'note_h7';
     note.className = "card-title text-center";
     note.style.textAlign = "left";
-    note.innerHTML = `The following table contains the list of items you will need to produce during <b>this</b> fellowship adventure.`;
+    note.innerHTML = `You will need to produce the following items during <b>this</b> fellowship adventure:`;
     var center = document.createElement('center');
     center.appendChild(note);
     parent.appendChild(center);
@@ -279,7 +315,7 @@ function displayRewards() {
 
     let table = document.createElement('table');
     table.className = "table-primary";
-    table.style.width = "50%";
+    table.style.width = "90%";
     table.style.marginBottom = "10px";
 
     let tbody = document.createElement("tbody");
@@ -298,6 +334,7 @@ function displayRewards() {
             let td = document.createElement('td');
             td.className = "text-center";
             td.style.width = "33%";
+            td.style.height = "120px";
             td.innerHTML = `<img src="${stageRewards[getSelectedFa()][st][re]["img"]}">`;
             tr2.appendChild(td);
         }
@@ -308,11 +345,25 @@ function displayRewards() {
             let td = document.createElement('td');
             td.className = "text-center";
             td.style.width = "33%";
+            td.style.height = "120px";
+            let divCol = document.createElement('div');
+            divCol.className = "col-sm";
+            let divRow1 = document.createElement('div');
+            divRow1.className = "row h-90";
             if (stageRewards[getSelectedFa()][st][re]["link"] !== "") {
-                td.innerHTML = `<a href="${stageRewards[getSelectedFa()][st][re]["link"]}" class="text-link font-weight-bold" target="_blank">${stageRewards[getSelectedFa()][st][re]["text"]}</a>`;
+                divRow1.innerHTML = `<a href="${stageRewards[getSelectedFa()][st][re]["link"]}" class="text-link font-weight-bold" target="_blank">${stageRewards[getSelectedFa()][st][re]["text"]}</a>`;
             } else {
-                td.innerHTML = `${stageRewards[getSelectedFa()][st][re]["text"]}`;
+                divRow1.innerHTML = `${stageRewards[getSelectedFa()][st][re]["text"]}`;
             }
+            divCol.appendChild(divRow1);
+            if (stageRewards[getSelectedFa()][st][re]["description"] !== "") {
+                let divRow2 = document.createElement('div');
+                divRow2.className = "row h-10";
+                divRow2.style.paddingTop = "30px";
+                divRow2.innerHTML = `<h7>${stageRewards[getSelectedFa()][st][re]["description"]}</h7>`;
+                divCol.appendChild(divRow2);
+            }
+            td.appendChild(divCol);
             tr3.appendChild(td);
         }
         tbody.appendChild(tr3);
@@ -323,12 +374,12 @@ function displayRewards() {
     center.appendChild(divBBTable);
     parent.appendChild(center);
 
-    let h5rankingRewards = document.createElement('h5');
+    /*let h5rankingRewards = document.createElement('h5');
     h5rankingRewards.className = "card-title text-center text-title font-weight-bold";
     h5rankingRewards.style.textAlign = "left";
     h5rankingRewards.innerHTML = `..:: Ranking Rewards ::..`;
 
-    parent.appendChild(h5rankingRewards);
+    parent.appendChild(h5rankingRewards);*/
   
 }
 

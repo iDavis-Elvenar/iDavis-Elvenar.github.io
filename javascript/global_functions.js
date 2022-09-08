@@ -373,6 +373,10 @@ function generateMoreNavbar(filePrefix="") {
         }
         parent.appendChild(a);
     }
+    if (navbarNew["active"]) {
+        let navbar = document.getElementById("navbar_more");
+        navbar.innerHTML = `<img src="${navbarNew["img"]["src"]}" style="${navbarNew["img"]["style"]}"> ${navbar.innerHTML}`;
+    }
 }
 
 function generateNavbarContent(filePrefix="") {
