@@ -72,7 +72,7 @@ var excludeItems = {
 var stageRewards = {
     "october_xxii_": [
         [
-            {"img":"", "text":"Will be added soon", "link":"", "description":""},
+            {"img":"", "text":"This will be added soon", "link":"", "description":""},
             {"img":"", "text":"", "link":"", "description":""},
             {"img":"", "text":"", "link":"", "description":""},
         ],
