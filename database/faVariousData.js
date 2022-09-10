@@ -69,6 +69,13 @@ var excludeItems = {
     "october_xxii_": [2,3,7,11,12],
 }
 
+var prioritiesItems = [
+    "badge_brewery", "badge_treants", "badge_bakers", "badge_carpenters", "badge_farmers", "badge_blacksmith",
+    "luxurious_flacon", "golden_bracelet", "diamond_necklace", "elegant_statue", "money_sack", "badge_wonderhelper", 
+    "wand", "magic_potion", "witch_hat","badge_unit", "ghost_in_a_bottle", "druid_staff",
+    "arcane_residue", "elemental_marbles", "enchanted_tiara",
+]
+
 var stageRewards = {
     "october_xxii_": [
         [

@@ -420,11 +420,8 @@ function calculateRemainings(maps, wpData) {
                 }
             }
         }
+        remainings = remainings.sort((a, b) => prioritiesItems.indexOf(a) - prioritiesItems.indexOf(b));
         let remainingsForMap = getOccurrencesDict(remainings);
-        /*let res = Object.keys(remainingsForMap).sort().reduce(function (result, key) {
-            result[key] = remainingsForMap[key];
-            return result;
-        }, {});*/
         updateRemainings(map, remainingsForMap);
     }
 }
