@@ -169,76 +169,15 @@ function displayBase() {
     center.style.marginBottom = "30px";
     let p = document.createElement('p');
     p.innerHTML += introductionText.replace("_", getSelectedFaName());
-
-    /*let divDates = document.createElement('div');
-    divDates.className = "card-spoiler border-spoiler mb-3";
-    divDates.style.marginTop = "10px";
-    divDates.style.padding = "7px 20px 10px";
-    divDates.style.width = "60%";
-    let divRow1 = document.createElement('div');
-    divRow1.className = "row";
-    let divCol1 = document.createElement('div');
-    let divCol2 = document.createElement('div');
-    divCol1.className = "col-sm-6";
-    divCol1.innerHTML = `<b>Live servers:<b>`;
-    divCol2.className = "col-sm-6";
-    divCol2.innerHTML = `<b>Beta server:<b>`;
-    let divRow2 = document.createElement('div');
-    divRow2.className = "row";
-    let divCol3 = document.createElement('div');
-    let divCol4 = document.createElement('div');
-    divCol3.className = "col-sm-6";
-    divCol4.className = "col-sm-6";
-    divCol3.innerHTML = `<h7><i><b>Start date:</b> ${dates[getSelectedFa()]["live"]["start_date"]}<br><b>End date:</b> ${dates[getSelectedFa()]["live"]["end_date"]}</i></h7>`;
-    divCol4.innerHTML = `<h7><i><b>Start date:</b> ${dates[getSelectedFa()]["beta"]["start_date"]}<br><b>End date:</b> ${dates[getSelectedFa()]["beta"]["end_date"]}</i></h7>`;
-    divRow1.appendChild(divCol1);
-    divRow1.appendChild(divCol2);
-    divRow2.appendChild(divCol3);
-    divRow2.appendChild(divCol4);
-    divDates.appendChild(divRow1);
-    divDates.appendChild(divRow2);
-    center.appendChild(divDates);*/
-
-    var h5Dates = document.createElement('h5');
-    h5Dates.className = "card-title text-center text-title font-weight-bold";
-    h5Dates.style.textAlign = "left";
-    h5Dates.style.marginTop = "35px";
-    h5Dates.innerHTML = `..:: ${langUI("When does the adventure begin?")} ::..`;
-    h5Dates.style.marginBottom = "30px";
+    p.style.marginBottom = "25px";
 
     center.appendChild(p);
-    center.appendChild(h5Dates);
 
-    let divBBTable = document.createElement("div");
-    divBBTable.style.marginTop = "10px";
-    divBBTable.className = "bbTable";
-
-    let table = document.createElement('table');
-    table.className = "table-primary text-center";
-    table.style.minWidth = "600px";
-    table.style.marginBottom = "10px";
-
-    let tbody = document.createElement("tbody");
-    let tr1 = document.createElement('tr');
-    let th1 = document.createElement('th');
-    th1.innerHTML = `Live servers`;
-    let th2 = document.createElement('th');
-    th2.innerHTML = `Beta server`;
-    tr1.appendChild(th1);
-    tr1.appendChild(th2);
-    tbody.appendChild(tr1);
-    let tr2 = document.createElement('tr');
-    let td1 = document.createElement('td');
-    td1.innerHTML = `<b>Start date:</b> ${dates[getSelectedFa()]["live"]["start_date"]}<br><b>End date:</b> ${dates[getSelectedFa()]["live"]["end_date"]}`;
-    let td2 = document.createElement('td');
-    td2.innerHTML = `<b>Start date:</b> ${dates[getSelectedFa()]["beta"]["start_date"]}<br><b>End date:</b> ${dates[getSelectedFa()]["beta"]["end_date"]}`;
-    tr2.appendChild(td1);
-    tr2.appendChild(td2);
-    tbody.appendChild(tr2);
-    table.appendChild(tbody);
-    divBBTable.appendChild(table);
-
-    center.append(divBBTable);
+    createDatesTable(center,    dates[getSelectedFa()]["live"]["start_date"],
+                                dates[getSelectedFa()]["live"]["end_date"],
+                                dates[getSelectedFa()]["beta"]["start_date"],
+                                dates[getSelectedFa()]["beta"]["end_date"]);
+    
     parent.appendChild(center);
 
     var h5 = document.createElement('h5');
@@ -382,7 +321,7 @@ function displayRewards() {
             if (stageRewards[getSelectedFa()][st][re]["link"] !== "") {
                 divRow1.innerHTML = `<a href="${stageRewards[getSelectedFa()][st][re]["link"]}" class="text-link font-weight-bold" target="_blank">${stageRewards[getSelectedFa()][st][re]["text"]}</a>`;
             } else {
-                divRow1.innerHTML = `${stageRewards[getSelectedFa()][st][re]["text"]}`;
+                divRow1.innerHTML = `<center>${stageRewards[getSelectedFa()][st][re]["text"]}</center>`;
             }
             divCol.appendChild(divRow1);
             if (stageRewards[getSelectedFa()][st][re]["description"] !== "") {

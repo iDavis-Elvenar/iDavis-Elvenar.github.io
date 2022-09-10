@@ -72,7 +72,7 @@ var excludeItems = {
 var stageRewards = {
     "october_xxii_": [
         [
-            {"img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "text":"1x Ancient Knowledge (20 KP)", "link":"https://idavis-elvenar.com", "description":"Allows to select between <b>A</b> and <b>B</b> buildings."},
+            {"img":"", "text":"Will be added soon", "link":"", "description":""},
             {"img":"", "text":"", "link":"", "description":""},
             {"img":"", "text":"", "link":"", "description":""},
         ],

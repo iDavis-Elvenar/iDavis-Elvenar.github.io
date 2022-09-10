@@ -356,7 +356,7 @@ function generateMoreNavbar(filePrefix="") {
         if (item["innerHTML"] === "Contact") {
             let div = document.createElement('div');
             div.className = "dropdown-divider";
-            div.style.height = "2px";
+            div.style.height = "1px";
             div.style.backgroundColor = "rgb(97, 83, 66)";
             parent.appendChild(div);
         }
@@ -381,4 +381,112 @@ function generateMoreNavbar(filePrefix="") {
 
 function generateNavbarContent(filePrefix="") {
     let parent = document.getElementById("");
+}
+
+function createDatesTable(parent, liveStartDate, liveEndDate, betaStartDate, betaEndDate) {
+    let divDates = document.createElement('div');
+    divDates.className = "card-spoiler border-spoiler mb-3";
+    divDates.style.marginTop = "10px";
+    divDates.style.padding = "7px 20px 10px";
+    divDates.style.width = "60%";
+    let divRowHeader = document.createElement('div');
+    divRowHeader.className = "row";
+    let divColHeader = document.createElement('div');
+    divColHeader.className = "col-sm-12";
+    let imgTelescope = document.createElement('img');
+    imgTelescope.src = "https://i.ibb.co/4s0wgqT/telescop.png";
+    if (window.innerWidth >= 580) {
+        imgTelescope.style.marginLeft = "-30px";
+        imgTelescope.style.marginTop = "20px";
+        imgTelescope.style.position = "absolute";
+    } else {
+        imgTelescope.style.marginBottom = "10px";
+    }
+    divColHeader.appendChild(imgTelescope);
+    divRowHeader.appendChild(divColHeader);
+    divDates.appendChild(divColHeader);
+    let divRowMain = document.createElement('div');
+    divRowMain.className = "row";
+    let divCol1 = document.createElement('div');
+    divCol1.className = "col-sm-6";
+    let divRow1 = document.createElement('div');
+    let divRow2 = document.createElement('div');
+    divRow1.className = "row";
+    let divRow1Content = document.createElement('div');
+    divRow1Content.innerHTML = `<b>Live servers:</b>`;
+    if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(liveEndDate)) <= -1) {
+        divRow1Content.innerHTML += `<br><img src="https://i.ibb.co/stsL5vQ/sun-cloud-1.png" style="margin-top: 7px; height: 24px;">`;
+    } else if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(liveStartDate)) <= 0) {
+        divRow1Content.innerHTML += `<br><img src="https://i.ibb.co/Z6fSdBx/sun-cloud-3.png" style="margin-top: 7px; height: 30px;">`;
+    } else if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(liveStartDate)) <= 3) {
+        divRow1Content.innerHTML += `<br><img src="https://i.ibb.co/dQfb5s9/sun-cloud-2.png" style="margin-top: 7px; height: 24px;">`;
+    } else {
+        divRow1Content.innerHTML += `<br><img src="https://i.ibb.co/stsL5vQ/sun-cloud-1.png" style="margin-top: 7px; height: 24px;">`;
+    }
+    divRow1.appendChild(divRow1Content);
+    divRow2.className = "row";
+    divRow2.style.marginTop = "10px";
+    divRow2.innerHTML = `<h7><b>Start date:</b> ${liveStartDate}<br><b>End date:</b> ${liveEndDate}</h7>`;
+    let divCol2 = document.createElement('div');
+    divCol2.className = "col-sm-6";
+    let divRow3 = document.createElement('div');
+    let divRow4 = document.createElement('div');
+    divRow3.className = "row";
+    let divRow3Content = document.createElement('div');
+    divRow3Content.innerHTML = `<b>Beta server:</b>`;
+    if (window.innerWidth < 580) {
+        divRow3.style.marginTop = "20px";
+    }
+    if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(betaEndDate)) <= -1) {
+        divRow3Content.innerHTML += `<br><img src="https://i.ibb.co/stsL5vQ/sun-cloud-1.png" style="margin-top: 7px; height: 24px;">`;
+    } else if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(betaStartDate)) <= 0) {
+        divRow3Content.innerHTML += `<br><img src="https://i.ibb.co/Z6fSdBx/sun-cloud-3.png" style="margin-top: 7px; height: 30px;">`;
+    } else if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(betaStartDate)) <= 3) {
+        divRow3Content.innerHTML += `<br><img src="https://i.ibb.co/dQfb5s9/sun-cloud-2.png" style="margin-top: 7px; height: 24px;">`;
+    } else {
+        divRow3Content.innerHTML += `<br><img src="https://i.ibb.co/stsL5vQ/sun-cloud-1.png" style="margin-top: 7px; height: 24px;">`;
+    }
+    divRow3.appendChild(divRow3Content);
+    divRow4.className = "row";
+    divRow4.style.marginTop = "10px";
+    divRow4.innerHTML = `<h7><b>Start date:</b> ${betaStartDate}<br><b>End date:</b> ${betaEndDate}</h7>`;
+    divCol1.appendChild(divRow1);
+    divCol1.appendChild(divRow2);
+    divCol2.appendChild(divRow3);
+    divCol2.appendChild(divRow4);
+    divRowMain.appendChild(divCol1);
+    divRowMain.appendChild(divCol2);
+    divDates.appendChild(divRowMain);
+    parent.appendChild(divDates);
+}
+
+function getDaysTillDate(date) {
+    var today = new Date();
+    var dd = String(today.getUTCDate()).padStart(2, '0');
+    var mm = String(today.getUTCMonth() + 1).padStart(2, '0');
+    var yyyy = today.getUTCFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    let tod = new Date(today);
+    return (new Date(date)-tod)/1000/60/60/24;
+}
+
+function convertDisplayDateToJavascriptFormatDate(displayDate) {
+    let month = "";
+    switch (displayDate.split(" ")[0]) {
+        case "January": month = "01"; break;
+        case "February": month = "02"; break;
+        case "March": month = "03"; break;
+        case "April": month = "04"; break;
+        case "May": month = "05"; break;
+        case "June": month = "06"; break;
+        case "July": month = "07"; break;
+        case "August": month = "08"; break;
+        case "September": month = "09"; break;
+        case "October": month = "10"; break;
+        case "November": month = "11"; break;
+        case "December": month = "12"; break;
+    }
+    let day = displayDate.split(" ")[1].substring(0, displayDate.split(" ")[1].length-2);
+    let year = displayDate.split(" ")[2];
+    return month+"/"+day+"/"+year;
 }

@@ -689,7 +689,7 @@ var grIds = {
 }
 
 var navbarNew = {
-    "active": false,
+    "active": true,
     "img": {
         "src": "https://i.ibb.co/n0KBPgt/new-sign.png",
         "style": "width: 50px;",
@@ -707,7 +707,7 @@ var moreNavbarContent = [
             "src":      "https://oxzz.innogamescdn.com/frontend//assets/season_daily_keys-4bbc493cea0326f5b9318eef92aa9ece.png",
             "style":    "width: 25px; margin-right: 7px; margin-bottom: 4px; margin-left: -2px;",
         }
-    },
+    },*/
     // FELLOWSHIP ADVENTURES
     {   
         "className":    "dropdown-item text-dark", 
@@ -718,7 +718,7 @@ var moreNavbarContent = [
             "src":      "https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png",
             "style":    "width: 24px; margin-right: 6px; margin-bottom: 4px;",
         }
-    },*/
+    },
     // ---------------
     // CONTACT
     {   
