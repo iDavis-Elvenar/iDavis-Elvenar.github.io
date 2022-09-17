@@ -417,7 +417,7 @@ function createDatesTable(parent, liveStartDate, liveEndDate, betaStartDate, bet
     if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(liveEndDate)) <= -1) {
         divRow1Content.innerHTML += `<br><img src="https://i.ibb.co/stsL5vQ/sun-cloud-1.png" style="margin-top: 7px; height: 24px;" title="The event is over">`;
     } else if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(liveStartDate)) <= 0) {
-        divRow1Content.innerHTML += `<br><img src="https://i.ibb.co/Z6fSdBx/sun-cloud-3.png" style="margin-top: 7px; height: 30px;" title="${getDaysTillDate(convertDisplayDateToJavascriptFormatDate(liveStartDate))+" days remaining"}">`;
+        divRow1Content.innerHTML += `<br><img src="https://i.ibb.co/Z6fSdBx/sun-cloud-3.png" style="margin-top: 7px; height: 30px;" title="The event is running"}">`;
     } else if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(liveStartDate)) <= 3) {
         divRow1Content.innerHTML += `<br><img src="https://i.ibb.co/dQfb5s9/sun-cloud-2.png" style="margin-top: 7px; height: 24px;" title="${getDaysTillDate(convertDisplayDateToJavascriptFormatDate(liveStartDate))+" days remaining"}">`;
     } else {
@@ -444,7 +444,7 @@ function createDatesTable(parent, liveStartDate, liveEndDate, betaStartDate, bet
     if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(betaEndDate)) <= -1) {
         divRow3Content.innerHTML += `<br><img src="https://i.ibb.co/stsL5vQ/sun-cloud-1.png" style="margin-top: 7px; height: 24px;" title="The event is over">`;
     } else if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(betaStartDate)) <= 0) {
-        divRow3Content.innerHTML += `<br><img src="https://i.ibb.co/Z6fSdBx/sun-cloud-3.png" style="margin-top: 7px; height: 30px;" title="${getDaysTillDate(convertDisplayDateToJavascriptFormatDate(betaStartDate))+" days remaining"}">`;
+        divRow3Content.innerHTML += `<br><img src="https://i.ibb.co/Z6fSdBx/sun-cloud-3.png" style="margin-top: 7px; height: 30px;" title="The event is running">`;
     } else if (getDaysTillDate(convertDisplayDateToJavascriptFormatDate(betaStartDate)) <= 3) {
         divRow3Content.innerHTML += `<br><img src="https://i.ibb.co/dQfb5s9/sun-cloud-2.png" style="margin-top: 7px; height: 24px;" title="${getDaysTillDate(convertDisplayDateToJavascriptFormatDate(betaStartDate))+" days remaining"}">`;
     } else {
