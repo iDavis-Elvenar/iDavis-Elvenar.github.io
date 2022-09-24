@@ -24,7 +24,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
-    "", "", "", "", "", "", "", "", "", "spell_pet_food_1", "random" ];
+    "", "", "", "", "", "", "", "", "spire_diplomacy_joker", "spell_pet_food_1", "random" ];
 
 var numberOfChapters = 20;
 
@@ -57,6 +57,7 @@ let eventBanners = {
     "july_xxii_": "https://i.ibb.co/nw1K2Dm/EL-akcia-j-l-2022-banner.png",
     "august_xxii_": "https://i.ibb.co/XV9cdnC/EL-akcia-august-2022-banner.png",
     "autumn_xxii_": "https://i.ibb.co/8Yp9YqV/EL-akcia-september-2022-banner.png",
+    "october_xxii_": "https://i.ibb.co/XxLJQ3K/EL-akcia-okt-ber-2022-banner.png",
 }
 
 let eventVideos = {
@@ -99,6 +100,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "july_xxii_": "05/25/2022",
     "august_xxii_": "07/07/2022",
     "autumn_xxii_": "08/18/2022",
+    "october_xxii_": "09/29/2022",
 }
 
 let questsLinks = {
@@ -153,7 +155,8 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": "1x Twilight Phoenix Artifact",
     "A_Evt_Evo_May_XXII_Flower_Goblin_Epiphany": "1x Flower Goblin Epiphany Artifact",
     "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": "1x Glory of the Nimble Artifact",
-    "A_Evt_Evo_Autumn_XXII_WittyCoon": "1x Witty Raccoon Artifact"
+    "A_Evt_Evo_Autumn_XXII_WittyCoon": "1x Witty Raccoon Artifact",
+    "A_Evt_Evo_October_XXII_Witch_Doctor": "1x Witch Doctor Artifact",
 }
 
 var feedingEffectsDescriptions = {

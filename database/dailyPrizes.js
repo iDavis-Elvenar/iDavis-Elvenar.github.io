@@ -1,4 +1,8 @@
 var dailyPrizes = {
+
+    "october_xxii_": [
+
+    ],
     
     "autumn_xxii_": [
         "A_Evt_September_XXI_Calligraphy_Class",
