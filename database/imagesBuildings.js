@@ -4,7 +4,7 @@ var images_buildings = {
     "A_Evt_October_XXII_Skulls_of_Splendor":"https://i.ibb.co/Cv1B3Rg/skulls-of-splendor.png",
     "A_Evt_October_XXII_Anima_Dolls":"https://i.ibb.co/1sqm7Pm/anima-dolls.png",
     "A_Evt_October_XXII_Lost_Outpost":"https://i.ibb.co/0Gjn6mJ/lost-outpost.png",
-    "A_Evt_Evo_October_XXII_Witch_Doctor":"https://i.ibb.co/svqPX4t/witch-doctor.png",
+    "A_Evt_Evo_October_XXII_Witch_Doctor":"https://i.ibb.co/bFCv79f/witch-doctor.png",
     "A_Evt_Autumn_XXII_Bear_Booster_A":"https://i.ibb.co/yWpFMs8/bear-booster-a.png",
     "A_Evt_Autumn_XXII_Bear_Booster_B":"https://i.ibb.co/HPY3D5w/bear-booster-b.png",
     "A_Evt_Autumn_XXII_Bear_Booster_C":"https://i.ibb.co/whk51gn/bear-booster-c.png",
