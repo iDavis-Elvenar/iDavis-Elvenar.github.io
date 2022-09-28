@@ -26,6 +26,10 @@ let questsDictionary = {
         "produkt základnej manufaktury (9-hodinový)" : "product of basic manufactory (9-hours)", // use regex
         "produkt základnej manufaktury (24-hodinový)" : "product of basic manufactory (24-hours)", // use regex
         "produkt základnej manufaktury (2-dňový)" : "product of basic manufactory (2-days)", // use regex
+        "produkt ľubovoľnej manufaktury (3-hodinový)" : "product of any manufactory (3-hours)", // use regex
+        "produkt ľubovoľnej manufaktury (9-hodinový)" : "product of any manufactory (9-hours)", // use regex
+        "produkt ľubovoľnej manufaktury (24-hodinový)" : "product of any manufactory (24-hours)", // use regex
+        "produkt ľubovoľnej manufaktury (2-dňový)" : "product of any manufactory (2-days)", // use regex
         "obyčajné nástroje" : "simple tools",
         "ľubovoľné kúzlo" : "enchantment of your choice",
         "strety na mape" : "world map encounters",
@@ -46,6 +50,7 @@ let questsDictionary = {
         "požehnání na jednotky" : "unit instants",
         "strety vo veži" : "spire encounters",
         "štandardného zboží" : "standard goods",
+        "ľubovoľného zboží" : "goods of your choice",
         "relikvií" : "relics",
         "vb do ľubovoľného prastarého divu" : "kp into ancient wonder of your choice",
         "stretov na mape" : "world map encounters",
@@ -90,6 +95,10 @@ let questsDictionary = {
         "produkt základnej manufaktury (9-hodinový)" : "Produkt einer Basismanufaktur (9-Stunden)", // use regex
         "produkt základnej manufaktury (24-hodinový)" : "Produkt einer Basismanufaktur (24-Stunden)", // use regex
         "produkt základnej manufaktury (2-dňový)" : "Produkt einer Basismanufaktur (48-Stunden)", // use regex
+        "produkt ľubovoľnej manufaktury (3-hodinový)" : "Produkt einer beliebigen Manufaktur (3-Stunden)", // use regex
+        "produkt ľubovoľnej manufaktury (9-hodinový)" : "Produkt einer beliebigen Manufaktur (9-Stunden)", // use regex
+        "produkt ľubovoľnej manufaktury (24-hodinový)" : "Produkt einer beliebigen Manufaktur (24-Stunden)", // use regex
+        "produkt ľubovoľnej manufaktury (2-dňový)" : "Produkt einer beliebigen Manufaktur (48-Stunden)", // use regex
         "obyčajné nástroje" : "einfache Werkzeuge",
         "ľubovoľné kúzlo" : "Verzauberung deiner Wahl",
         "strety na mape" : "Provinzbegegnungen",
@@ -110,6 +119,7 @@ let questsDictionary = {
         "požehnání na jednotky" : "Einheitensegen",
         "strety vo veži" : "Turmbegegnungen",
         "štandardného zboží" : "Standardgüter",
+        "ľubovoľného zboží" : "irgendwelche Güter",
         "relikvií" : "Relikte",
         "vb do ľubovoľného prastarého divu" : "WP in ein beliebiges Antikes Wunder",
         "stretov na mape" : "Provinzbegegnungen",
@@ -154,6 +164,10 @@ let questsDictionary = {
         "produkt základnej manufaktury (9-hodinový)" : "marchandise de base (9 heures)", // use regex
         "produkt základnej manufaktury (24-hodinový)" : "marchandise de base (24 heures)", // use regex
         "produkt základnej manufaktury (2-dňový)" : "marchandise de base (48 heures)", // use regex
+        "produkt ľubovoľnej manufaktury (3-hodinový)" : "de n'importe quelle manufacture (3-Stunden)", // use regex
+        "produkt ľubovoľnej manufaktury (9-hodinový)" : "de n'importe quelle manufacture (9-Stunden)", // use regex
+        "produkt ľubovoľnej manufaktury (24-hodinový)" : "de n'importe quelle manufacture (24-Stunden)", // use regex
+        "produkt ľubovoľnej manufaktury (2-dňový)" : "de n'importe quelle manufacture (48-Stunden)", // use regex
         "obyčajné nástroje" : "outils rudimentaires",
         "ľubovoľné kúzlo" : "sortilège de votre choix",
         "strety na mape" : "rencontres provinces",
@@ -174,6 +188,7 @@ let questsDictionary = {
         "požehnání na jednotky" : "bénédictions d’unités",
         "strety vo veži" : "rencontres donjon",
         "štandardného zboží" : "marchandise standart",
+        "ľubovoľného zboží" : "n'importe quelle marchandise",
         "relikvií" : "reliques",
         "vb do ľubovoľného prastarého divu" : "PCs sur une merveille",
         "stretov na mape" : "rencontres provinces",
@@ -214,10 +229,14 @@ let questsDictionary = {
         "mincí" : "monety",
         "nápoje" : "trunki",
         "vb" : "pw",
-        "produkt základnej manufaktury (3-hodinový)" : "wyprodukuj towary podstawowe (3 godziny)", // use regex
-        "produkt základnej manufaktury (9-hodinový)" : "wyprodukuj towary podstawowe (9 godziny)", // use regex
-        "produkt základnej manufaktury (24-hodinový)" : "wyprodukuj towary podstawowe (24 godziny)", // use regex
-        "produkt základnej manufaktury (2-dňový)" : "wyprodukuj towary podstawowe (48 godziny)", // use regex
+        "produkt základnej manufaktury (3-hodinový)" : "towary podstawowe (3 godziny)", // use regex
+        "produkt základnej manufaktury (9-hodinový)" : "towary podstawowe (9 godziny)", // use regex
+        "produkt základnej manufaktury (24-hodinový)" : "towary podstawowe (24 godziny)", // use regex
+        "produkt základnej manufaktury (2-dňový)" : "towary podstawowe (48 godziny)", // use regex
+        "produkt ľubovoľnej manufaktury (3-hodinový)" : "produkt dowolnej manufaktury (3 godziny)", // use regex
+        "produkt ľubovoľnej manufaktury (9-hodinový)" : "produkt dowolnej manufaktury (9 godziny)", // use regex
+        "produkt ľubovoľnej manufaktury (24-hodinový)" : "produkt dowolnej manufaktury (24 godziny)", // use regex
+        "produkt ľubovoľnej manufaktury (2-dňový)" : "produkt dowolnej manufaktury (48 godziny)", // use regex
         "obyčajné nástroje" : "proste narzędzia",
         "ľubovoľné kúzlo" : "zaklęcia",
         "strety na mape" : "konflikty na mapie",
@@ -238,6 +257,7 @@ let questsDictionary = {
         "požehnání na jednotky" : "szybkie bonusy jednostek",
         "strety vo veži" : "konflikty w iglicy",
         "štandardného zboží" : "dowolnych surowców",
+        "ľubovoľného zboží" : "dowolnych towarów",
         "relikvií" : "relikty",
         "vb do ľubovoľného prastarého divu" : "pw w dowolny cud",
         "stretov na mape" : "konfliktów na mapie",
@@ -281,7 +301,11 @@ let questsDictionary = {
         "produkt základnej manufaktury (3-hodinový)" : "продукция базовой фабрики (3 часа)", // use regex
         "produkt základnej manufaktury (9-hodinový)" : "продукция базовой фабрики (9 часа)", // use regex
         "produkt základnej manufaktury (24-hodinový)" : "продукция базовой фабрики (24 часа)", // use regex
-        "produkt základnej manufaktury (2-dňový)" : "продукция базовой фабрики (3 дня)", // use regex
+        "produkt základnej manufaktury (2-dňový)" : "продукция базовой фабрики (2 дня)", // use regex
+        "produkt ľubovoľnej manufaktury (3-hodinový)" : "продукция любой мануфактуры (3 часа)", // use regex
+        "produkt ľubovoľnej manufaktury (9-hodinový)" : "продукция любой мануфактуры (9 часа)", // use regex
+        "produkt ľubovoľnej manufaktury (24-hodinový)" : "продукция любой мануфактуры (24 часа)", // use regex
+        "produkt ľubovoľnej manufaktury (2-dňový)" : "продукция любой мануфактуры (2 дня)", // use regex
         "obyčajné nástroje" : "простые инструменты",
         "ľubovoľné kúzlo" : "заклинания",
         "strety na mape" : "конфликта на карте",
@@ -302,6 +326,7 @@ let questsDictionary = {
         "požehnání na jednotky" : "мгновения юнитов",
         "strety vo veži" : "конфликта в шпиле",
         "štandardného zboží" : "обычных товаров",
+        "ľubovoľného zboží" : "любого товара",
         "relikvií" : "реликвий",
         "vb do ľubovoľného prastarého divu" : "ОЗ в любое древнее чудо",
         "stretov na mape" : "конфликтов на карте",

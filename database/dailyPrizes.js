@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "october_xxii_": [
-
+        "A_Evt_October_XXII_Creepy_Clinic",
     ],
     
     "autumn_xxii_": [

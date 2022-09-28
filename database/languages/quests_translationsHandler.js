@@ -164,7 +164,11 @@ function translateCondition(cond) {
                     return takeFromDictionary(questsDictionary["en"][cond.toLowerCase()].charAt(0).toUpperCase() + questsDictionary["en"][cond.toLowerCase()].slice(1));
                 }
             } else {
-                return takeFromDictionary(questsDictionary["en"][cond]);
+                try {
+                    return takeFromDictionary(questsDictionary["en"][cond]);
+                } catch (error) {
+                    console.log(error, "---", cond);
+                }
             }
         }
     } else {
@@ -173,9 +177,13 @@ function translateCondition(cond) {
 }
 
 function takeFromDictionary(input) {
-    if (input.split("...").length > 1) {
-        endingWord = input.split("...")[1];
-        return input.split("...")[0];
+    try {
+        if (input.split("...").length > 1) {
+            endingWord = input.split("...")[1];
+            return input.split("...")[0];
+        }
+    } catch (error) {
+        throw "ERROR takeFromDictionary()";
     }
     return input;
 }
