@@ -24,8 +24,8 @@ var faBanners = [
 var dates = {
     "october_xxii_": {
         "live": {
-            "start_date": "October __th 2022",
-            "end_date": "October __th 2022"
+            "start_date": "October 6th 2022",
+            "end_date": "October 12th 2022"
         },
         "beta": {
             "start_date": "September 15th 2022",
