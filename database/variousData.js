@@ -300,7 +300,7 @@ var baseTabsEvents = [
 var additionalTabsEvents = {
     "october_xxii_": [
         {"id":"tools", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"10/01/2022"},
-        {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/FK9Wd7N/event-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html", "releaseDate":"10/01/2022"},
+        {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/FK9Wd7N/event-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html", "releaseDate":"10/03/2022"},
     ],
     "autumn_xxii_": [
         {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html"},
