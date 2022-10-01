@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_October_XXII_Creepy_Clinic",
         "A_Evt_October_XX_Scarriage",
         "kp_{15}",
+        "A_Evt_October_XXII_Skulls_of_Splendor",
     ],
     
     "autumn_xxii_": [
