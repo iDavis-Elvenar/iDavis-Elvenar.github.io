@@ -6,6 +6,7 @@ var dailyPrizes = {
         "kp_{15}",
         "A_Evt_October_XXII_Skulls_of_Splendor",
         "INS_UNIT_MC_MA_10",
+        "A_Evt_October_XX_Disturbed_Coffins",
     ],
     
     "autumn_xxii_": [
