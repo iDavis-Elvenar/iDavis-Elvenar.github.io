@@ -79,19 +79,19 @@ var prioritiesItems = [
 var stageRewards = {
     "october_xxii_": [
         [
-            {"img":"", "text":"This will be added soon", "link":"", "description":""},
-            {"img":"", "text":"", "link":"", "description":""},
-            {"img":"", "text":"", "link":"", "description":""},
+            {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"1x Ancient Knowledge (15 KP)", "link":"", "description":``},
+            {"img":"https://i.ibb.co/9HYLV46/carting-library.png", "text":"Carting Library", "link":"https://idavis-elvenar.com/buildings.html#A_Evt_Expiring_RefundTech", "description":``},
+            {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"10x Time Booster (10 min)", "link":"", "description":``},
         ],
         [
-            {"img":"", "text":"", "link":"", "description":""},
-            {"img":"", "text":"", "link":"", "description":""},
-            {"img":"", "text":"", "link":"", "description":""},
+            {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"2x Ancient Knowledge (20 KP)", "link":"", "description":``},
+            {"img":"https://i.ibb.co/3Y2Db7d/ins-evo-september-xxii.png", "text":"Witty Raccoon Artifact", "link":"", "description":`Artifact for evolving <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_Autumn_XXII_WittyCoon" class="text-link font-weight-bold" target="_blank">Witty Raccoon</a> to higher stages`},
+            {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"15x Time Booster (30 min)", "link":"", "description":``},
         ],
         [
-            {"img":"", "text":"", "link":"", "description":""},
-            {"img":"", "text":"", "link":"", "description":""},
-            {"img":"", "text":"", "link":"", "description":""},
+            {"img":"https://i.ibb.co/VpD8CvF/generic-ferris-wheel.png", "text":"Ferris Wheel Galore", "link":"https://idavis-elvenar.com/buildings.html#A_Evt_Generic_Ferris_Wheel", "description":``},
+            {"img":"https://i.ibb.co/3Y2Db7d/ins-evo-september-xxii.png", "text":"Witty Raccoon Artifact", "link":"", "description":`Artifact for evolving <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_Autumn_XXII_WittyCoon" class="text-link font-weight-bold" target="_blank">Witty Raccoon</a> to higher stages`},
+            {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"25x Time Booster (45 min)", "link":"", "description":``},
         ]
     ],
 }

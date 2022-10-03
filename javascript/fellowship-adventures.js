@@ -303,7 +303,7 @@ function displayRewards() {
             td.className = "text-center";
             td.style.width = "33%";
             td.style.height = "120px";
-            td.innerHTML = `<img src="${stageRewards[getSelectedFa()][st][re]["img"]}">`;
+            td.innerHTML = `<img src="${stageRewards[getSelectedFa()][st][re]["img"]}" style="max-width: 120px;">`;
             tr2.appendChild(td);
         }
         tbody.appendChild(tr2);
