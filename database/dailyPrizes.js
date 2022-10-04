@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_October_XXII_Skulls_of_Splendor",
         "INS_UNIT_MC_MA_10",
         "A_Evt_October_XX_Disturbed_Coffins",
+        "INS_RF_GRR_5",
     ],
     
     "autumn_xxii_": [
