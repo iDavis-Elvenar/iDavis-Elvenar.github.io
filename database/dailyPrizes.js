@@ -10,6 +10,7 @@ var dailyPrizes = {
         "INS_RF_GRR_5",
         "A_Evt_October_XX_Smiling_Pumpkins",
         "INS_UNIT_TG_HM_10",
+        "A_Evt_ScreamOfHalloween",
     ],
     
     "autumn_xxii_": [
