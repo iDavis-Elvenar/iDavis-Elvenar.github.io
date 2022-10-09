@@ -11,6 +11,7 @@ var dailyPrizes = {
         "A_Evt_October_XX_Smiling_Pumpkins",
         "INS_UNIT_TG_HM_10",
         "A_Evt_ScreamOfHalloween",
+        "mana_{1}",  //frog_mana
     ],
     
     "autumn_xxii_": [
