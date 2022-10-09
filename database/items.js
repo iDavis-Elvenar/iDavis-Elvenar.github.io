@@ -176,7 +176,7 @@ var instants = {
         "title": "A pack of standard or sentient goods (depending on chapter)",
         "production_type": "x"
     },
-    "mana": {
+    "mana_": {
         "name": "Mana",
         "image_big": "https://i.ibb.co/60pZRM1/mana.png",
         "image_small": "https://image.ibb.co/bzd1Zq/mana.png",
