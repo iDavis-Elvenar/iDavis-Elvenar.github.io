@@ -175,5 +175,12 @@ var instants = {
         "image_small": "https://i.ibb.co/yFZD0dM/goods-general-small.png",
         "title": "A pack of standard or sentient goods (depending on chapter)",
         "production_type": "x"
+    },
+    "mana": {
+        "name": "Mana",
+        "image_big": "https://i.ibb.co/60pZRM1/mana.png",
+        "image_small": "https://image.ibb.co/bzd1Zq/mana.png",
+        "title": "A pack of mana (depending on chapter)",
+        "production_type": "x"
     }
 }
