@@ -20,7 +20,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "INS_TR_AMT_20", "INS_TR_AMT_30", "INS_TR_AMT_45", "INS_TR_AMT_60", "INS_TR_AMT_120", 
     "INS_TR_AMT_300", "INS_TR_AMT_480", "INS_TR_AMT_840", "INS_TR_AMT_1200", "INS_TR_AMT_2400", 
     "INS_KP_AW_1", "INS_KP_AW_3", "INS_KP_AW_5", "INS_KP_AW_7", "INS_KP_AW_10", "INS_KP_AW_15", "INS_KP_AW_20",
-    "INS_KP_AW_30", "ins_rs_1", "", "", "",
+    "INS_KP_AW_30", "ins_rs_1", "INS_REV_SQD_10", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
@@ -113,6 +113,7 @@ let questsLinks = {
     "august_xxii_": "bit.ly/GatewayIntoThePast2022",
     "autumn_xxii_": "bit.ly/AutumnZodiac2022",
     "october_xxii_": "bit.ly/MischievousTherapy2022",
+    "december_xxii_": "bit.ly/WinterMagic2022",
 }
 
 let eventsDurations = {
@@ -230,6 +231,7 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
+            ["Winter Magic","december_xxii_",false,true],
             ["Mischievous Therapy","october_xxii_",true,false],
             ["Autumn Zodiac","autumn_xxii_",false,false],
             ["A Gateway into the Past","august_xxii_",false,false],
@@ -270,6 +272,7 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
+            ["Winter Magic","december_xxii_",false,true],
             ["Mischievous Therapy","october_xxii_",true,false],
             ["Autumn Zodiac","autumn_xxii_",false,false],
             ["A Gateway into the Past","august_xxii_",false,false],

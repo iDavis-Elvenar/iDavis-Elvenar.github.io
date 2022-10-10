@@ -364,12 +364,7 @@ function readBuildingsJSON() {
                                 } else {
                                     if (filteredData[i]['chapters'][ch][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
                                         if (typeof filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]] === 'object') {
-                                            if (filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value'] === null) {// pripad pre Witch Doctor (nefunguje normalne)
-                                                console.log("Should only be printed for Witch Doctor building. Is printed for", filteredData[i]["id"], "->", "A_Evt_Evo_October_XXII_Witch_Doctor" === filteredData[i]["id"]);
-                                                td.innerHTML = `1`;
-                                            } else {
-                                                td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value']).toFixed(0))}`;
-                                            }
+                                            td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value']).toFixed(0))}`;
                                         } else {
                                             td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]).toFixed(0))}`;
                                         }
