@@ -50,7 +50,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":30
     },
     "6":{  // DONATE
@@ -122,7 +122,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":40
     },
 }
