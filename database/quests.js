@@ -66,7 +66,7 @@ var quests = {
         "Vyrob nejaké množstvo zásob ALEBO trénuj nejaké množstvo jednotiek + vyrob nejaké množstvo ľubovoľného zboží",
         "Vyrob 17x obyčajné nástroje + vyrob nejaké množstvo zásob",
         "Utrať 16 VB + vyrob 2x sada nástrojov",
-        "Vyrieš 8 stretov na mape ALEBO vyrieš 8 turnajových stretov ALEBO vyrieš 8 stretov vo veži + vyskúmaj 1 technológiu ALEBO preskúmaj 1 provinciu",
+        "Vyrieš 8 stretov na mape ALEBO vyrieš 8 turnajových stretov ALEBO vyrieš 8 stretov vo veži + vyrob 4x košík jedla ALEBO preskúmaj 1 provinciu",
         "Vyrob nejaké množstvo zásob ALEBO trénuj nejaké množstvo jednotiek + vyrieš 1 provinciu ALEBO získaj 3x spojovací činidlo",
         "Vyrob 6x produkt ľubovoľnej manufaktury (3-hodinový) + získaj nejaké množstvo mincí",
         "Získaj 800x úlomky kouzel + získaj 20-24x opar vidění ALEBO vylepši 2 budovy na level 5 alebo vyšší",
