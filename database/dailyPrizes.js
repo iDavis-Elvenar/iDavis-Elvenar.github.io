@@ -14,6 +14,7 @@ var dailyPrizes = {
         "mana_{1}",  //frog_mana
         "A_Evt_October_XXII_Anima_Dolls",
         "runeshards-1_{4}",
+        "INS_UNIT_MC_LR_10",
     ],
     
     "autumn_xxii_": [
