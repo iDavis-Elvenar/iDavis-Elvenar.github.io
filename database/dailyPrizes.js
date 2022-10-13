@@ -15,6 +15,7 @@ var dailyPrizes = {
         "A_Evt_October_XXII_Anima_Dolls",
         "runeshards-1_{4}",
         "INS_UNIT_MC_LR_10",
+        "A_Evt_October_XXI_Phantom_Bear",
     ],
     
     "autumn_xxii_": [
