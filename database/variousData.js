@@ -726,7 +726,7 @@ var moreNavbarContent = [
             "style":    "width: 24px; margin-right: 6px; margin-bottom: 4px;",
         }
     },
-    {
+    /*{
         "className":    "dropdown-item text-dark",
         "href":         "tournaments.html",
         "id":           "navitem_tournaments",
@@ -735,7 +735,7 @@ var moreNavbarContent = [
             "src":      "https://i.ibb.co/k42MQs2/tournament-icon.png",
             "style":    "width: 25px; margin-right: 5px; margin-bottom: 4px; margin-left: 0px;",
         }
-    },
+    },*/
     // ---------------
     // CONTACT
     {   
