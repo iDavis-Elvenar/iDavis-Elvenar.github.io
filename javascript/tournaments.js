@@ -119,9 +119,11 @@ function generateFas(idToAppend) {
         let option = document.createElement('option');
         option.innerHTML = langUI(allTournaments[e][0]);
         option.value = allTournaments[e][1];
-        option.selected = allTournaments[e][2];
-        option.disabled = allTournaments[e][3];
-        option.hidden = allTournaments[e][3];
+        if (allTournaments[e][1].includes(getCurrentTournament())) {
+            option.selected = true;
+        } else {
+            option.selected = false;
+        }        
         document.getElementById(idToAppend).appendChild(option);
     }
 }
@@ -171,6 +173,57 @@ function getTournamentDates() {
     return result;
 }
 
+function getInitialTournamentDate() {
+    return convertDisplayDateToJavascriptFormatDate(initTournamentDate["live"]["start_date"]);
+}
+
+function getStartDateOfTournament(tournamentId) {
+    let currentTournamentDate = new Date(getInitialTournamentDate());
+    currentTournamentDate.setDate(currentTournamentDate.getDate() + (getDaysFrom(getInitialTournamentDate())+1 - (getDaysFrom(getInitialTournamentDate()) % 7)));
+    let result;
+    if (tournamentId.includes(getCurrentTournament())) {
+        result = currentTournamentDate;
+    } else {
+        let tournamentsFromCurrent = tournamentsOrderFromInit.slice(tournamentsOrderFromInit.indexOf(getCurrentTournament()))
+                                        .concat(tournamentsOrderFromInit.slice(0, tournamentsOrderFromInit.indexOf(getCurrentTournament())));
+        let weeksFromCurrent = tournamentsFromCurrent.indexOf(tournamentId.split("_")[1]);
+        let tournamentDate = currentTournamentDate;
+        tournamentDate.setDate(tournamentDate.getDate() + weeksFromCurrent * 7);
+        result = tournamentDate;
+    }
+    var dd = String(result.getUTCDate()).padStart(2, '0');
+    var mm = String(result.getUTCMonth() + 1).padStart(2, '0');
+    var yyyy = result.getUTCFullYear();
+    return mm+"/"+dd+"/"+yyyy;
+}
+
+function getCurrentTournament() {
+    let initialTournamentDate = getInitialTournamentDate();
+    let weeksFromInit = getWeeksFrom(initialTournamentDate);
+    return tournamentsOrderFromInit[weeksFromInit];
+}
+
+function getDaysFrom(from, to="") {
+    if (to === "") {
+        return Math.floor((new Date()-new Date(from))/(1000*60*60*24));
+    } else {
+        return Math.floor((new Date(to)-new Date(from))/(1000*60*60*24));
+    }
+}
+
+function getWeeksFrom(from, to="") {
+    let initFullDate = new Date(from);
+    let currentFullDate;
+    if (to === "") {
+        currentFullDate = new Date();
+    } else {
+        currentFullDate = new Date(to);
+    }
+    var diff =(currentFullDate.getTime() - initFullDate.getTime()) / 1000;
+    diff /= (60 * 60 * 24 * 7);
+    return Math.abs(Math.floor(diff));
+}
+
 function displayBase() {
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = "";
@@ -182,15 +235,25 @@ function displayBase() {
     h5.id = 'header';
     h5.className = "card-title text-center text-title font-weight-bold";
     h5.style.textAlign = "left";
-    h5.innerHTML = `..:: Following ${langUI(getSelectedTournamentName())} ::..<br>`;
+    h5.innerHTML = `..:: Dates ::..<br>`;
     center.appendChild(h5);
 
-    createDatesTable(center,    "October 7th 2022",
-                                "October 14th 2022",
-                                "November 11th 2022",
-                                "November 18th 2022");
+    createDatesTable(center,    convertJavascriptFormatDateToDisplayDate(getStartDateOfTournament(getSelectedTournament())),
+                                convertJavascriptFormatDateToDisplayDate(findEndDate(getStartDateOfTournament(getSelectedTournament()))),
+                                convertJavascriptFormatDateToDisplayDate(getStartDateOfTournament(getSelectedTournament())),
+                                convertJavascriptFormatDateToDisplayDate(findEndDate(getStartDateOfTournament(getSelectedTournament()))));
     
     parent.appendChild(center);
+}
+
+function findEndDate(date) {
+    let endDate = new Date(date);
+    endDate.setDate(endDate.getDate() + tournamentDurationDays);
+    var dd = String(endDate.getUTCDate() + 1).padStart(2, '0');
+    var mm = String(endDate.getUTCMonth() + 1).padStart(2, '0');
+    var yyyy = endDate.getUTCFullYear();
+    endDate = mm + '/' + dd + '/' + yyyy;
+    return endDate;
 }
 
 function displayUnits() {

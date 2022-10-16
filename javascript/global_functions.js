@@ -498,3 +498,40 @@ function convertDisplayDateToJavascriptFormatDate(displayDate) {
     let year = displayDate.split(" ")[2];
     return month+"/"+day+"/"+year;
 }
+
+function convertJavascriptFormatDateToDisplayDate(date) {
+    let month = "";
+    switch(date.split("/")[0]) {
+        case "01": month = "January"; break;
+        case "02": month = "February"; break;
+        case "03": month = "March"; break;
+        case "04": month = "April"; break;
+        case "05": month = "May"; break;
+        case "06": month = "June"; break;
+        case "07": month = "July"; break;
+        case "08": month = "August"; break;
+        case "09": month = "September"; break;
+        case "10": month = "October"; break;
+        case "11": month = "November"; break;
+        case "12": month = "December"; break;
+    }
+    let dayPart = date.split("/")[1];
+    if (dayPart[0] === "0") {
+        dayPart = dayPart.slice(1);
+    }
+    let day = dayPart;
+    switch(dayPart[dayPart.length-1]) {
+        case "0": day += "th"; break;
+        case "1": day += "st"; break;
+        case "2": day += "nd"; break;
+        case "3": day += "rd"; break;
+        case "4": day += "th"; break;
+        case "5": day += "th"; break;
+        case "6": day += "th"; break;
+        case "7": day += "th"; break;
+        case "8": day += "th"; break;
+        case "9": day += "th"; break;
+    }
+    let year = date.split("/")[2];
+    return month + " " + day + " " + year;
+}

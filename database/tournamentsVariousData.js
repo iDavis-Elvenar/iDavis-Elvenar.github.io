@@ -1,13 +1,13 @@
 var allTournaments = [ //NAME,ID,SELECTED,DISABLED == HIDDEN
-    ["Marble Tournament", "tournament_marble", true, false],
-    ["Steel Tournament", "tournament_steel", true, false],
-    ["Planks Tournament", "tournament_planks", true, false],
-    ["Crystal Tournament", "tournament_crystal", true, false],
-    ["Scrolls Tournament", "tournament_scrolls", true, false],
-    ["Silk Tournament", "tournament_silk", true, false],
-    ["Elixir Tournament", "tournament_elixir", true, false],
-    ["Magic Dust Tournament", "tournament_magicdust", true, false],
-    ["Gems Tournament", "tournament_gems", true, false],
+    ["Marble Tournament", "tournament_marble"],
+    ["Steel Tournament", "tournament_steel"],
+    ["Planks Tournament", "tournament_planks"],
+    ["Crystal Tournament", "tournament_crystal"],
+    ["Scrolls Tournament", "tournament_scrolls"],
+    ["Silk Tournament", "tournament_silk"],
+    ["Elixir Tournament", "tournament_elixir"],
+    ["Magic Dust Tournament", "tournament_magicdust"],
+    ["Gems Tournament", "tournament_gems"],
 ]
 
 
@@ -25,3 +25,20 @@ var additionalTabsTournaments = {
 var tournamentsBanners = [
     {"all" : "https://i.ibb.co/fMX3t5B/fellowship-adventures-banner.png"},
 ]
+
+var initTournamentDate = {  //ELIXIR
+    "live": {
+        "start_date": "October 11th 2022",
+        "end_date": "October 15th 2022"
+    },
+    "beta": {
+        "start_date": "October 11th 2022",
+        "end_date": "October 15th 2022"
+    }
+}
+
+var tournamentsOrderFromInit = [
+    "elixir","magicdust","gems","marble","steel","planks","crystal","scrolls","silk"
+]
+
+var tournamentDurationDays = 4;
