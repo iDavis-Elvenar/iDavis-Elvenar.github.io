@@ -115,17 +115,35 @@ function getSelectedTournamentName() {
 }
 
 function generateFas(idToAppend) {
+    let flag = false;
     for (let e = 0; e < allTournaments.length; e++) {
         let option = document.createElement('option');
         option.innerHTML = langUI(allTournaments[e][0]);
         option.value = allTournaments[e][1];
-        if (allTournaments[e][1].includes(getCurrentTournament())) {
+        if (flag) {
             option.selected = true;
+            flag = false;
         } else {
-            option.selected = false;
-        }        
+            if (allTournaments[e][1].includes(getCurrentTournament())) {
+                if (getHoursBetween(new Date(), new Date(getStartDateOfTournament(allTournaments[(e+1)%9][1]))) < 36) {
+                    flag = true;
+                    option.selected = false;
+                    
+                } else {
+                    option.selected = true;
+                }
+            } else {
+                option.selected = false;
+            }    
+        }
         document.getElementById(idToAppend).appendChild(option);
     }
+}
+
+function getHoursBetween(first, second) {
+    var diff =(second.getTime() - first.getTime()) / 1000;
+    diff /= (60 * 60);
+    return Math.abs(Math.round(diff));
 }
 
 function createFaHeader() {
@@ -145,32 +163,6 @@ function createFaHeader() {
     tournamentImg.style.marginBottom = `15px`;
     tournamentImg.style.width = `50%`;
     document.getElementById('column_with_tables').appendChild(tournamentImg);
-}
-
-function getTournamentDates() {
-    let result = {
-        "live": {
-            "start_date": "",
-            "end_date": ""
-        },
-        "beta": {
-            "start_date": "",
-            "end_date": ""
-        }
-    };
-    let initialTournamentDates = {
-        "live": {
-            "start_date": "October 11th 2022",
-            "end_date": "October 15th 2022"
-        },
-        "beta": {
-            "start_date": "October 11th 2022",
-            "end_date": "October 15th 2022"
-        }
-    }
-    let initialTournamentType = "elixir";
-
-    return result;
 }
 
 function getInitialTournamentDate() {
