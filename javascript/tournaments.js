@@ -114,7 +114,7 @@ function getSelectedTournamentName() {
     return tournamentSelect.options[tournamentSelect.selectedIndex].text;
 }
 
-function generateFas(idToAppend) {
+function generateTournaments(idToAppend) {
     let flag = false;
     for (let e = 0; e < allTournaments.length; e++) {
         let option = document.createElement('option');
@@ -171,7 +171,7 @@ function getInitialTournamentDate() {
 
 function getStartDateOfTournament(tournamentId) {
     let currentTournamentDate = new Date(getInitialTournamentDate());
-    currentTournamentDate.setDate(currentTournamentDate.getDate() + (getDaysFrom(getInitialTournamentDate())+1 - (getDaysFrom(getInitialTournamentDate()) % 7)));
+    currentTournamentDate.setDate(currentTournamentDate.getUTCDate() + (getDaysFrom(getInitialTournamentDate())+1 - (getDaysFrom(getInitialTournamentDate()) % 7)));
     let result;
     if (tournamentId.includes(getCurrentTournament())) {
         result = currentTournamentDate;
@@ -183,7 +183,7 @@ function getStartDateOfTournament(tournamentId) {
         tournamentDate.setDate(tournamentDate.getDate() + weeksFromCurrent * 7);
         result = tournamentDate;
     }
-    var dd = String(result.getUTCDate()).padStart(2, '0');
+    var dd = String(result.getDate()).padStart(2, '0');
     var mm = String(result.getUTCMonth() + 1).padStart(2, '0');
     var yyyy = result.getUTCFullYear();
     return mm+"/"+dd+"/"+yyyy;
@@ -192,7 +192,7 @@ function getStartDateOfTournament(tournamentId) {
 function getCurrentTournament() {
     let initialTournamentDate = getInitialTournamentDate();
     let weeksFromInit = getWeeksFrom(initialTournamentDate);
-    return tournamentsOrderFromInit[weeksFromInit];
+    return tournamentsOrderFromInit[weeksFromInit % 9];
 }
 
 function getDaysFrom(from, to="") {
