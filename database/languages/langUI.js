@@ -84,6 +84,7 @@ let ui = {
         "Forbidden Ruins": "Zapovězené ruiny",
         "Dwarven Citadel": "Trpasličí citadela",
         //EVENTS
+        "Mischievous Therapy": "Nezbedná terapie",
         "A Gateway into the Past": "Brána do minulosti",
         "Lucky Little Fin":"Šťastná ploutvička",
         "Naturally Amazing":"Přirozeně úžasné",
@@ -195,6 +196,7 @@ let ui = {
         "Forbidden Ruins": "Verbotene Ruinen",
         "Dwarven Citadel": "Zwergen-Zitadelle",
         //EVENTS
+        "Mischievous Therapy": "Schelmische Therapie",
         "A Gateway into the Past": "Ein Tor in die Vergangenheit",
         "Lucky Little Fin":"Flotte Flosse",
         "Naturally Amazing":"Einfach Natürlich",
@@ -306,6 +308,7 @@ let ui = {
         "Forbidden Ruins": "Ruines interdites",
         "Dwarven Citadel": "Citadelle naine",
         //EVENTS
+        "Mischievous Therapy": "Le Guérisseur",
         "A Gateway into the Past": "Un passage vers le passé",
         "Lucky Little Fin":"Le petit aileron porte-bonheur",
         "Naturally Amazing":"Naturellement époustouflant",
@@ -417,6 +420,7 @@ let ui = {
         "Forbidden Ruins": "Zakazane Ruiny",
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         //EVENTS
+        "Mischievous Therapy": "Złośliwa Terapia",
         "A Gateway into the Past": "Brama do Przeszłości",
         "Lucky Little Fin":"Mały Morski Szczęściarz",
         "Naturally Amazing":"Z Natury Zadziwiające",
@@ -528,6 +532,7 @@ let ui = {
         "Forbidden Ruins": "Запретные руины",
         "Dwarven Citadel": "Гномья цитадель",
         //EVENTS
+        "Mischievous Therapy": "Озорная терапия",
         "A Gateway into the Past": "Врата в прошлое",
         "Lucky Little Fin":"Маленький везунчик",
         "Naturally Amazing":"Естественное изумление",
