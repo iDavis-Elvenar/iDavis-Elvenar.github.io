@@ -26,19 +26,22 @@ var tournamentsBanners = [
     {"all" : "https://i.ibb.co/fMX3t5B/fellowship-adventures-banner.png"},
 ]
 
-var initTournamentDate = {  //ELIXIR
+var initTournamentDate = {  //MARBLE
     "live": {
-        "start_date": "October 11th 2022",
-        "end_date": "October 15th 2022"
+        "start_date": "August 30th 2022",
+        "end_date": "September 3rd 2022"
     },
     "beta": {
-        "start_date": "October 11th 2022",
-        "end_date": "October 15th 2022"
+        "start_date": "August 30th 2022",
+        "end_date": "September 3rd 2022"
     }
 }
 
 var tournamentsOrderFromInit = [
-    "elixir","magicdust","gems","marble","steel","planks","crystal","scrolls","silk"
+    "tournament_marble","tournament_steel","tournament_planks",
+    "tournament_crystal","tournament_scrolls","tournament_silk",
+    "tournament_elixir","tournament_magicdust","tournament_gems"
 ]
 
 var tournamentDurationDays = 4;
+var tournamentDurationHours = 99;

@@ -114,36 +114,75 @@ function getSelectedTournamentName() {
     return tournamentSelect.options[tournamentSelect.selectedIndex].text;
 }
 
-function generateTournaments(idToAppend) {
-    let flag = false;
-    for (let e = 0; e < allTournaments.length; e++) {
-        let option = document.createElement('option');
-        option.innerHTML = langUI(allTournaments[e][0]);
-        option.value = allTournaments[e][1];
-        if (flag) {
-            option.selected = true;
-            flag = false;
-        } else {
-            if (allTournaments[e][1].includes(getCurrentTournament())) {
-                if (getHoursBetween(new Date(), new Date(getStartDateOfTournament(allTournaments[(e+1)%9][1]))) < 36) {
-                    flag = true;
-                    option.selected = false;
-                    
-                } else {
-                    option.selected = true;
-                }
-            } else {
-                option.selected = false;
-            }    
-        }
-        document.getElementById(idToAppend).appendChild(option);
+function getTournamentsStructure() {
+    var result = [];
+
+    var initTournamentDateTime = new Date(getInitialTournamentDate());
+    initTournamentDateTime.setUTCHours(initTournamentDateTime.getUTCHours() + 19);
+
+    var weeksFromInit = getWeeksBetween(initTournamentDateTime);
+
+    var currentTournament = getCurrentTournament(weeksFromInit);
+
+    var tournamentsOrderFromCurrent = tournamentsOrderFromInit.slice(tournamentsOrderFromInit.indexOf(currentTournament))
+    .concat(tournamentsOrderFromInit.slice(0, tournamentsOrderFromInit.indexOf(currentTournament)));
+    
+    tournamentsOrderFromCurrent.forEach(tournament => {
+        var tourObj = {};
+        tourObj["id"] = tournament;
+        tourObj["start_date"] = new Date(getStartDateOfTournament(initTournamentDateTime, weeksFromInit++));
+        var end_date = new Date(tourObj["start_date"]);
+        tourObj["end_date"] = new Date(end_date.setTime(end_date.getTime() + (tournamentDurationHours*60*60*1000)));
+        var currentDateTime = new Date();
+        tourObj["isRunning"] = (currentDateTime.getTime() <= tourObj["end_date"].getTime() && currentDateTime.getTime() >= tourObj["start_date"].getTime());
+        tourObj["isComing"] = currentDateTime < tourObj["start_date"] && getHoursBetween(currentDateTime, tourObj["start_date"]) < 36;
+        result.push(tourObj);
+    })
+    return result;
+}
+var tournamentsStructure = getTournamentsStructure();
+
+function getStartDateOfTournament(initTournamentDateTime, weeksFromInit) {
+    var result = new Date(initTournamentDateTime);
+    return result.setDate(result.getDate() + (weeksFromInit * 7));
+}
+
+function getInitialTournamentDate() {
+    return convertDisplayDateToJavascriptFormatDate(initTournamentDate["live"]["start_date"]);
+}
+
+function getWeeksBetween(from, to="") {
+    var initDateTime = from;
+    var currentDateTime;
+    if (to === "") {
+        currentDateTime = new Date();
+    } else {
+        currentDateTime = to;
     }
+    var diff =(currentDateTime.getTime() - initDateTime.getTime()) / 1000;
+    diff /= (60 * 60 * 24 * 7);
+    return Math.abs(Math.floor(diff));
 }
 
 function getHoursBetween(first, second) {
     var diff =(second.getTime() - first.getTime()) / 1000;
     diff /= (60 * 60);
     return Math.abs(Math.round(diff));
+}
+
+function getCurrentTournament(weeksFromInit) {
+    return tournamentsOrderFromInit[weeksFromInit % 9];
+}
+
+function generateTournaments(idToAppend) {
+    let flag = false;
+    for (let e = 0; e < allTournaments.length; e++) {
+        let option = document.createElement('option');
+        option.innerHTML = langUI(allTournaments[e][0]);
+        option.value = allTournaments[e][1];
+        option.selected = tournamentsStructure.filter(tour => (tour.isRunning || tour.isComing) && tour.id === allTournaments[e][1]).length > 0;
+        document.getElementById(idToAppend).appendChild(option);
+    }
 }
 
 function createFaHeader() {
@@ -165,57 +204,6 @@ function createFaHeader() {
     document.getElementById('column_with_tables').appendChild(tournamentImg);
 }
 
-function getInitialTournamentDate() {
-    return convertDisplayDateToJavascriptFormatDate(initTournamentDate["live"]["start_date"]);
-}
-
-function getStartDateOfTournament(tournamentId) {
-    let currentTournamentDate = new Date(getInitialTournamentDate());
-    currentTournamentDate.setDate(currentTournamentDate.getUTCDate() + (getDaysFrom(getInitialTournamentDate())+1 - (getDaysFrom(getInitialTournamentDate()) % 7)));
-    let result;
-    if (tournamentId.includes(getCurrentTournament())) {
-        result = currentTournamentDate;
-    } else {
-        let tournamentsFromCurrent = tournamentsOrderFromInit.slice(tournamentsOrderFromInit.indexOf(getCurrentTournament()))
-                                        .concat(tournamentsOrderFromInit.slice(0, tournamentsOrderFromInit.indexOf(getCurrentTournament())));
-        let weeksFromCurrent = tournamentsFromCurrent.indexOf(tournamentId.split("_")[1]);
-        let tournamentDate = currentTournamentDate;
-        tournamentDate.setDate(tournamentDate.getDate() + weeksFromCurrent * 7);
-        result = tournamentDate;
-    }
-    var dd = String(result.getDate()).padStart(2, '0');
-    var mm = String(result.getUTCMonth() + 1).padStart(2, '0');
-    var yyyy = result.getUTCFullYear();
-    return mm+"/"+dd+"/"+yyyy;
-}
-
-function getCurrentTournament() {
-    let initialTournamentDate = getInitialTournamentDate();
-    let weeksFromInit = getWeeksFrom(initialTournamentDate);
-    return tournamentsOrderFromInit[weeksFromInit % 9];
-}
-
-function getDaysFrom(from, to="") {
-    if (to === "") {
-        return Math.floor((new Date()-new Date(from))/(1000*60*60*24));
-    } else {
-        return Math.floor((new Date(to)-new Date(from))/(1000*60*60*24));
-    }
-}
-
-function getWeeksFrom(from, to="") {
-    let initFullDate = new Date(from);
-    let currentFullDate;
-    if (to === "") {
-        currentFullDate = new Date();
-    } else {
-        currentFullDate = new Date(to);
-    }
-    var diff =(currentFullDate.getTime() - initFullDate.getTime()) / 1000;
-    diff /= (60 * 60 * 24 * 7);
-    return Math.abs(Math.floor(diff));
-}
-
 function displayBase() {
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = "";
@@ -227,25 +215,15 @@ function displayBase() {
     h5.id = 'header';
     h5.className = "card-title text-center text-title font-weight-bold";
     h5.style.textAlign = "left";
-    h5.innerHTML = `..:: Dates ::..<br>`;
+    h5.innerHTML = `..:: Next round ::..<br>`;
     center.appendChild(h5);
 
-    createDatesTable(center,    convertJavascriptFormatDateToDisplayDate(getStartDateOfTournament(getSelectedTournament())),
-                                convertJavascriptFormatDateToDisplayDate(findEndDate(getStartDateOfTournament(getSelectedTournament()))),
-                                convertJavascriptFormatDateToDisplayDate(getStartDateOfTournament(getSelectedTournament())),
-                                convertJavascriptFormatDateToDisplayDate(findEndDate(getStartDateOfTournament(getSelectedTournament()))));
+    createDatesTable(center,    convertJavascriptFormatDateToDisplayDate(javascriptDatumToStringDateOnly(tournamentsStructure.filter(tour => tour.id === getSelectedTournament())[0].start_date)),
+                                convertJavascriptFormatDateToDisplayDate(javascriptDatumToStringDateOnly(tournamentsStructure.filter(tour => tour.id === getSelectedTournament())[0].end_date)),
+                                convertJavascriptFormatDateToDisplayDate(javascriptDatumToStringDateOnly(tournamentsStructure.filter(tour => tour.id === getSelectedTournament())[0].start_date)),
+                                convertJavascriptFormatDateToDisplayDate(javascriptDatumToStringDateOnly(tournamentsStructure.filter(tour => tour.id === getSelectedTournament())[0].end_date)))
     
     parent.appendChild(center);
-}
-
-function findEndDate(date) {
-    let endDate = new Date(date);
-    endDate.setDate(endDate.getDate() + tournamentDurationDays);
-    var dd = String(endDate.getUTCDate() + 1).padStart(2, '0');
-    var mm = String(endDate.getUTCMonth() + 1).padStart(2, '0');
-    var yyyy = endDate.getUTCFullYear();
-    endDate = mm + '/' + dd + '/' + yyyy;
-    return endDate;
 }
 
 function displayUnits() {

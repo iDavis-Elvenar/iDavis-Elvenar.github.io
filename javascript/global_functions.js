@@ -535,3 +535,10 @@ function convertJavascriptFormatDateToDisplayDate(date) {
     let year = date.split("/")[2];
     return month + " " + day + " " + year;
 }
+
+function javascriptDatumToStringDateOnly(value) {
+    var dd = String(value.getUTCDate()).padStart(2, '0');
+    var mm = String(value.getUTCMonth() + 1).padStart(2, '0');
+    var yyyy = value.getUTCFullYear();
+    return mm+"/"+dd+"/"+yyyy;
+}
