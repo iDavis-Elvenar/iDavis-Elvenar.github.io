@@ -19,6 +19,8 @@ var dailyPrizes = {
         "A_Evt_October_XXII_Skulls_of_Splendor",
         "A_Evt_Halloween_Xviii",
         "INS_KP_AW_20",
+        "A_Evt_October_XXII_Creepy_Clinic",
+        "INS_REV_SQD_50",
     ],
     
     "autumn_xxii_": [
