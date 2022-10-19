@@ -21,6 +21,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_October_XXII_Creepy_Clinic",
         "INS_REV_SQD_50",
+        "A_Evt_October_XX_Gargoyle_Fountain",
     ],
     
     "autumn_xxii_": [
