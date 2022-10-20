@@ -22,6 +22,7 @@ var dailyPrizes = {
         "A_Evt_October_XXII_Creepy_Clinic",
         "INS_REV_SQD_50",
         "A_Evt_October_XX_Gargoyle_Fountain",
+        "A_Evt_October_XXII_Anima_Dolls",
     ],
     
     "autumn_xxii_": [
