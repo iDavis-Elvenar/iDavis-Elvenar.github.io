@@ -135,7 +135,7 @@ function getTournamentsStructure() {
         tourObj["end_date"] = new Date(end_date.setTime(end_date.getTime() + (tournamentDurationHours*60*60*1000)));
         var currentDateTime = new Date();
         tourObj["isRunning"] = (currentDateTime.getTime() <= tourObj["end_date"].getTime() && currentDateTime.getTime() >= tourObj["start_date"].getTime());
-        tourObj["isComing"] = currentDateTime < tourObj["start_date"] && getHoursBetween(currentDateTime, tourObj["start_date"]) < 36;
+        tourObj["isComing"] = currentDateTime < tourObj["start_date"] && getHoursBetween(currentDateTime, tourObj["start_date"]) < 55;
         result.push(tourObj);
     })
     return result;
@@ -175,12 +175,15 @@ function getCurrentTournament(weeksFromInit) {
 }
 
 function generateTournaments(idToAppend) {
-    let flag = false;
     for (let e = 0; e < allTournaments.length; e++) {
         let option = document.createElement('option');
         option.innerHTML = langUI(allTournaments[e][0]);
         option.value = allTournaments[e][1];
-        option.selected = tournamentsStructure.filter(tour => (tour.isRunning || tour.isComing) && tour.id === allTournaments[e][1]).length > 0;
+        if (tournamentsStructure.filter(tour => (tour.isRunning || tour.isComing) && tour.id === allTournaments[e][1]).length === 1) {
+            option.selected = tournamentsStructure.filter(tour => (tour.isRunning || tour.isComing) && tour.id === allTournaments[e][1]).length > 0;
+        } else {
+            option.selected = tournamentsStructure[0].id === allTournaments[e][1];
+        }
         document.getElementById(idToAppend).appendChild(option);
     }
 }
