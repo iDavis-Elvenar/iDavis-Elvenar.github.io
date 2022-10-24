@@ -1,6 +1,7 @@
 var allFas = {
     "2022" : [ //NAME,ID,SELECTED,DISABLED == HIDDEN
-        ["Fellowship Adventures - October 2022", "october_xxii_",true,false],
+        ["Fellowship Adventures - November 2022", "november_xxii_",true,false],
+        ["Fellowship Adventures - October 2022", "october_xxii_",false,false],
     ]
 }
 
@@ -12,6 +13,9 @@ var baseTabsFa = [
 ]
 
 var additionalTabsFa = {
+    "november_xxii_": [
+
+    ],
     "october_xxii_": [
 
     ],
@@ -22,6 +26,16 @@ var faBanners = [
 ]
 
 var dates = {
+    "november_xxii_": {
+        "live": {
+            "start_date": "November _th 2022",
+            "end_date": "November _th 2022"
+        },
+        "beta": {
+            "start_date": "October 27th 2022",
+            "end_date": "November 2nd 2022"
+        }
+    },
     "october_xxii_": {
         "live": {
             "start_date": "October 6th 2022",
@@ -66,6 +80,7 @@ var items = [
 ]
 
 var excludeItems = {
+    "november_xxii_": [2,3,7,11,12],
     "october_xxii_": [2,3,7,11,12],
 }
 
@@ -77,6 +92,23 @@ var prioritiesItems = [
 ]
 
 var stageRewards = {
+    "november_xxii_": [
+        [
+            {"img":"", "text":"This will be added soon", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+        ],
+        [
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+        ],
+        [
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+        ]
+    ],
     "october_xxii_": [
         [
             {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"1x Ancient Knowledge (15 KP)", "link":"", "description":``},
@@ -105,5 +137,6 @@ var waypointsIcons = {
 }
 
 var waypointsData = {
+    "november_xxii_": {"1":{"all":{"1":[{"diamond_necklace":2},{"badge_brewery":2}]},"orange":{"2":[{"badge_farmers":1},{"ghost_in_a_bottle":5},{"witch_hat":5}],"3":[{"arcane_residue":7},{"badge_wonderhelper":5},{"druid_staff":1}],"4":[{"badge_carpenters":2},{"elegant_statue":1},{"golden_bracelet":3}],"5":[{"druid_staff":1},{"badge_unit":6},{"money_sack":13}],"6":[{"enchanted_tiara":6},{"diamond_necklace":4},{"elemental_marbles":11}],"7":[{"badge_unit":6},{"druid_staff":1},{"badge_wonderhelper":5}],"8":[{"badge_blacksmith":3},{"elegant_statue":1},{"badge_carpenters":2}],"9":[{"badge_brewery":8},{"ghost_in_a_bottle":5},{"badge_farmers":1}]},"blue":{"2":[{"badge_brewery":1},{"golden_bracelet":4},{"arcane_residue":4}],"3":[{"diamond_necklace":7},{"witch_hat":3},{"badge_carpenters":2}],"4":[{"badge_blacksmith":7},{"badge_farmers":5},{"money_sack":3}],"5":[{"ghost_in_a_bottle":3},{"badge_unit":2},{"druid_staff":8}],"6":[{"elemental_marbles":5},{"badge_brewery":1},{"elegant_statue":7}],"7":[{"badge_carpenters":2},{"badge_wonderhelper":2},{"money_sack":3}],"8":[{"witch_hat":3},{"badge_unit":2},{"badge_blacksmith":7}],"9":[{"enchanted_tiara":2},{"badge_brewery":1},{"badge_wonderhelper":2}]},"green":{"2":[{"badge_farmers":4},{"witch_hat":3},{"diamond_necklace":3}],"3":[{"golden_bracelet":2},{"elegant_statue":4},{"arcane_residue":3}],"4":[{"badge_wonderhelper":7},{"badge_blacksmith":4},{"enchanted_tiara":2}],"5":[{"ghost_in_a_bottle":3},{"badge_brewery":4},{"elemental_marbles":4}],"6":[{"badge_unit":7},{"golden_bracelet":2},{"witch_hat":3}],"7":[{"badge_carpenters":4},{"arcane_residue":3},{"enchanted_tiara":2}],"8":[{"money_sack":9},{"druid_staff":6},{"elemental_marbles":4}],"9":[{"badge_blacksmith":4},{"diamond_necklace":3},{"ghost_in_a_bottle":3}]}},"2":{"all":{"1":[{"badge_blacksmith":2},{"badge_carpenters":2}]},"orange":{"2":[{"arcane_residue":12},{"badge_farmers":8},{"badge_brewery":13}],"3":[{"money_sack":22},{"golden_bracelet":5},{"ghost_in_a_bottle":16}],"4":[{"badge_carpenters":5},{"enchanted_tiara":10},{"druid_staff":7}],"5":[{"elemental_marbles":36},{"badge_unit":37},{"money_sack":22}],"6":[{"arcane_residue":12},{"golden_bracelet":5},{"diamond_necklace":12}],"7":[{"badge_blacksmith":10},{"badge_wonderhelper":31},{"enchanted_tiara":10}],"8":[{"elegant_statue":5},{"badge_carpenters":5},{"badge_brewery":13}],"9":[{"ghost_in_a_bottle":16},{"witch_hat":16},{"druid_staff":7}]},"blue":{"2":[{"badge_farmers":8},{"golden_bracelet":12},{"elegant_statue":12}],"3":[{"badge_blacksmith":23},{"badge_carpenters":12},{"witch_hat":9}],"4":[{"badge_farmers":8},{"badge_wonderhelper":16},{"druid_staff":26}],"5":[{"badge_brewery":7},{"money_sack":9},{"arcane_residue":6}],"6":[{"diamond_necklace":12},{"elemental_marbles":9},{"badge_unit":14}],"7":[{"elegant_statue":12},{"money_sack":9},{"enchanted_tiara":6}],"8":[{"badge_blacksmith":23},{"ghost_in_a_bottle":9},{"elemental_marbles":9}],"9":[{"arcane_residue":6},{"diamond_necklace":12},{"witch_hat":9}]},"green":{"2":[{"arcane_residue":17},{"badge_farmers":6},{"diamond_necklace":9}],"3":[{"elegant_statue":6},{"badge_carpenters":12},{"witch_hat":9}],"4":[{"badge_blacksmith":12},{"badge_farmers":6},{"enchanted_tiara":6}],"5":[{"badge_brewery":14},{"money_sack":29},{"elemental_marbles":13}],"6":[{"badge_blacksmith":12},{"golden_bracelet":6},{"badge_unit":24}],"7":[{"elegant_statue":6},{"ghost_in_a_bottle":17},{"druid_staff":20}],"8":[{"diamond_necklace":9},{"witch_hat":9},{"elemental_marbles":13}],"9":[{"golden_bracelet":6},{"enchanted_tiara":6},{"badge_wonderhelper":23}]}},"3":{"all":{"1":[{"arcane_residue":2},{"golden_bracelet":2}]},"orange":{"2":[{"badge_carpenters":28},{"diamond_necklace":31},{"witch_hat":21}],"3":[{"badge_brewery":67},{"badge_wonderhelper":42},{"druid_staff":18}],"4":[{"elemental_marbles":48},{"badge_unit":50},{"money_sack":59}],"5":[{"badge_blacksmith":14},{"ghost_in_a_bottle":84},{"druid_staff":18}],"6":[{"badge_farmers":10},{"badge_unit":50},{"badge_wonderhelper":42}],"7":[{"elegant_statue":14},{"enchanted_tiara":56},{"money_sack":59}],"8":[{"witch_hat":21},{"elemental_marbles":48},{"badge_farmers":10}],"9":[{"golden_bracelet":28},{"badge_blacksmith":14},{"arcane_residue":63}]},"blue":{"2":[{"badge_farmers":21},{"golden_bracelet":31},{"badge_wonderhelper":41}],"3":[{"ghost_in_a_bottle":12},{"enchanted_tiara":8},{"badge_carpenters":31}],"4":[{"money_sack":23},{"diamond_necklace":31},{"elegant_statue":62}],"5":[{"elemental_marbles":24},{"druid_staff":70},{"ghost_in_a_bottle":12}],"6":[{"witch_hat":47},{"badge_unit":38},{"badge_blacksmith":62}],"7":[{"money_sack":23},{"badge_farmers":21},{"arcane_residue":16}],"8":[{"elemental_marbles":24},{"enchanted_tiara":8},{"diamond_necklace":31}],"9":[{"badge_brewery":19},{"badge_blacksmith":62},{"arcane_residue":16}]},"green":{"2":[{"diamond_necklace":23},{"ghost_in_a_bottle":47},{"witch_hat":47}],"3":[{"badge_farmers":16},{"enchanted_tiara":16},{"badge_carpenters":16}],"4":[{"money_sack":78},{"badge_wonderhelper":62},{"badge_blacksmith":31}],"5":[{"badge_farmers":16},{"druid_staff":26},{"elemental_marbles":36}],"6":[{"badge_unit":33},{"elegant_statue":31},{"elemental_marbles":36}],"7":[{"badge_unit":33},{"diamond_necklace":23},{"arcane_residue":47}],"8":[{"druid_staff":26},{"enchanted_tiara":16},{"badge_brewery":37}],"9":[{"golden_bracelet":31},{"badge_blacksmith":31},{"badge_carpenters":16}]}}},
     "october_xxii_": {"1":{"all":{"1":[{"diamond_necklace":2},{"badge_brewery":2}]},"orange":{"2":[{"badge_farmers":1},{"ghost_in_a_bottle":5},{"witch_hat":5}],"3":[{"arcane_residue":7},{"badge_wonderhelper":5},{"druid_staff":1}],"4":[{"badge_carpenters":2},{"elegant_statue":1},{"golden_bracelet":3}],"5":[{"druid_staff":1},{"badge_unit":6},{"money_sack":13}],"6":[{"enchanted_tiara":6},{"diamond_necklace":4},{"elemental_marbles":11}],"7":[{"badge_unit":6},{"druid_staff":1},{"badge_wonderhelper":5}],"8":[{"badge_blacksmith":3},{"elegant_statue":1},{"badge_carpenters":2}],"9":[{"badge_brewery":8},{"ghost_in_a_bottle":5},{"badge_farmers":1}]},"blue":{"2":[{"badge_brewery":1},{"golden_bracelet":4},{"arcane_residue":4}],"3":[{"diamond_necklace":7},{"witch_hat":3},{"badge_carpenters":2}],"4":[{"badge_blacksmith":7},{"badge_farmers":5},{"money_sack":3}],"5":[{"ghost_in_a_bottle":3},{"badge_unit":2},{"druid_staff":8}],"6":[{"elemental_marbles":5},{"badge_brewery":1},{"elegant_statue":7}],"7":[{"badge_carpenters":2},{"badge_wonderhelper":2},{"money_sack":3}],"8":[{"witch_hat":3},{"badge_unit":2},{"badge_blacksmith":7}],"9":[{"enchanted_tiara":2},{"badge_brewery":1},{"badge_wonderhelper":2}]},"green":{"2":[{"badge_farmers":4},{"witch_hat":3},{"diamond_necklace":3}],"3":[{"golden_bracelet":2},{"elegant_statue":4},{"arcane_residue":3}],"4":[{"badge_wonderhelper":7},{"badge_blacksmith":4},{"enchanted_tiara":2}],"5":[{"ghost_in_a_bottle":3},{"badge_brewery":4},{"elemental_marbles":4}],"6":[{"badge_unit":7},{"golden_bracelet":2},{"witch_hat":3}],"7":[{"badge_carpenters":4},{"arcane_residue":3},{"enchanted_tiara":2}],"8":[{"money_sack":9},{"druid_staff":6},{"elemental_marbles":4}],"9":[{"badge_blacksmith":4},{"diamond_necklace":3},{"ghost_in_a_bottle":3}]}},"2":{"all":{"1":[{"badge_blacksmith":2},{"badge_carpenters":2}]},"orange":{"2":[{"arcane_residue":12},{"badge_farmers":8},{"badge_brewery":13}],"3":[{"money_sack":22},{"golden_bracelet":5},{"ghost_in_a_bottle":16}],"4":[{"badge_carpenters":5},{"enchanted_tiara":10},{"druid_staff":7}],"5":[{"elemental_marbles":36},{"badge_unit":37},{"money_sack":22}],"6":[{"arcane_residue":12},{"golden_bracelet":5},{"diamond_necklace":12}],"7":[{"badge_blacksmith":10},{"badge_wonderhelper":31},{"enchanted_tiara":10}],"8":[{"elegant_statue":5},{"badge_carpenters":5},{"badge_brewery":13}],"9":[{"ghost_in_a_bottle":16},{"witch_hat":16},{"druid_staff":7}]},"blue":{"2":[{"badge_farmers":8},{"golden_bracelet":12},{"elegant_statue":12}],"3":[{"badge_blacksmith":23},{"badge_carpenters":12},{"witch_hat":9}],"4":[{"badge_farmers":8},{"badge_wonderhelper":16},{"druid_staff":26}],"5":[{"badge_brewery":7},{"money_sack":9},{"arcane_residue":6}],"6":[{"diamond_necklace":12},{"elemental_marbles":9},{"badge_unit":14}],"7":[{"elegant_statue":12},{"money_sack":9},{"enchanted_tiara":6}],"8":[{"badge_blacksmith":23},{"ghost_in_a_bottle":9},{"elemental_marbles":9}],"9":[{"arcane_residue":6},{"diamond_necklace":12},{"witch_hat":9}]},"green":{"2":[{"arcane_residue":17},{"badge_farmers":6},{"diamond_necklace":9}],"3":[{"elegant_statue":6},{"badge_carpenters":12},{"witch_hat":9}],"4":[{"badge_blacksmith":12},{"badge_farmers":6},{"enchanted_tiara":6}],"5":[{"badge_brewery":14},{"money_sack":29},{"elemental_marbles":13}],"6":[{"badge_blacksmith":12},{"golden_bracelet":6},{"badge_unit":24}],"7":[{"elegant_statue":6},{"ghost_in_a_bottle":17},{"druid_staff":20}],"8":[{"diamond_necklace":9},{"witch_hat":9},{"elemental_marbles":13}],"9":[{"golden_bracelet":6},{"enchanted_tiara":6},{"badge_wonderhelper":23}]}},"3":{"all":{"1":[{"arcane_residue":2},{"golden_bracelet":2}]},"orange":{"2":[{"badge_carpenters":28},{"diamond_necklace":31},{"witch_hat":21}],"3":[{"badge_brewery":67},{"badge_wonderhelper":42},{"druid_staff":18}],"4":[{"elemental_marbles":48},{"badge_unit":50},{"money_sack":59}],"5":[{"badge_blacksmith":14},{"ghost_in_a_bottle":84},{"druid_staff":18}],"6":[{"badge_farmers":10},{"badge_unit":50},{"badge_wonderhelper":42}],"7":[{"elegant_statue":14},{"enchanted_tiara":56},{"money_sack":59}],"8":[{"witch_hat":21},{"elemental_marbles":48},{"badge_farmers":10}],"9":[{"golden_bracelet":28},{"badge_blacksmith":14},{"arcane_residue":63}]},"blue":{"2":[{"badge_farmers":21},{"golden_bracelet":31},{"badge_wonderhelper":41}],"3":[{"ghost_in_a_bottle":12},{"enchanted_tiara":8},{"badge_carpenters":31}],"4":[{"money_sack":23},{"diamond_necklace":31},{"elegant_statue":62}],"5":[{"elemental_marbles":24},{"druid_staff":70},{"ghost_in_a_bottle":12}],"6":[{"witch_hat":47},{"badge_unit":38},{"badge_blacksmith":62}],"7":[{"money_sack":23},{"badge_farmers":21},{"arcane_residue":16}],"8":[{"elemental_marbles":24},{"enchanted_tiara":8},{"diamond_necklace":31}],"9":[{"badge_brewery":19},{"badge_blacksmith":62},{"arcane_residue":16}]},"green":{"2":[{"diamond_necklace":23},{"ghost_in_a_bottle":47},{"witch_hat":47}],"3":[{"badge_farmers":16},{"enchanted_tiara":16},{"badge_carpenters":16}],"4":[{"money_sack":78},{"badge_wonderhelper":62},{"badge_blacksmith":31}],"5":[{"badge_farmers":16},{"druid_staff":26},{"elemental_marbles":36}],"6":[{"badge_unit":33},{"elegant_statue":31},{"elemental_marbles":36}],"7":[{"badge_unit":33},{"diamond_necklace":23},{"arcane_residue":47}],"8":[{"druid_staff":26},{"enchanted_tiara":16},{"badge_brewery":37}],"9":[{"golden_bracelet":31},{"badge_blacksmith":31},{"badge_carpenters":16}]}}},
 }
