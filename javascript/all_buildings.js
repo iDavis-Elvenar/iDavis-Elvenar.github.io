@@ -269,7 +269,11 @@ function readBuildingsJSON() {
                                 } else {
                                     if (filteredData[i]["expiring"].hasOwnProperty("format") &&
                                     filteredData[i]["expiring"]["format"].toLowerCase().includes("percentage")) {
-                                        tdEffect.innerHTML = `+${filteredData[i]["expiring"]["values"][ch]*100}%`;
+                                        if (filteredData[i]["id"].includes("A_Evt_December_XXII_Cryo")) {  //pre zimne dekoracie chcem mat iba 10nasobok a bez znamienka +
+                                            tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]*10}%`;
+                                        } else {
+                                            tdEffect.innerHTML = `+${filteredData[i]["expiring"]["values"][ch]*100}%`;
+                                        }
                                     } else {
                                         tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]}`;
                                     }

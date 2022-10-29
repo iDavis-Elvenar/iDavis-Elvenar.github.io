@@ -5,7 +5,11 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "mana", "seeds", "sentientmarble", "sentientsteel", "sentientplanks", "sentientcrystal", "sentientscrolls", "sentientsilk", "sentientelixir", "sentientmagic_dust", "sentientgems", "boosted_sentient_plus_0_quality_1", "boosted_sentient_plus_1_quality_1", "boosted_sentient_plus_2_quality_1",
     "boosted_sentient_plus_0_quality_2", "boosted_sentient_plus_1_quality_2", "boosted_sentient_plus_2_quality_2",
     "boosted_sentient_plus_0_quality_3", "boosted_sentient_plus_1_quality_3", "boosted_sentient_plus_2_quality_3",
-    "unurium", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
+    "unurium", "ascendedmarble", "ascendedsteel", "ascendedplanks", "ascendedcrystal", "ascendedscrolls", "ascendedsilk",
+    "ascendedelixir", "ascendedmagic_dust", "ascendedgems", "boosted_ascended_plus_0_quality_1", "boosted_ascended_plus_1_quality_1",
+    "boosted_ascended_plus_2_quality_1", "boosted_ascended_plus_0_quality_2", "boosted_ascended_plus_1_quality_2",
+    "boosted_ascended_plus_2_quality_2", "boosted_ascended_plus_0_quality_3", "boosted_ascended_plus_1_quality_3",
+    "boosted_ascended_plus_2_quality_3", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
     "mc_lm", "mc_lr", "mc_ma", "mc_hm", "mc_hr", "knowledge_points", "broken_shards",
     "relic_marble", "relic_steel", "relic_planks", "relic_crystal", "relic_scrolls", "relic_silk", "relic_elixir",
     "relic_magic_dust", "relic_gems", "boosted_relic_plus_0_quality_2", "boosted_relic_plus_1_quality_2",
@@ -158,6 +162,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": "1x Glory of the Nimble Artifact",
     "A_Evt_Evo_Autumn_XXII_WittyCoon": "1x Witty Raccoon Artifact",
     "A_Evt_Evo_October_XXII_Witch_Doctor": "1x Witch Doctor Artifact",
+    "A_Evt_Evo_December_XXII_Chromafrost_Glacier": "1x Chromafrost Glacier Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -188,6 +193,9 @@ var iconsImages = {
     "time_boosted":"https://i.ibb.co/kQhsyfn/time-boosted.png",
     "training_queue_slots":"https://i.ibb.co/V30rvS3/training-queue-slots.png",
     "barrack_small_boosted":"https://i.ibb.co/zVZk0Hy/barrack-small-boosted.png",
+    "mana_decay_reduction":"https://i.ibb.co/mqPfvMr/decay-mana.png",
+    "seeds_decay_reduction":"https://i.ibb.co/6F4H5Wf/decay-seeds.png",
+    "unurium_decay_reduction":"https://i.ibb.co/6WLCvRV/decay-unurium.png",
 }
 
 var iconsTitles = {

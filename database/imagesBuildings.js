@@ -1,4 +1,12 @@
 var images_buildings = {
+    "A_Evt_Season_Dreams_XXII_Burning_Pool":"https://i.ibb.co/PhGg9Bf/burning-pool.png",
+    "A_Evt_Generic_Celestial_Titan":"https://i.ibb.co/SrYxR1d/celestial-titan.png",
+    "A_Evt_December_XXII_Vibrant_Village":"https://i.ibb.co/yPGf7jr/vibrant-village.png",
+    "A_Evt_December_XXII_Brisk_Market":"https://i.ibb.co/kBSnXqV/brisk-market.png",
+    "A_Evt_December_XXII_Fragile_Bubble":"https://i.ibb.co/qs9TVBJ/fragile-bubble.png",
+    "A_Evt_December_XXII_Cryomana":"https://i.ibb.co/R03TXkk/cryomana.png",
+    "A_Evt_December_XXII_Cryoseeds":"https://i.ibb.co/42355Ym/cryoseeds.png",
+    "A_Evt_December_XXII_Cryonurium":"https://i.ibb.co/445FskJ/cryonurium.png",
     "A_Evt_October_XXII_Zombie_Impact_Massage":"https://i.ibb.co/094wVTx/zombie-impact-message.png",
     "A_Evt_October_XXII_Creepy_Clinic":"https://i.ibb.co/CBPgRkZ/creepy-clinic.png",
     "A_Evt_October_XXII_Skulls_of_Splendor":"https://i.ibb.co/Cv1B3Rg/skulls-of-splendor.png",

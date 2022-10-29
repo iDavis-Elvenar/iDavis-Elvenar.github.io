@@ -114,15 +114,15 @@ var notifications = {
     },
     "11":{  // NEW FEATURE ON THE WEBSITE #2
         "id":11,
-        "text":`<h4 class="alert-heading">Fellowship Adventures are now on the website!<img src="https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png" style="width: 30px; margin-left:10px; margin-bottom: 5px;"></h4>
+        "text":`<h4 class="alert-heading">New round of Fellowship Adventures arrived in Beta!<img src="https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png" style="width: 30px; margin-left:10px; margin-bottom: 5px;"></h4>
         <hr>
         <p><center><img src="https://i.ibb.co/fMX3t5B/fellowship-adventures-banner.png" style="width: 40%;">
         <br><br>The Fellowship Adventures are now fully supported on the website! You can find their respective page inside the "More" tab within the navigation bar or simply head there directly using <a href="https://idavis-elvenar.com/fellowship-adventures.html" class='alert-link'>this link</a>!
-        <br>You will find information about all future adventures right there!<br><br><img src="https://i.ibb.co/SQS2XQg/website-more.png" style="width: 120px;"></center></p>`,
-        "repeatAfter":86400,
+        <br>All details about the upcoming adventure are now fully covered!<br><br><img src="https://i.ibb.co/SQS2XQg/website-more.png" style="width: 120px;"></center></p>`,
+        "repeatAfter":172800,
         "style":"warning",
         "duration":45,
-        "active":false,
+        "active":true,
         "priority":40
     },
 }
