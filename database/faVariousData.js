@@ -94,19 +94,19 @@ var prioritiesItems = [
 var stageRewards = {
     "november_xxii_": [
         [
-            {"img":"", "text":"This will be added soon", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"1x Ancient Knowledge (15 KP)", "link":"", "description":``},
+            {"img":"https://i.ibb.co/9HYLV46/carting-library.png", "text":"Carting Library", "link":"https://idavis-elvenar.com/buildings.html#A_Evt_Expiring_RefundTech", "description":``},
+            {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"10x Time Booster (10 min)", "link":"", "description":``},
         ],
         [
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"2x Ancient Knowledge (20 KP)", "link":"", "description":``},
+            {"img":"https://i.ibb.co/kMLnsDm/rsk-evo.png", "text":"Tome of Spooky Artifacts", "link":"", "description":`Contains one reward of your choice:<br> <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_October_XXII_Witch_Doctor" class="text-link font-weight-bold" target="_blank">Witch Doctor</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_October_XXI_Witch_Summoning_Circle" class="text-link font-weight-bold" target="_blank">Witch Summoning Circle</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_October_XX_Witches_Hut" class="text-link font-weight-bold" target="_blank">Witch's Hut</a> Artifact, 4x Royal Restoration`},
+            {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"15x Time Booster (30 min)", "link":"", "description":``},
         ],
         [
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"https://i.ibb.co/VpD8CvF/generic-ferris-wheel.png", "text":"Ferris Wheel Galore", "link":"https://idavis-elvenar.com/buildings.html#A_Evt_Generic_Ferris_Wheel", "description":``},
+            {"img":"https://i.ibb.co/kMLnsDm/rsk-evo.png", "text":"Tome of Spooky Artifacts", "link":"", "description":`Contains one reward of your choice:<br> <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_October_XXII_Witch_Doctor" class="text-link font-weight-bold" target="_blank">Witch Doctor</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_October_XXI_Witch_Summoning_Circle" class="text-link font-weight-bold" target="_blank">Witch Summoning Circle</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_October_XX_Witches_Hut" class="text-link font-weight-bold" target="_blank">Witch's Hut</a> Artifact, 4x Royal Restoration`},
+            {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"25x Time Booster (45 min)", "link":"", "description":``},
         ]
     ],
     "october_xxii_": [
