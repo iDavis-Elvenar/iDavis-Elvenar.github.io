@@ -542,3 +542,9 @@ function javascriptDatumToStringDateOnly(value) {
     var yyyy = value.getUTCFullYear();
     return mm+"/"+dd+"/"+yyyy;
 }
+
+function prepSetAlertElements() {
+    html_alert = document.getElementById('alert');
+    html_close = document.getElementById('close');
+    html_text = document.getElementById('text');
+}

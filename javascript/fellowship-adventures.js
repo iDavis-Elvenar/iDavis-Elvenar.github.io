@@ -15,6 +15,8 @@ function setView(newView) {
 }
 
 function switchView(type) {
+    prepSetAlertElements();
+    create_exception("Loading...", 10000, 'primary');
     if (type === "info" && view !== "info") {
         displayBase();
         view = "info";
@@ -40,6 +42,7 @@ function switchView(type) {
             }
         }
     }
+    create_exception("Content Generated!", 3, 'success');
 }
 
 function setLeftBar() {

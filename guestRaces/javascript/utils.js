@@ -11,6 +11,8 @@ function loadPage() {
 }
 
 function switchView(type) {
+    prepSetAlertElements();
+    create_exception("Loading...", 10000, 'primary');
     if (type === "base" && view !== "base") {
         view = "base";
         window.location.href = location.href.split('#')[0];
@@ -30,7 +32,7 @@ function switchView(type) {
             }
         }
     }
-    console.log(view)
+    create_exception("Content Generated!", 3, 'success');
 }
 
 function setLeftBar() {
