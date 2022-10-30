@@ -182,7 +182,7 @@ function generateTournaments(idToAppend) {
         if (tournamentsStructure.filter(tour => (tour.isRunning || tour.isComing) && tour.id === allTournaments[e][1]).length === 1) {
             option.selected = tournamentsStructure.filter(tour => (tour.isRunning || tour.isComing) && tour.id === allTournaments[e][1]).length > 0;
         } else {
-            option.selected = tournamentsStructure[0].id === allTournaments[e][1];
+            option.selected = tournamentsStructure[0].id === allTournaments[e][1] && tournamentsStructure.filter(tour => (tour.isRunning || tour.isComing)).length === 0;
         }
         document.getElementById(idToAppend).appendChild(option);
     }
