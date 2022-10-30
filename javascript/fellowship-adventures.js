@@ -374,6 +374,10 @@ function displayWaypoints() {
 
         createWaypointsTable(parent, map);
     }
+    let cent2 = document.createElement('center');
+    createAllMapsRemainingsDiv(cent2);
+    parent.appendChild(cent2);
+    
     checkIfFinishedAll();
     calculateRemainings([1,2,3], waypointsData[getSelectedFa()]);
 }
@@ -396,7 +400,8 @@ function checkIfFinishedAll() {
 }
 
 function calculateRemainings(maps, wpData) {
-    for (const map of maps) {
+    var remainingsAllMaps = [];
+    for (const map of [1,2,3]) {
         var remainings = [];
         let paths = ["all"];
         if (document.getElementById('calculate_all_'+map).checked) {
@@ -424,9 +429,16 @@ function calculateRemainings(maps, wpData) {
             }
         }
         remainings = remainings.sort((a, b) => prioritiesItems.indexOf(a) - prioritiesItems.indexOf(b));
-        let remainingsForMap = getOccurrencesDict(remainings);
-        updateRemainings(map, remainingsForMap);
+        remainings.forEach(function(item) {remainingsAllMaps.push(item)});
+        if (maps.includes(map)) {
+            let remainingsForMap = getOccurrencesDict(remainings);
+            updateRemainings(map, remainingsForMap);
+        }
     }
+    remainingsAllMaps.sort((a, b) => prioritiesItems.indexOf(a) - prioritiesItems.indexOf(b));
+    //console.log(remainingsAllMaps)
+    let remainingsForAllMaps = getOccurrencesDict(remainingsAllMaps);
+    updateRemainings("all", remainingsForAllMaps);
 }
 
 function updateRemainings(map, remainings) {
@@ -756,6 +768,33 @@ function createRemainingsDiv(parent, map) {
     divRow3.innerHTML = ``;
     divRow3.style.textAlign = "left";
     divRow3.id = "remaining_items_"+map;
+    divRemainings.appendChild(divRow3);
+
+    parent.appendChild(divRemainings);
+}
+
+function createAllMapsRemainingsDiv(parent) {
+    let divRemainings = document.createElement('div');
+    divRemainings.className = "card-spoiler border-spoiler mb-3";
+    divRemainings.style.marginTop = "10px";
+    divRemainings.style.paddingBottom = "10px";
+    divRemainings.style.paddingTop = "7px";
+    divRemainings.style.paddingLeft = "20px";
+    divRemainings.style.paddingRight = "20px";
+    divRemainings.style.width = "70%";
+
+    let divRow1 = document.createElement('div');
+    divRow1.className = "row";
+    divRow1.innerHTML = `<b>Remaining items in all your selected paths:</b>`;
+    divRow1.style.marginBottom = "5px";
+    divRow1.style.textAlign = "center";
+    divRemainings.appendChild(divRow1);
+
+    let divRow3 = document.createElement('div');
+    divRow3.className = "";
+    divRow3.innerHTML = ``;
+    divRow3.style.textAlign = "left";
+    divRow3.id = "remaining_items_all";
     divRemainings.appendChild(divRow3);
 
     parent.appendChild(divRemainings);
