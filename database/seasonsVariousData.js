@@ -5,9 +5,9 @@ var allSeasons = {
 }
 
 var baseTabsSeasons = [
-    {"id":"base_left_panel_div", "name":"Season", "img":"https://i.ibb.co/prd3mhW/info-fa-icon.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#info", "onclick":"info"},
-    {"id":"base_left_panel_div", "name":"Quests", "img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},
-    {"id":"base_left_panel_div", "name":"Pass", "img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#pass", "onclick":"pass"},
+    {"id":"base_left_panel_div", "name":"Info", "img":"various", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#info", "onclick":"info"},
+    {"id":"base_left_panel_div", "name":"Quests", "img":"https://i.ibb.co/pJsbHp7/season-dailykeys.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},
+    {"id":"base_left_panel_div", "name":"Season Pass", "img":"https://i.ibb.co/87MNrBB/season-pass.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#pass", "onclick":"pass"},
 ]
 
 var additionalTabsSeasons = {
@@ -16,9 +16,13 @@ var additionalTabsSeasons = {
     ],
 }
 
-var seasonsBanners = [
-    {"all" : "https://i.ibb.co/fMX3t5B/fellowship-adventures-banner.png"},
-]
+var seasonsBanners = {
+    "month_xxii_" : "https://i.ibb.co/235tTQ6/season-dreams-banner-ph.png",
+}
+
+var seasonInfoIcons = {
+    "month_xxii_" : "https://i.ibb.co/L8gkDtv/season-dreams-info.png",
+}
 
 var dates = {
     "month_xxii_": {

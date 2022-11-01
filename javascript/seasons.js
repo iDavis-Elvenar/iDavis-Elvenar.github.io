@@ -21,6 +21,9 @@ function switchView(type) {
     } else if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
+    } else if (type === "pass" && view !== "pass") {
+        displayPass();
+        view = "pass";
     } else if (type !== "info" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
@@ -71,7 +74,11 @@ function setLeftBar() {
         }
         a.innerHTML = langUI(baseTabsSeasons[b]["name"]);
         let img = document.createElement("img");
-        img.src = baseTabsSeasons[b]["img"];
+        if (baseTabsSeasons[b]["img"] === "various") {
+            img.src = seasonInfoIcons[getSelectedSeason()];
+        } else {
+            img.src = baseTabsSeasons[b]["img"];
+        }
         img.style = "width: "+baseTabsSeasons[b]["img_width"]+"px; "+baseTabsSeasons[b]["img_style"];
         a.prepend(img);
         span.appendChild(a);
@@ -109,7 +116,7 @@ function getSelectedSeason() {
     return selectSeason.options[selectSeason.selectedIndex].value;
 }
 
-function getSelectedFaName() {
+function getSelectedSeasonName() {
     let seasonSelect = document.getElementById('input_event');
     return seasonSelect.options[seasonSelect.selectedIndex].text;
 }
@@ -136,12 +143,42 @@ function generateSeasons(idToAppend) {
     }
 }
 
+function createSeasonHeader() {
+    let selectedSeason = getSelectedSeason();
+    let selectedSeasonName = getSelectedSeasonName();
+    var h5 = document.createElement('h5');
+    h5.id = 'header';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: ${langUI(selectedSeasonName)} ::..<br>`;
+    document.getElementById('column_with_tables').appendChild(h5);
+    var seasonImg = document.createElement("img");
+    seasonImg.id = `event_banner`;
+    seasonImg.src = seasonsBanners[selectedSeason];
+    seasonImg.alt = seasonsBanners[selectedSeason];
+    seasonImg.className = `center `;
+    seasonImg.style.marginBottom = `15px`;
+    seasonImg.style.width = `50%`;
+    document.getElementById('column_with_tables').appendChild(seasonImg);
+}
+
 function displayBase() {
     let parent = document.getElementById("column_with_tables");
-    parent.innerHTML = 'info';
+    parent.innerHTML = ""
+    createSeasonHeader();
+    parent.innerHTML += "popis, terminy, tutorial (pripadne textovy + obrazky)";
 }
 
 function displayQuests() {
     let parent = document.getElementById("column_with_tables");
-    parent.innerHTML = 'quests';
+    parent.innerHTML = ""
+    createSeasonHeader();
+    parent.innerHTML += "ulohy (denne + tyzdenne), zrejme uvadzat cele sety";
+}
+
+function displayPass() {
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = ""
+    createSeasonHeader();
+    parent.innerHTML += "rewards + season pass";
 }
