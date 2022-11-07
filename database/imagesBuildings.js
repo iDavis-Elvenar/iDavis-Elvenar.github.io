@@ -7,6 +7,7 @@ var images_buildings = {
     "A_Evt_December_XXII_Cryomana":"https://i.ibb.co/R03TXkk/cryomana.png",
     "A_Evt_December_XXII_Cryoseeds":"https://i.ibb.co/42355Ym/cryoseeds.png",
     "A_Evt_December_XXII_Cryonurium":"https://i.ibb.co/445FskJ/cryonurium.png",
+    "A_Evt_Evo_December_XXII_Chromafrost_Glacier":"https://i.ibb.co/7khcbkp/chromafrost-glacier.png",
     "A_Evt_October_XXII_Zombie_Impact_Massage":"https://i.ibb.co/094wVTx/zombie-impact-message.png",
     "A_Evt_October_XXII_Creepy_Clinic":"https://i.ibb.co/CBPgRkZ/creepy-clinic.png",
     "A_Evt_October_XXII_Skulls_of_Splendor":"https://i.ibb.co/Cv1B3Rg/skulls-of-splendor.png",
