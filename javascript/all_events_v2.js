@@ -42,7 +42,9 @@ function setLeftBar() {
         numberOfAdditionalItems = additionalTabsEvents[selectedEvent].length;
     }
 
-    let numberOfBaseItems = baseTabsEvents.length;
+    let featuredBaseTabs = handleFeatureFlag("info_tab");
+    
+    let numberOfBaseItems = featuredBaseTabs.length;
 
     leftBar.style.height = ""+((numberOfBaseItems*50)+(numberOfAdditionalItems*50))+"px";
 
@@ -55,16 +57,21 @@ function setLeftBar() {
         span.className = "allign-middle";
         let a = document.createElement("a");
         a.className = "text-link font-weight-bold";
-        a.id = baseTabsEvents[b]["id"].substring(0, baseTabsEvents[b]["id"].lastIndexOf("_"));
-        a.href = baseTabsEvents[b]["href"];
+        a.id = featuredBaseTabs[b]["id"].substring(0, featuredBaseTabs[b]["id"].lastIndexOf("_"));
+        a.href = featuredBaseTabs[b]["href"];
         //a.href += "-"+getSelectedEvent();
         a.onclick = function() {
-            switchView(baseTabsEvents[b]["onclick"]);
+            switchView(featuredBaseTabs[b]["onclick"]);
         }
-        a.innerHTML = langUI(baseTabsEvents[b]["name"]);
+        a.innerHTML = langUI(featuredBaseTabs[b]["name"]);
         let img = document.createElement("img");
-        img.src = baseTabsEvents[b]["img"];
-        img.style = "width: "+baseTabsEvents[b]["img_width"]+"px; "+baseTabsEvents[b]["img_style"];
+        if (featuredBaseTabs[b]["img"] === "various") {
+            img.src = eventsInfoIcons[getSelectedEvent()]["img"];
+            img.style = "width: "+eventsInfoIcons[getSelectedEvent()]["img_width"]+"px; "+eventsInfoIcons[getSelectedEvent()]["img_style"];
+        } else {
+            img.src = featuredBaseTabs[b]["img"];
+            img.style = "width: "+featuredBaseTabs[b]["img_width"]+"px; "+featuredBaseTabs[b]["img_style"];
+        }
         a.prepend(img);
         span.appendChild(a);
         div.appendChild(span);
@@ -74,7 +81,7 @@ function setLeftBar() {
     for (let i = 0; i < numberOfAdditionalItems; i++) {
         let newDiv = document.createElement("div");
         newDiv.className = "justify-content-center box d-flex flex-column";
-        newDiv.style.height = ""+(100/(numberOfAdditionalItems+2))+"%";
+        newDiv.style.height = ""+(100/(numberOfAdditionalItems+numberOfBaseItems))+"%";
         newDiv.id = additionalTabsEvents[selectedEvent][i]["id"];
         let newSpan = document.createElement("span");
         newSpan.className = "allign-middle";
@@ -502,7 +509,6 @@ function createEventHeader(selectedEvent, selectedEventName) {
     var eventImg = document.createElement("img");
     eventImg.id = `event_banner`;
     eventImg.src = `${eventBanners[selectedEvent]}`;
-    eventImg.alt = `${eventNames[selectedEvent]}`;
     eventImg.className = `center `;
     eventImg.style.marginBottom = `15px`;
     eventImg.style.width = `50%`;
@@ -662,7 +668,10 @@ function getHoursTillNextDay() {
 }
 
 function switchView(type) {
-    if (type === "calendar" && view !== "calendar") {
+    if (type === "info" && view !== "info") {
+        displayInfo();
+        view = "info";
+    } else if (type === "calendar" && view !== "calendar") {
         displayDailyPrizes();
         view = "calendar";
     } else if (type === "quests" && view !== "quests") {
@@ -693,6 +702,57 @@ function switchView(type) {
 
 function setView(value) {
     view = value;
+}
+
+function displayInfo() {
+    html_alert = document.getElementById('alert');
+    html_close = document.getElementById('close');
+    html_text = document.getElementById('text');
+    async function createExc() {
+        create_exception("Loading...", 10000, 'primary');
+    }
+    createExc();
+
+    let eventSelect = document.getElementById('input_event');
+    let selectedEvent = eventSelect.options[eventSelect.selectedIndex].value;
+    let selectedEventName = eventSelect.options[eventSelect.selectedIndex].text;
+    document.getElementById("column_with_tables").innerHTML = "";
+    createEventHeader(selectedEvent, selectedEventName);
+
+    var h5 = document.createElement('h5');
+    h5.id = 'quests_header';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.style.marginTop = "20px";
+    h5.innerHTML = `..:: ${langUI("Announcement")} ::..<br>`;
+    document.getElementById('column_with_tables').appendChild(h5);
+
+    let announcementDiv = document.createElement('div');
+    announcementDiv.style.paddingLeft = "50px";
+    announcementDiv.style.paddingRight = "50px";
+    announcementDiv.style.marginTop = "20px";
+    announcementDiv.style.marginBottom = "30px";
+    for (let i = 0; i < eventsAnnouncements[selectedEvent].split("<br>").length; i++) {
+        let p = document.createElement('p');
+        p.innerHTML = `${eventsAnnouncements[selectedEvent].split("<br>")[i].italics()}`;
+        p.style.fontSize = "small";
+        if (i != eventsAnnouncements[selectedEvent].split("<br>").length-1) {
+            p.style.marginBottom = "-5px";
+        }
+        announcementDiv.appendChild(p);
+    }
+    document.getElementById('column_with_tables').appendChild(announcementDiv);
+
+    let center = document.createElement('center');
+
+    createDatesTable(center,     eventsDates[getSelectedEvent()]["live"]["start_date"],
+                                                                        eventsDates[getSelectedEvent()]["live"]["end_date"],
+                                                                        eventsDates[getSelectedEvent()]["beta"]["start_date"],
+                                                                        eventsDates[getSelectedEvent()]["beta"]["end_date"]);
+    
+    document.getElementById("column_with_tables").appendChild(center);
+
+    create_exception("Info Generated!", 3, 'success');
 }
 
 function displayQuests() {

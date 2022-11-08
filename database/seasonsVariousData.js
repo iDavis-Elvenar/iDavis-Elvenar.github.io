@@ -21,7 +21,7 @@ var seasonsBanners = {
 }
 
 var seasonInfoIcons = {
-    "month_xxii_" : "https://i.ibb.co/L8gkDtv/season-dreams-info.png",
+    "month_xxii_" : {"img":"https://i.ibb.co/L8gkDtv/season-dreams-info.png", "img_width": "28", "img_style": "margin-left: 0px; margin-right: 10px; position: relative;"},
 }
 
 var dates = {

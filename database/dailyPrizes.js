@@ -1,7 +1,7 @@
 var dailyPrizes = {
     
     "december_xxii_": [
-        "A_Evt_Winter_2Tree", //from test
+        "A_Evt_Winter_2Tree",
     ],
 
     "october_xxii_": [

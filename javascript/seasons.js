@@ -75,11 +75,12 @@ function setLeftBar() {
         a.innerHTML = langUI(baseTabsSeasons[b]["name"]);
         let img = document.createElement("img");
         if (baseTabsSeasons[b]["img"] === "various") {
-            img.src = seasonInfoIcons[getSelectedSeason()];
+            img.src = seasonInfoIcons[getSelectedSeason()]["img"];
+            img.style = "width: "+seasonInfoIcons[getSelectedSeason()]["img_width"]+"px; "+seasonInfoIcons[getSelectedSeason()]["img_style"];
         } else {
             img.src = baseTabsSeasons[b]["img"];
+            img.style = "width: "+baseTabsSeasons[b]["img_width"]+"px; "+baseTabsSeasons[b]["img_style"];
         }
-        img.style = "width: "+baseTabsSeasons[b]["img_width"]+"px; "+baseTabsSeasons[b]["img_style"];
         a.prepend(img);
         span.appendChild(a);
         div.appendChild(span);

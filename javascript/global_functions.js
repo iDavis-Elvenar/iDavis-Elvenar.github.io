@@ -548,3 +548,14 @@ function prepSetAlertElements() {
     html_close = document.getElementById('close');
     html_text = document.getElementById('text');
 }
+
+function handleFeatureFlag(flag) {
+    if (flag === "info_tab") {
+        if (eventsDates.hasOwnProperty(getSelectedEvent()) && new Date(convertDisplayDateToJavascriptFormatDate(eventsDates[getSelectedEvent()]["beta"]["start_date"])) >= 
+        new Date(convertDisplayDateToJavascriptFormatDate(eventsDates[featureFlagsInitialEvents["info_tab"]]["beta"]["start_date"]))) {
+            return baseTabsEvents;
+        } else {
+            return baseTabsEvents.filter(element => element["id"] !== "info_panel_div");
+        }
+    }
+}

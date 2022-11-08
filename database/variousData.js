@@ -62,6 +62,7 @@ let eventBanners = {
     "august_xxii_": "https://i.ibb.co/XV9cdnC/EL-akcia-august-2022-banner.png",
     "autumn_xxii_": "https://i.ibb.co/8Yp9YqV/EL-akcia-september-2022-banner.png",
     "october_xxii_": "https://i.ibb.co/XxLJQ3K/EL-akcia-okt-ber-2022-banner.png",
+    "december_xxii_": "https://i.ibb.co/HDK8HvH/EL-akcia-december-2022-banner.png",
 }
 
 let eventVideos = {
@@ -82,10 +83,17 @@ let eventVideos = {
     "autumn_xxii_": "https://www.youtube.com/embed/vlPzSeNLfuQ",
 }
 
-let eventNames = {
-    "february_xxi_": "Elvarian Carnival 2021",
-    "march_xxi_": "Rise of the Phoenix Cult 2021",
-    "may_xxi_": "Queen Fairy's Garden"
+var eventsDates = {
+    "december_xxii_": {
+        "live": {
+            "start_date": "December _th 2022",
+            "end_date": "December _th 2022"
+        },
+        "beta": {
+            "start_date": "November 11th 2022",
+            "end_date": "December 12th 2022"
+        }
+    },
 }
 
 let eventBetaStarts = { // MM/DD/YYYY
@@ -105,6 +113,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "august_xxii_": "07/07/2022",
     "autumn_xxii_": "08/18/2022",
     "october_xxii_": "09/29/2022",
+    "december_xxii_": "11/11/2022",
 }
 
 let questsLinks = {
@@ -130,6 +139,7 @@ let eventsDurations = {
     "august_xxii_": 22,
     "autumn_xxii_": 22,
     "october_xxii_": 22,
+    "december_xxii_": 30,
 }
 
 let evoUpgradeCosts = {
@@ -239,8 +249,8 @@ var discardBuildings = [
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2022" : [
-            ["Winter Magic","december_xxii_",false,true],
-            ["Mischievous Therapy","october_xxii_",true,false],
+            ["Winter Magic","december_xxii_",true,false],
+            ["Mischievous Therapy","october_xxii_",false,false],
             ["Autumn Zodiac","autumn_xxii_",false,false],
             ["A Gateway into the Past","august_xxii_",false,false],
             ["Lucky Little Fin","july_xxii_",false,false],
@@ -280,8 +290,8 @@ var allEvents = {
     },
     "all_events" : {
         "2022" : [
-            ["Winter Magic","december_xxii_",false,true],
-            ["Mischievous Therapy","october_xxii_",true,false],
+            ["Winter Magic","december_xxii_",true,false],
+            ["Mischievous Therapy","october_xxii_",false,false],
             ["Autumn Zodiac","autumn_xxii_",false,false],
             ["A Gateway into the Past","august_xxii_",false,false],
             ["Lucky Little Fin","july_xxii_",false,false],
@@ -303,12 +313,24 @@ var allEvents = {
     }
 }
 
+var eventsInfoIcons = {
+    "december_xxii_": {"img":"https://i.ibb.co/NYrhHVM/EL-akcia-zima-2020-currency1.png", "img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+}
+
+var featureFlagsInitialEvents = {
+    "info_tab": "december_xxii_",
+}
+
 var baseTabsEvents = [
+    {"id":"info_panel_div", "name":"Info", "img":"various", "img_width":"45", "img_style":"margin-left: -10px; margin-right: 2px; position: relative;", "href":"#info", "onclick":"info"},
     {"id":"calendar_top_div", "name":"Calendar", "img":"images/general/calendar.png", "img_width":"45", "img_style":"margin-left: -10px; margin-right: 2px; position: relative;", "href":"#calendar", "onclick":"calendar"},
     {"id":"quests_left_panel_div", "name":"Quests", "img":"images/general/event_guide.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},
 ] 
 
 var additionalTabsEvents = {
+    "december_xxii_": [
+        //{"id":"cryo", "name":"Cryo", "img":"https://i.ibb.co/R03TXkk/cryomana.png", "img_width":"36", "img_style":"margin-left: -2px; margin-right: 4px; margin-bottom: 3px; position: relative;", "href":"#cryo", "file":"cryo.html", "releaseDate":"10/01/2022"},
+    ],
     "october_xxii_": [
         {"id":"tools", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"10/01/2022"},
         {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/FK9Wd7N/event-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html", "releaseDate":"10/03/2022"},
