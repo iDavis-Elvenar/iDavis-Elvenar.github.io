@@ -3,6 +3,7 @@ var dailyPrizes = {
     "december_xxii_": [
         "A_Evt_Winter_2Tree",
         "A_Evt_December_XX_FrozenOwlCave",
+        "INS_UNIT_LM_10",
     ],
 
     "october_xxii_": [
