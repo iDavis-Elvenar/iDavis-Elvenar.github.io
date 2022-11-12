@@ -543,6 +543,7 @@ function createCalendar(filteredData, selectedEvent) {
         var trDays = document.createElement('tr');
         for (var i = 0; i < 7; i++) {
             var tdDay = document.createElement('td');
+            //tdDay.style.width = ""+(100/7)+"%";
             if (daysCounter <= filteredData.length) {
                 if (getDaysFromStart(selectedEvent, "")+1 === daysCounter) {
                     tdDay.innerHTML = `<b>${daysCounter}. ${langUI("day")}</b>`
