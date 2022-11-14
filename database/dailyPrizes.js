@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_December_XXII_Fragile_Bubble",
         "kp_{15}",
         "A_Evt_Winter_3Tree",
+        "A_Evt_Winter_XIX_Ice_Track",
     ],
 
     "october_xxii_": [
