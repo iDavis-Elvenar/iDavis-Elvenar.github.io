@@ -8,6 +8,7 @@ var dailyPrizes = {
         "kp_{15}",
         "A_Evt_Winter_3Tree",
         "A_Evt_Winter_XIX_Ice_Track",
+        "goods_standard_sentient_{1}", //10x frog_unurium_DP
     ],
 
     "october_xxii_": [
