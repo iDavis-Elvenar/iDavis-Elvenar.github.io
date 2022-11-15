@@ -141,14 +141,14 @@ var instants = {
         "image_small": "https://i.ibb.co/Gds0422/unit-orc-strategist.png",
         "production_type": ""
     },
-    "petfood_": {
+    "INS_PETFOOD_": {
         "name": "Pet Food",
         "image_big": "https://i.ibb.co/bKkGCKx/petfood-big.png",
         "image_small": "https://i.ibb.co/1GNjFQN/petfood-small.png",
         "title": "Pet Food",
         "production_type": ""
     },
-    "kp_": {
+    "INS_KP_": {
         "name": "Knowledge Points",
         "image_big": "https://i.ibb.co/Y3tCgcw/knowledge-points-big.png",
         "image_small": "https://i.ibb.co/CB7JkFY/knowledge-points-new.png",
@@ -161,26 +161,5 @@ var instants = {
         "image_small": "https://i.ibb.co/FHcY7ML/vitality-surge-small.png",
         "title": "Vitality Surge Instant",
         "production_type": "%"
-    },
-    "runeshards-1_": {
-        "name": "Rune Shards",
-        "image_big": "https://i.ibb.co/cxGrdP9/runeshard-big.png",
-        "image_small": "https://i.ibb.co/WkVpfDR/runeshard-small.png",
-        "title": "Random rune shard of the previous chapter",
-        "production_type": "x"
-    },
-    "goods_standard_sentient_": {
-        "name": "Goods",
-        "image_big": "https://i.ibb.co/WndLSNt/goods-general-medium.png",
-        "image_small": "https://i.ibb.co/yFZD0dM/goods-general-small.png",
-        "title": "A pack of standard or sentient goods (depending on chapter)",
-        "production_type": "x"
-    },
-    "mana_": {
-        "name": "Mana",
-        "image_big": "https://i.ibb.co/60pZRM1/mana.png",
-        "image_small": "https://image.ibb.co/bzd1Zq/mana.png",
-        "title": "A pack of mana (depending on chapter)",
-        "production_type": "x"
     }
 }

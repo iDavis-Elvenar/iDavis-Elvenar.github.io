@@ -179,6 +179,19 @@ function displayDailyPrizes() {
                         instantObject['value'] /= 60;
                     }
                     filteredDataDict[i] = instantObject;
+                } else if (dailyPrizes[selectedEvent][i].substring(0, 5).toLowerCase() === 'frog_') {
+                    var baseID = dailyPrizes[selectedEvent][i].substring(0, dailyPrizes[selectedEvent][i].lastIndexOf('_'));
+                    var frogAmount = parseInt(dailyPrizes[selectedEvent][i].substring(dailyPrizes[selectedEvent][i].indexOf("{")+1, dailyPrizes[selectedEvent][i].indexOf("}")));
+                    var frogObject = {};
+                    frogObject['id'] = baseID;
+                    frogObject['rewards'] = [];
+                    for (let chFrog = 1; chFrog <= numberOfChapters; chFrog++) {
+                        chFrogReward = {};
+                        chFrogReward['subType'] = flexibleRewards.filter(elem => elem.id === baseID)[0]['rewards'][chFrog-1]['subType'];
+                        chFrogReward['amount'] = flexibleRewards.filter(elem => elem.id === baseID)[0]['rewards'][chFrog-1]['amount'] * frogAmount;
+                        frogObject['rewards'].push(chFrogReward);
+                    }
+                    filteredDataDict[i] = frogObject;
                 }
             }
             var filteredData = [];
@@ -234,7 +247,11 @@ function displayDailyPrizes() {
                 h5.className = "card-title text-center text-title font-weight-bold";
                 h5.style.textAlign = "left";
                 if (!isTriggeredOrderBy) {
-                    h5.innerHTML = `${langUI("Day")} ${i + 1}: ${langBuildings(filteredData[i])}<br>`;
+                    if (filteredData[i]['id'].substring(0, 5).toLowerCase() === 'frog_') {
+                        h5.innerHTML = `${langUI("Day")} ${i + 1}: Flexible Reward<br>`;
+                    } else {
+                        h5.innerHTML = `${langUI("Day")} ${i + 1}: ${langBuildings(filteredData[i])}<br>`;
+                    }
                 } else {
                     let dpDays = "";
                     for (let dp = 0; dp < dailyPrizes[selectedEvent].length; dp++) {
@@ -403,7 +420,7 @@ function displayDailyPrizes() {
                             tSetBody.appendChild(trSet);
                         }
                     }
-                } else {  //INSTANTS
+                } else if (filteredData[i]['id'].toLowerCase().includes('ins_')) {  //INSTANTS
                     if (filteredData[i].hasOwnProperty('image_big_secondary')) {
                         td11.innerHTML = `<img src="${filteredData[i]['image_big']}" style="margin-left: 10%;">/<img src="${filteredData[i]['image_big_secondary']}">`;
                     } else {
@@ -411,10 +428,10 @@ function displayDailyPrizes() {
                     }
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
-                    if (filteredData[i]['id'].toLowerCase().includes("ins_")) {
-                        td12.innerHTML = `<b>Type:</b> Instant<br>`;
-                    } else {
+                    if (filteredData[i]['id'].toLowerCase().includes("ins_kp_") || filteredData[i]['id'].toLowerCase().includes("ins_petfood_")) {
                         td12.innerHTML = `<b>Type:</b> Item<br>`;
+                    } else if (filteredData[i]['id'].toLowerCase().includes("ins_")) {
+                        td12.innerHTML = `<b>Type:</b> Instant<br>`;
                     }
                     t1r.appendChild(td11);
                     t1r.appendChild(td12);
@@ -454,6 +471,67 @@ function displayDailyPrizes() {
                         tr.appendChild(td);
                     }
                     t2body.appendChild(tr);
+                    secondTable.appendChild(t2body);
+                } else if (filteredData[i]['id'].toLowerCase().includes('frog_')) {     // FLEXIBLE REWARDS
+                    td11.innerHTML = `<img src="${flexibleRewardsIcons[filteredData[i]['id']]}" style="margin-left: 10%;" title="${langUI("A one time reward depending on your current chapter")}">`;
+                    var td12 = document.createElement('td');
+                    td12.style.width = "40%";
+                    td12.innerHTML = `<b>Type:</b> Flexible Reward<br>`;
+                    t1r.appendChild(td11);
+                    t1r.appendChild(td12);
+                    t1body.appendChild(t1r);
+                    firstTable.appendChild(t1body);
+                    div.appendChild(firstTable);
+
+                    var secondTable = document.createElement('table');
+                    secondTable.className = 'table-primary text-center';
+                    secondTable.style.width = "100%";
+                    var t2body = document.createElement('tbody');
+                    var tr21 = document.createElement('tr');
+
+                    var allSubTypes = [];
+                    for (var subType = 0; subType < filteredData[i]['rewards'].length; subType++) {
+                        if (!allSubTypes.includes(filteredData[i]['rewards'][subType]['subType'])) {
+                            allSubTypes.push(filteredData[i]['rewards'][subType]['subType']);
+                        }
+                    }
+                    for (var h = 0; h <= 1; h++) {
+                        var th = document.createElement('th');
+                        if (h === 0) {
+                            th.innerHTML = `Chapter / Bonus`;
+                            th.style.width = "15%";
+                        } else {
+                            th.innerHTML = `<img src=${chapter_icons[getPresetChapter()]}>`;
+                        }
+                        tr21.appendChild(th);
+                    }
+                    t2body.appendChild(tr21);
+                    for (var prod = 0; prod < allSubTypes.length; prod++) {
+                        var tr = document.createElement('tr');
+                        let hasAtLeastOneValue = false;
+                        for (var ch = 0; ch <= 1; ch++) {
+                            var td = document.createElement('td');
+                            if (ch === 0) {
+                                if (goods_icons[allSubTypes[prod]] === undefined) {
+                                    console.log(allSubTypes[prod])
+                                    td.innerHTML = `${goods_icons[allSubTypes[prod].toLowerCase()]}<h7>${langUI("one time reward")}</h7>`;
+                                } else {
+                                    td.innerHTML = `${goods_icons[allSubTypes[prod]]}<h7>${langUI("one time reward")}</h7>`;
+                                }
+                            } else {
+                                if (filteredData[i]['rewards'][parseInt(getPresetChapter())-1]['subType'] === allSubTypes[prod]) {
+                                    td.innerHTML = `${filteredData[i]['rewards'][parseInt(getPresetChapter())-1]['amount']}`;
+                                    hasAtLeastOneValue = true;
+                                } else {
+                                    td.innerHTML = `-`;
+                                }
+                            }
+                            tr.appendChild(td);
+                        }
+                        if (hasAtLeastOneValue) {
+                            t2body.appendChild(tr);
+                        }
+                    }
                     secondTable.appendChild(t2body);
                 }
                 div.appendChild(secondTable);
@@ -568,7 +646,11 @@ function createCalendar(filteredData, selectedEvent) {
                     tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${filteredData[prizesCounter - 1]['name']} 
                             (${Number.isNaN(filteredData[prizesCounter-1]['value']) ? filteredData[prizesCounter-1]['quantity'] : filteredData[prizesCounter-1]['value']}${Number.isNaN(filteredData[prizesCounter-1]['value']) ? "" : filteredData[prizesCounter-1]['production_type']})</a>`;
                 } else {
-                    tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langBuildings(filteredData[prizesCounter - 1])}</a>`;
+                    if (filteredData[prizesCounter-1]['id'].substring(0, 5).toLowerCase() === 'frog_') {
+                        tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langUI("Flexible Reward")}</a>`;
+                    } else {
+                        tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langBuildings(filteredData[prizesCounter - 1])}</a>`;
+                    }
                 }
             } else {
                 if (prizesCounter < dailyPrizes[selectedEvent].length+1 && !counterPrizeDisplayed) {

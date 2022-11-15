@@ -67,6 +67,7 @@ let ui = {
         "Choose a set": "Vyber set",
         "Chance": "Šanca",
         "Bonus": "Bonus",
+        "one time reward": "jednorazová odmena",
         //SETS
         "Winter Set": "Zimní sada",
         "Phoenix Cult Set": "Sada Kultu fénixe",
@@ -179,6 +180,7 @@ let ui = {
         "Choose a set": "Wähle ein Set",
         "Chance": "Chance",
         "Bonus": "Bonus",
+        "one time reward": "einmalige Belohnung",
         //SETS
         "Winter Set": "Winter-Set",
         "Phoenix Cult Set": "Phönixkult-Set",
@@ -291,6 +293,7 @@ let ui = {
         "Choose a set": "Choisissez un ensemble",
         "Chance": "Chance",
         "Bonus": "Prime",
+        "one time reward": "récompense unique",
         //SETS
         "Winter Set": "Set hivernal",
         "Phoenix Cult Set": "Set du culte du phénix",
@@ -403,6 +406,7 @@ let ui = {
         "Choose a set": "Wybierz zestaw",
         "Chance": "Szansa",
         "Bonus": "Premia",
+        "one time reward": "jednorazowa nagroda",
         //SETS
         "Winter Set": "Zimowy zestaw",
         "Phoenix Cult Set": "Zestaw Kultu Feniksa",
@@ -515,6 +519,7 @@ let ui = {
         "Choose a set": "Выбрать набор",
         "Chance": "Шанс",
         "Bonus": "Бонус",
+        "one time reward": "единовременное вознаграждение",
         //SETS
         "Winter Set": "Зимний набор",
         "Phoenix Cult Set": "Набор «Культ Феникса»",
