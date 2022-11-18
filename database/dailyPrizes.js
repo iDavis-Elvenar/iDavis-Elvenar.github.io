@@ -11,6 +11,7 @@ var dailyPrizes = {
         "frog_unurium_DP_{10}",
         "A_Evt_Winter_1DailyReward",
         "A_Evt_December_XXII_Brisk_Market",
+        "INS_UNIT_MA_10",
     ],
 
     "october_xxii_": [
