@@ -12,6 +12,7 @@ var dailyPrizes = {
         "A_Evt_Winter_1DailyReward",
         "A_Evt_December_XXII_Brisk_Market",
         "INS_UNIT_MA_10",
+        "A_Evt_FrozenOrcPortal",
     ],
 
     "october_xxii_": [
