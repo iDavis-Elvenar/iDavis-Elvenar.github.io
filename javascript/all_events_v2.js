@@ -248,7 +248,7 @@ function displayDailyPrizes() {
                 h5.style.textAlign = "left";
                 if (!isTriggeredOrderBy) {
                     if (filteredData[i]['id'].substring(0, 5).toLowerCase() === 'frog_') {
-                        h5.innerHTML = `${langUI("Day")} ${i + 1}: Flexible Reward<br>`;
+                        h5.innerHTML = `${langUI("Day")} ${i + 1}: ${getFrogName(filteredData[i])}<br>`;
                     } else {
                         h5.innerHTML = `${langUI("Day")} ${i + 1}: ${langBuildings(filteredData[i])}<br>`;
                     }
@@ -506,34 +506,24 @@ function displayDailyPrizes() {
                         tr21.appendChild(th);
                     }
                     t2body.appendChild(tr21);
-                    for (var prod = 0; prod < allSubTypes.length; prod++) {
-                        var tr = document.createElement('tr');
-                        let hasAtLeastOneValue = false;
-                        for (var ch = 0; ch <= 1; ch++) {
-                            var td = document.createElement('td');
-                            if (ch === 0) {
-                                if (goods_icons[allSubTypes[prod]] === undefined) {
-                                    console.log(allSubTypes[prod])
-                                    td.innerHTML = `${goods_icons[allSubTypes[prod].toLowerCase()]}<h7>${langUI("one time reward")}</h7>`;
-                                } else {
-                                    td.innerHTML = `${goods_icons[allSubTypes[prod]]}<h7>${langUI("one time reward")}</h7>`;
-                                }
-                            } else {
-                                if (filteredData[i]['rewards'][parseInt(getPresetChapter())-1]['subType'] === allSubTypes[prod]) {
-                                    td.innerHTML = `${filteredData[i]['rewards'][parseInt(getPresetChapter())-1]['amount']}`;
-                                    hasAtLeastOneValue = true;
-                                } else {
-                                    td.innerHTML = `-`;
-                                }
-                            }
-                            tr.appendChild(td);
-                        }
-                        if (hasAtLeastOneValue) {
-                            t2body.appendChild(tr);
-                        }
+
+                    var tr = document.createElement('tr');
+                    var tdProd = document.createElement('td');
+                    var frogReward = getFrogRewardObjectForChapter(allSubTypes, filteredData[i]);
+                    if (goods_icons[frogReward['reward']] === undefined) {
+                        tdProd.innerHTML = `${goods_icons[frogReward['reward'].toLowerCase()]}<h7>${langUI("one-time reward")}</h7>`;
+                    } else {
+                        tdProd.innerHTML = `${goods_icons[frogReward['reward']]}<h7>${langUI("one-time reward")}</h7>`;
                     }
+                    tr.appendChild(tdProd);
+                    var tdVal = document.createElement('td');
+                    tdVal.innerHTML = `${frogReward['amount']}`;
+                    filteredData[i]['frog_subType'] = frogReward['reward'];
+                    tr.appendChild(tdVal);
+                    t2body.appendChild(tr);
                     secondTable.appendChild(t2body);
                 }
+
                 div.appendChild(secondTable);
                 if (filteredData[i].hasOwnProperty('setBuilding')) {
                     setTable.appendChild(tSetBody);
@@ -647,7 +637,7 @@ function createCalendar(filteredData, selectedEvent) {
                             (${Number.isNaN(filteredData[prizesCounter-1]['value']) ? filteredData[prizesCounter-1]['quantity'] : filteredData[prizesCounter-1]['value']}${Number.isNaN(filteredData[prizesCounter-1]['value']) ? "" : filteredData[prizesCounter-1]['production_type']})</a>`;
                 } else {
                     if (filteredData[prizesCounter-1]['id'].substring(0, 5).toLowerCase() === 'frog_') {
-                        tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langUI("Flexible Reward")}</a>`;
+                        tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langUI(getFrogName(filteredData[prizesCounter - 1]))}</a>`;
                     } else {
                         tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langBuildings(filteredData[prizesCounter - 1])}</a>`;
                     }
@@ -1113,3 +1103,21 @@ function insertQuestsAd(questNumber, parent) {
 }
 
 window.onload
+
+function getFrogRewardObjectForChapter(allSubTypes, filteredData) {
+    var res = {};
+    for (var prod = 0; prod < allSubTypes.length; prod++) {
+        for (var ch = 0; ch <= 1; ch++) {
+            if (filteredData['rewards'][parseInt(getPresetChapter())-1]['subType'] === allSubTypes[prod]) {
+                res['reward'] = allSubTypes[prod];
+                res['amount'] = filteredData['rewards'][parseInt(getPresetChapter())-1]['amount'];
+                return res;
+            }
+        }
+    }
+}
+
+function getFrogName(filteredData) {
+    var goodsIconsValue = goods_icons[filteredData['rewards'][getPresetChapter()-1]['subType']];
+    return goodsIconsValue.split("title='")[1].substring(0, goodsIconsValue.split("title='")[1].indexOf("'>"))
+}
