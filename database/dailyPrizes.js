@@ -13,6 +13,7 @@ var dailyPrizes = {
         "A_Evt_December_XXII_Brisk_Market",
         "INS_UNIT_MA_10",
         "A_Evt_FrozenOrcPortal",
+        "INS_KP_AW_20",
     ],
 
     "october_xxii_": [
