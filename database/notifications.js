@@ -122,7 +122,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":40
     },
 }
