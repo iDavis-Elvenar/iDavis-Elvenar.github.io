@@ -14,6 +14,7 @@ var dailyPrizes = {
         "INS_UNIT_MA_10",
         "A_Evt_FrozenOrcPortal",
         "INS_KP_AW_20",
+        "A_Evt_February_XXI_Lifeblood_Cone",
     ],
 
     "october_xxii_": [
