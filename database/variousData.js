@@ -384,6 +384,7 @@ var flexibleRewardsIcons = {
     "frog_mana":"https://i.ibb.co/0F5pTWq/frog-mana.png",
     "frog_runeshards2":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
     "frog_runeshards1":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
+    "frog_grr_5":"https://i.ibb.co/JHqqq6j/frog-grr.png",
 }
 
 var goods_icons = {
