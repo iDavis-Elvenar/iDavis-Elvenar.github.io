@@ -335,7 +335,7 @@ background-color: #b9881e;
 }
 
 .bg-right_bar_background {
-    background-image: linear-gradient(to left,#fef8ec, #ecdec0) !important;
+    background-image: linear-gradient(to top,#fef8ec, #ecdec0) !important;
 }
 
 .midcontainer { width: 300px; height: 250px; display:block; margin:auto;  }

@@ -1,72 +1,98 @@
 function setRightBar() {
     let rightBar = document.getElementById("right_bar");
-    rightBar.innerHTML = "aaa";
     rightBar.style.width = document.getElementById("left_bar").offsetWidth;
 
+    let divLiveServer = document.createElement('div');
+    let divBetaServer = document.createElement('div');
+
+    divLiveServer.style.height = "50%";
+    divBetaServer.style.height = "50%"; 
+
+    let headerLiveServer = document.createElement('h7');
+    let headerBetaServer = document.createElement('h7');
+
+    headerLiveServer.innerHTML = `<b>Live servers:</b>`;
+    headerBetaServer.innerHTML = `<b>Beta server:</b>`;
+
+    divLiveServer.appendChild(headerLiveServer);
+    divBetaServer.appendChild(headerBetaServer);
+
+    let eventsLiveServer = getCurrentEvents("live");
+    let eventsBetaServer = getCurrentEvents("beta");
+
+    let textLiveServer = document.createElement('h7');
+    let textBetaServer = document.createElement('h7');
+
+    console.log(eventsBetaServer)
+
+    eventsLiveServer.forEach(function (event) {
+        let p = document.createElement('p');
+        p.innerHTML = event.name;
+        textLiveServer.appendChild(p);
+    });
+    eventsBetaServer.forEach(function (event) {
+        let p = document.createElement('p');
+        p.innerHTML = event.name;
+        textBetaServer.appendChild(p);
+    });
+
+    divLiveServer.appendChild(textLiveServer);
+    divBetaServer.appendChild(textBetaServer);
+
+    rightBar.appendChild(divLiveServer);
+    rightBar.appendChild(divBetaServer);
+
     return;
+}
 
-    let numberOfAdditionalItems = 0;
-    if (additionalTabsEvents.hasOwnProperty(selectedEvent)) {
-        numberOfAdditionalItems = additionalTabsEvents[selectedEvent].length;
+function getCurrentEvents(serverType) {
+    let result = [];
+
+    let currentDate = new Date();
+
+    let eventTypes = [eventStartDates, faStartDates, seasonStartDates];
+
+    eventTypes.forEach(function (eventType) {
+        for (const event in eventType) {
+            let startDate = new Date(convertDisplayDateToJavascriptFormatDate(eventType[event][serverType]["start_date"]));
+            let endDate = new Date(convertDisplayDateToJavascriptFormatDate(eventType[event][serverType]["end_date"]));
+            if (startDate <= currentDate && currentDate <= endDate) {
+                    switch (eventType) {
+                        case eventStartDates: result.push({"type":"event", "id":event, "name":findEventNameById(event, "event"), "start_date":startDate, "end_date":endDate}); break;
+                        case faStartDates: result.push({"type":"fa", "id":event, "name":findEventNameById(event, "fa"), "start_date":startDate, "end_date":endDate}); break;
+                        case seasonStartDates: result.push({"type":"season", "id":event, "name":findEventNameById(event, "season"), "start_date":startDate, "end_date":endDate}); break;
+                    }
+                }
+        }
+    });
+
+    return result;
+}
+
+function findEventNameById(eventId, eventType) {
+    let result = "";
+    switch (eventType) {
+        case "event": {
+            for (const year in allEvents["all_buildings"]) {
+                allEvents["all_buildings"][year].forEach(function (item) {
+                    if (item[1] === eventId) {
+                        if (result === "") {
+                        result = item[0].slice();
+                        }
+                    }
+                });
+            }
+            break;
+        }
+        case "fa": {
+
+            break;
+        }
+        case "season": {
+
+            break;
+        }
     }
-
-    let featuredBaseTabs = handleFeatureFlag("info_tab");
     
-    let numberOfBaseItems = featuredBaseTabs.length;
-
-    leftBar.style.height = ""+((numberOfBaseItems*50)+(numberOfAdditionalItems*50))+"px";
-
-    for (let b = 0; b < numberOfBaseItems; b++) {
-        let div = document.createElement("div");
-        div.className = "justify-content-center box d-flex flex-column";
-        div.style.height = ""+(100/(numberOfAdditionalItems+numberOfBaseItems))+"%";
-        div.id = baseTabsEvents[b]["id"];
-        let span = document.createElement("span");
-        span.className = "allign-middle";
-        let a = document.createElement("a");
-        a.className = "text-link font-weight-bold";
-        a.id = featuredBaseTabs[b]["id"].substring(0, featuredBaseTabs[b]["id"].lastIndexOf("_"));
-        a.href = featuredBaseTabs[b]["href"];
-        //a.href += "-"+getSelectedEvent();
-        a.onclick = function() {
-            switchView(featuredBaseTabs[b]["onclick"]);
-        }
-        a.innerHTML = langUI(featuredBaseTabs[b]["name"]);
-        let img = document.createElement("img");
-        if (featuredBaseTabs[b]["img"] === "various") {
-            img.src = eventsInfoIcons[getSelectedEvent()]["img"];
-            img.style = "width: "+eventsInfoIcons[getSelectedEvent()]["img_width"]+"px; "+eventsInfoIcons[getSelectedEvent()]["img_style"];
-        } else {
-            img.src = featuredBaseTabs[b]["img"];
-            img.style = "width: "+featuredBaseTabs[b]["img_width"]+"px; "+featuredBaseTabs[b]["img_style"];
-        }
-        a.prepend(img);
-        span.appendChild(a);
-        div.appendChild(span);
-        leftBar.appendChild(div);
-    }
-
-    for (let i = 0; i < numberOfAdditionalItems; i++) {
-        let newDiv = document.createElement("div");
-        newDiv.className = "justify-content-center box d-flex flex-column";
-        newDiv.style.height = ""+(100/(numberOfAdditionalItems+numberOfBaseItems))+"%";
-        newDiv.id = additionalTabsEvents[selectedEvent][i]["id"];
-        let newSpan = document.createElement("span");
-        newSpan.className = "allign-middle";
-        let newA = document.createElement("a");
-        newA.className = "text-link font-weight-bold";
-        newA.href = additionalTabsEvents[selectedEvent][i]["href"];
-        newA.href += "-"+selectedEvent;
-        newA.onclick = function() {
-            switchView(additionalTabsEvents[selectedEvent][i]["id"]);
-        }
-        newA.innerHTML = additionalTabsEvents[selectedEvent][i]["name"];
-        let newImg = document.createElement("img");
-        newImg.src= additionalTabsEvents[selectedEvent][i]["img"];
-        newImg.style = "width: "+additionalTabsEvents[selectedEvent][i]["img_width"]+"px; "+additionalTabsEvents[selectedEvent][i]["img_style"];
-        newA.prepend(newImg);
-        newSpan.appendChild(newA);
-        newDiv.appendChild(newSpan);
-        leftBar.appendChild(newDiv);
-    }
+    return result;
 }
