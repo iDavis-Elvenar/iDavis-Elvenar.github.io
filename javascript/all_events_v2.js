@@ -473,7 +473,7 @@ function displayDailyPrizes() {
                     t2body.appendChild(tr);
                     secondTable.appendChild(t2body);
                 } else if (filteredData[i]['id'].toLowerCase().includes('frog_')) {     // FLEXIBLE REWARDS
-                    td11.innerHTML = `<img src="${flexibleRewardsIcons[filteredData[i]['id']]}" style="margin-left: 10%;" title="${langUI("A one time reward depending on your current chapter")}">`;
+                    td11.innerHTML = `<img src="${flexibleRewardsIcons[filteredData[i]['id']]}" style="margin-left: 10%;" title="${langUI("A one-time reward depending on your current chapter")}">`;
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
                     td12.innerHTML = `<b>Type:</b> Flexible Reward<br>`;
@@ -1119,5 +1119,8 @@ function getFrogRewardObjectForChapter(allSubTypes, filteredData) {
 
 function getFrogName(filteredData) {
     var goodsIconsValue = goods_icons[filteredData['rewards'][getPresetChapter()-1]['subType']];
+    if (goodsIconsValue === undefined) {
+        goodsIconsValue = goods_icons[filteredData['rewards'][getPresetChapter()-1]['subType'].toLowerCase()];
+    }
     return goodsIconsValue.split("title='")[1].substring(0, goodsIconsValue.split("title='")[1].indexOf("'>"))
 }
