@@ -16,6 +16,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_February_XXI_Lifeblood_Cone",
         "frog_grr_5_{1}",
+        "A_Evt_Winter_Xvii_3GrandPrize",
     ],
 
     "october_xxii_": [
