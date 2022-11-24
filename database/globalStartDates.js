@@ -14,8 +14,8 @@ var eventStartDates = {
 var faStartDates = {
     "november_xxii_": {
         "live": {
-            "start_date": "November 15th 2022",
-            "end_date": "November 21st 2022"
+            "start_date": "November 22th 2022",
+            "end_date": "November 26st 2022"
         },
         "beta": {
             "start_date": "October 27th 2022",
@@ -28,8 +28,8 @@ var faStartDates = {
             "end_date": "October 12th 2022"
         },
         "beta": {
-            "start_date": "September 15th 2022",
-            "end_date": "September 21st 2022"
+            "start_date": "November 23th 2022",
+            "end_date": "November 28st 2022"
         }
     },
 }
@@ -41,8 +41,8 @@ var seasonStartDates = {
             "end_date": "December 31st 2022"
         },
         "beta": {
-            "start_date": "??? ?th 2022",
-            "end_date": "??? ?th 2022"
+            "start_date": "November 23rd 2022",
+            "end_date": "December 23rd 2022"
         }
     },
 }

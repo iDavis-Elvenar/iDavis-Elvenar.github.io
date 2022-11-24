@@ -75,7 +75,7 @@ function setLeftBar() {
         a.innerHTML = langUI(baseTabsSeasons[b]["name"]);
         let img = document.createElement("img");
         if (baseTabsSeasons[b]["img"] === "various") {
-            img.src = seasonInfoIcons[getSelectedSeason()]["img"];
+            img.src = "./images/seasons/icons/"+getSelectedSeason()+".png";
             img.style = "width: "+seasonInfoIcons[getSelectedSeason()]["img_width"]+"px; "+seasonInfoIcons[getSelectedSeason()]["img_style"];
         } else {
             img.src = baseTabsSeasons[b]["img"];

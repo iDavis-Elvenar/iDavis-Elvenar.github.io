@@ -25,16 +25,8 @@ function setRightBar() {
 
     console.log(eventsBetaServer)
 
-    eventsLiveServer.forEach(function (event) {
-        let p = document.createElement('p');
-        p.innerHTML = event.name;
-        textLiveServer.appendChild(p);
-    });
-    eventsBetaServer.forEach(function (event) {
-        let p = document.createElement('p');
-        p.innerHTML = event.name;
-        textBetaServer.appendChild(p);
-    });
+    eventsLiveServer.forEach(function (event) {displayEvent(event, textLiveServer)});
+    eventsBetaServer.forEach(function (event) {displayEvent(event, textBetaServer)});
 
     divLiveServer.appendChild(textLiveServer);
     divBetaServer.appendChild(textBetaServer);
@@ -71,28 +63,33 @@ function getCurrentEvents(serverType) {
 
 function findEventNameById(eventId, eventType) {
     let result = "";
-    switch (eventType) {
-        case "event": {
-            for (const year in allEvents["all_buildings"]) {
-                allEvents["all_buildings"][year].forEach(function (item) {
-                    if (item[1] === eventId) {
-                        if (result === "") {
-                        result = item[0].slice();
-                        }
-                    }
-                });
+    let allEventsMapper = {"event": allEvents["all_buildings"], "fa": allFas, "season": allSeasons};
+    for (const year in allEventsMapper[eventType]) {
+        allEventsMapper[eventType][year].forEach(function (item) {
+            if (item[1] === eventId) {
+                if (result === "") {
+                    result = item[0];
+                }
             }
-            break;
-        }
-        case "fa": {
-
-            break;
-        }
-        case "season": {
-
-            break;
-        }
+        })
     }
-    
     return result;
+}
+
+function displayEvent(event, parent) {
+    let p = document.createElement('p');
+    p.innerHTML = event.name;
+    p.style.marginBottom = "-5px";
+    let img = document.createElement('img');
+    if (event.type === "fa") {
+        img.src = "https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png";
+        img.style.width = "16px";
+    } else {
+        let pathMapper = {"event": "events", "season": "seasons"};
+        img.src = "./images/"+pathMapper[event.type]+"/icons/"+event.id+".png";
+        img.style.width = "18px";
+    }
+    img.style.marginRight = "5px";
+    p.prepend(img);
+    parent.appendChild(p);
 }

@@ -66,7 +66,7 @@ function setLeftBar() {
         a.innerHTML = langUI(featuredBaseTabs[b]["name"]);
         let img = document.createElement("img");
         if (featuredBaseTabs[b]["img"] === "various") {
-            img.src = eventsInfoIcons[getSelectedEvent()]["img"];
+            img.src = "./images/events/icons/"+getSelectedEvent()+".png";
             img.style = "width: "+eventsInfoIcons[getSelectedEvent()]["img_width"]+"px; "+eventsInfoIcons[getSelectedEvent()]["img_style"];
         } else {
             img.src = featuredBaseTabs[b]["img"];

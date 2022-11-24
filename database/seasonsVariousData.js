@@ -1,9 +1,3 @@
-var allSeasons = {
-    "2022" : [ //NAME,ID,SELECTED,DISABLED == HIDDEN
-        ["Season of Dreams", "month_xxii_",true,false],
-    ]
-}
-
 var baseTabsSeasons = [
     {"id":"base_left_panel_div", "name":"Info", "img":"various", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#info", "onclick":"info"},
     {"id":"base_left_panel_div", "name":"Quests", "img":"https://i.ibb.co/pJsbHp7/season-dailykeys.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},

@@ -1,10 +1,3 @@
-var allFas = {
-    "2022" : [ //NAME,ID,SELECTED,DISABLED == HIDDEN
-        ["Fellowship Adventures - November 2022", "november_xxii_",true,false],
-        ["Fellowship Adventures - October 2022", "october_xxii_",false,false],
-    ]
-}
-
 var baseTabsFa = [
     {"id":"base_left_panel_div", "name":"Info", "img":"https://i.ibb.co/prd3mhW/info-fa-icon.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#info", "onclick":"info"},
     {"id":"base_left_panel_div", "name":"Items", "img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#items", "onclick":"items"},
