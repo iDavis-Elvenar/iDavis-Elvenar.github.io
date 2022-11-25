@@ -65,12 +65,12 @@ var notifications = {
     },
     "7":{  // NEW BUILDING
         "id":7,
-        "text":`<h4 class="alert-heading">Elvenar is turning 7!</h4>
-        <p>To thank us for spending Elvenar's 7th Birthday Celebration together, InnoGames have a gift for us - the <a href='buildings.html#A_Evt_Generic_Festive_Fountain' target="_blank" class='alert-link'>Festive Fountain</a> building. Every player who logs in between June 1st and the night of June 3rd will receive this gift!</p>`,
+        "text":`<h4 class="alert-heading">Black Friday!</h4>
+        <p>We have received a new gift as a special reward for this year's Black Friday - the Celestial Titan. Click <a href='https://idavis-elvenar.com/buildings.html#A_Evt_Generic_Celestial_Titan' target="_blank" class='alert-link'>here</a> to see all the details about this building!</p>`,
         "repeatAfter":86400,
         "style":"warning",
         "duration":20,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "8":{  // SPECIAL VIDEO PROMO
