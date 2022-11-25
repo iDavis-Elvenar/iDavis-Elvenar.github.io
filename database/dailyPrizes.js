@@ -18,6 +18,7 @@ var dailyPrizes = {
         "frog_grr_5_{1}",
         "A_Evt_Winter_Xvii_3GrandPrize",
         "frog_runeshards2_{2}",
+        "A_Evt_December_XXII_Fragile_Bubble",
     ],
 
     "october_xxii_": [
