@@ -22,6 +22,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_LR_10",
         "A_Evt_WinterWell",
         "INS_REV_SQD_25",
+        "A_Evt_Frozen_Shipwreck",
     ],
 
     "october_xxii_": [
