@@ -86,8 +86,8 @@ let eventVideos = {
 var eventsDates = {
     "december_xxii_": {
         "live": {
-            "start_date": "December _th 2022",
-            "end_date": "December _th 2022"
+            "start_date": "December 6th 2022",
+            "end_date": "January 5th 2023"
         },
         "beta": {
             "start_date": "November 11th 2022",
