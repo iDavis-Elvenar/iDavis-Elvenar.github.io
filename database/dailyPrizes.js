@@ -25,6 +25,7 @@ var dailyPrizes = {
         "A_Evt_Frozen_Shipwreck",
         "kp_{15}",
         "INS_UNIT_MC_HR_10",
+        "frog_default1_{10}",
     ],
 
     "october_xxii_": [
