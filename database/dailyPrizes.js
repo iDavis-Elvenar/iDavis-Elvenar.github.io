@@ -26,6 +26,7 @@ var dailyPrizes = {
         "kp_{15}",
         "INS_UNIT_MC_HR_10",
         "frog_default1_{10}",
+        "A_Evt_February_XXI_Aureate_Willow",
     ],
 
     "october_xxii_": [
