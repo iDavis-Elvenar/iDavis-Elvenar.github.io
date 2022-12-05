@@ -27,6 +27,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_HR_10",
         "frog_default1_{10}",
         "A_Evt_February_XXI_Aureate_Willow",
+        "A_Evt_Winter_2Pond",
     ],
 
     "october_xxii_": [
