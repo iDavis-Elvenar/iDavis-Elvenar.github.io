@@ -28,6 +28,7 @@ var dailyPrizes = {
         "frog_default1_{10}",
         "A_Evt_February_XXI_Aureate_Willow",
         "A_Evt_Winter_2Pond",
+        "frog_runeshards2_{2}",
     ],
 
     "october_xxii_": [
