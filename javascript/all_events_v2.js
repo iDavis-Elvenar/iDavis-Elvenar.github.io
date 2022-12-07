@@ -277,10 +277,14 @@ function displayDailyPrizes() {
                     td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
+                    let setDesc = "-";
+                    if (filteredData[i].hasOwnProperty('setBuilding')) {
+                        setDesc = `${langUI(setNames[filteredData[i]['setBuilding']['setID']])}`;
+                    }
                     td12.innerHTML = `<b>${langUI("Building type:")}</b> ${buildingTypes[filteredData[i]['type']]}<br>
                                     <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}<br>
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
-                                    <b>${langUI("Set building:")}</b> -<br>
+                                    <b>${langUI("Set building:")}</b> ${setDesc}<br>
                                     <b>${langUI("Expiring:")}</b> -`;
                     t1r.appendChild(td11);
                     t1r.appendChild(td12);
