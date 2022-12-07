@@ -318,6 +318,7 @@ var flexibleRewardsIcons = {
     "frog_runeshards2":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
     "frog_runeshards1":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
     "frog_grr_5":"https://i.ibb.co/JHqqq6j/frog-grr.png",
+    "frog_default1":"https://i.ibb.co/VD89QDJ/frog-default1.png",
 }
 
 var goods_icons = {
@@ -677,17 +678,6 @@ var navbarNew = {
 }
 
 var moreNavbarContent = [
-    // SEASONS
-    /*{
-        "className":    "dropdown-item text-dark",
-        "href":         "seasons.html",
-        "id":           "navitem_seasons",
-        "innerHTML":    "Seasons",
-        "img": {
-            "src":      "https://oxzz.innogamescdn.com/frontend//assets/season_daily_keys-4bbc493cea0326f5b9318eef92aa9ece.png",
-            "style":    "width: 25px; margin-right: 7px; margin-bottom: 4px; margin-left: -2px;",
-        }
-    },*/
     // FELLOWSHIP ADVENTURES
     {   
         "className":    "dropdown-item text-dark", 
@@ -699,6 +689,17 @@ var moreNavbarContent = [
             "style":    "width: 24px; margin-right: 6px; margin-bottom: 4px;",
         }
     },
+    // SEASONS
+    /*{
+        "className":    "dropdown-item text-dark",
+        "href":         "seasons.html",
+        "id":           "navitem_seasons",
+        "innerHTML":    "Seasons",
+        "img": {
+            "src":      "https://i.ibb.co/87MNrBB/season-pass.png",
+            "style":    "width: 25px; margin-right: 6px; margin-bottom: 4px; margin-left: 0px;",
+        }
+    },*/
     /*{
         "className":    "dropdown-item text-dark",
         "href":         "tournaments.html",
