@@ -167,19 +167,115 @@ function displayBase() {
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = ""
     createSeasonHeader();
-    parent.innerHTML += "popis, terminy, tutorial (pripadne textovy + obrazky)";
+    
+    let center = document.createElement('center');
+    let p = document.createElement('p');
+    p.innerHTML = "This page is under the construction. I will add more content soon. :)"
+    center.appendChild(p);
+
+    createDatesTable(center,    seasonStartDates[getSelectedSeason()]["live"]["start_date"],
+                                seasonStartDates[getSelectedSeason()]["live"]["end_date"],
+                                seasonStartDates[getSelectedSeason()]["beta"]["start_date"],
+                                seasonStartDates[getSelectedSeason()]["beta"]["end_date"]);
+    
+    parent.appendChild(center);
 }
 
 function displayQuests() {
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = ""
     createSeasonHeader();
-    parent.innerHTML += "ulohy (denne + tyzdenne), zrejme uvadzat cele sety";
+
+    let questsTypes = ["daily", "weekly"];
+
+    questsTypes.forEach(function (questType) {
+        var h5 = document.createElement('h5');
+        h5.id = 'quests_header';
+        h5.className = "card-title text-center text-title font-weight-bold";
+        h5.style.textAlign = "left";
+        if (questType == "daily") {
+            h5.innerHTML = `..:: ${langUI("Set of Daily Quests")} ::..<br>`;
+        } else {
+            h5.innerHTML = `..:: ${langUI("Set of Weekly Quests")} ::..<br>`;
+        }
+        parent.appendChild(h5);
+        var div = document.createElement('div');
+        div.style.textAlign = 'center';
+        div.style.marginBottom = '10px';
+        div.style.marginTop = '10px';
+        var divBBTable = document.createElement('div');
+        divBBTable.className = 'bbTable';
+        var table = document.createElement('table');
+        table.className = 'table-primary';
+        table.style.width = '100%';
+        var tbody = document.createElement('tbody');
+
+        if (seasonsQuests[getSelectedSeason()] === undefined) {
+            var h7 = document.createElement('h7');
+            h7.id = 'quests_noQuests';
+            h7.className = "card-title text-center";
+            h7.style.textAlign = "left";
+            h7.innerHTML = `${langUI("Quests will appear soon")}.`;
+            var center = document.createElement('center');
+            center.appendChild(h7);
+            document.getElementById('column_with_tables').appendChild(center);
+
+        } else {
+
+            var shareLink = document.createElement('h7');
+            shareLink.id = 'quests_shareLink';
+            shareLink.className = "card-title text-center";
+            shareLink.style.textAlign = "left";
+            if (questType == "daily") {
+                shareLink.innerHTML = `${langUI('There is no predefined sequence of quests in Seasons. Each day are randomly selected 4 quests out of the set below. This list only gives you information about the possible quests you may receive each day.')}`;
+            } else {
+                shareLink.innerHTML = `${langUI('There is no predefined sequence of quests in Seasons. Each week are randomly selected 4 quests out of the set below. This list only gives you information about the possible quests you may receive each week.')}`;
+            }
+            var center = document.createElement('center');
+            center.appendChild(shareLink);
+            parent.appendChild(center);
+
+            var numberOfQuests = seasonsQuests[getSelectedSeason()][questType].length;
+
+            var nextQuestMarkedUnknown = false;
+
+            for (let quest = 0; quest <= numberOfQuests; quest++) {
+                if (quest === 0) {
+                    let tr = document.createElement('tr');
+                    let number = document.createElement('th');
+                    number.innerHTML = `${langUI("Number")}`;
+                    tr.appendChild(number);
+                    let task = document.createElement('th');
+                    task.innerHTML = `${langUI("Task")}`;
+                    tr.appendChild(task);
+                    tbody.appendChild(tr);
+                } else {
+                    //insertQuestsAd(quest, tbody);
+                    let tr = document.createElement('tr');
+                    let number = document.createElement('td');
+                    number.style.width = "5%";
+                    number.innerHTML = quest;
+                    tr.appendChild(number);
+                    let task = document.createElement('td');
+                    task.style.width = "90%";
+                    task.id = "quest_task_"+(quest);
+                    task.innerHTML = `${seasonsQuests[getSelectedSeason()][questType][quest-1]}`;
+                    task.className = "nocopy";
+                    tr.appendChild(task);
+                    tbody.appendChild(tr);
+                }
+            }
+        }
+        table.appendChild(tbody);
+        divBBTable.appendChild(table);
+        div.appendChild(divBBTable);
+        parent.appendChild(div);
+    });
 }
 
 function displayPass() {
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = ""
     createSeasonHeader();
-    parent.innerHTML += "rewards + season pass";
+    parent.innerHTML += "This page is under the construction. I will add more content soon. :)";
 }

@@ -690,7 +690,7 @@ var moreNavbarContent = [
         }
     },
     // SEASONS
-    /*{
+    {
         "className":    "dropdown-item text-dark",
         "href":         "seasons.html",
         "id":           "navitem_seasons",
@@ -699,7 +699,7 @@ var moreNavbarContent = [
             "src":      "https://i.ibb.co/87MNrBB/season-pass.png",
             "style":    "width: 25px; margin-right: 6px; margin-bottom: 4px; margin-left: 0px;",
         }
-    },*/
+    },
     /*{
         "className":    "dropdown-item text-dark",
         "href":         "tournaments.html",

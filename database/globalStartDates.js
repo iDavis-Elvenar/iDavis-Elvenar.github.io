@@ -35,14 +35,14 @@ var faStartDates = {
 }
 
 var seasonStartDates = {
-    "month_xxii_": {
+    "december_xxii_": {
         "live": {
-            "start_date": "December 1st 2022",
-            "end_date": "December 31st 2022"
+            "start_date": "__ _th __",
+            "end_date": "__ _th __"
         },
         "beta": {
-            "start_date": "November 23rd 2022",
-            "end_date": "December 23rd 2022"
+            "start_date": "December 8th 2022",
+            "end_date": "February 21st 2023"
         }
     },
 }

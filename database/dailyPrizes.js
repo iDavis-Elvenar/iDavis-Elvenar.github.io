@@ -27,8 +27,9 @@ var dailyPrizes = {
         "INS_UNIT_MC_HR_10",
         "frog_default1_{10}",
         "A_Evt_February_XXI_Aureate_Willow",
-        "INS_UNIT_MC_HM_10",//"A_Evt_Winter_2Pond",
-        "frog_runeshards2_{2}",
+        "INS_UNIT_MC_HM_10",
+        "A_Evt_Winter_2Pond",
+        "frog_runeshards1_{2}",
         "A_Evt_December_XXII_Brisk_Market",
     ],
 

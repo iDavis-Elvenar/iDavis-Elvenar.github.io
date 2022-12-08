@@ -5,28 +5,15 @@ var baseTabsSeasons = [
 ]
 
 var additionalTabsSeasons = {
-    "month_xxii_": [
+    "december_xxii_": [
 
     ],
 }
 
 var seasonsBanners = {
-    "month_xxii_" : "https://i.ibb.co/235tTQ6/season-dreams-banner-ph.png",
+    "december_xxii_" : "https://i.ibb.co/XDx9ZMt/Season-Season-of-Dreams-Banner.png",
 }
 
 var seasonInfoIcons = {
-    "month_xxii_" : {"img":"https://i.ibb.co/L8gkDtv/season-dreams-info.png", "img_width": "28", "img_style": "margin-left: 0px; margin-right: 10px; position: relative;"},
-}
-
-var dates = {
-    "month_xxii_": {
-        "live": {
-            "start_date": "December 1st 2022",
-            "end_date": "December 31st 2022"
-        },
-        "beta": {
-            "start_date": "??? ?th 2022",
-            "end_date": "??? ?th 2022"
-        }
-    },
+    "december_xxii_" : {"img":"https://i.ibb.co/L8gkDtv/season-dreams-info.png", "img_width": "28", "img_style": "margin-left: 0px; margin-right: 10px; position: relative;"},
 }

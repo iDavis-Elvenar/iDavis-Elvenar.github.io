@@ -74,7 +74,7 @@ var allFas = {
 
 var allSeasons = {
     "2022" : [ //NAME,ID,SELECTED,DISABLED == HIDDEN
-        ["Season of Dreams", "month_xxii_",true,false],
+        ["Season of Dreams", "december_xxii_",true,false],
     ]
 }
 
