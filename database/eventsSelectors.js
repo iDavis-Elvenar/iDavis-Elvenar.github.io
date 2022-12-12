@@ -1,5 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
+        "2023" : [
+            ["The Secrets of Alchemy","january_xxiii_",false,true],
+        ],
         "2022" : [
             ["Winter Magic","december_xxii_",true,false],
             ["Mischievous Therapy","october_xxii_",false,false],
@@ -41,6 +44,9 @@ var allEvents = {
         ]
     },
     "all_events" : {
+        "2023" : [
+            ["The Secrets of Alchemy","january_xxiii_",false,true],
+        ],
         "2022" : [
             ["Winter Magic","december_xxii_",true,false],
             ["Mischievous Therapy","october_xxii_",false,false],
@@ -72,8 +78,8 @@ var allFas = {
     ]
 }
 
-var allSeasons = {
-    "2022" : [ //NAME,ID,SELECTED,DISABLED == HIDDEN
+var allSeasons = { //NAME,ID,SELECTED,DISABLED == HIDDEN
+    "2022" : [
         ["Season of Dreams", "december_xxii_",true,false],
     ]
 }

@@ -31,6 +31,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Autumn_XXII_WittyCoon": 9,
     "A_Evt_Evo_October_XXII_Witch_Doctor": 9,
     "A_Evt_Evo_December_XXII_Chromafrost_Glacier": 9,
+    "A_Evt_Evo_January_XXIII_Steam_Golem": 9,
 }
 
 function setAndReload(id) {

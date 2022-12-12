@@ -84,6 +84,16 @@ let eventVideos = {
 }
 
 var eventsDates = {
+    "january_xxiii_": {
+        "live": {
+            "start_date": "December 6th 2022",
+            "end_date": "January 5th 2023"
+        },
+        "beta": {
+            "start_date": "January 10th 2023",
+            "end_date": "January 31st 2023"
+        }
+    },
     "december_xxii_": {
         "live": {
             "start_date": "December 6th 2022",
@@ -127,6 +137,7 @@ let questsLinks = {
     "autumn_xxii_": "bit.ly/AutumnZodiac2022",
     "october_xxii_": "bit.ly/MischievousTherapy2022",
     "december_xxii_": "bit.ly/WinterMagic2022",
+    "january_xxiii_": "bit.ly/TheSecretsOfAlchemy2023",
 }
 
 let eventsDurations = {
@@ -140,6 +151,7 @@ let eventsDurations = {
     "autumn_xxii_": 22,
     "october_xxii_": 22,
     "december_xxii_": 30,
+    "january_xxiii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -173,6 +185,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Autumn_XXII_WittyCoon": "1x Witty Raccoon Artifact",
     "A_Evt_Evo_October_XXII_Witch_Doctor": "1x Witch Doctor Artifact",
     "A_Evt_Evo_December_XXII_Chromafrost_Glacier": "1x Chromafrost Glacier Artifact",
+    "A_Evt_Evo_January_XXIII_Steam_Golem": "1x Steam Golem Artifact"
 }
 
 var feedingEffectsDescriptions = {
@@ -247,6 +260,7 @@ var discardBuildings = [
 ]
 
 var eventsInfoIcons = {
+    "january_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "december_xxii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
@@ -261,8 +275,8 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
-    "december_xxii_": [
-        //{"id":"cryo", "name":"Cryo", "img":"https://i.ibb.co/R03TXkk/cryomana.png", "img_width":"36", "img_style":"margin-left: -2px; margin-right: 4px; margin-bottom: 3px; position: relative;", "href":"#cryo", "file":"cryo.html", "releaseDate":"10/01/2022"},
+    "january_xxiii_": [
+        {"id":"beacons", "name":"Beacons", "img":"https://oxzz.innogamescdn.com/frontend//assets/chest_0_normal-0c90a0cbddb16f387d0a7c6f17a9c790.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#beacons", "file":"beacons.html"},
     ],
     "october_xxii_": [
         {"id":"tools", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"10/01/2022"},

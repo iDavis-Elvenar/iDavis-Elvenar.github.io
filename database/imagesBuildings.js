@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_January_XXIII_Brewing_Institute":"https://i.ibb.co/6wvjpfF/brewing-institute.png",
+    "A_Evt_January_XXIII_Experimental_Distillery":"https://i.ibb.co/DkNbBmx/experimental-distillery.png",
+    "A_Evt_January_XXIII_Potion_Distribution_Post":"https://i.ibb.co/JmSW6vv/potion-distribution-post.png",
+    "A_Evt_January_XXIII_Mana_Rune":"https://i.ibb.co/xHhTcSn/mana-rune.png",
+    "A_Evt_Evo_January_XXIII_Steam_Golem":"https://i.ibb.co/xgwv9pc/steam-golem.png",
     "A_Evt_Season_Dreams_XXII_Burning_Pool":"https://i.ibb.co/PhGg9Bf/burning-pool.png",
     "A_Evt_Generic_Celestial_Titan":"https://i.ibb.co/SrYxR1d/celestial-titan.png",
     "A_Evt_December_XXII_Vibrant_Village":"https://i.ibb.co/yPGf7jr/vibrant-village.png",
