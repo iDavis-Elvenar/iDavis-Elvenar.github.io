@@ -361,6 +361,13 @@ function displayWaypoints() {
     parent.innerHTML = "";
     createFaHeader();
 
+    if (!waypointsData.hasOwnProperty(getSelectedFa())) {
+        let h7 = document.createElement('h7');
+        h7.innerHTML = "<center>Not available yet. Please come back later.</center>"
+        parent.appendChild(h7);
+        return;
+    }
+
     for (let map = 1; map <= 3; map++) {
         let h5map = document.createElement('h5');
         h5map.className = "card-title text-center text-title font-weight-bold";

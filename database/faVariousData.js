@@ -19,6 +19,16 @@ var faBanners = [
 ]
 
 var dates = {
+    "january_xxiii_": {
+        "live": {
+            "start_date": "January __th 2023",
+            "end_date": "January __th 2023"
+        },
+        "beta": {
+            "start_date": "December 15th 2022",
+            "end_date": "December 21st 2022"
+        }
+    },
     "november_xxii_": {
         "live": {
             "start_date": "November 15th 2022",
@@ -49,7 +59,7 @@ var tutorialVideo = "https://www.youtube.com/embed/wIISaa2TiCk";
 var subscribeText = `You can find more video content by <a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="card-title text-center text-link"><b>subscribing to my channel</b></a>.`;
 
 var items = [
-    {"ord":1,"id":"badge_brewery","name":"Dwarven Brewery Badge","requirement":"Produce 50x Beverages"},
+    {"ord":1,"id":"badge_brewery","name":"Dwarven Brewery Badge","requirement":"Produce 25x Beverages"},
     {"ord":2,"id":"badge_treants","name":"Treant Guild Badge","requirement":"Produce 35x Simple Tools"},
     {"ord":3,"id":"badge_bakers","name":"Bakers Guild Badge","requirement":"Produce 20x Bread"},
     {"ord":4,"id":"badge_carpenters","name":"Carpenters Guild Badge","requirement":"Produce 10x Advanced Tools"},
@@ -73,6 +83,7 @@ var items = [
 ]
 
 var excludeItems = {
+    "january_xxiii_": [2,3,7,11,12],
     "november_xxii_": [2,3,7,11,12],
     "october_xxii_": [2,3,7,11,12],
 }
@@ -85,6 +96,23 @@ var prioritiesItems = [
 ]
 
 var stageRewards = {
+    "january_xxiii_": [
+        [
+            {"img":"", "text":"Will be added soon", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+        ],
+        [
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+        ],
+        [
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"", "text":"", "link":"", "description":``},
+        ]
+    ],
     "november_xxii_": [
         [
             {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"1x Ancient Knowledge (15 KP)", "link":"", "description":``},

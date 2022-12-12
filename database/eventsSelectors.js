@@ -71,9 +71,12 @@ var allEvents = {
     }
 }
 
-var allFas = {
-    "2022" : [ //NAME,ID,SELECTED,DISABLED == HIDDEN
-        ["Fellowship Adventures - November 2022", "november_xxii_",true,false],
+var allFas = { //NAME,ID,SELECTED,DISABLED == HIDDEN
+    "2023" : [
+        ["Fellowship Adventures - January 2023", "january_xxiii_",true,false],
+    ],
+    "2022" : [
+        ["Fellowship Adventures - November 2022", "november_xxii_",false,false],
         ["Fellowship Adventures - October 2022", "october_xxii_",false,false],
     ]
 }
