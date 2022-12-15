@@ -90,27 +90,27 @@ var excludeItems = {
 
 var prioritiesItems = [
     "badge_brewery", "badge_treants", "badge_bakers", "badge_carpenters", "badge_farmers", "badge_blacksmith",
-    "luxurious_flacon", "golden_bracelet", "diamond_necklace", "elegant_statue", "money_sack", "badge_wonderhelper", 
-    "wand", "magic_potion", "witch_hat","badge_unit", "ghost_in_a_bottle", "druid_staff",
-    "arcane_residue", "elemental_marbles", "enchanted_tiara",
+    "luxurious_flacon", "golden_bracelet", "diamond_necklace", "elegant_statue", "wand", "magic_potion", "witch_hat",
+    "druid_staff", "badge_wonderhelper", "badge_unit", "money_sack", "arcane_residue", "elemental_marbles",
+    "enchanted_tiara", "ghost_in_a_bottle",
 ]
 
 var stageRewards = {
     "january_xxiii_": [
         [
-            {"img":"", "text":"Will be added soon", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"1x Ancient Knowledge (15 KP)", "link":"", "description":``},
+            {"img":"https://i.ibb.co/9HYLV46/carting-library.png", "text":"Carting Library", "link":"https://idavis-elvenar.com/buildings.html#A_Evt_Expiring_RefundTech", "description":``},
+            {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"10x Time Booster (10 min)", "link":"", "description":``},
         ],
         [
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"2x Ancient Knowledge (20 KP)", "link":"", "description":``},
+            {"img":"https://i.ibb.co/kMLnsDm/rsk-evo.png", "text":"Tome of Snowy Instants", "link":"", "description":`Contains one reward of your choice:<br> <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_Winter_XIX_Gingerbread_Mansion" class="text-link font-weight-bold" target="_blank">Gingerbread Mansion</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_December_XX_Watchful_Winter_Owl" class="text-link font-weight-bold" target="_blank">Watchful Winter Owl</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_December_XXI_Boblins_Express_Service" class="text-link font-weight-bold" target="_blank">Boblin's Express Service</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_December_XXII_Chromafrost_Glacier" class="text-link font-weight-bold" target="_blank">Chromafrost Glacier</a> Artifact, 4x Royal Restoration`},
+            {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"15x Time Booster (30 min)", "link":"", "description":``},
         ],
         [
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
-            {"img":"", "text":"", "link":"", "description":``},
+            {"img":"https://i.ibb.co/VpD8CvF/generic-ferris-wheel.png", "text":"Ferris Wheel Galore", "link":"https://idavis-elvenar.com/buildings.html#A_Evt_Generic_Ferris_Wheel", "description":``},
+            {"img":"https://i.ibb.co/kMLnsDm/rsk-evo.png", "text":"Tome of Snowy Instants", "link":"", "description":`Contains one reward of your choice:<br> <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_Winter_XIX_Gingerbread_Mansion" class="text-link font-weight-bold" target="_blank">Gingerbread Mansion</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_December_XX_Watchful_Winter_Owl" class="text-link font-weight-bold" target="_blank">Watchful Winter Owl</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_December_XXI_Boblins_Express_Service" class="text-link font-weight-bold" target="_blank">Boblin's Express Service</a> Artifact, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_December_XXII_Chromafrost_Glacier" class="text-link font-weight-bold" target="_blank">Chromafrost Glacier</a> Artifact, 4x Royal Restoration`},
+            {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"25x Time Booster (45 min)", "link":"", "description":``},
         ]
     ],
     "november_xxii_": [
