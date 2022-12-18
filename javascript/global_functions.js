@@ -559,3 +559,9 @@ function handleFeatureFlag(flag) {
         }
     }
 }
+
+function getTitleFromGoodImage(id) {
+    let temp = goods_icons[id].substring(goods_icons[id].indexOf("title='")+7);
+    temp = temp.substring(0, temp.indexOf("'"));
+    return temp;
+}

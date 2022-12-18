@@ -779,3 +779,31 @@ function generateMpeChestsCosts() {
         create_exception("Data Generated!",10,'success');
     }
 }
+
+function generateSeasonPass() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('seasonPass').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = [];
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        for (let i = 0; i < data.length; i++) {
+            var level = {};
+            level['requiredXp'] = data[i]['requiredXp'];
+            level['requiresPass'] = data[i]['requiresPass'];
+            level['rewards'] = [];
+            for (let rew = 0; rew < data[i]['rewards'].length; rew++) {
+                var reward = {};
+                reward['type'] = data[i]['rewards'][rew]['type'];
+                reward['subType'] = data[i]['rewards'][rew]['subType'];
+                reward['amount'] = data[i]['rewards'][rew]['amount'];
+                level['rewards'].push(reward);
+            }
+            result.push(level);
+        }
+        console.log(result)
+        saveJSON( JSON.stringify(result), "seasonsPass.json" );
+        create_exception("Data Generated!",10,'success');
+    }
+}

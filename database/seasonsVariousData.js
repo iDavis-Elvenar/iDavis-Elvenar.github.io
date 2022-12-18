@@ -17,3 +17,7 @@ var seasonsBanners = {
 var seasonInfoIcons = {
     "december_xxii_" : {"img":"https://i.ibb.co/L8gkDtv/season-dreams-info.png", "img_width": "28", "img_style": "margin-left: 0px; margin-right: 10px; position: relative;"},
 }
+
+var seasonXp = {
+    "december_xxii_" : {"img":"https://i.ibb.co/vjQD2kX/season-xp-b15fa556d9a49df8ccdbc3fe222f0feb.png"}
+}

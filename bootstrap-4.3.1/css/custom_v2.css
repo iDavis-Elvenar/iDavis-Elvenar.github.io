@@ -355,3 +355,7 @@ background-color: #b9881e;
  .bg-gradient_menu_dropdown {
     background-image: linear-gradient(to bottom right,#ffffff, #ecdec0, #e5ca8f) !important;
  }
+
+.bg-show_button {
+    background-image: linear-gradient(to top,#ecdec0, #f1e7d4, #ecdec0) !important;
+}
