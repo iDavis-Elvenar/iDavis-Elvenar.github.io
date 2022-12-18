@@ -622,9 +622,19 @@ function getWeeklyQueuedQuests() {
 }
 
 function calculateRequiredEffort(parent) {
-    var remainingDays = Math.floor(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["end_date"])) - new Date()) / 60 / 60 / 1000 / 24));
+    var remainingDays = null;
+    if (getServerCalculation() === null) {
+        remainingDays = Math.floor(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()]["live"]["end_date"])) - new Date()) / 60 / 60 / 1000 / 24));
+    } else {
+        remainingDays = Math.floor(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["end_date"])) - new Date()) / 60 / 60 / 1000 / 24));
+    }
     var remainingXp = 0;
-    var arr = localStorage.getItem("season_levels_finished_"+getSelectedSeason()).split(",");
+    var arr = null;
+    if (localStorage.getItem("season_levels_finished_"+getSelectedSeason()) !== null) {
+        arr = localStorage.getItem("season_levels_finished_"+getSelectedSeason()).split(",");
+    } else {
+        arr = [];
+    }
     seasonPassData.forEach(function(elem, index) {
         if (!arr.includes(""+(index+1))) {
             remainingXp += elem["requiredXp"] ? elem["requiredXp"] : 0;
