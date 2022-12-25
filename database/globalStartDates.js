@@ -37,8 +37,8 @@ var faStartDates = {
 var seasonStartDates = {
     "december_xxii_": {
         "live": {
-            "start_date": "__ _th __",
-            "end_date": "__ _th __"
+            "start_date": "__ _th ____",
+            "end_date": "__ _th ____"
         },
         "beta": {
             "start_date": "December 8th 2022",

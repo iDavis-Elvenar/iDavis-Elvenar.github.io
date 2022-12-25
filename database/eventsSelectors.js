@@ -82,7 +82,7 @@ var allFas = { //NAME,ID,SELECTED,DISABLED == HIDDEN
 }
 
 var allSeasons = { //NAME,ID,SELECTED,DISABLED == HIDDEN
-    "2022" : [
+    "2023" : [
         ["Season of Dreams", "december_xxii_",true,false],
     ]
 }

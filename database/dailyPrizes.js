@@ -1,4 +1,9 @@
 var dailyPrizes = {
+
+    "january_xxiii_": [
+        "A_Evt_ManaMill",
+        "A_Evt_June_XXI_Active_Fissure",
+    ],
     
     "december_xxii_": [
         "A_Evt_Winter_2Tree",

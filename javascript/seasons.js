@@ -273,8 +273,6 @@ function displayQuests() {
     });
 }
 
-var cumulativeXp = 0;
-
 function displayPass() {
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = ""
@@ -300,7 +298,7 @@ function displayPass() {
     table.style.width = '100%';
     var tbody = document.createElement('tbody');
 
-    //var cumulativeXp = 0;
+    var cumulativeXp = 0;
 
     for (let level = 0; level < seasonPassData.length; level++) {
         if (level === 0) {
@@ -404,11 +402,12 @@ function displayPass() {
         tdFinish.id = `level_${(level+1)}`;
         let div = document.createElement('div');
         div.className = "form-check";
+        div.id = "form_level_"+(level+1);
         let input = document.createElement('input');
         input.className = "form-check-input";
         input.type = "checkbox";
         input.id = "level_"+(level+1)+"_input";
-        if (Array(localStorage.getItem("season_levels_finished_"+getSelectedSeason())).join().split(',').includes(String((level+1)))) {
+        if (Array(localStorage.getItem("season_"+getSelectedSeason()+"levels_finished")).join().split(',').includes(String((level+1)))) {
             input.checked = true;
         }
         input.onchange = function() {
@@ -424,56 +423,28 @@ function displayPass() {
                 }
             }
             recordFinishedLevels(getSelectedSeason(), seasonPassData.length);
-            calculateRequiredEffort(document.getElementById("effort_calc"));
+            getRequiredEffort(document.getElementById("effort_calc"));
+            inputAdditionalPoints();    
         };
         let label = document.createElement('label');
         label.className = "form-check-label";
         label.htmlFor = "level_"+(level+1)+"_input";
         label.innerHTML = "";
+
         div.appendChild(input);
         div.appendChild(label);
+
         tdFinish.appendChild(div);
         tr.appendChild(tdFinish);
         tbody.appendChild(tr);
-
-        `
-        <div id="collapse_${(level+1)}" class="collapse" aria-labelledby="headingOne">
-            <div class="card-body">
-            <div class="container"><center><span>
-            table
-            </span></center></div>
-            </div>
-        </div>`
-        /*let trCollapse = document.createElement('tr');
-        trCollapse.style.maxHeight = "0px";
-        let tdCollapse = document.createElement('td');
-        tdCollapse.colSpan = 6;
-        let div0 = document.createElement('div');
-        div0.id = `collapse_${(level+1)}`;
-        div0.className = "collapse";
-        div0.colSpan = "6";
-        div0.ariaLabel = "headingOne";
-        div0.style.width = "100%";*/
-        /*let div1 = document.createElement('div');
-        div1.className = "card-body";
-        let div2 = document.createElement('div');
-        div2.className = "container";
-        let cent = document.createElement('center');
-        let span = document.createElement('span');
-        span.innerHTML = "table";
-        cent.appendChild(span);
-        div2.appendChild(cent);
-        div1.appendChild(div2);
-        tdCollapse.appendChild(div1);*/
-        /*tdCollapse.appendChild(div0);
-        trCollapse.appendChild(tdCollapse);
-        tbody.appendChild(trCollapse);*/
     }
 
     table.appendChild(tbody);
     divBBTable.appendChild(table);
     div.appendChild(divBBTable);
     parent.appendChild(div);
+
+    inputAdditionalPoints();
 }
 
 function displayBuilding(level, id) {
@@ -487,7 +458,89 @@ function recordFinishedLevels(seasonId, numberOfLevels) {
             finished.push(level);
         }
     }
-    localStorage.setItem("season_levels_finished_"+seasonId, finished);
+    localStorage.setItem("season_"+seasonId+"levels_finished", finished);
+}
+
+function getFinishedLevels() {
+    if (localStorage.getItem("season_"+getSelectedSeason()+"levels_finished") === null) {
+        localStorage.setItem("season_"+getSelectedSeason()+"levels_finished", []);
+    }
+    return localStorage.getItem("season_"+getSelectedSeason()+"levels_finished");
+}
+
+function inputAdditionalPoints() {
+    if (document.getElementById("pointsBetweenRewards_p_tag")) {
+        document.getElementById("pointsBetweenRewards").value = 0;
+        document.getElementById("pointsBetweenRewards").onchange();
+        setAdditionalPoints(0);
+        document.getElementById("pointsBetweenRewards_p_tag").remove()
+    }
+    for (let level = 0; level < seasonPassData.length-1; level++) {
+        if (document.getElementById("level_"+(level+1)+"_input") !== undefined && document.getElementById("level_"+(level+1)+"_input") !== null) {
+            let noFinishedLevels = getFinishedLevels() === null || getFinishedLevels() === undefined || getFinishedLevels() === "";
+            if ((document.getElementById("level_"+(level+1)+"_input").checked && !document.getElementById("level_"+(level+2)+"_input").checked)
+            || (noFinishedLevels)) {
+                let div = null;
+                if (noFinishedLevels) {
+                    div = document.getElementById("form_level_1");
+                } else {
+                    div = document.getElementById("form_level_"+(level+2));
+                }
+                let inputNumberValue = document.createElement('input');
+                inputNumberValue.type = "number";
+                inputNumberValue.id = `pointsBetweenRewards`;
+                inputNumberValue.name = `pointsAdditional`;
+                inputNumberValue.min = 0;
+                if (seasonPassData[level+1].hasOwnProperty("requiredXp")) {
+                    if (!noFinishedLevels) {
+                        inputNumberValue.max = seasonPassData[level+1]["requiredXp"];
+                    } else {
+                        inputNumberValue.max = seasonPassData[level]["requiredXp"] || 0;
+                    }
+                } else {
+                    inputNumberValue.max = 0;
+                }
+                if (getAdditionalPoints()) {
+                    inputNumberValue.value = getAdditionalPoints();
+                } else {
+                    inputNumberValue.value = 0;
+                }
+                inputNumberValue.onchange = function() {
+                    setAdditionalPoints(inputNumberValue.value);
+                    getRequiredEffort(document.getElementById("effort_calc"));
+                }
+                inputNumberValue.style.width = "38px";
+                inputNumberValue.style.height = "21px";
+                let labelNumberValue = document.createElement('label');
+                labelNumberValue.htmlFor = `pointsBetweenRewards`;
+                labelNumberValue.style.marginLeft = "3px";
+                if (seasonPassData[level+1].hasOwnProperty("requiredXp")) {
+                    if (!noFinishedLevels) {
+                        labelNumberValue.innerHTML = ` /${seasonPassData[level+1]["requiredXp"]}`;
+                    } else {
+                        labelNumberValue.innerHTML = `/${seasonPassData[level]["requiredXp"] || 0}`;
+                    }
+                } else {
+                    labelNumberValue.innerHTML = ` /0`;
+                }
+                let p = document.createElement("p");
+                p.id = "pointsBetweenRewards_p_tag";
+                p.style.marginLeft = "-25px";
+                p.appendChild(inputNumberValue);
+                p.appendChild(labelNumberValue);
+                div.appendChild(p);
+                break;
+            }
+        }
+    }
+}
+
+function setAdditionalPoints(value) {
+    localStorage.setItem("season_"+getSelectedSeason()+"additional_points", value);
+}
+
+function getAdditionalPoints() {
+    return localStorage.getItem("season_"+getSelectedSeason()+"additional_points");
 }
 
 function generateEffortCalculation(parent) {
@@ -512,7 +565,7 @@ function generateEffortCalculation(parent) {
     let fieldset = document.createElement('fieldset');
     let i = document.createElement('i');
     let h7_1 = document.createElement('h7');
-    h7_1.innerHTML = `Calculate: `;
+    h7_1.innerHTML = `Calculate for server: `;
     i.appendChild(h7_1);
 
     let input1 = document.createElement('input');
@@ -527,7 +580,7 @@ function generateEffortCalculation(parent) {
     }
     input1.onchange = function() {
         setServerCalculation("live");
-        calculateRequiredEffort(document.getElementById("effort_calc"));
+        getRequiredEffort(document.getElementById("effort_calc"));
     }
     input1.style.marginLeft = "3px";
     i.appendChild(input1);
@@ -548,7 +601,7 @@ function generateEffortCalculation(parent) {
     }
     input2.onchange = function() {
         setServerCalculation("beta");
-        calculateRequiredEffort(document.getElementById("effort_calc"));
+        getRequiredEffort(document.getElementById("effort_calc"));
     }
     input2.style.marginLeft = "3px";
     i.appendChild(input2);
@@ -562,24 +615,82 @@ function generateEffortCalculation(parent) {
     input3.id = `queued_weekly_quests`;
     input3.name = `queued_quests`;
     input3.min = 0;
+    input3.max = 99;
     if (getWeeklyQueuedQuests()) {
         input3.value = getWeeklyQueuedQuests();
     } else {
         input3.value = 0;
     }
+    if (getAreCompletedWeeklyQuests()) {
+        input3.value = 0;
+        input3.disabled = true;
+    }
     input3.onchange = function() {
         setWeeklyQueuedQuests(input3.value);
-        calculateRequiredEffort(document.getElementById("effort_calc"));
+        getRequiredEffort(document.getElementById("effort_calc"));
     }
     input3.style.marginLeft = "3px";
     input3.style.marginRight = "3px";
     input3.style.width = "40px";
-    input3.style.height = "25px";
+    input3.style.height = "21px";
     i.appendChild(input3);
     let label3 = document.createElement('label');
     label3.htmlFor = `queued_weekly_quests`;
-    label3.innerHTML = `<h7> queued weekly quests.</h7>`;
+    label3.innerHTML = `<h7> queued weekly quests. Completed current: </h7>`;
     i.appendChild(label3);
+
+    let input4 = document.createElement('input');
+    input4.type = "checkbox";
+    input4.id = `completed_current_daily_quests`;
+    input4.name = `completed_daily`;
+    input4.className = "form-check-input";
+    if (getAreCompletedDailyQuests()) {
+        input4.checked = getAreCompletedDailyQuests();
+    } else {
+        input4.checked = false;
+    }
+    input4.onchange = function() {
+        setAreCompletedDailyQuests(input4.checked);
+        getRequiredEffort(document.getElementById("effort_calc"));
+    }
+    input4.style.marginLeft = "3px";
+    input4.style.marginRight = "3px";
+    i.appendChild(input4);
+    let label4 = document.createElement('label');
+    label4.htmlFor = `completed_current_daily_quests`;
+    label4.innerHTML = `<h7> daily</h7>`;
+    label4.style.marginLeft = "20px";
+    i.appendChild(label4);
+
+    let input5 = document.createElement('input');
+    input5.type = "checkbox";
+    input5.id = `completed_current_weekly_quests`;
+    input5.name = `completed_weekly`;
+    input5.className = "form-check-input";
+    if (getAreCompletedWeeklyQuests()) {
+        input5.checked = getAreCompletedWeeklyQuests();
+    } else {
+        input5.checked = false;
+    }
+    input5.onchange = function() {
+        setAreCompletedWeeklyQuests(input5.checked);
+        if (input5.checked) {
+            input3.value = 0;
+            input3.disabled = true;
+            input3.onchange();
+        } else {
+            input3.disabled = false;
+        }
+        getRequiredEffort(document.getElementById("effort_calc"));
+    }
+    input5.style.marginLeft = "3px";
+    input5.style.marginRight = "3px";
+    i.appendChild(input5);
+    let label5 = document.createElement('label');
+    label5.htmlFor = `completed_current_weekly_quests`;
+    label5.innerHTML = `<h7> weekly quests.</h7>`;
+    label5.style.marginLeft = "20px";
+    i.appendChild(label5);
 
     fieldset.appendChild(i);
     divRow2.appendChild(fieldset);
@@ -590,13 +701,50 @@ function generateEffortCalculation(parent) {
     divRow3.innerHTML = ``;
     divRow3.style.textAlign = "left";
     divRow3.id = "effort_calc";
-    divRow3.innerHTML = "<center>This will work soon.</center>";
     divRemainings.appendChild(divRow3);
     center.appendChild(divRemainings);
 
     parent.appendChild(center);
 
-    calculateRequiredEffort(document.getElementById("effort_calc"));
+    getRequiredEffort(document.getElementById("effort_calc"));
+}
+
+function getAreCompletedDailyQuests() {
+    const today = new Date();
+    const result = JSON.parse(localStorage.getItem("season_"+getSelectedSeason()+"completed_current_daily_quests"));
+    if (result === null) {return false;}
+    if (
+        today.getFullYear() === new Date(result["time"]).getFullYear() &&
+        today.getMonth() === new Date(result["time"]).getMonth() &&
+        today.getDate() === new Date(result["time"]).getDate()
+    ) {
+        return result["value"];
+    }
+    return false;
+}
+
+function setAreCompletedDailyQuests(value) {
+    localStorage.setItem("season_"+getSelectedSeason()+"completed_current_daily_quests", JSON.stringify({"value":value, "time":new Date()}));
+}
+
+function getAreCompletedWeeklyQuests() {
+    const today = new Date();
+    const result = JSON.parse(localStorage.getItem("season_"+getSelectedSeason()+"completed_current_weekly_quests"));
+    if (result === null) {return false;}
+    const beginning = new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["start_date"]));
+    if (
+        result["time"] === Math.ceil(((today.getTime() - beginning.getTime()) / 1000 / 60 / 60 / 24) / 7)
+    ) {
+        return result["value"];
+    }
+    return false;
+}
+
+function setAreCompletedWeeklyQuests(value) {
+    const today = new Date();
+    const beginning = new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["start_date"]));
+    const currentWeek = Math.ceil(((today.getTime() - beginning.getTime()) / 1000 / 60 / 60 / 24) / 7);
+    localStorage.setItem("season_"+getSelectedSeason()+"completed_current_weekly_quests", JSON.stringify({"value":value, "time":currentWeek}));
 }
 
 function setServerCalculation(value) {
@@ -605,7 +753,7 @@ function setServerCalculation(value) {
 
 function getServerCalculation() {
     if (localStorage.getItem("season_"+getSelectedSeason()+"serverCalculation") === null) {
-        return null;
+        setServerCalculation("live");
     }
     return localStorage.getItem("season_"+getSelectedSeason()+"serverCalculation");
 }
@@ -621,17 +769,29 @@ function getWeeklyQueuedQuests() {
     return localStorage.getItem("season_"+getSelectedSeason()+"weekly_queued_quests");
 }
 
-function calculateRequiredEffort(parent) {
+function getRequiredEffort(parent) {
     var remainingDays = null;
     if (getServerCalculation() === null) {
-        remainingDays = Math.floor(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()]["live"]["end_date"])) - new Date()) / 60 / 60 / 1000 / 24));
+        remainingDays = Math.ceil(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()]["live"]["end_date"])) - new Date()) / 60 / 60 / 1000 / 24));
     } else {
-        remainingDays = Math.floor(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["end_date"])) - new Date()) / 60 / 60 / 1000 / 24));
+        remainingDays = Math.ceil(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["end_date"])) - new Date()) / 60 / 60 / 1000 / 24));
+    }
+    if (isNaN(remainingDays)) {
+        parent.innerHTML = `<center>No specified date of the event for this server yet. Please wait until the date appears in the <b>Info</b> tab.</center>`;
+        return;
+    }
+    if (new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["start_date"])) > new Date()) {
+        parent.innerHTML = `<center>All the calculations will be available as soon as the event starts on your selected server. Please check the start date of the event in the <b>Info</b> tab.</center>`;
+        return;
+    }
+    if (remainingDays < 0) {
+        parent.innerHTML = `<center>The event is over on your selected server. No further calculation is available.</center>`;
+        return;
     }
     var remainingXp = 0;
     var arr = null;
-    if (localStorage.getItem("season_levels_finished_"+getSelectedSeason()) !== null) {
-        arr = localStorage.getItem("season_levels_finished_"+getSelectedSeason()).split(",");
+    if (localStorage.getItem("season_"+getSelectedSeason()+"levels_finished") !== null) {
+        arr = localStorage.getItem("season_"+getSelectedSeason()+"levels_finished").split(",");
     } else {
         arr = [];
     }
@@ -640,17 +800,75 @@ function calculateRequiredEffort(parent) {
             remainingXp += elem["requiredXp"] ? elem["requiredXp"] : 0;
         }
     });
-
-    var result = `<center>Remains <b>${remainingDays}</b> days until the end of the season. You need <b>${remainingXp}</b> additional 
-    <img src="${seasonXp[getSelectedSeason()]["img"]}" style="width: 20px;"> to collect all rewards.<br>Can I still collect all rewards?<br>
-    <img src="https://i.ibb.co/VxPSfh5/season-green-mark.png"><br><center>`;
-    if (true) {
-        result += `Yes, you can collect all rewards if you complete all the remaining weekly quests and at least __ of the remaining daily quests.
-        (v pripade ze by uz nebolo treba splnit ani vsetky weekly quests, tak uviest kolko staci splnit este dennych (kedze tie su lahsie) a nejak to este prepocitat)
-        
-        <img src="https://i.ibb.co/sy2SB8S/season-red-mark.png">`;
-    } else {
-        result += `You can't collect all rewards in time. If you complete all the remaining quests, you will get the __th reward the most.`
+    if (getAdditionalPoints()) {
+        remainingXp -= getAdditionalPoints();
     }
-    //parent.innerHTML = result;
+
+    var queuedWeeklyQuests = Math.min(99, document.getElementById("queued_weekly_quests").value);
+
+    var completedCurrentDailyQuests = getAreCompletedDailyQuests();
+    var completedCurrentWeeklyQuests = getAreCompletedWeeklyQuests();
+
+    var requiredEffort = calculateQuests(remainingDays, remainingXp, queuedWeeklyQuests, completedCurrentDailyQuests, completedCurrentWeeklyQuests);
+
+    let tempRequiredXp = 0;
+    let lastAvailableReward = undefined;
+    if (!requiredEffort[0]) {
+        let completedLevels = null;
+        if (getFinishedLevels()) {
+            completedLevels = getFinishedLevels().split(",");
+        } else {
+            completedLevels = [0];
+        }
+        var availablePointsToEarn = requiredEffort[2];
+        for (let level = Math.max(parseInt(completedLevels[completedLevels.length-1]), 0); level < seasonPassData.length; level++) {
+            if (seasonPassData[level].hasOwnProperty("requiredXp")) {
+                tempRequiredXp += seasonPassData[level]["requiredXp"];
+            }
+            if (tempRequiredXp - (parseInt(getAdditionalPoints()) ? parseInt(getAdditionalPoints()) : 0) > availablePointsToEarn) {
+                lastAvailableReward = level;
+                break;
+            }
+        }
+    }
+
+    var result = `<center>Remain <b>${remainingDays}</b> days until the end of the season. You need <b>${remainingXp}</b> additional 
+    <img src="${seasonXp[getSelectedSeason()]["img"]}" style="width: 20px;"> to collect all rewards.<br>Can you still collect all the rewards?`;
+    if (requiredEffort[0]) {
+        result += `<br><img src="https://i.ibb.co/VxPSfh5/season-green-mark.png"><br>`;
+        if (localStorage.getItem("season_"+getSelectedSeason()+"levels_finished") &&
+        localStorage.getItem("season_"+getSelectedSeason()+"levels_finished").split(",").length === seasonPassData.length) {
+            result += `Yes, you have already collected all rewards.`;
+        } else {
+        result += `Yes, you can collect all rewards if you won't miss more than <b>${requiredEffort[3]} daily quests</b> and complete all the remaining weekly quests (including
+        those you have in your queue).`;
+        }
+    } else {
+        result += `<br><img src="https://i.ibb.co/sy2SB8S/season-red-mark.png"><br>
+        No, unfortunately you can't collect all rewards anymore, as you have missed too many daily quests already.
+        If you complete all the remaining daily quests from now on and all the available weekly quests (including
+        those you have in your queue), you can collect up to <b>${lastAvailableReward}th reward</b>.`
+    }
+    result += `</center>`;
+    parent.innerHTML = result;
 }
+
+function calculateQuests(daysLeft, pointsLeft, queuedWeeklyQuests, completedCurrentDaily, completedCurrentWeekly) {
+    const dailyQuests = ((daysLeft+1) * 4) - (completedCurrentDaily ? 4 : 0);  //+1 je tam ak budu denne ulohy aj posledny den (od 1 v noci do 11tej doobeda)
+    const dailyPoints = dailyQuests * 5;
+    const weeklyQuests = (Math.ceil(daysLeft / 7) * 4) - (completedCurrentWeekly ? 4 : 0);
+    const weeklyPoints = (parseInt(queuedWeeklyQuests) + weeklyQuests) * 70;
+    const totalPoints = dailyPoints + weeklyPoints;
+    if (totalPoints < pointsLeft) {
+        return [false, null, totalPoints, null];
+    }
+    var tempPoints = totalPoints;
+    var dailyQuestsToMiss = 0;
+    while (tempPoints-5 >= pointsLeft) {
+        tempPoints = tempPoints - 5;
+        dailyQuestsToMiss++;
+    }
+    const percentage = ((totalPoints / pointsLeft) * 100).toFixed(2);
+    return [true, percentage, totalPoints, dailyQuestsToMiss];
+}
+  
