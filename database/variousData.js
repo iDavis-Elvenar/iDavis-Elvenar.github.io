@@ -711,7 +711,7 @@ var moreNavbarContent = [
         "innerHTML":    "Seasons",
         "img": {
             "src":      "https://i.ibb.co/87MNrBB/season-pass.png",
-            "style":    "width: 25px; margin-right: 6px; margin-bottom: 4px; margin-left: 0px;",
+            "style":    "width: 25px; margin-right: 6px; margin-bottom: 1px; margin-left: 0px;",
         }
     },
     /*{
