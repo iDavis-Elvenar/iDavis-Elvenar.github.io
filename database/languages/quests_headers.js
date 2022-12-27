@@ -96,6 +96,25 @@ let languageSpecificNotes = {
         </div>
     </div>
 </div>`,
+    "hu": `<div class="card-spoiler border-spoiler mb-3" style="margin-top: 10px; padding-bottom: 10px; padding-top: 7px;" id="cz_disclaimer">
+    <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+            <button class="btn btn-spoiler btn-smbtn-danger " data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <h7>Megjegyzések</h7>
+            </button>
+        </h2>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+        <div class="card-body">
+        <div class="container"><center><span>
+        Jelenleg olyan embereket keresek, akik szeretnének segíteni a küldetések listáinak fordításában. 
+        Ez körülbelül 60 kifejezés egyszeri lefordítását foglalja magában, amelyeket minden jövőbeni 
+        eseményen használni fognak. Ha felkeltettük érdeklődését, kérem keressen fel ezen a weboldalon 
+        található Kapcsolati oldalam segítségével.
+        </span></center></div>
+        </div>
+    </div>
+</div>`,
     "pl": `<div class="card-spoiler border-spoiler mb-3" style="margin-top: 10px; padding-bottom: 10px; padding-top: 7px;" id="cz_disclaimer">
     <div class="card-header" id="headingOne">
         <h2 class="mb-0">
