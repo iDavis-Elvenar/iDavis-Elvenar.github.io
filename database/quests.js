@@ -88,7 +88,7 @@ var quests = {
         "Preskúmaj 1 provinciu ALEBO získaj 3x spojovací činidlo",
         "Kúp 12 VB + vyrieš 6 stretov na mape ALEBO vyrieš 6 turnajových stretov ALEBO vyrieš 6 stretov vo veži",
         "Získaj 5x ľubovoľné kúzlo ALEBO použi 5x ľubovoľné kúzlo + vyskúmaj 1 technológiu ALEBO vyrieš 10 stretov na mape ALEBO vyrieš 10 turnajových stretov ALEBO vyrieš 10 stretov vo veži",
-        "Vytvor 7x ponuku na trhu + kúp 20 VB",
+        "Vytvor 7x ponuku na trhu + utrať 20 VB",
         "Použi 3-4x ľubovoľné kúzlo + preskúmaj 1 provinciu ALEBO získaj 3x spojovací činidlo",
         "Vyrieš 8 stretov na mape ALEBO vyrieš 8 turnajových stretov ALEBO vyrieš 8 stretov vo veži + získaj 20-24x opar vidění ALEBO preskúmaj 1 provinciu",
         "Vyrob nejaké množstvo zásob ALEBO trénuj nejaké množstvo jednotiek + vyrob nejaké množstvo ľubovoľného zboží",
