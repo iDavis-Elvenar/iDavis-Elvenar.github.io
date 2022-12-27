@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_ManaMill",
         "A_Evt_June_XXI_Active_Fissure",
         "INS_UNIT_HM_10",
+        "A_Evt_January_XXIII_Potion_Distribution_Post",
     ],
     
     "december_xxii_": [
