@@ -6,7 +6,7 @@ var dailyPrizes = {
         "INS_UNIT_HM_10",
         "A_Evt_January_XXIII_Potion_Distribution_Post",
         //missed
-        "A_Evt_January_XXII_Spectral_Moths,
+        "A_Evt_January_XXII_Spectral_Moths",
     ],
     
     "december_xxii_": [
