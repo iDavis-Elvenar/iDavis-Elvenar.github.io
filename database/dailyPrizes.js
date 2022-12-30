@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_January_XXIII_Potion_Distribution_Post",
         //missed
         "A_Evt_January_XXII_Spectral_Moths",
+        "frog_default1_{10}",
     ],
     
     "december_xxii_": [
