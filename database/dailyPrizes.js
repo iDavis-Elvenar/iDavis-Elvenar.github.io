@@ -8,6 +8,7 @@ var dailyPrizes = {
         //missed
         "A_Evt_January_XXII_Spectral_Moths",
         "frog_default1_{10}",
+        "A_Evt_June_XXI_Hungry_Treasure",
     ],
     
     "december_xxii_": [
