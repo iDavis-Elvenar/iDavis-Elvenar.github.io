@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_January_XXII_Spectral_Moths",
         "frog_default1_{10}",
         "A_Evt_June_XXI_Hungry_Treasure",
+        "INS_REV_SQD_25",
     ],
     
     "december_xxii_": [
