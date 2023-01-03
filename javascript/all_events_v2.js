@@ -809,24 +809,26 @@ function displayInfo() {
     announcementDiv.style.paddingRight = "50px";
     announcementDiv.style.marginTop = "20px";
     announcementDiv.style.marginBottom = "30px";
-    for (let i = 0; i < eventsAnnouncements[selectedEvent].split("<br>").length; i++) {
-        let p = document.createElement('p');
-        p.innerHTML = `${eventsAnnouncements[selectedEvent].split("<br>")[i].italics()}`;
-        p.style.fontSize = "small";
-        if (i != eventsAnnouncements[selectedEvent].split("<br>").length-1) {
-            p.style.marginBottom = "-5px";
+    if (eventsAnnouncements.hasOwnProperty(selectedEvent)) {
+        for (let i = 0; i < eventsAnnouncements[selectedEvent].split("<br>").length; i++) {
+            let p = document.createElement('p');
+            p.innerHTML = `${eventsAnnouncements[selectedEvent].split("<br>")[i].italics()}`;
+            p.style.fontSize = "small";
+            if (i != eventsAnnouncements[selectedEvent].split("<br>").length-1) {
+                p.style.marginBottom = "-5px";
+            }
+            announcementDiv.appendChild(p);
         }
-        announcementDiv.appendChild(p);
     }
     document.getElementById('column_with_tables').appendChild(announcementDiv);
 
     let center = document.createElement('center');
 
-    createDatesTable(center,     eventsDates[getSelectedEvent()]["live"]["start_date"],
-                                                                        eventsDates[getSelectedEvent()]["live"]["end_date"],
-                                                                        eventsDates[getSelectedEvent()]["beta"]["start_date"],
-                                                                        eventsDates[getSelectedEvent()]["beta"]["end_date"]);
-    
+    createDatesTable(center,     eventStartDates[getSelectedEvent()]["live"]["start_date"],
+                                                    eventStartDates[getSelectedEvent()]["live"]["end_date"],
+                                                    eventStartDates[getSelectedEvent()]["beta"]["start_date"],
+                                                    eventStartDates[getSelectedEvent()]["beta"]["end_date"]);
+                        
     document.getElementById("column_with_tables").appendChild(center);
 
     create_exception("Info Generated!", 3, 'success');

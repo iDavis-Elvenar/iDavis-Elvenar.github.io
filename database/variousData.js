@@ -28,7 +28,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
-    "", "", "", "", "", "", "", "", "spire_diplomacy_joker", "spell_pet_food_1", "random" ];
+    "", "", "", "", "", "", "", "combiningcatalyst", "spire_diplomacy_joker", "spell_pet_food_1", "random" ];
 
 var numberOfChapters = 20;
 
@@ -83,29 +83,6 @@ let eventVideos = {
     "autumn_xxii_": "https://www.youtube.com/embed/vlPzSeNLfuQ",
 }
 
-var eventsDates = {
-    "january_xxiii_": {
-        "live": {
-            "start_date": "December 6th 2022",
-            "end_date": "January 5th 2023"
-        },
-        "beta": {
-            "start_date": "January 10th 2023",
-            "end_date": "January 31st 2023"
-        }
-    },
-    "december_xxii_": {
-        "live": {
-            "start_date": "December 6th 2022",
-            "end_date": "January 5th 2023"
-        },
-        "beta": {
-            "start_date": "November 11th 2022",
-            "end_date": "December 12th 2022"
-        }
-    },
-}
-
 let eventBetaStarts = { // MM/DD/YYYY
     "february_xxi_": "01/24/2021",
     "march_xxi_": "03/04/2021",
@@ -124,6 +101,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "autumn_xxii_": "08/18/2022",
     "october_xxii_": "09/29/2022",
     "december_xxii_": "11/11/2022",
+    "january_xxiii_": "01/03/2023",
 }
 
 let questsLinks = {
@@ -219,6 +197,7 @@ var iconsImages = {
     "mana_decay_reduction":"https://i.ibb.co/mqPfvMr/decay-mana.png",
     "seeds_decay_reduction":"https://i.ibb.co/6F4H5Wf/decay-seeds.png",
     "unurium_decay_reduction":"https://i.ibb.co/6WLCvRV/decay-unurium.png",
+    "mana":"https://i.ibb.co/VxCCGww/mana-increase.png",
 }
 
 var iconsTitles = {
@@ -276,7 +255,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "january_xxiii_": [
-        {"id":"beacons", "name":"Beacons", "img":"https://oxzz.innogamescdn.com/frontend//assets/chest_0_normal-0c90a0cbddb16f387d0a7c6f17a9c790.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#beacons", "file":"beacons.html"},
+        {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/VVSyYpP/january-xxiii-beacon3.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html"},
     ],
     "october_xxii_": [
         {"id":"tools", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"10/01/2022"},

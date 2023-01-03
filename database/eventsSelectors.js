@@ -1,10 +1,10 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2023" : [
-            ["The Secrets of Alchemy","january_xxiii_",false,true],
+            ["The Secrets of Alchemy","january_xxiii_",true,false],
         ],
         "2022" : [
-            ["Winter Magic","december_xxii_",true,false],
+            ["Winter Magic","december_xxii_",false,false],
             ["Mischievous Therapy","october_xxii_",false,false],
             ["Autumn Zodiac","autumn_xxii_",false,false],
             ["A Gateway into the Past","august_xxii_",false,false],
@@ -45,10 +45,10 @@ var allEvents = {
     },
     "all_events" : {
         "2023" : [
-            ["The Secrets of Alchemy","january_xxiii_",false,true],
+            ["The Secrets of Alchemy","january_xxiii_",true,false],
         ],
         "2022" : [
-            ["Winter Magic","december_xxii_",true,false],
+            ["Winter Magic","december_xxii_",false,false],
             ["Mischievous Therapy","october_xxii_",false,false],
             ["Autumn Zodiac","autumn_xxii_",false,false],
             ["A Gateway into the Past","august_xxii_",false,false],

@@ -128,7 +128,15 @@ function searchForBuildingID(data, idToSearch) {
     let result = [];
     for (let i = 0; i < data.length; i++) {
         if (data[i]['id'] === idToSearch) {
-            result.push(data[i]);
+            isDiscarded = false;
+            for (let j = 0; j < discardBuildings.length; j++) {
+                if (idToSearch.includes(discardBuildings[j])) {
+                    isDiscarded = true;
+                }
+            }
+            if (!isDiscarded) {
+                result.push(data[i]);
+            }
         }
     }
     return result;
@@ -551,8 +559,8 @@ function prepSetAlertElements() {
 
 function handleFeatureFlag(flag) {
     if (flag === "info_tab") {
-        if (eventsDates.hasOwnProperty(getSelectedEvent()) && new Date(convertDisplayDateToJavascriptFormatDate(eventsDates[getSelectedEvent()]["beta"]["start_date"])) >= 
-        new Date(convertDisplayDateToJavascriptFormatDate(eventsDates[featureFlagsInitialEvents["info_tab"]]["beta"]["start_date"]))) {
+        if (eventStartDates.hasOwnProperty(getSelectedEvent()) && new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[getSelectedEvent()]["beta"]["start_date"])) >= 
+        new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[featureFlagsInitialEvents["info_tab"]]["beta"]["start_date"]))) {
             return baseTabsEvents;
         } else {
             return baseTabsEvents.filter(element => element["id"] !== "info_panel_div");
