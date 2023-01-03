@@ -14,7 +14,7 @@ var quests = {
         "Utrať 8 VB ALEBO vyrob 6x produkt základnej manufaktury (3-hodinový) + získaj 10x opar vidění ALEBO získaj 4 relikvie",
         "Získaj nejaké množstvo mincí + utrať 4 VB",
         "Preskúmaj 1 provinciu ALEBO vyrob 3x košík jedla + vyrieš 4 strety na mape ALEBO vyrieš 4 turnajové strety",
-        "Získaj 5x opar vidění ALEBO vyrieš 3 strety na mape vyjednávaním + získaj 3x ľubovoľné kúzlo ALEBO preskúmaj 1 provinciu",
+        "Získaj 5x opar vidění ALEBO vyrieš 3 strety na mape vyjednávaním ALEBO získaj 3x ľubovoľné kúzlo ALEBO preskúmaj 1 provinciu",  //ešte skontrolovať
         "Vyrieš 4 strety na mape ALEBO vyrieš 4 turnajové strety + vyrob 2x košík jedla",
         "Získaj 4 relikvie + vyrob 4x produkt základnej manufaktury (3-hodinový)",
         "Utrať 4 VB + obchoduj 3x u obchodníka",
