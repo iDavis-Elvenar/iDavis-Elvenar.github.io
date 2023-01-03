@@ -1,5 +1,5 @@
 var quests = {
-    "january_xxiii_": [
+    "fixing": [
         "Získaj nejaké množstvo mincí",
         "Vyrob 8x nápoje",
         "Utrať 8 VB",
