@@ -21,8 +21,8 @@ var faBanners = [
 var dates = {
     "january_xxiii_": {
         "live": {
-            "start_date": "January __th 2023",
-            "end_date": "January __th 2023"
+            "start_date": "January 12th 2023",
+            "end_date": "January 18th 2023"
         },
         "beta": {
             "start_date": "December 15th 2022",
