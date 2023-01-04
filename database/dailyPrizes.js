@@ -12,6 +12,7 @@ var dailyPrizes = {
         "INS_REV_SQD_25",
         "A_Evt_January_XXII_Ancient_Taste",
         "frog_grr_5_{1}",
+        "A_Evt_January_XXIII_Experimental_Distillery",
     ],
     
     "december_xxii_": [
