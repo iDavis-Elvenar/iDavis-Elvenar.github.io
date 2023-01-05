@@ -256,7 +256,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "january_xxiii_": [
-        {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/VVSyYpP/january-xxiii-beacon3.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html"},
+        {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/VVSyYpP/january-xxiii-beacon3.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html", "releaseDate":"01/06/2023"},
     ],
     "october_xxii_": [
         {"id":"tools", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"10/01/2022"},
