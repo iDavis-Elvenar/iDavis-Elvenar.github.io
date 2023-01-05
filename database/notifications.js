@@ -109,7 +109,7 @@ var notifications = {
         "repeatAfter":18000,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":100
     },
     "11":{  // NEW FEATURE ON THE WEBSITE #2
