@@ -14,6 +14,7 @@ var dailyPrizes = {
         "frog_grr_5_{1}",
         "A_Evt_January_XXIII_Experimental_Distillery",
         "INS_UNIT_TG_LR_10",
+        "A_Evt_July_XX_Copper_Dragon",
     ],
     
     "december_xxii_": [
