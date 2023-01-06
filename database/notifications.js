@@ -87,19 +87,18 @@ var notifications = {
         "active":false,
         "priority":10
     },
-    "9":{  // SPECIAL VIDEO PROMO #2
+    "9":{  // FELLOWSHIP ADVENTURES
         "id":9,
-        "text":`<h4 class="alert-heading">Introducing: Chests Comparator on the website!</h4>
-  <p>The Lucky Little Fin event comes with the chests rotation system and together with this event I'm introducing to you the brand-new tool on my website - the Chests Comparator. All the details can be found in the video below!</p>
+        "text":`<h4 class="alert-heading">New round of Fellowship Adventures is coming!</h4>
+  <p>The next round of Fellowship Adventures is getting close and will soon start on Live servers!</p>
   <hr>
-  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/zqgJUn2kRNA"></iframe></p><br>
-  <center><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Subscribe</a> to stay with the latest Elvenar videos!</center>
-    <hr>
-    <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
-        "repeatAfter":172800,
-        "style":"info",
-        "duration":500,
-        "active":false,
+  <center><img src="https://i.ibb.co/fMX3t5B/fellowship-adventures-banner.png" style="width: 40%;"></center><br>
+    <center><p>Get ready with my newest page on the website, which you can access from the navigation bar under the "More" button!<br>
+    Note: This round will feature a brand-new map layout, called <b>Map H</b>. You can find all the updated paths inside the <img src="https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/fellowship-adventures.html#waypoints" class="alert-link">Waypoints</a> tab.</p></center>`,
+        "repeatAfter":1,//86400,
+        "style":"warning",
+        "duration":45,
+        "active":true,
         "priority":40
     },
     "10":{  // EVENTS SIMULTANEOUSLY
@@ -119,7 +118,7 @@ var notifications = {
         "repeatAfter":604800,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":40
     },
 }
