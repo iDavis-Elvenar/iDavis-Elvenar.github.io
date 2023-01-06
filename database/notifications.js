@@ -95,7 +95,7 @@ var notifications = {
   <center><img src="https://i.ibb.co/fMX3t5B/fellowship-adventures-banner.png" style="width: 40%;"></center><br>
     <center><p>Get ready with my newest page on the website, which you can access from the navigation bar under the "More" button!<br>
     Note: This round will feature a brand-new map layout, called <b>Map H</b>. You can find all the updated paths inside the <img src="https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/fellowship-adventures.html#waypoints" class="alert-link">Waypoints</a> tab.</p></center>`,
-        "repeatAfter":1,//86400,
+        "repeatAfter":86400,
         "style":"warning",
         "duration":45,
         "active":true,
