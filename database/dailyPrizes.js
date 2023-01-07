@@ -5,7 +5,7 @@ var dailyPrizes = {
         "A_Evt_June_XXI_Active_Fissure",
         "INS_UNIT_HM_10",
         "A_Evt_January_XXIII_Potion_Distribution_Post",
-        //missed
+        "INS_KP_AW_15",
         "A_Evt_January_XXII_Spectral_Moths",
         "frog_default1_{10}",
         "A_Evt_June_XXI_Hungry_Treasure",
@@ -15,6 +15,7 @@ var dailyPrizes = {
         "A_Evt_January_XXIII_Experimental_Distillery",
         "INS_UNIT_TG_LR_10",
         "A_Evt_July_XX_Copper_Dragon",
+        "A_Evt_July_XX_Sorcerers_Gathering",
     ],
     
     "december_xxii_": [
