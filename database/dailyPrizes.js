@@ -16,6 +16,7 @@ var dailyPrizes = {
         "INS_UNIT_TG_LR_10",
         "A_Evt_July_XX_Copper_Dragon",
         "A_Evt_July_XX_Sorcerers_Gathering",
+        "frog_runeshards2_{1}",
     ],
     
     "december_xxii_": [
