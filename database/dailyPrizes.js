@@ -17,6 +17,7 @@ var dailyPrizes = {
         "A_Evt_July_XX_Copper_Dragon",
         "A_Evt_July_XX_Sorcerers_Gathering",
         "frog_runeshards2_{1}",
+        "A_Evt_June_XXI_Unexpected_Morning",
     ],
     
     "december_xxii_": [
