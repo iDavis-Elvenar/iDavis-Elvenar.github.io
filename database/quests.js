@@ -57,7 +57,7 @@ var quests = {
         "Utrať 20 VB ALEBO vyrob nejaké množstvo základného zboží",
         "Získaj nejaké množstvo mincí + získaj 12 relikvií",
         "Vyrob 14x obyčajné nástroje + získaj 2x ľubovoľné kúzlo ALEBO preskúmaj 1 provinciu",
-        "Vyrieš 6 stretov na mape ALEBO vyrieš 6 stretov vo veži + vyskúmaj 1 technológiu ALEBO získaj 15x opar vidění",
+        "Vyrieš 8 stretov na mape ALEBO vyrieš 8 stretov vo veži + vyskúmaj 1 technológiu ALEBO získaj 15x opar vidění",
         "Vyrob nejaké množstvo zásob ALEBO trénuj nejaké množstvo jednotiek + získaj 2x spojovací činidlo ALEBO preskúmaj 1 provinciu",
         "Vytvor 4x ponuku na trhu + získaj nejaké množstvo mincí",
         "Získaj 16 relikvií + získaj 20x opar vidění ALEBO vylepši 2 budovy na level 5 alebo vyšší",
