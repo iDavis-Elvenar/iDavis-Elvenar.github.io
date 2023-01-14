@@ -22,6 +22,7 @@ var dailyPrizes = {
         "A_Evt_June_XXI_Body_Transmutation",
         "INS_UNIT_TG_MA_10",
         "A_Evt_July_XX_Astral_Crevice",
+        "A_Evt_January_XXIII_Experimental_Distillery",
     ],
     
     "december_xxii_": [
