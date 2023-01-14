@@ -76,6 +76,7 @@ var quests = {
         "Preskúmaj 1 provinciu ALEBO vylepši 2 budovy na level 5 alebo vyšší + vyrob nejaké množstvo základného zboží ALEBO získaj 20x opar vidění",
         "Vyrob nejaké množstvo zásob + utrať 16 VB",
         "Získaj 20 relikvií + získaj 2x spojovací činidlo ALEBO preskúmaj 1 provinciu",
+        "Vyrieš 10 stretov na mape ALEBO vyrieš 10 turnajových stretov ALEBO vyrieš 10 stretov vo veži + preskúmaj 1 provinciu ALEBO vylepši 2 budovy na level 5 alebo vyšší",
     ],
     "december_xxii_": [
         "Získaj nejaké množstvo mincí",
