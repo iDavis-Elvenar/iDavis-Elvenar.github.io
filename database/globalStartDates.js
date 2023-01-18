@@ -1,8 +1,8 @@
 var eventStartDates = {
     "january_xxiii_": {
         "live": {
-            "start_date": "January __th 2023",
-            "end_date": "February __th 2023"
+            "start_date": "January 24th 2023",
+            "end_date": "February 14th 2023"
         },
         "beta": {
             "start_date": "January 3th 2023",
@@ -47,8 +47,8 @@ var faStartDates = {
 var seasonStartDates = {
     "december_xxii_": {
         "live": {
-            "start_date": "__ _th ____",
-            "end_date": "__ _th ____"
+            "start_date": "January 26th 2023",
+            "end_date": "March _th 2023"
         },
         "beta": {
             "start_date": "December 8th 2022",
