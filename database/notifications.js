@@ -98,7 +98,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "10":{  // EVENTS SIMULTANEOUSLY
