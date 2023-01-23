@@ -40,7 +40,7 @@ var notifications = {
         "active":false,
         "priority":30
     },
-    "5":{  // NEW FEATURE ON THE WEBSITE
+    "5":{  // NEW CHAPTER
         "id":5,
         "text":`<h4 class="alert-heading">Chapter 20 has arrived in Beta!</h4>
         <hr>
@@ -101,8 +101,22 @@ var notifications = {
         "active":false,
         "priority":40
     },
-    "10":{  // EVENTS SIMULTANEOUSLY
+    "10":{  // SEASON
         "id":10,
+        "text":`<h4 class="alert-heading">Season of Dreams is here!</h4>
+  <p>The brand-new type of event is soon beginning on your server!</p>
+  <hr>
+  <center><img src="https://i.ibb.co/XDx9ZMt/Season-Season-of-Dreams-Banner.png" style="width: 40%;"></center><br>
+    <center><p>The <b>Season of Dreams</b> is approaching quickly and I have prepared the brand-new page on my website that helps you get ready for everything the Seasons have to offer! You can access this page from the navigation bar under the "More" button!<br>
+    Daily Quests, Weekly Quests, many interesting rewards and the <b>Season Pass calculator</b>! All of this is now covered in the newest <img src="https://i.ibb.co/87MNrBB/season-pass.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/seasons.html" class="alert-link">Seasons</a> page!</p></center>`,
+        "repeatAfter":86400,
+        "style":"warning",
+        "duration":60,
+        "active":false,
+        "priority":40
+    },
+    "11":{  // EVENTS SIMULTANEOUSLY
+        "id":11,
         "text":`<h4 class="alert-heading">The Secrets of Alchemy Event starts on Beta!</h4>
         <p>Because a new event is starting on Beta, the default filter has been changed so that the new event appears first. But don't worry - you can access the <b>Winter Magic</b> event using the drop-down menu on the top of the website - just like any other event from the past!</p>`,
         "repeatAfter":18000,
@@ -111,8 +125,8 @@ var notifications = {
         "active":false,
         "priority":100
     },
-    "11":{  // NEW FEATURE ON THE WEBSITE #2
-        "id":11,
+    "12":{  // NEW FEATURE ON THE WEBSITE #2
+        "id":12,
         "text":`<h4 class="alert-heading">HU language is now supported!</h4>
         <p>You can now select this language using the Globe button in the top right corner of the site.</p>`,
         "repeatAfter":604800,

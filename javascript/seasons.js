@@ -15,6 +15,8 @@ function setView(newView) {
 }
 
 function switchView(type) {
+    prepSetAlertElements();
+    create_exception("Loading...", 10000, 'primary');
     if (type === "info" && view !== "info") {
         displayBase();
         view = "info";
@@ -37,6 +39,7 @@ function switchView(type) {
             }
         }
     }
+    create_exception("Content Generated!", 3, 'success');
 }
 
 function setLeftBar() {
@@ -170,7 +173,7 @@ function displayBase() {
     
     let center = document.createElement('center');
     let p = document.createElement('p');
-    p.innerHTML = "This page is under the construction. I will add more content soon. :)"
+    p.innerHTML = seasonsIntro;
     center.appendChild(p);
 
     createDatesTable(center,    seasonStartDates[getSelectedSeason()]["live"]["start_date"],
@@ -179,6 +182,28 @@ function displayBase() {
                                 seasonStartDates[getSelectedSeason()]["beta"]["end_date"]);
     
     parent.appendChild(center);
+
+    var h5 = document.createElement('h5');
+    h5.id = 'video';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: ${langUI("Tutorial Video")} ::..<br>`;
+    parent.appendChild(h5);
+   
+    var center2 = document.createElement('center');
+    var iframe = document.createElement('iframe');
+    iframe.style.width = ""+Math.min(560, (window.innerWidth-50))+"px";//'560px';
+    iframe.style.height = ""+315.2*(Math.min(560, (window.innerWidth-50))/560)+"px";
+    //iframe.allow = 'autoplay; encrypted-media';
+    iframe.setAttribute('allowFullScreen', 'true');
+    iframe.src = seasonsVideos[getSelectedSeason()];
+    iframe.style.marginBottom = '15px';
+    center2.appendChild(iframe);
+    parent.appendChild(center2);
+
+    let subscribe = document.createElement('center');
+    subscribe.innerHTML = subscribeText;
+    parent.appendChild(subscribe);
 }
 
 function displayQuests() {
@@ -197,6 +222,7 @@ function displayQuests() {
             h5.innerHTML = `..:: ${langUI("Set of Daily Quests")} ::..<br>`;
         } else {
             h5.innerHTML = `..:: ${langUI("Set of Weekly Quests")} ::..<br>`;
+            h5.style.marginTop = "20px";
         }
         parent.appendChild(h5);
         var div = document.createElement('div');
@@ -227,9 +253,9 @@ function displayQuests() {
             shareLink.className = "card-title text-center";
             shareLink.style.textAlign = "left";
             if (questType == "daily") {
-                shareLink.innerHTML = `${langUI('There is no predefined sequence of quests in Seasons. Each day are randomly selected 4 quests out of the set below. This list only gives you information about the possible quests you may receive each day.')}`;
+                shareLink.innerHTML = `${langUI('There is no predefined sequence of quests in Seasons. Each day 4 quests are randomly selected out of the set below. The list below only gives you idea about the possible quests you may receive, this is not their exact order.<br><img src="https://i.ibb.co/tXpRkmP/season-quests-and-rewards.png"><br><b>Note:</b> Some quests are conditional. The condition that must apply for receiving the particular quest is stated in the "Can appear if" column. Of course, all the remaining quests are conditional upon unlocking the required resources in the research tree, I did just not mention it for every quest (e.g. quest requiring ascended goods can only appear if you have ascended goods unlocked etc.).')}`;
             } else {
-                shareLink.innerHTML = `${langUI('There is no predefined sequence of quests in Seasons. Each week are randomly selected 4 quests out of the set below. This list only gives you information about the possible quests you may receive each week.')}`;
+                shareLink.innerHTML = `${langUI('There is no predefined sequence of quests in Seasons. Each week 4 quests are randomly selected out of the set below. The list below only gives you idea about the possible quests you may receive, this is not their exact order.')}`;
             }
             var center = document.createElement('center');
             center.appendChild(shareLink);
@@ -243,25 +269,45 @@ function displayQuests() {
                 if (quest === 0) {
                     let tr = document.createElement('tr');
                     let number = document.createElement('th');
+                    number.style.width = "5%";
                     number.innerHTML = `${langUI("Number")}`;
                     tr.appendChild(number);
                     let task = document.createElement('th');
+                    task.style.width = "65%";
                     task.innerHTML = `${langUI("Task")}`;
                     tr.appendChild(task);
+                    let appearsIf = document.createElement('th');
+                    appearsIf.style.width = "25%";
+                    appearsIf.innerHTML = `${langUI("Can appear if")}`;
+                    tr.appendChild(appearsIf);
+                    let reward = document.createElement('th');
+                    reward.style.width = "5%";
+                    reward.innerHTML = `${langUI("Reward")}`;
+                    tr.appendChild(reward);
                     tbody.appendChild(tr);
                 } else {
                     //insertQuestsAd(quest, tbody);
                     let tr = document.createElement('tr');
                     let number = document.createElement('td');
-                    number.style.width = "5%";
                     number.innerHTML = quest;
                     tr.appendChild(number);
                     let task = document.createElement('td');
-                    task.style.width = "90%";
                     task.id = "quest_task_"+(quest);
-                    task.innerHTML = `${seasonsQuests[getSelectedSeason()][questType][quest-1]}`;
+                    if (typeof seasonsQuests[getSelectedSeason()][questType][quest-1] === "object") {
+                        task.innerHTML = `${seasonsQuests[getSelectedSeason()][questType][quest-1][0]}`;
+                    } else {
+                        task.innerHTML = `${seasonsQuests[getSelectedSeason()][questType][quest-1]}`;
+                    }
                     task.className = "nocopy";
                     tr.appendChild(task);
+                    let appearsIf = document.createElement('td');
+                    if (typeof seasonsQuests[getSelectedSeason()][questType][quest-1] === "object") {
+                        appearsIf.innerHTML = `${seasonsQuests[getSelectedSeason()][questType][quest-1][1]}`;
+                    }
+                    tr.appendChild(appearsIf);
+                    let reward = document.createElement('td');
+                    reward.innerHTML = `${seasonQuestsRewards[getSelectedSeason()][questType]} <img src="${seasonXp[getSelectedSeason()]["img"]}" style="width: 22px;">`;
+                    tr.appendChild(reward);
                     tbody.appendChild(tr);
                 }
             }
@@ -270,7 +316,65 @@ function displayQuests() {
         divBBTable.appendChild(table);
         div.appendChild(divBBTable);
         parent.appendChild(div);
+        if (questType === "daily") {
+            generateDailyChest(parent);
+        }
     });
+}
+
+function generateDailyChest(parent) {
+    let p = document.createElement('p');
+    p.innerHTML = `<center><h7>If you manage to complete all 4 daily quests, you can unlock the following Daily Chest:</h7></center>`;
+    p.style.marginTop = "-8px";
+    p.style.marginBottom = "-8px";
+    parent.appendChild(p);
+    var div = document.createElement('div');
+    div.style.textAlign = 'center';
+    div.style.marginBottom = '10px';
+    div.style.marginTop = '10px';
+    var divBBTable = document.createElement('div');
+    divBBTable.className = 'bbTable';
+    var table = document.createElement('table');
+    table.className = 'table-primary';
+    table.style.width = '100%';
+    var tbody = document.createElement('tbody');
+    let tr = document.createElement('tr');
+    let tdChest = document.createElement('td');
+    tdChest.rowSpan = "2";
+    tdChest.style.width = "30%";
+    let chest = document.createElement('img');
+    chest.src = "https://i.ibb.co/BPr1Ych/season-daily-chest.png";
+    let center = document.createElement('center');
+    center.appendChild(chest);
+    tdChest.appendChild(center);
+    tr.appendChild(tdChest);
+    seasonDailyChests[getSelectedSeason()].forEach(function(reward) {
+        let th = document.createElement('th');
+        th.style.width = ""+(70/seasonDailyChests[getSelectedSeason()].length)+"%";
+        th.innerHTML = reward["percentage"]+"%";
+        tr.appendChild(th);
+    });
+    let tr2 = document.createElement('tr');
+    seasonDailyChests[getSelectedSeason()].forEach(function(reward) {
+        let td = document.createElement('td');
+        if (reward["type"] === "flexible_reward") {
+            let flexibleRew = flexibleRewards.filter(elem => elem.id === reward["subType"])[0];
+            td.innerHTML = `${flexibleRew["rewards"][parseInt(getPresetChapter())-1]["amount"]*reward["amount"]} ${goods_icons[flexibleRew["rewards"][parseInt(getPresetChapter())-1]["subType"]]}`;
+        } else {
+            if (goods_icons[reward["subType"]] === undefined) {
+                td.innerHTML = `${reward["amount"]} ${goods_icons[reward["subType"].toLowerCase()]}`;
+            } else {
+                td.innerHTML = `${reward["amount"]} ${goods_icons[reward["subType"]]}`;
+            }
+        }
+        tr2.appendChild(td);
+    });
+    tbody.appendChild(tr);
+    tbody.appendChild(tr2);
+    table.appendChild(tbody);
+    divBBTable.appendChild(table);
+    div.appendChild(divBBTable);
+    parent.appendChild(div);
 }
 
 function displayPass() {
