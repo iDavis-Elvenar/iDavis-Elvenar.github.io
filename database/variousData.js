@@ -117,6 +117,7 @@ let questsLinks = {
     "october_xxii_": "bit.ly/MischievousTherapy2022",
     "december_xxii_": "bit.ly/WinterMagic2022",
     "january_xxiii_": "bit.ly/TheSecretsOfAlchemy2023",
+    "february_xxiii_": "bit.ly/TheGreatExcavation2023",
 }
 
 let eventsDurations = {
