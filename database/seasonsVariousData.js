@@ -23,7 +23,7 @@ var seasonXp = {
 }
 
 var seasonsVideos = {
-    "december_xxii_": "",
+    "december_xxii_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
 }
 
 var seasonQuestsRewards = {
