@@ -48,7 +48,7 @@ var seasonStartDates = {
     "december_xxii_": {
         "live": {
             "start_date": "January 26th 2023",
-            "end_date": "March _th 2023"
+            "end_date": "April 11th 2023"
         },
         "beta": {
             "start_date": "December 8th 2022",

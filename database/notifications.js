@@ -112,7 +112,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":60,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "11":{  // EVENTS SIMULTANEOUSLY

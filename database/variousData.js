@@ -665,7 +665,7 @@ var grIds = {
 }
 
 var navbarNew = {
-    "active": false,
+    "active": true,
     "img": {
         "src": "https://i.ibb.co/n0KBPgt/new-sign.png",
         "style": "width: 50px;",
