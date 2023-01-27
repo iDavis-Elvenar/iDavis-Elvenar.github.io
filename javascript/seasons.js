@@ -720,17 +720,13 @@ function generateEffortCalculation(parent) {
     input3.name = `queued_quests`;
     input3.min = 0;
     input3.max = 99;
-    if (getWeeklyQueuedQuests()) {
-        input3.value = getWeeklyQueuedQuests();
+    if (getWeeklyQuestsLeft()) {
+        input3.value = getWeeklyQuestsLeft();
     } else {
         input3.value = 0;
     }
-    if (getAreCompletedWeeklyQuests()) {
-        input3.value = 0;
-        input3.disabled = true;
-    }
     input3.onchange = function() {
-        setWeeklyQueuedQuests(input3.value);
+        setWeeklyQuestsLeft(input3.value);
         getRequiredEffort(document.getElementById("effort_calc"));
     }
     input3.style.marginLeft = "3px";
@@ -740,7 +736,7 @@ function generateEffortCalculation(parent) {
     i.appendChild(input3);
     let label3 = document.createElement('label');
     label3.htmlFor = `queued_weekly_quests`;
-    label3.innerHTML = `<h7> queued weekly quests. Completed current: </h7>`;
+    label3.innerHTML = `<h7> completed weekly quests. Completed current: </h7>`;
     i.appendChild(label3);
 
     let input4 = document.createElement('input');
@@ -762,39 +758,9 @@ function generateEffortCalculation(parent) {
     i.appendChild(input4);
     let label4 = document.createElement('label');
     label4.htmlFor = `completed_current_daily_quests`;
-    label4.innerHTML = `<h7> daily</h7>`;
+    label4.innerHTML = `<h7> daily quests.</h7>`;
     label4.style.marginLeft = "20px";
     i.appendChild(label4);
-
-    let input5 = document.createElement('input');
-    input5.type = "checkbox";
-    input5.id = `completed_current_weekly_quests`;
-    input5.name = `completed_weekly`;
-    input5.className = "form-check-input";
-    if (getAreCompletedWeeklyQuests()) {
-        input5.checked = getAreCompletedWeeklyQuests();
-    } else {
-        input5.checked = false;
-    }
-    input5.onchange = function() {
-        setAreCompletedWeeklyQuests(input5.checked);
-        if (input5.checked) {
-            input3.value = 0;
-            input3.disabled = true;
-            input3.onchange();
-        } else {
-            input3.disabled = false;
-        }
-        getRequiredEffort(document.getElementById("effort_calc"));
-    }
-    input5.style.marginLeft = "3px";
-    input5.style.marginRight = "3px";
-    i.appendChild(input5);
-    let label5 = document.createElement('label');
-    label5.htmlFor = `completed_current_weekly_quests`;
-    label5.innerHTML = `<h7> weekly quests.</h7>`;
-    label5.style.marginLeft = "20px";
-    i.appendChild(label5);
 
     fieldset.appendChild(i);
     divRow2.appendChild(fieldset);
@@ -831,26 +797,6 @@ function setAreCompletedDailyQuests(value) {
     localStorage.setItem("season_"+getSelectedSeason()+"completed_current_daily_quests", JSON.stringify({"value":value, "time":new Date()}));
 }
 
-function getAreCompletedWeeklyQuests() {
-    const today = new Date();
-    const result = JSON.parse(localStorage.getItem("season_"+getSelectedSeason()+"completed_current_weekly_quests"));
-    if (result === null) {return false;}
-    const beginning = new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["start_date"]));
-    if (
-        result["time"] === Math.ceil(((today.getTime() - beginning.getTime()) / 1000 / 60 / 60 / 24) / 7)
-    ) {
-        return result["value"];
-    }
-    return false;
-}
-
-function setAreCompletedWeeklyQuests(value) {
-    const today = new Date();
-    const beginning = new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["start_date"]));
-    const currentWeek = Math.ceil(((today.getTime() - beginning.getTime()) / 1000 / 60 / 60 / 24) / 7);
-    localStorage.setItem("season_"+getSelectedSeason()+"completed_current_weekly_quests", JSON.stringify({"value":value, "time":currentWeek}));
-}
-
 function setServerCalculation(value) {
     localStorage.setItem("season_"+getSelectedSeason()+"serverCalculation", value);
 }
@@ -862,15 +808,15 @@ function getServerCalculation() {
     return localStorage.getItem("season_"+getSelectedSeason()+"serverCalculation");
 }
 
-function setWeeklyQueuedQuests(value) {
-    localStorage.setItem("season_"+getSelectedSeason()+"weekly_queued_quests", value);
+function setWeeklyQuestsLeft(value) {
+    localStorage.setItem("season_"+getSelectedSeason()+"weekly_quests_left", value);
 }
 
-function getWeeklyQueuedQuests() {
-    if (localStorage.getItem("season_"+getSelectedSeason()+"weekly_queued_quests") === null) {
+function getWeeklyQuestsLeft() {
+    if (localStorage.getItem("season_"+getSelectedSeason()+"weekly_quests_left") === null) {
         return null;
     }
-    return localStorage.getItem("season_"+getSelectedSeason()+"weekly_queued_quests");
+    return localStorage.getItem("season_"+getSelectedSeason()+"weekly_quests_left");
 }
 
 function getRequiredEffort(parent) {
@@ -908,12 +854,10 @@ function getRequiredEffort(parent) {
         remainingXp -= getAdditionalPoints();
     }
 
-    var queuedWeeklyQuests = Math.min(99, document.getElementById("queued_weekly_quests").value);
-
     var completedCurrentDailyQuests = getAreCompletedDailyQuests();
-    var completedCurrentWeeklyQuests = getAreCompletedWeeklyQuests();
+    var weeklyQuestsLeft = parseInt(getWeeklyQuestsLeft());
 
-    var requiredEffort = calculateQuests(remainingDays, remainingXp, queuedWeeklyQuests, completedCurrentDailyQuests, completedCurrentWeeklyQuests);
+    var requiredEffort = calculateQuests(remainingDays, remainingXp, completedCurrentDailyQuests, weeklyQuestsLeft);
 
     let tempRequiredXp = 0;
     let lastAvailableReward = undefined;
@@ -957,11 +901,11 @@ function getRequiredEffort(parent) {
     parent.innerHTML = result;
 }
 
-function calculateQuests(daysLeft, pointsLeft, queuedWeeklyQuests, completedCurrentDaily, completedCurrentWeekly) {
+function calculateQuests(daysLeft, pointsLeft, completedCurrentDaily, weeklyQuestsLeft) {
     const dailyQuests = ((daysLeft+1) * 4) - (completedCurrentDaily ? 4 : 0);  //+1 je tam ak budu denne ulohy aj posledny den (od 1 v noci do 11tej doobeda)
     const dailyPoints = dailyQuests * 5;
-    const weeklyQuests = (Math.ceil(daysLeft / 7) * 4) - (completedCurrentWeekly ? 4 : 0);
-    const weeklyPoints = (parseInt(queuedWeeklyQuests) + weeklyQuests) * 70;
+    const weeklyQuests = (Math.ceil(daysLeft / 7) * 4) - weeklyQuestsLeft;
+    const weeklyPoints = (weeklyQuests) * 70;
     const totalPoints = dailyPoints + weeklyPoints;
     if (totalPoints < pointsLeft) {
         return [false, null, totalPoints, null];
