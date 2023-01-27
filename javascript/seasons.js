@@ -855,7 +855,7 @@ function getRequiredEffort(parent) {
     }
 
     var completedCurrentDailyQuests = getAreCompletedDailyQuests();
-    var weeklyQuestsLeft = parseInt(getWeeklyQuestsLeft());
+    var weeklyQuestsLeft = isNaN(parseInt(getWeeklyQuestsLeft())) ? 0 : parseInt(getWeeklyQuestsLeft());
 
     var requiredEffort = calculateQuests(remainingDays, remainingXp, completedCurrentDailyQuests, weeklyQuestsLeft);
 
