@@ -826,6 +826,12 @@ function getRequiredEffort(parent) {
     } else {
         remainingDays = Math.ceil(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["end_date"])) - new Date()) / 60 / 60 / 1000 / 24));
     }
+    var duration = null;
+    if (getServerCalculation() === null) {
+        duration = Math.ceil(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()]["live"]["end_date"])) - new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()]["live"]["start_date"]))) / 60 / 60 / 1000 / 24));
+    } else {
+        duration = Math.ceil(((new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["end_date"])) - new Date(convertDisplayDateToJavascriptFormatDate(seasonStartDates[getSelectedSeason()][getServerCalculation()]["start_date"]))) / 60 / 60 / 1000 / 24));
+    }
     if (isNaN(remainingDays)) {
         parent.innerHTML = `<center>No specified date of the event for this server yet. Please wait until the date appears in the <b>Info</b> tab.</center>`;
         return;
@@ -857,7 +863,7 @@ function getRequiredEffort(parent) {
     var completedCurrentDailyQuests = getAreCompletedDailyQuests();
     var weeklyQuestsLeft = isNaN(parseInt(getWeeklyQuestsLeft())) ? 0 : parseInt(getWeeklyQuestsLeft());
 
-    var requiredEffort = calculateQuests(remainingDays, remainingXp, completedCurrentDailyQuests, weeklyQuestsLeft);
+    var requiredEffort = calculateQuests(remainingDays, duration, remainingXp, completedCurrentDailyQuests, weeklyQuestsLeft);
 
     let tempRequiredXp = 0;
     let lastAvailableReward = undefined;
@@ -901,10 +907,10 @@ function getRequiredEffort(parent) {
     parent.innerHTML = result;
 }
 
-function calculateQuests(daysLeft, pointsLeft, completedCurrentDaily, weeklyQuestsLeft) {
+function calculateQuests(daysLeft, duration, pointsLeft, completedCurrentDaily, weeklyQuestsLeft) {
     const dailyQuests = ((daysLeft+1) * 4) - (completedCurrentDaily ? 4 : 0);  //+1 je tam ak budu denne ulohy aj posledny den (od 1 v noci do 11tej doobeda)
     const dailyPoints = dailyQuests * 5;
-    const weeklyQuests = (Math.ceil(daysLeft / 7) * 4) - weeklyQuestsLeft;
+    const weeklyQuests = (Math.ceil(duration / 7) * 4) - weeklyQuestsLeft;
     const weeklyPoints = (weeklyQuests) * 70;
     const totalPoints = dailyPoints + weeklyPoints;
     if (totalPoints < pointsLeft) {
