@@ -1,4 +1,14 @@
 var eventStartDates = {
+    "february_xxiii_": {
+        "live": {
+            "start_date": "February __th 2023",
+            "end_date": "February __th 2023"
+        },
+        "beta": {
+            "start_date": "February 1st 2023",
+            "end_date": "February __th 2023"
+        }
+    },
     "january_xxiii_": {
         "live": {
             "start_date": "January 24th 2023",

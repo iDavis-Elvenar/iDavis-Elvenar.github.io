@@ -132,6 +132,7 @@ let eventsDurations = {
     "october_xxii_": 22,
     "december_xxii_": 30,
     "january_xxiii_": 22,
+    "february_xxiii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -200,6 +201,7 @@ var iconsImages = {
     "seeds_decay_reduction":"https://i.ibb.co/6F4H5Wf/decay-seeds.png",
     "unurium_decay_reduction":"https://i.ibb.co/6WLCvRV/decay-unurium.png",
     "mana":"https://i.ibb.co/VxCCGww/mana-increase.png",
+    "orcs":"https://i.ibb.co/V22qvDZ/orcs-increase-small.png",
 }
 
 var iconsTitles = {
@@ -232,15 +234,18 @@ var setNames = {
     "scroll_sorcerers" : "Pilgrim's Manor",
     "scroll_sorcerers_xxii": "Forbidden Ruins",
     "merge_dwarvengame": "Dwarven Citadel",
+    "tile_amuni_xxiii": "Ancient Promise",
 }
 
 var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
+    "february_xxiii_"
 ]
 
 var eventsInfoIcons = {
+    "february_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "january_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "december_xxii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }

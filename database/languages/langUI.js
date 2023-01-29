@@ -85,6 +85,7 @@ let ui = {
         "Pilgrim's Manor": "Panství poutníka",
         "Forbidden Ruins": "Zapovězené ruiny",
         "Dwarven Citadel": "Trpasličí citadela",
+        "Ancient Promise": "Starodávný slib",
         //EVENTS
         "Mischievous Therapy": "Nezbedná terapie",
         "A Gateway into the Past": "Brána do minulosti",
@@ -199,6 +200,7 @@ let ui = {
         "Pilgrim's Manor": "Herrenhaus der Pilger",
         "Forbidden Ruins": "Verbotene Ruinen",
         "Dwarven Citadel": "Zwergen-Zitadelle",
+        "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
         "Mischievous Therapy": "Schelmische Therapie",
         "A Gateway into the Past": "Ein Tor in die Vergangenheit",
@@ -313,6 +315,7 @@ let ui = {
         "Pilgrim's Manor": "Manoir du pèlerin",
         "Forbidden Ruins": "Ruines interdites",
         "Dwarven Citadel": "Citadelle naine",
+        "Ancient Promise": "Ancienne promesse",
         //EVENTS
         "Mischievous Therapy": "Le Guérisseur",
         "A Gateway into the Past": "Un passage vers le passé",
@@ -427,6 +430,7 @@ let ui = {
         "Pilgrim's Manor": "Zarándok Kastély",
         "Forbidden Ruins": "Tiltott Romok",
         "Dwarven Citadel": "Törp Citadella",
+        "Ancient Promise": "Ősi Ígéret",
         //EVENTS
         "Mischievous Therapy": "Csintalan Terápia",
         "A Gateway into the Past": "Átjáró a múltba",
@@ -541,6 +545,7 @@ let ui = {
         "Pilgrim's Manor": "Dwór Pielgrzyma",
         "Forbidden Ruins": "Zakazane Ruiny",
         "Dwarven Citadel": "Krasnoludzka Cytadela",
+        "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
         "Mischievous Therapy": "Złośliwa Terapia",
         "A Gateway into the Past": "Brama do Przeszłości",
@@ -655,6 +660,7 @@ let ui = {
         "Pilgrim's Manor": "Особняк пилигрима",
         "Forbidden Ruins": "Запретные руины",
         "Dwarven Citadel": "Гномья цитадель",
+        "Ancient Promise": "Древнее обещание",
         //EVENTS
         "Mischievous Therapy": "Озорная терапия",
         "A Gateway into the Past": "Врата в прошлое",

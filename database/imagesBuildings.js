@@ -1,4 +1,13 @@
 var images_buildings = {
+    "A_Evt_Set_February_XXIII_Gift_of_Ashni":"https://i.ibb.co/7YNVrG8/gift-of-ashni.png",
+    "A_Evt_Set_February_XXIII_Heart_of_Asim":"https://i.ibb.co/G9gx1mP/heart-of-asim.png",
+    "A_Evt_Set_February_XXIII_Unearthed_History":"https://i.ibb.co/frXmw69/unearthed-history.png",
+    "A_Evt_Set_February_XXIII_Endless_Pit":"https://i.ibb.co/MBHzWbd/endless-pit.png",
+    "A_Evt_Set_February_XXIII_Artifacts_of_Yore":"https://i.ibb.co/WVRsT4q/artifacts-of-yore.png",
+    "A_Evt_February_XXIII_Pyramid_of_Reunion":"https://i.ibb.co/Mnyjq1s/pyramid-of-reunion.png",
+    "A_Evt_February_XXIII_Golden_Tears":"https://i.ibb.co/RbwB31Z/golden-tears.png",
+    "A_Evt_February_XXIII_Mule_Lifter":"https://i.ibb.co/SPRhwc2/mule-lifter.png",
+    "A_Evt_February_XXIII_Rhythm_of_War":"https://i.ibb.co/hdBfjNr/rhythm-of-war.png",
     "A_Evt_January_XXIII_Brewing_Institute":"https://i.ibb.co/6wvjpfF/brewing-institute.png",
     "A_Evt_January_XXIII_Experimental_Distillery":"https://i.ibb.co/DkNbBmx/experimental-distillery.png",
     "A_Evt_January_XXIII_Potion_Distribution_Post":"https://i.ibb.co/JmSW6vv/potion-distribution-post.png",
