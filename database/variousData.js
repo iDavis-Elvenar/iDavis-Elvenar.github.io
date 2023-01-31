@@ -103,6 +103,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "october_xxii_": "09/29/2022",
     "december_xxii_": "11/11/2022",
     "january_xxiii_": "01/03/2023",
+    "february_xxiii_": "02/02/2023",
 }
 
 let questsLinks = {
@@ -262,7 +263,9 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "february_xxiii_": [
-        {"id":"minigame", "name":"Minigame", "img":"https://i.ibb.co/4gVknWq/EL-akcia-febru-r-2022-currency.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#minigame", "file":"minigame.html"},
+        {"id":"tools", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"02/02/2023"},
+        {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html", "releaseDate":"02/03/2023"},
+        {"id":"playground", "name":"Playground", "img":"https://i.ibb.co/nmkBMxB/february-xxiii-chest5.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html", "releaseDate":"02/20/2023"},
     ],
     "january_xxiii_": [
         {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/VVSyYpP/january-xxiii-beacon3.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html"},

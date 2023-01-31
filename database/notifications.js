@@ -115,7 +115,7 @@ var notifications = {
         "active":true,
         "priority":40
     },
-    "11":{  // EVENTS SIMULTANEOUSLY
+    "11":{  // EVENTS SIMULTANEOUSLY - BETA PRIMARY
         "id":11,
         "text":`<h4 class="alert-heading">The Secrets of Alchemy Event starts on Beta!</h4>
         <p>Because a new event is starting on Beta, the default filter has been changed so that the new event appears first. But don't worry - you can access the <b>Winter Magic</b> event using the drop-down menu on the top of the website - just like any other event from the past!</p>`,
@@ -125,8 +125,18 @@ var notifications = {
         "active":false,
         "priority":100
     },
-    "12":{  // NEW FEATURE ON THE WEBSITE #2
+    "12":{  // EVENTS SIMULTANEOUSLY - BETA SECONDARY
         "id":12,
+        "text":`<h4 class="alert-heading">The Great Excavation Event starts on Beta!</h4>
+        <p>The new event is starting on Beta and you can now access the information using the drop-down menu at the top of the website! Use "Select event" filter to preview the buildings or event information about the upcoming event!</p>`,
+        "repeatAfter":18000,
+        "style":"warning",
+        "duration":60,
+        "active":false,
+        "priority":100
+    },
+    "13":{  // NEW FEATURE ON THE WEBSITE #2
+        "id":13,
         "text":`<h4 class="alert-heading">HU language is now supported!</h4>
         <p>You can now select this language using the Globe button in the top right corner of the site.</p>`,
         "repeatAfter":604800,
