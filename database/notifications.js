@@ -109,7 +109,7 @@ var notifications = {
   <center><img src="https://i.ibb.co/XDx9ZMt/Season-Season-of-Dreams-Banner.png" style="width: 40%;"></center><br>
     <center><p>The <b>Season of Dreams</b> is approaching quickly and I have prepared the brand-new page on my website that helps you get ready for everything the Seasons have to offer! You can access this page from the navigation bar under the "More" button!<br>
     Daily Quests, Weekly Quests, many interesting rewards and the <b>Season Pass calculator</b>! All of this is now covered in the newest <img src="https://i.ibb.co/87MNrBB/season-pass.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/seasons.html" class="alert-link">Seasons</a> page!</p></center>`,
-        "repeatAfter":86400,
+        "repeatAfter":172800,
         "style":"warning",
         "duration":60,
         "active":true,
@@ -128,11 +128,11 @@ var notifications = {
     "12":{  // EVENTS SIMULTANEOUSLY - BETA SECONDARY
         "id":12,
         "text":`<h4 class="alert-heading">The Great Excavation Event starts on Beta!</h4>
-        <p>The new event is starting on Beta and you can now access the information using the drop-down menu at the top of the website! Use "Select event" filter to preview the buildings or event information about the upcoming event!</p>`,
+        <p>The new event is starting on Beta and you can now access the information using the drop-down menu at the top of the website! Use "Select event" filter to preview the buildings or event information about this upcoming event!</p>`,
         "repeatAfter":18000,
         "style":"warning",
         "duration":60,
-        "active":false,
+        "active":true,
         "priority":100
     },
     "13":{  // NEW FEATURE ON THE WEBSITE #2
