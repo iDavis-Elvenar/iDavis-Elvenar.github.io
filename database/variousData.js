@@ -64,7 +64,7 @@ let eventBanners = {
     "october_xxii_": "https://i.ibb.co/XxLJQ3K/EL-akcia-okt-ber-2022-banner.png",
     "december_xxii_": "https://i.ibb.co/HDK8HvH/EL-akcia-december-2022-banner.png",
     "january_xxiii_": "https://i.ibb.co/jrDGZLf/EL-akcia-janu-r-2023-banner.png",
-    "february_xxiii_": "https://media.innogamescdn.com/com_ONYX_ZZ/announcements/amuni/Great_Excavation/mainbanner_amuni2023.png",
+    "february_xxiii_": "https://i.ibb.co/W6KHd3z/EL-akcia-febru-r-2023-banner.png",
 }
 
 let eventVideos = {
@@ -264,9 +264,9 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "february_xxiii_": [
-        {"id":"tools", "name":"Tools", "img":"https://i.imgur.com/w9tdYsb.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"02/02/2023"},//https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png
-        {"id":"strategies", "name":"Strategies", "img":"https://i.imgur.com/Zcg9Yd9.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html", "releaseDate":"02/02/2023"},//https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png
-        {"id":"playground", "name":"Playground", "img":"https://i.imgur.com/9tRyl5b.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html", "releaseDate":"02/20/2023"},//https://i.ibb.co/nmkBMxB/february-xxiii-chest5.png
+        {"id":"tools", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"02/02/2023"},
+        {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html", "releaseDate":"02/02/2023"},
+        {"id":"playground", "name":"Playground", "img":"https://i.ibb.co/nmkBMxB/february-xxiii-chest5.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html", "releaseDate":"02/20/2023"},
     ],
     "january_xxiii_": [
         {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/VVSyYpP/january-xxiii-beacon3.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html"},
