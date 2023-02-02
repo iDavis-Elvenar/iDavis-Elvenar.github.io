@@ -134,7 +134,7 @@ let eventsDurations = {
     "october_xxii_": 22,
     "december_xxii_": 30,
     "january_xxiii_": 22,
-    "february_xxiii_": 22,
+    "february_xxiii_": 19,
 }
 
 let evoUpgradeCosts = {
