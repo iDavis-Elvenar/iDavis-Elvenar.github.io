@@ -611,6 +611,7 @@ function createCalendar(filteredData, selectedEvent) {
     var prizesCounter = 1;
     let counterDayDisplayed = false;
     let counterPrizeDisplayed
+    let currentEventDay = getCurrentEventDay();
     for (var line = 0; line < numberOfRows; line++) {
         var trDays = document.createElement('tr');
         for (var i = 0; i < 7; i++) {
@@ -618,9 +619,9 @@ function createCalendar(filteredData, selectedEvent) {
             //tdDay.style.width = ""+(100/7)+"%";
             if (daysCounter <= filteredData.length) {
                 if (getDaysFromStart(selectedEvent, "")+1 === daysCounter) {
-                    tdDay.innerHTML = `<b>${daysCounter}. ${langUI("day")}</b>`
+                    tdDay.innerHTML = `<b>${daysCounter === currentEventDay ? "➙ " : ""}${daysCounter}. ${langUI("day")}${daysCounter === currentEventDay ? " <" : ""}</b>`
                 } else {
-                    tdDay.innerHTML = `<b>${daysCounter}. ${langUI("day")}</b>`
+                    tdDay.innerHTML = `<b>${daysCounter === currentEventDay ? "⪼ " : ""}${daysCounter}. ${langUI("day")}${daysCounter === currentEventDay ? " ⪻" : ""}</b>`
                 }
             } else {
                 if (daysCounter < dailyPrizes[selectedEvent].length+1 && !counterDayDisplayed) {
@@ -661,6 +662,17 @@ function createCalendar(filteredData, selectedEvent) {
     divBBTable.appendChild(table);
     div.appendChild(divBBTable);
     document.getElementById('column_with_tables').appendChild(div);
+}
+
+function getCurrentEventDay() {
+    if (eventStartDates.hasOwnProperty(getSelectedEvent()) && !eventStartDates[getSelectedEvent()]["live"]["start_date"].includes("_")) {
+        let startDateDisplayFormat = convertDisplayDateToJavascriptFormatDate(eventStartDates[getSelectedEvent()]["live"]["start_date"]);
+        let startDate = new Date(startDateDisplayFormat);
+        let currentDate = new Date();
+        let difference = currentDate.getTime() - startDate.getTime();
+        let totalDays = Math.ceil(difference / (1000 * 3600 * 24));
+        return totalDays;
+    }
 }
 
 function insertVideo(selectedEvent, parent) {
