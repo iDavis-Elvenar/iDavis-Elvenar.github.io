@@ -619,7 +619,7 @@ function createCalendar(filteredData, selectedEvent) {
             //tdDay.style.width = ""+(100/7)+"%";
             if (daysCounter <= filteredData.length) {
                 if (getDaysFromStart(selectedEvent, "")+1 === daysCounter) {
-                    tdDay.innerHTML = `<b>${daysCounter === currentEventDay ? "➙ " : ""}${daysCounter}. ${langUI("day")}${daysCounter === currentEventDay ? " <" : ""}</b>`
+                    tdDay.innerHTML = `<b>${daysCounter === currentEventDay ? "⪼ " : ""}${daysCounter}. ${langUI("day")}${daysCounter === currentEventDay ? " ⪻" : ""}</b>`
                 } else {
                     tdDay.innerHTML = `<b>${daysCounter === currentEventDay ? "⪼ " : ""}${daysCounter}. ${langUI("day")}${daysCounter === currentEventDay ? " ⪻" : ""}</b>`
                 }
