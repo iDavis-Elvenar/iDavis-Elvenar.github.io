@@ -2,6 +2,7 @@ var dailyPrizes = {
 
     "february_xxiii_": [
         "A_Evt_February_XXIII_Golden_Tears",
+        "A_Evt_June_XX_Amuni_Ship",
         /*"A_Evt_February_XXIII_Mule_Lifter", //skontrolovat ci je toto naozaj prva
         "INS_UNIT_TG_MA_10",
         "A_Evt_June_XX_Dwarf_Ship",
