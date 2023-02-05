@@ -4,12 +4,14 @@ var dailyPrizes = {
         "A_Evt_February_XXIII_Golden_Tears",
         "A_Evt_June_XX_Amuni_Ship",
         "INS_UNIT_HR_10",
+        "A_Evt_February_XXII_Desert_Watchtower",
         /*"A_Evt_February_XXIII_Mule_Lifter", //skontrolovat ci je toto naozaj prva
         "INS_UNIT_TG_MA_10",
         "A_Evt_June_XX_Dwarf_Ship",
         "A_Evt_February_XXII_Furry_Sands",
         "INS_KP_{15}",
-        "A_Evt_June_XX_Human_Ship",*/
+        "A_Evt_June_XX_Human_Ship",
+        "INS_REV_SQD_75",*/
     ],
 
     "january_xxiii_": [
