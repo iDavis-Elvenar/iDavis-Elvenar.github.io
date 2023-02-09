@@ -1,8 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2023" : [
-            ["The Great Excavation","february_xxiii_",false,false],
-            ["The Secrets of Alchemy","january_xxiii_",true,false],
+            ["The Great Excavation","february_xxiii_",true,false],
+            ["The Secrets of Alchemy","january_xxiii_",false,false],
         ],
         "2022" : [
             ["Winter Magic","december_xxii_",false,false],
@@ -46,8 +46,8 @@ var allEvents = {
     },
     "all_events" : {
         "2023" : [
-            ["The Great Excavation","february_xxiii_",false,false],
-            ["The Secrets of Alchemy","january_xxiii_",true,false],
+            ["The Great Excavation","february_xxiii_",true,false],
+            ["The Secrets of Alchemy","january_xxiii_",false,false],
         ],
         "2022" : [
             ["Winter Magic","december_xxii_",false,false],
