@@ -3,7 +3,7 @@ var quests = {
         "Získaj nejaké množstvo mincí",
         "Vyrob 8x nápoje",
         "Utrať 8 VB",
-        "Vyrob 2x produkt ľubovoľnej manufaktúry (3-hodinový)",
+        "Vyrob 2x produkt ľubovoľnej manufaktury (3-hodinový)",
         "Vyrob 7x obyčajné nástroje",
         "Vykonaj 4x susedskú výpomoc",
         "Vyrieš 4 strety na mape ALEBO vyrieš 4 turnajové strety ALEBO vyrieš 4 strety vo veži + vyrob 6x chlieb",
