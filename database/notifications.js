@@ -20,15 +20,15 @@ var notifications = {
     "3":{  // DAILY PRIZES VIDEO PROMO
         "id":3,
         "text":`<h4 class="alert-heading">Best Daily Prizes!</h4>
-  <p>Are you waiting for the best daily prizes in this event? In my newest video I'm showing you a selection of the best daily buildings of the Autumn Zodiac event!</p>
+  <p>Are you waiting for the best daily prizes in this event? In my newest video I'm showing you a selection of the best daily buildings of The Great Excavation event!</p>
   <hr>
-  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/vlPzSeNLfuQ"></iframe></p>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/mYHFFbfLXtA"></iframe></p>
     <hr>
     <p>Isn't that what you look for? <a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to stay up-to-date with my latest videos!</p>`,
         "repeatAfter":172800,//604800,
         "style":"info",
         "duration":420,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "4":{  // NEW VIDEOS SOON
@@ -61,7 +61,7 @@ var notifications = {
         "style":"warning",
         "duration":30,
         "active":true,
-        "priority":20
+        "priority":100
     },
     "7":{  // NEW BUILDING
         "id":7,
@@ -112,7 +112,7 @@ var notifications = {
         "repeatAfter":345600,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "11":{  // EVENTS SIMULTANEOUSLY - BETA PRIMARY
