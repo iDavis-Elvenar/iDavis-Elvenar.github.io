@@ -238,36 +238,32 @@
   </div>
 </div>
 
-<h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Instructions ::..<br></h5>
+<div style="text-align: center; margin: auto 3%;">
+  <p style="font-weight: bold;">Your High Score: <span id="text1231" style="font-weight: normal;"></span> <img src="eventTabs/february_xxiii_/tileEvent_assets/currency/event_payback.png" style="width: 20px; display: inline;" /></p>
+  <hr />
+  <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left; margin-bottom: 25px;">..:: Instructions ::..<br></h5>
 
-<center>
-  <div class="card-spoiler border-spoiler mb-3" style="margin-top: 10px; padding-bottom: 10px; padding-top: 7px; width: 70%;" id="cz_disclaimer">
-    <div class="card-header" id="headingOne">
-      <p style="font-weight: bold;">Your High Score: <span id="text1231" style="font-weight: normal;"></span> <img src="eventTabs/february_xxiii_/tileEvent_assets/currency/event_payback.png" style="width: 20px; display: inline;" /></p>
-      <hr>
-      <p>This is a Playground for <strong>The Great Excavation</strong> event! This feature simulates the well-known event mechanic
-      we know from the Amuni event.</p>
-      
-      <p>You can interact with it &ndash; use provisions <img src="eventTabs/february_xxiii_/tileEvent_assets/currency/event_currency.png" style="height: 18px;"> to purchase tools&nbsp;<img src="https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png" style="height: 18px; display: inline;">, use your tools to clear the
-    ancient city and uncover rewards <img src="https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png" style="height: 18px;"> to help you progressing on the progress lane. Practising this minigame will help you to not only
-    better understand the way this event works, but will also help you better navigate between the ancient walls <img src="eventTabs/february_xxiii_/tileEvent_assets/tiles/tileBlocker3.png" style="height: 20px"> and improve the efficiency
-    of using your tools.</p>
+  <p>This is a Playground for <strong>The Great Excavation</strong> event! This feature simulates the well-known event mechanic
+  we know from the Amuni event!</p>
   
-    <p>You can use the <img src="eventTabs/february_xxiii_/tileEvent_assets/window/button_plus_normal.png" style="height: 18px;" caption="+"> button to purchase more tools. Use the same button to get back to the game. This toolshop
-    allows you to try various combinations of newly introduced packages (that are also the part of this year's event) and learn, which ones
-    work the best for you!</p>
+  <p>You can interact with it &ndash; use provisions <img src="eventTabs/february_xxiii_/tileEvent_assets/currency/event_currency.png" style="height: 18px;"> to purchase tools&nbsp;<img src="https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png" style="height: 18px; display: inline;">, use your tools to clear the
+  ancient city and uncover rewards <img src="https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png" style="height: 18px;"> to help you progressing on the progress lane. Practising this minigame will help you to not only
+  better understand the way this event works, but will also help you better navigate between the ancient walls <img src="eventTabs/february_xxiii_/tileEvent_assets/tiles/tileBlocker3.png" style="height: 20px"> and improve the efficiency
+  of using your tools.</p>
 
-    <p>You can use the <strong>Restart</strong> button to clear your current progress and start again. The game <strong>ends</strong> when all possible
-      provisions are used and no more tools can be placed. In case you broke your personal record, it will get displayed on the page.
-      This information is only visible to you and you can play again to try improve your strategies and beat your high score again.
-    </p>
+  <p>You can use the <img src="eventTabs/february_xxiii_/tileEvent_assets/window/button_plus_normal.png" style="height: 18px;" caption="+"> button to purchase more tools. Use the same button to get back to the game. This toolshop
+  allows you to try various combinations of newly introduced packages (that are also the part of this year's event) and learn, which ones
+  work the best for you!</p>
 
-    <p>Note that this is a Playground and it is only a practise tool. No rewards will be transferred to your game account when you
-      collect them on my website. All assets used belong to InnoGames GmbH.
-    </p>
-    </div>
-  </div>
-</center>
+  <p>You can use the <strong>Restart</strong> button to clear your current progress and start again. The game <strong>ends</strong> when all possible
+  provisions are used and no more tools can be placed. In case you broke your personal record, it will get displayed on the page.
+  This information is only visible to you and you can play again to try improve your strategies and beat your high score again.
+  </p>
+
+  <p>Note that this is a Playground and it is only a practise tool. No rewards will be transferred to your game account when you
+  collect them on my website. All assets used belong to InnoGames GmbH.
+  </p>  
+</div>
 
 <script type="text/javascript">
 
@@ -656,7 +652,6 @@ class CanvasRenderer {
       }
     }
     this.drawAll();
-    //console.log(this.frames);
     this.frames -= 1;
     return this.frames > 0;
   }
@@ -671,9 +666,9 @@ class CanvasRenderer {
     try {
       await asyncInterval(function() {renderer.shiftByFrame(frameSection)}, duration/frames, frames);
     } catch (e) {
-      console.log('Error');
+      //console.log('Error');
     }
-    console.log("Done!");
+    //console.log("Done!");
 
     for (const column of this.tiles) {
       for (const row of column) {
@@ -1546,7 +1541,6 @@ class ToolShop {
       var amount = this.shopOffers[button.name].prize;
       var amountWidth = ctx.measureText(amount.toString()).width;
       var fullWidth = donkeyWidth*1.25+amountWidth;
-      console.log(fullWidth);
       this.donkeyImgs.push({img: donkeyImg, x: button.x+(button.width-fullWidth)/2, y: button.y+(button.height-donkeyHeight)/2, width: donkeyWidth, height: donkeyHeight});
       this.prizeLabels.push({amount: amount, size: fontSize, x: button.x+(button.width-fullWidth)/2+donkeyWidth*1.25, y: button.y+(button.height+fontSize)/20*9});
       i++;
@@ -1669,7 +1663,7 @@ async function asyncInterval (callback, ms, triesLeft = 30) {
         resolve();
         clearInterval(interval);
       } else if (triesLeft <= 1) {
-        console.log("fail");
+        //console.log("fail");
         resolve();
         clearInterval(interval);
       }
