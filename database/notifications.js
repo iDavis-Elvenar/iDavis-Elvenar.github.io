@@ -142,7 +142,7 @@ var notifications = {
         <hr>
         <center><img src="https://i.ibb.co/Nnf2NWh/playground-screen-fb.png" style="width: 40%; margin-bottom: 15px;"></center>
         <p style="text-align: center;">This feature will help you to not only better understand how this event works, but also to better navigate between the ancient walls and improve the efficiency of using your tools.
-        You can access Playground directly <a href="https://idavis-elvenar.com/events.html#playground-february_xxiii_" class="alert-link">here</a> and play the simulation now!</p>`,
+        You can access Playground directly <a href="https://idavis-elvenar.com/events.html#playground-february_xxiii_" target="_blank" class="alert-link">here</a> and play the simulation now!</p>`,
         "repeatAfter":86400,
         "style":"warning",
         "duration":45,
