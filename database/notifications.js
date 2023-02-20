@@ -137,12 +137,16 @@ var notifications = {
     },
     "13":{  // NEW FEATURE ON THE WEBSITE #2
         "id":13,
-        "text":`<h4 class="alert-heading">HU language is now supported!</h4>
-        <p>You can now select this language using the Globe button in the top right corner of the site.</p>`,
-        "repeatAfter":604800,
+        "text":`<h4 class="alert-heading">Playground is now available!</h4>
+        <p>The waiting is over! I have released the newest feature - the <b>Playground</b> that will help you practise <b>The Great Excavation</b> event!</p>
+        <hr>
+        <center><img src="https://i.ibb.co/Nnf2NWh/playground-screen-fb.png" style="width: 40%; margin-bottom: 15px;"></center>
+        <p style="text-align: center;">This feature will help you to not only better understand how this event works, but also to better navigate between the ancient walls and improve the efficiency of using your tools.
+        You can access Playground directly <a href="https://idavis-elvenar.com/events.html#playground-february_xxiii_" class="alert-link">here</a> and play the simulation now!</p>`,
+        "repeatAfter":86400,
         "style":"warning",
         "duration":45,
-        "active":false,
-        "priority":40
+        "active":true,
+        "priority":50
     },
 }
