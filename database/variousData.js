@@ -83,7 +83,7 @@ let eventVideos = {
     "july_xxii_": "https://www.youtube.com/embed/GgjFAgr-pLU;https://www.youtube.com/embed/zqgJUn2kRNA",
     "august_xxii_": "https://www.youtube.com/embed/xxgTpJJw314",
     "autumn_xxii_": "https://www.youtube.com/embed/vlPzSeNLfuQ",
-    "february_xxiii_": "https://www.youtube.com/embed/mYHFFbfLXtA",
+    "february_xxiii_": "https://www.youtube.com/embed/mYHFFbfLXtA;https://www.youtube.com/embed/Ks0-x02arzw",
 }
 
 let eventBetaStarts = { // MM/DD/YYYY
