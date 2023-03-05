@@ -404,7 +404,7 @@ function displayPass() {
 
     var cumulativeXp = 0;
 
-    for (let level = 0; level < seasonPassData.length; level++) {
+    for (let level = 0; level < seasonPassData[getSelectedSeason()].length; level++) {
         if (level === 0) {
             let tr = document.createElement('tr');
             let th = document.createElement('th');
@@ -451,20 +451,20 @@ function displayPass() {
         td.style.minHeight = "40px";
         tr.appendChild(td);
         let tdReq = document.createElement('td');
-        if (seasonPassData[level].hasOwnProperty('requiredXp')) {
-            cumulativeXp += seasonPassData[level]["requiredXp"];
+        if (seasonPassData[getSelectedSeason()][level].hasOwnProperty('requiredXp')) {
+            cumulativeXp += seasonPassData[getSelectedSeason()][level]["requiredXp"];
         }
         tdReq.innerHTML = `${cumulativeXp}<img src="${seasonXp[getSelectedSeason()]['img']}">`;
-        if (seasonPassData[level].hasOwnProperty('requiresPass')) {
+        if (seasonPassData[getSelectedSeason()][level].hasOwnProperty('requiresPass')) {
             tdReq.innerHTML += `<br><img src="https://i.ibb.co/87MNrBB/season-pass.png">`;
         }
         tr.appendChild(tdReq);
         for (let rew = 1; rew <= 3; rew++) {
             let tdReward = document.createElement('td');
             tdReward.id = `reward_${level+1}_${rew}`
-            if (rew <= seasonPassData[level]['rewards'].length) {
-                if (seasonPassData[level]['rewards'][rew-1]['type'] === 'item') {
-                    let subType = seasonPassData[level]['rewards'][rew-1]['subType'];
+            if (rew <= seasonPassData[getSelectedSeason()][level]['rewards'].length) {
+                if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'item') {
+                    let subType = seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'];
                     tdReward.innerHTML = `<img src="${instants[subType.substring(0, subType.lastIndexOf("_")+1)]["image_big"]}">`;
                     if (goods_icons.hasOwnProperty(subType)) {
                         tdReward.innerHTML += `<br>${getTitleFromGoodImage(subType)}`;
@@ -472,16 +472,16 @@ function displayPass() {
                         tdReward.innerHTML += `<br>${getTitleFromGoodImage(subType.toLowerCase())}`;
                     }
 
-                } else if (seasonPassData[level]['rewards'][rew-1]['type'] === 'flexible_reward') {
-                    let rewardCodeName = flexibleRewards.filter(elem => elem.id === seasonPassData[level]['rewards'][rew-1]['subType'])[0]['rewards'][getPresetChapter()-1]['subType'];
+                } else if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'flexible_reward') {
+                    let rewardCodeName = flexibleRewards.filter(elem => elem.id === seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'])[0]['rewards'][getPresetChapter()-1]['subType'];
                     if (instants.hasOwnProperty(rewardCodeName)) {
                         tdReward.innerHTML = `<img src="${instants[rewardCodeName]["image_big"]}">`;
                     } else {
                         tdReward.innerHTML = `<img src="https://i.ibb.co/WndLSNt/goods-general-medium.png">`;
                     }
-                    tdReward.innerHTML += `<br>${getTitleFromGoodImage(rewardCodeName)} <h7>${flexibleRewards.filter(elem => elem.id === seasonPassData[level]['rewards'][rew-1]['subType'])[0]['rewards'][getPresetChapter()-1]['amount']*seasonPassData[level]['rewards'][rew-1]['amount']}x</h7>`;
-                } else if (seasonPassData[level]['rewards'][rew-1]['type'] === 'building') {
-                    let buildingId = seasonPassData[level]['rewards'][rew-1]['subType'].substring(0, seasonPassData[level]['rewards'][rew-1]['subType'].indexOf("$"));
+                    tdReward.innerHTML += `<br>${getTitleFromGoodImage(rewardCodeName)} <h7>${flexibleRewards.filter(elem => elem.id === seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'])[0]['rewards'][getPresetChapter()-1]['amount']*seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['amount']}x</h7>`;
+                } else if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'building') {
+                    let buildingId = seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'].substring(0, seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'].indexOf("$"));
                     let imgBuilding = document.createElement('img');
                     imgBuilding.src = images_buildings[buildingId];
                     imgBuilding.style.maxHeight = "96px";
@@ -521,12 +521,12 @@ function displayPass() {
                     checkbox.checked = true;
                 }
             } else {
-                for (let i = level+1; i <= seasonPassData.length; i++) {
+                for (let i = level+1; i <= seasonPassData[getSelectedSeason()].length; i++) {
                     checkbox = document.getElementById("level_"+(i)+"_input");
                     checkbox.checked = false;
                 }
             }
-            recordFinishedLevels(getSelectedSeason(), seasonPassData.length);
+            recordFinishedLevels(getSelectedSeason(), seasonPassData[getSelectedSeason()].length);
             getRequiredEffort(document.getElementById("effort_calc"));
             inputAdditionalPoints();    
         };
@@ -579,7 +579,7 @@ function inputAdditionalPoints() {
         setAdditionalPoints(0);
         document.getElementById("pointsBetweenRewards_p_tag").remove()
     }
-    for (let level = 0; level < seasonPassData.length-1; level++) {
+    for (let level = 0; level < seasonPassData[getSelectedSeason()].length-1; level++) {
         if (document.getElementById("level_"+(level+1)+"_input") !== undefined && document.getElementById("level_"+(level+1)+"_input") !== null) {
             let noFinishedLevels = getFinishedLevels() === null || getFinishedLevels() === undefined || getFinishedLevels() === "";
             if ((document.getElementById("level_"+(level+1)+"_input").checked && !document.getElementById("level_"+(level+2)+"_input").checked)
@@ -595,11 +595,11 @@ function inputAdditionalPoints() {
                 inputNumberValue.id = `pointsBetweenRewards`;
                 inputNumberValue.name = `pointsAdditional`;
                 inputNumberValue.min = 0;
-                if (seasonPassData[level+1].hasOwnProperty("requiredXp")) {
+                if (seasonPassData[getSelectedSeason()][level+1].hasOwnProperty("requiredXp")) {
                     if (!noFinishedLevels) {
-                        inputNumberValue.max = seasonPassData[level+1]["requiredXp"];
+                        inputNumberValue.max = seasonPassData[getSelectedSeason()][level+1]["requiredXp"];
                     } else {
-                        inputNumberValue.max = seasonPassData[level]["requiredXp"] || 0;
+                        inputNumberValue.max = seasonPassData[getSelectedSeason()][level]["requiredXp"] || 0;
                     }
                 } else {
                     inputNumberValue.max = 0;
@@ -618,11 +618,11 @@ function inputAdditionalPoints() {
                 let labelNumberValue = document.createElement('label');
                 labelNumberValue.htmlFor = `pointsBetweenRewards`;
                 labelNumberValue.style.marginLeft = "3px";
-                if (seasonPassData[level+1].hasOwnProperty("requiredXp")) {
+                if (seasonPassData[getSelectedSeason()][level+1].hasOwnProperty("requiredXp")) {
                     if (!noFinishedLevels) {
-                        labelNumberValue.innerHTML = ` /${seasonPassData[level+1]["requiredXp"]}`;
+                        labelNumberValue.innerHTML = ` /${seasonPassData[getSelectedSeason()][level+1]["requiredXp"]}`;
                     } else {
-                        labelNumberValue.innerHTML = `/${seasonPassData[level]["requiredXp"] || 0}`;
+                        labelNumberValue.innerHTML = `/${seasonPassData[getSelectedSeason()][level]["requiredXp"] || 0}`;
                     }
                 } else {
                     labelNumberValue.innerHTML = ` /0`;
@@ -851,7 +851,7 @@ function getRequiredEffort(parent) {
     } else {
         arr = [];
     }
-    seasonPassData.forEach(function(elem, index) {
+    seasonPassData[getSelectedSeason()].forEach(function(elem, index) {
         if (!arr.includes(""+(index+1))) {
             remainingXp += elem["requiredXp"] ? elem["requiredXp"] : 0;
         }
@@ -875,9 +875,9 @@ function getRequiredEffort(parent) {
             completedLevels = [0];
         }
         var availablePointsToEarn = requiredEffort[2];
-        for (let level = Math.max(parseInt(completedLevels[completedLevels.length-1]), 0); level < seasonPassData.length; level++) {
-            if (seasonPassData[level].hasOwnProperty("requiredXp")) {
-                tempRequiredXp += seasonPassData[level]["requiredXp"];
+        for (let level = Math.max(parseInt(completedLevels[completedLevels.length-1]), 0); level < seasonPassData[getSelectedSeason()].length; level++) {
+            if (seasonPassData[getSelectedSeason()][level].hasOwnProperty("requiredXp")) {
+                tempRequiredXp += seasonPassData[getSelectedSeason()][level]["requiredXp"];
             }
             if (tempRequiredXp - (parseInt(getAdditionalPoints()) ? parseInt(getAdditionalPoints()) : 0) > availablePointsToEarn) {
                 lastAvailableReward = level;
@@ -891,7 +891,7 @@ function getRequiredEffort(parent) {
     if (requiredEffort[0]) {
         result += `<br><img src="https://i.ibb.co/VxPSfh5/season-green-mark.png"><br>`;
         if (localStorage.getItem("season_"+getSelectedSeason()+"levels_finished") &&
-        localStorage.getItem("season_"+getSelectedSeason()+"levels_finished").split(",").length === seasonPassData.length) {
+        localStorage.getItem("season_"+getSelectedSeason()+"levels_finished").split(",").length === seasonPassData[getSelectedSeason()].length) {
             result += `Yes, you have already collected all rewards.`;
         } else {
         result += `Yes, you can collect all rewards if you won't miss more than <b>${requiredEffort[3]} daily quests</b> and complete all the remaining weekly quests (including
