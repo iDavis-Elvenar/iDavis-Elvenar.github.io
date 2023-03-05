@@ -87,6 +87,8 @@ let ui = {
         "Dwarven Citadel": "Trpasličí citadela",
         "Ancient Promise": "Starodávný slib",
         //EVENTS
+        "The Great Excavation": "Velká hlubina",
+        "The Secrets of Alchemy": "Tajemství alchymie",
         "Mischievous Therapy": "Nezbedná terapie",
         "A Gateway into the Past": "Brána do minulosti",
         "Lucky Little Fin":"Šťastná ploutvička",
@@ -202,6 +204,8 @@ let ui = {
         "Dwarven Citadel": "Zwergen-Zitadelle",
         "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
+        "The Great Excavation": "Die Große Grabung",
+        "The Secrets of Alchemy": "Die Geheimnisse der Alchemie",
         "Mischievous Therapy": "Schelmische Therapie",
         "A Gateway into the Past": "Ein Tor in die Vergangenheit",
         "Lucky Little Fin":"Flotte Flosse",
@@ -317,6 +321,8 @@ let ui = {
         "Dwarven Citadel": "Citadelle naine",
         "Ancient Promise": "Ancienne promesse",
         //EVENTS
+        "The Great Excavation": "La grande excavation",
+        "The Secrets of Alchemy": "Les secrets de l'alchimie",
         "Mischievous Therapy": "Le Guérisseur",
         "A Gateway into the Past": "Un passage vers le passé",
         "Lucky Little Fin":"Le petit aileron porte-bonheur",
@@ -432,6 +438,8 @@ let ui = {
         "Dwarven Citadel": "Törp Citadella",
         "Ancient Promise": "Ősi Ígéret",
         //EVENTS
+        "The Great Excavation": "A Nagy Ásatás",
+        "The Secrets of Alchemy": "Az Alkímia Titkai",
         "Mischievous Therapy": "Csintalan Terápia",
         "A Gateway into the Past": "Átjáró a múltba",
         "Lucky Little Fin":"Szerencsés Kis Uszonyos",
@@ -547,6 +555,8 @@ let ui = {
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
+        "The Great Excavation": "Wielkie Wykopaliska",
+        "The Secrets of Alchemy": "Sekrety Alchemii",
         "Mischievous Therapy": "Złośliwa Terapia",
         "A Gateway into the Past": "Brama do Przeszłości",
         "Lucky Little Fin":"Mały Morski Szczęściarz",
@@ -662,6 +672,8 @@ let ui = {
         "Dwarven Citadel": "Гномья цитадель",
         "Ancient Promise": "Древнее обещание",
         //EVENTS
+        "The Great Excavation": "Великие раскопки",
+        "The Secrets of Alchemy": "Секреты алхимии",
         "Mischievous Therapy": "Озорная терапия",
         "A Gateway into the Past": "Врата в прошлое",
         "Lucky Little Fin":"Маленький везунчик",
