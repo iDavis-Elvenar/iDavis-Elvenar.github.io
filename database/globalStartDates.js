@@ -42,6 +42,26 @@ var eventStartDates = {
 }
 
 var faStartDates = {
+    "march_xxiii_": {
+        "live": {
+            "start_date": "__ _th 2023",
+            "end_date": "__ _th 2023"
+        },
+        "beta": {
+            "start_date": "March 2nd 2023",
+            "end_date": "March 9th 2023"
+        }
+    },
+    "january_xxiii_": {
+        "live": {
+            "start_date": "January 12th 2023",
+            "end_date": "January 18th 2023"
+        },
+        "beta": {
+            "start_date": "December 15th 2022",
+            "end_date": "December 21st 2022"
+        }
+    },
     "november_xxii_": {
         "live": {
             "start_date": "November 15th 2022",

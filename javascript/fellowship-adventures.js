@@ -176,10 +176,10 @@ function displayBase() {
 
     center.appendChild(p);
 
-    createDatesTable(center,    dates[getSelectedFa()]["live"]["start_date"],
-                                dates[getSelectedFa()]["live"]["end_date"],
-                                dates[getSelectedFa()]["beta"]["start_date"],
-                                dates[getSelectedFa()]["beta"]["end_date"]);
+    createDatesTable(center,    faStartDates[getSelectedFa()]["live"]["start_date"],
+                                faStartDates[getSelectedFa()]["live"]["end_date"],
+                                faStartDates[getSelectedFa()]["beta"]["start_date"],
+                                faStartDates[getSelectedFa()]["beta"]["end_date"]);
     
     parent.appendChild(center);
 

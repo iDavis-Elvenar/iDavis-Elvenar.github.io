@@ -18,49 +18,6 @@ var faBanners = [
     {"all" : "https://i.ibb.co/fMX3t5B/fellowship-adventures-banner.png"},
 ]
 
-var dates = {
-    "march_xxiii_": {
-        "live": {
-            "start_date": "__ _th 2023",
-            "end_date": "__ _th 2023"
-        },
-        "beta": {
-            "start_date": "March 2nd 2023",
-            "end_date": "March 9th 2023"
-        }
-    },
-    "january_xxiii_": {
-        "live": {
-            "start_date": "January 12th 2023",
-            "end_date": "January 18th 2023"
-        },
-        "beta": {
-            "start_date": "December 15th 2022",
-            "end_date": "December 21st 2022"
-        }
-    },
-    "november_xxii_": {
-        "live": {
-            "start_date": "November 15th 2022",
-            "end_date": "November 21st 2022"
-        },
-        "beta": {
-            "start_date": "October 27th 2022",
-            "end_date": "November 2nd 2022"
-        }
-    },
-    "october_xxii_": {
-        "live": {
-            "start_date": "October 6th 2022",
-            "end_date": "October 12th 2022"
-        },
-        "beta": {
-            "start_date": "September 15th 2022",
-            "end_date": "September 21st 2022"
-        }
-    },
-}
-
 var introductionText = `This page is an overview for the _. You can find various information about this adventure in the left panel of this site.
 <br><br>For easy access you can use the hotkey <b>CTRL+D</b> to save this page into your bookmarks and easily access the content in the future.`;
 
