@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Easter_XXIII_Temple_of_Mind":"https://i.ibb.co/4YSmcd9/temple-of-mind.png",
+    "A_Evt_Easter_XXIII_Auric_Shrine":"https://i.ibb.co/P4nGXrY/auric-shrine.png",
+    "A_Evt_Easter_XXIII_Signum_Mentis":"https://i.ibb.co/5LyysnH/signum-mentis.png",
+    "A_Evt_Evo_Easter_XXIII_Astral_Phoenix":"https://i.ibb.co/F3m7YHv/astral-phoenix.png",
     "A_Evt_Set_February_XXIII_Gift_of_Ashni":"https://i.ibb.co/7YNVrG8/gift-of-ashni.png",
     "A_Evt_Set_February_XXIII_Heart_of_Asim":"https://i.ibb.co/G9gx1mP/heart-of-asim.png",
     "A_Evt_Set_February_XXIII_Unearthed_History":"https://i.ibb.co/frXmw69/unearthed-history.png",

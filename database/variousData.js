@@ -169,7 +169,8 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Autumn_XXII_WittyCoon": "1x Witty Raccoon Artifact",
     "A_Evt_Evo_October_XXII_Witch_Doctor": "1x Witch Doctor Artifact",
     "A_Evt_Evo_December_XXII_Chromafrost_Glacier": "1x Chromafrost Glacier Artifact",
-    "A_Evt_Evo_January_XXIII_Steam_Golem": "1x Steam Golem Artifact"
+    "A_Evt_Evo_January_XXIII_Steam_Golem": "1x Steam Golem Artifact",
+    "A_Evt_Evo_Easter_XXIII_Astral_Phoenix": "1x Astral Phoenix Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -186,6 +187,7 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_September_XXI_Red_Panda_Master" : `<img src="https://i.ibb.co/hYXr3HW/vision-vapor-small.png">`,
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix" : `<img src="https://i.ibb.co/Yy21rpT/health-points.png">`,
     "A_Evt_Evo_Autumn_XXII_WittyCoon" : `<img src="https://i.ibb.co/s5zgfs4/goods-production.png">`,
+    "A_Evt_Evo_Easter_XXIII_Astral_Phoenix" : `<img src="https://i.ibb.co/s5zgfs4/goods-production.png">`,
 }
 
 var allowedFeedingMultiplicators = {
@@ -244,10 +246,10 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "february_xxiii_"
 ]
 
 var eventsInfoIcons = {
+    "easter_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "february_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "january_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "december_xxii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
@@ -264,6 +266,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "easter_xxiii_": [
+        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html"},
+    ],
     "february_xxiii_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"02/02/2023"},
         {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html", "releaseDate":"02/02/2023"},

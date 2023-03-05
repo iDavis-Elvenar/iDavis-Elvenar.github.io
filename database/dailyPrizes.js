@@ -1,5 +1,9 @@
 var dailyPrizes = {
 
+    "easter_xxiii_": [
+
+    ],
+
     "february_xxiii_": [
         "A_Evt_February_XXIII_Golden_Tears",
         "A_Evt_June_XX_Amuni_Ship",
