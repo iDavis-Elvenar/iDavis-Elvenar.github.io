@@ -121,6 +121,7 @@ let questsLinks = {
     "december_xxii_": "bit.ly/WinterMagic2022",
     "january_xxiii_": "bit.ly/TheSecretsOfAlchemy2023",
     "february_xxiii_": "bit.ly/TheGreatExcavation2023",
+    "easter_xxiii_": "bit.ly/RealmOfThePhoenix2023",
 }
 
 let eventsDurations = {
@@ -136,6 +137,7 @@ let eventsDurations = {
     "december_xxii_": 30,
     "january_xxiii_": 22,
     "february_xxiii_": 19,
+    "easter_xxiii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -267,7 +269,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "easter_xxiii_": [
-        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html"},
+        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"03/16/2023"},
     ],
     "february_xxiii_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"02/02/2023"},
