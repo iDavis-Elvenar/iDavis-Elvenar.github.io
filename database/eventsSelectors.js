@@ -1,8 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2023" : [
-            ["Realm of the Phoenix","easter_xxiii_",false,true],
-            ["The Great Excavation","february_xxiii_",true,false],
+            ["Realm of the Phoenix","easter_xxiii_",true,false],
+            ["The Great Excavation","february_xxiii_",false,false],
             ["The Secrets of Alchemy","january_xxiii_",false,false],
         ],
         "2022" : [
@@ -47,8 +47,8 @@ var allEvents = {
     },
     "all_events" : {
         "2023" : [
-            ["Realm of the Phoenix","easter_xxiii_",false,true],
-            ["The Great Excavation","february_xxiii_",true,false],
+            ["Realm of the Phoenix","easter_xxiii_",true,false],
+            ["The Great Excavation","february_xxiii_",false,false],
             ["The Secrets of Alchemy","january_xxiii_",false,false],
         ],
         "2022" : [

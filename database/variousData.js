@@ -65,6 +65,7 @@ let eventBanners = {
     "december_xxii_": "https://i.ibb.co/HDK8HvH/EL-akcia-december-2022-banner.png",
     "january_xxiii_": "https://i.ibb.co/jrDGZLf/EL-akcia-janu-r-2023-banner.png",
     "february_xxiii_": "https://i.ibb.co/W6KHd3z/EL-akcia-febru-r-2023-banner.png",
+    "easter_xxiii_": "https://i.ibb.co/5sNDjmf/EL-akcia-ve-k-noc-2023-banner.png",
 }
 
 let eventVideos = {
@@ -106,6 +107,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "december_xxii_": "11/11/2022",
     "january_xxiii_": "01/03/2023",
     "february_xxiii_": "02/02/2023",
+    "easter_xxiii_": "03/15/2023",
 }
 
 let questsLinks = {
