@@ -12,20 +12,27 @@ var additionalTabsSeasons = {
 
 var seasonsBanners = {
     "december_xxii_" : "https://i.ibb.co/XDx9ZMt/Season-Season-of-Dreams-Banner.png",
+    "april_xxiii_": "https://i.ibb.co/Hdm0FzN/season-joy-banner.png",
 }
 
 var seasonInfoIcons = {
-    "april_xxiii_" : {"img":"https://i.ibb.co/nM43ZwY/april-xxiii.png", "img_width": "28", "img_style": "margin-left: 0px; margin-right: 10px; position: relative;"},
     "december_xxii_" : {"img":"https://i.ibb.co/L8gkDtv/season-dreams-info.png", "img_width": "28", "img_style": "margin-left: 0px; margin-right: 10px; position: relative;"},
+    "april_xxiii_" : {"img":"https://i.ibb.co/nM43ZwY/april-xxiii.png", "img_width": "28", "img_style": "margin-left: 0px; margin-right: 10px; position: relative;"},
 }
 
 var seasonXp = {
+    "december_xxii_" : {"img":"https://i.ibb.co/vjQD2kX/season-xp-b15fa556d9a49df8ccdbc3fe222f0feb.png"},
     "april_xxiii_" : {"img":"https://i.ibb.co/56xyPT6/april-xxiii-currency.png"},
-    "december_xxii_" : {"img":"https://i.ibb.co/vjQD2kX/season-xp-b15fa556d9a49df8ccdbc3fe222f0feb.png"}
+}
+
+var seasonProgress = {
+    "december_xxii_" : {"img":"https://media.innogamescdn.com/com_ONYX_ZZ/announcements/SeasonOfDreams/progression_seasonofdreams.png", "img_width": "40"},
+    "april_xxiii_" : {"img":"https://media.innogamescdn.com/com_ONYX_ZZ/progression_seasonofjoy.png", "img_width": "40"},
 }
 
 var seasonsVideos = {
     "december_xxii_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
+    "april_xxiii_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
 }
 
 var seasonQuestsRewards = {
@@ -35,7 +42,7 @@ var seasonQuestsRewards = {
 var seasonsIntro = `Seasons are a type of long-term events containing Daily and Weekly quests, many interesting rewards and a unique Season Pass.
 <br><br>By completing quests you receive experience points that help you unlock rewards in the reward lane. You can see all the available rewards
 during this season in the <b>Season Pass</b> tab and check all the possible quests you may receive in the <b>Quests</b> tab.
-<br><br><img src="https://media.innogamescdn.com/com_ONYX_ZZ/announcements/SeasonOfDreams/progression_seasonofdreams.png" style="width: 40%;">
+<br><br><img src="{img}" style="width: {img_width}%;">
 <br><br>It is important to keep completing quests during the season regularly. If you miss too many quests, you won't be able to collect
 all rewards from the rewards lane. You can use my calculator in the <b>Season Pass</b> tab which shows you how many quests you may miss in order
 to still collect the rest of the reward lane!`;

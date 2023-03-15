@@ -173,7 +173,9 @@ function displayBase() {
     
     let center = document.createElement('center');
     let p = document.createElement('p');
-    p.innerHTML = seasonsIntro;
+    let imgProgress = seasonProgress[getSelectedSeason()]["img"];
+    let imgProgressWidth = seasonProgress[getSelectedSeason()]["img_width"];
+    p.innerHTML = seasonsIntro.replace("{img}", imgProgress).replace("{img_width}", imgProgressWidth);
     center.appendChild(p);
 
     createDatesTable(center,    seasonStartDates[getSelectedSeason()]["live"]["start_date"],
@@ -323,58 +325,60 @@ function displayQuests() {
 }
 
 function generateDailyChest(parent) {
-    let p = document.createElement('p');
-    p.innerHTML = `<center><h7>If you manage to complete all 4 daily quests, you can unlock the following Daily Chest:</h7></center>`;
-    p.style.marginTop = "-8px";
-    p.style.marginBottom = "-8px";
-    parent.appendChild(p);
-    var div = document.createElement('div');
-    div.style.textAlign = 'center';
-    div.style.marginBottom = '10px';
-    div.style.marginTop = '10px';
-    var divBBTable = document.createElement('div');
-    divBBTable.className = 'bbTable';
-    var table = document.createElement('table');
-    table.className = 'table-primary';
-    table.style.width = '100%';
-    var tbody = document.createElement('tbody');
-    let tr = document.createElement('tr');
-    let tdChest = document.createElement('td');
-    tdChest.rowSpan = "2";
-    tdChest.style.width = "30%";
-    let chest = document.createElement('img');
-    chest.src = "https://i.ibb.co/BPr1Ych/season-daily-chest.png";
-    let center = document.createElement('center');
-    center.appendChild(chest);
-    tdChest.appendChild(center);
-    tr.appendChild(tdChest);
-    seasonDailyChests[getSelectedSeason()].forEach(function(reward) {
-        let th = document.createElement('th');
-        th.style.width = ""+(70/seasonDailyChests[getSelectedSeason()].length)+"%";
-        th.innerHTML = reward["percentage"]+"%";
-        tr.appendChild(th);
-    });
-    let tr2 = document.createElement('tr');
-    seasonDailyChests[getSelectedSeason()].forEach(function(reward) {
-        let td = document.createElement('td');
-        if (reward["type"] === "flexible_reward") {
-            let flexibleRew = flexibleRewards.filter(elem => elem.id === reward["subType"])[0];
-            td.innerHTML = `${flexibleRew["rewards"][parseInt(getPresetChapter())-1]["amount"]*reward["amount"]} ${goods_icons[flexibleRew["rewards"][parseInt(getPresetChapter())-1]["subType"]]}`;
-        } else {
-            if (goods_icons[reward["subType"]] === undefined) {
-                td.innerHTML = `${reward["amount"]} ${goods_icons[reward["subType"].toLowerCase()]}`;
+    if (seasonDailyChests.hasOwnProperty(getSelectedSeason())) {
+        let p = document.createElement('p');
+        p.innerHTML = `<center><h7>If you manage to complete all 4 daily quests, you can unlock the following Daily Chest:</h7></center>`;
+        p.style.marginTop = "-8px";
+        p.style.marginBottom = "-8px";
+        parent.appendChild(p);
+        var div = document.createElement('div');
+        div.style.textAlign = 'center';
+        div.style.marginBottom = '10px';
+        div.style.marginTop = '10px';
+        var divBBTable = document.createElement('div');
+        divBBTable.className = 'bbTable';
+        var table = document.createElement('table');
+        table.className = 'table-primary';
+        table.style.width = '100%';
+        var tbody = document.createElement('tbody');
+        let tr = document.createElement('tr');
+        let tdChest = document.createElement('td');
+        tdChest.rowSpan = "2";
+        tdChest.style.width = "30%";
+        let chest = document.createElement('img');
+        chest.src = "https://i.ibb.co/BPr1Ych/season-daily-chest.png";
+        let center = document.createElement('center');
+        center.appendChild(chest);
+        tdChest.appendChild(center);
+        tr.appendChild(tdChest);
+        seasonDailyChests[getSelectedSeason()].forEach(function(reward) {
+            let th = document.createElement('th');
+            th.style.width = ""+(70/seasonDailyChests[getSelectedSeason()].length)+"%";
+            th.innerHTML = reward["percentage"]+"%";
+            tr.appendChild(th);
+        });
+        let tr2 = document.createElement('tr');
+        seasonDailyChests[getSelectedSeason()].forEach(function(reward) {
+            let td = document.createElement('td');
+            if (reward["type"] === "flexible_reward") {
+                let flexibleRew = flexibleRewards.filter(elem => elem.id === reward["subType"])[0];
+                td.innerHTML = `${flexibleRew["rewards"][parseInt(getPresetChapter())-1]["amount"]*reward["amount"]} ${goods_icons[flexibleRew["rewards"][parseInt(getPresetChapter())-1]["subType"]]}`;
             } else {
-                td.innerHTML = `${reward["amount"]} ${goods_icons[reward["subType"]]}`;
+                if (goods_icons[reward["subType"]] === undefined) {
+                    td.innerHTML = `${reward["amount"]} ${goods_icons[reward["subType"].toLowerCase()]}`;
+                } else {
+                    td.innerHTML = `${reward["amount"]} ${goods_icons[reward["subType"]]}`;
+                }
             }
-        }
-        tr2.appendChild(td);
-    });
-    tbody.appendChild(tr);
-    tbody.appendChild(tr2);
-    table.appendChild(tbody);
-    divBBTable.appendChild(table);
-    div.appendChild(divBBTable);
-    parent.appendChild(div);
+            tr2.appendChild(td);
+        });
+        tbody.appendChild(tr);
+        tbody.appendChild(tr2);
+        table.appendChild(tbody);
+        divBBTable.appendChild(table);
+        div.appendChild(divBBTable);
+        parent.appendChild(div);
+    }
 }
 
 function displayPass() {
@@ -496,6 +500,17 @@ function displayPass() {
                     $.get('database/buildings.json', function(data) {
                         tdReward.innerHTML += `<a class="text-link font-weight-bold" href="buildings.html#${buildingId}" target="_blank">${data.filter(elem => elem.id === buildingId)[0]['name']}</a>`;
                     });
+                } else if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'good') {
+                    let subType = seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'];
+                    if (subType === 'knowledge_points') {
+                        tdReward.innerHTML = `<img src="https://i.ibb.co/sKGvKDY/knowledge-points-big.png">`;
+                    }
+                    tdReward.innerHTML += `<br>${seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]["amount"]}x`;
+                } else if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'reward_selection_kit') {
+                    let subType = seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'];
+                    tdReward.innerHTML = `<img src="https://i.ibb.co/kMLnsDm/rsk-evo.png">`;
+                    tdReward.innerHTML += `<br>${rewardSelectionKits[subType]["name"]}`;
+                    //tdReward.innerHTML += `<br><h7>${rewardSelectionKits[subType]["description"]}</h7>`;
                 }
             } else {
                 tdReward.innerHTML = "";

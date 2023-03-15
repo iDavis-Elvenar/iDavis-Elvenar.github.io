@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Expiring_LightMelee_Boost":"https://i.ibb.co/ZX9NTCj/expiring-light-Melee-boost.png",
+    "A_Evt_Expiring_HeavyMelee_Boost":"https://i.ibb.co/st1km5g/expiring-heavy-Melee-boost.png",
+    "A_Evt_Expiring_HeavyRanged_Boost":"https://i.ibb.co/KWWkTVp/expiring-heavy-Ranged-boost.png",
+    "A_Evt_Season_Joy_XXIII_Pond_of_Spring":"https://i.ibb.co/BzCzBkm/pond-of-spring.png",
     "A_Evt_Easter_XXIII_Temple_of_Mind":"https://i.ibb.co/4YSmcd9/temple-of-mind.png",
     "A_Evt_Easter_XXIII_Auric_Shrine":"https://i.ibb.co/P4nGXrY/auric-shrine.png",
     "A_Evt_Easter_XXIII_Signum_Mentis":"https://i.ibb.co/5LyysnH/signum-mentis.png",

@@ -91,8 +91,8 @@ var seasonStartDates = {
             "end_date": "__ _th 2023" //july 11th
         },
         "beta": {
-            "start_date": "__ _th 2023",
-            "end_date": "__ _th 2023"
+            "start_date": "March 16th 2023",
+            "end_date": "May 30th 2023"
         }
     },
     "december_xxii_": {

@@ -647,6 +647,11 @@ var goods_icons = {
     "spire_diplomacy_joker": "<img src='https://i.ibb.co/Fgkb1HS/spire-diplomacy-joker.png' title='Spectral Stone'><br>",
 }
 
+var rewardSelectionKits = {
+    "rsk_mana_boost_expiring_building":{"name":"Tome of Mana Burst","description":`Contains one reward of your choice:<br> <a href="https://idavis-elvenar.com/buildings.html#A_Evt_January_XXIII_Mana_Rune" class="text-link font-weight-bold" target="_blank">Mana Rune</a>, an immediate pack of mana`},
+    "rsk_decay_expiring_buildings":{"name":"Tome of Frozen Goods","description":`Contains one reward of your choice:<br> <a href="https://idavis-elvenar.com/buildings.html#A_Evt_December_XXII_Cryomana" class="text-link font-weight-bold" target="_blank">Cryomana</a>, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_December_XXII_Cryoseeds" class="text-link font-weight-bold" target="_blank">Cryoseeds</a>, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_December_XXII_Cryonurium" class="text-link font-weight-bold" target="_blank">Cryonurium</a>, an immediate pack of goods`},
+}
+
 var chapter_icons = {
     1: "https://i.ibb.co/kQF5s0q/ch1.png title='Chapter 1'",
     2: "https://i.ibb.co/DfkmS1H/ch2.png title='Chapter 2'",
