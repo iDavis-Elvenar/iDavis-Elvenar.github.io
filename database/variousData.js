@@ -271,7 +271,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "easter_xxiii_": [
-        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"03/16/2023"},
+        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html"},
     ],
     "february_xxiii_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"02/02/2023"},
