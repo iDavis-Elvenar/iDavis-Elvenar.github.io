@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_Easter_XX_Phoenix_Lava",
         "A_Evt_March_XXI_Phoenix_Chick",
         "INS_UNIT_MC_HM_10",
+        "A_Evt_March_XXI_Phoenix_Rider",
     ],
 
     "february_xxiii_": [
