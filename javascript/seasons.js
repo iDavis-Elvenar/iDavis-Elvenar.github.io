@@ -511,6 +511,12 @@ function displayPass() {
                     tdReward.innerHTML = `<img src="https://i.ibb.co/kMLnsDm/rsk-evo.png">`;
                     tdReward.innerHTML += `<br>${rewardSelectionKits[subType]["name"]}`;
                     //tdReward.innerHTML += `<br><h7>${rewardSelectionKits[subType]["description"]}</h7>`;
+                } else if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'resource') {
+                    let subType = seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'];
+                    if (subType === 'premium') {
+                        tdReward.innerHTML = `<img src="https://i.ibb.co/r2d4mnk/premium-big.png">`;
+                        tdReward.innerHTML += `<br>${seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['amount']}x`;
+                    }
                 }
             } else {
                 tdReward.innerHTML = "";
