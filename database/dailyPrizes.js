@@ -8,6 +8,7 @@ var dailyPrizes = {
         "INS_KP_{15}",
         "A_Evt_Easter_Vii_2GrandPrize",
         "INS_REV_SQD_75",
+        "A_Evt_Easter_XXII_Voice_of_the_Prophet",
     ],
 
     "february_xxiii_": [
