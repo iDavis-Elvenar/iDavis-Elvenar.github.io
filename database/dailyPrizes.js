@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_Easter_Vii_2GrandPrize",
         "INS_REV_SQD_75",
         "A_Evt_Easter_XXII_Voice_of_the_Prophet",
+        "frog_unurium_DP_{10}",
     ],
 
     "february_xxiii_": [
