@@ -11,6 +11,7 @@ var dailyPrizes = {
         "A_Evt_Easter_XXII_Voice_of_the_Prophet",
         "frog_unurium_DP_{10}",
         "A_Evt_Easter_XXIII_Auric_Shrine",
+        "frog_runeshards2_{2}",
     ],
 
     "february_xxiii_": [
