@@ -12,6 +12,7 @@ var dailyPrizes = {
         "frog_unurium_DP_{10}",
         "A_Evt_Easter_XXIII_Auric_Shrine",
         "frog_runeshards2_{2}",
+        "A_Evt_Easter_XXII_Shamanic_Healing_Grounds",
     ],
 
     "february_xxiii_": [
