@@ -1,8 +1,8 @@
 var eventStartDates = {
     "easter_xxiii_": {
         "live": {
-            "start_date": "__ _th 2023", //april 4th
-            "end_date": "__ _th 2023" //april 26th
+            "start_date": "April 4th 2023",
+            "end_date": "April 26th 2023"
         },
         "beta": {
             "start_date": "March 15th 2023",
