@@ -124,6 +124,7 @@ let questsLinks = {
     "january_xxiii_": "bit.ly/TheSecretsOfAlchemy2023",
     "february_xxiii_": "bit.ly/TheGreatExcavation2023",
     "easter_xxiii_": "bit.ly/RealmOfThePhoenix2023",
+    "may_xxiii_": "bit.ly/MamaJuulsFusionFeast2023",
 }
 
 let eventsDurations = {
@@ -694,7 +695,7 @@ var grIds = {
 }
 
 var navbarNew = {
-    "active": true,
+    "active": false,
     "img": {
         "src": "https://i.ibb.co/n0KBPgt/new-sign.png",
         "style": "width: 50px;",

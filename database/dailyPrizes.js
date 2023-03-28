@@ -16,6 +16,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_Fake_House",
         "A_Evt_Phoenix_Lake",
+        "frog_grr_5_{1}",
     ],
 
     "february_xxiii_": [
