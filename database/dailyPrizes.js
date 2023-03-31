@@ -19,6 +19,7 @@ var dailyPrizes = {
         "frog_grr_5_{1}",
         "A_Evt_Easter_Vii_3GrandPrize",
         "frog_runeshards1_{2}",
+        "A_Evt_Blue_Egg",
     ],
 
     "february_xxiii_": [
