@@ -49,7 +49,7 @@ var quests = {
         "Preskúmaj 1 provinciu ALEBO získaj 12 relikvií + vytvor 3x ponuku na trhu",
         "Vyrieš 6 stretov na mape ALEBO vyrieš 6 turnajových stretov ALEBO vyrieš 6 stretov vo veži ALEBO použi 1x krmení + vyrob 8x nápoje",
         "Utrať 12 VB + vyrob nejaké množstvo ľubovoľného zboží",
-        "Vyrob 6x pokročilé nástroje + použi 1x příděl mincí ALEBO kúp 14 VB",
+        "Vyrob 6x pokročilé nástroje + použi 1x dešť mincí ALEBO kúp 14 VB",
         "Vyrieš 10 stretov na mape ALEBO vyrieš 10 turnajových stretov ALEBO vyrieš 10 stretov vo veži + vyrob nejaké množstvo zásob",
         "Získaj 3x spojovací činidlo + získaj 16 relikvií",
         "Vyrob nejaké množstvo ľubovoľného zboží + získaj 25-30x opar vidění",
