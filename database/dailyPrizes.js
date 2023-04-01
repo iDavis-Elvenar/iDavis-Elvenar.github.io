@@ -1,5 +1,30 @@
 var dailyPrizes = {
 
+    "may_xxiii_": [
+        "A_Evt_Autumn_XXII_Succulent_Crabs",
+        "A_Evt_May_XXIII_The_Simmering_Soup",
+        "INS_KP_{15}",
+        "A_Evt_Car_XIX_Orc_Wagon",
+        "INS_UNIT_MC_HR_10",
+        "A_Evt_Autumn_XVIII_Burning_Man",
+        "frog_runeshards2_{2}",
+        "A_Evt_May_XXIII_Orcish_Delight",
+        "frog_grr_5_{1}",
+        "A_Evt_Autumn_XVIII_Mushrooms",
+        "INS_REV_SQD_75",
+        "A_Evt_Prod_NutBowl",
+        "INS_UNIT_LR_10",
+        "A_Evt_Autumn_XVIII_Harvest_Cart",
+        "A_Evt_Prod_Nutcracker",
+        "frog_unurium_DP_{10}",
+        "A_Evt_June_XX_Orc_Ship",
+        "frog_runeshards1_{2}",
+        "A_Evt_Autumn_XXII_Luscious_Cakes",
+        "A_Evt_Autumn_XVIII_Feasting_Crowd",
+        "INS_KP_AW_20",
+        "A_Evt_May_XXIII_The_Simmering_Soup",
+    ],
+
     "easter_xxiii_": [
         "A_Evt_Easter_XX_Phoenix_Lava",
         "A_Evt_March_XXI_Phoenix_Chick",
@@ -20,6 +45,7 @@ var dailyPrizes = {
         "A_Evt_Easter_Vii_3GrandPrize",
         "frog_runeshards1_{2}",
         "A_Evt_Blue_Egg",
+        "A_Evt_Easter_XXII_Rod_of_Ascleptius",
     ],
 
     "february_xxiii_": [

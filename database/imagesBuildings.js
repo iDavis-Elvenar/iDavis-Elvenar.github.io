@@ -1,4 +1,11 @@
 var images_buildings = {
+    "A_Evt_May_XXIII_Tusks_and_Tablecloths":"",
+    "A_Evt_May_XXIII_The_Simmering_Soup":"",
+    "A_Evt_May_XXIII_Orcish_Delight":"",
+    "A_Evt_Evo_May_XXIII_Juuls_Traveling_Kitchen":"",
+    "A_Evt_Exp_May_XXIII_SteelInfused_Fungi":"",
+    "A_Evt_Exp_May_XXIII_Mystic_Mycology":"",
+    "A_Evt_Exp_May_XXIII_Crystal_Caps":"",
     "A_Evt_Expiring_LightMelee_Boost":"https://i.ibb.co/ZX9NTCj/expiring-light-Melee-boost.png",
     "A_Evt_Expiring_HeavyMelee_Boost":"https://i.ibb.co/st1km5g/expiring-heavy-Melee-boost.png",
     "A_Evt_Expiring_HeavyRanged_Boost":"https://i.ibb.co/KWWkTVp/expiring-heavy-Ranged-boost.png",

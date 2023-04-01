@@ -87,6 +87,7 @@ let ui = {
         "Dwarven Citadel": "Trpasličí citadela",
         "Ancient Promise": "Starodávný slib",
         //EVENTS
+        "Realm of the Phoenix": "Svět fénixe",
         "The Great Excavation": "Velká hlubina",
         "The Secrets of Alchemy": "Tajemství alchymie",
         "Mischievous Therapy": "Nezbedná terapie",
@@ -204,6 +205,7 @@ let ui = {
         "Dwarven Citadel": "Zwergen-Zitadelle",
         "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
+        "Realm of the Phoenix": "Das Reich des Phönix",
         "The Great Excavation": "Die Große Grabung",
         "The Secrets of Alchemy": "Die Geheimnisse der Alchemie",
         "Mischievous Therapy": "Schelmische Therapie",
@@ -321,6 +323,7 @@ let ui = {
         "Dwarven Citadel": "Citadelle naine",
         "Ancient Promise": "Ancienne promesse",
         //EVENTS
+        "Realm of the Phoenix": "Realm of the Phoenix",
         "The Great Excavation": "La grande excavation",
         "The Secrets of Alchemy": "Les secrets de l'alchimie",
         "Mischievous Therapy": "Le Guérisseur",
@@ -438,6 +441,7 @@ let ui = {
         "Dwarven Citadel": "Törp Citadella",
         "Ancient Promise": "Ősi Ígéret",
         //EVENTS
+        "Realm of the Phoenix": "A Főnix Birodalma",
         "The Great Excavation": "A Nagy Ásatás",
         "The Secrets of Alchemy": "Az Alkímia Titkai",
         "Mischievous Therapy": "Csintalan Terápia",
@@ -555,6 +559,7 @@ let ui = {
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
+        "Realm of the Phoenix": "Królestwo Feniksa",
         "The Great Excavation": "Wielkie Wykopaliska",
         "The Secrets of Alchemy": "Sekrety Alchemii",
         "Mischievous Therapy": "Złośliwa Terapia",
@@ -672,6 +677,7 @@ let ui = {
         "Dwarven Citadel": "Гномья цитадель",
         "Ancient Promise": "Древнее обещание",
         //EVENTS
+        "Realm of the Phoenix": "Царство Феникса",
         "The Great Excavation": "Великие раскопки",
         "The Secrets of Alchemy": "Секреты алхимии",
         "Mischievous Therapy": "Озорная терапия",

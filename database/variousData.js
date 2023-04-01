@@ -108,6 +108,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "january_xxiii_": "01/03/2023",
     "february_xxiii_": "02/02/2023",
     "easter_xxiii_": "03/15/2023",
+    "may_xxiii_": "05/01/2023",
 }
 
 let questsLinks = {
@@ -141,6 +142,7 @@ let eventsDurations = {
     "january_xxiii_": 22,
     "february_xxiii_": 19,
     "easter_xxiii_": 22,
+    "may_xxiii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -254,10 +256,11 @@ var discardBuildings = [
 ]
 
 var eventsInfoIcons = {
-    "easter_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
-    "february_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
-    "january_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "december_xxii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "january_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "february_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "easter_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "may_xxiii_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -271,6 +274,13 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "may_xxiii_": [
+        {"id":"kitchen", "name":"Kitchen", "img":"https://oxzz.innogamescdn.com/frontend//assets/c6-4a507d2bbf6313505bc2555d8a08ad8f.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#kitchen", "file":"kitchen.html"},
+        {"id":"offers", "name":"Offers", "img":"https://oxzz.innogamescdn.com/frontend//assets/chest_0_normal-8c4a7587d8c2ee76ac7bac1844e5b0c8.png", "img_width":"28", "img_style":"margin-left: 1px; margin-right: 8px; position: relative;", "href":"#offers", "file":"offers.html"},
+        {"id":"dishes", "name":"Dishes", "img":"https://oxzz.innogamescdn.com/frontend//assets/a5-c5985d64834af94e8291d7b49e1d2ecb.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#dishes", "file":"dishes.html"},
+        {"id":"stockpiles", "name":"Stockpiles", "img":"https://oxzz.innogamescdn.com/frontend//assets/kitchen_generate-f337d5339944af067ddd6ea637aaaef2.png", "img_width":"27", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#stockpiles", "file":"stockpiles.html"},
+        {"id":"baskets", "name":"Baskets", "img":"https://oxzz.innogamescdn.com/frontend//assets/kitchen_flavorloot-6ccc0e297c15077fa930d3f32483579e.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#baskets", "file":"baskets.html"},
+    ],
     "easter_xxiii_": [
         {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html"},
     ],
