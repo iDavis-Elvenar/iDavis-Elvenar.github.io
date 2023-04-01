@@ -167,6 +167,10 @@ function createSeasonHeader() {
 }
 
 function displayBase() {
+    async function createExc() {
+        create_exception("Loading...", 10000, 'primary');
+    }
+    createExc();
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = ""
     createSeasonHeader();
@@ -206,6 +210,7 @@ function displayBase() {
     let subscribe = document.createElement('center');
     subscribe.innerHTML = subscribeText;
     parent.appendChild(subscribe);
+    create_exception("Content Generated!", 3, 'success');
 }
 
 function displayQuests() {
