@@ -47,6 +47,7 @@ var dailyPrizes = {
         "A_Evt_Blue_Egg",
         "A_Evt_Easter_XXII_Rod_of_Ascleptius",
         "INS_UNIT_MA_10",
+        "A_Evt_Easter_XXIII_Auric_Shrine",
     ],
 
     "february_xxiii_": [
