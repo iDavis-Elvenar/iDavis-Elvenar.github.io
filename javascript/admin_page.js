@@ -810,3 +810,47 @@ function generateSeasonPass() {
         create_exception("Data Generated!",10,'success');
     }
 }
+
+function generateResearch() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('research').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = [];
+    var section = document.getElementById("research_section").value;
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        for (let i = 0; i < data.length; i++) {
+            if (data[i]["section"] == section && data[i]["race"] == "elves") {
+                var technology = {};
+                technology['id'] = data[i]['id'];
+                technology['name'] = data[i]['name'];
+                technology['race'] = data[i]['race'];
+                technology['kp'] = data[i]['maxSP'];
+                technology['requirements'] = [];
+                for (const [key, value] of Object.entries(data[i]['requirements']['resources'])) {
+                    if (key !== '__class__') {
+                        var requirement = {};
+                        requirement[key] = value;
+                        technology['requirements'].push(requirement);
+                    }
+                }
+                technology['parentIds'] = [];
+                for (const parentId of data[i]['parentIds']) {
+                    technology['parentIds'].push(parentId);
+                }
+                technology['childrenIds'] = [];
+                if (data[i]['childrenIds']) {
+                    for (const childrenId of data[i]['childrenIds']) {
+                        technology['childrenIds'].push(childrenId);
+                    }
+                }
+                technology['section'] = section;
+                result.push(technology);
+            }
+        }
+        console.log(result)
+        saveJSON( JSON.stringify(result), "research.json" );
+        create_exception("Data Generated!",10,'success');
+    }
+}

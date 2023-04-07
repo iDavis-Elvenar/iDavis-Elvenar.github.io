@@ -3,13 +3,13 @@
 <div id="main">
 
      <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Dishes ::..<br></h5>
-     <img id="event_banner" src="https://i.ibb.co/3N8Kx0v/EL-akcia-august-2022-pieces.png" alt="undefined" class="center " style="margin-bottom: 15px;">
+     <img id="event_banner" src="https://i.ibb.co/h7ktbBH/dishes-image.png" alt="undefined" class="center " style="margin-bottom: 15px;">
 
      <div style="margin-left: 3%; margin-right: 3%; margin-bottom: 25px;">
     
       Dishes are the main target of the event! You need dishes to satisfy customers and complete their offers (you can find a detailed list
       of all offers in the tab <b>Offers</b>). <br><br>
-      There are 3 types of dishes in total and each consists of 6 different levels (tiers). You can review all available dishes in the table below:<br><br>
+      There are 3 types of dishes in total and each consists of 6 different levels (tiers). You can review all the available dishes in the table below:<br><br>
 
       <div class="bbTable">
         <table class="table-primary" style="width: 100%; margin-bottom: 20px;">
@@ -63,22 +63,22 @@
 
       <center><img src="https://i.ibb.co/2tF42N3/merging-process.png"></center>
 
-      By adding low-level dishes to your kitchen and repeating the merging process on these dishes, you can receive the required dishes
+      By adding low-level dishes to your kitchen and repeating the merging process on them, you can receive the required dishes
       to fulfill your offers. You can use the interactive visualization below to see how the merging process works (click the <b>Play</b> button below
-      to start the animation and use the respective <b>Merge</b> nodes to merge your generated pieces (if the required low-level dishes are available, of course)).
+      to start the animation and use the respective <b>Merge</b> nodes to merge your generated dishes (if the required low-level dishes are available, of course)).
    
      <div class="row" style="height: 450px; margin-top: 20px; margin-bottom: 15px;">
        <iframe frameborder="0" width="100%" height="100%" src="https://my.machinations.io/d/Copy-of-Merge-Event---Visualisation/a7e025bcf85e11ec8c2902f943517e50" style="background-color: transparent; border-style: none; border-width: 0px; overflow: hidden;"></iframe>
      </div>
 
-     From the visualization we can easily see that the higher the dish is, the more level 1 dishes you need and the whole process gets much slower at progress. Now, let's realize the costs of high-level dishes.<br><br>
+     From the visualization we can easily see that the higher the level of a dish is, the more level 1 dishes you need and the whole process gets much slower at progress. Now, let's realize the costs of high-level dishes.<br><br>
 
     <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Average scenario ::..<br></h5><br>
 
     In this section we will focus on calculating the average costs of different levels. It will help you create a general idea about the costs of customers' offers.<br><br>
 
-    Let's consider we have 400 chef hats at our disposal, which makes it possible to open a stockpile 100 items. Sticking with the percentual values
-    (from the <b>Stockpiles</b> tab), we will get the following:<br><br>
+    Let's consider we have 400 chef hats at our disposal, which makes it possible to open a respective stockpile 100 items. Sticking with the percentual values
+    (from the <b>Stockpiles</b> tab), we will get the following output:<br><br>
     <ul>
       <li>40x dish level 1</li>
       <li>30x dish level 2</li>
@@ -88,7 +88,7 @@
       <li>0x dish level 6</li>
     </ul>
 
-    We have received 40x dish level 1 from the spawning process only, which means we clicked the stockpile to get this number 40 times. Each time
+    We have received 40x dish level 1 from the spawning process, which means we clicked the stockpile 40 times. Each time
     we paid 4 chef hats, so 40 pieces level 1 cost <code-forum class="bbCodeInline">40*4=160</code-forum> chef hats in total. Because
     we earned 40 dishes in total, it makes <code-forum class="bbCodeInline">160/40=4</code-forum> chef hats per one level 1 dish.<br><br>
 
@@ -136,6 +136,76 @@
     for the cost ranges they have (the costs are always displayed as the number of required level <code-forum class="bbCodeInline">1</code-forum> dishes) and so you can 
     find yourself whether your current offer is on the lower side of this range, or if it is more beneficial for you to decline
     the offer and complete some other offers in the meantime.
+
+    <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Worst-case scenario ::..<br></h5><br>
+
+    Now that we have covered the average scenario, let's focus on the worst possible one. The values we calculate here are used in the <b>Offers</b> tab,
+    so that you can have an idea what are the worst possible prizes for the respective offers (to help you preparing your chef hats). Keep in mind that
+    none of this knowledge is required for progressing in event. It only helps those who are interested in the "behind the scene" calculations and math.<br><br>
+    
+    Let's consider, how many level <code-forum class="bbCodeInline">1</code-forum> dishes we need for a specific dish of level <code-forum class="bbCodeInline">N</code-forum>.<br>
+     We know that we need 2 dishes of level <code-forum class="bbCodeInline">L</code-forum> to merge one dish of level <code-forum class="bbCodeInline">L+1</code-forum>. In other words, every following level doubles the required number
+     of level <code-forum class="bbCodeInline">L</code-forum> dishes. Let's consider the following tree for merging the level <code-forum class="bbCodeInline">4</code-forum> dish:<br>
+
+     <center><img src="https://i.ibb.co/R06X0zB/EL-akcia-august-2022-merging-tree.png" style="margin-top: 10px; max-width: 100%;"></center><br>
+
+     How many level <code-forum class="bbCodeInline">1</code-forum> dishes do we need for one dish of level <code-forum class="bbCodeInline">N</code-forum>.
+     From the tree visualization above we can see how many times we have doubled the amount - this can be observed from the number of arrows between
+     the dish of level <code-forum class="bbCodeInline">N</code-forum> (which in our case is <code-forum class="bbCodeInline">4</code-forum>) and 
+     the dish we want to find the amount of, which is <code-forum class="bbCodeInline">1</code-forum>:<br>
+     
+     <center><img src="https://i.ibb.co/8zmGqgq/EL-akcia-august-2022-merging-tree-highlighted.png" style="margin-top: 10px; max-width: 100%;"></center><br>
+
+     Such a distance is 3, simply because the difference between <code-forum class="bbCodeInline">4</code-forum> and <code-forum class="bbCodeInline">1</code-forum> is 3. That makes it possible to realize how the 
+     amount of level <code-forum class="bbCodeInline">1</code-forum> dishes to merge level <code-forum class="bbCodeInline">N</code-forum> can be calculated:<br><br>
+
+    <center><div class="bbTable">
+      <table class="table-primary" style="width: 20%; margin-bottom: 20px;">
+        <tbody>
+          <tr>
+            <td style="text-align: center">
+              2^(N-1)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </center>
+
+    Which makes it possible to realize the following table and calculate, how many times would we need to open stockpiles in the worst-case scenario:<br>
+
+    <div class="bbTable">
+      <table class="table-primary" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">
+        <tbody>
+          <tr>
+            <th style="width: 16%; text-align: center;">Level 1</th>
+            <th style="width: 16%; text-align: center;">Level 2</th>
+            <th style="width: 16%; text-align: center;">Level 3</th>
+            <th style="width: 16%; text-align: center;">Level 4</th>
+            <th style="width: 16%; text-align: center;">Level 5</th>
+            <th style="width: 16%; text-align: center;">Level 6</th>
+          </tr>
+          <tr>
+            <td style="width: 16%; text-align: center;">1</td>
+            <td style="width: 16%; text-align: center;">2</td>
+            <td style="width: 16%; text-align: center;">4</td>
+            <td style="width: 16%; text-align: center;">8</td>
+            <td style="width: 16%; text-align: center;">16</td>
+            <td style="width: 16%; text-align: center;">32</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    Which in the worst-case scenario would cost <code-forum class="bbCodeInline">*4</code-forum> event currency. Let's take the following offer as an example:<br><br>
+
+    <center><img src="https://i.ibb.co/qyCTXVF/EL-akcia-august-2022-offer1.png"></center><br>
+
+    The offer requires Hot Chocolate level 3 and Delicious Roast level 6. The Hot Chocolate level 3 requires <code-forum class="bbCodeInline">2^(3-1)</code-forum> hot chocolates level 1 (which is <code-forum class="bbCodeInline">4</code-forum>) and 
+    the Delicious Roast level 6 requires <code-forum class="bbCodeInline">2^(6-1)</code-forum> delicious roasts level 1 (which is <code-forum class="bbCodeInline">32</code-forum>). In total, we need
+    36 dishes of level 1 to fulfill this offer, which, in the worst case scenario, would cost <code-forum class="bbCodeInline">36*4=144</code-forum> of event currency (chef hats).
+    Because the Stockpiles can also generate dishes of higher level than 1, we have a good chance that the final cost will be actually lower (see the <b>Cups</b> tab to see how exactly the dishes are generated).
+    This is where the nice, randomized mechanic comes into play.<br><br>
 
     </div>
     

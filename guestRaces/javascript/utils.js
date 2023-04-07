@@ -19,6 +19,9 @@ function switchView(type) {
     } else if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
+    } else if (type === "research" && view !== "research") {
+        displayResearch();
+        view = "research";
     } else if (type !== "base" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;

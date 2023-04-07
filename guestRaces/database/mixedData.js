@@ -1,6 +1,7 @@
 var baseTabsGuestRaces = [
-    {"id":"base_left_panel_div", "name":"Base", "img":"https://i.ibb.co/d6q5sRk/guestrace-icon.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#base", "onclick":"base"},
+    {"id":"base_left_panel_div", "name":"Base", "img":"https://i.ibb.co/d6q5sRk/guestrace-icon.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#base", "onclick":"base"},
     {"id":"quests_left_panel_div", "name":"Quests", "img":"../images/general/event_guide.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},
+    {"id":"research_left_panel_div", "name":"Research", "img":"../images/general/research.png", "img_width":"29", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#research", "onclick":"research"},
 ] 
 
 var additionalTabsGuestRaces = {
