@@ -21,6 +21,9 @@ function switchView(type) {
     } else if (type === "units" && view !== "units") {
         displayUnits();
         view = "units";
+    } else if (type === "boosts" && view !== "boosts") {
+        displayBoosts();
+        view = "boosts";
     } else if (type !== "info" && type !== "units" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
@@ -214,6 +217,23 @@ function displayBase() {
     let center = document.createElement('center');
     center.style.marginBottom = "30px";
 
+    var h5info = document.createElement('h5');
+    h5info.id = 'header';
+    h5info.className = "card-title text-center text-title font-weight-bold";
+    h5info.style.textAlign = "left";
+    h5info.innerHTML = `..:: Info ::..<br>`;
+    center.appendChild(h5info);
+
+    var tournamentIcon = document.createElement('img');
+    tournamentIcon.src = tournamentIcons[getSelectedTournament()];
+    tournamentIcon.style.marginBottom = "20px";
+    center.appendChild(tournamentIcon);
+
+    var introText = document.createElement('div');
+    introText.innerHTML = infoText.replace("_", getSelectedTournamentName());
+    introText.style.marginBottom = "20px";
+    center.appendChild(introText);
+
     var h5 = document.createElement('h5');
     h5.id = 'header';
     h5.className = "card-title text-center text-title font-weight-bold";
@@ -224,7 +244,16 @@ function displayBase() {
     createDatesTable(center,    convertJavascriptFormatDateToDisplayDate(javascriptDatumToStringDateOnly(tournamentsStructure.filter(tour => tour.id === getSelectedTournament())[0].start_date)),
                                 convertJavascriptFormatDateToDisplayDate(javascriptDatumToStringDateOnly(tournamentsStructure.filter(tour => tour.id === getSelectedTournament())[0].end_date)),
                                 convertJavascriptFormatDateToDisplayDate(javascriptDatumToStringDateOnly(tournamentsStructure.filter(tour => tour.id === getSelectedTournament())[0].start_date)),
-                                convertJavascriptFormatDateToDisplayDate(javascriptDatumToStringDateOnly(tournamentsStructure.filter(tour => tour.id === getSelectedTournament())[0].end_date)))
+                                convertJavascriptFormatDateToDisplayDate(javascriptDatumToStringDateOnly(tournamentsStructure.filter(tour => tour.id === getSelectedTournament())[0].end_date)));
+
+    var masterDiv = document.createElement('div');
+    masterDiv.id = "master_div";
+
+    $(function(){
+        $("#master_div").load("tournamentsTabs/general.html"); 
+    });
+
+    center.appendChild(masterDiv);
     
     parent.appendChild(center);
 }
@@ -232,4 +261,15 @@ function displayBase() {
 function displayUnits() {
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = "";
+    $(function(){
+        $("#column_with_tables").load("tournamentsTabs/"+getSelectedTournament()+"/units.html"); 
+    });
+}
+
+function displayBoosts() {
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = "";
+    $(function(){
+        $("#column_with_tables").load("tournamentsTabs/"+getSelectedTournament()+"/boosts.html"); 
+    });
 }
