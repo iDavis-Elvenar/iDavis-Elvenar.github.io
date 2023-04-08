@@ -134,10 +134,15 @@ function displayResearch() {
                 let finished = document.createElement('td');
                 let div = document.createElement('div');
                 div.className = "form-check";
+                div.style.padding = 0;
+                div.style.margin = 0;
                 let input = document.createElement('input');
                 input.className = "form-check-input";
                 input.type = "checkbox";
                 input.id = "research_finished_"+(tech);
+                input.style.float = "none";
+                input.style.position = "static";
+                input.style.marginLeft = 0;
                 if (Array(localStorage.getItem("research_finished_"+guestRace)).join().split(',').includes(String(tech))) {
                     input.checked = true;
                     number.className = "text-quest_completed";

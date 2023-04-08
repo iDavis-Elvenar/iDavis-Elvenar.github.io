@@ -440,25 +440,27 @@ function displayPass() {
         }
         let tr = document.createElement('tr');
         let td = document.createElement('td');
-        let imgLevel = document.createElement('img');
-        imgLevel.style.rotate = "90%";
-        imgLevel.src = seasonInfoIcons[getSelectedSeason()]["img"];
-        imgLevel.style.transform = "rotate(90deg)";
+        let pLevel = document.createElement('p');
+        pLevel.innerHTML = ""+(level+1);
+        pLevel.style.margin = 0;
+        pLevel.style.padding = 0;
+        pLevel.style.transform = "rotate(-90deg)";
+        pLevel.style.alignSelf = "center";
         let divLevel = document.createElement('div');
-        divLevel.innerHTML = ""+(level+1);
-        divLevel.style.position = "absolute";
-        if ((level+1) < 10) {
-            divLevel.style.marginLeft = "5%";
-        } else {
-            divLevel.style.marginLeft = "4.5%";
-        }
-        divLevel.style.marginTop = "4px";
+        divLevel.style.backgroundImage = "url('" + seasonInfoIcons[getSelectedSeason()]["img"] + "')";
+        divLevel.style.width = "32px";
+        divLevel.style.height = "32px";
+        divLevel.style.display = "flex";
+        divLevel.style.justifyContent = "center";
+        divLevel.style.margin = "0 auto";
+        divLevel.style.rotate = "90%";
+        divLevel.style.transform = "rotate(90deg)";
         divLevel.style.color = "white";
         divLevel.style.fontWeight = "bold";
         divLevel.style.textShadow = "1px 1px 1px #000000";
         divLevel.style.zIndex = "2";
+        divLevel.appendChild(pLevel);
         td.appendChild(divLevel);
-        td.appendChild(imgLevel);
         td.style.minHeight = "40px";
         tr.appendChild(td);
         let tdReq = document.createElement('td');

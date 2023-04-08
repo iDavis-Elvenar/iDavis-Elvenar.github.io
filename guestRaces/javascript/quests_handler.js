@@ -123,10 +123,15 @@ function displayQuests() {
                 let finished = document.createElement('td');
                 let div = document.createElement('div');
                 div.className = "form-check";
+                div.style.padding = 0;
+                div.style.margin = 0;
                 let input = document.createElement('input');
                 input.className = "form-check-input";
                 input.type = "checkbox";
                 input.id = "quest_finished_"+(quest);
+                input.style.float = "none";
+                input.style.position = "static";
+                input.style.marginLeft = 0;
                 if (Array(localStorage.getItem("quests_finished_"+guestRace)).join().split(',').includes(String(quest))) {
                     input.checked = true;
                     task.className = "text-quest_completed";
@@ -174,10 +179,15 @@ function displayQuests() {
                 let prepare = document.createElement('td');
                 let div2 = document.createElement('div');
                 div2.className = "form-check";
+                div2.style.padding = 0;
+                div2.style.margin = 0;
                 let input2 = document.createElement('input');
                 input2.className = "form-check-input";
                 input2.type = "checkbox";
                 input2.id = "quest_prepare_"+(quest);
+                input2.style.float = "none";
+                input2.style.position = "static";
+                input2.style.marginLeft = 0;
                 if (Array(localStorage.getItem("quests_prepare_"+guestRace)).join().split(',').includes(String(quest))) {
                     input2.checked = true;
                     if (!Array(localStorage.getItem("quests_finished_"+guestRace)).join().split(',').includes(String(quest))) {
