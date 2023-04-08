@@ -5,6 +5,9 @@ var baseTabsGuestRaces = [
 ] 
 
 var additionalTabsGuestRaces = {
+    "ch20": [
+        //{"id":"settlement", "name":"Settlement", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
+    ],
     /*"ch6": [
         {"id":"hoops", "name":"add1", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"test.html"},
     ],
@@ -30,4 +33,5 @@ var grBanners = {
     "ch18": "https://i.ibb.co/s5BLz8N/ch18-banner.png",
     "ch19": "https://i.ibb.co/NTmBDJ6/ch19-banner.png",
     "ch20": "https://i.ibb.co/kxJQxbn/ch20-banner.png",
+    "ch21": "https://i.ibb.co/kxJQxbn/ch20-banner.png",
 }

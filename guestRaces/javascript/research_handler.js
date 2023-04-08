@@ -235,12 +235,71 @@ function createTotalCostsDiv(parent) {
     divRow2.appendChild(fieldset);
     divTotalCosts.appendChild(divRow2);
 
+    let hr1 = document.createElement('hr');
+    //hr1.style.height = "0.5px";
+    hr1.style.marginTop = "3px";
+    hr1.style.marginBottom = "-2px";
+    divTotalCosts.appendChild(hr1);
+
+    let divHeadline1 = document.createElement('div');
+    divHeadline1.className = "row";
+    divHeadline1.innerHTML = `<h7><b>Goods:</b></h7>`;
+    divHeadline1.style.textAlign = "left";
+    divHeadline1.style.marginLeft = "-10px";
+    divHeadline1.style.marginTop = "0px";
+    divHeadline1.style.marginBottom = "-5px";
+    divTotalCosts.appendChild(divHeadline1);
+
     let divRow3 = document.createElement('div');
     divRow3.className = "";
     divRow3.innerHTML = ``;
     divRow3.style.textAlign = "left";
-    divRow3.id = "totalCosts_"+guestRace;
+    divRow3.id = "totalCosts_goods_"+guestRace;
     divTotalCosts.appendChild(divRow3);
+
+    let hr2 = document.createElement('hr');
+    //hr2.style.height = "0.5px";
+    hr2.style.marginTop = "3px";
+    hr2.style.marginBottom = "-2px";
+    divTotalCosts.appendChild(hr2);
+
+    let divHeadline2 = document.createElement('div');
+    divHeadline2.className = "row";
+    divHeadline2.innerHTML = `<h7><b>Discovered resources:</b></h7>`;
+    divHeadline2.style.textAlign = "left";
+    divHeadline2.style.marginLeft = "-10px";
+    divHeadline2.style.marginTop = "0px";
+    divHeadline2.style.marginBottom = "-5px";
+    divTotalCosts.appendChild(divHeadline2);
+
+    let divRow4 = document.createElement('div');
+    divRow4.className = "";
+    divRow4.innerHTML = ``;
+    divRow4.style.textAlign = "left";
+    divRow4.id = "totalCosts_discovered_"+guestRace;
+    divTotalCosts.appendChild(divRow4);
+
+    let hr3 = document.createElement('hr');
+    //hr3.style.height = "0.5px";
+    hr3.style.marginTop = "3px";
+    hr3.style.marginBottom = "-2px";
+    divTotalCosts.appendChild(hr3);
+
+    let divHeadline3 = document.createElement('div');
+    divHeadline3.className = "row";
+    divHeadline3.innerHTML = `<h7><b>Settlement resources:</b></h7>`;
+    divHeadline3.style.textAlign = "left";
+    divHeadline3.style.marginLeft = "-10px";
+    divHeadline3.style.marginTop = "0px";
+    divHeadline3.style.marginBottom = "-5px";
+    divTotalCosts.appendChild(divHeadline3);
+
+    let divRow5 = document.createElement('div');
+    divRow5.className = "";
+    divRow5.innerHTML = ``;
+    divRow5.style.textAlign = "left";
+    divRow5.id = "totalCosts_settlement_"+guestRace;
+    divTotalCosts.appendChild(divRow5);
 
     parent.appendChild(divTotalCosts);
 }
@@ -288,30 +347,58 @@ function calculateTotalCosts() {
 
 function updateTotalCosts(value) {
     var guestRace = getSelectedGuestRace();
-    let parent = document.getElementById("totalCosts_"+guestRace);
-    parent.innerHTML = ``;
+    let parent_goods = document.getElementById("totalCosts_goods_"+guestRace);
+    let parent_discovered = document.getElementById("totalCosts_discovered_"+guestRace);
+    let parent_settlement = document.getElementById("totalCosts_settlement_"+guestRace);
+    parent_goods.innerHTML = ``;
+    parent_discovered.innerHTML = ``;
+    parent_settlement.innerHTML = ``;
     for (const key in value) {
         if (goods_icons[key] !== undefined) {
-            parent.innerHTML += `${value[key]}x&nbsp;${goods_icons[key].replace("style='width: 28px", "style='width: 18px;").replace("<br>", "")}, `;
+            if (realizeParent(key) === "goods") {
+                if (parent_goods.innerHTML !== ``) {
+                    parent_goods.innerHTML += `, `;
+                }
+                parent_goods.innerHTML += `<h7 style="white-space: nowrap;">${value[key]}x&nbsp;${goods_icons[key].replace("'><br>", "' style='width: 20px;'><br>").replace("<br>", "")}</h7>`;
+            } else if (realizeParent(key) === "discovered") {
+                if (parent_discovered.innerHTML !== ``) {
+                    parent_discovered.innerHTML += `, `;
+                }
+                parent_discovered.innerHTML += `<h7 style="white-space: nowrap;">${value[key]}x&nbsp;${goods_icons[key].replace("'><br>", "' style='width: 20px;'><br>").replace("<br>", "")}</h7>`;
+            } else if (realizeParent(key) === "settlement") {
+                if (parent_settlement.innerHTML !== ``) {
+                    parent_settlement.innerHTML += `, `;
+                }
+                parent_settlement.innerHTML += `<h7 style="white-space: nowrap;">${value[key]}x&nbsp;${goods_icons[key].replace("'><br>", "' style='width: 20px;'><br>").replace("<br>", "")}</h7>`;
+            }
         } else {
-            parent.innerHTML += `${value[key]}x ${key}, `;
+            if (realizeParent(key) === "goods") {
+                parent_goods.innerHTML += `${value[key]}x ${key}, `;
+            } else if (realizeParent(key) === "discovered") {
+                parent_discovered.innerHTML += `${value[key]}x ${key}, `;
+            } else if (realizeParent(key) === "settlement") {
+                parent_settlement.innerHTML += `${value[key]}x ${key}, `;
+            }
         }
     }
-    parent.innerHTML = parent.innerHTML.substring(0, parent.innerHTML.length-2);
+    parent_goods.innerHTML = parent_goods.innerHTML || `<h7>-</h7>`;
+    parent_discovered.innerHTML = parent_discovered.innerHTML || `<h7>-</h7>`;
+    parent_settlement.innerHTML = parent_settlement.innerHTML || `<h7>-</h7>`;
 }
 
 function finishTechnology(tech, value, numberOfTechnologies, maxCostsLength, recalculate) {
-    if (value) {
-        var checkbox = document.getElementById("research_finished_"+(tech));
-        var numbertext = document.getElementById("research_number_"+(tech));
-        var nametext = document.getElementById("research_name_"+(tech));
-        var kptext = document.getElementById("research_kp_"+(tech));
-        var mandatorytext = document.getElementById("research_mandatory_"+(tech));
-        var coststexts = [];
-        for (let c = 0; c < maxCostsLength; c++) {
-            coststexts.push(document.getElementById("research_costs_"+(tech)+`${c}`));
-        }
 
+    var checkbox = document.getElementById("research_finished_"+(tech));
+    var numbertext = document.getElementById("research_number_"+(tech));
+    var nametext = document.getElementById("research_name_"+(tech));
+    var kptext = document.getElementById("research_kp_"+(tech));
+    var mandatorytext = document.getElementById("research_mandatory_"+(tech));
+    var coststexts = [];
+    for (let c = 0; c < maxCostsLength; c++) {
+        coststexts.push(document.getElementById("research_costs_"+(tech)+`${c}`));
+    }
+
+    if (value) {
         checkbox.checked = true;
         numbertext.className = "text-quest_completed";
         nametext.className = "text-quest_completed";
@@ -321,16 +408,6 @@ function finishTechnology(tech, value, numberOfTechnologies, maxCostsLength, rec
             item.className = "text-quest_completed";
         }
     } else {
-        var checkbox = document.getElementById("research_finished_"+(tech));
-        var numbertext = document.getElementById("research_number_"+(tech));
-        var nametext = document.getElementById("research_name_"+(tech));
-        var kptext = document.getElementById("research_kp_"+(tech));
-        var mandatorytext = document.getElementById("research_mandatory_"+(tech));
-        var coststexts = [];
-        for (let c = 0; c < maxCostsLength; c++) {
-            coststexts.push(document.getElementById("research_costs_"+(tech)+`${c}`));
-        }
-
         checkbox.checked = false;
         numbertext.className = "";
         nametext.className = "";
@@ -354,4 +431,20 @@ function finishTechnology(tech, value, numberOfTechnologies, maxCostsLength, rec
         recordFinishedTechnologies(numberOfTechnologies);
         calculateTotalCosts();
     }
+}
+
+function realizeParent(key) {
+    var settlement_regex1 = /^ch\d.+$/;
+    var settlement_regex2 = /^gr\d.+$/;
+    if (settlement_regex1.test(key) || settlement_regex2.test(key) || (key.startsWith("orcs") && key !== "orcs") || key.startsWith("fairies") ||
+        key.startsWith("dwarfs")) {
+        return "settlement";
+    }
+
+    var discovered_resources = ["orcs", "mana", "seeds", "unurium", "work"];
+    if (discovered_resources.includes(key)) {
+        return "discovered";
+    }
+
+    return "goods";
 }

@@ -80,7 +80,7 @@ function setLeftBar() {
     for (let i = 0; i < numberOfAdditionalItems; i++) {
         let newDiv = document.createElement("div");
         newDiv.className = "justify-content-center box d-flex flex-column";
-        newDiv.style.height = ""+(100/(numberOfAdditionalItems+2))+"%";
+        newDiv.style.height = ""+(100/(numberOfAdditionalItems+numberOfBaseItems))+"%";
         newDiv.id = additionalTabsGuestRaces[guestRace][i]["id"];
         let newSpan = document.createElement("span");
         newSpan.className = "allign-middle";

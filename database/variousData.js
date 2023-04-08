@@ -9,7 +9,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ascendedelixir", "ascendedmagic_dust", "ascendedgems", "boosted_ascended_plus_0_quality_1", "boosted_ascended_plus_1_quality_1",
     "boosted_ascended_plus_2_quality_1", "boosted_ascended_plus_0_quality_2", "boosted_ascended_plus_1_quality_2",
     "boosted_ascended_plus_2_quality_2", "boosted_ascended_plus_0_quality_3", "boosted_ascended_plus_1_quality_3",
-    "boosted_ascended_plus_2_quality_3", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
+    "boosted_ascended_plus_2_quality_3", "work", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
     "mc_lm", "mc_lr", "mc_ma", "mc_hm", "mc_hr", "knowledge_points", "broken_shards",
     "relic_marble", "relic_steel", "relic_planks", "relic_crystal", "relic_scrolls", "relic_silk", "relic_elixir",
     "relic_magic_dust", "relic_gems", "boosted_relic_plus_0_quality_1", "boosted_relic_plus_1_quality_1", "boosted_relic_plus_2_quality_1",
@@ -45,7 +45,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ch18_fire", "ch18_water", "ch18_wind", "ch18_earth", "ch18_badge",
     "ch19_magic1", "ch19_magic2", "ch19_matter1", "ch19_matter2", "ch19_creatures1", "ch19_creatures2", "ch19_creatures3", "ch19_matter3",
     "ch20_bars", "ch20_strings", "ch20_flutes", "ch20_drums", "ch20_songs",
-    "", "", "", "", "", "", "", "", "", 
+    "ch21_prey", "ch21_scales", "ch21_oblations3", "ch21_shells", "ch21_dragon", "ch21_oblations2", "ch21_art", "ch21_oblations1", "ch21_oblations4", 
     "", "", "", "", "", "", "", "", "", 
     "", "", "", ];
 
@@ -54,14 +54,15 @@ var numberOfChapters = 20;
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
     11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII', 18: 'XVIII',
-    19: 'XIX', 20: 'XX'
+    19: 'XIX', 20: 'XX', 21: 'XXI',
 }
 
 var chapterNames = {
     1: 'Chapter 1', 2: 'Chapter 2', 3: 'Chapter 3', 4: 'Chapter 4', 5: 'Chapter 5', 6: 'Dwarves', 7: 'Fairies', 
     8: 'Orcs and Goblins', 9: 'Woodelves', 10: 'Sorcerers and Dragons',
     11: 'Halflings', 12: 'Elementals', 13: 'Amuni', 14: 'Constructs', 15: 'Elvenar', 16: 'Embassies', 
-    17: 'Traders of Unur', 18: 'Team Spirit', 19: 'Revenge of the Exile', 20: 'The Power of Music'
+    17: 'Traders of Unur', 18: 'Team Spirit', 19: 'Revenge of the Exile', 20: 'The Power of Music',
+    21: 'The Vallorian Legend',
 }
 
 let eventBanners = {
@@ -718,6 +719,16 @@ var goods_icons = {
     "fairies_soma": "<img src='https://i.ibb.co/74jb2FK/fairies-soma.png' title='Sunflowers'><br>",
     "dwarfs_granite": "<img src='https://i.ibb.co/Y7V2ncW/dwarfs-granite.png' title='Granite'><br>",
     "dwarfs_copper": "<img src='https://i.ibb.co/yPP187V/dwarfs-copper.png' title='Copper'><br>",
+    "ch21_prey": "<img src='https://i.ibb.co/yQzzDV9/ch21-prey.png' title='Prey'><br>",
+    "ch21_scales": "<img src='https://i.ibb.co/4jwScbt/ch21-scales.png' title='Sea Serpent Scales'><br>",
+    "ch21_oblations3": "<img src='https://i.ibb.co/94nHZww/ch21-oblations3.png' title='Dangerous Oblations'><br>",
+    "ch21_shells": "<img src='https://i.ibb.co/LpS3Qn1/ch21-shells.png' title='Lizard Shells'><br>",
+    "ch21_dragon": "<img src='https://i.ibb.co/0r2pV6q/ch21-dragon.png' title='Dragon Glass'><br>",
+    "ch21_oblations2": "<img src='https://i.ibb.co/FDr8WKK/ch21-oblations2.png' title='Messy Oblations'><br>",
+    "ch21_art": "<img src='https://i.ibb.co/Y7NG7DG/ch21-art.png' title='Orcish Art'><br>",
+    "ch21_oblations1": "<img src='https://i.ibb.co/Vp0mwnk/ch21-oblations1.png' title='Rude Oblations'><br>",
+    "ch21_oblations4": "<img src='https://i.ibb.co/h7JrXWt/ch21-oblations4.png' title='Noble Oblations'><br>",
+    "work": "<img src='https://i.ibb.co/Y8km2P4/work.png' title='Community Work'><br>",
 }
 
 var rewardSelectionKits = {
@@ -746,6 +757,7 @@ var chapter_icons = {
     18: "https://i.ibb.co/ZxGJSVv/ch18.png title='Team Spirit'",
     19: "https://i.ibb.co/Y4gW0Vy/ch19.png title='Revenge of the Exile'",
     20: "https://i.ibb.co/Vv6rC8r/ch20.png title='The Power of Music'",
+    21: "https://i.ibb.co/Vv6rC8r/ch20.png title='The Vallorian Legend'",
 }
 
 var grIds = {
@@ -764,6 +776,7 @@ var grIds = {
     "teamspirit": "ch18",
     "revengeofexile": "ch19",
     "powerofmusic": "ch20",
+    "vallorianlegend": "ch21",
 }
 
 var navbarNew = {
