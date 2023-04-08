@@ -573,3 +573,39 @@ function getTitleFromGoodImage(id) {
     temp = temp.substring(0, temp.indexOf("'"));
     return temp;
 }
+
+function setDocumentTitle(document, type, baseTabs, additionalTabs, page) {
+    var tabName = "";
+    for (const baseTab of baseTabs) {
+        if (baseTab['id'] === type || baseTab['onclick'] === type) {
+            tabName = baseTab['name'];
+        }
+    }
+    if (tabName === "") {
+        var additionalKeys = Object.keys(additionalTabs);
+        for (const key of additionalKeys) {
+            for (const additionalTab of additionalTabs[key]) {
+                if (additionalTab['id'] === type) {
+                    tabName = additionalTab['name'];
+                }
+            }
+        }
+    }
+
+    var pagesNames = {
+        "events":"All Events",
+        "fa":"Fellowship Adventures",
+        "seasons":"Seasons",
+    }
+
+    var pageName = "";
+    if (!pagesNames.hasOwnProperty(page)) {
+        var chapter = page.substring(2);
+        pageName = chapterNames[chapter];
+    } else {
+        pageName = pagesNames[page];
+    }
+
+    var result = pageName + ` - ${tabName} - ` + `iDavis Elvenar`;
+    document.title = result;
+}

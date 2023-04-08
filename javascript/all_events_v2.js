@@ -122,6 +122,7 @@ function displayDailyPrizes() {
         create_exception("Loading...", 10000, 'primary');
     }
     createExc();
+    setDocumentTitle(document, "calendar", baseTabsEvents, additionalTabsEvents, "events");
 
     view = "calendar";
 
@@ -785,6 +786,7 @@ function switchView(type) {
         }
         //checkAdBlocker();
     }
+    setDocumentTitle(document, type, baseTabsEvents, additionalTabsEvents, "events");
 }
 
 function setView(value) {

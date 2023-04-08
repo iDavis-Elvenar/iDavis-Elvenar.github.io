@@ -42,6 +42,7 @@ function switchView(type) {
             }
         }
     }
+    setDocumentTitle(document, type, baseTabsFa, additionalTabsFa, "fa");
     create_exception("Content Generated!", 3, 'success');
 }
 
@@ -169,6 +170,7 @@ function displayBase() {
         create_exception("Loading...", 10000, 'primary');
     }
     createExc();
+    setDocumentTitle(document, "info", baseTabsFa, additionalTabsFa, "fa");
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = "";
     createFaHeader();

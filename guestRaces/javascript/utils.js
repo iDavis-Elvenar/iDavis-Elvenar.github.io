@@ -1,12 +1,14 @@
 var view = "base";
 
 function loadPage() {
+    var foundView = "";
     if (location.href.split('#').length > 1 && location.href.split('#')[1] !== "") {
         foundView = location.href.split('#')[1];
-        switchView(foundView);
     } else {
-        switchView("base");
+        foundView = "base";
     }
+    switchView(foundView);
+    setDocumentTitle(document, foundView, baseTabsGuestRaces, additionalTabsGuestRaces, getSelectedGuestRace());
     setLeftBar();
 }
 
@@ -35,6 +37,7 @@ function switchView(type) {
             }
         }
     }
+    setDocumentTitle(document, type, baseTabsGuestRaces, additionalTabsGuestRaces, getSelectedGuestRace());
     create_exception("Content Generated!", 3, 'success');
 }
 

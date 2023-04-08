@@ -39,6 +39,7 @@ function switchView(type) {
             }
         }
     }
+    setDocumentTitle(document, type, baseTabsSeasons, additionalTabsSeasons, "seasons");
     create_exception("Content Generated!", 3, 'success');
 }
 
@@ -171,6 +172,7 @@ function displayBase() {
         create_exception("Loading...", 10000, 'primary');
     }
     createExc();
+    setDocumentTitle(document, "info", baseTabsSeasons, additionalTabsSeasons, "seasons");
     let parent = document.getElementById("column_with_tables");
     parent.innerHTML = ""
     createSeasonHeader();
