@@ -72,8 +72,13 @@ function setLeftBar() {
         }
         a.innerHTML = langUI(baseTabsGuestRaces[b]["name"]);
         let img = document.createElement("img");
-        img.src = baseTabsGuestRaces[b]["img"];
-        img.style = "width: "+baseTabsGuestRaces[b]["img_width"]+"px; "+baseTabsGuestRaces[b]["img_style"];
+        if (baseTabsGuestRaces[b]["img"] === "various") {
+            img.src = "../images/general/chapter_icons/"+getSelectedGuestRace()+".png";
+            img.style = "width: "+baseTabsGuestRaces[b]["img_width"]+"px; "+baseTabsGuestRaces[b]["img_style"];
+        } else {
+            img.src = baseTabsGuestRaces[b]["img"];
+            img.style = "width: "+baseTabsGuestRaces[b]["img_width"]+"px; "+baseTabsGuestRaces[b]["img_style"];
+        }
         a.prepend(img);
         span.appendChild(a);
         div.appendChild(span);
@@ -95,8 +100,13 @@ function setLeftBar() {
         }
         newA.innerHTML = additionalTabsGuestRaces[guestRace][i]["name"];
         let newImg = document.createElement("img");
-        newImg.src= additionalTabsGuestRaces[guestRace][i]["img"];
-        newImg.style = "width: "+additionalTabsGuestRaces[guestRace][i]["img_width"]+"px; "+additionalTabsGuestRaces[guestRace][i]["img_style"];
+        if (additionalTabsGuestRaces[guestRace][i]["img"] === "various_settlement") {
+            newImg.src = settlementIcons[guestRace];
+            newImg.style = "width: "+additionalTabsGuestRaces[guestRace][i]["img_width"]+"px; "+additionalTabsGuestRaces[guestRace][i]["img_style"];
+        } else {
+            newImg.src= additionalTabsGuestRaces[guestRace][i]["img"];
+            newImg.style = "width: "+additionalTabsGuestRaces[guestRace][i]["img_width"]+"px; "+additionalTabsGuestRaces[guestRace][i]["img_style"];
+        }
         newA.prepend(newImg);
         newSpan.appendChild(newA);
         newDiv.appendChild(newSpan);
