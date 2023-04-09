@@ -97,8 +97,8 @@ var faStartDates = {
 var seasonStartDates = {
     "april_xxiii_": {
         "live": {
-            "start_date": "__ _th 2023", //april 27th
-            "end_date": "__ _th 2023" //july 11th
+            "start_date": "April 27th 2023", //april 27th
+            "end_date": "July 11th 2023" //july 11th
         },
         "beta": {
             "start_date": "March 16th 2023",

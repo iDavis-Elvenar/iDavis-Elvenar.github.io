@@ -26,6 +26,9 @@ function switchView(type) {
     } else if (type === "pass" && view !== "pass") {
         displayPass();
         view = "pass";
+    } else if (type === "blessings" && view !== "blessings") {
+        displayBlessings();
+        view = "blessings";
     } else if (type !== "info" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
@@ -81,6 +84,9 @@ function setLeftBar() {
         if (baseTabsSeasons[b]["img"] === "various") {
             img.src = "./images/seasons/icons/"+getSelectedSeason()+".png";
             img.style = "width: "+seasonInfoIcons[getSelectedSeason()]["img_width"]+"px; "+seasonInfoIcons[getSelectedSeason()]["img_style"];
+        } else if (baseTabsSeasons[b]["img"] === "various_blessing") {
+            img.src = seasonBlessingIcons[getSelectedSeason()];
+            img.style = "width: "+baseTabsSeasons[b]["img_width"]+"px; "+baseTabsSeasons[b]["img_style"];
         } else {
             img.src = baseTabsSeasons[b]["img"];
             img.style = "width: "+baseTabsSeasons[b]["img_width"]+"px; "+baseTabsSeasons[b]["img_style"];
@@ -332,7 +338,7 @@ function displayQuests() {
 }
 
 function generateDailyChest(parent) {
-    if (seasonDailyChests.hasOwnProperty(getSelectedSeason())) {
+    if (seasonsChests.hasOwnProperty(getSelectedSeason())) {
         let p = document.createElement('p');
         p.innerHTML = `<center><h7>If you manage to complete all 4 daily quests, you can unlock the following Daily Chest:</h7></center>`;
         p.style.marginTop = "-8px";
@@ -358,14 +364,14 @@ function generateDailyChest(parent) {
         center.appendChild(chest);
         tdChest.appendChild(center);
         tr.appendChild(tdChest);
-        seasonDailyChests[getSelectedSeason()].forEach(function(reward) {
+        seasonsChests[getSelectedSeason()]['daily'].forEach(function(reward) {
             let th = document.createElement('th');
-            th.style.width = ""+(70/seasonDailyChests[getSelectedSeason()].length)+"%";
+            th.style.width = ""+(70/seasonsChests[getSelectedSeason()]['daily'].length)+"%";
             th.innerHTML = reward["percentage"]+"%";
             tr.appendChild(th);
         });
         let tr2 = document.createElement('tr');
-        seasonDailyChests[getSelectedSeason()].forEach(function(reward) {
+        seasonsChests[getSelectedSeason()]['daily'].forEach(function(reward) {
             let td = document.createElement('td');
             if (reward["type"] === "flexible_reward") {
                 let flexibleRew = flexibleRewards.filter(elem => elem.id === reward["subType"])[0];
@@ -955,4 +961,100 @@ function calculateQuests(daysLeft, duration, pointsLeft, completedCurrentDaily, 
     const percentage = ((totalPoints / pointsLeft) * 100).toFixed(2);
     return [true, percentage, totalPoints, dailyQuestsToMiss];
 }
-  
+
+function displayBlessings() {
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = ""
+    //createSeasonHeader();
+
+    var h5 = document.createElement('h5');
+    h5.id = 'seasonPass_header';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: ${langUI("Blessings")} ::..<br>`;
+    parent.appendChild(h5);
+
+    var cent = document.createElement('center');
+    var imgBlessing = document.createElement('img');
+    imgBlessing.src = seasonBlessingIcons[getSelectedSeason()];
+    cent.appendChild(imgBlessing);
+    parent.appendChild(cent);
+
+    let p = document.createElement('p');
+    p.innerHTML = `<center>Blessings can be unlocked after reaching level 50 in the Season! You can collect additional Petals to earn Season Blessings.<br>
+    Every time you receive new Blessing, 3 randomly selected chests become available (out of the chests below). You can pick any chest you wish. If you do not own Season Pass,
+    two of the selected chests will be locked (you will always see a combination of 1 free (green) and 2 premium (purple) chests).</center>`;
+    p.style.marginTop = "20px";
+    p.style.marginBottom = "20px";
+    parent.appendChild(p);
+
+    seasonsChests[getSelectedSeason()]['blessings'].forEach(function(chest) {
+        var div = document.createElement('div');
+        div.style.textAlign = 'center';
+        div.style.marginBottom = '10px';
+        div.style.marginTop = '10px';
+        var divBBTable = document.createElement('div');
+        divBBTable.className = 'bbTable';
+        var table = document.createElement('table');
+        table.className = 'table-primary';
+        table.style.width = '100%';
+        var tbody = document.createElement('tbody');
+
+        let tr = document.createElement('tr');
+        let tdChest = document.createElement('td');
+        tdChest.rowSpan = "2";
+        tdChest.style.width = "30%";
+        let chestImg = document.createElement('img');
+        if (!blessingFreeChests.hasOwnProperty(getSelectedSeason())) {
+            chestImg.src = blessingChestsImages["premium"];
+        } else if (blessingFreeChests[getSelectedSeason()].includes(chest['id'])) {
+            chestImg.src = blessingChestsImages["free"];
+        } else {
+            chestImg.src = blessingChestsImages["premium"];
+        }
+        let center = document.createElement('center');
+        center.appendChild(chestImg);
+        tdChest.appendChild(center);
+        tr.appendChild(tdChest);
+
+        chest['rewards'].forEach(function(reward) {
+            var th = document.createElement('th');
+            th.style.width = ""+(70/chest['rewards'].length)+"%";
+            th.innerHTML = reward['percentage']+"%";
+            tr.appendChild(th);
+        });
+
+        var tr2 = document.createElement('tr');
+        chest['rewards'].forEach(function(reward) {
+            var td = document.createElement('td');
+            if (reward["type"] === "flexible_reward") {
+                let flexibleRew = flexibleRewards.filter(elem => elem.id === reward["subType"])[0];
+                td.innerHTML = `${flexibleRew["rewards"][parseInt(getPresetChapter())-1]["amount"]*reward["amount"]} ${goods_icons[flexibleRew["rewards"][parseInt(getPresetChapter())-1]["subType"]].replace("<br>", "")}`;
+            } else if (reward["type"] === "building") {
+                var buildingID = reward["subType"].substring(0, reward["subType"].indexOf("$") !== -1 ? reward["subType"].indexOf("$") : reward["subType"].indexOf("$").length);
+                var imgBuilding = document.createElement('img');
+                imgBuilding.src = images_buildings[buildingID];
+                imgBuilding.style.maxHeight = "48px";
+                td.appendChild(imgBuilding);
+                td.innerHTML += "<br>";
+                $.get('database/buildings.json', function(data) {
+                    td.innerHTML += `<a class="text-link font-weight-bold" href="buildings.html#${buildingID}" target="_blank">${data.filter(elem => elem.id === buildingID)[0]['name']}</a>`;
+                });
+            } else {
+                if (goods_icons[reward["subType"]] === undefined) {
+                    td.innerHTML = `${reward["amount"]} ${goods_icons[reward["subType"].toLowerCase()].replace("<br>", "")}`;
+                } else {
+                    td.innerHTML = `${reward["amount"]} ${goods_icons[reward["subType"]].replace("<br>", "")}`;
+                }
+            }
+            tr2.appendChild(td);
+        });
+
+        tbody.appendChild(tr);
+        tbody.appendChild(tr2);
+        table.appendChild(tbody);
+        divBBTable.appendChild(table);
+        div.appendChild(divBBTable);
+        parent.appendChild(div);
+    });
+}

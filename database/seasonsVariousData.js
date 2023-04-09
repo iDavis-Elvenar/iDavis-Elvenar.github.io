@@ -2,6 +2,7 @@ var baseTabsSeasons = [
     {"id":"base_left_panel_div", "name":"Info", "img":"various", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#info", "onclick":"info"},
     {"id":"base_left_panel_div", "name":"Quests", "img":"https://i.ibb.co/pJsbHp7/season-dailykeys.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},
     {"id":"base_left_panel_div", "name":"Season Pass", "img":"https://i.ibb.co/87MNrBB/season-pass.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#pass", "onclick":"pass"},
+    {"id":"base_left_panel_div", "name":"Blessings", "img":"various_blessing", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#blessings", "onclick":"blessings"},
 ]
 
 var additionalTabsSeasons = {
@@ -16,8 +17,13 @@ var seasonsBanners = {
 }
 
 var seasonInfoIcons = {
-    "december_xxii_" : {"img":"https://i.ibb.co/L8gkDtv/season-dreams-info.png", "img_width": "28", "img_style": "margin-left: 0px; margin-right: 10px; position: relative;"},
-    "april_xxiii_" : {"img":"https://i.ibb.co/nM43ZwY/april-xxiii.png", "img_width": "28", "img_style": "margin-left: 0px; margin-right: 10px; position: relative;"},
+    "december_xxii_" : {"img":"https://i.ibb.co/L8gkDtv/season-dreams-info.png", "img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "april_xxiii_" : {"img":"https://i.ibb.co/nM43ZwY/april-xxiii.png", "img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+}
+
+var seasonBlessingIcons = {
+    "december_xxii_" : "https://i.ibb.co/Xxd9vcY/season-dreams-blessing.png",
+    "april_xxiii_" : "https://i.ibb.co/ZfjS6dm/season-joy-blessing.png",
 }
 
 var seasonXp = {
@@ -36,6 +42,7 @@ var seasonsVideos = {
 }
 
 var seasonQuestsRewards = {
+    "april_xxiii_": {"daily" : 5, "weekly" : 70},
     "december_xxii_": {"daily" : 5, "weekly" : 70},
 }
 
@@ -49,49 +56,13 @@ to still collect the rest of the reward lane!`;
 
 var subscribeText = `You can find more video content by <a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="card-title text-center text-link"><b>subscribing to my channel</b></a>.`;
 
-var seasonDailyChests = {
-    "december_xxii_": [
-        {
-          "type": "item",
-          "subType": "INS_KP_AW_20",
-          "amount": "1",
-          "percentage": 5
-        },
-        {
-          "type": "item",
-          "subType": "INS_RF_CN_20",
-          "amount": "1",
-          "percentage": 10
-        },
-        {
-          "type": "item",
-          "subType": "INS_KP_AW_10",
-          "amount": "1",
-          "percentage": 15
-        },
-        {
-          "type": "flexible_reward",
-          "subType": "frog_default1",
-          "amount": "5",
-          "percentage": 15
-        },
-        {
-          "type": "item",
-          "subType": "INS_RF_SPL_10",
-          "amount": "1",
-          "percentage": 15
-        },
-        {
-          "type": "item",
-          "subType": "INS_TR_AMT_15",
-          "amount": "1",
-          "percentage": 20
-        },
-        {
-          "type": "item",
-          "subType": "INS_TR_AMT_10",
-          "amount": "1",
-          "percentage": 20
-        }
-      ],
+var blessingChestsImages = {
+    "free":"https://i.ibb.co/nRsp7BC/season-blessing-chest-Free.png",
+    "premium":"https://i.ibb.co/3CK8q7J/season-blessing-chest-Premium.png",
+}
+
+var blessingFreeChests = {
+    "april_xxiii_": [
+        "reward_pool_event_chest_c_season_joy","reward_pool_event_chest_f_season_joy","reward_pool_event_chest_i_season_joy"
+    ]
 }
