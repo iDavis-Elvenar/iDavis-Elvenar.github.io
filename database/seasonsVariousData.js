@@ -46,6 +46,11 @@ var seasonQuestsRewards = {
     "december_xxii_": {"daily" : 5, "weekly" : 70},
 }
 
+var seasonsQuestsBannerIcons = {
+    "april_xxiii_":"https://i.ibb.co/sF670CC/season-joy-quests-and-rewards.png",
+    "december_xxii_":"https://i.ibb.co/tXpRkmP/season-quests-and-rewards.png",
+}
+
 var seasonsIntro = `Seasons are a type of long-term events containing Daily and Weekly quests, many interesting rewards and a unique Season Pass.
 <br><br>By completing quests you receive experience points that help you unlock rewards in the reward lane. You can see all the available rewards
 during this season in the <b>Season Pass</b> tab and check all the possible quests you may receive in the <b>Quests</b> tab.
