@@ -69,5 +69,8 @@ var blessingChestsImages = {
 var blessingFreeChests = {
     "april_xxiii_": [
         "reward_pool_event_chest_c_season_joy","reward_pool_event_chest_f_season_joy","reward_pool_event_chest_i_season_joy"
-    ]
+    ],
+    "december_xxii_": [
+        "reward_pool_event_chest_c_season_dreams","reward_pool_event_chest_f_season_dreams","reward_pool_event_chest_i_season_dreams"
+    ],
 }
