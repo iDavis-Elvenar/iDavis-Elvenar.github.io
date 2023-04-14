@@ -568,6 +568,8 @@ var goods_icons = {
     "b_all_aw2_shards": "<img src='https://i.ibb.co/xLSxDWr/b-all-aw2-shards.png' title='Rune Shard for Golden Abyss'><br>",
     "b_all_aw3_shards": "<img src='https://i.ibb.co/x1b3jK5/b-all-aw3-shards.png' title='Rune Shard for Endless Excavation'><br>",
     "b_all_aw4_shards": "<img src='https://i.ibb.co/3MfktmQ/b-all-aw4-shards.png' title='Rune Shard for Needles of the Tempest'><br>",
+    "aw1_shards": "<img src='https://i.ibb.co/tpXSfYC/aw1-shards.png' title='Rune Shard for Martial Monastery / Sanctuary'><br>",
+    "aw2_shards": "<img src='https://i.ibb.co/DfLv4x9/aw2-shards.png' title='Rune Shard for Crystal Lighthouse / Great Bell Spire'><br>",
     "b_all_aw5_shards": "<img src='https://i.ibb.co/B2d7hGW/b-all-aw5-shards.png' title='Rune Shard for Watchtower Ruins'><br>",
     "b_all_aw6_shards": "<img src='https://i.ibb.co/fd3pczy/b-all-aw6-shards.png' title='Rune Shard for Thrones of the High Men'><br>",
     "b_dwarfs_aw1_shards": "<img src='https://i.ibb.co/vYW25KJ/b-dwarfs-aw1-shards.png' title='Rune Shard for Dwarven Bulwark'><br>",
