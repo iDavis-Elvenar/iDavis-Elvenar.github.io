@@ -198,6 +198,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_December_XXII_Chromafrost_Glacier": "1x Chromafrost Glacier Artifact",
     "A_Evt_Evo_January_XXIII_Steam_Golem": "1x Steam Golem Artifact",
     "A_Evt_Evo_Easter_XXIII_Astral_Phoenix": "1x Astral Phoenix Artifact",
+    "A_Evt_Evo_May_XXIII_Juuls_Traveling_Kitchen": "1x Juul's Traveling Kitchen Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -234,6 +235,9 @@ var iconsImages = {
     "unurium_decay_reduction":"https://i.ibb.co/6WLCvRV/decay-unurium.png",
     "mana":"https://i.ibb.co/VxCCGww/mana-increase.png",
     "orcs":"https://i.ibb.co/V22qvDZ/orcs-increase-small.png",
+    "goods_standard_basic":"https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png",
+    "goods_standard_refined":"https://i.ibb.co/bzCh4vp/goods-standard-precious.png",
+    "goods_standard_precious":"https://i.ibb.co/G0N8gT6/goods-standard-refined.png",
 }
 
 var iconsTitles = {

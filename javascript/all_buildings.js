@@ -33,6 +33,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_December_XXII_Chromafrost_Glacier": 9,
     "A_Evt_Evo_January_XXIII_Steam_Golem": 9,
     "A_Evt_Evo_Easter_XXIII_Astral_Phoenix": 9,
+    "A_Evt_Evo_May_XXIII_Juuls_Traveling_Kitchen": 9,
 }
 
 function setAndReload(id) {
