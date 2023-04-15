@@ -23,15 +23,17 @@
          focuses on their rewards, as the event mechanic makes their costs pretty much random (for one offer a customer can ask different
          dishes with different levels).<br><br>
  
-         <center><img src="https://i.ibb.co/RN7ws7J/offer-decline.png" style="margin-bottom: -30px; margin-top: -5px;"></center><br><br>
+         <center><img src="https://i.ibb.co/RN7ws7J/offer-decline.png" style="margin-bottom: -40px; margin-top: -15px;"></center><br><br>
  
          You can always decline any offer you wish. Before you get into the merging process, hover over your current offer so that you can see what 
          the rewards are and whether they are worth your effort or not! <br>Keep in mind that every offer has the so-called range of possible costs (this is 
          what I observed from my gameplay on Beta). It means that when we take a list of required pieces for one specific offer out of those listed below and realize how many level 1 pieces we need 
-         (with the help of the <b>Dishes</b> tab), we do not get the same number every time! <br><br>The <b>costs</b> represent the number of required level 1 pieces (which would be needed in the worst case scenario),
-         so you can decide for yourself, whether your current order is in the lower part
-         of this range, or you want to decline your offer and finish other offers in the meantime. Even though the difference is not huge, it may help you 
-         reach more Grand Prizes after all (and potentially some more artifacts for the Juul's Traveling Kitchen evolving building, if that's what you aim for).<br><br>
+         (with the help of the <b>Dishes</b> tab), we do not get the same number every time! <br><br>The <b>costs</b> represent the number of required level 1 dishes (which would be needed in the worst case scenario),
+         so you can decide for yourself, whether your current offer is in the lower part
+         of this range, or you want to decline your offer and finish other offers in the meantime. Even though the difference is not any significant, it may help you 
+         reach more Grand Prizes after all (and potentially some more artifacts for the Juul's Traveling Kitchen evolving building, if that's what you are aiming for).<br><br>
+         <b>Note:</b> The very first few offers are considered to be a tutorial. It means that the respective offers may appear in slightly different slots
+         than those they have listed below. This evens out after a few completed offers and then they start following the slots listed in the table below.
          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4154227292627045"
                              crossorigin="anonymous"></script> <!-- In-article -->
                          <ins class="adsbygoogle"
@@ -53,534 +55,596 @@
  <script>
  if (typeof currencies === "undefined") {
      var currencies = {
-         "august_xxii_": {
-             "ec": "https://i.ibb.co/4tYSS6K/EL-akcia-august-2022-event-currency-1.png",
-             "ep": "https://i.ibb.co/ChK4qRW/EL-akcia-august-2022-payback.png",
-             "event_currency_2": "https://i.ibb.co/tqTM3ck/EL-akcia-august-2022-event-currency-2.png",
+         "may_xxiii_": {
+             "ec": "https://i.ibb.co/8KMKWPm/event-currency-1.png",
+             "ep": "https://i.ibb.co/jvQRn0b/event-payback.png",
+             "event_currency_2": "https://i.ibb.co/pn4mpbm/event-currency-2.png",
          }
      }
  }
  
  if (typeof chests === "undefined") {
      var chests = {
-         "august_xxii_": [
+         "may_xxiii_": [
              {
-                 "img": "https://i.ibb.co/qyfgyqC/EL-akcia-august-2022-chest0.png",  //HOTOVO
-                 "ec": "12-14",
+                 "img": "https://i.ibb.co/vYJV2Bn/chest0.png",  //HOTOVO
+                 "ec": "16-16",
                  "ep": 1,
-                 "description": `<i>Humble Request</i> (appears in slot <b>1</b>)`,
+                 "description": `<i>Light Bite</i> (appears in slot <b>1</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 5
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_UNIT_MA_5",
-                     "amount": "1",
-                     "percentage": 30
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_UNIT_LM_5",
-                     "amount": "1",
-                     "percentage": 30
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_UNIT_LR_5",
-                     "amount": "1",
-                     "percentage": 35
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_a_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 5
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "flexible_reward",
+        "subType": "frog_barracks_HR",
+        "amount": 7,
+        "percentage": 30
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "flexible_reward",
+        "subType": "frog_barracks_LM",
+        "amount": 7,
+        "percentage": 30
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "flexible_reward",
+        "subType": "frog_barracks_HM",
+        "amount": 7,
+        "percentage": 35
+      }
+    ],
+    "id": "reward_pool_event_chest_a_merge_kitchen"
              },
              {
-                 "img": "https://i.ibb.co/BtSG7VY/EL-akcia-august-2022-chest2.png",  //HOTOVO
-                 "ec": "20-22",
+                 "img": "https://i.ibb.co/wzQX5bd/chest1.png",  //HOTOVO
+                 "ec": "17-20",
                  "ep": 1,
-                 "description": `<i>Humble Request</i> (appears in slot <b>1</b>)`,
+                 "description": `<i>Light Bite</i> (appears in slot <b>1</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "1",
-                     "percentage": 5
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 8
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "knowledge_points",
-                     "amount": "5",
-                     "percentage": 27
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "flexible_reward",
-                     "subType": "frog_orcs",
-                     "amount": "3",
-                     "percentage": 60
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_b_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 8
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 1,
+        "percentage": 8
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "knowledge_points",
+        "amount": 3,
+        "percentage": 24
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "flexible_reward",
+        "subType": "frog_orcs",
+        "amount": 2,
+        "percentage": 60
+      }
+    ],
+    "id": "reward_pool_event_chest_b_merge_kitchen"
              },
              {
-                 "img": "https://i.ibb.co/bR8X2sh/EL-akcia-august-2022-chest1.png",  //HOTOVO
-                 "ec": "16-19",
+                 "img": "https://i.ibb.co/wY6T8z5/chest2.png",  //HOTOVO
+                 "ec": "19-21",
                  "ep": 1,
-                 "description": `<i>Humble Request</i> (appears in slot <b>1</b>)`,
+                 "description": `<i>Light Bite</i> (appears in slot <b>1</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "1",
-                     "percentage": 2
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "spell_good_production_boost_1",
-                     "amount": "1",
-                     "percentage": 23
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "spell_knowledge_boost_1",
-                     "amount": "1",
-                     "percentage": 25
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "spell_supply_production_boost_1",
-                     "amount": "1",
-                     "percentage": 40
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_c_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 1,
+        "percentage": 2
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 8
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "spell_good_production_boost_1",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "spell_knowledge_boost_1",
+        "amount": 1,
+        "percentage": 25
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "spell_supply_production_boost_1",
+        "amount": 1,
+        "percentage": 45
+      }
+    ],
+    "id": "reward_pool_event_chest_c_merge_kitchen"
              },
              {
-                 "img": "https://i.ibb.co/s3ptY8W/EL-akcia-august-2022-chest4.png",  //HOTOVO
-                 "ec": "28-28",
+                 "img": "https://i.ibb.co/x2C1NXz/chest4.png",  //HOTOVO
+                 "ec": "32-32",
                  "ep": 2,
-                 "description": `<i>Uncommon Request</i> (appears in slot <b>1</b>)`,
+                 "description": `<i>Cozy Meal</i> (appears in slot <b>2</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "combiningcatalyst",
-                     "amount": "2",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "1",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 15
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_RF_SPL_15",
-                     "amount": "1",
-                     "percentage": 30
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_RF_CN_15",
-                     "amount": "1",
-                     "percentage": 35
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_d_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "combiningcatalyst",
+        "amount": 4,
+        "percentage": 5
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 1,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_RF_SPL_10",
+        "amount": 1,
+        "percentage": 25
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_RF_CN_10",
+        "amount": 1,
+        "percentage": 25
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "building",
+        "subType": "A_Evt_Exp_May_XXIII_SteelInfused_Fungi${chapter}",
+        "amount": 1,
+        "percentage": 25
+      }
+    ],
+    "id": "reward_pool_event_chest_d_merge_kitchen"
              },
              {
-                 "img": "https://i.ibb.co/58tDg11/EL-akcia-august-2022-chest6.png",  //HOTOVO
-                 "ec": "35-37",
-                 "ep": 3,
-                 "description": `<i>Rare Request</i> (appears in slot <b>2</b>)`,
-                 "chances": [
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 15
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "runeShard",
-                     "subType": "random",
-                     "amount": "3",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "2",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "runeShard",
-                     "subType": "broken_shards",
-                     "amount": "3",
-                     "percentage": 45
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_e_merge_dwarvengame"
-             },
-             {
-                 "img": "https://i.ibb.co/hWGvzxn/EL-akcia-august-2022-chest5.png",  //HOTOVO
-                 "ec": "32-34",
-                 "ep": 3,
-                 "description": `<i>Rare Request</i> (appears in slot <b>2</b>)`,
-                 "chances": [
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "2",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 15
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_UNIT_MA_15",
-                     "amount": "1",
-                     "percentage": 25
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_UNIT_HR_15",
-                     "amount": "1",
-                     "percentage": 25
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_UNIT_LR_15",
-                     "amount": "1",
-                     "percentage": 25
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_f_merge_dwarvengame"
-             },
-             {
-                 "img": "https://i.ibb.co/hmnx4kN/EL-akcia-august-2022-chest3.png",  //HOTOVO
-                 "ec": "24-26",
+                 "img": "https://i.ibb.co/vz1h94k/chest5.png",  //HOTOVO
+                 "ec": "33-37",
                  "ep": 2,
-                 "description": `<i>Uncommon Request</i> (appears in slot <b>2</b>)`,
+                 "description": `<i>Cozy Meal</i> (appears in slot <b>2</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "2",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 15
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_KP_AW_10",
-                     "amount": "1",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_KP_AW_7",
-                     "amount": "1",
-                     "percentage": 25
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_KP_AW_5",
-                     "amount": "1",
-                     "percentage": 30
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_g_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "runeShard",
+        "subType": "random",
+        "amount": 2,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "runeShard",
+        "subType": "broken_shards",
+        "amount": 2,
+        "percentage": 25
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "building",
+        "subType": "A_Evt_Exp_May_XXIII_Mystic_Mycology${chapter}",
+        "amount": 1,
+        "percentage": 25
+      }
+    ],
+    "id": "reward_pool_event_chest_e_merge_kitchen"
              },
              {
-                 "img": "https://i.ibb.co/W3QsWzh/EL-akcia-august-2022-chest8.png",  //HOTOVO
-                 "ec": "42-44",
-                 "ep": 3,
-                 "description": `<i>Rare Request</i> (appears in slot <b>2</b>)`,
+                 "img": "https://i.ibb.co/wR2mB34/chest3.png",  //HOTOVO
+                 "ec": "25-28",
+                 "ep": 2,
+                 "description": `<i>Cozy Meal</i> (appears in slot <b>1</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_KP_AW_15",
-                     "amount": "1",
-                     "percentage": 5
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_REV_SQD_75",
-                     "amount": "1",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "2",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_RF_GRR_5",
-                     "amount": "1",
-                     "percentage": 25
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_REV_SQD_50",
-                     "amount": "1",
-                     "percentage": 30
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_h_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 2,
+        "percentage": 5
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_UNIT_MA_5",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_UNIT_HR_5",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_UNIT_LR_5",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "building",
+        "subType": "A_Evt_Exp_May_XXIII_Crystal_Caps${chapter}",
+        "amount": 1,
+        "percentage": 25
+      }
+    ],
+    "id": "reward_pool_event_chest_f_merge_kitchen"
              },
              {
-                 "img": "https://i.ibb.co/xKv29z3/EL-akcia-august-2022-chest7.png",  //HOTOVO
+                 "img": "https://i.ibb.co/Vwc3T8f/chest6.png",  //HOTOVO
                  "ec": "38-41",
                  "ep": 3,
-                 "description": `<i>Rare Request</i> (appears in slot <b>3</b>)`,
+                 "description": `<i>Gourmet Request</i> (appears in slot <b>3</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "3",
-                     "percentage": 14
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "flexible_reward",
-                     "subType": "frog_mana",
-                     "amount": "20",
-                     "percentage": 22
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "flexible_reward",
-                     "subType": "frog_seeds",
-                     "amount": "20",
-                     "percentage": 22
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "flexible_reward",
-                     "subType": "frog_evergreen",
-                     "amount": "20",
-                     "percentage": 22
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_i_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 2,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_KP_AW_7",
+        "amount": 1,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_KP_AW_15",
+        "amount": 1,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "building",
+        "subType": "A_Evt_Exp_May_XXIII_SteelInfused_Fungi${chapter}",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_KP_AW_5",
+        "amount": 1,
+        "percentage": 25
+      }
+    ],
+    "id": "reward_pool_event_chest_g_merge_kitchen"
              },
              {
-                 "img": "https://i.ibb.co/hcCD1fw/EL-akcia-august-2022-chest10.png",  //HOTOVO
-                 "ec": "48-52",
-                 "ep": 4,
-                 "description": `<i>Extraordinary Request</i> (appears in slot <b>3</b>)`,
+                 "img": "https://i.ibb.co/12yFBjc/chest7.png",  //HOTOVO
+                 "ec": "42-42",
+                 "ep": 3,
+                 "description": `<i>Gourmet Request</i> (appears in slot <b>2</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "spell_pet_food_1",
-                     "amount": "1",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "1",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "knowledge_points",
-                     "amount": "5",
-                     "percentage": 30
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "knowledge_points",
-                     "amount": "10",
-                     "percentage": 30
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_j_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_REV_SQD_50",
+        "amount": 1,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 2,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_RF_GRR_5",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "building",
+        "subType": "A_Evt_Exp_May_XXIII_Mystic_Mycology${chapter}",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_REV_SQD_10",
+        "amount": 1,
+        "percentage": 25
+      }
+    ],
+    "id": "reward_pool_event_chest_h_merge_kitchen"
              },
              {
-                 "img": "https://i.ibb.co/DWr1hVc/EL-akcia-august-2022-chest11.png",  //HOTOVO
+                 "img": "https://i.ibb.co/J7rNbr2/chest8.png",  //HOTOVO
+                 "ec": "48-49",
+                 "ep": 3,
+                 "description": `<i>Gourmet Request</i> (appears in slot <b>2</b>)`,
+                 "chances": [
+                 {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 2,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "flexible_reward",
+        "subType": "frog_coins",
+        "amount": 20,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "flexible_reward",
+        "subType": "frog_sentient_q_1_plus_1",
+        "amount": 20,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "flexible_reward",
+        "subType": "frog_default1",
+        "amount": 20,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "building",
+        "subType": "A_Evt_Exp_May_XXIII_Crystal_Caps${chapter}",
+        "amount": 1,
+        "percentage": 20
+      }
+    ],
+    "id": "reward_pool_event_chest_i_merge_kitchen"
+             },
+             {
+                 "img": "https://i.ibb.co/qsz9mNf/chest10.png",  //HOTOVO
                  "ec": "56-56",
                  "ep": 4,
-                 "description": `<i>Extraordinary Request</i> (appears in slot <b>3</b>)`,
+                 "description": `<i>Extravagant Meal</i> (appears in slot <b>3</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "2",
-                     "percentage": 10
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_RF_GRR_10",
-                     "amount": "1",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "runeShard",
-                     "subType": "random",
-                     "amount": "2",
-                     "percentage": 25
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_KP_AW_10",
-                     "amount": "1",
-                     "percentage": 25
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_k_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "spell_pet_food_1",
+        "amount": 1,
+        "percentage": 5
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 1,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "knowledge_points",
+        "amount": 12,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "building",
+        "subType": "A_Evt_Exp_May_XXIII_SteelInfused_Fungi${chapter}",
+        "amount": 1,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "knowledge_points",
+        "amount": 5,
+        "percentage": 35
+      }
+    ],
+    "id": "reward_pool_event_chest_j_merge_kitchen"
              },
              {
-                 "img": "https://i.ibb.co/KKYPVxK/EL-akcia-august-2022-chest9.png",  //HOTOVO
-                 "ec": "48-48",
+                 "img": "https://i.ibb.co/H7sLKXJ/chest11.png",  //HOTOVO
+                 "ec": "64-64",
                  "ep": 4,
-                 "description": `<i>Extraordinary Request</i> (appears in slot <b>3</b>)`,
+                 "description": `<i>Extravagant Meal</i> (appears in slot <b>3</b>)`,
                  "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "episodic",
-                     "subType": "daily_reward_event_chest_merge_dwarvengame",
-                     "amount": "1",
-                     "percentage": 20
-                 },
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_RF_GRR_10",
+        "amount": 1,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 2,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "building",
+        "subType": "A_Evt_Exp_May_XXIII_Mystic_Mycology${chapter}",
+        "amount": 1,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_KP_AW_15",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "runeShard",
+        "subType": "random",
+        "amount": 2,
+        "percentage": 25
+      }
+    ],
+    "id": "reward_pool_event_chest_k_merge_kitchen"
+             },
+             {
+                 "img": "https://i.ibb.co/pbKFfBX/chest9.png",  //HOTOVO
+                 "ec": "50-52",
+                 "ep": 4,
+                 "description": `<i>Extravagant Meal</i> (appears in slot <b>3</b>)`,
+                 "chances": [
                  {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_RF_CN_25",
-                     "amount": "1",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_RF_SPL_25",
-                     "amount": "1",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "item",
-                     "subType": "INS_UNIT_HM_25",
-                     "amount": "1",
-                     "percentage": 20
-                 },
-                 {
-                     "__class__": "RewardChanceVO",
-                     "type": "good",
-                     "subType": "event_currency_2",
-                     "amount": "2",
-                     "percentage": 20
-                 }
-                 ],
-                 "id": "reward_pool_event_chest_l_merge_dwarvengame"
+        "__class__": "RewardChanceVO",
+        "type": "good",
+        "subType": "event_currency_2",
+        "amount": 2,
+        "percentage": 10
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_UNIT_HM_25",
+        "amount": 1,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "building",
+        "subType": "A_Evt_Exp_May_XXIII_Crystal_Caps${chapter}",
+        "amount": 1,
+        "percentage": 15
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "episodic",
+        "subType": "daily_reward_event_chest_merge_kitchen",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_RF_CN_25",
+        "amount": 1,
+        "percentage": 20
+      },
+      {
+        "__class__": "RewardChanceVO",
+        "type": "item",
+        "subType": "INS_RF_SPL_25",
+        "amount": 1,
+        "percentage": 20
+      }
+    ],
+    "id": "reward_pool_event_chest_l_merge_kitchen"
              },
          ]
      }
  }
+
+ var specialBuildings = {
+    "A_Evt_Exp_May_XXIII_Crystal_Caps":`<h7>Crystal Caps</h7>`,
+    "A_Evt_Exp_May_XXIII_Mystic_Mycology":`<h7>Mystic Mycology</h7>`,
+    "A_Evt_Exp_May_XXIII_SteelInfused_Fungi":`<h7>Steel-Infused Fungi</h7>`,
+}
  
  // JS CODE
  
@@ -747,6 +811,9 @@
                  return goods_icons[flexibleRewards[fr]["rewards"][localStorage.getItem("chapter")-1]["subType"]];
              }
          }
+     }
+     if (chestsData[chest]["chances"][chance]["type"] === "building") {
+        return specialBuildings[chestsData[chest]["chances"][chance]["subType"].substring(0, chestsData[chest]["chances"][chance]["subType"].indexOf("$"))];
      }
  }
  

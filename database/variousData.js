@@ -128,7 +128,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "january_xxiii_": "01/03/2023",
     "february_xxiii_": "02/02/2023",
     "easter_xxiii_": "03/15/2023",
-    "may_xxiii_": "05/01/2023",
+    "may_xxiii_": "04/18/2023",
 }
 
 let questsLinks = {

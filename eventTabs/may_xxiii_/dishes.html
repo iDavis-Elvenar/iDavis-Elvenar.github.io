@@ -147,14 +147,14 @@
      We know that we need 2 dishes of level <code-forum class="bbCodeInline">L</code-forum> to merge one dish of level <code-forum class="bbCodeInline">L+1</code-forum>. In other words, every following level doubles the required number
      of level <code-forum class="bbCodeInline">L</code-forum> dishes. Let's consider the following tree for merging the level <code-forum class="bbCodeInline">4</code-forum> dish:<br>
 
-     <center><img src="https://i.ibb.co/R06X0zB/EL-akcia-august-2022-merging-tree.png" style="margin-top: 10px; max-width: 100%;"></center><br>
+     <center><img src="https://i.ibb.co/3dZD5SP/dishes-tree.png" style="margin-top: 10px; max-width: 100%;"></center><br>
 
      How many level <code-forum class="bbCodeInline">1</code-forum> dishes do we need for one dish of level <code-forum class="bbCodeInline">N</code-forum>.
      From the tree visualization above we can see how many times we have doubled the amount - this can be observed from the number of arrows between
      the dish of level <code-forum class="bbCodeInline">N</code-forum> (which in our case is <code-forum class="bbCodeInline">4</code-forum>) and 
      the dish we want to find the amount of, which is <code-forum class="bbCodeInline">1</code-forum>:<br>
      
-     <center><img src="https://i.ibb.co/8zmGqgq/EL-akcia-august-2022-merging-tree-highlighted.png" style="margin-top: 10px; max-width: 100%;"></center><br>
+     <center><img src="https://i.ibb.co/qBQvb2G/dishes-tree-marked.png" style="margin-top: 10px; max-width: 100%;"></center><br>
 
      Such a distance is 3, simply because the difference between <code-forum class="bbCodeInline">4</code-forum> and <code-forum class="bbCodeInline">1</code-forum> is 3. That makes it possible to realize how the 
      amount of level <code-forum class="bbCodeInline">1</code-forum> dishes to merge level <code-forum class="bbCodeInline">N</code-forum> can be calculated:<br><br>
@@ -199,11 +199,11 @@
 
     Which in the worst-case scenario would cost <code-forum class="bbCodeInline">*4</code-forum> event currency. Let's take the following offer as an example:<br><br>
 
-    <center><img src="https://i.ibb.co/qyCTXVF/EL-akcia-august-2022-offer1.png"></center><br>
+    <center><img src="https://i.ibb.co/VmxWdyd/offer-example.png"></center><br>
 
-    The offer requires Hot Chocolate level 3 and Delicious Roast level 6. The Hot Chocolate level 3 requires <code-forum class="bbCodeInline">2^(3-1)</code-forum> hot chocolates level 1 (which is <code-forum class="bbCodeInline">4</code-forum>) and 
-    the Delicious Roast level 6 requires <code-forum class="bbCodeInline">2^(6-1)</code-forum> delicious roasts level 1 (which is <code-forum class="bbCodeInline">32</code-forum>). In total, we need
-    36 dishes of level 1 to fulfill this offer, which, in the worst case scenario, would cost <code-forum class="bbCodeInline">36*4=144</code-forum> of event currency (chef hats).
+    The offer requires Hot Chocolate level 5 and Delicious Roast level 3. The Hot Chocolate level 5 requires <code-forum class="bbCodeInline">2^(5-1)</code-forum> hot chocolates level 1 (which is <code-forum class="bbCodeInline">16</code-forum>) and 
+    the Delicious Roast level 3 requires <code-forum class="bbCodeInline">2^(3-1)</code-forum> delicious roasts level 1 (which is <code-forum class="bbCodeInline">4</code-forum>). In total, we need
+    20 dishes of level 1 to fulfill this offer, which, in the worst case scenario, would cost <code-forum class="bbCodeInline">20*4=80</code-forum> of event currency (chef hats).
     Because the Stockpiles can also generate dishes of higher level than 1, we have a good chance that the final cost will be actually lower (see the <b>Cups</b> tab to see how exactly the dishes are generated).
     This is where the nice, randomized mechanic comes into play.<br><br>
 

@@ -1,12 +1,12 @@
 var eventStartDates = {
     "may_xxiii_": {
         "live": {
-            "start_date": "__ _th 2023", //May 9th
-            "end_date": "__ _th 2023" //May 31st
+            "start_date": "May _th 2023", //May 9th
+            "end_date": "May _th 2023" //May 31st
         },
         "beta": {
-            "start_date": "May 1st 2023",
-            "end_date": "May 2nd 2023"
+            "start_date": "April 18th 2023",
+            "end_date": "May 3rd 2023"
         }
     },
     "easter_xxiii_": {
