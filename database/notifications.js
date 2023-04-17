@@ -127,13 +127,13 @@ var notifications = {
     },
     "12":{  // EVENTS SIMULTANEOUSLY - BETA SECONDARY
         "id":12,
-        "text":`<h4 class="alert-heading">The Great Excavation Event starts on Beta!</h4>
+        "text":`<h4 class="alert-heading">Mama Juul's Event starts on Beta!</h4>
         <p>The new event is starting on Beta and you can now access the information using the drop-down menu at the top of the website! Use "Select event" filter to preview the buildings or event information about this upcoming event!</p>`,
-        "repeatAfter":18000,
+        "repeatAfter":86400,
         "style":"warning",
         "duration":60,
-        "active":false,
-        "priority":100
+        "active":true,
+        "priority":50
     },
     "13":{  // NEW FEATURE ON THE WEBSITE #2
         "id":13,

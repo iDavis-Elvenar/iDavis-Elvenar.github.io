@@ -787,6 +787,7 @@ function switchView(type) {
         //checkAdBlocker();
     }
     setDocumentTitle(document, type, baseTabsEvents, additionalTabsEvents, "events");
+    handleQuestsCopy(view);
 }
 
 function setView(value) {
@@ -1151,4 +1152,17 @@ function getFrogName(filteredData) {
         goodsIconsValue = goods_icons[filteredData['rewards'][getPresetChapter()-1]['subType'].toLowerCase()];
     }
     return goodsIconsValue.split("title='")[1].substring(0, goodsIconsValue.split("title='")[1].indexOf("'>"))
+}
+
+var handleCopyVar = function handleCopy(evt) {
+    evt.clipboardData.setData("text/plain", questsLinks[getSelectedEvent()]);
+    evt.preventDefault();
+}
+
+function handleQuestsCopy(view) {
+    if (view === "quests") {
+        document.addEventListener("copy", handleCopyVar, false);
+    } else {
+        document.removeEventListener("copy", handleCopyVar, false);
+    }
 }

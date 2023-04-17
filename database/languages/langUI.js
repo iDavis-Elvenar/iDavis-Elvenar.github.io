@@ -69,6 +69,7 @@ let ui = {
         "Bonus": "Bonus",
         "one-time reward": "jednorazová odmena",
         "All Guest Races": "All Guest Races",
+        "Effect:": "Efekt:",
         //SETS
         "Winter Set": "Zimní sada",
         "Phoenix Cult Set": "Sada Kultu fénixe",
@@ -187,6 +188,7 @@ let ui = {
         "Bonus": "Bonus",
         "one-time reward": "einmalige Belohnung",
         "All Guest Races": "All Guest Races",
+        "Effect:": "Effekt:",
         //SETS
         "Winter Set": "Winter-Set",
         "Phoenix Cult Set": "Phönixkult-Set",
@@ -305,6 +307,7 @@ let ui = {
         "Bonus": "Prime",
         "one-time reward": "récompense unique",
         "All Guest Races": "All Guest Races",
+        "Effect:": "L'effet:",
         //SETS
         "Winter Set": "Set hivernal",
         "Phoenix Cult Set": "Set du culte du phénix",
@@ -423,6 +426,7 @@ let ui = {
         "Bonus": "Bónusz",
         "one-time reward": "egyszeri jutalom",
         "All Guest Races": "Összes Vendégfaj",
+        "Effect:": "A hatás:",
         //SETS
         "Winter Set": "Téli készlet",
         "Phoenix Cult Set": "Főnix-kultusz készlet",
@@ -541,6 +545,7 @@ let ui = {
         "Bonus": "Premia",
         "one-time reward": "jednorazowa nagroda",
         "All Guest Races": "All Guest Races",
+        "Effect:": "Efekt:",
         //SETS
         "Winter Set": "Zimowy zestaw",
         "Phoenix Cult Set": "Zestaw Kultu Feniksa",
@@ -659,6 +664,7 @@ let ui = {
         "Bonus": "Бонус",
         "one-time reward": "единовременное вознаграждение",
         "All Guest Races": "All Guest Races",
+        "Effect:": "Эффект:",
         //SETS
         "Winter Set": "Зимний набор",
         "Phoenix Cult Set": "Набор «Культ Феникса»",

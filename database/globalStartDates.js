@@ -6,7 +6,7 @@ var eventStartDates = {
         },
         "beta": {
             "start_date": "April 18th 2023",
-            "end_date": "May 3rd 2023"
+            "end_date": "May 10th 2023"
         }
     },
     "easter_xxiii_": {

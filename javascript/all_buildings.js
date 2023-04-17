@@ -165,7 +165,8 @@ function readBuildingsJSON() {
                                     <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}s<br>
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
-                                    <b>${langUI("Expiring:")}</b> ${expiringDuration}`;
+                                    <b>${langUI("Expiring:")}</b> ${expiringDuration}
+                                    ${expiringDuration !== '-' && filteredData[i]['expiring']['description'] ? "<br><b>"+langUI("Effect:")+"</b> "+filteredData[i]['expiring']['description'] : ""}`;
                                     let h5hashtag = document.createElement('h5');
                                     h5hashtag.id = "#"+filteredData[i]['id'];
                                     h5hashtag.innerHTML = '<a class="text-link font-weight-bold" id="hash"><img src="images/general/share-symbol.png" class="pointer" title="Open in new tab and share" width="15px;"></a><br>';
