@@ -417,7 +417,7 @@ var goods_icons = {
     "boosted_sentient_plus_1_quality_2": "<img src='https://i.ibb.co/j8C7yjz/boosted-sentient-plus-1-quality-2-mini.png' title='Boosted T5 + 1'><br>",
     "boosted_sentient_plus_2_quality_2": "<img src='https://i.ibb.co/1v3vkXS/boosted-sentient-plus-2-quality-2-mini.png' title='Boosted T5 + 2'><br>",
     "boosted_sentient_plus_0_quality_3": "<img src='https://i.ibb.co/RTFv8JX/boosted-sentient-plus-0-quality-3-mini.png' title='Boosted T6'><br>",
-    "boosted_sentient_plus_1_quality_3": "T6+1 ",
+    "boosted_sentient_plus_1_quality_3": "<img src='' title='Boosted T6 + 1'><br>",
     "boosted_sentient_plus_2_quality_3": "<img src='https://i.ibb.co/cTBrnwH/boosted-sentient-plus-2-quality-3-mini.png' title='Boosted T6 + 2'><br>",
     "unurium": `<img src='https://i.ibb.co/5shvjhx/unurium-small.png' title='Unurium'><br>`,
     "knowledge_points": "<img src='https://i.ibb.co/CB7JkFY/knowledge-points-new.png' title='Knowledge Points'><br>",
