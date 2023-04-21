@@ -764,7 +764,7 @@ var chapter_icons = {
     18: "https://i.ibb.co/ZxGJSVv/ch18.png title='Team Spirit'",
     19: "https://i.ibb.co/Y4gW0Vy/ch19.png title='Revenge of the Exile'",
     20: "https://i.ibb.co/Vv6rC8r/ch20.png title='The Power of Music'",
-    21: "https://i.ibb.co/Vv6rC8r/ch20.png title='The Vallorian Legend'",
+    21: "https://i.ibb.co/XCp7d47/ch21.png title='The Vallorian Legend'",
 }
 
 var grIds = {
