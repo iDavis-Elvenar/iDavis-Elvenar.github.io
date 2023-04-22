@@ -250,6 +250,8 @@ function displayDailyPrizes() {
                 if (!isTriggeredOrderBy) {
                     if (filteredData[i]['id'].substring(0, 5).toLowerCase() === 'frog_') {
                         h5.innerHTML = `${langUI("Day")} ${i + 1}: ${getFrogName(filteredData[i])}<br>`;
+                    } else if (filteredData[i]['id'].substring(0, 4).toLowerCase() === 'ins_') {
+                        h5.innerHTML = `${langUI("Day")} ${i + 1}: ${langUI(filteredData[i]['name'])}<br>`;
                     } else {
                         h5.innerHTML = `${langUI("Day")} ${i + 1}: ${langBuildings(filteredData[i])}<br>`;
                     }
@@ -617,7 +619,7 @@ function createCalendar(filteredData, selectedEvent) {
         var trDays = document.createElement('tr');
         for (var i = 0; i < 7; i++) {
             var tdDay = document.createElement('td');
-            //tdDay.style.width = ""+(100/7)+"%";
+            tdDay.style.width = ""+(100/7)+"%";
             if (daysCounter <= filteredData.length) {
                 if (getDaysFromStart(selectedEvent, "")+1 === daysCounter) {
                     tdDay.innerHTML = `<b>${daysCounter === currentEventDay ? "⪼ " : ""}${daysCounter}. ${langUI("day")}${daysCounter === currentEventDay ? " ⪻" : ""}</b>`
@@ -639,7 +641,7 @@ function createCalendar(filteredData, selectedEvent) {
             var tdPrize = document.createElement('td');
             if (prizesCounter <= filteredData.length) {
                 if (filteredData[prizesCounter-1].hasOwnProperty('value')) {
-                    tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${filteredData[prizesCounter - 1]['name']} 
+                    tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langUI(filteredData[prizesCounter - 1]['name'])} 
                             (${Number.isNaN(filteredData[prizesCounter-1]['value']) ? filteredData[prizesCounter-1]['quantity'] : filteredData[prizesCounter-1]['value']}${Number.isNaN(filteredData[prizesCounter-1]['value']) ? "" : filteredData[prizesCounter-1]['production_type']})</a>`;
                 } else {
                     if (filteredData[prizesCounter-1]['id'].substring(0, 5).toLowerCase() === 'frog_') {
