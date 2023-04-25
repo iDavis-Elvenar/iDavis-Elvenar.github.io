@@ -606,6 +606,6 @@ function setDocumentTitle(document, type, baseTabs, additionalTabs, page) {
         pageName = pagesNames[page];
     }
 
-    var result = pageName + ` - ${tabName} - ` + `iDavis Elvenar`;
+    var result = pageName + ` - ${tabName} | ` + `iDavis Elvenar`;
     document.title = result;
 }

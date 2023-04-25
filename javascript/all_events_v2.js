@@ -244,7 +244,7 @@ function displayDailyPrizes() {
             }
             for (var i = 0; i < filteredData.length; i++) {
                 var h5 = document.createElement('h5');
-                h5.id = filteredData[i]['id'];
+                h5.id = `day${i+1}`;
                 h5.className = "card-title text-center text-title font-weight-bold";
                 h5.style.textAlign = "left";
                 if (!isTriggeredOrderBy) {
@@ -641,13 +641,13 @@ function createCalendar(filteredData, selectedEvent) {
             var tdPrize = document.createElement('td');
             if (prizesCounter <= filteredData.length) {
                 if (filteredData[prizesCounter-1].hasOwnProperty('value')) {
-                    tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langUI(filteredData[prizesCounter - 1]['name'])} 
+                    tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#day${prizesCounter}">${langUI(filteredData[prizesCounter - 1]['name'])} 
                             (${Number.isNaN(filteredData[prizesCounter-1]['value']) ? filteredData[prizesCounter-1]['quantity'] : filteredData[prizesCounter-1]['value']}${Number.isNaN(filteredData[prizesCounter-1]['value']) ? "" : filteredData[prizesCounter-1]['production_type']})</a>`;
                 } else {
                     if (filteredData[prizesCounter-1]['id'].substring(0, 5).toLowerCase() === 'frog_') {
-                        tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langUI(getFrogName(filteredData[prizesCounter - 1]))}</a>`;
+                        tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#day${prizesCounter}">${langUI(getFrogName(filteredData[prizesCounter - 1]))}</a>`;
                     } else {
-                        tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#${filteredData[prizesCounter - 1]['id']}">${langBuildings(filteredData[prizesCounter - 1])}</a>`;
+                        tdPrize.innerHTML = `<a class="text-link font-weight-bold" href="#day${prizesCounter}">${langBuildings(filteredData[prizesCounter - 1])}</a>`;
                     }
                 }
             } else {
