@@ -48,8 +48,8 @@ var allEvents = {
     },
     "all_events" : {
         "2023" : [
-            ["Mama Juul's Fusion Feast","may_xxiii_",false,false],
-            ["Realm of the Phoenix","easter_xxiii_",true,false],
+            ["Mama Juul's Fusion Feast","may_xxiii_",true,false],
+            ["Realm of the Phoenix","easter_xxiii_",false,false],
             ["The Great Excavation","february_xxiii_",false,false],
             ["The Secrets of Alchemy","january_xxiii_",false,false],
         ],
