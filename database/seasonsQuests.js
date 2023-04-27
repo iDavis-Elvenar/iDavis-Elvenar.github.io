@@ -110,6 +110,7 @@ var seasonsQuests = {
             "Produce 7x Toolboxes",
             ["Reach 2000 of Tournament Score", "Tournament has not started yet"],
             ["Use 3x Lucky Draw", "Dwarven event is running"],
+            ["Open 3x Flavor Loot", "Kitchen event is running"],
             "Use 5x Coin Rain",
             ["Use 3x Double Reward or use 3x Magnifying Glass", "Shuffle event is running"],
             "Use 4x Pet Food",

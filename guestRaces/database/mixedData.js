@@ -9,13 +9,13 @@ var additionalTabsGuestRaces = {
         {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
         {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/z8pjTPh/layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},
         {"id":"wonders", "name":"Wonders", "img":"https://i.ibb.co/wrhMdKZ/wonders.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#wonders", "file":"wonders.html"},
-    ],
-    "ch20": [
+    ],*/
+    /*"ch20": [
         {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
         {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/z8pjTPh/layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},
         {"id":"wonders", "name":"Wonders", "img":"https://i.ibb.co/wrhMdKZ/wonders.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#wonders", "file":"wonders.html"},
-    ],
-    "ch19": [
+    ],*/
+    /*"ch19": [
         {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
         {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/z8pjTPh/layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},
         {"id":"wonders", "name":"Wonders", "img":"https://i.ibb.co/wrhMdKZ/wonders.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#wonders", "file":"wonders.html"},
