@@ -304,7 +304,7 @@ var additionalTabsEvents = {
         {"id":"offers", "name":"Offers", "img":"https://i.ibb.co/9WV3mdS/offers.png", "img_width":"28", "img_style":"margin-left: 1px; margin-right: 8px; position: relative;", "href":"#offers", "file":"offers.html", "releaseDate":"04/18/2023"},
         {"id":"dishes", "name":"Dishes", "img":"https://i.ibb.co/8bDBzxp/dishes.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#dishes", "file":"dishes.html", "releaseDate":"04/18/2023"},
         {"id":"stockpiles", "name":"Stockpiles", "img":"https://i.ibb.co/ypkVm0h/stockpiles.png", "img_width":"27", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#stockpiles", "file":"stockpiles.html", "releaseDate":"04/18/2023"},
-        {"id":"loots", "name":"Loots", "img":"https://i.ibb.co/848np1q/baskets.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#loots", "file":"loots.html", "releaseDate":"04/18/2023"},
+        {"id":"loot", "name":"Loot", "img":"https://i.ibb.co/848np1q/baskets.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#loot", "file":"loot.html", "releaseDate":"04/18/2023"},
     ],
     "easter_xxiii_": [
         {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html"},
