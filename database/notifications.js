@@ -109,7 +109,7 @@ var notifications = {
   <center><img src="https://i.ibb.co/Hdm0FzN/season-joy-banner.png" style="width: 40%;"></center><br>
     <center><p>The <b>Season of Joy</b> is approaching quickly and it is now fully covered on Seasons page. It will help you get ready for everything the Season of Joy has to offer! You can access this page from the navigation bar under the "More" button!<br>
     Daily Quests, Weekly Quests, many interesting rewards and the <b>Season Pass calculator</b> is now available to use in the newest <img src="https://i.ibb.co/87MNrBB/season-pass.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/seasons.html" class="alert-link">Seasons</a> page!</p></center>`,
-        "repeatAfter":86400,
+        "repeatAfter":259200,
         "style":"warning",
         "duration":60,
         "active":true,
@@ -160,7 +160,7 @@ var notifications = {
         "repeatAfter":258600,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":70
     },
 }
