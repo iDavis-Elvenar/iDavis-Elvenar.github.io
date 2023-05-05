@@ -359,3 +359,51 @@ background-color: #b9881e;
 .bg-show_button {
     background-image: linear-gradient(to top,#ecdec0, #f1e7d4, #ecdec0) !important;
 }
+
+.quests_container {
+    display: grid !important;
+    grid-template-columns: min-content auto min-content min-content min-content;
+    grid-template-rows: auto;
+    row-gap: 20px;
+    text-align: center;
+    min-width: 700px;
+}
+
+.quests_container div {
+    padding: 3px;
+    align-self: center;
+    background-color: #ECDEC0;
+}
+
+.tasks-inner-grid {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-rows: auto;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.tasks-inner-grid div:not(.orTableCell) {
+    border: 1px #7a5e49 solid; /*3C2B10*/
+    border-radius: 5px;
+    background-image: url("../../images/general/task_background.png");
+    background-size: 100% 100%;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+}
+
+.orTableCell {
+    background-color: transparent !important;
+}
+
+.btn-download {
+    color: #fff;
+    background-color: #8a6e59;
+    border-color: #7a5e49;
+}
+
+.btn-close {
+    color: #fff;
+    background-color: #f3ebd8;
+    border-color: #f3ebd8;
+}

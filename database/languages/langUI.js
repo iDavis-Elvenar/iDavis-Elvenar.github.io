@@ -95,6 +95,10 @@ let ui = {
         "Pet Food": "Krmení",
         "Knowledge Points": "Vědomostní body",
         "Vitality Surge": "Příval vitality",
+        "or": "nebo",
+        "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "Toto je preferovaný spôsob zdieľania úloh. Pokiaľ chcete uchovať úlohy pre seba a prevziať kópiu aktuálnej verzie, môžete využiť tlačidlo na stiahnutie dole pod zoznamom úloh.",
+        "Type the number of servers you play on: ": "Zadajte počet serverov, na ktorých hráte: ",
+        "Reward": "Odmena",
         //SETS
         "Winter Set": "Zimní sada",
         "Phoenix Cult Set": "Sada Kultu fénixe",
@@ -113,6 +117,7 @@ let ui = {
         "Dwarven Citadel": "Trpasličí citadela",
         "Ancient Promise": "Starodávný slib",
         //EVENTS
+        "Mama Juul's Fusion Feast": "Hostina mámy Juul",
         "Realm of the Phoenix": "Svět fénixe",
         "The Great Excavation": "Velká hlubina",
         "The Secrets of Alchemy": "Tajemství alchymie",
@@ -239,6 +244,10 @@ let ui = {
         "Pet Food": "Tierfutter",
         "Knowledge Points": "Wissenspunkten",
         "Vitality Surge": "Vitalitätsschub",
+        "or": "oder",
+        "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "Dies ist die bevorzugte Art, Quests zu teilen. Wenn Sie die Quests für sich selbst speichern und eine Kopie der aktuellen Version nehmen möchten, können Sie die Download-Schaltfläche unten auf der Seite verwenden.",
+        "Type the number of servers you play on: ": "Geben Sie die Anzahl der Server ein, auf denen Sie spielen: ",
+        "Reward": "Belohnen",
         //SETS
         "Winter Set": "Winter-Set",
         "Phoenix Cult Set": "Phönixkult-Set",
@@ -257,6 +266,7 @@ let ui = {
         "Dwarven Citadel": "Zwergen-Zitadelle",
         "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
+        "Mama Juul's Fusion Feast": "Mama Juul's Fusion Feast",
         "Realm of the Phoenix": "Das Reich des Phönix",
         "The Great Excavation": "Die Große Grabung",
         "The Secrets of Alchemy": "Die Geheimnisse der Alchemie",
@@ -383,6 +393,10 @@ let ui = {
         "Pet Food": "Nourriture du familier",
         "Knowledge Points": "Les points de connaissance",
         "Vitality Surge": "Poussée de vitalité",
+        "or": "ou",
+        "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "C'est la manière préférée de partager des quêtes. Si vous souhaitez stocker les quêtes pour vous-même et prendre une copie de la version actuelle, vous pouvez utiliser le bouton Télécharger en bas de la page.",
+        "Type the number of servers you play on: ": "Tapez le nombre de serveurs sur lesquels vous jouez: ",
+        "Reward": "Récompense",
         //SETS
         "Winter Set": "Set hivernal",
         "Phoenix Cult Set": "Set du culte du phénix",
@@ -401,6 +415,7 @@ let ui = {
         "Dwarven Citadel": "Citadelle naine",
         "Ancient Promise": "Ancienne promesse",
         //EVENTS
+        "Mama Juul's Fusion Feast": "Mama Juul's Fusion Feast",
         "Realm of the Phoenix": "Realm of the Phoenix",
         "The Great Excavation": "La grande excavation",
         "The Secrets of Alchemy": "Les secrets de l'alchimie",
@@ -527,6 +542,10 @@ let ui = {
         "Pet Food": "Kisállateledel",
         "Knowledge Points": "Tudáspontok",
         "Vitality Surge": "Életerő Hullám",
+        "or": "vagy",
+        "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.",
+        "Type the number of servers you play on: ": "Type the number of servers you play on: ",
+        "Reward": "Reward",
         //SETS
         "Winter Set": "Téli készlet",
         "Phoenix Cult Set": "Főnix-kultusz készlet",
@@ -545,6 +564,7 @@ let ui = {
         "Dwarven Citadel": "Törp Citadella",
         "Ancient Promise": "Ősi Ígéret",
         //EVENTS
+        "Mama Juul's Fusion Feast": "Mama Juul's Fusion Feast",
         "Realm of the Phoenix": "A Főnix Birodalma",
         "The Great Excavation": "A Nagy Ásatás",
         "The Secrets of Alchemy": "Az Alkímia Titkai",
@@ -671,6 +691,10 @@ let ui = {
         "Pet Food": "Karma dla zwierzaków",
         "Knowledge Points": "Punkty Wiedzy",
         "Vitality Surge": "Wzrost Witalności",
+        "or": "lub",
+        "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "Jest to preferowany sposób udostępniania zadań. Jeśli chcesz zachować zadania dla siebie i pobrać kopię aktualnej wersji, możesz użyć przycisku Pobierz na dole strony.",
+        "Type the number of servers you play on: ": "Wpisz liczbę serwerów, na których grasz: ",
+        "Reward": "Nagroda",
         //SETS
         "Winter Set": "Zimowy zestaw",
         "Phoenix Cult Set": "Zestaw Kultu Feniksa",
@@ -689,6 +713,7 @@ let ui = {
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
+        "Mama Juul's Fusion Feast": "Uczta w stylu fusion Mamy Juul",
         "Realm of the Phoenix": "Królestwo Feniksa",
         "The Great Excavation": "Wielkie Wykopaliska",
         "The Secrets of Alchemy": "Sekrety Alchemii",
@@ -815,6 +840,10 @@ let ui = {
         "Pet Food": "Еда для питомцев",
         "Knowledge Points": "Очки Знаний",
         "Vitality Surge": "Волна жизненной силы",
+        "or": "или",
+        "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "Это предпочтительный способ обмена квестами. Если вы хотите сохранить квесты для себя и взять копию текущей версии, вы можете воспользоваться кнопкой «Скачать» внизу страницы.",
+        "Type the number of servers you play on: ": "Введите количество серверов, на которых вы играете: ",
+        "Reward": "Награда",
         //SETS
         "Winter Set": "Зимний набор",
         "Phoenix Cult Set": "Набор «Культ Феникса»",
@@ -833,6 +862,7 @@ let ui = {
         "Dwarven Citadel": "Гномья цитадель",
         "Ancient Promise": "Древнее обещание",
         //EVENTS
+        "Mama Juul's Fusion Feast": "Передвижная кухня Джуул",
         "Realm of the Phoenix": "Царство Феникса",
         "The Great Excavation": "Великие раскопки",
         "The Secrets of Alchemy": "Секреты алхимии",

@@ -112,7 +112,7 @@ var notifications = {
         "repeatAfter":259200,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "11":{  // EVENTS SIMULTANEOUSLY - BETA PRIMARY
@@ -137,16 +137,16 @@ var notifications = {
     },
     "13":{  // NEW FEATURE ON THE WEBSITE #2
         "id":13,
-        "text":`<h4 class="alert-heading">Playground is now available!</h4>
-        <p>The waiting is over! I have released the newest feature - the <b>Playground</b> that will help you practise <b>The Great Excavation</b> event!</p>
+        "text":`<h4 class="alert-heading">Quest Lists Reimagined!</h4>
+        <p>The Quest Lists for events have received a massive overhaul! They have now better graphical visual, multi-server support, improved task recognition and so much more!</p>
         <hr>
-        <center><img src="https://i.ibb.co/Nnf2NWh/playground-screen-fb.png" style="width: 40%; margin-bottom: 15px;"></center>
-        <p style="text-align: center;">This feature will help you to not only better understand how this event works, but also to better navigate between the ancient walls and improve the efficiency of using your tools.
-        You can access Playground directly <a href="https://idavis-elvenar.com/events.html#playground-february_xxiii_" target="_blank" class="alert-link">here</a> and play the simulation now!</p>`,
+        <p>You can access the improved Quest Lists on the <b>All Events</b> subpage. If you have any sort of feedback about this
+        feature, I will be more than happy if you leave me a response in my newest survey:</p>
+        <p style="text-align: center;"><h4 style="text-align: center;">Visit the newest survey <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGH9KQFfz-isHeiZ7FOFcsPm-be0y2_p8tI5O29vlaILgLMw/viewform" target="_blank" class="alert-link">here</a>!`,
         "repeatAfter":259200,
         "style":"warning",
-        "duration":45,
-        "active":false,
+        "duration":70,
+        "active":true,
         "priority":50
     },
     "14":{  // FEEDBACK SURVEY
