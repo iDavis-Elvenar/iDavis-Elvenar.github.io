@@ -944,6 +944,10 @@ function displayQuests() {
                 if (questContainRewards(selectedEvent, quest)) reward.style.borderBottom = "2px solid #10212a";
                 number.style.fontWeight = task.style.fontWeight = finished.style.fontWeight = prep.style.fontWeight = "bold";
                 if (questContainRewards(selectedEvent, quest)) reward.style.fontWeight = "bold";
+                number.style.fontSize = task.style.fontSize = finished.style.fontSize = prep.style.fontSize = "0.9em";
+                if (questContainRewards(selectedEvent, quest)) reward.style.fontSize = "0.9em";
+
+
                 
                 divContainer.appendChild(prep);
             } else {
@@ -974,24 +978,54 @@ function displayQuests() {
                 if (questRowsNumber > 1) task.style.borderRadius = "5px";
                 if (questAvailable(quest, selectedEvent)) {
                     task.className = "tasks-inner-grid";
+                    var windowWidth = window.innerWidth;
+                    console.log(windowWidth);
+                    var windowSizeLimit = 768;
+                    var taskNumber = 1;
                     questParts.forEach(function (row, i) {
                         row.forEach(function (singleTask, j) {
                             var taskTd = document.createElement('div');
                             taskTd.innerHTML = singleTask;
                             taskTd.className = "nocopy";
-                            if (row.length == 1) taskTd.style.gridArea = `${i + 1}/1/${i + 1}/span 4`;
-                            else taskTd.style.gridArea = `${i + 1}/${2 * j + 1}`;
-                            if (i != 0) taskTd.style.marginTop = "5px";
+
+                            if (i != 0) taskTd.classList.add("secondRow");
+                            if (i > 0 && j == 0) {
+                                taskTd.classList.add("rowBeginning");
+                            }
+                            if (row.length > 1) {
+                                if (j == 0) taskTd.classList.add("orFirstElement");
+                                else taskTd.classList.add("orSecondElement");
+                            }
+
                             if (j > 0) {
                                 var orTd = document.createElement('div');
                                 orTd.className = "orTableCell";
-                                orTd.style.gridArea = `${i + 1}/${2 * j}`;
+                                orTd.id = `taskCell${quest}_${taskNumber}`;
+                                if (windowWidth >= windowSizeLimit) {
+                                    orTd.style.gridArea = `${i + 1}/${2 * j}`;
+                                }
+                                else {
+                                    orTd.style.gridArea = `${taskNumber}/1/${taskNumber}/span 3`
+                                };
                                 orTd.innerHTML = langUI("or");
                                 orTd.style.fontStyle = "italic";
                                 orTd.style.fontSize = "0.9em";
                                 task.appendChild(orTd);
+                                taskNumber++;
                             }
+
+                            if (windowWidth >= windowSizeLimit) {
+                                if (row.length == 1) taskTd.style.gridArea = `${i + 1}/1/${i + 1}/span 3`;
+                                else taskTd.style.gridArea = `${i + 1}/${2 * j + 1}`;
+                            }
+                            else {
+                                taskTd.style.gridArea = `${taskNumber}/1/${taskNumber}/span 3`;
+                            }
+
+                            taskTd.id = `taskCell${quest}_${taskNumber}`;
+
                             task.appendChild(taskTd);
+                            taskNumber++;
                         });
                     });
                 }
@@ -1169,6 +1203,52 @@ function displayQuests() {
     }
 
     create_exception("Quests Generated!", 3, 'success');
+}
+
+window.onresize = function() {
+    var windowWidth = window.innerWidth;
+    if (windowWidth < 768) {
+        var numberOfQuests = quests[getSelectedEvent()].length;
+        for (i=1;i<=numberOfQuests;i++) {
+            var j = 1;
+            var cont = true;
+            while (cont) {
+                var element = document.getElementById(`taskCell${i}_${j}`);
+                if (element) {
+                    element.style.gridArea = `${j}/1/${j}/span 3`;
+                    j++;
+                }
+                else cont = false;
+            }
+        }
+    }
+    else {
+        var numberOfQuests = quests[getSelectedEvent()].length;
+        for (i=1;i<=numberOfQuests;i++) {
+            var j = 1;
+            var row = 1;
+            var cont = true;
+            while (cont) {
+                var element = document.getElementById(`taskCell${i}_${j}`);
+                if (element) {
+                    if (element.classList.contains("orFirstElement"))
+                        element.style.gridArea = `${row}/1`;
+                    else if (element.classList.contains("orTableCell"))
+                        element.style.gridArea = `${row}/2`;
+                    else if (element.classList.contains("orSecondElement")) {
+                        element.style.gridArea = `${row}/3`;
+                        row++;
+                    }
+                    else {
+                        element.style.gridArea = `${row}/1/${row}/span 3`;
+                        row++;
+                    }
+                    j++;
+                }
+                else cont = false;
+            }
+        }
+    }
 }
 
 function questContainRewards(selectedEvent, questNumber) {

@@ -366,10 +366,10 @@ background-color: #b9881e;
     grid-template-rows: auto;
     row-gap: 20px;
     text-align: center;
-    min-width: 700px;
+    /*min-width: 700px;*/
 }
 
-.quests_container div {
+.quests_container div:not(.orTableCell) {
     padding: 3px;
     align-self: center;
     background-color: #ECDEC0;
@@ -389,11 +389,43 @@ background-color: #b9881e;
     background-image: url("../../images/general/task_background.png");
     background-size: 100% 100%;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
-    z-index: 100;
+    z-index: 50;
+    min-width: 200px;
 }
 
 .orTableCell {
-    background-color: transparent !important;
+    background-color: transparent;
+    align-self: center;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.secondRow {
+    margin-top: 5px;
+}
+
+@media(max-width: 767px) { 
+    .quests_container { row-gap: 30px; }
+    .orFirstElement {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        border-bottom: none !important;
+    }
+    .orSecondElement {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-top: none !important;
+    }
+    .orTableCell {
+        border-radius: 0 !important;
+        background: linear-gradient(0deg, rgba(230,207,162,1) 0%, rgba(245,228,195,1) 50%, rgba(230,207,162,1) 100%) !important;
+        z-index: 50;
+        border-right: 1px #7a5e49 solid;
+        border-left: 1px #7a5e49 solid;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    }
+    .secondRow { margin-top: 0; }
+    .rowBeginning { margin-top: 5px; }
 }
 
 .btn-download {
