@@ -27,7 +27,7 @@ let questsDictionary = {
         24: "Vyřeš _ d{střet,střety,střetov} na mapě",
         25: "Vyřeš _ d{turnajový střet,turnajové střety,turnajových střetov}",
         26: "Vyřeš _ d{střet,střety,střetov} ve věži",
-        27: "Vyřeš _ d{střet,střety,střetov} (mapa, turnaj nebo věža věčnosti)",
+        27: "Vyřeš _ d{střet,střety,střetov} (mapa, turnaj nebo věž věčnosti)",
         28: "Vyřeš _ d{střet,střety,střetov} na mapě bojem",
         29: "Vyřeš _ d{střet,střety,střetov} na mapě vyjednávaním",
         30: "Získej _ d{spojovací činidlo,spojovací činidla,spojovacích činidel}",
