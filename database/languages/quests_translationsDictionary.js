@@ -27,7 +27,7 @@ let questsDictionary = {
         24: "Vyřeš _ d{střet,střety,střetov} na mapě",
         25: "Vyřeš _ d{turnajový střet,turnajové střety,turnajových střetov}",
         26: "Vyřeš _ d{střet,střety,střetov} ve věži",
-        27: "Vyřeš _ d{střet,střety,střetov} (mapa, turnaj nebo věža večnosti)",
+        27: "Vyřeš _ d{střet,střety,střetov} (mapa, turnaj nebo věža věčnosti)",
         28: "Vyřeš _ d{střet,střety,střetov} na mapě bojem",
         29: "Vyřeš _ d{střet,střety,střetov} na mapě vyjednávaním",
         30: "Získej _ d{spojovací činidlo,spojovací činidla,spojovacích činidel}",
@@ -46,7 +46,7 @@ let questsDictionary = {
         43: "Použi _x dešť mincí",
         44: "Použi _x příděl zásob",
         45: "Použi _ d{zesilovač,zesilovače,zesilovačů}",
-        46: "Vykonej _x sousedskú výpomoc",
+        46: "Vykonej _x sousedskou výpomoc",
     },
     "en" : {
         0: "Collect some amount of coins",
