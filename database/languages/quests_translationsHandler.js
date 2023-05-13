@@ -57,8 +57,7 @@ function selectCorrectForm(value, formsList) {
             return formsList[2]; //gen. pl.
         }
     }
-    if (localStorage.getItem("lang") === "en" || localStorage.getItem("lang") === "de" || localStorage.getItem("lang") === "hu"
-    || localStorage.getItem("lang") === "fr") {
+    if (localStorage.getItem("lang") === "en" || localStorage.getItem("lang") === "de" || localStorage.getItem("lang") === "fr") {
         if (value == 1) {
             return formsList[0]; //singulár
         }
@@ -74,5 +73,8 @@ function selectCorrectForm(value, formsList) {
         } else if (value % 10 == 1) {
             return formsList[0]; //singulár
         }
+    }
+    if (localStorage.getItem("lang") === "hu") {
+        return formsList[0];
     }
 }
