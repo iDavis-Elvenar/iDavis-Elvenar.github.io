@@ -79,7 +79,8 @@ var allEvents = {
 
 var allFas = { //NAME,ID,SELECTED,DISABLED == HIDDEN
     "2023" : [
-        ["Fellowship Adventures - March 2023", "march_xxiii_",true,false],
+        ["Fellowship Adventures - June 2023", "june_xxiii_",true,false],
+        ["Fellowship Adventures - March 2023", "march_xxiii_",false,false],
         ["Fellowship Adventures - January 2023", "january_xxiii_",false,false],
     ],
     "2022" : [

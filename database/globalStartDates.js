@@ -52,6 +52,16 @@ var eventStartDates = {
 }
 
 var faStartDates = {
+    "june_xxiii_": {
+        "live": {
+            "start_date": "__ _ 2023",
+            "end_date": "__ _ 2023"
+        },
+        "beta": {
+            "start_date": "__ _ 2023",
+            "end_date": "__ _ 2023"
+        }
+    },
     "march_xxiii_": {
         "live": {
             "start_date": "March 23rd 2023",
