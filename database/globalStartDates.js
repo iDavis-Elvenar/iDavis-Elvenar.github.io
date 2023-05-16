@@ -58,8 +58,8 @@ var faStartDates = {
             "end_date": "__ _ 2023"
         },
         "beta": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "May 18th 2023",
+            "end_date": "May 24th 2023"
         }
     },
     "march_xxiii_": {
