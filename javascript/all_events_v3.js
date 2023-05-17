@@ -763,13 +763,14 @@ function switchView(type) {
     if (type === "info" && view !== "info") {
         displayInfo();
         view = "info";
+        checkAdBlocker();
     } else if (type === "calendar" && view !== "calendar") {
         displayDailyPrizes();
         view = "calendar";
     } else if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
-        //checkAdBlocker();
+        checkAdBlocker();
     } else if (type !== "calendar" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
@@ -786,7 +787,7 @@ function switchView(type) {
                 }
             }
         }
-        //checkAdBlocker();
+        checkAdBlocker();
     }
     setDocumentTitle(document, type, baseTabsEvents, additionalTabsEvents, "events");
     //handleQuestsCopy(view);
