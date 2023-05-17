@@ -569,7 +569,7 @@ function displayDailyPrizes() {
                 });
             }
 
-            //checkAdBlocker();
+            checkAdBlocker();
 
         })
 }
