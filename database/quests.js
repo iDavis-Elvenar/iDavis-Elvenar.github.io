@@ -1,4 +1,7 @@
 var quests = {
+    "shuffle_garden_xxiii_": [
+
+    ],
     "may_xxiii_": [
         [MINCE, 25],
         [NAPOJE(8), 25],

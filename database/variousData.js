@@ -147,6 +147,7 @@ let questsLinks = {
     "february_xxiii_": "bit.ly/TheGreatExcavation2023",
     "easter_xxiii_": "bit.ly/RealmOfThePhoenix2023",
     "may_xxiii_": "bit.ly/MamaJuulsFusionFeast2023",
+    "shuffle_garden_xxiii_": "bit.ly/FloralAwakening2023",
 }
 
 let eventsDurations = {
@@ -200,6 +201,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_January_XXIII_Steam_Golem": "1x Steam Golem Artifact",
     "A_Evt_Evo_Easter_XXIII_Astral_Phoenix": "1x Astral Phoenix Artifact",
     "A_Evt_Evo_May_XXIII_Juuls_Traveling_Kitchen": "1x Juul's Traveling Kitchen Artifact",
+    "A_Evt_Evo_Shuffle_Garden_XXIII_Dragonheart_Estate": "1x Dragonheart Estate Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -278,6 +280,7 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
+    "shuffle_garden_xxiii_",
 ]
 
 var eventsInfoIcons = {
@@ -286,6 +289,7 @@ var eventsInfoIcons = {
     "february_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "easter_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "may_xxiii_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
+    "shuffle_garden_xxiii_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {

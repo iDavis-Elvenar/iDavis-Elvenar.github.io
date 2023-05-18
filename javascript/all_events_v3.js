@@ -569,7 +569,7 @@ function displayDailyPrizes() {
                 });
             }
 
-            checkAdBlocker();
+            //checkAdBlocker();
 
         })
 }
@@ -763,14 +763,14 @@ function switchView(type) {
     if (type === "info" && view !== "info") {
         displayInfo();
         view = "info";
-        checkAdBlocker();
+        //checkAdBlocker();
     } else if (type === "calendar" && view !== "calendar") {
         displayDailyPrizes();
         view = "calendar";
     } else if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
-        checkAdBlocker();
+        //checkAdBlocker();
     } else if (type !== "calendar" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
@@ -787,7 +787,7 @@ function switchView(type) {
                 }
             }
         }
-        checkAdBlocker();
+        //checkAdBlocker();
     }
     setDocumentTitle(document, type, baseTabsEvents, additionalTabsEvents, "events");
     //handleQuestsCopy(view);
@@ -876,7 +876,7 @@ function displayQuests() {
     var divContainer = document.createElement('div');
     divContainer.className = 'quests_container';
 
-    if (quests[selectedEvent] === undefined || getDaysFromStart(selectedEvent) < 0) {
+    if (numberOfQuests === 0 || quests[selectedEvent] === undefined || getDaysFromStart(selectedEvent) < 0) {
         var h7 = document.createElement('h7');
         h7.id = 'quests_noQuests';
         h7.className = "card-title text-center";
@@ -980,7 +980,6 @@ function displayQuests() {
                 if (questAvailable(quest, selectedEvent)) {
                     task.className = "tasks-inner-grid";
                     var windowWidth = window.innerWidth;
-                    console.log(windowWidth);
                     var windowSizeLimit = 768;
                     var taskNumber = 1;
                     questParts.forEach(function (row, i) {
@@ -1338,7 +1337,9 @@ function updateCurrencyCalculator() {
         }
     }
     var divRow3 = document.getElementById("currency_calc");
-    divRow3.innerHTML = result + ` <img src="./images/events/icons/${getSelectedEvent()}.png" style="width: 20px;">`;
+    if (divRow3) {
+        divRow3.innerHTML = result + ` <img src="./images/events/icons/${getSelectedEvent()}.png" style="width: 20px;">`;
+    }
 }
 
 function increaseByAshenPhoenixes(value) {
@@ -1346,145 +1347,147 @@ function increaseByAshenPhoenixes(value) {
 }
 
 function generateShareButtons(parent) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.classList.add('btn', 'btn-download', 'btn-sm');
-    button.dataset.toggle = 'modal';
-    button.dataset.target = '#exampleModalCenter';
-    button.textContent = 'Download Quests';
-    button.style.display = 'block';
-    button.style.marginTop = "15px";
+    if (quests[getSelectedEvent()] && quests[getSelectedEvent()].length > 0) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.classList.add('btn', 'btn-download', 'btn-sm');
+        button.dataset.toggle = 'modal';
+        button.dataset.target = '#exampleModalCenter';
+        button.textContent = 'Download Quests';
+        button.style.display = 'block';
+        button.style.marginTop = "15px";
 
-    const modal = document.createElement('div');
-    modal.classList.add('modal', 'fade');
-    modal.id = 'exampleModalCenter';
-    modal.tabIndex = '-1';
-    modal.role = 'dialog';
-    modal.setAttribute('aria-labelledby', 'exampleModalCenterTitle');
-    modal.setAttribute('aria-hidden', 'true');
+        const modal = document.createElement('div');
+        modal.classList.add('modal', 'fade');
+        modal.id = 'exampleModalCenter';
+        modal.tabIndex = '-1';
+        modal.role = 'dialog';
+        modal.setAttribute('aria-labelledby', 'exampleModalCenterTitle');
+        modal.setAttribute('aria-hidden', 'true');
 
-    const modalDialog = document.createElement('div');
-    modalDialog.classList.add('modal-dialog', 'modal-dialog-centered');
-    modalDialog.role = 'document';
+        const modalDialog = document.createElement('div');
+        modalDialog.classList.add('modal-dialog', 'modal-dialog-centered');
+        modalDialog.role = 'document';
 
-    const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
+        const modalContent = document.createElement('div');
+        modalContent.classList.add('modal-content');
 
-    const modalHeader = document.createElement('div');
-    modalHeader.classList.add('modal-header');
+        const modalHeader = document.createElement('div');
+        modalHeader.classList.add('modal-header');
 
-    const modalTitle = document.createElement('h5');
-    modalTitle.classList.add('modal-title');
-    modalTitle.id = 'exampleModalLongTitle';
-    modalTitle.textContent = 'Keep in mind...';
+        const modalTitle = document.createElement('h5');
+        modalTitle.classList.add('modal-title');
+        modalTitle.id = 'exampleModalLongTitle';
+        modalTitle.textContent = 'Keep in mind...';
 
-    const closeButton = document.createElement('button');
-    closeButton.type = 'button';
-    closeButton.classList.add('close');
-    closeButton.dataset.dismiss = 'modal';
-    closeButton.setAttribute('aria-label', 'Close');
+        const closeButton = document.createElement('button');
+        closeButton.type = 'button';
+        closeButton.classList.add('close');
+        closeButton.dataset.dismiss = 'modal';
+        closeButton.setAttribute('aria-label', 'Close');
 
-    const closeIcon = document.createElement('span');
-    closeIcon.setAttribute('aria-hidden', 'true');
-    closeIcon.innerHTML = '&times;';
+        const closeIcon = document.createElement('span');
+        closeIcon.setAttribute('aria-hidden', 'true');
+        closeIcon.innerHTML = '&times;';
 
-    const modalBody = document.createElement('div');
-    modalBody.classList.add('modal-body');
-    modalBody.innerHTML = `You are about to download the current version of quests list.<br> In case some further in-game adjustments happen,
-    I will update the website as soon as possible to ensure it provides the most reliable version!<br><br> However, I'm not able to update all the copies you create.
-     Therefore, if you wish to share the quests list with other players, it is highly recommended to use the provided share link:
-     <i class='text-title'><b>${questsLinks[getSelectedEvent()]}</b></i><br><br>
-    If you decide to download the current version of quests, keep in mind that your copy may require additional updates and redownloading in the future.`;
+        const modalBody = document.createElement('div');
+        modalBody.classList.add('modal-body');
+        modalBody.innerHTML = `You are about to download the current version of quests list.<br> In case some further in-game adjustments happen,
+        I will update the website as soon as possible to ensure it provides the most reliable version!<br><br> However, I'm not able to update all the copies you create.
+        Therefore, if you wish to share the quests list with other players, it is highly recommended to use the provided share link:
+        <i class='text-title'><b>${questsLinks[getSelectedEvent()]}</b></i><br><br>
+        If you decide to download the current version of quests, keep in mind that your copy may require additional updates and redownloading in the future.`;
 
-    const modalFooter = document.createElement('div');
-    modalFooter.classList.add('modal-footer');
+        const modalFooter = document.createElement('div');
+        modalFooter.classList.add('modal-footer');
 
-    const closeButton2 = document.createElement('button');
-    closeButton2.type = 'button';
-    closeButton2.classList.add('btn', 'btn-secondary');
-    closeButton2.dataset.dismiss = 'modal';
-    closeButton2.textContent = 'Close';
+        const closeButton2 = document.createElement('button');
+        closeButton2.type = 'button';
+        closeButton2.classList.add('btn', 'btn-secondary');
+        closeButton2.dataset.dismiss = 'modal';
+        closeButton2.textContent = 'Close';
 
-    const saveChangesButton = document.createElement('button');
-    saveChangesButton.type = 'button';
-    saveChangesButton.classList.add('btn', 'btn-download');
-    saveChangesButton.innerHTML = `Download`;
+        const saveChangesButton = document.createElement('button');
+        saveChangesButton.type = 'button';
+        saveChangesButton.classList.add('btn', 'btn-download');
+        saveChangesButton.innerHTML = `Download`;
 
-    closeButton.appendChild(closeIcon);
+        closeButton.appendChild(closeIcon);
 
-    modalFooter.appendChild(closeButton2);
-    modalFooter.appendChild(saveChangesButton);
+        modalFooter.appendChild(closeButton2);
+        modalFooter.appendChild(saveChangesButton);
 
-    modalHeader.appendChild(modalTitle);
-    modalHeader.appendChild(closeButton);
+        modalHeader.appendChild(modalTitle);
+        modalHeader.appendChild(closeButton);
 
-    modalContent.appendChild(modalHeader);
-    modalContent.appendChild(modalBody);
-    modalContent.appendChild(modalFooter);
+        modalContent.appendChild(modalHeader);
+        modalContent.appendChild(modalBody);
+        modalContent.appendChild(modalFooter);
 
-    modalDialog.appendChild(modalContent);
+        modalDialog.appendChild(modalContent);
 
-    modal.appendChild(modalDialog);
+        modal.appendChild(modalDialog);
 
-    var center = document.createElement('center');
-    center.appendChild(button);
-    parent.appendChild(center);
-    parent.appendChild(modal);
+        var center = document.createElement('center');
+        center.appendChild(button);
+        parent.appendChild(center);
+        parent.appendChild(modal);
 
-    function downloadWord() {
-        var textArray = [];
-        function removeImgFromString(str) {
-            const pattern = /<img[^>]*>/g;
-            return str.replace(pattern, '');
-        }
-        var questUnlockedTomorrow = false;
-        quests[getSelectedEvent()].forEach(function (item, number) {
-            if (questAvailable(number + 1, getSelectedEvent())) {
-                if ((number + 1) % 30 === 0) {
-                    textArray.push(`Source: idavis-elvenar.com`);
-                } else if (number === 0) {
-                    const now = new Date();
-                    const year = now.getFullYear();
-                    const month = now.getMonth() + 1;
-                    const day = now.getDate();
-                    const hours = now.getHours();
-                    const minutes = now.getMinutes();
-                    const seconds = now.getSeconds();
-                    textArray.push(`The following quest list has been downloaded from idavis-elvenar.com on ${year}-${month}-${day} at ${hours}:${minutes}.\nKeep an eye on the website to get notified about any further changes.\n`);
-                }
-                var quest = [];
-                var itemTranslated;
-                if (typeof item[item.length - 1] === 'number') {
-                    itemTranslated = questTranslate(item.slice(0, -1));
-                } else {
-                    itemTranslated = questTranslate(item);
-                }
-                itemTranslated.forEach(function (part) {
-                    var or = [];
-                    part.forEach(function (oneOr) {
-                        var oneOrWithoutImg = removeImgFromString(oneOr);
-                        or.push(oneOrWithoutImg);
-                    });
-                    quest.push(or.join(` ${langUI("or").toUpperCase()} `));
-                });
-                var questString = quest.join(' + ');
-                textArray.push(`${number + 1}. ${questString}`);
-            } else {
-                questUnlockedTomorrow = true;
+        function downloadWord() {
+            var textArray = [];
+            function removeImgFromString(str) {
+                const pattern = /<img[^>]*>/g;
+                return str.replace(pattern, '');
             }
-        });
-        if (questUnlockedTomorrow) textArray.push(`The following quest will be available tomorrow`);
-        const text = textArray.join('\n');
-        const blob = new Blob([text], { type: 'text/plain' });
-        const link = document.createElement('a');
-        link.download = getSelectedEventName() + ` - ${langUI("Quests")} (iDavis).txt`;
-        link.href = window.URL.createObjectURL(blob);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(link.href);
+            var questUnlockedTomorrow = false;
+            quests[getSelectedEvent()].forEach(function (item, number) {
+                if (questAvailable(number + 1, getSelectedEvent())) {
+                    if ((number + 1) % 30 === 0) {
+                        textArray.push(`Source: idavis-elvenar.com`);
+                    } else if (number === 0) {
+                        const now = new Date();
+                        const year = now.getFullYear();
+                        const month = now.getMonth() + 1;
+                        const day = now.getDate();
+                        const hours = now.getHours();
+                        const minutes = now.getMinutes();
+                        const seconds = now.getSeconds();
+                        textArray.push(`The following quest list has been downloaded from idavis-elvenar.com on ${year}-${month}-${day} at ${hours}:${minutes}.\nKeep an eye on the website to get notified about any further changes.\n`);
+                    }
+                    var quest = [];
+                    var itemTranslated;
+                    if (typeof item[item.length - 1] === 'number') {
+                        itemTranslated = questTranslate(item.slice(0, -1));
+                    } else {
+                        itemTranslated = questTranslate(item);
+                    }
+                    itemTranslated.forEach(function (part) {
+                        var or = [];
+                        part.forEach(function (oneOr) {
+                            var oneOrWithoutImg = removeImgFromString(oneOr);
+                            or.push(oneOrWithoutImg);
+                        });
+                        quest.push(or.join(` ${langUI("or").toUpperCase()} `));
+                    });
+                    var questString = quest.join(' + ');
+                    textArray.push(`${number + 1}. ${questString}`);
+                } else {
+                    questUnlockedTomorrow = true;
+                }
+            });
+            if (questUnlockedTomorrow) textArray.push(`The following quest will be available tomorrow`);
+            const text = textArray.join('\n');
+            const blob = new Blob([text], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.download = getSelectedEventName() + ` - ${langUI("Quests")} (iDavis).txt`;
+            link.href = window.URL.createObjectURL(blob);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(link.href);
+        }
+        saveChangesButton.addEventListener('click', downloadWord);
     }
-    saveChangesButton.addEventListener('click', downloadWord);
 }
 
 function generateServerSelector(parent) {

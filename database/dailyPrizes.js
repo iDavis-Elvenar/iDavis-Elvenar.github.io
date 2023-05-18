@@ -1,5 +1,9 @@
 var dailyPrizes = {
 
+    "shuffle_garden_xxiii_": [
+
+    ],
+
     "may_xxiii_": [
         "A_Evt_Autumn_XXII_Succulent_Crabs",
         "A_Evt_May_XXIII_The_Simmering_Soup",

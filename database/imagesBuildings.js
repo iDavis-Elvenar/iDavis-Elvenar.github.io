@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Shuffle_Garden_XXIII_Mischievous_Fae":"https://i.ibb.co/wy6ZKCf/mischievous-fae.png",
+    "A_Evt_Shuffle_Garden_XXIII_Blossoming_Brute":"https://i.ibb.co/C2kQsjc/blossoming-brute.png",
+    "A_Evt_Shuffle_Garden_XXIII_Heavenly_Steed":"https://i.ibb.co/wpcVfLk/heavenly-steed.png",
+    "A_Evt_Evo_Shuffle_Garden_XXIII_Dragonheart_Estate":"https://i.ibb.co/7Knr9Bh/dragonheart-estate.png",
     "A_Evt_May_XXIII_Tusks_and_Tablecloths":"https://i.ibb.co/b2rkgdj/tusks-and-tablecloths.png",
     "A_Evt_May_XXIII_The_Simmering_Soup":"https://i.ibb.co/48ryx6v/the-simmering-soup.png",
     "A_Evt_May_XXIII_Orcish_Delight":"https://i.ibb.co/CtNdXPn/orcish-delight.png",
