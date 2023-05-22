@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "shuffle_garden_xxiii_": [
-
+        "A_Evt_May_XXII_Tender_Tag_Team",
     ],
 
     "may_xxiii_": [
