@@ -1,8 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2023" : [
-            ["Floral Awakening","shuffle_garden_xxiii_",false,true],
-            ["Mama Juul's Fusion Feast","may_xxiii_",true,false],
+            ["Floral Awakening","shuffle_garden_xxiii_",true,false],
+            ["Mama Juul's Fusion Feast","may_xxiii_",false,false],
             ["Realm of the Phoenix","easter_xxiii_",false,false],
             ["The Great Excavation","february_xxiii_",false,false],
             ["The Secrets of Alchemy","january_xxiii_",false,false],
@@ -49,7 +49,7 @@ var allEvents = {
     },
     "all_events" : {
         "2023" : [
-            ["Floral Awakening","shuffle_garden_xxiii_",false,true],
+            ["Floral Awakening","shuffle_garden_xxiii_",false,false],
             ["Mama Juul's Fusion Feast","may_xxiii_",true,false],
             ["Realm of the Phoenix","easter_xxiii_",false,false],
             ["The Great Excavation","february_xxiii_",false,false],

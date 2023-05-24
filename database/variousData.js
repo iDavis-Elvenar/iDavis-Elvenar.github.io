@@ -87,6 +87,7 @@ let eventBanners = {
     "february_xxiii_": "https://i.ibb.co/W6KHd3z/EL-akcia-febru-r-2023-banner.png",
     "easter_xxiii_": "https://i.ibb.co/5sNDjmf/EL-akcia-ve-k-noc-2023-banner.png",
     "may_xxiii_": "https://i.ibb.co/qFJC5f5/EL-akcia-m-j-2023-banner.png",
+    "shuffle_garden_xxiii_": "https://i.ibb.co/0mQJGvz/EL-akcia-j-n-2023-banner.png",
 }
 
 let eventVideos = {
@@ -130,6 +131,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "february_xxiii_": "02/02/2023",
     "easter_xxiii_": "03/15/2023",
     "may_xxiii_": "04/18/2023",
+    "shuffle_garden_xxiii_": "05/25/2023",
 }
 
 let questsLinks = {
@@ -280,7 +282,6 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "shuffle_garden_xxiii_",
 ]
 
 var eventsInfoIcons = {
