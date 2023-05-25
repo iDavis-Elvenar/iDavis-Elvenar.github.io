@@ -1477,7 +1477,7 @@ function generateShareButtons(parent) {
                 }
             });
             if (questUnlockedTomorrow) textArray.push(`The following quest will be available tomorrow`);
-            const text = textArray.join('\n');
+            const text = textArray.join('\r\n');
             const blob = new Blob([text], { type: 'text/plain' });
             const link = document.createElement('a');
             link.download = getSelectedEventName() + ` - ${langUI("Quests")} (iDavis).txt`;
