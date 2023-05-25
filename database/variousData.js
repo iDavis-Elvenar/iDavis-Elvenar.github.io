@@ -167,6 +167,7 @@ let eventsDurations = {
     "february_xxiii_": 19,
     "easter_xxiii_": 22,
     "may_xxiii_": 22,
+    "shuffle_garden_xxiii_": 22,
 }
 
 let evoUpgradeCosts = {

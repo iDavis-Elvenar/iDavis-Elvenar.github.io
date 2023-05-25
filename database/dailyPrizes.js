@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_May_XXII_Tender_Tag_Team",
         "A_Evt_Shuffle_Garden_XXIII_Blossoming_Brute",
         "INS_KP_{10}",
+        "A_Evt_May_XXI_Petal_Bridge",
     ],
 
     "may_xxiii_": [

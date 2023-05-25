@@ -955,6 +955,7 @@ function displayQuests() {
                 insertQuestsAd(quest, divContainer);
                 var nextColumn = 1;
                 var questParts;
+                //console.log(quest, quests[selectedEvent][quest - 1]);
                 if (questContainRewards(selectedEvent, quest - 1)) {
                     questParts = questTranslate(quests[selectedEvent][quest - 1].slice(0, -1));
                 } else {
