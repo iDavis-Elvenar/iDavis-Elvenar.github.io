@@ -6,6 +6,7 @@ var dailyPrizes = {
         "INS_KP_{10}",
         "A_Evt_May_XXI_Petal_Bridge",
         "INS_UNIT_MC_MA_10",
+        "A_Evt_May_XXI_Bumblebee_Stables",
     ],
 
     "may_xxiii_": [
