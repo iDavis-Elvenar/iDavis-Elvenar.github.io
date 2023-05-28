@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_May_XXI_Petal_Bridge",
         "INS_UNIT_MC_MA_10",
         "A_Evt_May_XXI_Bumblebee_Stables",
+        "frog_unurium_DP_{10}",
     ],
 
     "may_xxiii_": [
