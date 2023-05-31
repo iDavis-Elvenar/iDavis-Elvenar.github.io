@@ -146,7 +146,7 @@ var notifications = {
         "repeatAfter":259200,
         "style":"warning",
         "duration":70,
-        "active":true,
+        "active":false,
         "priority":50
     },
     "14":{  // FEEDBACK SURVEY

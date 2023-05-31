@@ -895,7 +895,7 @@ function displayQuests() {
         shareLink.innerHTML = `${langUI('You can send the quest list to other players by sharing the following link')}: <i class='text-title'><b>${questsLinks[selectedEvent]}</b></i><br>
         ${langUI("This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button" +
             " at the bottom of the page.")}<br>
-        Let me know what you think about the new version of Quest Lists in my newest <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGH9KQFfz-isHeiZ7FOFcsPm-be0y2_p8tI5O29vlaILgLMw/viewform" class="card-title text-center text-link" target="_blank"><b>SURVEY</b></a>!`;
+        <b>You can now mark quests as "Prepared" by clicking directly on specific tasks - it is more intuitive than before and saves space in the quest list. Should you encounter any issues with this feature, let me know using my <a href="https://idavis-elvenar.com/contact.html" class="card-title text-center text-link" target="_blank">Contact Page</a>.</b>`;
         var center = document.createElement('center');
         center.appendChild(shareLink);
         document.getElementById('column_with_tables').appendChild(center);
@@ -933,24 +933,17 @@ function displayQuests() {
                 finished.style.gridArea = `1/${nextColumn++}`;
                 divContainer.appendChild(finished);
 
-                let prep = document.createElement('div');
-                prep.innerHTML = `${langUI("Prepare")}`;
-                prep.style.gridArea = `1/${nextColumn++}`;
-
-                number.style.backgroundColor = task.style.backgroundColor = finished.style.backgroundColor = prep.style.backgroundColor = "#ccb790";
+                number.style.backgroundColor = task.style.backgroundColor = finished.style.backgroundColor = "#ccb790";
                 if (questContainRewards(selectedEvent, quest)) reward.style.backgroundColor = "#ccb790";
-                number.style.border = task.style.border = finished.style.border = prep.style.border = "1px solid #DCC698";
+                number.style.border = task.style.border = finished.style.border = "1px solid #DCC698";
                 if (questContainRewards(selectedEvent, quest)) reward.style.border = "1px solid #DCC698";
-                number.style.borderBottom = task.style.borderBottom = finished.style.borderBottom = prep.style.borderBottom = "2px solid #10212a";
+                number.style.borderBottom = task.style.borderBottom = finished.style.borderBottom = "2px solid #10212a";
                 if (questContainRewards(selectedEvent, quest)) reward.style.borderBottom = "2px solid #10212a";
-                number.style.fontWeight = task.style.fontWeight = finished.style.fontWeight = prep.style.fontWeight = "bold";
+                number.style.fontWeight = task.style.fontWeight = finished.style.fontWeight = "bold";
                 if (questContainRewards(selectedEvent, quest)) reward.style.fontWeight = "bold";
-                number.style.fontSize = task.style.fontSize = finished.style.fontSize = prep.style.fontSize = "0.9em";
+                number.style.fontSize = task.style.fontSize = finished.style.fontSize = "0.9em";
                 if (questContainRewards(selectedEvent, quest)) reward.style.fontSize = "0.9em";
 
-
-                
-                divContainer.appendChild(prep);
             } else {
                 insertQuestsAd(quest, divContainer);
                 var nextColumn = 1;
@@ -988,6 +981,33 @@ function displayQuests() {
                             var taskTd = document.createElement('div');
                             taskTd.innerHTML = singleTask;
                             taskTd.className = "nocopy";
+                            taskTd.style.cursor = "pointer";
+
+                            taskTd.addEventListener('click', function() {
+                                if (Object.keys(getQuestsProgress()).length === 0) {
+                                    recordQuestsProgress(getSelectedEvent(), getSelectedServer());
+                                }
+                                if (!getQuestsProgress().hasOwnProperty()) {
+                                    recordQuestsProgress(getSelectedEvent(), getSelectedServer());
+                                }
+
+                                if (getQuestsProgress()[getSelectedServer()]["prepare"].hasOwnProperty(quest)) {
+                                    if (!getQuestsProgress()[getSelectedServer()]["prepare"][quest].includes(parseInt(taskTd.id.split("_")[1])) &&
+                                        !getQuestsProgress()[getSelectedServer()]["finished"].includes(quest)) {
+                                        taskTd.classList.add("text-prepare");
+                                        taskTd.style.fontWeight = "bold";
+                                    } else {
+                                        taskTd.classList.remove("text-prepare");
+                                        taskTd.style.fontWeight = "";
+                                    }
+                                } else {
+                                    if (!getQuestsProgress()[getSelectedServer()]["finished"].includes(quest)) {
+                                        taskTd.classList.add("text-prepare");
+                                        taskTd.style.fontWeight = "bold";
+                                    }
+                                }
+                                recordQuestsProgress(getSelectedEvent(), getSelectedServer());
+                            });
 
                             if (i != 0) taskTd.classList.add("secondRow");
                             if (i > 0 && j == 0) {
@@ -1024,6 +1044,23 @@ function displayQuests() {
                             }
 
                             taskTd.id = `taskCell${quest}_${taskNumber}`;
+
+                            if (getQuestsProgress().hasOwnProperty(getSelectedServer())) {
+
+                                // this is only temporary, for transfer between old and new version (removed prepare checkboxes)
+                                if (Array.isArray(getQuestsProgress()[getSelectedServer()]["prepare"])) {
+                                    var currentData = getQuestsProgress();
+                                    currentData[getSelectedServer()]["prepare"] = {};
+                                    setQuestsProgress(currentData);
+                                }
+                                
+                                if (getQuestsProgress()[getSelectedServer()]["prepare"].hasOwnProperty(quest) &&
+                                getQuestsProgress()[getSelectedServer()]["prepare"][quest].includes(parseInt(taskTd.id.split("_")[1]))) {
+                                    taskTd.classList.add("text-prepare");
+                                    taskTd.style.fontWeight = "bold";
+                                }
+
+                            }
 
                             task.appendChild(taskTd);
                             taskNumber++;
@@ -1089,25 +1126,24 @@ function displayQuests() {
                         for (let i = 1; i <= quest; i++) {
                             checkbox = document.getElementById("quest_finished_" + (i));
                             tasktext = document.getElementById("quest_task_" + (i));
-                            prepareCheckbox = document.getElementById("quest_prepare_" + (i));
 
                             checkbox.checked = true;
-                            tasktext.className = "tasks-inner-grid text-quest_completed nocopy";
-                            tasktext.style.fontWeight = "";
+                            tasktext.classList.add("text-quest_completed");
+                            for (let partNumber = 1; partNumber <= 6; partNumber++) { //will need to change if parts amount per quest is increased in the future
+                                var part = document.getElementById(`taskCell${i}_${partNumber}`);
+                                if (part) {
+                                    part.classList.remove("text-prepare");
+                                    part.style.fontWeight = "";
+                                }
+                            }
                         }
                     } else {
                         for (let i = quest; i <= numberOfAvailableQuests(selectedEvent); i++) {
                             checkbox = document.getElementById("quest_finished_" + (i));
                             tasktext = document.getElementById("quest_task_" + (i));
-                            prepareCheckbox = document.getElementById("quest_prepare_" + (i));
 
                             checkbox.checked = false;
-                            if (prepareCheckbox.checked) {
-                                tasktext.className = "tasks-inner-grid text-prepare nocopy";
-                                tasktext.style.fontWeight = "bold";
-                            } else {
-                                tasktext.className = "tasks-inner-grid nocopy";
-                            }
+                            tasktext.classList.remove("text-quest_completed");
                         }
                     }
 
@@ -1119,55 +1155,11 @@ function displayQuests() {
                 label.htmlFor = quest;
                 label.innerHTML = "";
 
-                let prepare = document.createElement('div');
-                prepare.style.gridArea = `${quest + 1 + Math.floor((quest - 1) / 30)}/${nextColumn++}`;
-                prepare.style.marginTop = prepare.style.marginBottom = "3px";
-                if (questRowsNumber > 1) prepare.style.paddingTop = prepare.style.paddingBottom = "7px";
-                prepare.style.borderTopRightRadius = prepare.style.borderBottomRightRadius = "7px";
-                prepare.style.borderTop = prepare.style.borderRight = prepare.style.borderBottom = "1px solid #DCC698";
-                prepare.style.borderLeft = "none";
-                prepare.className = "form-check";
-
-                let input2 = document.createElement('input');
-                input2.className = "form-check-input";
-                input2.type = "checkbox";
-                input2.id = "quest_prepare_" + (quest);
-                input2.style.float = "none";
-                input2.style.position = "static";
-                input2.style.marginLeft = 0;
-                if (getQuestsProgress() && getQuestsProgress()[parseInt(getSelectedServer())] && getQuestsProgress()[parseInt(getSelectedServer())]["prepare"].includes(quest)) {
-                    input2.checked = true;
-                    if (!getQuestsProgress()[parseInt(getSelectedServer())]["finished"].includes(quest)) {
-                        task.className = "tasks-inner-grid text-prepare nocopy";
-                        task.style.fontWeight = "bold";
-                    }
-                }
-                input2.onchange = function () {
-                    tasktext = document.getElementById("quest_task_" + (quest));
-                    finishedCheckbox = document.getElementById("quest_finished_" + (quest));
-                    if (!finishedCheckbox.checked) {
-                        if (input2.checked) {
-                            tasktext.className = "tasks-inner-grid text-prepare nocopy";
-                            tasktext.style.fontWeight = "bold";
-                        } else {
-                            tasktext.className = "tasks-inner-grid nocopy";
-                            tasktext.style.fontWeight = "";
-                        }
-                    }
-                    recordQuestsProgress(getSelectedEvent(), getSelectedServer());
-                };
-                let label2 = document.createElement('label');
-                label2.className = "form-check-label";
-                label2.htmlFor = quest;
-                label2.innerHTML = "";
-
                 if (questAvailable(quest, selectedEvent)) {
                     if (questContainRewards(selectedEvent, quest-1)) reward.appendChild(rewardp);
                     if (questContainRewards(selectedEvent, quest-1)) reward.style.paddingLeft = "3px";
                     finished.appendChild(input);
                     finished.appendChild(label);
-                    prepare.appendChild(input2);
-                    prepare.appendChild(label2);
                 }
                 else {
                     let emptyP1 = document.createElement('p');
@@ -1176,12 +1168,10 @@ function displayQuests() {
                     emptyP1.style.margin = emptyP2.style.margin = emptyP3.style.margin = "7px";
                     if (questContainRewards(selectedEvent, quest-1)) reward.appendChild(emptyP3);
                     finished.appendChild(emptyP1);
-                    prepare.appendChild(emptyP2);
                 }
                 divContainer.appendChild(task);
                 if (questContainRewards(selectedEvent, quest-1)) divContainer.appendChild(reward);
                 divContainer.appendChild(finished);
-                divContainer.appendChild(prepare);
             }
         }
     }
@@ -1634,13 +1624,18 @@ function setQuestsProgress(value) {
 function updateDisplayedProgress() {
     for (let quest = 1; quest <= numberOfAvailableQuests(getSelectedEvent()); quest++) {
         var checkbox = document.getElementById("quest_finished_" + (quest));
-        var tasktext = document.getElementById("quest_task_" + (quest));
-        var prepareCheckbox = document.getElementById("quest_prepare_" + (quest));
-
         checkbox.checked = false;
-        prepareCheckbox.checked = false;
-        tasktext.className = "tasks-inner-grid nocopy";
-        tasktext.style.fontWeight = "";
+        var questText = document.getElementById("quest_task_" + (quest));
+        questText.classList.remove("text-quest_completed");
+
+        for (var partNumber = 1; partNumber <= 6; partNumber++) {
+            var tasktext = document.getElementById(`taskCell${quest}_${partNumber}`);
+
+            if (tasktext) {
+                tasktext.classList.remove("text-prepare");
+                tasktext.style.fontWeight = "";
+            }
+        }
     }
     for (let quest = 1; quest <= numberOfAvailableQuests(getSelectedEvent()); quest++) {
         if (getQuestsProgress() && getQuestsProgress()[getSelectedServer()] && getQuestsProgress()[getSelectedServer()]["finished"].includes(quest)) {
@@ -1648,33 +1643,45 @@ function updateDisplayedProgress() {
             var tasktext = document.getElementById("quest_task_" + (quest));
 
             checkbox.checked = true;
-            tasktext.className = "tasks-inner-grid text-quest_completed nocopy";
+            tasktext.classList.add("text-quest_completed");
             tasktext.style.fontWeight = "";
         }
-        if (getQuestsProgress() && getQuestsProgress()[getSelectedServer()] && getQuestsProgress()[getSelectedServer()]["prepare"].includes(quest)) {
-            var tasktext = document.getElementById("quest_task_" + (quest));
-            var prepareCheckbox = document.getElementById("quest_prepare_" + (quest));
 
-            prepareCheckbox.checked = true;
-            tasktext.className = "tasks-inner-grid text-prepare nocopy";
-            tasktext.style.fontWeight = "bold";
+        for (var partNumber = 1; partNumber <= 6; partNumber++) {
+            if (getQuestsProgress() && getQuestsProgress()[getSelectedServer()] && 
+            getQuestsProgress()[getSelectedServer()]["prepare"].hasOwnProperty(quest) && getQuestsProgress()[getSelectedServer()]["prepare"][quest].includes(partNumber)) {
+                var tasktext = document.getElementById(`taskCell${quest}_${partNumber}`);
+                
+                if (tasktext) {
+                    tasktext.classList.add("text-prepare");
+                    tasktext.style.fontWeight = "bold";
+                }
+            }
         }
     }
 }
 
 function recordQuestsProgress(selectedEvent, selectedServer) {
     var result = getQuestsProgress();
+    var tasksPerQuestLimit = 6;     // this might be increased if more tasks per quest are introduced in the future
     for (let s = 1; s <= getNumberOfServers(); s++) {
         if (s == selectedServer) {
             var server = {};
             server["finished"] = [];
-            server["prepare"] = [];
+            server["prepare"] = {};
             for (let quest = 1; quest <= numberOfAvailableQuests(selectedEvent); quest++) {
                 if (document.getElementById("quest_finished_" + quest).checked) {
                     server["finished"].push(quest);
                 }
-                if (document.getElementById("quest_prepare_" + quest).checked) {
-                    server["prepare"].push(quest);
+                var preparePerQuest = [];
+                for (let task = 1; task <= tasksPerQuestLimit; task++) {
+                    if (document.getElementById(`taskCell${quest}_${task}`) &&
+                        document.getElementById(`taskCell${quest}_${task}`).classList.contains("text-prepare")) {
+                        preparePerQuest.push(task);
+                    }
+                }
+                if (preparePerQuest.length > 0) {
+                    server["prepare"][quest] = preparePerQuest;
                 }
             }
             result[s] = server;
