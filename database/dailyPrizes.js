@@ -10,6 +10,7 @@ var dailyPrizes = {
         "frog_unurium_DP_{10}",
         "A_Evt_May_XX_Cotton_Candy_Magic",
         "frog_runeshards1_{2}",
+        "A_Evt_May_XXI_Faerie_Sand_Garden",
     ],
 
     "may_xxiii_": [
