@@ -115,10 +115,20 @@ var faStartDates = {
 }
 
 var seasonStartDates = {
+    "july_xxiii_": {
+        "live": {
+            "start_date": "__ _ 2023",
+            "end_date": "__ _ 2023"
+        },
+        "beta": {
+            "start_date": "June 1st 2023",
+            "end_date": "June 30th 2023"
+        }
+    },
     "april_xxiii_": {
         "live": {
-            "start_date": "April 27th 2023", //april 27th
-            "end_date": "July 11th 2023" //july 11th
+            "start_date": "April 27th 2023",
+            "end_date": "July 11th 2023"
         },
         "beta": {
             "start_date": "March 16th 2023",

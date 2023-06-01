@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Evt_Season_Triumph_XXIII_Glorious_Auction":"https://i.ibb.co/qYyfXjp/the-glorious-auction.png",
     "A_Evt_Shuffle_Garden_XXIII_Mischievous_Fae":"https://i.ibb.co/wy6ZKCf/mischievous-fae.png",
     "A_Evt_Shuffle_Garden_XXIII_Blossoming_Brute":"https://i.ibb.co/C2kQsjc/blossoming-brute.png",
     "A_Evt_Shuffle_Garden_XXIII_Heavenly_Steed":"https://i.ibb.co/wpcVfLk/heavenly-steed.png",
