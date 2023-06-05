@@ -15,6 +15,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_LM_10",
         "A_Evt_Tree_Enclosure_Blue",
         "INS_KP_AW_20",
+        "A_Evt_GorgeousGarden",
     ],
 
     "may_xxiii_": [
