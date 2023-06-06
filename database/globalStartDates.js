@@ -61,11 +61,11 @@ var eventStartDates = {
     },
 }
 
-var faStartDates = {
+var faStartDates = {  //augustove 17.8. - 23.8., novembrove 16.11. - 22.11. (podla AT)
     "june_xxiii_": {
         "live": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "June 8th 2023",
+            "end_date": "June 14th 2023"
         },
         "beta": {
             "start_date": "May 18th 2023",
