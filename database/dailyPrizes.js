@@ -17,6 +17,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_GorgeousGarden",
         "INS_REV_SQD_50",
+        "A_Evt_May_XXII_Primordial_Gecko",
     ],
 
     "may_xxiii_": [
