@@ -14,6 +14,7 @@ var additionalTabsSeasons = {
 var seasonsBanners = {
     "december_xxii_" : "https://i.ibb.co/XDx9ZMt/Season-Season-of-Dreams-Banner.png",
     "april_xxiii_": "https://i.ibb.co/Hdm0FzN/season-joy-banner.png",
+    "july_xxiii_": "https://i.ibb.co/kxdBh0Y/season-triumph-banner.png",
 }
 
 var seasonInfoIcons = {
@@ -37,7 +38,7 @@ var seasonXp = {
 var seasonProgress = {
     "december_xxii_" : {"img":"https://i.ibb.co/GQyKdRP/season-dreams-progress.png", "img_width": "40"},
     "april_xxiii_" : {"img":"https://i.ibb.co/sg06YYF/season-joy-progress.png", "img_width": "40"},
-    "july_xxiii_" : {"img":"https://i.ibb.co/sg06YYF/season-joy-progress.png", "img_width": "40"},
+    "july_xxiii_" : {"img":"https://i.ibb.co/DpyZj8K/season-triumph-progress.png", "img_width": "40"},
 }
 
 var seasonsVideos = {
@@ -55,6 +56,7 @@ var seasonQuestsRewards = {
 var seasonsQuestsBannerIcons = {
     "december_xxii_":"https://i.ibb.co/tXpRkmP/season-quests-and-rewards.png",
     "april_xxiii_":"https://i.ibb.co/sF670CC/season-joy-quests-and-rewards.png",
+    "july_xxiii_": "https://i.ibb.co/ZWYZBKK/season-triumph-quests-banner.png",
 }
 
 var seasonsIntro = `Seasons are a type of long-term events containing Daily and Weekly quests, many interesting rewards and a unique Season Pass.
