@@ -20,6 +20,7 @@ var dailyPrizes = {
         "A_Evt_May_XXII_Primordial_Gecko",
         "frog_runeshards2_{2}",
         "A_Evt_May_XXI_Faerie_Inn",
+        "A_Evt_Shuffle_Garden_XXIII_Mischievous_Fae",
     ],
 
     "may_xxiii_": [
