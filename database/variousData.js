@@ -795,12 +795,22 @@ var grIds = {
     "vallorianlegend": "ch21",
 }
 
+var newEventSign = {
+    "active": false,
+    "img": "https://i.ibb.co/n0KBPgt/new-sign.png",
+}
+
 var navbarNew = {
     "active": false,
     "img": {
         "src": "https://i.ibb.co/n0KBPgt/new-sign.png",
         "style": "width: 50px;",
     }
+}
+
+var webIconChange = {
+    "active": false,
+    "img": "https://i.ibb.co/9hJqb4d/rainbow-heart.png",
 }
 
 var moreNavbarContent = [

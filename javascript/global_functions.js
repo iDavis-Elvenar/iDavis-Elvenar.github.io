@@ -609,3 +609,20 @@ function setDocumentTitle(document, type, baseTabs, additionalTabs, page) {
     var result = pageName + ` - ${tabName} | ` + `iDavis Elvenar`;
     document.title = result;
 }
+
+function generateWebIcon() {
+    if (webIconChange["active"]) {
+        document.getElementById("web_icon").setAttribute("src", webIconChange["img"]);
+    }
+}
+
+function generateNewEventSign() {
+    if (newEventSign["active"]) {
+        var img = document.createElement('img');
+        img.src = newEventSign["img"];
+        img.style.width = '50px';
+        img.style.marginRight = '3px';
+        var parentElement = document.getElementById('select_event_label');
+        parentElement.prepend(img);
+    }
+}
