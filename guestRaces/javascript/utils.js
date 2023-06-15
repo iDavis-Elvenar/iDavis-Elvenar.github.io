@@ -1,11 +1,11 @@
-var view = "base";
+var view = "";
 
 function loadPage() {
     var foundView = "";
     if (location.href.split('#').length > 1 && location.href.split('#')[1] !== "") {
         foundView = location.href.split('#')[1];
     } else {
-        foundView = "base";
+        foundView = "intro";
     }
     switchView(foundView);
     setDocumentTitle(document, foundView, baseTabsGuestRaces, additionalTabsGuestRaces, getSelectedGuestRace());
@@ -15,18 +15,20 @@ function loadPage() {
 function switchView(type) {
     prepSetAlertElements();
     create_exception("Loading...", 10000, 'primary');
-    if (type === "base" && view !== "base") {
-        view = "base";
-        window.location.href = location.href.split('#')[0];
-    } else if (type === "quests" && view !== "quests") {
+    if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
     } else if (type === "research" && view !== "research") {
         displayResearch();
         view = "research";
-    } else if (type !== "base" && type !== "quests" && view !== type) {
+    } else if (type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
+        if (type == "intro") {
+            $(function(){
+                $("#column_with_tables").load("guestRacesTabs/"+getSelectedGuestRace()+"/"+baseTabsGuestRaces.find(function(element) {return element.onclick === type;}).file);
+            });
+        }
         for (let gr in additionalTabsGuestRaces) {
             for (let tab = 0; tab < additionalTabsGuestRaces[gr].length; tab++) {
                 if (additionalTabsGuestRaces[gr][tab]["id"] === type) {

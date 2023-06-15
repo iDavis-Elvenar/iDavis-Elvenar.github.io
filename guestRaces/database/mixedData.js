@@ -1,15 +1,15 @@
 var baseTabsGuestRaces = [
-    {"id":"base_left_panel_div", "name":"Base", "img":"various", "img_width":"25", "img_style":"margin-left: 0px; margin-right: 13px; position: relative;", "href":"#base", "onclick":"base"},
+    {"id":"base_left_panel_div", "name":"Intro", "img":"various", "img_width":"25", "img_style":"margin-left: 0px; margin-right: 13px; position: relative;", "href":"#intro", "onclick":"intro", "file":"intro.html"},
     {"id":"quests_left_panel_div", "name":"Quests", "img":"../images/general/event_guide.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},
     {"id":"research_left_panel_div", "name":"Research", "img":"../images/general/research.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#research", "onclick":"research"},
 ] 
 
 var additionalTabsGuestRaces = {
-    /*"ch21": [
-        {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
-        {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/z8pjTPh/layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},
+    "ch21": [
+        //{"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
+        //{"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/z8pjTPh/layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},
         {"id":"wonders", "name":"Wonders", "img":"https://i.ibb.co/wrhMdKZ/wonders.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#wonders", "file":"wonders.html"},
-    ],*/
+    ],
     /*"ch20": [
         {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
         {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/z8pjTPh/layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},

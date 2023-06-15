@@ -439,3 +439,8 @@ background-color: #b9881e;
     background-color: #f3ebd8;
     border-color: #f3ebd8;
 }
+
+.small-paragraph {
+    font-size: small;
+    margin-bottom: -5px;
+}
