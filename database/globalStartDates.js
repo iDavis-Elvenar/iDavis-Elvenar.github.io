@@ -1,8 +1,8 @@
 var eventStartDates = {
     "shuffle_garden_xxiii_": {
         "live": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "June 22nd 2023",
+            "end_date": "July 12th 2023"
         },
         "beta": {
             "start_date": "May 25th 2023",
