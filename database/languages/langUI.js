@@ -117,6 +117,7 @@ let ui = {
         "Dwarven Citadel": "Trpasličí citadela",
         "Ancient Promise": "Starodávný slib",
         //EVENTS
+        "Floral Awakening": "Květinové probuzení",
         "Mama Juul's Fusion Feast": "Hostina mámy Juul",
         "Realm of the Phoenix": "Svět fénixe",
         "The Great Excavation": "Velká hlubina",
@@ -266,7 +267,8 @@ let ui = {
         "Dwarven Citadel": "Zwergen-Zitadelle",
         "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
-        "Mama Juul's Fusion Feast": "Mama Juul's Fusion Feast",
+        "Floral Awakening": "Florales Erwachen",
+        "Mama Juul's Fusion Feast": "Mama Juuls Reiseküche",
         "Realm of the Phoenix": "Das Reich des Phönix",
         "The Great Excavation": "Die Große Grabung",
         "The Secrets of Alchemy": "Die Geheimnisse der Alchemie",
@@ -415,7 +417,8 @@ let ui = {
         "Dwarven Citadel": "Citadelle naine",
         "Ancient Promise": "Ancienne promesse",
         //EVENTS
-        "Mama Juul's Fusion Feast": "Mama Juul's Fusion Feast",
+        "Floral Awakening": "Eveil floral",
+        "Mama Juul's Fusion Feast": "Le Festin de Fusion de Mama Juul",
         "Realm of the Phoenix": "Realm of the Phoenix",
         "The Great Excavation": "La grande excavation",
         "The Secrets of Alchemy": "Les secrets de l'alchimie",
@@ -564,7 +567,8 @@ let ui = {
         "Dwarven Citadel": "Törp Citadella",
         "Ancient Promise": "Ősi Ígéret",
         //EVENTS
-        "Mama Juul's Fusion Feast": "Mama Juul's Fusion Feast",
+        "Floral Awakening": "Virágos Ébredés",
+        "Mama Juul's Fusion Feast": "Juul Mama Fúziós Ünnepe",
         "Realm of the Phoenix": "A Főnix Birodalma",
         "The Great Excavation": "A Nagy Ásatás",
         "The Secrets of Alchemy": "Az Alkímia Titkai",
@@ -713,6 +717,7 @@ let ui = {
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
+        "Floral Awakening": "Kwiatowe Przebudzenie",
         "Mama Juul's Fusion Feast": "Uczta w stylu fusion Mamy Juul",
         "Realm of the Phoenix": "Królestwo Feniksa",
         "The Great Excavation": "Wielkie Wykopaliska",
@@ -862,6 +867,7 @@ let ui = {
         "Dwarven Citadel": "Гномья цитадель",
         "Ancient Promise": "Древнее обещание",
         //EVENTS
+        "Floral Awakening": "Цветочное пробуждение",
         "Mama Juul's Fusion Feast": "Передвижная кухня Джуул",
         "Realm of the Phoenix": "Царство Феникса",
         "The Great Excavation": "Великие раскопки",
