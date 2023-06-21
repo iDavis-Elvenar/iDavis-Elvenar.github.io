@@ -2,6 +2,7 @@ var dailyPrizes = {
 
     "scroll_aquatic_xxiii_": [
         "A_Evt_MM_XIX_MantaRay",
+        "A_Evt_Scroll_Aquatic_XXIII_Fin_Stop",
     ],
 
     "shuffle_garden_xxiii_": [
