@@ -1,4 +1,12 @@
 var images_buildings = {
+    "A_Evt_Set_Scroll_Aquatic_XXIII_Skyfin_Rodeo":"https://i.ibb.co/Jk75CPT/skyfin-rodeo.png",
+    "A_Evt_Set_Scroll_Aquatic_XXIII_Windchasers_Finale":"https://i.ibb.co/8PsHkCY/windchasers-finale.png",
+    "A_Evt_Set_Scroll_Aquatic_XXIII_Sirens_Ballet":"https://i.ibb.co/X5sPMFy/sirens-ballet.png",
+    "A_Evt_Set_Scroll_Aquatic_XXIII_Wavecrest_Barrier":"https://i.ibb.co/56t5gkg/wavecrest-barrier.png",
+    "A_Evt_Set_Scroll_Aquatic_XXIII_Hypnojelly":"https://i.ibb.co/ZNLzNV3/hypnojelly.png",
+    "A_Evt_Set_Scroll_Aquatic_XXIII_Bootleggers":"https://i.ibb.co/sj2wNSY/bootleggers.png",
+    "A_Evt_Scroll_Aquatic_XXIII_Squid_Lounge":"https://i.ibb.co/pZC63w4/squid-lounge.png",
+    "A_Evt_Scroll_Aquatic_XXIII_Fin_Stop":"https://i.ibb.co/Mf91LZ5/fin-stop.png",
     "A_Evt_Season_Triumph_XXIII_Glorious_Auction":"https://i.ibb.co/qYyfXjp/the-glorious-auction.png",
     "A_Evt_Shuffle_Garden_XXIII_Mischievous_Fae":"https://i.ibb.co/wy6ZKCf/mischievous-fae.png",
     "A_Evt_Shuffle_Garden_XXIII_Blossoming_Brute":"https://i.ibb.co/C2kQsjc/blossoming-brute.png",

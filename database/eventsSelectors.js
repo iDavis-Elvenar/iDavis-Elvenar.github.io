@@ -1,7 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2023" : [
-            ["Aqua Splendor","scroll_aquatic_xxiii_",false,true],  //20.7. - 8.8. podla AT
+            ["Aqua Splendor","scroll_aquatic_xxiii_",false,true],
             ["Floral Awakening","shuffle_garden_xxiii_",true,false],
             ["Mama Juul's Fusion Feast","may_xxiii_",false,false],
             ["Realm of the Phoenix","easter_xxiii_",false,false],

@@ -132,6 +132,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "easter_xxiii_": "03/15/2023",
     "may_xxiii_": "04/18/2023",
     "shuffle_garden_xxiii_": "05/25/2023",
+    "scroll_aquatic_xxiii_": "06/27/2023",
 }
 
 let questsLinks = {
@@ -150,6 +151,7 @@ let questsLinks = {
     "easter_xxiii_": "bit.ly/RealmOfThePhoenix2023",
     "may_xxiii_": "bit.ly/MamaJuulsFusionFeast2023",
     "shuffle_garden_xxiii_": "bit.ly/FloralAwakening2023",
+    "scroll_aquatic_xxiii_": "bit.ly/AquaSplendor2023",
 }
 
 let eventsDurations = {
@@ -168,6 +170,7 @@ let eventsDurations = {
     "easter_xxiii_": 22,
     "may_xxiii_": 22,
     "shuffle_garden_xxiii_": 20,
+    "scroll_aquatic_xxiii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -277,6 +280,7 @@ var setNames = {
     "scroll_sorcerers_xxii": "Forbidden Ruins",
     "merge_dwarvengame": "Dwarven Citadel",
     "tile_amuni_xxiii": "Ancient Promise",
+    //"scroll_aquatic_xxiii": "Seapectecular Aquatics",
 }
 
 var discardBuildings = [
@@ -292,6 +296,7 @@ var eventsInfoIcons = {
     "easter_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "may_xxiii_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "shuffle_garden_xxiii_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
+    "scroll_aquatic_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -305,6 +310,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "scroll_aquatic_xxiii_": [
+        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},
+    ],
     "may_xxiii_": [
         {"id":"kitchen", "name":"Kitchen", "img":"https://i.ibb.co/YfB76Sx/kitchen.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#kitchen", "file":"kitchen.html", "releaseDate":"04/18/2023"},
         {"id":"offers", "name":"Offers", "img":"https://i.ibb.co/9WV3mdS/offers.png", "img_width":"28", "img_style":"margin-left: 1px; margin-right: 8px; position: relative;", "href":"#offers", "file":"offers.html", "releaseDate":"04/18/2023"},
@@ -569,11 +577,11 @@ var goods_icons = {
     "boosted_ascended_plus_0_quality_1": "<img src='https://i.ibb.co/s1LZv78/boosted-t7-plus-0.png' style='width: 27px;' title='Boosted T7'><br>",
     "boosted_ascended_plus_1_quality_1": "<img src='https://i.ibb.co/PG3Nst5/boosted-t7-plus-1.png' style='width: 27px;' title='Boosted T7 + 1'><br>",
     "boosted_ascended_plus_2_quality_1": "<img src='https://i.ibb.co/dPwXvCp/boosted-t7-plus-2.png' style='width: 27px;' title='Boosted T7 + 2'><br>",
-    "boosted_ascended_plus_0_quality_2": "<img src='' title='Boosted T8'><br>",
+    "boosted_ascended_plus_0_quality_2": "<img src='https://cz.wiki.elvenar.com/images/7/75/G_Ascended_R.png' style='width: 27px;' title='Boosted T8'><br>",
     "boosted_ascended_plus_1_quality_2": "<img src='https://i.ibb.co/YbyYDCj/boosted-t8-plus-1.png' style='width: 27px;' title='Boosted T8 + 1'><br>",
     "boosted_ascended_plus_2_quality_2": "<img src='https://i.ibb.co/6v79yJf/boosted-t8-plus-2.png' style='width: 27px;' title='Boosted T8 + 2'><br>",
     "boosted_ascended_plus_0_quality_3": "<img src='' title='Boosted T9'><br>",
-    "boosted_ascended_plus_1_quality_3": "<img src='' title='Boosted T9 + 1'><br>",
+    "boosted_ascended_plus_1_quality_3": "<img src='https://i.ibb.co/7QQxqw9/boosted-t9-plus-1.png' style='width: 27px;' title='Boosted T9 + 1'><br>",
     "boosted_ascended_plus_2_quality_3": "<img src='' title='Boosted T9 + 2'><br>",
     "b_all_aw1_shards": "<img src='https://i.ibb.co/cK9Bjdm/b-all-aw1-shards.png' title='Rune Shard for Tome of Secrets'><br>",
     "b_all_aw2_shards": "<img src='https://i.ibb.co/xLSxDWr/b-all-aw2-shards.png' title='Rune Shard for Golden Abyss'><br>",

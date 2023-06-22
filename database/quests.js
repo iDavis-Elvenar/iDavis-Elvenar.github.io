@@ -1,4 +1,7 @@
 var quests = {
+    "scroll_aquatic_xxiii_": [
+
+    ],
     "shuffle_garden_xxiii_": [
         [MINCE, 35],
         [NAPOJE(4), 35],

@@ -1,4 +1,14 @@
 var eventStartDates = {
+    "scroll_aquatic_xxiii_": {   //20.7. - 8.8. podla AT
+        "live": {
+            "start_date": "__ _ 2023",
+            "end_date": "__ _ 2023"
+        },
+        "beta": {
+            "start_date": "June 27th 2023",
+            "end_date": "July 27th 2023"
+        }
+    },
     "shuffle_garden_xxiii_": {
         "live": {
             "start_date": "June 22nd 2023",
