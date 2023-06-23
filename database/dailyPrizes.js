@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_MM_XIX_MantaRay",
         "A_Evt_Scroll_Aquatic_XXIII_Fin_Stop",
         "A_Evt_Set_Scroll_Aquatic_XXIII_Wavecrest_Barrier",
+        "INS_KP_AW_20",
     ],
 
     "shuffle_garden_xxiii_": [
