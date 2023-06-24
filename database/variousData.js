@@ -88,6 +88,7 @@ let eventBanners = {
     "easter_xxiii_": "https://i.ibb.co/5sNDjmf/EL-akcia-ve-k-noc-2023-banner.png",
     "may_xxiii_": "https://i.ibb.co/qFJC5f5/EL-akcia-m-j-2023-banner.png",
     "shuffle_garden_xxiii_": "https://i.ibb.co/0mQJGvz/EL-akcia-j-n-2023-banner.png",
+    "scroll_aquatic_xxiii_": "https://i.ibb.co/f25F5qm/EL-akcia-j-l-2023-banner.png",
 }
 
 let eventVideos = {
@@ -132,7 +133,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "easter_xxiii_": "03/15/2023",
     "may_xxiii_": "04/18/2023",
     "shuffle_garden_xxiii_": "05/25/2023",
-    "scroll_aquatic_xxiii_": "06/27/2023",
+    "scroll_aquatic_xxiii_": "06/26/2023",
 }
 
 let questsLinks = {
@@ -170,7 +171,7 @@ let eventsDurations = {
     "easter_xxiii_": 22,
     "may_xxiii_": 22,
     "shuffle_garden_xxiii_": 20,
-    "scroll_aquatic_xxiii_": 22,
+    "scroll_aquatic_xxiii_": 20,
 }
 
 let evoUpgradeCosts = {
@@ -280,7 +281,7 @@ var setNames = {
     "scroll_sorcerers_xxii": "Forbidden Ruins",
     "merge_dwarvengame": "Dwarven Citadel",
     "tile_amuni_xxiii": "Ancient Promise",
-    //"scroll_aquatic_xxiii": "Seapectecular Aquatics",
+    "scroll_aquatic_xxiii": "Seapectecular Aquatics",
 }
 
 var discardBuildings = [
@@ -311,7 +312,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "scroll_aquatic_xxiii_": [
-        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},
+        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/27/2023"},
     ],
     "may_xxiii_": [
         {"id":"kitchen", "name":"Kitchen", "img":"https://i.ibb.co/YfB76Sx/kitchen.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#kitchen", "file":"kitchen.html", "releaseDate":"04/18/2023"},
