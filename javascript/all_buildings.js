@@ -48,7 +48,7 @@ function setAndReload(id) {
 function readBuildingsJSON() {
     prepSetAlertElements();
 
-    create_exception("Loading...", 10000, 'primary');
+    create_exception("Loading... <b>(press CTRL+F5 if stuck)</b>", 10000, 'primary');
 
     $.get('database/buildings.json')
         .done(data => {
