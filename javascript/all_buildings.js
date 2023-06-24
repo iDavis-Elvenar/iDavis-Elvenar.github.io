@@ -106,7 +106,11 @@ function readBuildingsJSON() {
                 var div = document.createElement('div');
                 div.id = filteredData[i]['id']+"_div";
                 div.className = 'bbTable';
+                div.style.overflow = "visible";
                 div.style.marginBottom = "20px";
+                var divFirstTable = document.createElement('div');
+                divFirstTable.className = "bbTable";
+                divFirstTable.style.overflow = "auto";
                 var firstTable = document.createElement('table');
                 firstTable.className = 'table-primary';
                 firstTable.style.width = "100%";
@@ -181,8 +185,12 @@ function readBuildingsJSON() {
                 
                 t1body.appendChild(t1r);
                 firstTable.appendChild(t1body);
-                div.appendChild(firstTable);
+                divFirstTable.appendChild(firstTable);
+                div.appendChild(divFirstTable);
 
+                var divSecondTable = document.createElement('div');
+                divSecondTable.className = "bbTable";
+                divSecondTable.style.overflow = "auto";
                 var secondTable = document.createElement('table');
                 secondTable.className = 'table-primary text-center';
                 secondTable.style.width = "100%";
@@ -197,6 +205,9 @@ function readBuildingsJSON() {
                     }
                     tr21.appendChild(th);
                 }
+                var divSetTable = document.createElement('div');
+                divSetTable.className = "bbTable";
+                divSetTable.style.overflow = "auto";
                 var setTable = document.createElement('table');
                 setTable.className = 'table-primary text-center';
                 setTable.style.width = "100%";
@@ -417,10 +428,12 @@ function readBuildingsJSON() {
                     secondTable.appendChild(t2body);
                 }
 
-                div.appendChild(secondTable);
+                divSecondTable.appendChild(secondTable);
+                div.appendChild(divSecondTable);
                 if (filteredData[i].hasOwnProperty('setBuilding')) {
                     setTable.appendChild(tSetBody);
-                    div.appendChild(setTable);
+                    divSetTable.appendChild(setTable);
+                    div.appendChild(divSetTable);
                 }
                 //PET FEEDING EFFECT
                 if (isEvo && filteredData[i].hasOwnProperty("feedingEffect")) {
