@@ -58,5 +58,7 @@ var ZESILOVAC = function (value) {return {"id": 45, "value": value, "img": "http
 
 var VYPOMOC = function (value) {return {"id": 46, "value": value, "img": "https://i.ibb.co/bvywmGN/neighbourly-help.png"}};
 
+var CARODEJNICKE_BODY = function (value) {return {"id": 47, "value": value, "img": "https://i.ibb.co/VSzsqx2/witchpoints.png"}};
+
 var AND = "and";
 var OR = "or";

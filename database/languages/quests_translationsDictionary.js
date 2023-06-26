@@ -47,6 +47,7 @@ let questsDictionary = {
         44: "Použij _x příděl zásob",
         45: "Použij _ d{zesilovač,zesilovače,zesilovačů}",
         46: "Vykonej _x sousedskou výpomoc",
+        47: "Získej _x d{čarodějnícky bod,čarodějnícke body,čarodějníckých bodů}",
     },
     "en" : {
         0: "Collect some amount of coins",
@@ -96,6 +97,7 @@ let questsDictionary = {
         44: "Use _x supply windfall",
         45: "Use _ d{booster,boosters}",
         46: "Do _x neighbourly help",
+        47: "Collect _x d{witch point,witch points}",
     },
     "de" : {
         0: "Sammle eine Menge Münzen",
@@ -145,6 +147,7 @@ let questsDictionary = {
         44: "Benutze _x Vorratsregen",
         45: "Benutze _ d{Zeit-Booster,Zeit-Boosters}",
         46: "Gib _x Nachbarschaftshilfe",
+        47: "Sammle _x d{Hexenpunkt,Hexenpunkte}",
     },
     "fr" : {
         0: "Collectez une certaine quantité de pièces",
@@ -194,6 +197,7 @@ let questsDictionary = {
         44: "Utilisez _x une abondance de matériaux",
         45: "Utilisez _ d{booster,boosters}",
         46: "Faites _x d'entraide avec vos voisins",
+        47: "Collect _x d{witch point,witch points}",
     },
     "hu" : {
         0: "Gyűjts bizonyos mennyiségű aranyat",
@@ -243,6 +247,7 @@ let questsDictionary = {
         44: "Használd _x a Váratlan Ajándékot",
         45: "Használj _ gyorsítót",
         46: "Nyújts _x szomszédi segítséget",
+        47: "Collect _x d{witch point,witch points}",
     },
     "pl" : {
         0: "Zdobądź nieco monet",
@@ -291,7 +296,8 @@ let questsDictionary = {
         43: "Użyj _x deszczu monet",
         44: "Użyj _x strumienia zasobów",
         45: "Użyj _ d{booster,boostery,boosterów}",
-        46: "Wykonaj _x pomoc sąsiedzką"
+        46: "Wykonaj _x pomoc sąsiedzką",
+        47: "Collect _x d{witch point,witch points,witch points}",
     },
     "ru" : {
         0: "Соберите хорошее количество монет",
@@ -341,5 +347,6 @@ let questsDictionary = {
         44: "Используйте _x доход запасов",
         45: "Используйте _ d{ускоритель,ускорителя,ускорителей}",
         46: "Оказывайте _x соседскую помощь",
+        47: "Collect _x d{witch point,witch points,witch points}",
     }
 }
