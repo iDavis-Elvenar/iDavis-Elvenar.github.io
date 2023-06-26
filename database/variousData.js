@@ -312,7 +312,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "scroll_aquatic_xxiii_": [
-        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/27/2023"},
+        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/26/2023"},
     ],
     "may_xxiii_": [
         {"id":"kitchen", "name":"Kitchen", "img":"https://i.ibb.co/YfB76Sx/kitchen.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#kitchen", "file":"kitchen.html", "releaseDate":"04/18/2023"},
