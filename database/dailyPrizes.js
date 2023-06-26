@@ -7,6 +7,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_July_XXII_Coral_Fountain",
         "frog_runeshards2_{2}",
+        "A_Evt_July_XXII_Azure_Stables",
     ],
 
     "shuffle_garden_xxiii_": [
