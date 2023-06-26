@@ -69,7 +69,7 @@ var quests = {
         [ULOMKY_KOUZEL(1000), OR, CARODEJNICKE_BODY(5), AND, ZASOBY, 73],
         [VB_UTRAT(20), AND, PRODUKT_9H_ZAKLADNY(7), 74],
         [STRETY_LIBOVOLNE(10), AND, SPOJOVACI_CINIDLO(3), 74],
-        [OPAR_VIDENI("20-24"), OR, RELIKVIE(16), AND, PRODUKT_9H_LIBOVOLNY(7)],
+        [OPAR_VIDENI("20-24"), OR, RELIKVIE(16), AND, PRODUKT_9H_LIBOVOLNY(7), 75],
     ],
     "shuffle_garden_xxiii_": [
         [MINCE, 35],
