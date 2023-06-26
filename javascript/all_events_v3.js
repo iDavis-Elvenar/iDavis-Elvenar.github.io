@@ -124,7 +124,7 @@ function displayDailyPrizes() {
     html_close = document.getElementById('close');
     html_text = document.getElementById('text');
     async function createExc() {
-        create_exception("Loading... <b>(press CTRL+F5)</b>", 10000, 'primary');
+        create_exception("Loading...", 10000, 'primary');
     }
     createExc();
     setDocumentTitle(document, "calendar", baseTabsEvents, additionalTabsEvents, "events");
