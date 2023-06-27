@@ -8,6 +8,7 @@ var dailyPrizes = {
         "A_Evt_July_XXII_Coral_Fountain",
         "frog_runeshards2_{2}",
         "A_Evt_July_XXII_Azure_Stables",
+        "INS_KP_{10}",
     ],
 
     "shuffle_garden_xxiii_": [
