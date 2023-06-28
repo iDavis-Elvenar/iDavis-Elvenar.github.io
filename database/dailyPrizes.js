@@ -9,6 +9,7 @@ var dailyPrizes = {
         "frog_runeshards2_{2}",
         "A_Evt_July_XXII_Azure_Stables",
         "INS_KP_{10}",
+        "A_Evt_MM_XIX_SharkTower",
     ],
 
     "shuffle_garden_xxiii_": [
