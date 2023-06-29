@@ -10,6 +10,7 @@ var dailyPrizes = {
         "A_Evt_July_XXII_Azure_Stables",
         "INS_KP_{10}",
         "A_Evt_MM_XIX_SharkTower",
+        "INS_REV_SQD_50",
     ],
 
     "shuffle_garden_xxiii_": [
