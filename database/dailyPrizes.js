@@ -11,6 +11,7 @@ var dailyPrizes = {
         "INS_KP_{10}",
         "A_Evt_MM_XIX_SharkTower",
         "INS_REV_SQD_50",
+        "A_Evt_Set_Scroll_Aquatic_XXIII_Hypnojelly",
     ],
 
     "shuffle_garden_xxiii_": [
