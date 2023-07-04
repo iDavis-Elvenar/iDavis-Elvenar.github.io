@@ -171,7 +171,7 @@ let eventsDurations = {
     "easter_xxiii_": 22,
     "may_xxiii_": 22,
     "shuffle_garden_xxiii_": 20,
-    "scroll_aquatic_xxiii_": 20,
+    "scroll_aquatic_xxiii_": 19,
 }
 
 let evoUpgradeCosts = {
