@@ -12,6 +12,10 @@ var dailyPrizes = {
         "A_Evt_MM_XIX_SharkTower",
         "INS_REV_SQD_50",
         "A_Evt_Set_Scroll_Aquatic_XXIII_Hypnojelly",
+        "A_Evt_July_XXI_Diving_Platform",
+        "A_Evt_MM_XIX_Baywatch",
+        //3.7.,
+        "INS_UNIT_MA_5",
     ],
 
     "shuffle_garden_xxiii_": [
