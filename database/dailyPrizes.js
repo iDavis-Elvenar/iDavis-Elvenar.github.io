@@ -16,6 +16,7 @@ var dailyPrizes = {
         "A_Evt_MM_XIX_Baywatch",
         //3.7.,
         "INS_UNIT_MA_5",
+        "A_Evt_MM_XIX_CrabHotel",
     ],
 
     "shuffle_garden_xxiii_": [
