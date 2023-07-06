@@ -17,6 +17,7 @@ var dailyPrizes = {
         //3.7.,
         "INS_UNIT_MA_5",
         "A_Evt_MM_XIX_CrabHotel",
+        "frog_runeshards3_{2}", //shrine of the champions
     ],
 
     "shuffle_garden_xxiii_": [
