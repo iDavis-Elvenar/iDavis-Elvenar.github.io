@@ -18,6 +18,8 @@ var dailyPrizes = {
         "INS_UNIT_MA_5",
         "A_Evt_MM_XIX_CrabHotel",
         "frog_runeshards3_{2}", //shrine of the champions
+        "A_Evt_Set_Scroll_Aquatic_XXIII_Bootleggers",
+        "A_Evt_Scroll_Aquatic_XXIII_Fin_Stop",
     ],
 
     "shuffle_garden_xxiii_": [
