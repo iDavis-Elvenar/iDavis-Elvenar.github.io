@@ -1,4 +1,4 @@
-var eventStartDates = {
+var eventStartDates = {    //autumn zodiac 29.8. - 20.9. AT
     "scroll_aquatic_xxiii_": {   //20.7. - 8.8. podla AT
         "live": {
             "start_date": "__ _ 2023",
