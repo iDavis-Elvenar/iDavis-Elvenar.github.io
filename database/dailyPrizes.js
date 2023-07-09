@@ -14,7 +14,7 @@ var dailyPrizes = {
         "A_Evt_Set_Scroll_Aquatic_XXIII_Hypnojelly",
         "A_Evt_July_XXI_Diving_Platform",
         "A_Evt_MM_XIX_Baywatch",
-        //3.7.,
+        "A_Evt_MM_XIX_Corals",
         "INS_UNIT_MA_5",
         "A_Evt_MM_XIX_CrabHotel",
         "frog_runeshards3_{2}", //shrine of the champions
