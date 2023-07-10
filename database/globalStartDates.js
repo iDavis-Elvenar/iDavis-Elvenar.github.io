@@ -1,8 +1,8 @@
 var eventStartDates = {    //autumn zodiac 29.8. - 20.9. AT
     "scroll_aquatic_xxiii_": {   //20.7. - 8.8. podla AT
         "live": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "July 20th 2023",
+            "end_date": "August 8th 2023"
         },
         "beta": {
             "start_date": "June 26th 2023",
