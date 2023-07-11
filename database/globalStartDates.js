@@ -72,6 +72,16 @@ var eventStartDates = {    //autumn zodiac 29.8. - 20.9. AT
 }
 
 var faStartDates = {  //augustove 17.8. - 23.8., novembrove 16.11. - 22.11. (podla AT)
+    "august_xxiii_": {
+        "live": {
+            "start_date": "__ _ 2023",
+            "end_date": "__ _ 2023"
+        },
+        "beta": {
+            "start_date": "__ _ 2023",
+            "end_date": "__ _ 2023"
+        }
+    },
     "june_xxiii_": {
         "live": {
             "start_date": "June 8th 2023",
