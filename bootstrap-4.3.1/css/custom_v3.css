@@ -459,3 +459,10 @@ background-color: #b9881e;
     border-bottom-right-radius: 0.90rem !important;
     border-bottom-left-radius: 0.90rem !important;
 }
+
+.card-spoiler-visualOnly {
+    background-color: #e8d7b2;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
