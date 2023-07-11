@@ -444,3 +444,18 @@ background-color: #b9881e;
     font-size: small;
     margin-bottom: -5px;
 }
+
+.bg-gradient_background_big_box {
+    /*background:radial-gradient(farthest-side,#f3ebd8 50%,#ecdec0) !important;*/
+    background-color: #ecdec0 !important;
+}
+
+.rounded-top90 {
+    border-top-right-radius: 0.90rem !important;
+    border-top-left-radius: 0.90rem !important;
+}
+
+.rounded-bottom90 {
+    border-bottom-right-radius: 0.90rem !important;
+    border-bottom-left-radius: 0.90rem !important;
+}

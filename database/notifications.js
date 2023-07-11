@@ -42,10 +42,10 @@ var notifications = {
     },
     "5":{  // NEW CHAPTER
         "id":5,
-        "text":`<h4 class="alert-heading">Chapter 20 has arrived in Beta!</h4>
+        "text":`<h4 class="alert-heading">Chapter 21 has arrived in Beta!</h4>
         <hr>
         <p><center><img src="https://i.ibb.co/kxJQxbn/ch20-banner.png" style="width: 40%;">
-        <br><br>You can visit the respective page of <a href="https://idavis-elvenar.com/guestRaces/powerofmusic.html" class='alert-link'>Chapter 20 - The Power of Music</a> to see the questline of this chapter. More details will follow, so stay tuned!
+        <br><br>You can visit the respective page of <a href="https://idavis-elvenar.com/guestRaces/vallorianlegend.html" class='alert-link'>Chapter 21 - The Vallorian Legend</a> to see the questline, research and a lot of new content about this chapter!
         <br>If the process goes as usual, we may expect this chapter to hit Live servers in the upcoming weeks!</center></p>`,
         "repeatAfter":172800,
         "style":"warning",

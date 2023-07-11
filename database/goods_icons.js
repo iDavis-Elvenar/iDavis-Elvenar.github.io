@@ -360,6 +360,6 @@ var goods_icons = {
     "ch21_oblations1": "<img src='https://i.ibb.co/Vp0mwnk/ch21-oblations1.png' title='Rude Oblations'><br>",
     "ch21_oblations4": "<img src='https://i.ibb.co/h7JrXWt/ch21-oblations4.png' title='Noble Oblations'><br>",
     "work": "<img src='https://i.ibb.co/Y8km2P4/work.png' title='Community Work'><br>",
-    "b_ch21_aw1_shards": "<img src='https://i.ibb.co/qMP2TGV/b-ch21-aw1-shards.png' title='Rune Shard for -'><br>",
-    "b_ch21_aw2_shards": "<img src='https://i.ibb.co/xMRdtx1/b-ch21-aw2-shards.png' title='Rune Shard for -'><br>",
+    "b_ch21_aw1_shards": "<img src='https://i.ibb.co/qMP2TGV/b-ch21-aw1-shards.png' title='Rune Shard for Maman Le Prés Antique Shop'><br>",
+    "b_ch21_aw2_shards": "<img src='https://i.ibb.co/xMRdtx1/b-ch21-aw2-shards.png' title='Rune Shard for Vallorian School of Sorcery'><br>",
 }
