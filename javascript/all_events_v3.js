@@ -920,8 +920,7 @@ function displayQuests() {
         shareLink.style.textAlign = "left";
         shareLink.innerHTML = `${langUI('You can send the quest list to other players by sharing the following link')}: <i class='text-title'><b>${questsLinks[selectedEvent]}</b></i><br>
         ${langUI("This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button" +
-            " at the bottom of the page.")}<br>
-        <b>You can now mark quests as "Prepared" by clicking directly on specific tasks - it is more intuitive than before and saves space in the quest list. Should you encounter any issues with this feature, let me know using my <a href="https://idavis-elvenar.com/contact.html" class="card-title text-center text-link" target="_blank">Contact Page</a>.</b>`;
+            " at the bottom of the page.")}<br>`;
         var center = document.createElement('center');
         center.appendChild(shareLink);
         document.getElementById('column_with_tables').appendChild(center);

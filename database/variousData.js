@@ -388,6 +388,7 @@ var flexibleRewardsIcons = {
     "frog_runeshards1":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
     "frog_grr_5":"https://i.ibb.co/JHqqq6j/frog-grr.png",
     "frog_default1":"https://i.ibb.co/VD89QDJ/frog-default1.png",
+    "frog_runeshards3":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
 }
 
 var rewardSelectionKits = {
@@ -440,7 +441,7 @@ var grIds = {
 }
 
 var newEventSign = {
-    "active": true,
+    "active": false,
     "img": "https://i.ibb.co/n0KBPgt/new-sign.png",
 }
 
