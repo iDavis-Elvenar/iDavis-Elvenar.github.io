@@ -26,7 +26,7 @@ var tutorialVideo = "https://www.youtube.com/embed/wIISaa2TiCk";
 var subscribeText = `You can find more video content by <a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="card-title text-center text-link"><b>subscribing to my channel</b></a>.`;
 
 var items = [
-    {"ord":1,"id":"badge_brewery","name":"Dwarven Brewery Badge","requirement":"Produce 50x Beverages"},
+    {"ord":1,"id":"badge_brewery","name":"Dwarven Brewery Badge","requirement":"Produce 25x Beverages"},
     {"ord":2,"id":"badge_treants","name":"Treant Guild Badge","requirement":"Produce 35x Simple Tools"},
     {"ord":3,"id":"badge_bakers","name":"Bakers Guild Badge","requirement":"Produce 20x Bread"},
     {"ord":4,"id":"badge_carpenters","name":"Carpenters Guild Badge","requirement":"Produce 10x Advanced Tools"},
