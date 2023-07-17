@@ -117,6 +117,7 @@ let ui = {
         "Dwarven Citadel": "Trpasličí citadela",
         "Ancient Promise": "Starodávný slib",
         //EVENTS
+        "Aqua Splendor": "Krásy mořského světa",
         "Floral Awakening": "Květinové probuzení",
         "Mama Juul's Fusion Feast": "Hostina mámy Juul",
         "Realm of the Phoenix": "Svět fénixe",
@@ -267,6 +268,7 @@ let ui = {
         "Dwarven Citadel": "Zwergen-Zitadelle",
         "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
+        "Aqua Splendor": "Aquatische Pracht",
         "Floral Awakening": "Florales Erwachen",
         "Mama Juul's Fusion Feast": "Mama Juuls Reiseküche",
         "Realm of the Phoenix": "Das Reich des Phönix",
@@ -417,6 +419,7 @@ let ui = {
         "Dwarven Citadel": "Citadelle naine",
         "Ancient Promise": "Ancienne promesse",
         //EVENTS
+        "Aqua Splendor": "Aqua Splendor",
         "Floral Awakening": "Eveil floral",
         "Mama Juul's Fusion Feast": "Le Festin de Fusion de Mama Juul",
         "Realm of the Phoenix": "Realm of the Phoenix",
@@ -567,6 +570,7 @@ let ui = {
         "Dwarven Citadel": "Törp Citadella",
         "Ancient Promise": "Ősi Ígéret",
         //EVENTS
+        "Aqua Splendor": "Vízi Ragyogás",
         "Floral Awakening": "Virágos Ébredés",
         "Mama Juul's Fusion Feast": "Juul Mama Fúziós Ünnepe",
         "Realm of the Phoenix": "A Főnix Birodalma",
@@ -717,6 +721,7 @@ let ui = {
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
+        "Aqua Splendor": "Wodny splendor",
         "Floral Awakening": "Kwiatowe Przebudzenie",
         "Mama Juul's Fusion Feast": "Uczta w stylu fusion Mamy Juul",
         "Realm of the Phoenix": "Królestwo Feniksa",
@@ -867,6 +872,7 @@ let ui = {
         "Dwarven Citadel": "Гномья цитадель",
         "Ancient Promise": "Древнее обещание",
         //EVENTS
+        "Aqua Splendor": "Морское великолепие",
         "Floral Awakening": "Цветочное пробуждение",
         "Mama Juul's Fusion Feast": "Передвижная кухня Джуул",
         "Realm of the Phoenix": "Царство Феникса",
