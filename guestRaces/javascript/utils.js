@@ -14,7 +14,7 @@ function loadPage() {
 
 function switchView(type) {
     prepSetAlertElements();
-    create_exception("Loading...", 10000, 'primary');
+    create_exception("Loading... <b>use CTRL + F5 if you are stuck</b>", 10000, 'primary');
     if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
