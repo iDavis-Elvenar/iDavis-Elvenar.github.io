@@ -466,3 +466,43 @@ background-color: #b9881e;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
 }
+
+.score_color_1 {
+    color: rgb(145, 17, 17);
+}
+
+.score_color_2 {
+    color: rgb(255, 89, 0);
+}
+
+.score_color_3 {
+    color: rgb(213, 97, 7);
+}
+
+.score_color_4 {
+    color: rgb(215, 129, 0);
+}
+
+.score_color_5 {
+    color: rgb(244, 150, 0);
+}
+
+.score_color_6 {
+    color: rgb(188, 131, 230);
+}
+
+.score_color_7 {
+    color: rgb(60, 136, 174);
+}
+
+.score_color_8 {
+    color: rgb(105, 196, 182);
+}
+
+.score_color_9 {
+    color: rgb(91, 187, 92);
+}
+
+.score_color_10 {
+    color: green;
+}
