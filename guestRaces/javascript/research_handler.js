@@ -3,7 +3,7 @@ function displayResearch() {
     html_close = document.getElementById('close');
     html_text = document.getElementById('text');
     async function createExc() {
-        create_exception("Loading... <b>use CTRL + F5 hotkey if you are stuck</b>", 10000, 'primary');
+        create_exception("Loading...", 10000, 'primary');
     }
     createExc();
 

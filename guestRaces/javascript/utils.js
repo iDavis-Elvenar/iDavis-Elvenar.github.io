@@ -14,7 +14,7 @@ function loadPage() {
 
 function switchView(type) {
     prepSetAlertElements();
-    create_exception("Loading... <b>use CTRL + F5 if you are stuck</b>", 10000, 'primary');
+    create_exception("Loading...", 10000, 'primary');
     if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
@@ -29,11 +29,13 @@ function switchView(type) {
                 $("#column_with_tables").load("guestRacesTabs/"+getSelectedGuestRace()+"/"+baseTabsGuestRaces.find(function(element) {return element.onclick === type;}).file);
             });
         }
-        for (let tab = 0; tab < additionalTabsGuestRaces[getSelectedGuestRace()].length; tab++) {
-            if (additionalTabsGuestRaces[getSelectedGuestRace()][tab]["id"] === type) {
-                $(function(){
-                    $("#column_with_tables").load("guestRacesTabs/"+getSelectedGuestRace()+"/"+additionalTabsGuestRaces[getSelectedGuestRace()][tab]["file"]); 
-                });
+        for (let gr in additionalTabsGuestRaces) {
+            for (let tab = 0; tab < additionalTabsGuestRaces[gr].length; tab++) {
+                if (additionalTabsGuestRaces[gr][tab]["id"] === type) {
+                    $(function(){
+                        $("#column_with_tables").load("guestRacesTabs/"+gr+"/"+additionalTabsGuestRaces[gr][tab]["file"]); 
+                    });
+                }
             }
         }
     }
