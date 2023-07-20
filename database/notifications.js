@@ -44,13 +44,13 @@ var notifications = {
         "id":5,
         "text":`<h4 class="alert-heading">Chapter 21 has arrived in Beta!</h4>
         <hr>
-        <p><center><img src="https://i.ibb.co/kxJQxbn/ch20-banner.png" style="width: 40%;">
+        <p><center><img src="https://i.ibb.co/f4FTJcz/ch21-banner.png" style="width: 40%;">
         <br><br>You can visit the respective page of <a href="https://idavis-elvenar.com/guestRaces/vallorianlegend.html" class='alert-link'>Chapter 21 - The Vallorian Legend</a> to see the questline, research and a lot of new content about this chapter!
-        <br>If the process goes as usual, we may expect this chapter to hit Live servers in the upcoming weeks!</center></p>`,
+        <br>If the process goes as usual, we can expect this chapter to hit Live servers in the coming weeks!</center></p>`,
         "repeatAfter":172800,
         "style":"warning",
         "duration":45,
-        "active":false,
+        "active":true,
         "priority":30
     },
     "6":{  // DONATE
