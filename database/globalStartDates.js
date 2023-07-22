@@ -137,8 +137,8 @@ var faStartDates = {  //augustove 17.8. - 23.8., novembrove 16.11. - 22.11. (pod
 var seasonStartDates = {
     "july_xxiii_": {
         "live": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "July 27th 2023",
+            "end_date": "October 10th 2023"
         },
         "beta": {
             "start_date": "June 10th 2023",
