@@ -103,16 +103,16 @@ var notifications = {
     },
     "10":{  // SEASON
         "id":10,
-        "text":`<h4 class="alert-heading">Season of Joy is here!</h4>
+        "text":`<h4 class="alert-heading">Season of Triumph is here!</h4>
   <p>The brand-new season is soon beginning on your server!</p>
   <hr>
-  <center><img src="https://i.ibb.co/Hdm0FzN/season-joy-banner.png" style="width: 40%;"></center><br>
-    <center><p>The <b>Season of Joy</b> is approaching quickly and it is now fully covered on Seasons page. It will help you get ready for everything the Season of Joy has to offer! You can access this page from the navigation bar under the "More" button!<br>
-    Daily Quests, Weekly Quests, many interesting rewards and the <b>Season Pass calculator</b> is now available to use in the newest <img src="https://i.ibb.co/87MNrBB/season-pass.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/seasons.html" class="alert-link">Seasons</a> page!</p></center>`,
+  <center><img src="https://i.ibb.co/kxdBh0Y/season-triumph-banner.png" style="width: 40%;"></center><br>
+    <center><p>The <b>Season of Triumph</b> is approaching quickly and it is now fully covered on Seasons page. It will help you get ready for everything the Season of Triumph has to offer! You can access this page from the navigation bar under the "More" button!<br>
+    Daily Quests, Weekly Quests, Blessings, many interesting rewards and the <b>Season Pass calculator</b> is now available to use in the newest <img src="https://i.ibb.co/87MNrBB/season-pass.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/seasons.html" class="alert-link">Seasons</a> page!</p></center>`,
         "repeatAfter":259200,
         "style":"warning",
         "duration":60,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "11":{  // EVENTS SIMULTANEOUSLY - BETA PRIMARY
