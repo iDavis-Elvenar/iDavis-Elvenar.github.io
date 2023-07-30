@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Theater_Zodiac_XXIII_Nebula_Passage":"https://i.ibb.co/8z4dwwt/nebula-passage.png",
+    "A_Evt_Theater_Zodiac_XXIII_Divine_Orrary":"https://i.ibb.co/zFpSFFN/divine-orrary.png",
+    "A_Evt_Theater_Zodiac_XXIII_Mirrors_of_the_Cosmos":"https://i.ibb.co/7jZYvZr/mirrors-of-the-cosmos.png",
+    "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent":"https://i.ibb.co/qMPV424/tinlug-the-star-serpent.png",
     "A_Evt_Set_Scroll_Aquatic_XXIII_Skyfin_Rodeo":"https://i.ibb.co/Jk75CPT/skyfin-rodeo.png",
     "A_Evt_Set_Scroll_Aquatic_XXIII_Windchasers_Finale":"https://i.ibb.co/8PsHkCY/windchasers-finale.png",
     "A_Evt_Set_Scroll_Aquatic_XXIII_Sirens_Ballet":"https://i.ibb.co/X5sPMFy/sirens-ballet.png",

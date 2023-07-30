@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2023" : [
+            ["Autumn Zodiac","theater_zodiac_xxiii_",false,true],
             ["Aqua Splendor","scroll_aquatic_xxiii_",true,false],
             ["Floral Awakening","shuffle_garden_xxiii_",false,false],
             ["Mama Juul's Fusion Feast","may_xxiii_",false,false],
@@ -50,6 +51,7 @@ var allEvents = {
     },
     "all_events" : {
         "2023" : [
+            ["Autumn Zodiac","theater_zodiac_xxiii_",false,true],
             ["Aqua Splendor","scroll_aquatic_xxiii_",true,false],
             ["Floral Awakening","shuffle_garden_xxiii_",false,false],
             ["Mama Juul's Fusion Feast","may_xxiii_",false,false],

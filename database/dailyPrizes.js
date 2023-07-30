@@ -1,5 +1,9 @@
 var dailyPrizes = {
 
+    "theater_zodiac_xxiii_": [
+
+    ],
+
     "scroll_aquatic_xxiii_": [
         "A_Evt_MM_XIX_MantaRay",
         "A_Evt_Scroll_Aquatic_XXIII_Fin_Stop",

@@ -134,6 +134,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "may_xxiii_": "04/18/2023",
     "shuffle_garden_xxiii_": "05/25/2023",
     "scroll_aquatic_xxiii_": "06/26/2023",
+    "theater_zodiac_xxiii_": "08/01/2023",
 }
 
 let questsLinks = {
@@ -172,6 +173,7 @@ let eventsDurations = {
     "may_xxiii_": 22,
     "shuffle_garden_xxiii_": 20,
     "scroll_aquatic_xxiii_": 19,
+    "theater_zodiac_xxiii_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -209,6 +211,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Easter_XXIII_Astral_Phoenix": "1x Astral Phoenix Artifact",
     "A_Evt_Evo_May_XXIII_Juuls_Traveling_Kitchen": "1x Juul's Traveling Kitchen Artifact",
     "A_Evt_Evo_Shuffle_Garden_XXIII_Dragonheart_Estate": "1x Dragonheart Estate Artifact",
+    "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent": "1x Tinlug, The Star Serpent Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -226,6 +229,7 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix" : `<img src="https://i.ibb.co/Yy21rpT/health-points.png">`,
     "A_Evt_Evo_Autumn_XXII_WittyCoon" : `<img src="https://i.ibb.co/s5zgfs4/goods-production.png">`,
     "A_Evt_Evo_Easter_XXIII_Astral_Phoenix" : `<img src="https://i.ibb.co/s5zgfs4/goods-production.png">`,
+    "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent" : `<img src="https://i.ibb.co/WnDfq7P/combining-catalyst.png">`,
 }
 
 var allowedFeedingMultiplicators = {
@@ -288,7 +292,6 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "theater_zodiac_xxiii_",
 ]
 
 var eventsInfoIcons = {
@@ -299,6 +302,7 @@ var eventsInfoIcons = {
     "may_xxiii_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "shuffle_garden_xxiii_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "scroll_aquatic_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "theater_zodiac_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -312,6 +316,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "theater_zodiac_xxiii_": [
+        {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html"},
+    ],
     "scroll_aquatic_xxiii_": [
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/26/2023"},
     ],
