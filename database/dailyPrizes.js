@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "theater_zodiac_xxiii_": [
-
+        "A_Evt_Autumn_XVIII_Green_Pond",
     ],
 
     "scroll_aquatic_xxiii_": [
