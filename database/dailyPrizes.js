@@ -2,6 +2,7 @@ var dailyPrizes = {
 
     "theater_zodiac_xxiii_": [
         "A_Evt_Autumn_XVIII_Green_Pond",
+        "A_Evt_September_XXI_Training_Dojo",
     ],
 
     "scroll_aquatic_xxiii_": [
