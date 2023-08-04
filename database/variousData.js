@@ -89,6 +89,7 @@ let eventBanners = {
     "may_xxiii_": "https://i.ibb.co/qFJC5f5/EL-akcia-m-j-2023-banner.png",
     "shuffle_garden_xxiii_": "https://i.ibb.co/0mQJGvz/EL-akcia-j-n-2023-banner.png",
     "scroll_aquatic_xxiii_": "https://i.ibb.co/f25F5qm/EL-akcia-j-l-2023-banner.png",
+    "theater_zodiac_xxiii_": "https://i.ibb.co/C7brfKY/EL-akcia-jese-2023-banner.png",
 }
 
 let eventVideos = {
@@ -134,7 +135,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "may_xxiii_": "04/18/2023",
     "shuffle_garden_xxiii_": "05/25/2023",
     "scroll_aquatic_xxiii_": "06/26/2023",
-    "theater_zodiac_xxiii_": "08/01/2023",
+    "theater_zodiac_xxiii_": "08/08/2023",
 }
 
 let questsLinks = {
@@ -154,6 +155,7 @@ let questsLinks = {
     "may_xxiii_": "bit.ly/MamaJuulsFusionFeast2023",
     "shuffle_garden_xxiii_": "bit.ly/FloralAwakening2023",
     "scroll_aquatic_xxiii_": "bit.ly/AquaSplendor2023",
+    "theater_zodiac_xxiii_": "bit.ly/AutumnZodiac2023",
 }
 
 let eventsDurations = {
@@ -317,7 +319,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "theater_zodiac_xxiii_": [
-        {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html"},
+        {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html", "releaseDate":"08/09/2023"},
     ],
     "scroll_aquatic_xxiii_": [
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/26/2023"},

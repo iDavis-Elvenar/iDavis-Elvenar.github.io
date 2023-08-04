@@ -5,8 +5,8 @@ var eventStartDates = {
             "end_date": "__ _ 2023"
         },
         "beta": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "August 8th 2023",
+            "end_date": "August 30th 2023"
         }
     },
     "scroll_aquatic_xxiii_": {

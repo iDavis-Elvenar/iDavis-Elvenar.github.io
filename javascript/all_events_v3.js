@@ -1202,7 +1202,9 @@ function displayQuests() {
     }
     document.getElementById('column_with_tables').appendChild(divContainer);
 
-    generateShareButtons(document.getElementById('column_with_tables'));
+    if (quests.hasOwnProperty(getSelectedEvent()) && quests[getSelectedEvent()].length > 0 && quests[getSelectedEvent()][0] != "") {
+        generateShareButtons(document.getElementById('column_with_tables'));
+    }
 
     updateCurrencyCalculator();
 
