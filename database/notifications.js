@@ -75,17 +75,17 @@ var notifications = {
     },
     "8":{  // SPECIAL VIDEO PROMO
         "id":8,
-        "text":`<h4 class="alert-heading">New Feature on the Website: Guest Races!</h4>
-  <p>I'm introducing the brand-new feature for the website - the Guest Races Story Questlines! There is a new space under the <b>All Guest Races</b> subpage that will get updated by a lot of additional content in the future. Check the introduction video below.</p>
+        "text":`<h4 class="alert-heading">Dread the Dragons! - Official Tutorial for Chapter 21!</h4>
+  <p>The Chapter 21 - The Vallorian Legend is about to start on August 7th on Live Servers! Watch the official video below to learn all about it!</p>
   <hr>
-  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/oIbfeeplXXA"></iframe></p>
+  <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/tU13HtUF0VY"></iframe></p>
     <hr>
     <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
-        "repeatAfter":259200,
+        "repeatAfter":86400,
         "style":"info",
-        "duration":1080,
-        "active":false,
-        "priority":10
+        "duration":500,
+        "active":true,
+        "priority":50
     },
     "9":{  // FELLOWSHIP ADVENTURES
         "id":9,
@@ -112,7 +112,7 @@ var notifications = {
         "repeatAfter":259200,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "11":{  // EVENTS SIMULTANEOUSLY - BETA PRIMARY
