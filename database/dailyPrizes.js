@@ -7,6 +7,7 @@ var dailyPrizes = {
         //,
         "INS_UNIT_MA_10",
         "A_Evt_Autumn_XXII_Luscious_Cakes",
+        "frog_runeshards2_{2}",
     ],
 
     "scroll_aquatic_xxiii_": [
