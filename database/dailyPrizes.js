@@ -3,10 +3,12 @@ var dailyPrizes = {
     "theater_zodiac_xxiii_": [
         "A_Evt_Autumn_XVIII_Green_Pond",
         "A_Evt_September_XXI_Training_Dojo",
-        //,
+        "INS_KP_{15}",
         //,
         "INS_UNIT_MA_10",
         "A_Evt_Autumn_XXII_Luscious_Cakes",
+        "frog_runeshards2_{2}",
+        "A_Evt_September_XXI_Calligraphy_Class",
     ],
 
     "scroll_aquatic_xxiii_": [
