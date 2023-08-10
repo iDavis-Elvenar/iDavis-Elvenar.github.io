@@ -375,6 +375,12 @@ function displayWaypoints() {
         return;
     }
 
+    if (faVersions.hasOwnProperty(getSelectedFa())) {
+        let h7 = document.createElement('h7');
+        h7.innerHTML = `<center>The version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Note that there might still be some differences compared with the previous adventures with this version.</center><br>`;
+        parent.appendChild(h7);
+    }
+
     for (let map = 1; map <= 3; map++) {
         let h5map = document.createElement('h5');
         h5map.className = "card-title text-center text-title font-weight-bold";
