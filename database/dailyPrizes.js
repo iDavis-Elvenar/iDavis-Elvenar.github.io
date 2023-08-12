@@ -10,6 +10,7 @@ var dailyPrizes = {
         "frog_runeshards2_{2}",
         "A_Evt_September_XXI_Calligraphy_Class",
         "INS_REV_SQD_50",
+        "A_Evt_Theater_Zodiac_XXIII_Mirrors_of_the_Cosmos",
     ],
 
     "scroll_aquatic_xxiii_": [
