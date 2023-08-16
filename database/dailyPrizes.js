@@ -13,6 +13,8 @@ var dailyPrizes = {
         "A_Evt_Theater_Zodiac_XXIII_Mirrors_of_the_Cosmos",
         "frog_grr_5_{1}",
         "A_Evt_Autumn_XVIII_Harvest_Cart",
+        //,
+        "A_Evt_MagicDome",
     ],
 
     "scroll_aquatic_xxiii_": [
