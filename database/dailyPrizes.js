@@ -15,6 +15,7 @@ var dailyPrizes = {
         "A_Evt_Autumn_XVIII_Harvest_Cart",
         //,
         "A_Evt_MagicDome",
+        "A_Evt_September_XX_Ancient_Pond_Statue",
     ],
 
     "scroll_aquatic_xxiii_": [
