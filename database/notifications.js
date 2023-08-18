@@ -50,7 +50,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":30
     },
     "6":{  // DONATE
@@ -81,11 +81,11 @@ var notifications = {
   <p class="mb-0"><iframe class="center" width="560px" height="315.2px" allowfullscreen="true" src="https://www.youtube.com/embed/tU13HtUF0VY"></iframe></p>
     <hr>
     <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
-        "repeatAfter":86400,
+        "repeatAfter":259200,
         "style":"info",
         "duration":500,
         "active":true,
-        "priority":50
+        "priority":40
     },
     "9":{  // FELLOWSHIP ADVENTURES
         "id":9,
@@ -162,5 +162,26 @@ var notifications = {
         "duration":60,
         "active":false,
         "priority":70
+    },
+    "15":{  // SHORTS TEASER
+        "id":15,
+        "text":`<h4 class="alert-heading">Something is descending upon Elvenar!</h4>
+  <p>Learn all about the upcoming event in the <b>All Events</b> and <b>All Buildings</b> pages.</p>
+  <hr>
+  <p class="mb-0"><iframe class="center" width="315" height="560"
+    src="https://www.youtube.com/embed/pX_ArtFP-k8?feature=share"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture;
+    web-share"
+    allowfullscreen>
+  </iframe></p>
+    <hr>
+    <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
+        "repeatAfter":86400,
+        "style":"secondary",
+        "duration":60,
+        "active":true,
+        "priority":50
     },
 }
