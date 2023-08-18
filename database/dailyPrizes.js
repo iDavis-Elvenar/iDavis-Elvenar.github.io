@@ -16,6 +16,7 @@ var dailyPrizes = {
         //,
         "A_Evt_MagicDome",
         "A_Evt_September_XX_Ancient_Pond_Statue",
+        "frog_runeshards2_{2}",
     ],
 
     "scroll_aquatic_xxiii_": [
