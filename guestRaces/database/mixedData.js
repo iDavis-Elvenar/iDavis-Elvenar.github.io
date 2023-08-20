@@ -122,5 +122,5 @@ var settlementIcons = {
     "ch18": "https://i.ibb.co/KDgW7Fv/settlement-ch18.png",
     "ch19": "https://i.ibb.co/DVrzRZz/settlement-ch19.png",
     "ch20": "https://i.ibb.co/k3WHrsh/settlement-ch20.png",
-    "ch21": "https://i.ibb.co/k3WHrsh/settlement-ch20.png",
+    "ch21": "https://i.ibb.co/BnwvbR9/settlement-ch21.png",
 }
