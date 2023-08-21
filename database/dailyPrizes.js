@@ -19,6 +19,7 @@ var dailyPrizes = {
         "frog_runeshards2_{2}",
         "A_Evt_Prod_Nutcracker",
         "INS_KP_AW_20",
+        "A_Evt_September_XX_Kite_Outpost",
     ],
 
     "scroll_aquatic_xxiii_": [
