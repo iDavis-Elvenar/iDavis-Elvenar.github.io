@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2023" : [
+            ["A Gateway to the Past","merge_dwarvengame_xxiii_",false,true],
             ["Autumn Zodiac","theater_zodiac_xxiii_",true,false],
             ["Aqua Splendor","scroll_aquatic_xxiii_",false,false],
             ["Floral Awakening","shuffle_garden_xxiii_",false,false],
@@ -51,6 +52,7 @@ var allEvents = {
     },
     "all_events" : {
         "2023" : [
+            ["A Gateway to the Past","merge_dwarvengame_xxiii_",false,true],
             ["Autumn Zodiac","theater_zodiac_xxiii_",true,false],
             ["Aqua Splendor","scroll_aquatic_xxiii_",false,false],
             ["Floral Awakening","shuffle_garden_xxiii_",false,false],

@@ -36,6 +36,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_May_XXIII_Juuls_Traveling_Kitchen": 9,
     "A_Evt_Evo_Shuffle_Garden_XXIII_Dragonheart_Estate": 9,
     "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent": 9,
+    "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus": 9,
 }
 
 function setAndReload(id) {

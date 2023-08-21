@@ -214,6 +214,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_May_XXIII_Juuls_Traveling_Kitchen": "1x Juul's Traveling Kitchen Artifact",
     "A_Evt_Evo_Shuffle_Garden_XXIII_Dragonheart_Estate": "1x Dragonheart Estate Artifact",
     "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent": "1x Tinlug, The Star Serpent Artifact",
+    "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus": "1x Solunar Nexus Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -254,6 +255,7 @@ var iconsImages = {
     "goods_standard_basic":"https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png",
     "goods_standard_refined":"https://i.ibb.co/bzCh4vp/goods-standard-precious.png",
     "goods_standard_precious":"https://i.ibb.co/G0N8gT6/goods-standard-refined.png",
+    "money":"https://image.ibb.co/g5ErZq/money.png",
 }
 
 var iconsTitles = {
@@ -294,6 +296,7 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
+    "istyforest_XXIII"
 ]
 
 var eventsInfoIcons = {
@@ -318,6 +321,13 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "merge_dwarvengame_xxiii_": [
+        {"id":"board", "name":"Board", "img":"https://i.ibb.co/7v3HmnM/EL-akcia-august-2022-piece-a4.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html"},
+        {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html"},
+        {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html"},
+        {"id":"cups", "name":"Cups", "img":"https://i.ibb.co/vVMrWDx/EL-akcia-august-2022-cup-red.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#cups", "file":"cups.html"},
+        {"id":"cards", "name":"Cards", "img":"https://i.ibb.co/6YyLVtV/EL-akcia-august-2022-event-currency-2-big.png", "img_width":"35", "img_style":"margin-left: -5px; margin-right: 7px; position: relative;", "href":"#cards", "file":"cards.html"},
+    ],
     "theater_zodiac_xxiii_": [
         {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html", "releaseDate":"08/10/2023"},
     ],
