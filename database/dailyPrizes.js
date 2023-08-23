@@ -25,6 +25,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_September_XX_Kite_Outpost",
         "INS_UNIT_HR_10",
+        "A_Evt_NutMonument",
     ],
 
     "scroll_aquatic_xxiii_": [
