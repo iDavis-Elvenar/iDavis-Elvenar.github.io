@@ -1,4 +1,4 @@
-var eventStartDates = {
+var eventStartDates = { //Whispers of the Soul 24.10. - 10.11.
     "merge_dwarvengame_xxiii_": {//dwarven game 28.9. - 18.10.
         "live": {
             "start_date": "__ _ 2023",
