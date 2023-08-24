@@ -26,6 +26,7 @@ var dailyPrizes = {
         "A_Evt_September_XX_Kite_Outpost",
         "INS_UNIT_HR_10",
         "A_Evt_NutMonument",
+        "A_Evt_Theater_Zodiac_XXIII_Divine_Orrary",
     ],
 
     "scroll_aquatic_xxiii_": [
