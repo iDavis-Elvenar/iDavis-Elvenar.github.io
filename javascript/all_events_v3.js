@@ -898,7 +898,7 @@ function displayQuests() {
     h5.innerHTML = `..:: ${langUI("List of Quests")} ::..<br>`;
     document.getElementById('column_with_tables').appendChild(h5);
 
-    var numberOfQuests = quests[selectedEvent].length;
+    var numberOfQuests = quests[selectedEvent]?.length;
     var divContainer = document.createElement('div');
     divContainer.className = 'quests_container';
 
@@ -1340,23 +1340,25 @@ function generateCurrencyCalculator(parent) {
 
 function updateCurrencyCalculator() {
     var result = 0;
-    for (let i = 1; i <= quests[getSelectedEvent()].length; i++) {
-        if (typeof quests[getSelectedEvent()][i - 1][quests[getSelectedEvent()][i - 1].length - 1] === 'number') {
-            var checkbox = document.getElementById(`quest_finished_${i}`);
-            if (!checkbox || !checkbox.checked) {
-                var gain = quests[getSelectedEvent()][i - 1][quests[getSelectedEvent()][i - 1].length - 1];
-                if (getNumberOfAshenPhoenixes() > 0) {
-                    gain = increaseByAshenPhoenixes(gain);
+    if (quests[getSelectedEvent()] !== undefined) {
+        for (let i = 1; i <= quests[getSelectedEvent()].length; i++) {
+            if (typeof quests[getSelectedEvent()][i - 1][quests[getSelectedEvent()][i - 1].length - 1] === 'number') {
+                var checkbox = document.getElementById(`quest_finished_${i}`);
+                if (!checkbox || !checkbox.checked) {
+                    var gain = quests[getSelectedEvent()][i - 1][quests[getSelectedEvent()][i - 1].length - 1];
+                    if (getNumberOfAshenPhoenixes() > 0) {
+                        gain = increaseByAshenPhoenixes(gain);
+                    }
+                    result += gain;
                 }
-                result += gain;
+            } else {
+                return;
             }
-        } else {
-            return;
         }
-    }
-    var divRow3 = document.getElementById("currency_calc");
-    if (divRow3) {
-        divRow3.innerHTML = result + ` <img src="./images/events/icons/${getSelectedEvent()}.png" style="width: 20px;">`;
+        var divRow3 = document.getElementById("currency_calc");
+        if (divRow3) {
+            divRow3.innerHTML = result + ` <img src="./images/events/icons/${getSelectedEvent()}.png" style="width: 20px;">`;
+        }
     }
 }
 

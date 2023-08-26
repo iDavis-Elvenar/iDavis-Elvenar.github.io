@@ -1,4 +1,11 @@
 var images_buildings = {
+    "A_Evt_Season_Secrets_XXIII_The_Door_of_Secrets":"https://i.ibb.co/5F9BNF9/the-door-of-secrets.png",
+    "A_Evt_Merge_Dwarvengame_XXIII_Super_Jumper_Tower":"https://i.ibb.co/hYCx87V/super-jumper-tower.png",
+    "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider":"https://i.ibb.co/SyZSPgk/perpetual-slider.png",
+    "A_Evt_Merge_Dwarvengame_XXIII_Target_Shooting":"https://i.ibb.co/37p6BTG/target-shooting.png",
+    "A_Evt_Merge_Dwarvengame_XXIII_Bouldersurge":"https://i.ibb.co/YT53d3T/bouldersurge.png",
+    "A_Evt_Exp_Merge_Dwarvengame_XXIII_Queens_Idol":"https://i.ibb.co/bF8kVRc/queens-idol.png",
+    "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus":"https://i.ibb.co/FzYpkM1/solunar-nexus.png",
     "A_Evt_Theater_Zodiac_XXIII_Nebula_Passage":"https://i.ibb.co/8z4dwwt/nebula-passage.png",
     "A_Evt_Theater_Zodiac_XXIII_Divine_Orrary":"https://i.ibb.co/zFpSFFN/divine-orrary.png",
     "A_Evt_Theater_Zodiac_XXIII_Mirrors_of_the_Cosmos":"https://i.ibb.co/7jZYvZr/mirrors-of-the-cosmos.png",

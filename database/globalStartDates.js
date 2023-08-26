@@ -5,8 +5,8 @@ var eventStartDates = { //Whispers of the Soul 24.10. - 10.11.
             "end_date": "__ _ 2023"
         },
         "beta": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "September 7th 2023",
+            "end_date": "September 27th 2023"
         }
     },
     "theater_zodiac_xxiii_": {

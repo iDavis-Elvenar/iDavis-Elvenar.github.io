@@ -308,6 +308,7 @@ var eventsInfoIcons = {
     "shuffle_garden_xxiii_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "scroll_aquatic_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "theater_zodiac_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "merge_dwarvengame_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {

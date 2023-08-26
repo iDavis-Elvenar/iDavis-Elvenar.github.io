@@ -1,0 +1,772 @@
+<!-- HTML -->
+
+<div id="main">
+  
+    <!-- <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Lucky Little Fin ::..<br></h5>
+     <img id="event_banner" src="https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png" alt="undefined" class="center " style="margin-bottom: 15px; width: 50%;">
+    -->
+     <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Trades Rewards ::..<br></h5>
+     <img id="event_banner" src="https://i.ibb.co/Cs4nN01/EL-akcia-august-2022-dwarves.png" alt="undefined" class="center " style="margin-bottom: 15px;">
+   
+     <!--<div class="row">
+       <div class="col-sm">
+           <center><label for="order_chests" id="order_chests" style="margin-bottom: 35px; margin-top: 15px;">Order By:</label>
+               <select id="order_chests" class="custom-select" style="width: 50%;" onchange="sort(this.value);">
+                   <option value="none">Default</option>
+                   <option value="dp">Best Chests for Daily Prizes</option>
+                   <option value="gp">Best Chests for Grand Prizes</option>
+               </select>
+           </center>
+       </div>
+     </div>-->
+ 
+ <div style="margin-left: 3%; margin-right: 3%; margin-bottom: 25px;">
+ 
+         The Dwarven Event features 12 different offers in total. You can see the list of all of these offers below. This list especially
+         focuses on their rewards, as the event mechanic makes their costs pretty much random (for one offer a dwarf can ask different
+         pieces and different levels of these pieces).<br><br>
+ 
+         <center><img src="https://i.ibb.co/ctLccCD/EL-akcia-august-2022-decline-offer.png" style="margin-bottom: -30px; margin-top: -5px;"></center><br><br>
+ 
+         You can always decline any offer you wish. Before you get into the merging process, hover over your current offer so that you can see what 
+         the rewards are and whether they are worth your effort or not! <br>Keep in mind that every offer has the so-called range of possible costs (this is 
+         what I observed from my gameplay on Beta). It means that when we take a list of required pieces for one specific offer out of those listed below and realize how many level 1 pieces we need 
+         (with the help of the <b>Pieces</b> tab), we do not get the same number every time! <br><br>The <b>costs</b> represent the number of required level 1 pieces (which would be needed in the worst case scenario),
+         so you can decide for yourself, whether your current order is in the lower part
+         of this range, or you want to decline your offer and finish other tasks in the meantime. Even though the difference is not huge, it may help you 
+         reach more Grand Prizes after all (and potentially some more parts of the Dwarven Citadel Set, if that's what you aim for).<br><br>
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4154227292627045"
+                             crossorigin="anonymous"></script> <!-- In-article -->
+                         <ins class="adsbygoogle"
+                             style="display:block; text-align:center;"
+                             data-ad-layout="in-article"
+                             data-ad-format="fluid"
+                             data-ad-client="ca-pub-4154227292627045"
+                             data-ad-slot="9774392946"></ins>
+                         <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                         </script>
+                         <br><br>
+     </div>
+   
+ </div>
+   
+   <!-- JS DATABASE -->
+   
+ <script>
+ if (typeof currencies === "undefined") {
+     var currencies = {
+         "merge_dwarvengame_xxiii_": {
+             "ec": "https://i.ibb.co/4tYSS6K/EL-akcia-august-2022-event-currency-1.png",
+             "ep": "https://i.ibb.co/ChK4qRW/EL-akcia-august-2022-payback.png",
+             "event_currency_2": "https://i.ibb.co/tqTM3ck/EL-akcia-august-2022-event-currency-2.png",
+         }
+     }
+ }
+ 
+ if (typeof chests === "undefined") {
+     var chests = {
+         "merge_dwarvengame_xxiii_": [
+             {
+                 "img": "https://i.ibb.co/qyfgyqC/EL-akcia-august-2022-chest0.png",  //HOTOVO
+                 "ec": "12-14",
+                 "ep": 1,
+                 "description": `<i>Humble Request</i> (appears in slot <b>1</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 5
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_UNIT_MA_5",
+                     "amount": "1",
+                     "percentage": 30
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_UNIT_LM_5",
+                     "amount": "1",
+                     "percentage": 30
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_UNIT_LR_5",
+                     "amount": "1",
+                     "percentage": 35
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_a_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/BtSG7VY/EL-akcia-august-2022-chest2.png",  //HOTOVO
+                 "ec": "20-22",
+                 "ep": 1,
+                 "description": `<i>Humble Request</i> (appears in slot <b>1</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "1",
+                     "percentage": 5
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 8
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "knowledge_points",
+                     "amount": "5",
+                     "percentage": 27
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "flexible_reward",
+                     "subType": "frog_orcs",
+                     "amount": "3",
+                     "percentage": 60
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_b_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/bR8X2sh/EL-akcia-august-2022-chest1.png",  //HOTOVO
+                 "ec": "16-19",
+                 "ep": 1,
+                 "description": `<i>Humble Request</i> (appears in slot <b>1</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "1",
+                     "percentage": 2
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "spell_good_production_boost_1",
+                     "amount": "1",
+                     "percentage": 23
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "spell_knowledge_boost_1",
+                     "amount": "1",
+                     "percentage": 25
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "spell_supply_production_boost_1",
+                     "amount": "1",
+                     "percentage": 40
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_c_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/s3ptY8W/EL-akcia-august-2022-chest4.png",  //HOTOVO
+                 "ec": "28-28",
+                 "ep": 2,
+                 "description": `<i>Uncommon Request</i> (appears in slot <b>1</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "combiningcatalyst",
+                     "amount": "2",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "1",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 15
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_RF_SPL_15",
+                     "amount": "1",
+                     "percentage": 30
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_RF_CN_15",
+                     "amount": "1",
+                     "percentage": 35
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_d_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/58tDg11/EL-akcia-august-2022-chest6.png",  //HOTOVO
+                 "ec": "35-37",
+                 "ep": 3,
+                 "description": `<i>Rare Request</i> (appears in slot <b>2</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 15
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "runeShard",
+                     "subType": "random",
+                     "amount": "3",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "2",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "runeShard",
+                     "subType": "broken_shards",
+                     "amount": "3",
+                     "percentage": 45
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_e_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/hWGvzxn/EL-akcia-august-2022-chest5.png",  //HOTOVO
+                 "ec": "32-34",
+                 "ep": 3,
+                 "description": `<i>Rare Request</i> (appears in slot <b>2</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "2",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 15
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_UNIT_MA_15",
+                     "amount": "1",
+                     "percentage": 25
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_UNIT_HR_15",
+                     "amount": "1",
+                     "percentage": 25
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_UNIT_LR_15",
+                     "amount": "1",
+                     "percentage": 25
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_f_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/hmnx4kN/EL-akcia-august-2022-chest3.png",  //HOTOVO
+                 "ec": "24-26",
+                 "ep": 2,
+                 "description": `<i>Uncommon Request</i> (appears in slot <b>2</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "2",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 15
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_KP_AW_10",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_KP_AW_7",
+                     "amount": "1",
+                     "percentage": 25
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_KP_AW_5",
+                     "amount": "1",
+                     "percentage": 30
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_g_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/W3QsWzh/EL-akcia-august-2022-chest8.png",  //HOTOVO
+                 "ec": "42-44",
+                 "ep": 3,
+                 "description": `<i>Rare Request</i> (appears in slot <b>2</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_KP_AW_15",
+                     "amount": "1",
+                     "percentage": 5
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_REV_SQD_75",
+                     "amount": "1",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "2",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_RF_GRR_5",
+                     "amount": "1",
+                     "percentage": 25
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_REV_SQD_50",
+                     "amount": "1",
+                     "percentage": 30
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_h_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/xKv29z3/EL-akcia-august-2022-chest7.png",  //HOTOVO
+                 "ec": "38-41",
+                 "ep": 3,
+                 "description": `<i>Rare Request</i> (appears in slot <b>3</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "3",
+                     "percentage": 14
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "flexible_reward",
+                     "subType": "frog_mana",
+                     "amount": "20",
+                     "percentage": 22
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "flexible_reward",
+                     "subType": "frog_seeds",
+                     "amount": "20",
+                     "percentage": 22
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "flexible_reward",
+                     "subType": "frog_evergreen",
+                     "amount": "20",
+                     "percentage": 22
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_i_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/hcCD1fw/EL-akcia-august-2022-chest10.png",  //HOTOVO
+                 "ec": "48-52",
+                 "ep": 4,
+                 "description": `<i>Extraordinary Request</i> (appears in slot <b>3</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "spell_pet_food_1",
+                     "amount": "1",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "1",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "knowledge_points",
+                     "amount": "5",
+                     "percentage": 30
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "knowledge_points",
+                     "amount": "10",
+                     "percentage": 30
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_j_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/DWr1hVc/EL-akcia-august-2022-chest11.png",  //HOTOVO
+                 "ec": "56-56",
+                 "ep": 4,
+                 "description": `<i>Extraordinary Request</i> (appears in slot <b>3</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "2",
+                     "percentage": 10
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_RF_GRR_10",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "runeShard",
+                     "subType": "random",
+                     "amount": "2",
+                     "percentage": 25
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_KP_AW_10",
+                     "amount": "1",
+                     "percentage": 25
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_k_merge_dwarvengame"
+             },
+             {
+                 "img": "https://i.ibb.co/KKYPVxK/EL-akcia-august-2022-chest9.png",  //HOTOVO
+                 "ec": "48-48",
+                 "ep": 4,
+                 "description": `<i>Extraordinary Request</i> (appears in slot <b>3</b>)`,
+                 "chances": [
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "episodic",
+                     "subType": "daily_reward_event_chest_merge_dwarvengame",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_RF_CN_25",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_RF_SPL_25",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "item",
+                     "subType": "INS_UNIT_HM_25",
+                     "amount": "1",
+                     "percentage": 20
+                 },
+                 {
+                     "__class__": "RewardChanceVO",
+                     "type": "good",
+                     "subType": "event_currency_2",
+                     "amount": "2",
+                     "percentage": 20
+                 }
+                 ],
+                 "id": "reward_pool_event_chest_l_merge_dwarvengame"
+             },
+         ]
+     }
+ }
+ 
+ // JS CODE
+ 
+ generateChests();
+ 
+ if (typeof rewardMultiplicator === "undefined") {
+     var rewardMultiplicator = 1;
+ }
+ 
+ if (typeof displayEventCurrencyInCosts === "undefined") {
+     var displayEventCurrencyInCosts = false;
+ }
+ 
+ function generateChests() {
+     var selectedEvent = getSelectedEvent();
+     var chestsData = getChestsData(selectedEvent);
+     draw(chestsData);
+ 
+ }
+ 
+ function getChestsData(selectedEvent) {
+     return chests[selectedEvent];
+ }
+ 
+ function draw(chestsData, sort="") {
+     if (document.getElementById("div_chests") !== null) {
+         document.getElementById("div_chests").remove();
+     }
+     let divCenter = document.createElement("div");
+     divCenter.id = "div_chests";
+     divCenter.style.textAlign = "center";
+     let divBBTable = document.createElement("div");
+     divBBTable.className = "bbTable";
+ 
+     for (let i = 0; i < chestsData.length; i++) {
+ 
+     let table = document.createElement("table");
+     table.className = "table-primary";
+     table.style.width = "100%";
+     table.style.marginBottom = "10px";
+     let tbody = document.createElement("tbody");
+     let maxRewards = Array.from(new Array(chestsData.length),(val,index) => chestsData[index]["chances"].length).reduce(function(a,b) {
+         return Math.max(a,b);
+     });
+     
+     for (let r = 1; r <= 3; r++) {
+ 
+         let tr = document.createElement("tr");
+ 
+         if (r === 1) {
+ 
+             let td1 = document.createElement("td");
+             td1.rowSpan = "3";
+             td1.style.width = "30%";
+             let img = document.createElement("img");
+             img.src = chestsData[i]["img"];
+             td1.appendChild(img);
+             tr.appendChild(td1);
+ 
+             let td2 = document.createElement("td");
+             if (chestsData[i]["ec"] !== "") {
+                 td2.innerHTML = `<i><b>Costs:</b></i> `+chestsData[i]["ec"];
+                 if (displayEventCurrencyInCosts) {
+                     td2.innerHTML += ` <img src="${currencies[getSelectedEvent()]["ec"]}">`;
+                 }
+             } else {
+                 td2.innerHTML = ``;
+             }
+             td2.style.width = 70/maxRewards+"%";
+             tr.appendChild(td2);
+ 
+             let td3 = document.createElement("td");
+             td3.innerHTML = `<i>Gives:</i> `+chestsData[i]["ep"]+` <img src="`+currencies[getSelectedEvent()]["ep"]+`">`;
+             td3.style.width = 70/maxRewards+"%";
+             tr.appendChild(td3);
+ 
+             let td4 = document.createElement("td");
+             td4.colSpan = maxRewards-2;
+             td4.innerHTML = chestsData[i]["description"];
+             if (sort === "dp") {
+                 td4.innerHTML = `<h7><i>~ `+(100/chestsData[i]["chances"].filter(chance => chance["subType"].startsWith("daily_reward"))[0]["percentage"]*chestsData[i]["ec"]).toFixed(1)
+                 +` <img src='${currencies[getSelectedEvent()]["ec"]}'> per Daily Prize`+`</i></h7>`;
+             } else if (sort === "gp") {
+                 td4.innerHTML = `<h7><i>`+(20/chestsData[i]["ep"]*chestsData[i]["ec"]).toFixed(1)
+                 +` <img src='${currencies[getSelectedEvent()]["ec"]}'> per Grand Prize`+`</i></h7>`;
+             }
+             tr.appendChild(td4);
+ 
+         } else if (r === 2) {
+ 
+             for (let d = 0; d < maxRewards; d++) {
+                 
+                 let th = document.createElement("th");
+                 if (d < chestsData[i]["chances"].length) {
+                     th.innerHTML = chestsData[i]["chances"][d]["percentage"]+"%";
+                 }
+                 th.style.width = 70/maxRewards+"%";
+                 tr.appendChild(th);
+ 
+             }
+ 
+         } else {
+ 
+             for (let d = 0; d < maxRewards; d++) {
+ 
+                 let td = document.createElement("td");
+                 if (d < chestsData[i]["chances"].length) {
+                     let reward = getReward(chestsData, i, d);
+                     td.innerHTML = (rewardMultiplicator*getAmount(chestsData, i, d))+"x "+reward;
+                 }
+                 rewardMultiplicator = 1;
+                 td.style.width = 70/maxRewards+"%";
+                 tr.appendChild(td);
+             }
+ 
+         }
+ 
+         tbody.appendChild(tr);
+     }
+ 
+     table.appendChild(tbody);
+     divBBTable.appendChild(table);
+     }
+     divCenter.appendChild(divBBTable);
+     document.getElementById("column_with_tables").appendChild(divCenter);
+ }
+ 
+ function getAmount(chestsData, chest, chance) {
+     return chestsData[chest]["chances"][chance]["amount"];
+ }
+ 
+ function getReward(chestsData, chest, chance) {
+     if (chestsData[chest]["chances"][chance]["subType"].startsWith("daily_reward")) {
+         return goods_icons["daily_reward"];
+     }
+     if (chestsData[chest]["chances"][chance]["subType"] === "event_currency_1") {
+         return `<img src="`+currencies[getSelectedEvent()]["ec"]+`">`;
+     }
+     if (chestsData[chest]["chances"][chance]["subType"] === "event_currency_2") {
+         return `<img src="`+currencies[getSelectedEvent()]["event_currency_2"]+`">`;
+     }
+     if (chestsData[chest]["chances"][chance]["type"] === "runeShard") {
+         if (chestsData[chest]["chances"][chance]["subType"] === "random") {
+             return goods_icons["rune_shard"];
+         }
+         if (chestsData[chest]["chances"][chance]["subType"] === "broken_shards") {
+             return goods_icons["broken_shards"];
+         }
+     }
+     if (chestsData[chest]["chances"][chance]["type"] === "item" || chestsData[chest]["chances"][chance]["type"] === "good") {
+         if (goods_icons[chestsData[chest]["chances"][chance]["subType"]] !== undefined) {
+             return goods_icons[chestsData[chest]["chances"][chance]["subType"]].replaceAll("<br>","");
+         } else if (goods_icons[chestsData[chest]["chances"][chance]["subType"].toLowerCase()] !== undefined) {
+         return goods_icons[chestsData[chest]["chances"][chance]["subType"].toLowerCase()].replaceAll("<br>","");
+         } else {
+             //console.log(chestsData[chest]["chances"][chance]["subType"]);
+             return "MISSING!!!"
+         }
+     }
+     if (chestsData[chest]["chances"][chance]["type"] === "flexible_reward") {
+         for (let fr = 0; fr < flexibleRewards.length; fr++) {
+             if (flexibleRewards[fr]["id"] === chestsData[chest]["chances"][chance]["subType"]) {
+                 rewardMultiplicator = flexibleRewards[fr]["rewards"][localStorage.getItem("chapter")-1]["amount"];
+                 return goods_icons[flexibleRewards[fr]["rewards"][localStorage.getItem("chapter")-1]["subType"]];
+             }
+         }
+     }
+ }
+ 
+ function sort(value) {
+     var chestsData = getChestsData(getSelectedEvent()).slice();
+     if (value === "none") {
+         draw(chestsData);
+     }
+     else if (value === "dp") {
+         //SORT BY DAILY PRIZES
+         chestsData.sort((a,b) => (100/a["chances"].filter(chance => chance["subType"].startsWith("daily_reward"))[0]["percentage"]*a["ec"] >
+         (100/b["chances"].filter(chance => chance["subType"].startsWith("daily_reward"))[0]["percentage"]*b["ec"])) ? 1 : -1);
+         draw(chestsData, value);
+     } else if (value === "gp") {
+         //SORT BY GRAND PRIZES
+         chestsData.sort((a,b) => (20/a["ep"]*a["ec"] > 20/b["ep"]*b["ec"]) ? 1 : -1);
+         draw(chestsData, value);
+     }
+ }
+ </script>
