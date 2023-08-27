@@ -1131,6 +1131,7 @@ function displayQuests() {
                 finished.style.gridArea = `${quest + 1 + Math.floor((quest - 1) / 30)}/${nextColumn++}`;
                 finished.style.marginTop = finished.style.marginBottom = "3px";
                 if (questRowsNumber > 1) finished.style.paddingTop = finished.style.paddingBottom = "7px";
+                finished.style.borderTopRightRadius = finished.style.borderBottomRightRadius = "7px";
                 finished.style.borderTop = finished.style.borderRight = finished.style.borderBottom = "1px solid #DCC698";
                 finished.style.borderLeft = "none";
                 finished.className = "form-check";
