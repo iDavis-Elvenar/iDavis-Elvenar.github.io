@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "merge_dwarvengame_xxiii_": [
-
+        "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
     ],
 
     "theater_zodiac_xxiii_": [

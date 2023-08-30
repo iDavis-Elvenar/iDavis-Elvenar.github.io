@@ -377,7 +377,7 @@ function displayWaypoints() {
 
     if (faVersions.hasOwnProperty(getSelectedFa())) {
         let h7 = document.createElement('h7');
-        h7.innerHTML = `<center>The version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Note that there might still be some differences compared with the previous adventures with this version.</center><br>`;
+        h7.innerHTML = `<center>The version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Note that there might be some differences compared with the previous adventure of this version.</center><br>`;
         parent.appendChild(h7);
     }
 
