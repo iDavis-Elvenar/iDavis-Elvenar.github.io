@@ -12,7 +12,7 @@ var dailyPrizes = {
         "A_Evt_September_XXI_Training_Dojo",
         "INS_KP_{15}",
         "A_Evt_September_XXI_Bamboo_Fountain",
-        "INS_UNIT_MA_10",
+        "INS_UNIT_HM_10",
         "A_Evt_Autumn_XXII_Luscious_Cakes",
         "frog_runeshards2_{2}",
         "A_Evt_September_XXI_Calligraphy_Class",
