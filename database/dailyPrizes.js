@@ -1,5 +1,9 @@
 var dailyPrizes = {
 
+    "tile_mistyforest_xxiii_": [
+
+    ],
+
     "merge_dwarvengame_xxiii_": [
         "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
         "A_Evt_August_XXII_Lunar_Factory",

@@ -1,4 +1,14 @@
-var eventStartDates = { //Whispers of the Soul 24.10. - 10.11.
+var eventStartDates = { 
+    "tile_mistyforest_xxiii_": {//Whispers of the Soul 24.10. - 10.11.
+        "live": {
+            "start_date": "__ _ 2023",
+            "end_date": "__ _ 2023"
+        },
+        "beta": {
+            "start_date": "__ _ 2023",
+            "end_date": "__ _ 2023"
+        }
+    },
     "merge_dwarvengame_xxiii_": {//dwarven game 28.9. - 18.10.
         "live": {
             "start_date": "__ _ 2023",
