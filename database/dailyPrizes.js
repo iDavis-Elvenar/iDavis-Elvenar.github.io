@@ -8,6 +8,7 @@ var dailyPrizes = {
         "INS_REV_SQD_50",
         "A_Evt_Merge_Dwarvengame_XXIII_Target_Shooting",
         "INS_KP_{15}",
+        "A_Evt_August_XXII_Solar_Training_Grounds",
     ],
 
     "theater_zodiac_xxiii_": [
