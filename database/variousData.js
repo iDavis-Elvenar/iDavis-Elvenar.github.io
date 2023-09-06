@@ -327,11 +327,11 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "merge_dwarvengame_xxiii_": [
-        {"id":"board", "name":"Board", "img":"https://i.ibb.co/7v3HmnM/EL-akcia-august-2022-piece-a4.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"09/09/2023"},
+        {"id":"board", "name":"Board", "img":"https://i.ibb.co/5vGFxky/a4.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"09/06/2023"},
         {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html", "releaseDate":"09/09/2023"},
-        {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html", "releaseDate":"09/09/2023"},
-        {"id":"cups", "name":"Cups", "img":"https://i.ibb.co/vVMrWDx/EL-akcia-august-2022-cup-red.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#cups", "file":"cups.html", "releaseDate":"09/09/2023"},
-        {"id":"cards", "name":"Cards", "img":"https://i.ibb.co/6YyLVtV/EL-akcia-august-2022-event-currency-2-big.png", "img_width":"35", "img_style":"margin-left: -5px; margin-right: 7px; position: relative;", "href":"#cards", "file":"cards.html", "releaseDate":"09/09/2023"},
+        {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html", "releaseDate":"09/06/2023"},
+        {"id":"cups", "name":"Cups", "img":"https://i.ibb.co/vVMrWDx/EL-akcia-august-2022-cup-red.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#cups", "file":"cups.html", "releaseDate":"09/06/2023"},
+        {"id":"cards", "name":"Cards", "img":"https://i.ibb.co/6YyLVtV/EL-akcia-august-2022-event-currency-2-big.png", "img_width":"35", "img_style":"margin-left: -5px; margin-right: 7px; position: relative;", "href":"#cards", "file":"cards.html", "releaseDate":"09/06/2023"},
     ],
     "theater_zodiac_xxiii_": [
         {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html", "releaseDate":"08/10/2023"},
