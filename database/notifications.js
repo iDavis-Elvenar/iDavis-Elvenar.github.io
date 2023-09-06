@@ -84,7 +84,7 @@ var notifications = {
         "repeatAfter":259200,
         "style":"info",
         "duration":500,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "9":{  // FELLOWSHIP ADVENTURES

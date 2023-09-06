@@ -90,6 +90,7 @@ let eventBanners = {
     "shuffle_garden_xxiii_": "https://i.ibb.co/0mQJGvz/EL-akcia-j-n-2023-banner.png",
     "scroll_aquatic_xxiii_": "https://i.ibb.co/f25F5qm/EL-akcia-j-l-2023-banner.png",
     "theater_zodiac_xxiii_": "https://i.ibb.co/C7brfKY/EL-akcia-jese-2023-banner.png",
+    "merge_dwarvengame_xxiii_": "https://i.ibb.co/PGqwyR8/EL-akcia-september-2023-banner.png",
 }
 
 let eventVideos = {
@@ -136,6 +137,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "shuffle_garden_xxiii_": "05/25/2023",
     "scroll_aquatic_xxiii_": "06/26/2023",
     "theater_zodiac_xxiii_": "08/08/2023",
+    "merge_dwarvengame_xxiii_": "09/07/2023",
 }
 
 let questsLinks = {
@@ -156,6 +158,7 @@ let questsLinks = {
     "shuffle_garden_xxiii_": "bit.ly/FloralAwakening2023",
     "scroll_aquatic_xxiii_": "bit.ly/AquaSplendor2023",
     "theater_zodiac_xxiii_": "bit.ly/AutumnZodiac2023",
+    "merge_dwarvengame_xxiii_": "bit.ly/GatewayIntoThePast2023",
 }
 
 let eventsDurations = {
@@ -176,6 +179,7 @@ let eventsDurations = {
     "shuffle_garden_xxiii_": 20,
     "scroll_aquatic_xxiii_": 19,
     "theater_zodiac_xxiii_": 22,
+    "merge_dwarvengame_xxiii_": 20,
 }
 
 let evoUpgradeCosts = {
@@ -323,11 +327,11 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "merge_dwarvengame_xxiii_": [
-        {"id":"board", "name":"Board", "img":"https://i.ibb.co/7v3HmnM/EL-akcia-august-2022-piece-a4.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html"},
-        {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html"},
-        {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html"},
-        {"id":"cups", "name":"Cups", "img":"https://i.ibb.co/vVMrWDx/EL-akcia-august-2022-cup-red.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#cups", "file":"cups.html"},
-        {"id":"cards", "name":"Cards", "img":"https://i.ibb.co/6YyLVtV/EL-akcia-august-2022-event-currency-2-big.png", "img_width":"35", "img_style":"margin-left: -5px; margin-right: 7px; position: relative;", "href":"#cards", "file":"cards.html"},
+        {"id":"board", "name":"Board", "img":"https://i.ibb.co/7v3HmnM/EL-akcia-august-2022-piece-a4.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"09/09/2023"},
+        {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html", "releaseDate":"09/09/2023"},
+        {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html", "releaseDate":"09/09/2023"},
+        {"id":"cups", "name":"Cups", "img":"https://i.ibb.co/vVMrWDx/EL-akcia-august-2022-cup-red.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#cups", "file":"cups.html", "releaseDate":"09/09/2023"},
+        {"id":"cards", "name":"Cards", "img":"https://i.ibb.co/6YyLVtV/EL-akcia-august-2022-event-currency-2-big.png", "img_width":"35", "img_style":"margin-left: -5px; margin-right: 7px; position: relative;", "href":"#cards", "file":"cards.html", "releaseDate":"09/09/2023"},
     ],
     "theater_zodiac_xxiii_": [
         {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html", "releaseDate":"08/10/2023"},
