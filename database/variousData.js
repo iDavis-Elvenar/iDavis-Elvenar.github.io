@@ -543,4 +543,11 @@ var moreNavbarContent = [
         "id":           "navitem_donate", 
         "innerHTML":    `Donate`
     },
+    // PRIVACY POLICY
+    {   
+        "className":    "dropdown-item text-dark", 
+        "href":         "privacyPolicy.html", 
+        "id":           "navitem_privacyPolicy", 
+        "innerHTML":    `Privacy Policy`
+    },
 ]
