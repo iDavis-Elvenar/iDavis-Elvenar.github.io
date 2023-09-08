@@ -14,6 +14,7 @@ var dailyPrizes = {
         "INS_KP_{15}",
         "A_Evt_August_XXII_Solar_Training_Grounds",
         "frog_runeshards1_{2}",
+        "A_Evt_Summer_XVIII_Mystical_Lace",
     ],
 
     "theater_zodiac_xxiii_": [
