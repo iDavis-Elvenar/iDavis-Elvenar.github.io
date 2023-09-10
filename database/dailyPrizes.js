@@ -16,6 +16,7 @@ var dailyPrizes = {
         "frog_runeshards1_{2}",
         "A_Evt_Summer_XVIII_Mystical_Lace",
         "A_Evt_February_XXI_Sun_Loop",
+        "INS_UNIT_MC_LM_10",
     ],
 
     "theater_zodiac_xxiii_": [
