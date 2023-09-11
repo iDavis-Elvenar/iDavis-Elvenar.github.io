@@ -17,6 +17,7 @@ var dailyPrizes = {
         "A_Evt_Summer_XVIII_Mystical_Lace",
         "A_Evt_February_XXI_Sun_Loop",
         "INS_UNIT_MC_LM_10",
+        "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
     ],
 
     "theater_zodiac_xxiii_": [
