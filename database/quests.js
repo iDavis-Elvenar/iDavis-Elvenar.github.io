@@ -72,6 +72,7 @@ var quests = {
         [OPAR_VIDENI("25-30"), AND, ZISKEJ_POUZIJ_KOUZLA(8), OR, ZESILOVAC(2), 36],
         [KOSIK_JIDLA(6), AND, STRETY_LIBOVOLNE(10), 36],
         [MINCE, AND, VB_UTRAT(16), 36],
+        [ZASOBY, AND, SPOJOVACI_CINIDLO(3), OR, ZISKEJ_KOUZLA(3), 36],
     ],
     "theater_zodiac_xxiii_": [
         [VYPOMOC(7), 40],
