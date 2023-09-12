@@ -18,6 +18,7 @@ var dailyPrizes = {
         "A_Evt_February_XXI_Sun_Loop",
         "INS_UNIT_MC_LM_10",
         "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
+        "frog_grr_5_{1}",
     ],
 
     "theater_zodiac_xxiii_": [
