@@ -19,6 +19,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_LM_10",
         "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
         "frog_grr_5_{1}",
+        "A_Evt_Car_XX_Dwarven_Wagon",
     ],
 
     "theater_zodiac_xxiii_": [
