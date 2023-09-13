@@ -151,17 +151,17 @@ var notifications = {
     },
     "14":{  // FEEDBACK SURVEY
         "id":14,
-        "text":`<h4 class="alert-heading">Your feedback is important!</h4>
-        <p>I'm constantly striving to improve the website to make it more user-friendly and informative. To help me achieve this goal, I will be 
-        glad if you could take a few minutes to fill out this short survey. Your feedback is very important to me!</p>
+        "text":`<h4 class="alert-heading">✍ How did you learn about the website?</h4>
+        <p>I'd love to hear from you! Help me improve your experience by letting me know how you discovered my website.
+        I will be glad if could take a minute to fill out this short survey.</p>
         <hr>
-        <p style="text-align: center;"><h4 style="text-align: center;">Visit the survey <a href="https://docs.google.com/forms/d/e/1FAIpQLSeIZ-erMnm-L6IRfq3yiSu7uObHh2N82KHNC6N7o7KD0OwUUQ/viewform" target="_blank" class="alert-link">here</a>!</h4></p>
-        <p>You can ignore this message if you have already completed the survey.</p>`,
-        "repeatAfter":258600,
+        <p style="text-align: center;"><h4 style="text-align: center;">Visit the survey <a href="https://docs.google.com/forms/d/1LVn9ZoyqCJBkgB6W4GToM9u0V9NZTomKIcKCg3Bvknc" target="_blank" class="alert-link">here</a>!</h4></p>
+        <p>You can ignore this message if you have already completed this survey.</p>`,
+        "repeatAfter":432000,
         "style":"warning",
         "duration":60,
-        "active":false,
-        "priority":70
+        "active":true,
+        "priority":110
     },
     "15":{  // SHORTS TEASER
         "id":15,
