@@ -22,6 +22,7 @@ var dailyPrizes = {
         "A_Evt_Car_XX_Dwarven_Wagon",
         //,
         "INS_KP_{15}",
+        "A_Evt_Summer_XVIII_Monopteros",
     ],
 
     "theater_zodiac_xxiii_": [
