@@ -23,6 +23,7 @@ var dailyPrizes = {
         //,
         "INS_KP_{15}",
         "A_Evt_Summer_XVIII_Monopteros",
+        "INS_UNIT_MC_MA_10",
     ],
 
     "theater_zodiac_xxiii_": [
