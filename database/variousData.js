@@ -511,6 +511,17 @@ var moreNavbarContent = [
             "style":    "width: 25px; margin-right: 6px; margin-bottom: 1px; margin-left: 0px;",
         }
     },
+    // COMMUNITY KNOWLEDGE
+    /*{
+        "className":    "dropdown-item text-dark",
+        "href":         "community-knowledge.html",
+        "id":           "navitem_seasons",
+        "innerHTML":    "Community Knowledge",
+        "img": {
+            "src":      "",
+            "style":    "width: 25px; margin-right: 6px; margin-bottom: 1px; margin-left: 0px;",
+        }
+    },*/
     /*{
         "className":    "dropdown-item text-dark",
         "href":         "tournaments.html",
