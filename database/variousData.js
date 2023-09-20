@@ -219,6 +219,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Shuffle_Garden_XXIII_Dragonheart_Estate": "1x Dragonheart Estate Artifact",
     "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent": "1x Tinlug, The Star Serpent Artifact",
     "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus": "1x Solunar Nexus Artifact",
+    "A_Evt_Evo_Set_Tile_Mistyforest_XXIII_Soul_Lab": "1x Soul Lab Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -294,13 +295,13 @@ var setNames = {
     "merge_dwarvengame": "Dwarven Citadel",
     "tile_amuni_xxiii": "Ancient Promise",
     "scroll_aquatic_xxiii": "Seapectecular Aquatics",
+    "tile_mistyforest_xxiii": "Soul Experiments",
 }
 
 var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "istyforest_XXIII"
 ]
 
 var eventsInfoIcons = {

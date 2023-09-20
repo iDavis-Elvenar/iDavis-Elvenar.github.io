@@ -1,4 +1,13 @@
 var images_buildings = {
+    "A_Evt_Set_Tile_Mistyforest_XXIII_Endurance_Trials":"https://i.ibb.co/yNS89Hw/endurance-trials.png",
+    "A_Evt_Set_Tile_Mistyforest_XXIII_Mirthful_Spirit":"https://i.ibb.co/74PrHSZ/mirthful-spirit.png",
+    "A_Evt_Set_Tile_Mistyforest_XXIII_Spooky_Tag_Game":"https://i.ibb.co/mC5mM9p/spooky-tag-game.png",
+    "A_Evt_Set_Tile_Mistyforest_XXIII_Lanterns_of_Contemplation":"https://i.ibb.co/pQy4L0q/lanterns-of-contemplation.png",
+    "A_Evt_Tile_Mistyforest_XXIII_Pumpkins_Head_Rack":"https://i.ibb.co/ft1cC1p/pumpkins-head-rack.png",
+    "A_Evt_Tile_Mistyforest_XXIII_HideandSeek_Hollows":"https://i.ibb.co/8ckHKxZ/hideandseek-hollows.png",
+    "A_Evt_Tile_Mistyforest_XXIII_Wraith_Unicorn":"https://i.ibb.co/4YSX0M6/wraith-unicorn.png",
+    "A_Evt_Tile_Mistyforest_XXIII_Gargantuan_Zombie":"https://i.ibb.co/6JTFckB/gargantuan-zombie.png",
+    "A_Evt_Evo_Set_Tile_Mistyforest_XXIII_Soul_Lab":"https://i.ibb.co/J2DdCPw/soul-lab.png",
     "A_Evt_Season_Secrets_XXIII_The_Door_of_Secrets":"https://i.ibb.co/5F9BNF9/the-door-of-secrets.png",
     "A_Evt_Merge_Dwarvengame_XXIII_Super_Jumper_Tower":"https://i.ibb.co/hYCx87V/super-jumper-tower.png",
     "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider":"https://i.ibb.co/SyZSPgk/perpetual-slider.png",

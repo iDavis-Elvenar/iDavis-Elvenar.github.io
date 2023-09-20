@@ -98,6 +98,45 @@ function orderSetBuildingData(filteredData) {
     return result;
 }
 
+function orderSetEvoBuildingData(filteredData, displayStage) {
+    let result = [];
+    if (filteredData['setBuilding'].hasOwnProperty('bonuses')) {
+        for (let b = 0; b < filteredData['setBuilding']['bonuses'].length; b++) {
+            let bonus = {};
+            for (let chap = 1; chap <= numberOfChapters; chap++) {
+                bonus[chap] = []
+                if (filteredData['setBuilding']['bonuses'][b].hasOwnProperty('factor')) {
+                    for (let prod in filteredData['chapters'][chap][displayStage]) {
+                        if (prioritiesProduction.includes(prod)) {
+                            if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
+                                bonus[chap].push([prod, Math.ceil(filteredData['chapters'][chap][displayStage][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor'])]);
+                            } else {
+                                bonus[chap].push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][displayStage][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']])
+                            }
+                             //teraz berie len jednu z produkcii (zatial som nevidel setovu budovu ktora by to mala inak)
+                        } else {
+                            let numOfMatchesWithProductions = getNumOfMatchesWithProductions(filteredData['chapters'][chap][displayStage]);
+                            //console.log(filteredData['id'] + "=>" + " " + filteredData['setBuilding']['bonuses'].length + " " + numOfMatchesWithProductions)
+                            if (numOfMatchesWithProductions === 0) {
+                                if (filteredData['setBuilding']['bonuses'][b]['type'] === 'self') {
+                                    bonus[chap].push([prod, filteredData['chapters'][chap][displayStage][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);
+                                } else {
+                                    bonus[chap].push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['chapters'][chap][displayStage][prod]['value'] * filteredData['setBuilding']['bonuses'][b]['factor']]);
+                                }
+                            }
+                            //break;   //v tejto else vetve to bude chciet nejak poriesit s tym june_xxi setom
+                        }
+                    }
+                } else {
+                    bonus.push([filteredData['setBuilding']['bonuses'][b]['type'], filteredData['setBuilding']['bonuses'][b]['value']])
+                }
+            }
+            result.push(bonus);
+        }
+    }
+    return result;
+}
+
 function getNumOfMatchesWithProductions(productions) {
     let count = 0;
     for (let prod in productions) {
@@ -122,6 +161,38 @@ function getProdChangeFlags(bonuses) {
         }
     }
     return Array.from(result);
+}
+
+function getProdChangeFlagsEvo(bonuses) {
+    let result = new Set();
+    for (let i = 0; i < bonuses.length; i++) {
+        let prevProds = [];
+        for (var chap = 1; chap <= numberOfChapters; chap++) {
+            let curProds = [];
+            for (let j = 0; j < bonuses[i][chap].length; j++) {
+                curProds.push(bonuses[i][chap][j][0]);
+            }
+            if (arraysDiffer(prevProds, curProds)) {
+                prevProds = curProds;
+                result.add(chap);
+            }
+        }
+    }
+    return Array.from(result);
+}
+
+function arraysDiffer(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+        return true;
+    }
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 function searchForBuildingID(data, idToSearch) {

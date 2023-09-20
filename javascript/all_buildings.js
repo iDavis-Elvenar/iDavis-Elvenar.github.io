@@ -37,6 +37,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Shuffle_Garden_XXIII_Dragonheart_Estate": 9,
     "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent": 9,
     "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus": 9,
+    "A_Evt_Evo_Set_Tile_Mistyforest_XXIII_Soul_Lab": 4,
 }
 
 function setAndReload(id) {
@@ -123,6 +124,10 @@ function readBuildingsJSON() {
                 td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
                 var td12 = document.createElement('td');
                 td12.style.width = "40%";
+                let setDesc = "-";
+                if (filteredData[i].hasOwnProperty('setBuilding')) {
+                    setDesc = `<a class="text-link font-weight-bold" href="#" onclick="showFullSet('${filteredData[i]['setBuilding']['setID']}')">${langUI(setNames[filteredData[i]['setBuilding']['setID']])}</a>`;
+                }
                 if (isEvo) {
                     let expiringDuration = `-`;
                     if (filteredData[i].hasOwnProperty("expiring")) {
@@ -131,27 +136,23 @@ function readBuildingsJSON() {
                     td12.innerHTML = `<b>${langUI("Building type:")}</b> ${buildingTypes[filteredData[i]['type']]}<br>
                                     <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}s<br>
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
-                                    <b>${langUI("Set building:")}</b> -<br>
+                                    <b>${langUI("Set building:")}</b> ${setDesc}<br>
                                     <b>${langUI("Expiring:")}</b> ${expiringDuration}<br>
                                     <b>${langUI("Upgrade costs:")}</b> ${evoUpgradeCosts[filteredData[i]['id']]}<br>`;
                     if (feedingEffectsDescriptions.hasOwnProperty(filteredData[i]['id'])) {
                         td12.innerHTML += `<b>Feeding effect:</b> ${feedingEffectsDescriptions[filteredData[i]['id']]}<br>`;
                     }
                     td12.innerHTML += `<b>Stage:</b><br>`;
-                    let tempArr = ["","","","","","","","","",""];
+                    var numberOfStages = Object.keys(filteredData[i]['chapters'][1]).length;
+                    let tempArr = new Array(numberOfStages).fill("");
                     tempArr[selectedEvoStages[filteredData[i]['id']]] = "selected";
+                    var selectOptions = "";
+                    for (let i = numberOfStages; i >= 1; i--) {
+                        selectOptions += `<option value="${i - 1}" ${tempArr[i - 1]}>${i}</option>`;
+                    }
                     td12.innerHTML += `<select id="${"input_stage_"+filteredData[i]['id']}" class="custom-select" style="width: 70px; margin-bottom: 10px;" onchange="setAndReload(this)">
-                            <option value="9" ${tempArr[9]}>10</option>
-                            <option value="8" ${tempArr[8]}>9</option>
-                            <option value="7" ${tempArr[7]}>8</option>
-                            <option value="6" ${tempArr[6]}>7</option>
-                            <option value="5" ${tempArr[5]}>6</option>
-                            <option value="4" ${tempArr[4]}>5</option>
-                            <option value="3" ${tempArr[3]}>4</option>
-                            <option value="2" ${tempArr[2]}>3</option>
-                            <option value="1" ${tempArr[1]}>2</option>
-                            <option value="0" ${tempArr[0]}>1</option>
-                        </select>`;
+                                        ${selectOptions}
+                                    </select>`;
                     let h5hashtag = document.createElement('h5');
                     h5hashtag.id = "#"+filteredData[i]['id'];
                     h5hashtag.innerHTML = '<a class="text-link font-weight-bold" id="hash"><img src="images/general/share-symbol.png" class="pointer" title="Open in new tab and share" width="15px;"></a><br>';
@@ -160,10 +161,6 @@ function readBuildingsJSON() {
                     });
                     td12.appendChild(h5hashtag);
                 } else {
-                    let setDesc = "-";
-                    if (filteredData[i].hasOwnProperty('setBuilding')) {
-                        setDesc = `<a class="text-link font-weight-bold" href="#" onclick="showFullSet('${filteredData[i]['setBuilding']['setID']}')">${langUI(setNames[filteredData[i]['setBuilding']['setID']])}</a>`;
-                    }
                     let expiringDuration = `-`;
                     if (filteredData[i].hasOwnProperty("expiring")) {
                         expiringDuration = (filteredData[i]["expiring"]["duration"]/60/60).toString()+"h";
@@ -428,6 +425,78 @@ function readBuildingsJSON() {
                         }
                     }
                     secondTable.appendChild(t2body);
+                    //SETOVE PARAMETRE:
+                    if (filteredData[i].hasOwnProperty('setBuilding')) {   // v tejto moznosti (ked je evo a sucasne set) nastala ta zmena, ze je ina struktura premennej bonuses (nizsie). Tym padom je potrebne odlisne spravanie niektorych funkcii, ako
+                                                                            // napriklad orderSetEvoBuildingData() alebo getProdChangeFlagsEvo() 
+
+                        let bonuses = orderSetEvoBuildingData(filteredData[i], displayStage);
+                        //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
+                        //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
+
+                        let prodChangeFlags = getProdChangeFlagsEvo(bonuses);
+
+                        if (bonuses.length > 0) {
+                            for (let setLine = -1; setLine < bonuses.length; setLine++) {
+                                let trSet = document.createElement('tr');
+                                let idxFlag = -1;
+                                let chToPrint = 1;
+                                if (setLine === -1) {
+                                    while (chToPrint <= numberOfChapters) {
+                                        let thSet = document.createElement('th');
+                                        if (idxFlag === -1) {
+                                            thSet.innerHTML = `${langUI("Chapter / Connection")}`;
+                                            idxFlag++;
+                                        } else {
+                                            if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                                thSet.innerHTML = `<img src=${chapter_icons[chToPrint]}>`;
+                                                chToPrint++;
+                                            } else {
+                                                thSet.innerHTML = `-`;
+                                                idxFlag++;
+                                            }
+                                        }
+                                        trSet.appendChild(thSet);
+                                    }
+                                    tSetBody.appendChild(trSet);
+                                } else {
+                                    for (var adjBon = 0; adjBon < bonuses[0][1].length; adjBon++) {
+                                        var trSub = document.createElement('tr');
+                                        idxFlag = 0;
+                                        chToPrint = 1;
+                                        if (adjBon === 0) {
+                                            var tdFirst = document.createElement('td');
+                                            tdFirst.innerHTML = `${setLine + 1}. ${langUI("building")}`;
+                                            tdFirst.rowSpan = bonuses[0][1].length;
+                                            if (bonuses[0][1].length > 1 && setLine !== bonuses.length - 1) {
+                                                tdFirst.style.borderBottomWidth = "2px";
+                                            }
+                                            trSub.appendChild(tdFirst);
+                                        }
+                                        while (chToPrint <= numberOfChapters) {
+                                            if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                                let tdSet = document.createElement('td');
+                                                tdSet.innerHTML = bonuses[setLine][chToPrint][adjBon][1].toFixed(0);
+                                                if (bonuses[0][1].length > 1 && adjBon === bonuses[0][1].length - 1 && setLine !== bonuses.length - 1) {
+                                                    tdSet.style.borderBottomWidth = "2px";
+                                                }
+                                                trSub.appendChild(tdSet);
+                                                chToPrint++;
+                                            } else {
+                                                let tdSet = document.createElement('td');
+                                                tdSet.innerHTML = goods_icons[bonuses[setLine][chToPrint][adjBon][0]];
+                                                if (bonuses[0][1].length > 1 && adjBon === bonuses[0][1].length - 1 && setLine !== bonuses.length - 1) {
+                                                    tdSet.style.borderBottomWidth = "2px";
+                                                }
+                                                trSub.appendChild(tdSet);
+                                                idxFlag++;
+                                            }
+                                        }
+                                        tSetBody.appendChild(trSub);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
                 divSecondTable.appendChild(secondTable);

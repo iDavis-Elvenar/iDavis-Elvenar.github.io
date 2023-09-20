@@ -138,7 +138,7 @@ function handleBuildingsJSON() {
                                             break;
                                         }
                                     }
-                                    for (let stage = 0; stage < 10; stage++) {
+                                    for (let stage = 0; stage < evoObject['stages'].length; stage++) {
                                         //console.log(b['id'])
                                         for (let prod = 0; prod < evoObject['stages'][stage]['products'].length; prod++) {
                                             if (evoObject['stages'][stage]['products'][prod].hasOwnProperty('goodId')) {
@@ -190,7 +190,7 @@ function handleBuildingsJSON() {
                                         } else {
                                             //NAJDI PRISLUSNY EVO
 
-                                            for (let stage = 0; stage < 10; stage++) {
+                                            for (let stage = 0; stage < evoObject['stages'].length; stage++) {
                                                 let stageString = stage.toString();
                                                 let numEvoProducts = evoObject['stages'][stage]['products'].length;
                                                 let usedEvoProducts = [];
