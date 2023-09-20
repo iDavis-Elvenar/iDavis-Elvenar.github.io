@@ -9,10 +9,10 @@ var eventStartDates = {
             "end_date": "__ _ 2023"
         }
     },
-    "merge_dwarvengame_xxiii_": {//dwarven game 28.9. - 18.10.
+    "merge_dwarvengame_xxiii_": {
         "live": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "September 28th 2023",
+            "end_date": "October 18th 2023"
         },
         "beta": {
             "start_date": "September 7th 2023",
