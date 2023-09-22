@@ -20,7 +20,7 @@ var dailyPrizes = {
         "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
         "frog_grr_5_{1}",
         "A_Evt_Car_XX_Dwarven_Wagon",
-        //,
+        "frog_runeshards2_{2}",
         "INS_KP_{15}",
         "A_Evt_Summer_XVIII_Monopteros",
         "INS_UNIT_MC_MA_10",
