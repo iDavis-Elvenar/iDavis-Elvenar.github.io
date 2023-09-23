@@ -41,7 +41,7 @@ function displayLocalization(localization) {
     // Update the entire URL including the hash to include the localization
     window.location.href = `#localization=${localization}`;
     
-    $.get(`database/community-knowledge/${localization}/_threads.json`)
+    $.get(`database/community-knowledge/${localization}/threads.json`)
         .done(threads => {
             for (var thread of threads) {
                 div.innerHTML += `<li><a href="#" onclick="displayThread('${localization}', '${thread}', '${1}')">${thread}</a></li>`;
