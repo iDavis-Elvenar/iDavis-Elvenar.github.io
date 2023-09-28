@@ -1,5 +1,5 @@
 var eventStartDates = { 
-    "tile_mistyforest_xxiii_": {//Whispers of the Soul 24.10. - 10.11.
+    "tile_mistyforest_xxiii_": {//Whispers of the Soul 24.10. - 10.11., Winter Magic 5.12. - 6.1.
         "live": {
             "start_date": "__ _ 2023",
             "end_date": "__ _ 2023"

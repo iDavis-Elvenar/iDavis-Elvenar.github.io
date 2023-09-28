@@ -161,7 +161,7 @@ var notifications = {
         "style":"warning",
         "duration":60,
         "active":true,
-        "priority":110
+        "priority":80
     },
     "15":{  // SHORTS TEASER
         "id":15,
