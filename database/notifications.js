@@ -160,7 +160,7 @@ var notifications = {
         "repeatAfter":432000,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":80
     },
     "15":{  // SHORTS TEASER
