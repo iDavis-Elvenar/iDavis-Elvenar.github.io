@@ -5,8 +5,8 @@ var eventStartDates = {
             "end_date": "__ _ 2023"
         },
         "beta": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "October 2nd 2023",
+            "end_date": "October 19th 2023"
         }
     },
     "merge_dwarvengame_xxiii_": {

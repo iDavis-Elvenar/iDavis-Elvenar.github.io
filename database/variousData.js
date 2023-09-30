@@ -91,6 +91,7 @@ let eventBanners = {
     "scroll_aquatic_xxiii_": "https://i.ibb.co/f25F5qm/EL-akcia-j-l-2023-banner.png",
     "theater_zodiac_xxiii_": "https://i.ibb.co/C7brfKY/EL-akcia-jese-2023-banner.png",
     "merge_dwarvengame_xxiii_": "https://i.ibb.co/PGqwyR8/EL-akcia-september-2023-banner.png",
+    "tile_mistyforest_xxiii_": "https://i.ibb.co/dG7D0yQ/EL-akcia-halloween-2023-banner.png",
 }
 
 let eventVideos = {
@@ -138,6 +139,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "scroll_aquatic_xxiii_": "06/26/2023",
     "theater_zodiac_xxiii_": "08/08/2023",
     "merge_dwarvengame_xxiii_": "09/07/2023",
+    "tile_mistyforest_xxiii_": "10/02/2023",
 }
 
 let questsLinks = {
@@ -329,9 +331,9 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "tile_mistyforest_xxiii_": [
-        {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html", "releaseDate":"10/01/2022"},
-        {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/FK9Wd7N/event-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 12px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html", "releaseDate":"10/03/2022"},
-        {"id":"playground", "name":"Playground", "img":"https://i.ibb.co/CWpxB38/tab-playground.png", "img_width":"31", "img_style":"margin-left: -1px; margin-right: 9px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html", "releaseDate":"02/19/2023"},
+        {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
+        {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/FK9Wd7N/event-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 12px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},
+        {"id":"playground", "name":"Playground", "img":"https://i.ibb.co/CWpxB38/tab-playground.png", "img_width":"31", "img_style":"margin-left: -1px; margin-right: 9px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html", "releaseDate":"10/10/2023"},
     ],
     "merge_dwarvengame_xxiii_": [
         {"id":"board", "name":"Board", "img":"https://i.ibb.co/5vGFxky/a4.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"09/06/2023"},
