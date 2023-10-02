@@ -347,7 +347,7 @@ var goods_icons = {
     "orcs_shroomofwisdom": "<img src='https://i.ibb.co/R6sPM2C/orcs-shroomofwisdom.png' title='Shroom of Wisdom'><br>",
     "orcs_loot": "<img src='https://i.ibb.co/6PpfWCr/orcs-loot.png' title='Loot'><br>",
     "fairies_ambrosia": "<img src='https://i.ibb.co/RNYFPCM/fairies-ambrosia.png' title='Ambrosia'><br>",
-    "fairies_soma": "<img src='https://i.ibb.co/74jb2FK/fairies-soma.png' title='Sunflowers'><br>",
+    "fairies_soma": "<img src='https://i.ibb.co/HhNn4wN/fairies-soma.png' title='Night Essence'><br>",
     "dwarfs_granite": "<img src='https://i.ibb.co/Y7V2ncW/dwarfs-granite.png' title='Granite'><br>",
     "dwarfs_copper": "<img src='https://i.ibb.co/yPP187V/dwarfs-copper.png' title='Copper'><br>",
     "ch21_prey": "<img src='https://i.ibb.co/yQzzDV9/ch21-prey.png' title='Prey'><br>",
