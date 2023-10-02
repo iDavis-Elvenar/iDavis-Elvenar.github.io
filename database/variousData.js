@@ -161,6 +161,7 @@ let questsLinks = {
     "scroll_aquatic_xxiii_": "bit.ly/AquaSplendor2023",
     "theater_zodiac_xxiii_": "bit.ly/AutumnZodiac2023",
     "merge_dwarvengame_xxiii_": "bit.ly/GatewayIntoThePast2023",
+    "tile_mistyforest_xxiii_": "bit.ly/WhispersOfTheSoul2023",
 }
 
 let eventsDurations = {
@@ -182,6 +183,7 @@ let eventsDurations = {
     "scroll_aquatic_xxiii_": 19,
     "theater_zodiac_xxiii_": 22,
     "merge_dwarvengame_xxiii_": 20,
+    "tile_mistyforest_xxiii_": 17,
 }
 
 let evoUpgradeCosts = {
