@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "tile_mistyforest_xxiii_": [
-
+        "A_Evt_October_XXII_Creepy_Clinic",
     ],
 
     "merge_dwarvengame_xxiii_": [
