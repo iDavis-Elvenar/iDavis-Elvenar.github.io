@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_October_XXII_Creepy_Clinic",
         "A_Evt_Tile_Mistyforest_XXIII_Wraith_Unicorn",
         "INS_KP_{15}",
+        "A_Evt_October_XX_Scarriage",
     ],
 
     "merge_dwarvengame_xxiii_": [
