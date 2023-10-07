@@ -6,6 +6,7 @@ var dailyPrizes = {
         "INS_KP_{15}",
         "A_Evt_October_XX_Scarriage",
         "INS_REV_SQD_50",
+        "A_Evt_October_XX_Scarecrow",
     ],
 
     "merge_dwarvengame_xxiii_": [
