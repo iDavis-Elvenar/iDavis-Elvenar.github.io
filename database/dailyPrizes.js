@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_October_XX_Scarriage",
         "INS_REV_SQD_50",
         "A_Evt_October_XX_Scarecrow",
+        "A_Evt_Tile_Mistyforest_XXIII_HideandSeek_Hollows",
     ],
 
     "merge_dwarvengame_xxiii_": [
