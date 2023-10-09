@@ -335,7 +335,7 @@ var additionalTabsEvents = {
     "tile_mistyforest_xxiii_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
         {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/FK9Wd7N/event-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 12px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},
-        {"id":"playground", "name":"Playground", "img":"https://i.ibb.co/CWpxB38/tab-playground.png", "img_width":"31", "img_style":"margin-left: -1px; margin-right: 9px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html", "releaseDate":"10/10/2023"},
+        {"id":"playground", "name":"Playground", "img":"https://i.ibb.co/CWpxB38/tab-playground.png", "img_width":"31", "img_style":"margin-left: -1px; margin-right: 9px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html", "releaseDate":"10/12/2023"},
     ],
     "merge_dwarvengame_xxiii_": [
         {"id":"board", "name":"Board", "img":"https://i.ibb.co/5vGFxky/a4.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"09/06/2023"},
