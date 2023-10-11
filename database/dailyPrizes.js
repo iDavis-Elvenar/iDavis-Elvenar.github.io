@@ -10,6 +10,7 @@ var dailyPrizes = {
         "A_Evt_Tile_Mistyforest_XXIII_HideandSeek_Hollows",
         "INS_KP_AW_20",
         "A_Evt_2Halloween_Xvii",
+        "INS_UNIT_TG_LR_5",
     ],
 
     "merge_dwarvengame_xxiii_": [
