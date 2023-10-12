@@ -1,8 +1,8 @@
 var eventStartDates = { 
-    "tile_mistyforest_xxiii_": {//Whispers of the Soul 24.10. - 10.11., Winter Magic 5.12. - 6.1.
+    "tile_mistyforest_xxiii_": {//Winter Magic 5.12. - 6.1.
         "live": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+            "start_date": "October 24th 2023",
+            "end_date": "November 10th 2023"
         },
         "beta": {
             "start_date": "October 2nd 2023",
@@ -166,9 +166,9 @@ var faStartDates = {  //augustove 17.8. - 23.8., novembrove 16.11. - 22.11. (pod
 
 var seasonStartDates = {
     "october_xxiii_": {
-        "live": {  //podla at: 26.10. - 9.1.
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2023"
+        "live": {
+            "start_date": "October 26th 2023",
+            "end_date": "January 9th 2024"
         },
         "beta": {
             "start_date": "September 14th 2023",

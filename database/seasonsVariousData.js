@@ -15,7 +15,7 @@ var seasonsBanners = {
     "december_xxii_" : "https://i.ibb.co/XDx9ZMt/Season-Season-of-Dreams-Banner.png",
     "april_xxiii_": "https://i.ibb.co/Hdm0FzN/season-joy-banner.png",
     "july_xxiii_": "https://i.ibb.co/kxdBh0Y/season-triumph-banner.png",
-    "october_xxiii_": "https://i.ibb.co/vX4LHJ5/october-xxiii-banner.png",
+    "october_xxiii_": "https://i.ibb.co/PW2VRDk/october-xxiii-banner.jpg",
 }
 
 var seasonInfoIcons = {
