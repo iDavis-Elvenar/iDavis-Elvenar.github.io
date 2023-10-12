@@ -11,6 +11,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_2Halloween_Xvii",
         "INS_UNIT_TG_LM_5",
+        "A_Evt_Tile_Mistyforest_XXIII_Pumpkins_Head_Rack",
     ],
 
     "merge_dwarvengame_xxiii_": [
