@@ -13,6 +13,7 @@ var dailyPrizes = {
         "INS_UNIT_TG_LM_5",
         "A_Evt_Tile_Mistyforest_XXIII_Pumpkins_Head_Rack",
         "frog_runeshards2_{2}",
+        "A_Evt_October_XX_Smiling_Pumpkins",
     ],
 
     "merge_dwarvengame_xxiii_": [
