@@ -15,6 +15,7 @@ var dailyPrizes = {
         "frog_runeshards2_{2}",
         "A_Evt_October_XX_Smiling_Pumpkins",
         "A_Evt_October_XX_Gargoyle_Fountain",
+        "A_Evt_October_XXI_Spirit_Moose_Family",
     ],
 
     "merge_dwarvengame_xxiii_": [
