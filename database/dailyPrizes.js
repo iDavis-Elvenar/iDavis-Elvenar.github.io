@@ -14,6 +14,8 @@ var dailyPrizes = {
         "A_Evt_Tile_Mistyforest_XXIII_Pumpkins_Head_Rack",
         "frog_runeshards2_{2}",
         "A_Evt_October_XX_Smiling_Pumpkins",
+        "A_Evt_October_XX_Gargoyle_Fountain",
+        "A_Evt_October_XXI_Spirit_Moose_Family",
     ],
 
     "merge_dwarvengame_xxiii_": [
