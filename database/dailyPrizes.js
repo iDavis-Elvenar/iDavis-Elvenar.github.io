@@ -16,6 +16,7 @@ var dailyPrizes = {
         "A_Evt_October_XX_Smiling_Pumpkins",
         "A_Evt_October_XX_Gargoyle_Fountain",
         "A_Evt_October_XXI_Spirit_Moose_Family",
+        "INS_UNIT_TG_MA_5",
     ],
 
     "merge_dwarvengame_xxiii_": [
