@@ -1,8 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2023" : [
-            ["Whispers of the Soul","tile_mistyforest_xxiii_",false,false],
-            ["A Gateway into the Past","merge_dwarvengame_xxiii_",true,false],
+            ["Whispers of the Soul","tile_mistyforest_xxiii_",true,false],
+            ["A Gateway into the Past","merge_dwarvengame_xxiii_",false,false],
             ["Autumn Zodiac","theater_zodiac_xxiii_",false,false],
             ["Aqua Splendor","scroll_aquatic_xxiii_",false,false],
             ["Floral Awakening","shuffle_garden_xxiii_",false,false],
@@ -53,8 +53,8 @@ var allEvents = {
     },
     "all_events" : {
         "2023" : [
-            ["Whispers of the Soul","tile_mistyforest_xxiii_",false,false],
-            ["A Gateway into the Past","merge_dwarvengame_xxiii_",true,false],
+            ["Whispers of the Soul","tile_mistyforest_xxiii_",true,false],
+            ["A Gateway into the Past","merge_dwarvengame_xxiii_",false,false],
             ["Autumn Zodiac","theater_zodiac_xxiii_",false,false],
             ["Aqua Splendor","scroll_aquatic_xxiii_",false,false],
             ["Floral Awakening","shuffle_garden_xxiii_",false,false],
