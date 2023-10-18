@@ -367,6 +367,9 @@
   var renderer = null;
   var dragHandler = null;
   var toolShop = null;
+
+  prepSetAlertElements();
+  create_exception("Loading...", 10000, 'primary');
   
   for (var i = 0; i < images.length; i++) {
     var img = document.createElement('img');
@@ -381,6 +384,7 @@
         toolShop = new ToolShop();
         dragHandler.writeHighscore();
         prepSetAlertElements();
+        create_exception("Playground Generated!", 3, 'success');
       }
     }
     document.getElementById("column_with_tables").appendChild(img);
