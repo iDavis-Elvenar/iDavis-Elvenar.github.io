@@ -140,6 +140,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "theater_zodiac_xxiii_": "08/08/2023",
     "merge_dwarvengame_xxiii_": "09/07/2023",
     "tile_mistyforest_xxiii_": "10/02/2023",
+    "shuffle_postal_xxiii_": "12/01/2023",
 }
 
 let questsLinks = {
@@ -162,6 +163,7 @@ let questsLinks = {
     "theater_zodiac_xxiii_": "bit.ly/AutumnZodiac2023",
     "merge_dwarvengame_xxiii_": "bit.ly/GatewayIntoThePast2023",
     "tile_mistyforest_xxiii_": "bit.ly/WhispersOfTheSoul2023",
+    "shuffle_postal_xxiii_": "bit.ly/WinterMagic2023",
 }
 
 let eventsDurations = {
@@ -224,6 +226,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent": "1x Tinlug, The Star Serpent Artifact",
     "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus": "1x Solunar Nexus Artifact",
     "A_Evt_Evo_Set_Tile_Mistyforest_XXIII_Soul_Lab": "1x Soul Lab Artifact",
+    "A_Evt_Evo_Shuffle_Postal_XXIII_Hearthbloom": "1x Hearthbloom Artifact",
 }
 
 var feedingEffectsDescriptions = {
@@ -319,6 +322,7 @@ var eventsInfoIcons = {
     "theater_zodiac_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "merge_dwarvengame_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "tile_mistyforest_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "shuffle_postal_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {

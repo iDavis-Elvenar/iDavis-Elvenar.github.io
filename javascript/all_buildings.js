@@ -38,6 +38,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent": 9,
     "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus": 9,
     "A_Evt_Evo_Set_Tile_Mistyforest_XXIII_Soul_Lab": 4,
+    "A_Evt_Evo_Shuffle_Postal_XXIII_Hearthbloom": 9,
 }
 
 function setAndReload(id) {
