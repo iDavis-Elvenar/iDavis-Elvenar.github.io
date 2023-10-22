@@ -634,7 +634,6 @@ background-color: #b9881e;
     border: 1px solid #e4d3af;
     background-color: #e8d7b2;
     color: #7a5e49;
-    font-weight: bold;
     text-align: center;
     font-size: 15px;
     line-height: 1.5;
@@ -644,6 +643,7 @@ background-color: #b9881e;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     width: 50px;
+    font-weight: bold;
 }
 
 .switch-present {
@@ -654,6 +654,7 @@ background-color: #b9881e;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     width: 50px;
+    font-weight: bold;
 }
 
 .nav-panel {

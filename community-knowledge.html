@@ -131,7 +131,7 @@
         <script>
             document.getElementById("home").innerHTML += " "+langUI("Home");
             document.getElementById("all_buildings").innerHTML = `<img src="https://i.ibb.co/NC00fM1/all-buildings.png" style="width: 24px; margin-bottom: 4px;"> ${langUI("All Buildings")}`;
-            document.getElementById("all_events").innerHTML = `&#x203A; <img src="https://i.ibb.co/QkJ7qzP/all-events.png" style="width: 27px; margin-bottom: 1px;"> ${langUI("All Events")} &#x2039;`;
+            document.getElementById("all_events").innerHTML = `<img src="https://i.ibb.co/QkJ7qzP/all-events.png" style="width: 27px; margin-bottom: 1px;"> ${langUI("All Events")}`;
             document.getElementById("navbar_more").innerHTML = langUI("More");
             document.getElementById("navbar_guestraces").innerHTML = `<img src="https://i.ibb.co/d40mvg2/all-guestraces.png" style="width: 25px; margin-bottom: 4px;"> ${langUI("All Guest Races")}`;
 
@@ -157,7 +157,7 @@
 
 <div style="padding-top: 59px;" id="calendar_top">
     <div style="width: 100%;">
-        <div class="container-thick center bg-skin_astable_background rounded-bottom75" style="width: 100%; padding-top: 20px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px;">
+        <div class="container-thick center bg-skin_astable_background rounded-bottom75" style="width: 100%; padding-top: 20px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px; box-shadow: 3px 3px 3px 0px rgba(128,128,128,0.4);">
             <div class="row">
                 <div class="col-sm">
                     <div class="row center" style="height: 33%; vertical-align: middle">
@@ -179,21 +179,7 @@
     </div>
 </div>
 
-<center><button class="btn btn-sm btn-astable btn-outline-astable toggle-bar" id="side_bar_button" style="margin-top: 10px; margin-bottom: -10px;">▲ Hide Panel</button></center>
-
 <script>
-
-    if ($(window).width() > 990) {
-        document.getElementById("side_bar_button").style.display = "none";
-    }
-
-    $('.hide-show').show();
-    $('.toggle-bar').on('click',function() {					
-        $(this).text(function(_,currentText){
-            return currentText == "▲ Hide Panel" ? "▼ Show Panel" : "▲ Hide Panel";
-        });
-        $('.hide-show').toggle('slow');
-    });
     
     //document.getElementById("calendar_top").innerHTML += langUI("Calendar");
     //document.getElementById("quests_left_panel").innerHTML += langUI("Quests");

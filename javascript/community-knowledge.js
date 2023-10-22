@@ -101,6 +101,9 @@ function displayThread(localization, thread, page, numOfPages) {
     var divContent = document.createElement('div');
     divContent.className = "div-content";
 
+    var pageSwitchContainerUpper = document.createElement('div');
+    pageSwitchContainerUpper.className = "page-switch-container";
+
     history.pushState(null, null, `community-knowledge.html?loc=${localization}&thread=${thread}&page=${page}`);
 
     var maxPages = null;
@@ -143,32 +146,38 @@ function displayThread(localization, thread, page, numOfPages) {
                                 }
                             }
                             // this separate function call is necessary to make sure the maxPages variable is initialized at the time it is being accessed
-                            appendCreatedThreadData(localization, thread, page, maxPages, navPanel, div, divContent, h2);
+                            appendCreatedThreadData(localization, thread, page, maxPages, navPanel, div, divContent, h2, pageSwitchContainerUpper);
                         });
                 });
         });
 }
 
-function appendCreatedThreadData(localization, thread, page, maxPages, navPanel, div, divContent, h2) {
+function appendCreatedThreadData(localization, thread, page, maxPages, navPanel, div, divContent, h2, pageSwitchContainerUpper) {
     var pageSwitchContainer = document.createElement('div');
     pageSwitchContainer.className = "page-switch-container";
 
     var pageSwitch = document.createElement('div');
+    if (parseInt(page) >= 3) {
+        pageSwitch.innerHTML += `<div class="switch-box switch-previous"><a href="#" class="text-link" onclick="displayThread('${localization}', '${thread}', '${1}')">${1}</a></div>`;
+    }
     if (parseInt(page) > 1) {
-        pageSwitch.innerHTML += `<div class="switch-box switch-previous"><a href="#" onclick="displayThread('${localization}', '${thread}', '${parseInt(page) - 1}')">< ${parseInt(page) - 1}</a></div>`;
+        pageSwitch.innerHTML += `<div class="switch-box switch-previous"><a href="#" class="text-link" onclick="displayThread('${localization}', '${thread}', '${parseInt(page) - 1}')">< ${parseInt(page) - 1}</a></div>`;
     }
-    else {
-        pageSwitch.innerHTML += `<div class="switch-box switch-previous">&nbsp;</div>`;
-    }
+
     pageSwitch.innerHTML += `<div class="switch-box switch-present">Page ${parseInt(page)}</div>`;
-    
+
     if (page < maxPages) {
-        pageSwitch.innerHTML += `<div class="switch-box switch-next"><a href="#" onclick="displayThread('${localization}', '${thread}', '${parseInt(page) + 1}')">${parseInt(page) + 1} ></a></div>`;
+        pageSwitch.innerHTML += `<div class="switch-box switch-next"><a href="#" class="text-link" onclick="displayThread('${localization}', '${thread}', '${parseInt(page) + 1}')">${parseInt(page) + 1} ></a></div>`;
+    }
+    if (parseInt(page) <= maxPages - 2) {
+        pageSwitch.innerHTML += `<div class="switch-box switch-next"><a href="#" class="text-link" onclick="displayThread('${localization}', '${thread}', '${maxPages}')">${maxPages}</a></div>`;
     }
     
+    pageSwitchContainerUpper.appendChild(pageSwitch);
     pageSwitchContainer.appendChild(pageSwitch);
 
     div.appendChild(h2);
+    //div.appendChild(pageSwitchContainerUpper);
     div.appendChild(divContent);
     div.appendChild(pageSwitchContainer);
 
