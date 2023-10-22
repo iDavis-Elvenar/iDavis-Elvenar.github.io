@@ -676,3 +676,7 @@ background-color: #b9881e;
 .text-center { 
     text-align: center; 
 }
+
+.text-brown {
+    color: #5f4430 !important;
+}
