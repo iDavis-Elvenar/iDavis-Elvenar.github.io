@@ -10,7 +10,7 @@ function displayMainPage() {
 
     history.pushState(null, null, `community-knowledge.html`);
 
-    var localizations = [["cz", "Czech"], ["de", "German"]];
+    var localizations = [["cz", "Czech"], ["beta", "Beta"], ["en", "English"], ["de", "German"], ["pl", "Polish"]];
     for (var localization of localizations) {
         var section = document.createElement('section');
 
@@ -37,7 +37,7 @@ function displayMainPage() {
 function displayLocalization(localization) {
     document.getElementById("column_with_tables").innerHTML = "";
 
-    var localizations = {"cz": "Czech", "de": "German"};
+    var localizations = {"cz": "Czech", "beta": "Beta", "en": "English", "de": "German", "pl": "Polish"};
     var navPanel = document.createElement('div');
     navPanel.className = "nav-panel";
     navPanel.innerHTML = `<a href="#" class="text-link" onclick="displayMainPage()">Community knowledge</a> > ${localizations[localization]}`;
@@ -84,10 +84,10 @@ function displayLocalization(localization) {
     document.getElementById("column_with_tables").appendChild(div);
 }
 
-function displayThread(localization, thread, page, numOfPages) {
+function displayThread(localization, thread, page) {
     document.getElementById("column_with_tables").innerHTML = "";
 
-    var localizations = {"cz": "Czech", "de": "German"};
+    var localizations = {"cz": "Czech", "beta": "Beta", "en": "English", "de": "German", "pl": "Polish"};
     var navPanel = document.createElement('div');
     navPanel.className = "nav-panel";
     navPanel.innerHTML = `<a href="#" class="text-link" onclick="displayMainPage()">Community knowledge</a>
