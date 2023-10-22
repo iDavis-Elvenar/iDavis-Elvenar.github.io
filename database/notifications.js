@@ -137,16 +137,16 @@ var notifications = {
     },
     "13":{  // NEW FEATURE ON THE WEBSITE #2
         "id":13,
-        "text":`<h4 class="alert-heading">Enter the Whispers of the Soul event with my newest Playground!</h4>
-        <p></p>
+        "text":`<h4 class="alert-heading">Begin the Whispers of the Soul event with my newest Playground! <img src="https://i.ibb.co/CWpxB38/tab-playground.png" style="width: 40px;"></h4>
+        <p>I'm introducing the Playground for the <b>Whispers of the Soul</b> event! This feature on my website simulates the well-known mechanic we know from the Halloween event!</p>
+        <center><img src="https://i.ibb.co/1bTX0RL/playground-screen.png" style="width: 30%"></center>
         <hr>
-        <p>You can access the improved Quest Lists on the <b>All Events</b> subpage. If you have any sort of feedback about this
-        feature, I will be more than happy if you leave me a response in my newest survey:</p>
-        <p style="text-align: center;"><h4 style="text-align: center;">Visit the newest survey <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGH9KQFfz-isHeiZ7FOFcsPm-be0y2_p8tI5O29vlaILgLMw/viewform" target="_blank" class="alert-link">here</a>!`,
+        <p>You can access the Playground on the <b>All Events</b> subpage or directly <a href="https://idavis-elvenar.com/events.html#playground-tile_mistyforest_xxiii_" target="_blank" class="alert-link">here</a>! The Playground is a practise tool
+        that will not only help you better understand the way this event works, but will also help you better navigate the misty forest and improve the efficiency of using your tools. You can also test the new pricing of tools and find which one works for you the best!</p>`,
         "repeatAfter":259200,
         "style":"warning",
         "duration":70,
-        "active":false,
+        "active":true,
         "priority":50
     },
     "14":{  // FEEDBACK SURVEY
