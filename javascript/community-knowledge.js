@@ -56,6 +56,8 @@ function displayLocalization(localization) {
         .done(threads => {
             for (var thread of threads) {
                 thread[0] = thread[0].replaceAll(".", "");
+                const invalidCharsPattern = /[\\/:*?"<>|.]/g;
+                thread[0] = thread[0].replace(invalidCharsPattern, '_');
                 var section = document.createElement('section');
 
                 var divIcon = document.createElement('div');
