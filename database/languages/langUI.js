@@ -99,6 +99,7 @@ let ui = {
         "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "Toto je preferovaný spôsob zdieľania úloh. Pokiaľ chcete uchovať úlohy pre seba a prevziať kópiu aktuálnej verzie, môžete využiť tlačidlo na stiahnutie dole pod zoznamom úloh.",
         "Type the number of servers you play on: ": "Zadajte počet serverov, na ktorých hráte: ",
         "Reward": "Odmena",
+        "Replies:": "Odpovědí:",
         //SETS
         "Winter Set": "Zimní sada",
         "Phoenix Cult Set": "Sada Kultu fénixe",
@@ -250,6 +251,7 @@ let ui = {
         "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "Dies ist die bevorzugte Art, Quests zu teilen. Wenn Sie die Quests für sich selbst speichern und eine Kopie der aktuellen Version nehmen möchten, können Sie die Download-Schaltfläche unten auf der Seite verwenden.",
         "Type the number of servers you play on: ": "Geben Sie die Anzahl der Server ein, auf denen Sie spielen: ",
         "Reward": "Belohnung",
+        "Replies:": "Antworten:",
         //SETS
         "Winter Set": "Winter-Set",
         "Phoenix Cult Set": "Phönixkult-Set",
@@ -401,6 +403,7 @@ let ui = {
         "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "C'est la manière préférée de partager des quêtes. Si vous souhaitez stocker les quêtes pour vous-même et prendre une copie de la version actuelle, vous pouvez utiliser le bouton Télécharger en bas de la page.",
         "Type the number of servers you play on: ": "Tapez le nombre de serveurs sur lesquels vous jouez: ",
         "Reward": "Récompense",
+        "Replies:": "Réponses:",
         //SETS
         "Winter Set": "Set hivernal",
         "Phoenix Cult Set": "Set du culte du phénix",
@@ -552,6 +555,7 @@ let ui = {
         "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.",
         "Type the number of servers you play on: ": "Type the number of servers you play on: ",
         "Reward": "Jutalom",
+        "Replies:": "Válaszok:",
         //SETS
         "Winter Set": "Téli készlet",
         "Phoenix Cult Set": "Főnix-kultusz készlet",
@@ -703,6 +707,7 @@ let ui = {
         "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "Jest to preferowany sposób udostępniania zadań. Jeśli chcesz zachować zadania dla siebie i pobrać kopię aktualnej wersji, możesz użyć przycisku Pobierz na dole strony.",
         "Type the number of servers you play on: ": "Wpisz liczbę serwerów, na których grasz: ",
         "Reward": "Nagroda",
+        "Replies:": "Odpowiedzi:",
         //SETS
         "Winter Set": "Zimowy zestaw",
         "Phoenix Cult Set": "Zestaw Kultu Feniksa",
@@ -854,6 +859,7 @@ let ui = {
         "This is the preferred way of sharing quests. If you would like to store the quests for yourself and take a copy of the current version, you can use the Download button at the bottom of the page.": "Это предпочтительный способ обмена квестами. Если вы хотите сохранить квесты для себя и взять копию текущей версии, вы можете воспользоваться кнопкой «Скачать» внизу страницы.",
         "Type the number of servers you play on: ": "Введите количество серверов, на которых вы играете: ",
         "Reward": "Награда",
+        "Replies:": "Ответы:",
         //SETS
         "Winter Set": "Зимний набор",
         "Phoenix Cult Set": "Набор «Культ Феникса»",

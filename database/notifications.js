@@ -137,8 +137,8 @@ var notifications = {
     },
     "13":{  // NEW FEATURE ON THE WEBSITE #2
         "id":13,
-        "text":`<h4 class="alert-heading">Quest Lists Reimagined!</h4>
-        <p>The Quest Lists for events have received a massive overhaul! They have now better graphical visual, multi-server support, improved task recognition and so much more!</p>
+        "text":`<h4 class="alert-heading">Enter the Whispers of the Soul event with my newest Playground!</h4>
+        <p></p>
         <hr>
         <p>You can access the improved Quest Lists on the <b>All Events</b> subpage. If you have any sort of feedback about this
         feature, I will be more than happy if you leave me a response in my newest survey:</p>
