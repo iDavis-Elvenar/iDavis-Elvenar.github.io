@@ -375,10 +375,15 @@ function displayWaypoints() {
         return;
     }
 
-    if (faVersions.hasOwnProperty(getSelectedFa())) {
-        let h7 = document.createElement('h7');
-        h7.innerHTML = `<center>The version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Note that there might be some differences compared with the previous adventure of this version.</center><br>`;
+    let h7 = document.createElement('h7');
+    if (notCertainVersionsYet.includes(getSelectedFa())) {
+        h7.innerHTML = `<center>Currently scheduled version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Note that it might still change until the FA begins on Beta. I will update this page if necessary.</center><br>`;
         parent.appendChild(h7);
+    } else {
+        if (faVersions.hasOwnProperty(getSelectedFa())) {
+            h7.innerHTML = `<center>The version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Please be aware that this version does not have to have exactly the same layout as the last one. This page contains the most current layout of it.</center><br>`;
+            parent.appendChild(h7);
+        }
     }
 
     for (let map = 1; map <= 3; map++) {
