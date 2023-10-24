@@ -680,3 +680,7 @@ background-color: #b9881e;
 .text-brown {
     color: #5f4430 !important;
 }
+
+.bg-skin_ck_background {
+    background-color: rgba(236, 222, 192, 0.5) !important;
+}
