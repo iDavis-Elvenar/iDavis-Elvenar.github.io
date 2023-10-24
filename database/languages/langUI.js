@@ -118,6 +118,7 @@ let ui = {
         "Dwarven Citadel": "Trpasličí citadela",
         "Ancient Promise": "Starodávný slib",
         //EVENTS
+        "Whispers of the Soul": "Šepoty duše",
         "Aqua Splendor": "Krásy mořského světa",
         "Floral Awakening": "Květinové probuzení",
         "Mama Juul's Fusion Feast": "Hostina mámy Juul",
@@ -270,6 +271,7 @@ let ui = {
         "Dwarven Citadel": "Zwergen-Zitadelle",
         "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
+        "Whispers of the Soul": "Flüstern der Seele",
         "Aqua Splendor": "Aquatische Pracht",
         "Floral Awakening": "Florales Erwachen",
         "Mama Juul's Fusion Feast": "Mama Juuls Reiseküche",
@@ -422,6 +424,7 @@ let ui = {
         "Dwarven Citadel": "Citadelle naine",
         "Ancient Promise": "Ancienne promesse",
         //EVENTS
+        "Whispers of the Soul": "Les Chuchotements de l'âme",
         "Aqua Splendor": "Aqua Splendor",
         "Floral Awakening": "Eveil floral",
         "Mama Juul's Fusion Feast": "Le Festin de Fusion de Mama Juul",
@@ -574,6 +577,7 @@ let ui = {
         "Dwarven Citadel": "Törp Citadella",
         "Ancient Promise": "Ősi Ígéret",
         //EVENTS
+        "Whispers of the Soul": "A Lélek Suttogásai",
         "Aqua Splendor": "Vízi Ragyogás",
         "Floral Awakening": "Virágos Ébredés",
         "Mama Juul's Fusion Feast": "Juul Mama Fúziós Ünnepe",
@@ -726,6 +730,7 @@ let ui = {
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
+        "Whispers of the Soul": "Szepty duszy",
         "Aqua Splendor": "Wodny splendor",
         "Floral Awakening": "Kwiatowe Przebudzenie",
         "Mama Juul's Fusion Feast": "Uczta w stylu fusion Mamy Juul",
@@ -878,6 +883,7 @@ let ui = {
         "Dwarven Citadel": "Гномья цитадель",
         "Ancient Promise": "Древнее обещание",
         //EVENTS
+        "Whispers of the Soul": "Шепот души",
         "Aqua Splendor": "Морское великолепие",
         "Floral Awakening": "Цветочное пробуждение",
         "Mama Juul's Fusion Feast": "Передвижная кухня Джуул",
