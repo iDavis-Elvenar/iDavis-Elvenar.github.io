@@ -1,4 +1,12 @@
 var images_buildings = {
+    "A_Evt_Shuffle_Postal_XXIII_Winter_Logs":"https://i.ibb.co/YcxFPJp/winter-logs.png",
+    "A_Evt_Shuffle_Postal_XXIII_Dancing_Blossom":"https://i.ibb.co/YphMXWp/dancing-blossom.png",
+    "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout":"https://i.ibb.co/Np9ZdL8/adaptation-workout.png",
+    "A_Evt_Exp_Shuffle_Postal_XXIII_Gleaming_Blocks":"https://i.ibb.co/qgsLyPd/gleaming-blocks.png",
+    "A_Evt_Exp_Shuffle_Postal_XXIII_Glacial_Blossom":"https://i.ibb.co/JqCZhRX/glacial-blossom.png",
+    "A_Evt_Exp_Shuffle_Postal_XXIII_Glittering_Baubles":"https://i.ibb.co/B3z79jZ/glittering-baubles.png",
+    "A_Evt_Evo_Shuffle_Postal_XXIII_Hearthbloom":"https://i.ibb.co/Lr3cyky/hearthbloom.png",
+    "A_Evt_BlackFriday_Phantom_Rose_Unicorn":"https://i.ibb.co/hVBJwSX/phantom-rose-unicorn.png",
     "A_Evt_Set_Tile_Mistyforest_XXIII_Endurance_Trials":"https://i.ibb.co/yNS89Hw/endurance-trials.png",
     "A_Evt_Set_Tile_Mistyforest_XXIII_Mirthful_Spirit":"https://i.ibb.co/74PrHSZ/mirthful-spirit.png",
     "A_Evt_Set_Tile_Mistyforest_XXIII_Spooky_Tag_Game":"https://i.ibb.co/mC5mM9p/spooky-tag-game.png",

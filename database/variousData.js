@@ -269,6 +269,9 @@ var iconsImages = {
     "goods_standard_refined":"https://i.ibb.co/bzCh4vp/goods-standard-precious.png",
     "goods_standard_precious":"https://i.ibb.co/G0N8gT6/goods-standard-refined.png",
     "money":"https://image.ibb.co/g5ErZq/money.png",
+    "spell_good_production_boost_bonus":"https://i.ibb.co/pxw4d8R/spell-good-production-boost-bonus.png",
+    "spell_production_boost_bonus":"https://i.ibb.co/Kqrv5pK/spell-production-boost-bonus.png",
+    "spell_neighborly_help_boost_bonus":"https://i.ibb.co/L6SRzsk/spell-neighborly-help-boost-bonus.png",
 }
 
 var iconsTitles = {
