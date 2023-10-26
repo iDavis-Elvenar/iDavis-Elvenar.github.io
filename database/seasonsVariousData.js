@@ -15,7 +15,7 @@ var seasonsBanners = {
     "december_xxii_" : "https://i.ibb.co/XDx9ZMt/Season-Season-of-Dreams-Banner.png",
     "april_xxiii_": "https://i.ibb.co/Hdm0FzN/season-joy-banner.png",
     "july_xxiii_": "https://i.ibb.co/kxdBh0Y/season-triumph-banner.png",
-    "october_xxiii_": "https://i.ibb.co/PW2VRDk/october-xxiii-banner.jpg",
+    "october_xxiii_": "https://i.ibb.co/xgc6Bpq/season-secrets-banner.png",
 }
 
 var seasonInfoIcons = {
@@ -50,7 +50,7 @@ var seasonsVideos = {
     "december_xxii_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
     "april_xxiii_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
     "july_xxiii_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
-    "october_xxiii_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
+    "october_xxiii_": "https://www.youtube.com/embed/BMuyNcwpymE?feature=share",
 }
 
 var seasonQuestsRewards = {
