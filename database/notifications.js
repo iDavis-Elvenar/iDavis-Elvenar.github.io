@@ -112,7 +112,7 @@ var notifications = {
         "repeatAfter":259200,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "11":{  // EVENTS SIMULTANEOUSLY - BETA PRIMARY
@@ -165,11 +165,11 @@ var notifications = {
     },
     "15":{  // SHORTS TEASER
         "id":15,
-        "text":`<h4 class="alert-heading">Something is descending upon Elvenar!</h4>
-  <p>Learn all about the upcoming event in the <b>All Events</b> and <b>All Buildings</b> pages.</p>
+        "text":`<h4 class="alert-heading">Sshh the Season of Secrets is here!</h4>
+  <p>Learn all about the newest season on the <a href="https://idavis-elvenar.com/seasons.html" class="alert-link">Seasons</a> page.</p>
   <hr>
   <p class="mb-0"><iframe class="center" width="315" height="560"
-    src="https://www.youtube.com/embed/pX_ArtFP-k8?feature=share"
+    src="https://www.youtube.com/embed/BMuyNcwpymE?feature=share"
     title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media;
     gyroscope; picture-in-picture;
@@ -181,7 +181,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"secondary",
         "duration":60,
-        "active":false,
+        "active":true,
         "priority":50
     },
 }
