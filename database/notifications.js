@@ -181,7 +181,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"secondary",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":50
     },
 }
