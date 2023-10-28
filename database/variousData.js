@@ -525,16 +525,16 @@ var moreNavbarContent = [
         }
     },
     // COMMUNITY KNOWLEDGE
-    /*{
+    {
         "className":    "dropdown-item text-dark",
         "href":         "community-knowledge.html",
         "id":           "navitem_community_knowledge",
         "innerHTML":    "Community Knowledge",
         "img": {
-            "src":      "https://cz.forum.elvenar.com/styles/game/icons/forum.png",
-            "style":    "width: 25px; margin-right: 6px; margin-bottom: 1px; margin-left: 0px;",
+            "src":      "https://i.ibb.co/TKwn0Cz/forum-scroll.png",
+            "style":    "width: 25px; margin-right: 5px; margin-bottom: 1px; margin-left: 1px;",
         }
-    },*/
+    },
     /*{
         "className":    "dropdown-item text-dark",
         "href":         "tournaments.html",

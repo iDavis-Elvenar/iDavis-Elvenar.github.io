@@ -146,7 +146,7 @@ var notifications = {
         "repeatAfter":259200,
         "style":"warning",
         "duration":70,
-        "active":true,
+        "active":false,
         "priority":50
     },
     "14":{  // FEEDBACK SURVEY
@@ -183,5 +183,22 @@ var notifications = {
         "duration":60,
         "active":false,
         "priority":50
+    },
+    "16":{  // NEW FEATURE ON THE WEBSITE #1
+        "id":16,
+        "text":`<h4 class="alert-heading">Introducing: Community Knowledge! <img src="https://i.ibb.co/TKwn0Cz/forum-scroll.png" style="width: 32px; margin-top: -7px;"></h4>
+        <hr>
+        <img src="https://i.ibb.co/48FYbWW/Fellowship-banner.png" class="center" style="width: 75%; max-width: 600px;">
+        <p>Exciting News! The <b>Community Knowledge</b> feature is now available on my website! Dive in, explore a wealth of valuable information inside the repository of memories and learn how you can contribute
+        before the official Community Forums are permanently closed!</p>
+        <p style="text-align: center; margin-top: -20px;"><h4 style="text-align: center;">Visit the Community Knowledge <a href="https://idavis-elvenar.com/community-knowledge.html" target="_blank" class="alert-link">HERE</a>!</h4></p>
+        <hr>
+        <p>The Community Knowledge has entered its first phase - <b>Data Collection</b>! This project wouldn't be possible without your support, as our community spans across numerous countries and encompasses 
+        nearly 20 different languages. If you've ever used the official Forum, I would be delighted to receive your responses with the topics you'd like to see stored in the Community Knowledge! Learn more by clicking the above link to visit the page!</p>`,
+        "repeatAfter":86400,
+        "style":"warning",
+        "duration":50,
+        "active":true,
+        "priority":120
     },
 }

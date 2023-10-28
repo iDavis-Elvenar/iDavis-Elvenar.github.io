@@ -62,7 +62,7 @@ function displayLocalization(localization) {
 
                 var divIcon = document.createElement('div');
                 divIcon.className = "row-icon";
-                divIcon.innerHTML = "<img src=\"https://cz.forum.elvenar.com/styles/game/icons/forum.png\" />";
+                divIcon.innerHTML = "<img src=\"https://i.ibb.co/TKwn0Cz/forum-scroll.png\" />";
 
                 var divMain = document.createElement('div');
                 divMain.className = "row-main";
