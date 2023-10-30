@@ -75,12 +75,12 @@ var stageRewards = {
         ],
         [
             {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"2x Ancient Knowledge (20 KP)", "link":"", "description":``},
-            {"img":"", "text":"Coming Soon", "link":"", "description":``},
+            {"img":"https://i.ibb.co/kMLnsDm/rsk-evo.png", "text":"Tome of Soul Experiments", "link":"", "description":`Contains one reward of your choice:<br> <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Set_Tile_Mistyforest_XXIII_Lanterns_of_Contemplation" class="text-link font-weight-bold" target="_blank">Lanterns of Contemplation</a>, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Set_Tile_Mistyforest_XXIII_Endurance_Trials" class="text-link font-weight-bold" target="_blank">Endurance Trials</a>, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Set_Tile_Mistyforest_XXIII_Spooky_Tag_Game" class="text-link font-weight-bold" target="_blank">Spooky Tag Game</a>, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Set_Tile_Mistyforest_XXIII_Mirthful_Spirit" class="text-link font-weight-bold" target="_blank">Mirthful Spirit</a>, <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_Set_Tile_Mistyforest_XXIII_Soul_Lab" class="text-link font-weight-bold" target="_blank">Soul Lab</a> Artifact`},
             {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"15x Time Booster (30 min)", "link":"", "description":``},
         ],
         [
             {"img":"https://i.ibb.co/VpD8CvF/generic-ferris-wheel.png", "text":"Ferris Wheel Galore", "link":"https://idavis-elvenar.com/buildings.html#A_Evt_Generic_Ferris_Wheel", "description":``},
-            {"img":"", "text":"Coming Soon", "link":"", "description":``},
+            {"img":"https://i.ibb.co/R7hdRSs/artifact.png", "text":"Tinlug Artifact", "link":"", "description":`Artifact for evolving <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent" class="text-link font-weight-bold" target="_blank">Tinlug, The Star Serpent</a> to higher stages`},
             {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"25x Time Booster (45 min)", "link":"", "description":``},
         ]
     ],

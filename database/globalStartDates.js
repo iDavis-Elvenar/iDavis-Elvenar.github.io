@@ -118,8 +118,8 @@ var faStartDates = {  //augustove 17.8. - 23.8., novembrove 16.11. - 22.11. (pod
             "end_date": "__ _ 2023"
         },
         "beta": {
-            "start_date": "October 26th 2023",
-            "end_date": "November 2nd 2023"
+            "start_date": "November 3rd 2023",
+            "end_date": "November 10th 2023"
         }
     },
     "august_xxiii_": {
