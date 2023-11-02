@@ -2,6 +2,7 @@ var dailyPrizes = {
 
     "shuffle_postal_xxiii_": [
         "A_Evt_Shuffle_Postal_XXIII_Dancing_Blossom",
+        "A_Evt_December_XXII_Brisk_Market",
     ],
 
     "tile_mistyforest_xxiii_": [
