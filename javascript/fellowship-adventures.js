@@ -381,7 +381,7 @@ function displayWaypoints() {
         parent.appendChild(h7);
     } else {
         if (faVersions.hasOwnProperty(getSelectedFa())) {
-            h7.innerHTML = `<center>The version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Please be aware that this version does not have to have exactly the same layout as the last one. This page contains the most current layout of it.</center><br>`;
+            h7.innerHTML = `<center>The version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Please be aware that this version does not have to be exactly the same as the last time. This page contains its most accurate layout.</center><br>`;
             parent.appendChild(h7);
         }
     }
