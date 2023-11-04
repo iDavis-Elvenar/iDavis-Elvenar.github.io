@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_Shuffle_Postal_XXIII_Dancing_Blossom",
         "A_Evt_December_XXII_Brisk_Market",
         "INS_KP_{15}",
+        "A_Evt_December_XX_FrozenOwlCave",
     ],
 
     "tile_mistyforest_xxiii_": [
