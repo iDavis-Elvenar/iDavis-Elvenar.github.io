@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_December_XXII_Brisk_Market",
         "INS_KP_{15}",
         "A_Evt_December_XX_FrozenOwlCave",
+        "INS_REV_SQD_50",
     ],
 
     "tile_mistyforest_xxiii_": [
