@@ -7,6 +7,8 @@ var dailyPrizes = {
         "A_Evt_December_XX_FrozenOwlCave",
         "INS_REV_SQD_50",
         "A_Evt_Winter_1Tree",
+        //
+        "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout",
     ],
 
     "tile_mistyforest_xxiii_": [
