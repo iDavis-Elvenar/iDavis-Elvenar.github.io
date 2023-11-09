@@ -79,7 +79,7 @@ var stageRewards = {
             {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"15x Time Booster (30 min)", "link":"", "description":``},
         ],
         [
-            {"img":"https://i.ibb.co/VpD8CvF/generic-ferris-wheel.png", "text":"Ferris Wheel Galore", "link":"https://idavis-elvenar.com/buildings.html#A_Evt_Generic_Ferris_Wheel", "description":``},
+            {"img":"https://i.ibb.co/CJL6HGC/dwarvengame-xxiii-artifact.png", "text":"Solunar Nexus Artifact", "link":"", "description":`Artifact for evolving <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus" class="text-link font-weight-bold" target="_blank">Solunar Nexus</a> to higher stages`},
             {"img":"https://i.ibb.co/R7hdRSs/artifact.png", "text":"Tinlug Artifact", "link":"", "description":`Artifact for evolving <a href="https://idavis-elvenar.com/buildings.html#A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent" class="text-link font-weight-bold" target="_blank">Tinlug, The Star Serpent</a> to higher stages`},
             {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"25x Time Booster (45 min)", "link":"", "description":``},
         ]
