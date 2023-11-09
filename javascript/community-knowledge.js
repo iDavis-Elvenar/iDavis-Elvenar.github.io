@@ -1,4 +1,5 @@
 function displayMainPage() {
+    return;
     document.getElementById("column_with_tables").innerHTML = "";
     var div = document.createElement('div');
     div.className = "ck-mainbox";
