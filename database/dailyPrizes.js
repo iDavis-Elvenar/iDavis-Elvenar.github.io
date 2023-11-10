@@ -10,6 +10,7 @@ var dailyPrizes = {
         //
         "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout",
         "INS_KP_AW_20",
+        "A_Evt_Winter_XIX_Elvenade_Distributor",
     ],
 
     "tile_mistyforest_xxiii_": [
