@@ -1,12 +1,12 @@
 var eventStartDates = { 
     "shuffle_postal_xxiii_": {//Winter Magic 5.12. - 6.1.
         "live": {
-            "start_date": "__ _ 2023",
-            "end_date": "__ _ 2024"
+            "start_date": "December 5th 2023",
+            "end_date": "January 6th 2024"
         },
         "beta": {
-            "start_date": "December 1st 2023",
-            "end_date": "December 3rd 2023"
+            "start_date": "November 13th 2023",
+            "end_date": "December 15th 2023"
         }
     },
     "tile_mistyforest_xxiii_": {

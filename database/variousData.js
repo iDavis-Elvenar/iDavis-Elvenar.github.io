@@ -92,6 +92,7 @@ let eventBanners = {
     "theater_zodiac_xxiii_": "https://i.ibb.co/C7brfKY/EL-akcia-jese-2023-banner.png",
     "merge_dwarvengame_xxiii_": "https://i.ibb.co/PGqwyR8/EL-akcia-september-2023-banner.png",
     "tile_mistyforest_xxiii_": "https://i.ibb.co/dG7D0yQ/EL-akcia-halloween-2023-banner.png",
+    "shuffle_postal_xxiii_": "https://i.ibb.co/k2mdTqN/EL-akcia-zima-2023-banner.png",
 }
 
 let eventVideos = {
@@ -141,7 +142,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "theater_zodiac_xxiii_": "08/08/2023",
     "merge_dwarvengame_xxiii_": "09/07/2023",
     "tile_mistyforest_xxiii_": "10/02/2023",
-    "shuffle_postal_xxiii_": "12/01/2023",
+    "shuffle_postal_xxiii_": "11/13/2023",
 }
 
 let questsLinks = {
@@ -187,6 +188,7 @@ let eventsDurations = {
     "theater_zodiac_xxiii_": 22,
     "merge_dwarvengame_xxiii_": 20,
     "tile_mistyforest_xxiii_": 17,
+    "shuffle_postal_xxiii_": 32,
 }
 
 let evoUpgradeCosts = {
@@ -484,7 +486,7 @@ var grIds = {
 }
 
 var newEventSign = {
-    "active": false,
+    "active": true,
     "img": "https://i.ibb.co/n0KBPgt/new-sign.png",
 }
 
