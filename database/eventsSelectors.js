@@ -54,8 +54,8 @@ var allEvents = {
     },
     "all_events" : {
         "2023" : [
-            ["Winter Magic","shuffle_postal_xxiii_",false,false],
-            ["Whispers of the Soul","tile_mistyforest_xxiii_",true,false],
+            ["Winter Magic","shuffle_postal_xxiii_",true,false],
+            ["Whispers of the Soul","tile_mistyforest_xxiii_",false,false],
             ["A Gateway into the Past","merge_dwarvengame_xxiii_",false,false],
             ["Autumn Zodiac","theater_zodiac_xxiii_",false,false],
             ["Aqua Splendor","scroll_aquatic_xxiii_",false,false],
