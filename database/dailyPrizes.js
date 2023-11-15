@@ -15,6 +15,7 @@ var dailyPrizes = {
         "A_Evt_Winter_3Tree",
         "frog_runeshards2_{2}",
         "INS_UNIT_LR_10",
+        "A_Evt_Winter_Xviii_Candy_Hut",
     ],
 
     "tile_mistyforest_xxiii_": [
