@@ -48,6 +48,7 @@ let questsDictionary = {
         45: "Použij _ d{zesilovač,zesilovače,zesilovačů}",
         46: "Vykonej _x sousedskou výpomoc",
         47: "Získej _x d{čarodějnický bod,čarodějnické body,čarodějnických bodů}",
+        48: "Přijmi _ d{ponuku,ponuky,ponuk} na trhu",
     },
     "en" : {
         0: "Collect some amount of coins",
@@ -98,6 +99,7 @@ let questsDictionary = {
         45: "Use _ d{booster,boosters}",
         46: "Do _x neighbourly help",
         47: "Collect _x d{witch point,witch points}",
+        48: "Accept _ d{offer,offers} in trader",
     },
     "de" : {
         0: "Sammle eine Menge Münzen",
@@ -148,6 +150,7 @@ let questsDictionary = {
         45: "Benutze _ d{Zeit-Booster,Zeit-Boosters}",
         46: "Gib _x Nachbarschaftshilfe",
         47: "Sammle _x d{Hexenpunkt,Hexenpunkte}",
+        48: "Nehme _ d{Handelsangebot,Handelsangebote}",
     },
     "fr" : {
         0: "Collectez une certaine quantité de pièces",
@@ -198,6 +201,7 @@ let questsDictionary = {
         45: "Utilisez _ d{booster,boosters}",
         46: "Faites _x d'entraide avec vos voisins",
         47: "Collect _x d{witch point,witch points}",
+        48: "Acceptez _ d{offre,offres} chez le marchand",
     },
     "hu" : {
         0: "Gyűjts bizonyos mennyiségű aranyat",
@@ -248,6 +252,7 @@ let questsDictionary = {
         45: "Használj _ gyorsítót",
         46: "Nyújts _x szomszédi segítséget",
         47: "Collect _x d{witch point,witch points}",
+        48: "Elfogad el _ kereskedelmi ajánlatot",
     },
     "pl" : {
         0: "Zdobądź nieco monet",
@@ -298,6 +303,7 @@ let questsDictionary = {
         45: "Użyj _ d{booster,boostery,boosterów}",
         46: "Wykonaj _x pomoc sąsiedzką",
         47: "Collect _x d{witch point,witch points,witch points}",
+        48: "Zaakceptuj _ d{ofertę,oferty,ofert} u handlarza",
     },
     "ru" : {
         0: "Соберите хорошее количество монет",
@@ -348,5 +354,6 @@ let questsDictionary = {
         45: "Используйте _ d{ускоритель,ускорителя,ускорителей}",
         46: "Оказывайте _x соседскую помощь",
         47: "Collect _x d{witch point,witch points,witch points}",
+        48: "Получено _ d{торговое предложение,торгового предложения,торговых предложений}",
     }
 }

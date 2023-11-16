@@ -1,5 +1,5 @@
 var eventStartDates = { 
-    "shuffle_postal_xxiii_": {//Winter Magic 5.12. - 6.1.
+    "shuffle_postal_xxiii_": {//Tournament of Magic 29.1. - 20.2.
         "live": {
             "start_date": "December 5th 2023",
             "end_date": "January 6th 2024"
@@ -184,7 +184,7 @@ var faStartDates = {  //augustove 17.8. - 23.8., novembrove 16.11. - 22.11. (pod
     },
 }
 
-var seasonStartDates = {
+var seasonStartDates = {  //Season of Dreams 26.1. - 10.4.
     "october_xxiii_": {
         "live": {
             "start_date": "October 26th 2023",

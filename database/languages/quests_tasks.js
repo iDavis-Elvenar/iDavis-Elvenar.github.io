@@ -60,5 +60,7 @@ var VYPOMOC = function (value) {return {"id": 46, "value": value, "img": "https:
 
 var CARODEJNICKE_BODY = function (value) {return {"id": 47, "value": value, "img": "https://i.ibb.co/VSzsqx2/witchpoints.png"}};
 
+var PRIJMI_PONUKU = function (value) {return {"id": 48, "value": value, "img": "https://i.ibb.co/8KwDTGV/trading.png"}};
+
 var AND = "and";
 var OR = "or";
