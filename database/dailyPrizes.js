@@ -7,7 +7,7 @@ var dailyPrizes = {
         "A_Evt_December_XX_FrozenOwlCave",
         "INS_REV_SQD_50",
         "A_Evt_Winter_1Tree",
-        //
+        "INS_UNIT_HM_10",
         "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout",
         "INS_KP_AW_20",
         "A_Evt_Winter_XIX_Elvenade_Distributor",
@@ -19,6 +19,7 @@ var dailyPrizes = {
         "frog_grr_5_{1}",
         "A_Evt_Winter_2Grave",
         "INS_RF_SPL_50",
+        "A_Evt_Winter_2Tree",
     ],
 
     "tile_mistyforest_xxiii_": [
