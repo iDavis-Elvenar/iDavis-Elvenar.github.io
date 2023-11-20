@@ -20,6 +20,7 @@ var dailyPrizes = {
         "A_Evt_Winter_2Grave",
         "INS_RF_SPL_50",
         "A_Evt_Winter_2Tree",
+        "INS_UNIT_MC_LM_10",
     ],
 
     "tile_mistyforest_xxiii_": [
