@@ -23,6 +23,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_LM_10",
         "A_Evt_IceVillage",
         "INS_KP_{15}",
+        "A_Evt_Shuffle_Postal_XXIII_Dancing_Blossom",
     ],
 
     "tile_mistyforest_xxiii_": [
