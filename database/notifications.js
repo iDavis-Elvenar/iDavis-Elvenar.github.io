@@ -66,11 +66,11 @@ var notifications = {
     "7":{  // NEW BUILDING
         "id":7,
         "text":`<h4 class="alert-heading">Black Friday!</h4>
-        <p>We have received a new gift as a special reward for this year's Black Friday - the Celestial Titan. Click <a href='https://idavis-elvenar.com/buildings.html#A_Evt_Generic_Celestial_Titan' target="_blank" class='alert-link'>here</a> to see all the details about this building!</p>`,
+        <p>We have received a new gift as a special reward for this year's Black Friday - the Phantom Rose Unicorn. Click <a href='https://idavis-elvenar.com/buildings.html#A_Evt_BlackFriday_Phantom_Rose_Unicorn' target="_blank" class='alert-link'>here</a> to see all the details about this building!</p>`,
         "repeatAfter":86400,
         "style":"warning",
         "duration":20,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "8":{  // SPECIAL VIDEO PROMO
