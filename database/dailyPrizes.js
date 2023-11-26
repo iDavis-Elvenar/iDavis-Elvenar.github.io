@@ -26,6 +26,7 @@ var dailyPrizes = {
         "A_Evt_Shuffle_Postal_XXIII_Dancing_Blossom",
         "INS_REV_SQD_50",
         "A_Evt_Winter_2DailyReward",
+        "frog_default1_{10}",
     ],
 
     "tile_mistyforest_xxiii_": [
