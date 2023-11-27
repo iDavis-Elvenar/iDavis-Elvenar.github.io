@@ -27,6 +27,7 @@ var dailyPrizes = {
         "INS_REV_SQD_50",
         "A_Evt_Winter_2DailyReward",
         "frog_default1_{10}",
+        "A_Evt_December_XXII_Fragile_Bubble",
     ],
 
     "tile_mistyforest_xxiii_": [
