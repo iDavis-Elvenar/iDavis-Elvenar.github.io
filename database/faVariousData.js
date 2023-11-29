@@ -66,7 +66,7 @@ var prioritiesItems = [
     "enchanted_tiara", "ghost_in_a_bottle",
 ]
 
-var stageRewards = {
+var stageRewards = { //januarove: 1: rovnake ako naposledy, 2: rovnake okrem tome of soul... bude carting library, 3: ferris wheel galore, hearthbloom artifact, zesilovace ako naposledy
     "november_xxiii_": [
         [
             {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"1x Ancient Knowledge (15 KP)", "link":"", "description":``},

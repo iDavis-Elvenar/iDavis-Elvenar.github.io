@@ -111,7 +111,7 @@ var eventStartDates = {
     },
 }
 
-var faStartDates = {  //augustove 17.8. - 23.8., novembrove 16.11. - 22.11. (podla AT)
+var faStartDates = {  //januarove 11.1. - 17.1.
     "november_xxiii_": {
         "live": {
             "start_date": "November 16th 2023",
