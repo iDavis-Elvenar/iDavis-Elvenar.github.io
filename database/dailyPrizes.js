@@ -29,6 +29,7 @@ var dailyPrizes = {
         "frog_default1_{10}",
         "A_Evt_December_XXII_Fragile_Bubble",
         "INS_KP_AW_20",
+        "A_Evt_December_XXI_Magical_Supply_Station",
     ],
 
     "tile_mistyforest_xxiii_": [
