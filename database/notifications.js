@@ -70,7 +70,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":20,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "8":{  // SPECIAL VIDEO PROMO
@@ -212,7 +212,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":50
     },
 }

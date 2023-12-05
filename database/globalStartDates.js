@@ -112,6 +112,16 @@ var eventStartDates = {
 }
 
 var faStartDates = {  //januarove 11.1. - 17.1.
+    "january_xxiv_": {
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "December 7th 2023",
+            "end_date": "December 13th 2023"
+        }
+    },
     "november_xxiii_": {
         "live": {
             "start_date": "November 16th 2023",
