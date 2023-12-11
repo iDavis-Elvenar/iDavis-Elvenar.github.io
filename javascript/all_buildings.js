@@ -398,8 +398,8 @@ function readBuildingsJSON() {
                         }
                         t2body.appendChild(tr);
                         if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod][0]) {
+                            var trPerSquare = document.createElement('tr');
                             if (existsInThisStage) {
-                                var trPerSquare = document.createElement('tr');
                                 for (var ch = 0; ch < numberOfChapters + 1; ch++) {
                                     var tdPerSquare = document.createElement('td');
                                     if (ch === 0) {
