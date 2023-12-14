@@ -106,11 +106,14 @@ function handleBuildingsJSON() {
                                 }
                                 var setOfAllProductions = new Set();
                                 var levelsFound = 0;
-                                for (var l = i; l < allBuildings.length; l++) {
+                                var baseNonProductions = {"providedCulture":"culture", "provided_population":"population"}
+                                for (var l = 0; l < allBuildings.length; l++) {
                                     if (allBuildings[l]['id'].substring(0, allBuildings[l]['id'].lastIndexOf('_')) === b['id']) {
                                         for (var p1 = 0; p1 < prioritiesNonProduction.length; p1++) {
-                                            if (allBuildings[l].hasOwnProperty(prioritiesNonProduction[p1])) {
-                                                setOfAllProductions.add(prioritiesNonProduction[p1]);
+                                            if (allBuildings[l].hasOwnProperty('provisions')) {
+                                                if (allBuildings[l]['provisions']['resources']['resources'].hasOwnProperty(baseNonProductions[prioritiesNonProduction[p1]])) {
+                                                    setOfAllProductions.add(prioritiesNonProduction[p1]);
+                                                }
                                             }
                                         }
                                         if (allBuildings[l].hasOwnProperty('production')) {
@@ -155,7 +158,7 @@ function handleBuildingsJSON() {
                                     b['all_productions'].push([allDifferentProductions[allp]]);
                                 }
                                 levelsFound = 0;
-                                for (var k = i; k < allBuildings.length; k++) {
+                                for (var k = 0; k < allBuildings.length; k++) {
                                     if (allBuildings[k]['id'].substring(0, allBuildings[k]['id'].lastIndexOf('_')) === b['id']) {
                                         var currentLevel = parseInt(allBuildings[k]['level']);
                                         var currentLevelString = currentLevel.toString();
@@ -164,8 +167,10 @@ function handleBuildingsJSON() {
                                             for (var prod = 0; prod < allDifferentProductions.length; prod++) {
                                                 if (prioritiesNonProduction.includes(allDifferentProductions[prod])) {
                                                     var t = {};
-                                                    t['value'] = allBuildings[k][allDifferentProductions[prod]];
-                                                    b['chapters'][currentLevelString][allDifferentProductions[prod]] = t;
+                                                    if (allBuildings[k].hasOwnProperty('provisions')) {
+                                                        t['value'] = allBuildings[k]['provisions']['resources']['resources'][baseNonProductions[allDifferentProductions[prod]]];
+                                                        b['chapters'][currentLevelString][allDifferentProductions[prod]] = t;
+                                                    }
                                                 } else if (prioritiesProduction.includes(allDifferentProductions[prod].toLowerCase())) {
                                                     for (var o = 0; o < allBuildings[k]['production']['products'].length; o++) {
                                                         if (allBuildings[k]['production']['products'][o]['revenue']['resources'].hasOwnProperty(allDifferentProductions[prod])) {
@@ -197,18 +202,21 @@ function handleBuildingsJSON() {
                                                 for (var prod = 0; prod < allDifferentProductions.length; prod++) {
                                                     if (prioritiesNonProduction.includes(allDifferentProductions[prod])) {
                                                         var t = {};
-                                                        t['value'] = allBuildings[k][allDifferentProductions[prod]];
-                                                        if (allDifferentProductions[prod] === 'providedCulture') {
-                                                            for (let prov = 0; prov < evoObject['stages'][stage]['provisions'].length; prov++) {
-                                                                if (evoObject['stages'][stageString]['provisions'][prov]['name'] === 'culture') {
-                                                                    t['value'] *= evoObject['stages'][stage]['provisions'][prov]['value'];
+                                                        if (allBuildings[k].hasOwnProperty('provisions')) {
+                                                            if (allBuildings[k]['id'].toLowerCase().includes('hearthbloom')) console.log(allBuildings[k]);
+                                                            t['value'] = allBuildings[k]['provisions']['resources']['resources'][baseNonProductions[allDifferentProductions[prod]]];
+                                                            if (allDifferentProductions[prod] === 'providedCulture') {
+                                                                for (let prov = 0; prov < evoObject['stages'][stage]['provisions'].length; prov++) {
+                                                                    if (evoObject['stages'][stageString]['provisions'][prov]['name'] === 'culture') {
+                                                                        t['value'] *= evoObject['stages'][stage]['provisions'][prov]['value'];
+                                                                    }
                                                                 }
                                                             }
-                                                        }
-                                                        if (allDifferentProductions[prod] === 'provided_population') {
-                                                            for (let prov = 0; prov < evoObject['stages'][stage]['provisions'].length; prov++) {
-                                                                if (evoObject['stages'][stage]['provisions'][prov]['name'] === 'population') {
-                                                                    t['value'] *= evoObject['stages'][stage]['provisions'][prov]['value'];
+                                                            if (allDifferentProductions[prod] === 'provided_population') {
+                                                                for (let prov = 0; prov < evoObject['stages'][stage]['provisions'].length; prov++) {
+                                                                    if (evoObject['stages'][stage]['provisions'][prov]['name'] === 'population') {
+                                                                        t['value'] *= evoObject['stages'][stage]['provisions'][prov]['value'];
+                                                                    }
                                                                 }
                                                             }
                                                         }
@@ -897,6 +905,43 @@ function generateResearch() {
         }
         console.log(result)
         saveJSON( JSON.stringify(result), "research.json" );
+        create_exception("Data Generated!",10,'success');
+    }
+}
+
+function sortJSONBuildings() {  //unused
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('sortBuildings').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = [];
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        data = data.filter(obj => obj.id.startsWith('A_Evt_'));
+
+        const groupedData = {};
+        data.forEach(obj => {
+            const name = obj.id.split('_').slice(4, -1).join('_');
+            if (!groupedData[name]) {
+                groupedData[name] = [];
+            }
+            groupedData[name].push(obj);
+        });
+
+        Object.keys(groupedData).forEach(name => {
+            groupedData[name].sort((a, b) => {
+                const numA = parseInt(a.id.match(/\d+$/)[0]);
+                const numB = parseInt(b.id.match(/\d+$/)[0]);
+                return numA - numB;
+            });
+        });
+
+        data = Object.values(groupedData).flat();
+        
+        result = data;
+
+        console.log(result)
+        saveJSON( JSON.stringify(result), "buildings.json" );
         create_exception("Data Generated!",10,'success');
     }
 }

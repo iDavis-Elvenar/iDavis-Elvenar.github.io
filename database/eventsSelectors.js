@@ -1,5 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
+        /*"2024" : [
+            ["Tournament of Magic","scroll_sorcerers_xxiv_",false,false],
+        ],*/
         "2023" : [
             ["Winter Magic","shuffle_postal_xxiii_",true,false],
             ["Whispers of the Soul","tile_mistyforest_xxiii_",false,false],
@@ -53,6 +56,9 @@ var allEvents = {
         ]
     },
     "all_events" : {
+        /*"2024" : [
+            ["Tournament of Magic","scroll_sorcerers_xxiv_",false,false],
+        ],*/
         "2023" : [
             ["Winter Magic","shuffle_postal_xxiii_",true,false],
             ["Whispers of the Soul","tile_mistyforest_xxiii_",false,false],

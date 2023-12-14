@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "shuffle_postal_xxiii_": {//Tournament of Magic 29.1. - 20.2.
+    "scroll_sorcerers_xxiv_": {//Tournament of Magic 29.1. - 20.2.
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "December 18th 2023",
+            "end_date": "January 9th 2024"
+        }
+    },
+    "shuffle_postal_xxiii_": {
         "live": {
             "start_date": "December 5th 2023",
             "end_date": "January 6th 2024"

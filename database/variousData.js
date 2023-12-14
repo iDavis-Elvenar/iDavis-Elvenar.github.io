@@ -93,6 +93,7 @@ let eventBanners = {
     "merge_dwarvengame_xxiii_": "https://i.ibb.co/PGqwyR8/EL-akcia-september-2023-banner.png",
     "tile_mistyforest_xxiii_": "https://i.ibb.co/dG7D0yQ/EL-akcia-halloween-2023-banner.png",
     "shuffle_postal_xxiii_": "https://i.ibb.co/k2mdTqN/EL-akcia-zima-2023-banner.png",
+    "scroll_sorcerers_xxiv_": "https://i.ibb.co/kJZD0G5/EL-akcia-janu-r-2024-banner.png",
 }
 
 let eventVideos = {
@@ -143,6 +144,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "merge_dwarvengame_xxiii_": "09/07/2023",
     "tile_mistyforest_xxiii_": "10/02/2023",
     "shuffle_postal_xxiii_": "11/13/2023",
+    "scroll_sorcerers_xxiv_": "18/12/2023",
 }
 
 let questsLinks = {
@@ -166,6 +168,7 @@ let questsLinks = {
     "merge_dwarvengame_xxiii_": "bit.ly/GatewayIntoThePast2023",
     "tile_mistyforest_xxiii_": "bit.ly/WhispersOfTheSoul2023",
     "shuffle_postal_xxiii_": "bit.ly/WinterMagic2023",
+    "scroll_sorcerers_xxiv_": "bit.ly/TournamentOfMagic2024",
 }
 
 let eventsDurations = {
@@ -189,6 +192,7 @@ let eventsDurations = {
     "merge_dwarvengame_xxiii_": 20,
     "tile_mistyforest_xxiii_": 17,
     "shuffle_postal_xxiii_": 32,
+    "scroll_sorcerers_xxiv_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -315,7 +319,6 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "Scroll_Sorcerers_XXIV_",
 ]
 
 var eventsInfoIcons = {
@@ -330,6 +333,7 @@ var eventsInfoIcons = {
     "merge_dwarvengame_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "tile_mistyforest_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "shuffle_postal_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "scroll_sorcerers_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -343,6 +347,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "scroll_sorcerers_xxiv_": [
+        {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/LPfb96C/EL-akcia-janu-r-2023-chest-7.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html", "releaseDate":"18/12/2023"},
+    ],
     "tile_mistyforest_xxiii_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
         {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/FK9Wd7N/event-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 12px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},

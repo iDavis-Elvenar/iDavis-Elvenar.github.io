@@ -39,6 +39,9 @@ var selectedEvoStages = {
     "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus": 9,
     "A_Evt_Evo_Set_Tile_Mistyforest_XXIII_Soul_Lab": 4,
     "A_Evt_Evo_Shuffle_Postal_XXIII_Hearthbloom": 9,
+    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Arcane_Arena": 4,
+    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Chthonic_Circle": 4,
+    "A_Evt_Evo_Scroll_Sorcere…Potionmakers_Pedestal": 4,
 }
 
 function setAndReload(id) {
