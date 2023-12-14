@@ -32,6 +32,7 @@ var dailyPrizes = {
         "A_Evt_December_XXI_Magical_Supply_Station",
         "INS_UNIT_TG_MA_10",
         "frog_runeshards1_{2}",
+        "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout",
     ],
 
     "tile_mistyforest_xxiii_": [
