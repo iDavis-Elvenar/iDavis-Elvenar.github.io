@@ -1,4 +1,12 @@
 var images_buildings = {
+    "A_Evt_Scroll_Sorcerers_XXIV_Firefly_Pond":"https://i.ibb.co/0QKRr3s/firefly-pond.png",
+    "A_Evt_Scroll_Sorcerers_XXIV_Floral_Ringlet":"https://i.ibb.co/dPg3RV1/floral-ringlet.png",
+    "A_Evt_Scroll_Sorcerers_XXIV_Infinite_Drop":"https://i.ibb.co/fHtF8CZ/infinite-drop.png",
+    "A_Evt_Scroll_Sorcerers_XXIV_Pristine_Tree":"https://i.ibb.co/hdZpvbn/pristine-tree.png",
+    "A_Evt_Scroll_Sorcerers_XXIV_Sorcerers_Witness_Auditorium":"https://i.ibb.co/ZWYNNN4/sorcerers-witness-auditorium.png",
+    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Arcane_Arena":"https://i.ibb.co/D1ZQszM/arcane-arena.png",
+    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Chthonic_Circle":"https://i.ibb.co/jg5qdTz/chthonic-circle.png",
+    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Potionmakers_Pedestal":"https://i.ibb.co/HDPtn1K/potionmakers-pedestal.png",
     "A_Evt_Shuffle_Postal_XXIII_Winter_Logs":"https://i.ibb.co/YcxFPJp/winter-logs.png",
     "A_Evt_Shuffle_Postal_XXIII_Dancing_Blossom":"https://i.ibb.co/YphMXWp/dancing-blossom.png",
     "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout":"https://i.ibb.co/Np9ZdL8/adaptation-workout.png",

@@ -203,7 +203,6 @@ function handleBuildingsJSON() {
                                                     if (prioritiesNonProduction.includes(allDifferentProductions[prod])) {
                                                         var t = {};
                                                         if (allBuildings[k].hasOwnProperty('provisions')) {
-                                                            if (allBuildings[k]['id'].toLowerCase().includes('hearthbloom')) console.log(allBuildings[k]);
                                                             t['value'] = allBuildings[k]['provisions']['resources']['resources'][baseNonProductions[allDifferentProductions[prod]]];
                                                             if (allDifferentProductions[prod] === 'providedCulture') {
                                                                 for (let prov = 0; prov < evoObject['stages'][stage]['provisions'].length; prov++) {

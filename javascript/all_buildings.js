@@ -41,7 +41,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Shuffle_Postal_XXIII_Hearthbloom": 9,
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Arcane_Arena": 4,
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Chthonic_Circle": 4,
-    "A_Evt_Evo_Scroll_Sorcere…Potionmakers_Pedestal": 4,
+    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Potionmakers_Pedestal": 4,
 }
 
 function setAndReload(id) {
