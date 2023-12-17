@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Evt_Season_Dreams_XXIV_The_Slumber_Tree":"https://i.ibb.co/1ZkvZrv/the-slumber-tree.png",
     "A_Evt_Scroll_Sorcerers_XXIV_Firefly_Pond":"https://i.ibb.co/0QKRr3s/firefly-pond.png",
     "A_Evt_Scroll_Sorcerers_XXIV_Floral_Ringlet":"https://i.ibb.co/dPg3RV1/floral-ringlet.png",
     "A_Evt_Scroll_Sorcerers_XXIV_Infinite_Drop":"https://i.ibb.co/fHtF8CZ/infinite-drop.png",
