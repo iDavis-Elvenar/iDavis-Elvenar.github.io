@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "scroll_sorcerers_xxiv_": [
-
+        "A_Evt_June_XXI_Active_Fissure",
     ],
 
     "shuffle_postal_xxiii_": [
