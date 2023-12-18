@@ -144,7 +144,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "merge_dwarvengame_xxiii_": "09/07/2023",
     "tile_mistyforest_xxiii_": "10/02/2023",
     "shuffle_postal_xxiii_": "11/13/2023",
-    "scroll_sorcerers_xxiv_": "18/12/2023",
+    "scroll_sorcerers_xxiv_": "12/18/2023",
 }
 
 let questsLinks = {
