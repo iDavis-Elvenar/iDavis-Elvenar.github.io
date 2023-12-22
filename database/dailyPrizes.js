@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_January_XXIII_Experimental_Distillery",
         "INS_KP_{15}",
         "A_Evt_January_XXIII_Potion_Distribution_Post",
+        "INS_UNIT_TG_HM_10",
     ],
 
     "shuffle_postal_xxiii_": [
