@@ -234,6 +234,9 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus": "1x Solunar Nexus Artifact",
     "A_Evt_Evo_Set_Tile_Mistyforest_XXIII_Soul_Lab": "1x Soul Lab Artifact",
     "A_Evt_Evo_Shuffle_Postal_XXIII_Hearthbloom": "1x Hearthbloom Artifact",
+    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Arcane_Arena": "1x Sorcerer Trials Artifact",
+    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Chthonic_Circle": "1x Sorcerer Trials Artifact",
+    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Potionmakers_Pedestal": "1x Sorcerer Trials Artifact",
 }
 
 var feedingEffectsDescriptions = {
