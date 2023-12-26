@@ -796,21 +796,20 @@ function generateSeasonPass() {
     var selectedSeasonId = document.getElementById("season_id").value;
     reader.onload = function () {
         let data = JSON.parse(reader.result);
-        for (let i = 0; i < data.length; i++) {
-            if (data[i]["subtype"] === selectedSeasonId) {
-                var level = {};
-                level['requiredXp'] = data[i]['requiredXp'];
-                level['requiresPass'] = data[i]['requiresPass'];
-                level['rewards'] = [];
-                for (let rew = 0; rew < data[i]['rewards'].length; rew++) {
-                    var reward = {};
-                    reward['type'] = data[i]['rewards'][rew]['type'];
-                    reward['subType'] = data[i]['rewards'][rew]['subType'];
-                    reward['amount'] = data[i]['rewards'][rew]['amount'];
-                    level['rewards'].push(reward);
-                }
-                result.push(level);
+        for (let i = 0; i < data[0]['components'][7]['levels'].length; i++) {
+            var currentLevelData = data[0]['components'][7]['levels'][i];
+            var level = {};
+            level['requiredXp'] = currentLevelData['requiredXp'];
+            level['requiresPass'] = currentLevelData['requiresPass'];
+            level['rewards'] = [];
+            for (let rew = 0; rew < currentLevelData['rewards'].length; rew++) {
+                var reward = {};
+                reward['type'] = currentLevelData['rewards'][rew]['type'];
+                reward['subType'] = currentLevelData['rewards'][rew]['subType'];
+                reward['amount'] = currentLevelData['rewards'][rew]['amount'];
+                level['rewards'].push(reward);
             }
+            result.push(level);
         }
         console.log(result)
         saveJSON( JSON.stringify(result), "seasonsPass.json" );
