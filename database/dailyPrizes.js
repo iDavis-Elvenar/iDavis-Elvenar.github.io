@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_July_XX_Copper_Dragon",
         "frog_unurium_DP_{10}",
         "frog_runeshards2_{2}",
+        "A_Evt_January_XXII_Ancient_Taste",
     ],
 
     "shuffle_postal_xxiii_": [
