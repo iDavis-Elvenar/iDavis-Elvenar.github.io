@@ -540,7 +540,7 @@ var moreNavbarContent = [
         }
     },
     // COMMUNITY KNOWLEDGE
-    {
+    /*{
         "className":    "dropdown-item text-dark",
         "href":         "community-knowledge.html",
         "id":           "navitem_community_knowledge",
@@ -549,7 +549,7 @@ var moreNavbarContent = [
             "src":      "https://i.ibb.co/TKwn0Cz/forum-scroll.png",
             "style":    "width: 25px; margin-right: 5px; margin-bottom: 1px; margin-left: 1px;",
         }
-    },
+    },*/
     /*{
         "className":    "dropdown-item text-dark",
         "href":         "tournaments.html",
