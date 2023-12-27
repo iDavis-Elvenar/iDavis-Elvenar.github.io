@@ -10,6 +10,7 @@ var dailyPrizes = {
         "frog_unurium_DP_{10}",
         "frog_runeshards2_{2}",
         "A_Evt_January_XXII_Ancient_Taste",
+        "A_Evt_July_XX_Mana_Crystal_Merchant",
     ],
 
     "shuffle_postal_xxiii_": [
