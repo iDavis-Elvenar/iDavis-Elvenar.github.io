@@ -13,6 +13,7 @@ var dailyPrizes = {
         "A_Evt_July_XX_Mana_Crystal_Merchant",
         "INS_UNIT_TG_MA_10",
         "A_Evt_January_XXII_Spectral_Moths",
+        "A_Evt_July_XX_Golem_Cave",
     ],
 
     "shuffle_postal_xxiii_": [
