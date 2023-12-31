@@ -14,6 +14,7 @@ var dailyPrizes = {
         "INS_UNIT_TG_MA_10",
         "A_Evt_January_XXII_Spectral_Moths",
         "A_Evt_July_XX_Golem_Cave",
+        "INS_REV_SQD_50",
     ],
 
     "shuffle_postal_xxiii_": [
