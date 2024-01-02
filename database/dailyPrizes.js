@@ -16,6 +16,7 @@ var dailyPrizes = {
         "A_Evt_July_XX_Golem_Cave",
         "INS_REV_SQD_50",
         "A_Evt_June_XXI_Hungry_Treasure",
+        "A_Evt_July_XX_Hedge_Beard_Treant",
     ],
 
     "shuffle_postal_xxiii_": [
