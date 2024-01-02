@@ -45,8 +45,9 @@
     <script src="database/languages/buildingNamesLanguages.js"></script>
     <script src="javascript/notificationHandler.js"></script>
     <script src="database//notifications.js"></script>
-    <script src="database/eventsSelectors.js"></script>
     <script src="database/imagesBuildings.js"></script>
+    <script src="database/flexibleRewards.js"></script>
+    <script src="database/items.js"></script>
 
     <!-- Modified Bootstrap CSS -->
     <title>Tomes - iDavis Elvenar</title>
@@ -169,7 +170,7 @@
                     
                 </div>
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 60%;">
-                    <button class="btn btn-sm btn-success btn-block text-uppercase" id="filter_and_generate_button" style="margin-top: 10px;" onclick="clearInputField(); clearURL(); readTomesJSON();"></button>
+
                 </div>
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
                     
@@ -192,7 +193,6 @@
 
 <script>
     document.getElementById("input_search").innerHTML = langUI("Search:");
-    document.getElementById("filter_and_generate_button").innerHTML = langUI("Filter & Generate");
 
     document.getElementById("input_search").addEventListener('input', function() {
         readTomesJSON();

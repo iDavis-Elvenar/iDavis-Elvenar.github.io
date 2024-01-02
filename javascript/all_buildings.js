@@ -142,7 +142,7 @@ function readBuildingsJSON() {
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
                                     <b>${langUI("Expiring:")}</b> ${expiringDuration}<br>
-                                    <b>${langUI("Upgrade costs:")}</b> ${evoUpgradeCosts[filteredData[i]['id']]}<br>`;
+                                    <b>${langUI("Upgrade costs:")}</b> ${artifacts[evoUpgradeCosts[filteredData[i]['id']]]["name"]}<br>`;
                     if (feedingEffectsDescriptions.hasOwnProperty(filteredData[i]['id'])) {
                         td12.innerHTML += `<b>Feeding effect:</b> ${feedingEffectsDescriptions[filteredData[i]['id']]}<br>`;
                     }

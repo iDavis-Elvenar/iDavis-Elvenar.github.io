@@ -363,3 +363,8 @@ var goods_icons = {
     "b_ch21_aw1_shards": "<img src='https://i.ibb.co/qMP2TGV/b-ch21-aw1-shards.png' title='Rune Shard for Maman Le Prés Antique Shop'><br>",
     "b_ch21_aw2_shards": "<img src='https://i.ibb.co/xMRdtx1/b-ch21-aw2-shards.png' title='Rune Shard for Vallorian School of Sorcery'><br>",
 }
+
+var xlImages = {
+    "crafting_slots_refresh": "https://i.ibb.co/q76HpVv/crafting-slots-refresh.png",
+    "royalrestoration": "https://i.ibb.co/4YLRxLh/royalrestoration.png",
+}

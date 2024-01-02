@@ -3,6 +3,7 @@ function readTomesJSON() {
     create_exception("Loading...", 10000, 'primary');
 
     var parent = document.getElementById("column_with_tables");
+    parent.innerHTML = "";
 
     $.get('database/tomes.json')
         .done(data => {
@@ -76,14 +77,43 @@ function readTomesJSON() {
 
                 for (var j = 0; j < filteredData[i]['rewards'].length; j++) {
                     var td21 = document.createElement('td');
+                    td21.style.width = ""+(100/filteredData[i]['rewards'].length)+"%";
                     switch (filteredData[i]['rewards'][j]['type']) {
                         case "building": {
                             var building = filteredData[i]['rewards'][j];
                             var image = images_buildings[building['subType']];
                             td21.innerHTML = `<img src="${image}" style="max-height: 72px;">`;
-                            $.get('database/buildings.json', function(data) {
-                                td21.innerHTML += `<a class="text-link font-weight-bold" href="buildings.html#${building['subType']}" target="_blank">${data.filter(elem => elem.id === building['subType'])[0]['name']}</a>`;
-                            });
+                            findBuildingName(building['subType'], td21);
+                            break;
+                        }
+                        case "flexible_reward": {
+                            var rewardCodeName = flexibleRewards.filter(elem => elem.id === filteredData[i]['rewards'][j]['subType'])[0]['rewards'][getPresetChapter()-1]['subType'];
+                            if (instants.hasOwnProperty(rewardCodeName)) {
+                                td21.innerHTML = `<img src="${instants[rewardCodeName]["image_big"]}">`;
+                            } else {
+                                td21.innerHTML = `<img src="https://i.ibb.co/WndLSNt/goods-general-medium.png">`;
+                            }
+                            td21.innerHTML += `<br>${getTitleFromGoodImage(rewardCodeName)} <h7>${flexibleRewards.filter(elem => elem.id === filteredData[i]['rewards'][j]['subType'])[0]['rewards'][getPresetChapter()-1]['amount']*filteredData[i]['rewards'][j]['amount']}x</h7>`;
+                            break;
+                        }
+                        case "item": {
+                            if (filteredData[i]['rewards'][j]['subType'].toLowerCase().includes("ins_evo_")) {
+                                td21.innerHTML = `<img src="${artifacts[filteredData[i]['rewards'][j]['subType'].toLowerCase()]["img"]}" style="width: 72px;">`;
+                                td21.innerHTML += `<br>${artifacts[filteredData[i]['rewards'][j]['subType'].toLowerCase()]["name"]}`;
+                                break;
+                            }
+                            if (filteredData[i]['rewards'][j]['subType'].toLowerCase().includes("ins_")) {
+                                var itemId = filteredData[i]['rewards'][j]['subType'].substring(0, filteredData[i]['rewards'][j]['subType'].lastIndexOf('_')+1);
+                                td21.innerHTML = `<img src="${instants[itemId]["image_big"]}" style="width: 72px;">`;
+                                td21.innerHTML += `<br>${parseInt(filteredData[i]['rewards'][j]['subType'].match(/\d+$/)[0], 10)}${instants[itemId]["production_type"]}`;
+                                break;
+                            }
+                            break;
+                        }
+                        case "good": {
+                            if (xlImages.hasOwnProperty(filteredData[i]['rewards'][j]['subType'])) {
+                                td21.innerHTML = `<img src="${xlImages[filteredData[i]['rewards'][j]['subType']]}" style="width: 72px;">`;
+                            }
                             break;
                         }
                         default: td21.innerHTML = `${filteredData[i]['rewards'][j]['subType']}`;
@@ -110,5 +140,11 @@ function readTomesJSON() {
 
         });
 
-    create_exception("Buildings Generated!", 3, 'success');
+    create_exception("Tomes Generated!", 3, 'success');
+}
+
+function findBuildingName(id, td) {
+    $.get('database/buildings.json', function(data) {
+        td.innerHTML += `<br><a class="text-link font-weight-bold" href="buildings.html#${id}" target="_blank">${data.filter(elem => elem.id === id)[0]['name']}</a>`;
+    });
 }
