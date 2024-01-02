@@ -455,6 +455,10 @@ var rewardSelectionKits = {
     "rsk_expiring_winterdeco_xxiii":{"name":"Tome of Winter Treasures","description":undefined},
 }
 
+var rskIcons = {
+    "all": "https://i.ibb.co/kMLnsDm/rsk-evo.png"
+}
+
 var chapter_icons = {
     1: "https://i.ibb.co/kQF5s0q/ch1.png title='Chapter 1'",
     2: "https://i.ibb.co/DfkmS1H/ch2.png title='Chapter 2'",
@@ -539,6 +543,17 @@ var moreNavbarContent = [
             "style":    "width: 25px; margin-right: 6px; margin-bottom: 1px; margin-left: 0px;",
         }
     },
+    // TOMES
+    /*{
+        "className":    "dropdown-item text-dark",
+        "href":         "tomes.html",
+        "id":           "navitem_tomes",
+        "innerHTML":    "Tomes",
+        "img": {
+            "src":      "https://i.ibb.co/kMLnsDm/rsk-evo.png",
+            "style":    "width: 25px; margin-right: 6px; margin-bottom: 1px; margin-left: 0px;",
+        }
+    },*/
     // COMMUNITY KNOWLEDGE
     /*{
         "className":    "dropdown-item text-dark",

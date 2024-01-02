@@ -241,6 +241,10 @@ function showHint() {
     create_exception(langUI("You can search buildings by typing their name."), 5, 'warning');
 }
 
+function showHintTomes() {
+    create_exception(langUI("You can search tomes by typing their name."), 5, 'warning');
+}
+
 function hideHint() {
     close_alert();
 }

@@ -684,3 +684,9 @@ background-color: #b9881e;
 .bg-skin_ck_background {
     background-color: rgba(236, 222, 192, 0.5) !important;
 }
+
+/* TOMES */
+
+.bg-tomes_background {
+    background-color: #f0e9fa !important;
+}

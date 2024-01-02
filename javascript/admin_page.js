@@ -943,3 +943,42 @@ function sortJSONBuildings() {  //unused
         create_exception("Data Generated!",10,'success');
     }
 }
+
+function generateTomes() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('tomes').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = [];
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        let result = [];
+        
+        for (let i = 0; i < data.length; i++) {
+            if (data[i]["__class__"] === "RewardSelectionKitVO") {
+                let object = {};
+                object['name'] = data[i]['name'];
+                object['description'] = data[i]['description'];
+                object['iconId'] = data[i]['iconId'];
+                object['id'] = data[i]['id'];
+                object['rewards'] = [];
+                for (let j = 0; j < data[i]['rewards'].length; j++) {
+                    let rewObject = {};
+                    rewObject['type'] = data[i]['rewards'][j]['type'];
+                    if (rewObject['type'] === "building") {
+                        rewObject['subType'] = data[i]['rewards'][j]['subType'].split("$")[0];
+                    } else {
+                        rewObject['subType'] = data[i]['rewards'][j]['subType'];
+                    }
+                    rewObject['amount'] = data[i]['rewards'][j]['amount'];
+                    object['rewards'].push(rewObject);
+                }
+                result.push(object);
+            }
+        }
+
+        console.log(result)
+        saveJSON( JSON.stringify(result), "tomes.json" );
+        create_exception("Data Generated!",10,'success');
+    }
+}
