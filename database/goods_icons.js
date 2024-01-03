@@ -367,4 +367,9 @@ var goods_icons = {
 var xlImages = {
     "crafting_slots_refresh": "https://i.ibb.co/q76HpVv/crafting-slots-refresh.png",
     "royalrestoration": "https://i.ibb.co/4YLRxLh/royalrestoration.png",
+    "orcs": "https://i.ibb.co/Bck5YrS/orcs.png",
+    "mana": "https://i.ibb.co/7GpMCkM/mana.png",
+    "seeds": "https://i.ibb.co/YfQr505/seeds.png",
+    "unurium": "https://i.ibb.co/hM40T65/unurium.png",
+    "work": "https://i.ibb.co/KKQ5YFv/work.png",
 }

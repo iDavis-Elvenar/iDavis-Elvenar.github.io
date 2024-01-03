@@ -48,6 +48,7 @@
     <script src="database/imagesBuildings.js"></script>
     <script src="database/flexibleRewards.js"></script>
     <script src="database/items.js"></script>
+    <script src="database/tomes.js"></script>
 
     <!-- Modified Bootstrap CSS -->
     <title>Tomes - iDavis Elvenar</title>
@@ -127,7 +128,7 @@
         </nav>
         <script>
             document.getElementById("home").innerHTML += " "+langUI("Home");
-            document.getElementById("all_buildings").innerHTML = `&#x203A; <img src="https://i.ibb.co/NC00fM1/all-buildings.png" style="width: 24px; margin-bottom: 4px;"> ${langUI("All Buildings")} &#x2039;`;
+            document.getElementById("all_buildings").innerHTML = `<img src="https://i.ibb.co/NC00fM1/all-buildings.png" style="width: 24px; margin-bottom: 4px;"> ${langUI("All Buildings")}`;
             document.getElementById("all_events").innerHTML = `<img src="https://i.ibb.co/QkJ7qzP/all-events.png" style="width: 27px; margin-bottom: 1px;"> ${langUI("All Events")}`;
             document.getElementById("navbar_more").innerHTML = langUI("More");
             document.getElementById("navbar_guestraces").innerHTML = `<img src="https://i.ibb.co/d40mvg2/all-guestraces.png" style="width: 25px; margin-bottom: 4px;"> ${langUI("All Guest Races")}`;
@@ -170,7 +171,7 @@
                     
                 </div>
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 60%;">
-
+                    <button class="btn btn-sm btn-success btn-block text-uppercase" id="filter_and_generate_button" style="margin-top: 10px;" onclick="clearInputField(); clearURL(); readTomesJSON();"></button>
                 </div>
                 <div class="col-sm" style="margin-left: 10px; margin-right: 10px; width: 20%;">
                     
@@ -193,6 +194,7 @@
 
 <script>
     document.getElementById("input_search").innerHTML = langUI("Search:");
+    document.getElementById("filter_and_generate_button").innerHTML = langUI("Generate All Tomes");
 
     document.getElementById("input_search").addEventListener('input', function() {
         readTomesJSON();
