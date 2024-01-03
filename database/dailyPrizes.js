@@ -17,6 +17,7 @@ var dailyPrizes = {
         "INS_REV_SQD_50",
         "A_Evt_June_XXI_Hungry_Treasure",
         "A_Evt_July_XX_Hedge_Beard_Treant",
+        "frog_grr_5_{1}",
     ],
 
     "shuffle_postal_xxiii_": [
