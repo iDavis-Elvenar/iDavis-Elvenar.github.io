@@ -97,7 +97,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":45,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "10":{  // SEASON
@@ -196,7 +196,7 @@ var notifications = {
         "style":"warning",
         "duration":50,
         "active":true,
-        "priority":120
+        "priority":35
     },
     "17":{  // EVENT
         "id":17,
