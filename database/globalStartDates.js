@@ -1,5 +1,5 @@
 var eventStartDates = { 
-    "scroll_sorcerers_xxiv_": {//Tournament of Magic 29.1. - 20.2.
+    "scroll_sorcerers_xxiv_": {//Tournament of Magic 29.1. - 20.2., Blessing of the Phoenix 7.3. - 2.4.
         "live": {
             "start_date": "__ _ 2024",
             "end_date": "__ _ 2024"
