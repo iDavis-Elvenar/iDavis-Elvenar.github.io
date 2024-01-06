@@ -1,10 +1,10 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2024" : [
-            ["Tournament of Magic","scroll_sorcerers_xxiv_",false,false],
+            ["Tournament of Magic","scroll_sorcerers_xxiv_",true,false],
         ],
         "2023" : [
-            ["Winter Magic","shuffle_postal_xxiii_",true,false],
+            ["Winter Magic","shuffle_postal_xxiii_",false,false],
             ["Whispers of the Soul","tile_mistyforest_xxiii_",false,false],
             ["A Gateway into the Past","merge_dwarvengame_xxiii_",false,false],
             ["Autumn Zodiac","theater_zodiac_xxiii_",false,false],
@@ -57,10 +57,10 @@ var allEvents = {
     },
     "all_events" : {
         "2024" : [
-            ["Tournament of Magic","scroll_sorcerers_xxiv_",false,false],
+            ["Tournament of Magic","scroll_sorcerers_xxiv_",true,false],
         ],
         "2023" : [
-            ["Winter Magic","shuffle_postal_xxiii_",true,false],
+            ["Winter Magic","shuffle_postal_xxiii_",false,false],
             ["Whispers of the Soul","tile_mistyforest_xxiii_",false,false],
             ["A Gateway into the Past","merge_dwarvengame_xxiii_",false,false],
             ["Autumn Zodiac","theater_zodiac_xxiii_",false,false],

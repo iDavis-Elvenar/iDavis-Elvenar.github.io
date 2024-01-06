@@ -538,7 +538,7 @@ var grIds = {
 }
 
 var newEventSign = {
-    "active": true,
+    "active": false,
     "img": "https://i.ibb.co/n0KBPgt/new-sign.png",
 }
 
