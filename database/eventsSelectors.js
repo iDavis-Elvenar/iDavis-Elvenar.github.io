@@ -114,10 +114,10 @@ var allFas = { //NAME,ID,SELECTED,DISABLED == HIDDEN
 
 var allSeasons = { //NAME,ID,SELECTED,DISABLED == HIDDEN
     "2024" : [
-        ["Season of Dreams", "january_xxiv_",false,false],
+        ["Season of Dreams", "january_xxiv_",true,false],
     ],
     "2023" : [
-        ["Season of Secrets", "october_xxiii_",true,false],
+        ["Season of Secrets", "october_xxiii_",false,false],
         ["Season of Triumph", "july_xxiii_",false,false],
         ["Season of Joy", "april_xxiii_",false,false],
         ["Season of Dreams", "december_xxii_",false,false],
