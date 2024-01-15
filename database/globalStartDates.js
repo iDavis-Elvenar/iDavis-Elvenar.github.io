@@ -207,8 +207,8 @@ var faStartDates = {  //januarove 11.1. - 17.1.
 var seasonStartDates = {  //Season of Dreams 26.1. - 10.4.
     "january_xxiv_": {
         "live": {
-            "start_date": "__ _ 2024",
-            "end_date": "__ _ 2024"
+            "start_date": "January 26th 2024",
+            "end_date": "April 10th 2024"
         },
         "beta": {
             "start_date": "December 19th 2023",
