@@ -106,7 +106,7 @@ var notifications = {
   <p>The brand-new season is soon beginning on your server!</p>
   <hr>
   <center><img src="https://i.ibb.co/XDx9ZMt/Season-Season-of-Dreams-Banner.png" style="width: 35%;"></center><br>
-    <center><p>The <b>Season of Secrets</b> is approaching quickly and it is now fully covered on my Seasons page! Get ready for everything that the Season of Secrets has to offer. You can access this page from the navigation bar under the "More" button!<br>
+    <center><p>The <b>Season of Dreams</b> is approaching quickly and it is now fully covered on my Seasons page! Get ready for everything that the Season of Secrets has to offer. You can access this page from the navigation bar under the "More" button!<br>
     Start Date, Daily Quests, Weekly Quests, Blessings, many interesting rewards and the <b>Season Pass calculator</b> are now available in the newest <img src="https://i.ibb.co/87MNrBB/season-pass.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/seasons.html" class="alert-link">Seasons</a> page!</p></center>`,
         "repeatAfter":259200,
         "style":"warning",
