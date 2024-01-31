@@ -51,6 +51,25 @@ function displayQuests() {
         noteInfo.innerHTML = `${langUI(infoText)}`;
         var center = document.createElement('center');
         center.appendChild(noteInfo);
+
+        // ----- TEMPORARY INFO FOR CHANGE IN QUESTS
+
+        var tempInfoH5 = document.createElement('h5');
+        tempInfoH5.className = "card-title text-center text-title";
+        tempInfoH5.style.textAlign = "left";
+        tempInfoH5.style.marginTop = "15px";
+        tempInfoH5.innerHTML = `${langUI("Important: Changes in Quests")}<br>`;
+        center.appendChild(tempInfoH5);
+        var tempInfoNote = document.createElement('h7');
+        tempInfoNote.className = "card-title text-center";
+        tempInfoNote.style.textAlign = "left";
+        tempInfoNote.innerHTML = `Recently, there have been updates that changed the conditions of some quests. I am actively working on updating the quest list to provide the most accurate information. 
+        I would be extremely grateful for any feedback you may have. If you come across a quest with different conditions than those listed here, 
+        please inform me by filling <a href="https://docs.google.com/forms/d/e/1FAIpQLScGlNcHS9LN4swFnoMDEt0AzOYSgpsfExxFhvstr3SI8Uo3YA/viewform?usp=sf_link" class="text-link font-weight-bold" target="_blank">this form</a>. Kindly specify the chapter, quest number 
+        and the in-game condition you have encountered. Thank you very much for your assistance and understanding, and for your interest in making this site better!`;
+        center.appendChild(tempInfoNote);
+        // -----
+
         var div_info = document.createElement('div');
         /*div_info.innerHTML = languageSpecificNotes[localStorage.getItem("lang")];
         if (localStorage.getItem("lang") == "pl") {
