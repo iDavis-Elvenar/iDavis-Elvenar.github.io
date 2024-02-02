@@ -222,7 +222,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten": "ins_evo_february_xxii",
     "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": "ins_evo_easter_xxii",
     "A_Evt_Evo_May_XXII_Flower_Goblin_Epiphany": "ins_evo_may_xxii",
-    "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": "1x ins_evo_july_xxii",
+    "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": "ins_evo_july_xxii",
     "A_Evt_Evo_Autumn_XXII_WittyCoon": "ins_evo_september_xxii",
     "A_Evt_Evo_October_XXII_Witch_Doctor": "ins_evo_october_xxii",
     "A_Evt_Evo_December_XXII_Chromafrost_Glacier": "ins_evo_december_xxii",
