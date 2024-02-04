@@ -81,6 +81,17 @@ function handleBuildingsJSON() {
                                         b['setBuilding'] = sb;
                                     }
                                 }
+                                //RESALE RESOURCES
+                                if (allBuildings[i].hasOwnProperty("resale_resources") && 
+                                    allBuildings[i]["resale_resources"].hasOwnProperty("resources")) {
+                                        var resaleResources = Object.keys(allBuildings[i]["resale_resources"]["resources"]);
+                                        b["resale_resources"] = {};
+                                        for (let rr = 0; rr < resaleResources.length; rr++) {
+                                            if (resaleResources[rr] !== "__class__") {
+                                                b["resale_resources"][resaleResources[rr]] = allBuildings[i]["resale_resources"]["resources"][resaleResources[rr]];
+                                            }
+                                        }
+                                    }
 
                                 if (images_buildings.hasOwnProperty(b['id'])) {
                                     if (images_buildings[b['id']] != "") {

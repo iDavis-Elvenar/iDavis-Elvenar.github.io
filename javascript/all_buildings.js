@@ -156,7 +156,10 @@ function readBuildingsJSON() {
                     }
                     td12.innerHTML += `<select id="${"input_stage_"+filteredData[i]['id']}" class="custom-select" style="width: 70px; margin-bottom: 10px;" onchange="setAndReload(this)">
                                         ${selectOptions}
-                                    </select>`;
+                                    </select><br>`;
+                    td12.innerHTML += Object.keys(filteredData[i]["resale_resources"]).length === 0
+                                        ? "<b>Resale resources:</b> -"
+                                        : `<b>Resale resources:</b> ${Object.entries(filteredData[i]["resale_resources"]).map(([item, quantity]) => `${quantity}x ${goods_icons[item]}`).join(', ')}`;
                     let h5hashtag = document.createElement('h5');
                     h5hashtag.id = "#"+filteredData[i]['id'];
                     h5hashtag.innerHTML = '<a class="text-link font-weight-bold" id="hash"><img src="images/general/share-symbol.png" class="pointer" title="Open in new tab and share" width="15px;"></a><br>';
@@ -173,8 +176,11 @@ function readBuildingsJSON() {
                                     <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}s<br>
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
-                                    <b>${langUI("Expiring:")}</b> ${expiringDuration}
+                                    <b>${langUI("Expiring:")}</b> ${expiringDuration}<br>
                                     ${expiringDuration !== '-' && filteredData[i]['expiring']['description'] ? "<br><b>"+langUI("Effect:")+"</b> "+filteredData[i]['expiring']['description'] : ""}`;
+                                    td12.innerHTML += Object.keys(filteredData[i]["resale_resources"]).length === 0
+                                                        ? "<b>Resale resources:</b> -"
+                                                        : `<b>Resale resources:</b> ${Object.entries(filteredData[i]["resale_resources"]).map(([item, quantity]) => `${quantity}x ${goods_icons[item]}`).join(', ')}`;
                                     let h5hashtag = document.createElement('h5');
                                     h5hashtag.id = "#"+filteredData[i]['id'];
                                     h5hashtag.innerHTML = '<a class="text-link font-weight-bold" id="hash"><img src="images/general/share-symbol.png" class="pointer" title="Open in new tab and share" width="15px;"></a><br>';

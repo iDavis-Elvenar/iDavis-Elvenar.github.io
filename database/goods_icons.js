@@ -79,6 +79,7 @@ var goods_icons = {
     "INS_KP_AW_20": "20 KP<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png' title='Ancient Knowledge Instant 20'><br>",
     "INS_KP_AW_30": "30 KP<br><img src='https://image.ibb.co/mqSKvL/ancient-knowledge.png' title='Ancient Knowledge Instant 30'><br>",
     "ins_rs_1": "<img src='https://i.ibb.co/s6kzbrx/ins-rs.png' title='Royal Restoration'><br>",
+    "royalrestoration": "<img src='https://i.ibb.co/47B34xJ/royalrestoration.png' title='Royal Restoration'><br>",
     "mc_lm": "<img src='https://i.ibb.co/85g0RHK/mc-lm-small.png' title='Drone Rider'><br>",
     "mc_lr": "<img src='https://i.ibb.co/8NRMqzq/mc-lr-small.png' title='Ranger'><br>",
     "mc_ma": "<img src='https://i.ibb.co/9TKY6Pp/mc-ma-small.png' title='Blossom Princess'><br>",
