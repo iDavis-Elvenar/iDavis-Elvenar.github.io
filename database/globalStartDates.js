@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "scroll_sorcerers_xxiv_": {//Blessing of the Phoenix 7.3. - 2.4.
+    "theater_easter_xxiv_": {//Blessing of the Phoenix 7.3. - 2.4.
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        }
+    },
+    "scroll_sorcerers_xxiv_": {
         "live": {
             "start_date": "January 29th 2024",
             "end_date": "February 20th 2024"

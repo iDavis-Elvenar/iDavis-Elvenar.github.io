@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Theater_Easter_XXIV_Eggnook":"https://i.ibb.co/q7Jz1Ld/eggnook.png",
+    "A_Evt_Theater_Easter_XXIV_Garden_of_Tales_and_Thorns":"https://i.ibb.co/GW68fyt/garden-of-tales-and-thorns.png",
+    "A_Evt_Theater_Easter_XXIV_Peridot_Perch":"https://i.ibb.co/dBCT3bS/peridot-perch.png",
+    "A_Evt_Evo_Theater_Easter_XXIV_Verdant_Phoenix":"https://i.ibb.co/q951H1D/verdant-phoenix.png",
     "A_Evt_Season_Dreams_XXIV_The_Slumber_Tree":"https://i.ibb.co/1ZkvZrv/the-slumber-tree.png",
     "A_Evt_Scroll_Sorcerers_XXIV_Firefly_Pond":"https://i.ibb.co/0QKRr3s/firefly-pond.png",
     "A_Evt_Scroll_Sorcerers_XXIV_Floral_Ringlet":"https://i.ibb.co/dPg3RV1/floral-ringlet.png",

@@ -615,7 +615,7 @@ function generateEffectConfigs() {
                     }
                     for (let j = 0; j < data2.length; j++) {
                         if (data2[j].hasOwnProperty("effectConfigId") &&
-                        data2[j]["effectConfigId"] === data[i]["id"].toString()) {
+                        data2[j]["effectConfigId"] === data[i]["effectId"].toString()) {
                             pet["title"] = data2[j]["title"];
                             pet["description"] = data2[j]["description"];
                             break;
@@ -635,8 +635,9 @@ function generateEffectConfigs() {
                         expiring["format"] = data[i]["metadata"]["format"];
                     }
                     for (let j = 0; j < data2.length; j++) {
+                        console.log(data[i]);
                         if (data2[j].hasOwnProperty("effectConfigId") &&
-                        data2[j]["effectConfigId"] === data[i]["id"].toString()) {
+                        data2[j]["effectConfigId"] === data[i]["effectId"].toString()) {
                             expiring["title"] = data2[j]["title"];
                             expiring["description"] = data2[j]["description"];
                             break;

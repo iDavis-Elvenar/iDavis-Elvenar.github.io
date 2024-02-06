@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2024" : [
+            ["Blessing of the Phoenix","theater_easter_xxiv",false,true],
             ["Tournament of Magic","scroll_sorcerers_xxiv_",true,false],
         ],
         "2023" : [
@@ -57,6 +58,7 @@ var allEvents = {
     },
     "all_events" : {
         "2024" : [
+            ["Blessing of the Phoenix","theater_easter_xxiv_",false,true],
             ["Tournament of Magic","scroll_sorcerers_xxiv_",true,false],
         ],
         "2023" : [

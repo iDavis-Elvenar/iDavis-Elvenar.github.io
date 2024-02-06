@@ -145,6 +145,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "tile_mistyforest_xxiii_": "10/02/2023",
     "shuffle_postal_xxiii_": "11/13/2023",
     "scroll_sorcerers_xxiv_": "12/18/2023",
+    "theater_easter_xxiv_": "04/04/2024",
 }
 
 let questsLinks = {
@@ -169,6 +170,7 @@ let questsLinks = {
     "tile_mistyforest_xxiii_": "bit.ly/WhispersOfTheSoul2023",
     "shuffle_postal_xxiii_": "bit.ly/WinterMagic2023",
     "scroll_sorcerers_xxiv_": "bit.ly/TournamentOfMagic2024",
+    "theater_easter_xxiv_": "bit.ly/BlessingOfThePhoenix2024",
 }
 
 let eventsDurations = {
@@ -193,6 +195,7 @@ let eventsDurations = {
     "tile_mistyforest_xxiii_": 17,
     "shuffle_postal_xxiii_": 32,
     "scroll_sorcerers_xxiv_": 22,
+    "theater_easter_xxiv_": 28,
 }
 
 let evoUpgradeCosts = {
@@ -237,6 +240,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Arcane_Arena": "ins_evo_scroll_sorcerers_xxiv",
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Chthonic_Circle": "ins_evo_scroll_sorcerers_xxiv",
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Potionmakers_Pedestal": "ins_evo_scroll_sorcerers_xxiv",
+    "A_Evt_Evo_Theater_Easter_XXIV_Verdant_Phoenix": "ins_evo_easter_xxiv",
 }
 
 var artifacts = {
@@ -275,6 +279,7 @@ var artifacts = {
     "ins_evo_theater_zodiac_xxiii": {"name": "Tinlug, The Star Serpent Artifact", "img": "https://i.ibb.co/DkdYBD4/ins-evo-theater-zodiac-xxiii.png"},
     "ins_evo_tile_mistyforest_xxiii": {"name": "Soul Lab Artifact", "img": "https://i.ibb.co/556Xv0F/ins-evo-tile-mistyforest-xxiii.png"},
     "ins_evo_winter_xix": {"name": "Gingerbread Artifact", "img": "https://i.ibb.co/pwqRCHh/ins-evo-winter-xix.png"},
+    "ins_evo_easter_xxiv": {"name": "Verdant Phoenix Artifact", "img": "https://i.ibb.co/xqvS2q4/ins-evo-easter-xxiv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -293,6 +298,7 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_Autumn_XXII_WittyCoon" : `<img src="https://i.ibb.co/s5zgfs4/goods-production.png">`,
     "A_Evt_Evo_Easter_XXIII_Astral_Phoenix" : `<img src="https://i.ibb.co/s5zgfs4/goods-production.png">`,
     "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent" : `<img src="https://i.ibb.co/WnDfq7P/combining-catalyst.png">`,
+    "A_Evt_Evo_Theater_Easter_XXIV_Verdant_Phoenix": `<img src="https://i.ibb.co/vjQD2kX/season-xp-b15fa556d9a49df8ccdbc3fe222f0feb.png">`,
 }
 
 var allowedFeedingMultiplicators = {
@@ -360,7 +366,6 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "theater_easter_xxiv_",
 ]
 
 var eventsInfoIcons = {
@@ -376,6 +381,7 @@ var eventsInfoIcons = {
     "tile_mistyforest_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "shuffle_postal_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_sorcerers_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "theater_easter_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -389,6 +395,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "theater_easter_xxiv_": [
+        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"04/04/2024"},
+    ],
     "scroll_sorcerers_xxiv_": [
         {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/rv5vH4Z/chest8.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html", "releaseDate":"12/18/2023"},
     ],

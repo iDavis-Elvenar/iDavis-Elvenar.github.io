@@ -118,6 +118,7 @@ let ui = {
         "Dwarven Citadel": "Trpasličí citadela",
         "Ancient Promise": "Starodávný slib",
         //EVENTS
+        "Tournament of Magic": "Turnaj magie",
         "Whispers of the Soul": "Šepoty duše",
         "Aqua Splendor": "Krásy mořského světa",
         "Floral Awakening": "Květinové probuzení",
@@ -271,6 +272,7 @@ let ui = {
         "Dwarven Citadel": "Zwergen-Zitadelle",
         "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
+        "Tournament of Magic": "Turnier der Magie",
         "Whispers of the Soul": "Flüstern der Seele",
         "Aqua Splendor": "Aquatische Pracht",
         "Floral Awakening": "Florales Erwachen",
@@ -424,6 +426,7 @@ let ui = {
         "Dwarven Citadel": "Citadelle naine",
         "Ancient Promise": "Ancienne promesse",
         //EVENTS
+        "Tournament of Magic": "Tournoi de Magie",
         "Whispers of the Soul": "Les Chuchotements de l'âme",
         "Aqua Splendor": "Aqua Splendor",
         "Floral Awakening": "Eveil floral",
@@ -577,6 +580,7 @@ let ui = {
         "Dwarven Citadel": "Törp Citadella",
         "Ancient Promise": "Ősi Ígéret",
         //EVENTS
+        "Tournament of Magic": "A Mágia Versenye",
         "Whispers of the Soul": "A Lélek Suttogásai",
         "Aqua Splendor": "Vízi Ragyogás",
         "Floral Awakening": "Virágos Ébredés",
@@ -730,6 +734,7 @@ let ui = {
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
+        "Tournament of Magic": "Turniej Magii",
         "Whispers of the Soul": "Szepty duszy",
         "Aqua Splendor": "Wodny splendor",
         "Floral Awakening": "Kwiatowe Przebudzenie",
@@ -883,6 +888,7 @@ let ui = {
         "Dwarven Citadel": "Гномья цитадель",
         "Ancient Promise": "Древнее обещание",
         //EVENTS
+        "Tournament of Magic": "Турнир по магии",
         "Whispers of the Soul": "Шепот души",
         "Aqua Splendor": "Морское великолепие",
         "Floral Awakening": "Цветочное пробуждение",
