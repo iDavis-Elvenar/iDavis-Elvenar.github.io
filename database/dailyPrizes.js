@@ -2,6 +2,7 @@ var dailyPrizes = {
 
     "theater_easter_xxiv_": [
         "A_Evt_Theater_Easter_XXIV_Eggnook",
+        "A_Evt_Phoenix_Lake",
     ],
 
     "scroll_sorcerers_xxiv_": [
