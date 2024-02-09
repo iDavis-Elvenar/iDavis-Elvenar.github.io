@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_Theater_Easter_XXIV_Eggnook",
         "A_Evt_Phoenix_Lake",
         "INS_KP_{15}",
+        "A_Evt_March_XXI_Phoenix_Rider",
     ],
 
     "scroll_sorcerers_xxiv_": [
