@@ -6,6 +6,7 @@ var dailyPrizes = {
         "INS_KP_{15}",
         "A_Evt_March_XXI_Phoenix_Rider",
         "INS_UNIT_MC_LM_10",
+        "A_Evt_Easter_Vii_BurningEgg",
     ],
 
     "scroll_sorcerers_xxiv_": [
