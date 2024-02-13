@@ -111,7 +111,7 @@ var notifications = {
         "repeatAfter":259200,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "11":{  // EVENTS SIMULTANEOUSLY - BETA PRIMARY

@@ -5,8 +5,8 @@ var eventStartDates = {
             "end_date": "__ _ 2024"
         },
         "beta": {
-            "start_date": "__ _ 2024",
-            "end_date": "__ _ 2024"
+            "start_date": "February 14th 2024",
+            "end_date": "March 11th 2024"
         }
     },
     "scroll_sorcerers_xxiv_": {
