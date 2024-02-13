@@ -8,6 +8,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_LM_10",
         "A_Evt_Easter_Vii_BurningEgg",
         "frog_runeshards2_{2}",
+        "A_Evt_Easter_XXII_Voice_of_the_Prophet",
     ],
 
     "scroll_sorcerers_xxiv_": [
