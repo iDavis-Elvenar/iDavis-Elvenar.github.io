@@ -397,7 +397,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "theater_easter_xxiv_": [
-        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"04/04/2024"},
+        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"02/15/2024"},
     ],
     "scroll_sorcerers_xxiv_": [
         {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/rv5vH4Z/chest8.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html", "releaseDate":"12/18/2023"},
