@@ -11,6 +11,7 @@ var dailyPrizes = {
         "A_Evt_Easter_XXII_Voice_of_the_Prophet",
         "A_Evt_Easter_Vii_1GrandPrize",
         "INS_REV_SQD_50",
+        "A_Evt_March_XXI_Phoenix_Water_Mill",
     ],
 
     "scroll_sorcerers_xxiv_": [
