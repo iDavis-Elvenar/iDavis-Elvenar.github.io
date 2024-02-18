@@ -13,6 +13,7 @@ var dailyPrizes = {
         "INS_REV_SQD_50",
         "A_Evt_March_XXI_Phoenix_Water_Mill",
         "A_Evt_Theater_Easter_XXIV_Peridot_Perch",
+        "INS_UNIT_MC_MA_10_{2}",
     ],
 
     "scroll_sorcerers_xxiv_": [
