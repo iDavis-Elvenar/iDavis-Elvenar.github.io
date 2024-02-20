@@ -146,7 +146,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "tile_mistyforest_xxiii_": "10/02/2023",
     "shuffle_postal_xxiii_": "11/13/2023",
     "scroll_sorcerers_xxiv_": "12/18/2023",
-    "theater_easter_xxiv_": "02/12/2024", //original Feb 14th
+    "theater_easter_xxiv_": "02/14/2024",
 }
 
 let questsLinks = {
@@ -196,7 +196,7 @@ let eventsDurations = {
     "tile_mistyforest_xxiii_": 17,
     "shuffle_postal_xxiii_": 32,
     "scroll_sorcerers_xxiv_": 22,
-    "theater_easter_xxiv_": 28,
+    "theater_easter_xxiv_": 26,
 }
 
 let evoUpgradeCosts = {
