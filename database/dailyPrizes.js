@@ -15,6 +15,7 @@ var dailyPrizes = {
         "A_Evt_Theater_Easter_XXIV_Peridot_Perch",
         "INS_UNIT_MC_MA_10_{2}",
         "frog_grr_5_{1}",
+        "A_Evt_Golden_Palace",
     ],
 
     "scroll_sorcerers_xxiv_": [
