@@ -16,6 +16,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_MA_10_{2}",
         "frog_grr_5_{1}",
         "A_Evt_Golden_Palace",
+        "frog_runeshards1_{2}",
     ],
 
     "scroll_sorcerers_xxiv_": [
