@@ -18,6 +18,7 @@ var dailyPrizes = {
         "A_Evt_Golden_Palace",
         "frog_runeshards1_{2}",
         "A_Evt_Easter_XXIII_Auric_Shrine",
+        "INS_KP_AW_20",
     ],
 
     "scroll_sorcerers_xxiv_": [
