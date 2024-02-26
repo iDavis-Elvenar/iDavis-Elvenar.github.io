@@ -21,6 +21,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_Blue_Egg",
         "frog_unurium_DP_{10}",
+        "A_Evt_Easter_XXII_Rod_of_Ascleptius",
     ],
 
     "scroll_sorcerers_xxiv_": [
