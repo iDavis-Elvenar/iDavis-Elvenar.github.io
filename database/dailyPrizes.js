@@ -23,6 +23,7 @@ var dailyPrizes = {
         "frog_unurium_DP_{10}",
         "A_Evt_Easter_XXII_Rod_of_Ascleptius",
         "A_Evt_Easter_Vii_FireTower",
+        "INS_UNIT_MC_HM_10",
     ],
 
     "scroll_sorcerers_xxiv_": [
