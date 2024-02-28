@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "theater_easter_xxiv_": {//Blessing of the Phoenix 7.3. - 2.4., Buzzing Spring 18.4. - 10.5.
         "live": {
-            "start_date": "__ _ 2024",
-            "end_date": "__ _ 2024"
+            "start_date": "March 7th 2024",
+            "end_date": "April 2nd 2024"
         },
         "beta": {
             "start_date": "February 14th 2024",
