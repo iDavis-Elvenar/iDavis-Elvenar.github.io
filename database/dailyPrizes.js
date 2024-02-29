@@ -24,6 +24,7 @@ var dailyPrizes = {
         "A_Evt_Easter_XXII_Rod_of_Ascleptius",
         "A_Evt_Easter_Vii_FireTower",
         "INS_UNIT_MC_HM_10",
+        "A_Evt_Easter_XXII_Shamanic_Healing_Grounds",
     ],
 
     "scroll_sorcerers_xxiv_": [
