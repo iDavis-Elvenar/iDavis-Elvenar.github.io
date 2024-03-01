@@ -203,7 +203,7 @@ var notifications = {
         "text":`<h4 class="alert-heading">Blessing of the Phoenix event is coming soon!</h4>
   <p>This year's Easter event is getting close!</p>
   <hr>
-  <center><img src="https://oxzz.innogamescdn.com/frontend//assets/large_loading_screen-06778e63faeb0bd88f8d03460ed8289b.jpg" style="width: 35%;"></center><br>
+  <center><img src="https://i.ibb.co/JRKBZPG/EL-akcia-ve-k-noc-2024-banner.jpg" style="width: 35%;"></center><br>
     <center><p>The <b>Blessing of the Phoenix</b> is approaching and it is now fully covered on the All Events page! Get ready for everything that the Easter event has to offer!<br><br>
     Start Date, Daily Prizes and Quests are now available to preview in the <img src="https://i.ibb.co/QkJ7qzP/all-events.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/events.html" class="alert-link">All Events</a> page!<br><br>
     Visit the <img src="https://i.ibb.co/NC00fM1/all-buildings.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/buildings.html" class="alert-link">All Buildings</a> page for more information about all the newly introduced buildings.</p></center>`,

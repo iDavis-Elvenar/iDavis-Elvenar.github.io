@@ -94,7 +94,7 @@ let eventBanners = {
     "tile_mistyforest_xxiii_": "https://i.ibb.co/dG7D0yQ/EL-akcia-halloween-2023-banner.png",
     "shuffle_postal_xxiii_": "https://i.ibb.co/k2mdTqN/EL-akcia-zima-2023-banner.png",
     "scroll_sorcerers_xxiv_": "https://i.ibb.co/kJZD0G5/EL-akcia-janu-r-2024-banner.png",
-    "theater_easter_xxiv_": "https://oxzz.innogamescdn.com/frontend//assets/large_loading_screen-06778e63faeb0bd88f8d03460ed8289b.jpg",
+    "theater_easter_xxiv_": "https://i.ibb.co/JRKBZPG/EL-akcia-ve-k-noc-2024-banner.jpg",
 }
 
 let eventVideos = {
