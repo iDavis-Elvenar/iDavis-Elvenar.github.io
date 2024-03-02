@@ -26,6 +26,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_HM_10",
         "A_Evt_Easter_XXII_Shamanic_Healing_Grounds",
         "frog_default1_{10}",
+        "A_Evt_Theater_Easter_XXIV_Eggnook",
     ],
 
     "scroll_sorcerers_xxiv_": [
