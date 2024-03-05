@@ -131,7 +131,17 @@ var eventStartDates = {
     },
 }
 
-var faStartDates = {  //Season of Triumph 29.4. - 12.7., Season of Joy 30.7. - 8.10., Season of Secrets 23.10. - 6.1.
+var faStartDates = {
+    "april_xxiv_": {
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "March 19th 2024",
+            "end_date": "March 25th 2024"
+        }
+    },
     "january_xxiv_": {
         "live": {
             "start_date": "January 11th 2024",
@@ -214,7 +224,7 @@ var faStartDates = {  //Season of Triumph 29.4. - 12.7., Season of Joy 30.7. - 8
     },
 }
 
-var seasonStartDates = {  //Season of Dreams 26.1. - 10.4.
+var seasonStartDates = {  //Season of Triumph 29.4. - 12.7., Season of Joy 30.7. - 8.10., Season of Secrets 23.10. - 6.1.
     "january_xxiv_": {
         "live": {
             "start_date": "January 24th 2024",
