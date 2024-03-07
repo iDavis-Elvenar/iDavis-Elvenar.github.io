@@ -115,6 +115,7 @@ let eventVideos = {
     "autumn_xxii_": "https://www.youtube.com/embed/vlPzSeNLfuQ",
     "february_xxiii_": "https://www.youtube.com/embed/mYHFFbfLXtA;https://www.youtube.com/embed/Ks0-x02arzw",
     "tile_mistyforest_xxiii_": "https://www.youtube.com/embed/UAZJKjasaBI",
+    "theater_easter_xxiv_": "https://www.youtube.com/embed/65B1s9qR1uk",
 }
 
 let eventBetaStarts = { // MM/DD/YYYY
