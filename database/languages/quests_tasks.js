@@ -62,5 +62,13 @@ var CARODEJNICKE_BODY = function (value) {return {"id": 47, "value": value, "img
 
 var PRIJMI_PONUKU = function (value) {return {"id": 48, "value": value, "img": "https://i.ibb.co/8KwDTGV/trading.png"}};
 
+var ORKOVIA = {"id": 49, "value": null, "img": "https://i.ibb.co/Hn5W8XF/orcs.png"};
+var MANA = {"id": 50, "value": null, "img": "https://image.ibb.co/bzd1Zq/mana.png"};
+var SEMINKA = {"id": 51, "value": null, "img": "https://image.ibb.co/c9JtEq/seeds.png"};
+var UNURIUM = {"id": 52, "value": null, "img": "https://i.ibb.co/5shvjhx/unurium-small.png"};
+
+var ZBOZI_ZIVOUCI = {"id": 53, "value": null, "img": "https://i.ibb.co/tLr4XnT/sentient-goods.png"};
+var ZBOZI_OSVICENE = {"id": 54, "value": null, "img": "https://i.ibb.co/80gHPP5/ascended-goods.png"};
+
 var AND = "and";
 var OR = "or";

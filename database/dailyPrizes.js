@@ -1,5 +1,9 @@
 var dailyPrizes = {
 
+    "shuffle_garden_xxiv_": [
+
+    ],
+
     "theater_easter_xxiv_": [
         "A_Evt_Theater_Easter_XXIV_Eggnook",
         "A_Evt_Phoenix_Lake",

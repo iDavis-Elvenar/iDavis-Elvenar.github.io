@@ -148,6 +148,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "shuffle_postal_xxiii_": "11/13/2023",
     "scroll_sorcerers_xxiv_": "12/18/2023",
     "theater_easter_xxiv_": "02/14/2024",
+    "shuffle_garden_xxiv_": "03/13/2023",
 }
 
 let questsLinks = {
@@ -198,6 +199,7 @@ let eventsDurations = {
     "shuffle_postal_xxiii_": 32,
     "scroll_sorcerers_xxiv_": 22,
     "theater_easter_xxiv_": 26,
+    "shuffle_garden_xxiv_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -384,6 +386,7 @@ var eventsInfoIcons = {
     "shuffle_postal_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_sorcerers_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "theater_easter_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "shuffle_garden_xxiv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {

@@ -100,6 +100,12 @@ let questsDictionary = {
         46: "Do _x neighbourly help",
         47: "Collect _x d{witch point,witch points}",
         48: "Accept _ d{offer,offers} in trader",
+        49: "Collect some amount of orcs",
+        50: "Collect some amount of mana",
+        51: "Collect some amount of seeds",
+        52: "Collect some amount of unurium",
+        53: "Collect some amount of sentient goods",
+        54: "Collect some amount of ascended goods",
     },
     "de" : {
         0: "Sammle eine Menge Münzen",

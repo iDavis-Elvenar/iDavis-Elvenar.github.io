@@ -1005,10 +1005,23 @@ function generateQuestsAuto() {
     reader.onload = function () {
         let data = JSON.parse(reader.result)["allQuests"];
         let result = [];
+        let lastId = null;
+        let questGathered = {};
         
         for (let i = 0; i < data.length; i++) {
-            if (data[i].hasOwnProperty('subType') && data[i]['subType'].includes(event_id)) {
-                var quest = [];
+            if (data[i].hasOwnProperty('subType') && data[i]['subType'].includes(event_id) && !data[i]['title'].includes('Daily Event Reward')) {
+                if (lastId === null || data[i]['rawTriggerCondition'].includes(lastId)) {
+                    lastId = data[i]['id'];
+                    if (Object.keys(questGathered).length !== 0) {
+                        result.push(questGathered);
+                        //console.log(questGathered);
+                    }
+                    questGathered = {};
+                }
+                let triggerConditions = data[i]['rawTriggerCondition'].split(/\b(?:AND|OR)\b/).filter(item => !item.includes('running')).filter(item => !item.includes('login'));
+                let range = calculateChapterRange(triggerConditions);
+                questGathered[range] = [];
+
                 var number_of_conditions = data[i]['successConditions'].length;
                 var relations = new Set();
                 for (let index = 0; index < data[i]['successConditions'].length; index++) {
@@ -1016,126 +1029,144 @@ function generateQuestsAuto() {
                     var task_desc = condition['description'];
                     var task_raw = condition['rawSuccessCondition'];
                     if (task_raw.includes('money')) {
-                        quest.push('MINCE');
+                        questGathered[range].push('MINCE');
                     } else if (task_raw.includes('craft_payback')) {
                         var value = extractOneNumber(task_raw);
                         var max_value = condition['maxProgress'];
-                        quest.push('OPAR_VIDENI("'+value+'-'+max_value+'")');
+                        questGathered[range].push('OPAR_VIDENI("'+value+'-'+max_value+'")');
                     } else if (task_raw.includes('strategypoints') && task_raw.includes('buy')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('VB_KUP('+value+')');
+                        questGathered[range].push('VB_KUP('+value+')');
                     } else if (task_raw.includes('strategypoints') && task_raw.includes('spend')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('VB_UTRAT('+value+')');
+                        questGathered[range].push('VB_UTRAT('+value+')');
                     } else if (task_raw.includes('neighbourlyhelp')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('VYPOMOC('+value+')');
+                        questGathered[range].push('VYPOMOC('+value+')');
                     } else if (task_raw.includes('npc_trader')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('OBCHODNIK('+value+')');
+                        questGathered[range].push('OBCHODNIK('+value+')');
                     } else if (task_raw.includes('ancientwonder')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('VLOZ_VB('+value+')');
+                        questGathered[range].push('VLOZ_VB('+value+')');
                     } else if (task_desc.includes('Beverages')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('NAPOJE('+value+')');
+                        questGathered[range].push('NAPOJE('+value+')');
                     } else if (task_desc.includes('Simple Tools')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('OBYCEJNE_NASTROJE('+value+')');
+                        questGathered[range].push('OBYCEJNE_NASTROJE('+value+')');
                     } else if (task_desc.includes('Loaves of Bread')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('CHLEB('+value+')');
+                        questGathered[range].push('CHLEB('+value+')');
                     } else if (task_desc.includes('Advanced Tools')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('POKROCILE_NASTROJE('+value+')');
+                        questGathered[range].push('POKROCILE_NASTROJE('+value+')');
                     } else if (task_desc.includes('Baskets of Groceries')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('KOSIK_JIDLA('+value+')');
+                        questGathered[range].push('KOSIK_JIDLA('+value+')');
                     } else if (task_desc.includes('Toolbox')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('SADA_NASTROJU('+value+')');
+                        questGathered[range].push('SADA_NASTROJU('+value+')');
                     } else if (task_desc.includes('Relics')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('RELIKVIE('+value+')');
+                        questGathered[range].push('RELIKVIE('+value+')');
                     } else if (task_desc.includes('units')) {
-                        quest.push('JEDNOTKY');
+                        questGathered[range].push('JEDNOTKY');
                     } else if (task_desc.includes('Magic Academy')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('CARODEJNICKE_BODY('+value+')');
+                        questGathered[range].push('CARODEJNICKE_BODY('+value+')');
                     } else if (task_desc.includes('Supplies')) {
-                        quest.push('ZASOBY');
+                        questGathered[range].push('ZASOBY');
                     } else if (task_desc.includes('Create Enchantments')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('ZISKEJ_KOUZLA('+value+')');
+                        questGathered[range].push('ZISKEJ_KOUZLA('+value+')');
                     } else if (task_desc.includes('Use Enchantments') && !task_desc.includes('Gain')) {
                         var value = extractOneNumber(task_raw);
                         var max_value = condition['maxProgress'];
-                        quest.push('POUZIJ_KOUZLA(\"'+value+'-'+max_value+'\")');
+                        questGathered[range].push('POUZIJ_KOUZLA(\"'+value+'-'+max_value+'\")');
                     } else if (task_raw.includes('spells_enchantments') && task_raw.includes('gain') && task_raw.includes('use')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('ZISKEJ_POUZIJ_KOUZLA('+value+')');
+                        questGathered[range].push('ZISKEJ_POUZIJ_KOUZLA('+value+')');
                     } else if (task_desc.includes('Research')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('VYSKOUMEJ_TECHNOLOGII('+value+')');
+                        questGathered[range].push('VYSKOUMEJ_TECHNOLOGII('+value+')');
                     } else if (task_desc.includes('Upgrade')) {
                         var value = extractWithCount(task_raw);
-                        quest.push('VYLEPSI_BUDOVY_LVL_5('+value+')');
+                        questGathered[range].push('VYLEPSI_BUDOVY_LVL_5('+value+')');
                     } else if (task_desc.includes('Negotiate Province Encounter')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('STRETY_NA_MAPE_VYJEDNAVANIM('+value+')');
+                        questGathered[range].push('STRETY_NA_MAPE_VYJEDNAVANIM('+value+')');
                     } else if (task_desc.includes('Combining Catalyst')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('SPOJOVACI_CINIDLO('+value+')');
+                        questGathered[range].push('SPOJOVACI_CINIDLO('+value+')');
                     } else if (task_desc.includes('Produce a good amount of Goods of your choice')) {
-                        quest.push('ZBOZI_LIBOVOLNE');
+                        questGathered[range].push('ZBOZI_LIBOVOLNE');
+                    } else if (task_desc.includes('Produce a good amount of Basic Goods')) {
+                        questGathered[range].push('ZBOZI_ZAKLADNE');
                     } else if (task_desc.includes('Produce Any Goods of your choice using the 9-hour option')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('PRODUKT_9H_LIBOVOLNY('+value+')');
+                        questGathered[range].push('PRODUKT_9H_LIBOVOLNY('+value+')');
                     } else if (task_desc.includes('Spell Fragments')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('ULOMKY_KOUZEL('+value+')');
+                        questGathered[range].push('ULOMKY_KOUZEL('+value+')');
                     } else if (task_desc.includes('Time Booster Spell')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('ZESILOVAC('+value+')');
+                        questGathered[range].push('ZESILOVAC('+value+')');
                     } else if (task_desc.includes('Produce Any Goods of your choice using the 3-hour option')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('PRODUKT_3H_LIBOVOLNY('+value+')');
+                        questGathered[range].push('PRODUKT_3H_LIBOVOLNY('+value+')');
                     } else if (task_desc.includes('Fight and win Province Encounter')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('STRETY_NA_MAPE_BOJEM('+value+')');
+                        questGathered[range].push('STRETY_NA_MAPE_BOJEM('+value+')');
                     } else if (task_desc.includes('Scout Provinces')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('PRESKOUMEJ_PROVINCII('+value+')');
+                        questGathered[range].push('PRESKOUMEJ_PROVINCII('+value+')');
                     } else if (task_desc.includes('Produce Basic Goods of your choice using the 9-hour option')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('PRODUKT_9H_ZAKLADNY('+value+')');
+                        questGathered[range].push('PRODUKT_9H_ZAKLADNY('+value+')');
                     } else if (task_desc.includes('Produce Basic Goods of your choice using the 3-hour option')) {
                         var value = extractMultipleWithTimes(task_raw);
-                        quest.push('PRODUKT_3H_ZAKLADNY('+value+')');
+                        questGathered[range].push('PRODUKT_3H_ZAKLADNY('+value+')');
                     } else if (task_desc.includes('Solve Province, Tournament and/or Spire Encounter')) {
                         var value = extractWithCount(task_raw);
-                        quest.push('STRETY_LIBOVOLNE('+value+')');
+                        questGathered[range].push('STRETY_LIBOVOLNE('+value+')');
                     } else if (task_desc.includes('Finish')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('VYRES_PROVINCII('+value+')');
+                        questGathered[range].push('VYRES_PROVINCII('+value+')');
                     } else if (task_desc.includes('Use Instant')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('POZEHNANI('+value+')');
+                        questGathered[range].push('POZEHNANI('+value+')');
                     } else if (task_desc.includes('Use Supply Windfall')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('PRIDEL_ZASOB('+value+')');
+                        questGathered[range].push('PRIDEL_ZASOB('+value+')');
                     } else if (task_desc.includes('Place Trade Offer')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('VYTVOR_PONUKU('+value+')');
+                        questGathered[range].push('VYTVOR_PONUKU('+value+')');
                     } else if (task_raw.includes('accept trade_offer')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('PRIJMI_PONUKU('+value+')');
+                        questGathered[range].push('PRIJMI_PONUKU('+value+')');
                     } else if (task_desc.includes('Use Pet Food')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('KRMENI('+value+')');
+                        questGathered[range].push('KRMENI('+value+')');
                     } else if (task_desc.includes('Use Coin Rain')) {
                         var value = extractOneNumber(task_raw);
-                        quest.push('DEST_MINCI('+value+')');
+                        questGathered[range].push('DEST_MINCI('+value+')');
+                    } else if (task_raw.includes('gain') && task_raw.includes('orcs')) {
+                        var value = extractOneNumber(task_raw);
+                        questGathered[range].push('ORKOVIA');
+                    } else if (task_raw.includes('gain') && task_raw.includes('mana')) {
+                        var value = extractOneNumber(task_raw);
+                        questGathered[range].push('MANA');
+                    } else if (task_raw.includes('gain') && task_raw.includes('seeds')) {
+                        var value = extractOneNumber(task_raw);
+                        questGathered[range].push('SEMINKA');
+                    } else if (task_raw.includes('gain') && task_raw.includes('unurium')) {
+                        var value = extractOneNumber(task_raw);
+                        questGathered[range].push('UNURIUM');
+                    } else if (task_desc.includes('Collect a good amount of Sentient Goods of your choice')) {
+                        questGathered[range].push('ZBOZI_ZIVOUCI');
+                    } else if (task_desc.includes('Collect a good amount of Ascended Goods of your choice')) {
+                        questGathered[range].push('ZBOZI_OSVICENE');
                     
                     } else {
                         console.log(`Not handled quest:\n'${task_desc}'\n'${task_raw}'`);
@@ -1143,31 +1174,54 @@ function generateQuestsAuto() {
 
                     if (index !== number_of_conditions - 1) {
                         if (condition['relation'] === "") {
-                            quest.push('AND');
+                            questGathered[range].push('AND');
                         } else if (condition['relation'].includes('or') && !relations.has(condition['relation'])) {
-                            quest.push('OR');
+                            questGathered[range].push('OR');
                             relations.add(condition['relation']);
                         } else if (condition['relation'].includes('or') && relations.has(condition['relation'])) {
-                            quest.push('AND');
+                            questGathered[range].push('AND');
                         }
                     }
                 }
-                quest.push(data[i]['rewards'][0]['amount']);
-                if (quest.length > 1) {
-                    result.push(quest);
+                questGathered[range].push(data[i]['rewards'][0]['amount']);
+                if (data[i+1]['title'].includes('Daily Event Reward')) {
+                    result.push(questGathered);
+                    //console.log(questGathered);
+                    break;
                 }
             }
         }
 
         console.log('worth implementing remaining quests based on task_raw not task_desc');
-        console.log(result)
-        var resultAsString = '[' + result.join('],\n[') + ']';
-        const blob = new Blob([resultAsString], { type: 'text/plain' });
+        //console.log(result);
+        var txtResult = `[`;
+        for (let item = 0; item < result.length; item++) {
+            txtResult += `{`;
+            let keyIndex = 0;
+            for (const key in result[item]) {
+                keyIndex++;
+                txtResult += `"${key}":`;
+                var value = result[item][key];
+                txtResult += `[${value}]`;
+                if (keyIndex !== Object.keys(result[item]).length) {
+                    txtResult += `,`;
+                }
+
+            }
+            txtResult += `}`;
+            if (item !== result.length - 1) {
+                txtResult += `,\n`;
+            }
+        }
+        txtResult += `]`;
+        console.log(txtResult)
+        const jsonString = JSON.stringify(result);
+        const blob = new Blob([jsonString], { type: 'application/json' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
-        link.download = 'quests_auto';
+        link.download = 'quests_auto.txt';
         document.body.appendChild(link);
-        link.click();
+        //link.click();
         document.body.removeChild(link);
         create_exception("Data Generated!",10,'success');
     }
@@ -1197,4 +1251,77 @@ function extractWithCount(input) {
       return extractedNumber;
     }
     return null;
+}
+
+function calculateChapterRange(conditions) {
+    let directions = [];
+    const regex = /\b\d{6}\b/;
+    for (let i = 0; i < conditions.length; i++) {
+        if (!regex.test(conditions[i])) {
+            let c = conditions[i];
+            if (c.includes('NOT')) {
+                if (c.includes('wealth_l_3')) {
+                    directions.push("<4");
+                } else if (c.includes('all1_aw')) {
+                    directions.push("<4");
+                } else if (c.includes('orcs_aw')) {
+                    directions.push("<9");
+                } else if (c.includes('gr4_aw')) {
+                    directions.push("<10");
+                } else if (c.includes('gr6_aw')) {
+                    directions.push("<12");
+                } else if (c.includes('main_hall_ch17_39')) {
+                    directions.push("<18");
+                } else if (c.includes('gr7_aw')) {
+                    directions.push("<13");
+                } else if (c.includes('barracks_ch19')) {
+                    directions.push("<19");
+                } else if (!c.includes('has race humans') && !c.includes('has race elves')){
+                    console.log(`not recognized condition: ${c}`);
+                }
+            } else {
+                if (c.includes('wealth_l_3')) {
+                    directions.push(">3");
+                } else if (c.includes('all1_aw')) {
+                    directions.push(">3");
+                } else if (c.includes('orcs_aw')) {
+                    directions.push(">8");
+                } else if (c.includes('gr4_aw')) {
+                    directions.push(">9");
+                } else if (c.includes('gr6_aw')) {
+                    directions.push(">11");
+                } else if (c.includes('main_hall_ch17_39')) {
+                    directions.push(">17");
+                } else if (c.includes('gr7_aw')) {
+                    directions.push(">12");
+                } else if (c.includes('barracks_ch19')) {
+                    directions.push(">18");
+                } else if (!c.includes('has race humans') && !c.includes('has race elves')){
+                    console.log(`not recognized condition: ${c}`);
+                }
+            }
+        }
+    }
+    return generateChapterRange(directions);
+}
+
+function generateChapterRange(inputArray) {
+    if (inputArray.length === 0) {
+        return `1-MAX`;
+    }
+
+    let minChapter = 1;
+    let maxChapterRange = numberOfChapters;
+
+    for (const condition of inputArray) {
+        if (condition.startsWith(">")) {
+            const threshold = parseInt(condition.slice(1), 10);
+            minChapter = Math.max(minChapter, threshold + 1);
+        } else if (condition.startsWith("<")) {
+            const threshold = parseInt(condition.slice(1), 10);
+            maxChapterRange = Math.min(maxChapterRange, threshold - 1);
+        }
+    }
+
+    return `${minChapter}-${maxChapterRange === numberOfChapters ? 'MAX' : maxChapterRange}`;
 }

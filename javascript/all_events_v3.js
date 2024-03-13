@@ -934,6 +934,8 @@ function displayQuests() {
 
         var nextQuestMarkedUnknown = false;
 
+        var selectedChapter = getChapterInServer(getSelectedServer());
+
         for (let quest = 0; quest <= numberOfQuests; quest++) {
             if (quest === 0) {
                 var nextColumn = 1;
@@ -977,10 +979,17 @@ function displayQuests() {
                 var nextColumn = 1;
                 var questParts;
                 //console.log(quest, quests[selectedEvent][quest - 1]);
-                if (questContainRewards(selectedEvent, quest - 1)) {
-                    questParts = questTranslate(quests[selectedEvent][quest - 1].slice(0, -1));
+                var currentQuest = null;
+                if (Array.isArray(quests[selectedEvent][quest - 1])) {
+                    currentQuest = quests[selectedEvent][quest - 1];
                 } else {
-                    questParts = questTranslate(quests[selectedEvent][quest - 1]);
+                    currentQuest = quests[selectedEvent][quest - 1][findRange(selectedChapter, Object.keys(quests[selectedEvent][quest - 1]))];
+                }
+
+                if (questContainRewards(selectedEvent, quest - 1)) {
+                    questParts = questTranslate(currentQuest.slice(0, -1));
+                } else {
+                    questParts = questTranslate(currentQuest);
                 }
                 let questRowsNumber = 1;
                 if (questAvailable(quest, selectedEvent)) questRowsNumber = questParts.length;
@@ -1123,7 +1132,7 @@ function displayQuests() {
                     reward.style.borderTop = reward.style.borderRight = reward.style.borderBottom = "1px solid #DCC698";
                     reward.style.borderLeft = "none";
 
-                    var rewardValue = quests[selectedEvent][quest - 1][quests[selectedEvent][quest - 1].length - 1];
+                    var rewardValue = currentQuest[currentQuest.length - 1];
                     var rewardp = document.createElement('p');
                     rewardp.style.margin = "0";
                     rewardp.style.padding = "0";
@@ -1274,8 +1283,32 @@ window.onresize = function() {
 }
 
 function questContainRewards(selectedEvent, questNumber) {
-    return typeof quests[selectedEvent][questNumber][quests[selectedEvent][questNumber].length - 1] === 'number';
+    if (Array.isArray(quests[selectedEvent][questNumber])) {
+        return typeof quests[selectedEvent][questNumber][quests[selectedEvent][questNumber].length - 1] === 'number';
+    }
+    return typeof quests[selectedEvent][questNumber][Object.keys(quests[selectedEvent][questNumber])[0]].slice(-1)[0] === 'number';
 }
+
+function findRange(chapter, ranges) {
+    for (const range of ranges) {
+      const [start, end] = range.split('-');
+      const startNumber = parseInt(start, 10);
+  
+      if (end === 'MAX') {
+        if (chapter >= startNumber) {
+          return range;
+        }
+      } else {
+        const endNumber = parseInt(end, 10);
+  
+        if (chapter >= startNumber && chapter <= endNumber) {
+          return range;
+        }
+      }
+    }
+  
+    return null;
+  }
 
 function generateCurrencyCalculator(parent) {
     let center = document.createElement('center');
@@ -1458,6 +1491,7 @@ function generateShareButtons(parent) {
         parent.appendChild(modal);
 
         function downloadWord() {
+            //create_exception("Currently unavailable.", 10000, 'danger');
             var textArray = [];
             function removeImgFromString(str) {
                 const pattern = /<img[^>]*>/g;
@@ -1465,6 +1499,7 @@ function generateShareButtons(parent) {
             }
             var questUnlockedTomorrow = false;
             quests[getSelectedEvent()].forEach(function (item, number) {
+                //pravdepodobne tu treba spravit nieco typu item = getPodlaChapter()
                 if (questAvailable(number + 1, getSelectedEvent())) {
                     if ((number + 1) % 30 === 0) {
                         textArray.push(`Source: idavis-elvenar.com`);
@@ -1586,23 +1621,211 @@ function generateServerSelector(parent) {
             }
             input3.onchange = function () {
                 setSelectedServer(s);
+                location.reload();
             }
             input3.style.marginLeft = "3px";
             i.appendChild(input3);
             let label3 = document.createElement('label');
             label3.htmlFor = `server${s}`;
             label3.id = `server${s}_label`
-            label3.innerHTML = `<h7>Server${s}&nbsp;</h7>`;
+            label3.innerHTML = `<h7>Server${s} <img src="${chapter_icons[getChapterInServer(s)]}" style="width: 20px;">&nbsp;&nbsp;</h7>`;
             i.appendChild(label3);
         }
     };
 
     generateServerRadioButtons();
 
+    let settings = document.createElement('img');
+    settings.src = "https://i.ibb.co/0ycDvJx/options.png";
+    settings.style.width = "24px";
+    settings.style.marginLeft = "5px";
+    settings.style.cursor = "pointer";
+    settings.onclick = function() {
+        const modal = document.createElement('div');
+        modal.classList.add('modal', 'fade');
+        modal.id = 'settingsModal'; 
+        modal.tabIndex = '-1';
+        modal.role = 'dialog';
+        modal.setAttribute('aria-labelledby', 'settingsModalTitle');
+        modal.setAttribute('aria-hidden', 'true');
+
+        const modalDialog = document.createElement('div');
+        modalDialog.classList.add('modal-dialog', 'modal-dialog-centered');
+        modalDialog.role = 'document';
+
+        const modalContent = document.createElement('div');
+        modalContent.classList.add('modal-content');
+
+        const modalHeader = document.createElement('div');
+        modalHeader.classList.add('modal-header');
+
+        const modalTitle = document.createElement('h5');
+        modalTitle.classList.add('modal-title');
+        modalTitle.id = 'settingsModalTitle';
+        modalTitle.textContent = 'Servers Settings';
+
+        const closeButton = document.createElement('button');
+        closeButton.type = 'button';
+        closeButton.classList.add('close');
+        closeButton.dataset.dismiss = 'modal';
+        closeButton.setAttribute('aria-label', 'Close');
+        closeButton.addEventListener('click', function() {
+            $('#settingsModal').modal('hide');
+            modal.remove();
+        });
+
+        const closeIcon = document.createElement('span');
+        closeIcon.setAttribute('aria-hidden', 'true');
+        closeIcon.innerHTML = '&times;';
+
+        closeButton.appendChild(closeIcon);
+        modalHeader.appendChild(modalTitle);
+        modalHeader.appendChild(closeButton);
+
+        const modalBody = document.createElement('div');
+        modalBody.classList.add('modal-body');
+        modalBody.innerHTML = `Select the chapters you are currently in on the respective servers. This information will be used when displaying the quests to you, as different chapters might have varying conditions in the quest lists.<br>
+        Note: This feature has no impact on the Blessing of the Phoenix event. It will be used from the next event, so you can already prepare your settings here.<br><br>`;
+
+        for (let serverNum = 1; serverNum <= getNumberOfServers(); serverNum++) {
+            const serverContainer = document.createElement('div');
+            serverContainer.classList.add('server-container');
+
+            const serverText = document.createElement('span');
+            serverText.textContent = `Server${serverNum}: `;
+
+            const selectBox = document.createElement('select');
+            selectBox.className = 'custom-select';
+            selectBox.id = `selectBox${serverNum}`;
+            selectBox.style.width = '80px';
+
+            const imageDisplay = document.createElement('img');
+            imageDisplay.style.width = '24px';
+            imageDisplay.style.marginLeft = '5px';
+
+            for (let chNumber = 1; chNumber <= numberOfChapters; chNumber++) {
+                const option = document.createElement('option');
+                option.value = chNumber;
+                option.textContent = chNumber;
+                option.setAttribute('data-image', chapter_icons[chNumber]);
+                selectBox.appendChild(option);
+            }
+
+            const defaultChapter = getChapterInServer(serverNum);
+
+            selectBox.value = defaultChapter;
+            const defaultSelectedOption = selectBox.options[selectBox.selectedIndex];
+            const defaultImageUrl = defaultSelectedOption.getAttribute('data-image');
+            imageDisplay.src = defaultImageUrl;
+
+            selectBox.addEventListener('change', function () {
+                const selectedOption = this.options[this.selectedIndex];
+                const imageUrl = selectedOption.getAttribute('data-image');
+                imageDisplay.src = imageUrl;
+            });
+
+            serverContainer.appendChild(serverText);
+            serverContainer.appendChild(selectBox);
+            serverContainer.appendChild(imageDisplay);
+            modalBody.appendChild(serverContainer);
+        }
+        
+
+        const modalFooter = document.createElement('div');
+        modalFooter.classList.add('modal-footer');
+
+        const closeButton2 = document.createElement('button');
+        closeButton2.type = 'button';
+        closeButton2.classList.add('btn', 'btn-secondary');
+        closeButton2.setAttribute('data-dismiss', 'modal');
+        closeButton2.textContent = 'Close';
+        closeButton2.addEventListener('click', function() {
+            $('#settingsModal').modal('hide');
+            modal.remove();
+        });
+
+        const saveChangesButton = document.createElement('button');
+        saveChangesButton.type = 'button';
+        saveChangesButton.classList.add('btn', 'btn-download');
+        saveChangesButton.innerHTML = `Save Changes`;
+        saveChangesButton.addEventListener('click', function() {
+            for (let serv = 1; serv <= getNumberOfServers(); serv++) {
+                let currentSelectBox = document.getElementById(`selectBox${serv}`);
+                const selectedOptionIndex = currentSelectBox.selectedIndex;
+                const selectedOption = currentSelectBox.options[selectedOptionIndex];
+                const selectedValue = selectedOption.value;
+                setChapterInServer(serv, selectedValue);
+            }
+            $('#settingsModal').modal('hide');
+            modal.remove();
+            location.reload();
+        });
+
+        modalFooter.appendChild(closeButton2);
+        modalFooter.appendChild(saveChangesButton);
+
+        modalContent.appendChild(modalHeader);
+        modalContent.appendChild(modalBody);
+        modalContent.appendChild(modalFooter);
+
+        modalDialog.appendChild(modalContent);
+        modal.appendChild(modalDialog);
+
+        parent.appendChild(modal);
+
+        $('#settingsModal').on('hidden.bs.modal', function () {
+            modal.remove();
+        });
+
+        $('#settingsModal').modal('show');
+    };
+
+    
+
     fieldset.appendChild(i);
     serverSelector.appendChild(fieldset);
+
+    let fieldset2 = document.createElement('fieldset');
+    let i2 = document.createElement('i');
+    let label4 = document.createElement('label');
+    label4.htmlFor = `settings`;
+    label4.id = `settings_label`;
+    label4.innerHTML = `<h7>Settings:</h7>`;
+    i2.appendChild(label4);
+    fieldset2.appendChild(i2);
+    fieldset2.appendChild(settings);
+    //serverSelector.appendChild(fieldset2); TODO odkomentovat pri zverejneni
+
     center.appendChild(serverSelector);
     parent.appendChild(center);
+}
+
+function getChapterInServer(serverNum) {
+    if (localStorage.getItem("chapters_in_servers") === null) {
+        let obj = {};
+        for (let server = 1; server <= getNumberOfServers(); server++) {
+            obj[server] = numberOfChapters;
+        }
+        localStorage.setItem("chapters_in_servers", JSON.stringify(obj));
+        return obj[serverNum];
+    }
+    let obj = JSON.parse(localStorage.getItem("chapters_in_servers"));
+    if (obj.hasOwnProperty(serverNum)) {
+        return obj[serverNum];
+    }
+    obj[serverNum] = numberOfChapters;
+    return numberOfChapters;
+}
+
+function setChapterInServer(server, chapter) {
+    if (localStorage.getItem("chapters_in_servers") === null) {
+        let obj = {};
+        obj[server] = chapter;
+        localStorage.setItem("chapters_in_servers", JSON.stringify(obj));
+    }
+    let obj = JSON.parse(localStorage.getItem("chapters_in_servers"));
+    obj[server] = chapter;
+    localStorage.setItem("chapters_in_servers", JSON.stringify(obj));
 }
 
 function getNumberOfAshenPhoenixes() {
