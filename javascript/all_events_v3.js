@@ -1794,7 +1794,7 @@ function generateServerSelector(parent) {
     i2.appendChild(label4);
     fieldset2.appendChild(i2);
     fieldset2.appendChild(settings);
-    //serverSelector.appendChild(fieldset2); TODO odkomentovat pri zverejneni
+    serverSelector.appendChild(fieldset2);
 
     center.appendChild(serverSelector);
     parent.appendChild(center);

@@ -1,4 +1,12 @@
 var images_buildings = {
+    "A_Evt_Set_Shuffle_Garden_XXIV_Fiddlin_Foliage":"https://i.ibb.co/Xt38tcp/fiddlin-foliage.png",
+    "A_Evt_Set_Shuffle_Garden_XXIV_Pollen_Pantry":"https://i.ibb.co/QPM3M70/pollen-pantry.png",
+    "A_Evt_Set_Shuffle_Garden_XXIV_Pupa_Nest":"https://i.ibb.co/cxdN5qV/pupa-nest.png",
+    "A_Evt_Set_Shuffle_Garden_XXIV_Sentry_Post":"https://i.ibb.co/WxkSG9f/sentry-post.png",
+    "A_Evt_Set_Shuffle_Garden_XXIV_The_Gilded_Jar":"https://i.ibb.co/rkgBgG7/the-gilded-jar.png",
+    "A_Evt_Set_Shuffle_Garden_XXIV_The_High_Hive":"https://i.ibb.co/G0gN1dQ/the-high-hive.png",
+    "A_Evt_Shuffle_Garden_XXIV_Banshee_Bramble":"https://i.ibb.co/yhN5QrD/banshee-brumble.png",
+    "A_Evt_Shuffle_Garden_XXIV_Sweetcomb_Square":"https://i.ibb.co/wQbZYg0/sweetcomb-square.png",
     "A_Evt_Theater_Easter_XXIV_Eggnook":"https://i.ibb.co/q7Jz1Ld/eggnook.png",
     "A_Evt_Theater_Easter_XXIV_Garden_of_Tales_and_Thorns":"https://i.ibb.co/GW68fyt/garden-of-tales-and-thorns.png",
     "A_Evt_Theater_Easter_XXIV_Peridot_Perch":"https://i.ibb.co/dBCT3bS/peridot-perch.png",

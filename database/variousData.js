@@ -95,6 +95,7 @@ let eventBanners = {
     "shuffle_postal_xxiii_": "https://i.ibb.co/k2mdTqN/EL-akcia-zima-2023-banner.png",
     "scroll_sorcerers_xxiv_": "https://i.ibb.co/kJZD0G5/EL-akcia-janu-r-2024-banner.png",
     "theater_easter_xxiv_": "https://i.ibb.co/JRKBZPG/EL-akcia-ve-k-noc-2024-banner.jpg",
+    "shuffle_garden_xxiv_": "https://i.ibb.co/WPSTKgs/EL-akcia-m-j-2024-banner.jpg",
 }
 
 let eventVideos = {
@@ -148,7 +149,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "shuffle_postal_xxiii_": "11/13/2023",
     "scroll_sorcerers_xxiv_": "12/18/2023",
     "theater_easter_xxiv_": "02/14/2024",
-    "shuffle_garden_xxiv_": "03/13/2023",
+    "shuffle_garden_xxiv_": "03/26/2024",
 }
 
 let questsLinks = {
@@ -174,6 +175,7 @@ let questsLinks = {
     "shuffle_postal_xxiii_": "bit.ly/WinterMagic2023",
     "scroll_sorcerers_xxiv_": "bit.ly/TournamentOfMagic2024",
     "theater_easter_xxiv_": "bit.ly/BlessingOfThePhoenix2024",
+    "shuffle_garden_xxiv_": "bit.ly/BuzzingSpring2024",
 }
 
 let eventsDurations = {
@@ -364,6 +366,7 @@ var setNames = {
     "tile_amuni_xxiii": "Ancient Promise",
     "scroll_aquatic_xxiii": "Seapectecular Aquatics",
     "tile_mistyforest_xxiii": "Soul Experiments",
+    "shuffle_garden_xxiv": "Golden Hive",
 }
 
 var discardBuildings = [

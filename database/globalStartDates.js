@@ -5,8 +5,8 @@ var eventStartDates = {
             "end_date": "__ _ 2024"
         },
         "beta": {
-            "start_date": "April 1st 2024",
-            "end_date": "April 2nd 2024"
+            "start_date": "March 26th 2024",
+            "end_date": "April 17th 2024"
         }
     },
     "theater_easter_xxiv_": {
