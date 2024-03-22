@@ -3,6 +3,7 @@ var dailyPrizes = {
     "shuffle_garden_xxiv_": [
         "A_Evt_Shuffle_Garden_XXIV_Banshee_Bramble",
         "A_Evt_Shuffle_Garden_XXIII_Mischievous_Fae",
+        "INS_KP_{15}",
     ],
 
     "theater_easter_xxiv_": [
