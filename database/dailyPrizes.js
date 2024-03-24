@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_Shuffle_Garden_XXIII_Mischievous_Fae",
         "INS_KP_{15}",
         "A_Evt_May_XXII_Primordial_Gecko",
+        "INS_UNIT_MC_LM_10",
     ],
 
     "theater_easter_xxiv_": [
