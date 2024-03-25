@@ -6,6 +6,7 @@ var dailyPrizes = {
         "INS_KP_{15}",
         "A_Evt_May_XXII_Primordial_Gecko",
         "INS_UNIT_MC_LM_10",
+        "A_Evt_Autumn_XVIII_Mushrooms",
     ],
 
     "theater_easter_xxiv_": [
