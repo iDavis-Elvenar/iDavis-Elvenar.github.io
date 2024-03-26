@@ -1685,7 +1685,7 @@ function generateServerSelector(parent) {
         const modalBody = document.createElement('div');
         modalBody.classList.add('modal-body');
         modalBody.innerHTML = `Select the chapters you are currently in on the respective servers. This information will be used when displaying the quests to you, as different chapters might have varying conditions in the quest lists.<br>
-        Note: This feature has no impact on the Blessing of the Phoenix event. It will be used from the next event, so you can already prepare your settings here.<br><br>`;
+        Note: This feature has no impact on the Blessing of the Phoenix event. It will be used in the Buzzing Spring event and onwards, so you can already prepare your settings here.<br><br>`;
 
         for (let serverNum = 1; serverNum <= getNumberOfServers(); serverNum++) {
             const serverContainer = document.createElement('div');
