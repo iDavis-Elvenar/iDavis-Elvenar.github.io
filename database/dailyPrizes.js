@@ -8,6 +8,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_LM_10",
         "A_Evt_Autumn_XVIII_Mushrooms",
         "frog_runeshards2_{2}",
+        "A_Evt_May_XXI_Bumblebee_Stables",
     ],
 
     "theater_easter_xxiv_": [
