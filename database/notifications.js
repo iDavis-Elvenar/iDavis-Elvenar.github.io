@@ -185,18 +185,23 @@ var notifications = {
     },
     "16":{  // NEW FEATURE ON THE WEBSITE #1
         "id":16,
-        "text":`<h4 class="alert-heading">Introducing: Tomes on the website!</h4>
+        "text":`<h4 class="alert-heading"><img src="https://i.ibb.co/GtLpfZ7/event-guide.png" style="width: 30px;">  Event Quests are now Chapter dependent!
+        <img src="https://i.ibb.co/XCp7d47/ch21.png" style="width: 25px;"> <img src="https://i.ibb.co/W5CtfR2/ch17.png" style="width: 25px;"> <img src="https://i.ibb.co/Sx7bcfG/ch13.png" style="width: 25px;"></h4>
         <hr>
-        <img src="https://i.ibb.co/1QVnfrx/rsk-evo.png" class="center" style="margin-bottom: 10px;">
-        <p>Tomes, obtainable from various in-game locations and discoverable within your inventory, are now featured on the website. Visit the <a href="https://idavis-elvenar.com/tomes.html" target="_blank" class="alert-link">Tomes Subpage</a> to access detailed information 
-        about all currently available Tomes, including the goods, items, and buildings they provide.</p>
+        <p>With the beginning of the next event (<b>Buzzing Spring</b>), some of the Event Quests will have varying conditions based on your current chapter.</p>
+        <p>For this reason, I have implemented a new feature that allows you to preset the chapter for Event Quest lists on this website!</p>
+        <p>1. Visit the <b>Quests</b> tab on the <b>All Events</b> page.</p>
+        <p>2. Search for the Settings Icon: <img src="https://i.ibb.co/0ycDvJx/options.png" style="width: 20px;">.</p>
+        <p>3. Click the Settings Icon and select a chapter for each of the servers on which you play.</p>
+        <p>Now the quests will be relevant to your selected chapter. Be sure to update the settings when your city advances.</p>
+        <center><img src="https://i.ibb.co/Bcg7QqN/servers-settings.png" style="width: 35%;"></center><br>
         <hr>
-        <p>This subpage will continue to be utilized in my upcoming content, so stay tuned for more updates.</p>`,
-        "repeatAfter":172800,
+        <p>Visit the <a href="https://idavis-elvenar.com/events.html" target="_blank" class="alert-link">Quests Page</a> to prepare your settings now!</p>`,
+        "repeatAfter":86400,
         "style":"warning",
-        "duration":50,
-        "active":false,
-        "priority":35
+        "duration":100,
+        "active":true,
+        "priority":100
     },
     "17":{  // EVENT
         "id":17,
