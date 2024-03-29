@@ -1533,7 +1533,7 @@ function generateShareButtons(parent) {
                         const minutes = now.getMinutes();
                         const seconds = now.getSeconds();
                         textArray.push(`The following quest list has been downloaded from idavis-elvenar.com on ${year}-${month}-${day} at ${hours}:${minutes}.\nKeep an eye on the website to get notified about any further changes.\n`);
-                        textArray.push(`This is the quest list generated for chapter ${getChapterInServer(getSelectedServer())}.\n`);
+                        textArray.push(`This is the quest list generated for chapter ${getChapterInServer(getSelectedServer())}. You can change this setting on the website.\n`);
                     }
                     var quest = [];
                     var itemTranslated;
