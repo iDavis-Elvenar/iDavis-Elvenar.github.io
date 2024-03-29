@@ -10,6 +10,7 @@ var dailyPrizes = {
         "frog_runeshards2_{2}",
         "A_Evt_May_XXI_Bumblebee_Stables",
         "A_Evt_May_XXII_Tender_Tag_Team",
+        "INS_REV_SQD_50",
     ],
 
     "theater_easter_xxiv_": [
