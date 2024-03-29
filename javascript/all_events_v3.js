@@ -1379,17 +1379,33 @@ function updateCurrencyCalculator() {
     var result = 0;
     if (quests[getSelectedEvent()] !== undefined) {
         for (let i = 1; i <= quests[getSelectedEvent()].length; i++) {
-            if (typeof quests[getSelectedEvent()][i - 1][quests[getSelectedEvent()][i - 1].length - 1] === 'number') {
-                var checkbox = document.getElementById(`quest_finished_${i}`);
-                if (!checkbox || !checkbox.checked) {
-                    var gain = quests[getSelectedEvent()][i - 1][quests[getSelectedEvent()][i - 1].length - 1];
-                    if (getNumberOfAshenPhoenixes() > 0) {
-                        gain = increaseByAshenPhoenixes(gain);
+            if (Array.isArray(quests[getSelectedEvent()][i - 1])) {
+                if (typeof quests[getSelectedEvent()][i - 1][quests[getSelectedEvent()][i - 1].length - 1] === 'number') {
+                    var checkbox = document.getElementById(`quest_finished_${i}`);
+                    if (!checkbox || !checkbox.checked) {
+                        var gain = quests[getSelectedEvent()][i - 1][quests[getSelectedEvent()][i - 1].length - 1];
+                        if (getNumberOfAshenPhoenixes() > 0) {
+                            gain = increaseByAshenPhoenixes(gain);
+                        }
+                        result += gain;
                     }
-                    result += gain;
+                } else {
+                    return;
                 }
             } else {
-                return;
+                let foundRange = findRange(getChapterInServer(getSelectedServer()), Object.keys(quests[getSelectedEvent()][i - 1]));
+                if (typeof quests[getSelectedEvent()][i - 1][foundRange][quests[getSelectedEvent()][i - 1][foundRange].length - 1] === 'number') {
+                    var checkbox = document.getElementById(`quest_finished_${i}`);
+                    if (!checkbox || !checkbox.checked) {
+                        var gain = quests[getSelectedEvent()][i - 1][foundRange][quests[getSelectedEvent()][i - 1][foundRange].length - 1];
+                        if (getNumberOfAshenPhoenixes() > 0) {
+                            gain = increaseByAshenPhoenixes(gain);
+                        }
+                        result += gain;
+                    }
+                } else {
+                    return;
+                }
             }
         }
         var divRow3 = document.getElementById("currency_calc");
@@ -1499,6 +1515,11 @@ function generateShareButtons(parent) {
             }
             var questUnlockedTomorrow = false;
             quests[getSelectedEvent()].forEach(function (item, number) {
+                if (Array.isArray(item)) {
+                    item = item;
+                } else {
+                    item = item[findRange(getChapterInServer(getSelectedServer()), Object.keys(item))];
+                }
                 //pravdepodobne tu treba spravit nieco typu item = getPodlaChapter()
                 if (questAvailable(number + 1, getSelectedEvent())) {
                     if ((number + 1) % 30 === 0) {
@@ -1512,6 +1533,7 @@ function generateShareButtons(parent) {
                         const minutes = now.getMinutes();
                         const seconds = now.getSeconds();
                         textArray.push(`The following quest list has been downloaded from idavis-elvenar.com on ${year}-${month}-${day} at ${hours}:${minutes}.\nKeep an eye on the website to get notified about any further changes.\n`);
+                        textArray.push(`This is the quest list generated for chapter ${getChapterInServer(getSelectedServer())}.\n`);
                     }
                     var quest = [];
                     var itemTranslated;
@@ -1621,7 +1643,8 @@ function generateServerSelector(parent) {
             }
             input3.onchange = function () {
                 setSelectedServer(s);
-                location.reload();
+                //location.reload();
+                displayQuests();
             }
             input3.style.marginLeft = "3px";
             i.appendChild(input3);
@@ -1758,7 +1781,8 @@ function generateServerSelector(parent) {
             }
             $('#settingsModal').modal('hide');
             modal.remove();
-            location.reload();
+            //location.reload();
+            displayQuests();
         });
 
         modalFooter.appendChild(closeButton2);
