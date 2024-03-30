@@ -77,7 +77,7 @@ var stageRewards = {
         ],
         [
             {"img":"https://i.ibb.co/QKLsH8F/ancient-knowledge-instant.png", "text":"2x Ancient Knowledge (20 KP)", "link":"", "description":``},
-            {"img":"https://i.ibb.co/Sd261b7/rsk-set.png", "text":"Tome of the Sorcerers' Wisdom", "link":"https://idavis-elvenar.com/tomes.html#rsk_set_sorcerers_buildings", "description":``},
+            {"img":"https://i.ibb.co/Sd261b7/rsk-set.png", "text":"Tome of the Sorcerers' Wisdom", "link":"https://idavis-elvenar.com/tomes.html#rsk_set_sorcerers_buildings_2", "description":``},
             {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"15x Time Booster (30 min)", "link":"", "description":``},
         ],
         [
