@@ -158,6 +158,7 @@ function readBuildingsJSON() {
                     td12.innerHTML += `<select id="${"input_stage_"+filteredData[i]['id']}" class="custom-select" style="width: 70px; margin-bottom: 10px;" onchange="setAndReload(this)">
                                         ${selectOptions}
                                     </select><br>`;
+                    delete filteredData[i]["resale_resources"].population;
                     td12.innerHTML += Object.keys(filteredData[i]["resale_resources"]).length === 0
                                         ? "<b>Resale resources:</b> -"
                                         : `<b>Resale resources:</b> ${Object.entries(filteredData[i]["resale_resources"]).map(([item, quantity]) => `${quantity}x ${goods_icons[item]}`).join(', ')}`;
@@ -179,6 +180,7 @@ function readBuildingsJSON() {
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
                                     <b>${langUI("Expiring:")}</b> ${expiringDuration}<br>
                                     ${expiringDuration !== '-' && filteredData[i]['expiring']['description'] ? "<br><b>"+langUI("Effect:")+"</b> "+filteredData[i]['expiring']['description'] : ""}`;
+                                    delete filteredData[i]["resale_resources"].population;
                                     td12.innerHTML += Object.keys(filteredData[i]["resale_resources"]).length === 0
                                                         ? "<b>Resale resources:</b> -"
                                                         : `<b>Resale resources:</b> ${Object.entries(filteredData[i]["resale_resources"]).map(([item, quantity]) => `${quantity}x ${goods_icons[item]}`).join(', ')}`;

@@ -298,6 +298,7 @@ function displayDailyPrizes() {
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
                                     <b>${langUI("Expiring:")}</b> -<br>`;
+                    delete filteredData[i]["resale_resources"].population;
                     td12.innerHTML += Object.keys(filteredData[i]["resale_resources"]).length === 0
                     ? "<b>Resale resources:</b> None"
                     : `<b>Resale resources:</b> ${Object.entries(filteredData[i]["resale_resources"]).map(([item, quantity]) => `${quantity}x ${goods_icons[item]}`).join(', ')}`;
