@@ -12,6 +12,7 @@ var dailyPrizes = {
         "A_Evt_May_XXII_Tender_Tag_Team",
         "INS_REV_SQD_50",
         "A_Evt_Summer_XVIII_Entrance",
+        "frog_grr_5_{1}",
     ],
 
     "theater_easter_xxiv_": [
