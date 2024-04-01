@@ -13,6 +13,7 @@ var dailyPrizes = {
         "INS_REV_SQD_50",
         "A_Evt_Summer_XVIII_Entrance",
         "frog_grr_5_{1}",
+        "A_Evt_Summer_XVIII_Merchant",
     ],
 
     "theater_easter_xxiv_": [
