@@ -175,7 +175,7 @@ let questsLinks = {
     "shuffle_postal_xxiii_": "bit.ly/WinterMagic2023",
     "scroll_sorcerers_xxiv_": "bit.ly/TournamentOfMagic2024",
     "theater_easter_xxiv_": "bit.ly/BlessingOfThePhoenix2024",
-    "shuffle_garden_xxiv_": "bit.ly/BuzzingSpring2024",
+    "shuffle_garden_xxiv_": "bit.ly/WhiskersOfThePast2024",
 }
 
 let eventsDurations = {
@@ -202,6 +202,7 @@ let eventsDurations = {
     "scroll_sorcerers_xxiv_": 22,
     "theater_easter_xxiv_": 26,
     "shuffle_garden_xxiv_": 22,
+    "tile_amuni_xxiv_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -331,6 +332,7 @@ var iconsImages = {
     "spell_good_production_boost_bonus":"https://i.ibb.co/hgjNJXx/spell-good-production-boost-bonus.png",
     "spell_production_boost_bonus":"https://i.ibb.co/cFTnJH1/spell-production-boost-bonus.png",
     "spell_neighborly_help_boost_bonus":"https://i.ibb.co/SNCHdC3/spell-neighborly-help-boost-bonus.png",
+    "portal_production":"https://i.ibb.co/pxqyvc3/settlement-boost.png",
 }
 
 var iconsTitles = {
@@ -390,6 +392,7 @@ var eventsInfoIcons = {
     "scroll_sorcerers_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "theater_easter_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "shuffle_garden_xxiv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
+    "tile_amuni_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -403,6 +406,11 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "tile_amuni_xxiv_": [
+        {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
+        {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},
+        {"id":"playground", "name":"Playground", "img":"https://i.ibb.co/nmkBMxB/february-xxiii-chest5.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html"},
+    ],
     "theater_easter_xxiv_": [
         {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"02/15/2024"},
     ],

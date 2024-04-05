@@ -17,6 +17,7 @@ var seasonsBanners = {
     "july_xxiii_": "https://i.ibb.co/kxdBh0Y/season-triumph-banner.png",
     "october_xxiii_": "https://i.ibb.co/xgc6Bpq/season-secrets-banner.png",
     "january_xxiv_": "https://i.ibb.co/XDx9ZMt/Season-Season-of-Dreams-Banner.png",
+    "april_xxiv_": "https://i.ibb.co/kxdBh0Y/season-triumph-banner.png",
 }
 
 var seasonInfoIcons = {
@@ -25,6 +26,7 @@ var seasonInfoIcons = {
     "july_xxiii_" : {"img":"https://i.ibb.co/wzB4kvF/july-xxiii.png", "img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "october_xxiii_" : {"img":"https://i.ibb.co/QX3mjmH/october-xxiii.png", "img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "january_xxiv_" : {"img":"https://i.ibb.co/L8gkDtv/season-dreams-info.png", "img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "april_xxiv_": {"img":"https://i.ibb.co/wzB4kvF/july-xxiii.png", "img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var seasonBlessingIcons = {
@@ -33,6 +35,7 @@ var seasonBlessingIcons = {
     "july_xxiii_" : "https://i.ibb.co/pdJVw6q/july-xxiii-blessing.png",
     "october_xxiii_" : "https://i.ibb.co/ynvZrPx/october-xxiii-blessing.png",
     "january_xxiv_" : "https://i.ibb.co/Xxd9vcY/season-dreams-blessing.png",
+    "april_xxiv_": "https://i.ibb.co/pdJVw6q/july-xxiii-blessing.png",
 }
 
 var seasonXp = {
@@ -41,6 +44,7 @@ var seasonXp = {
     "july_xxiii_" : {"img":"https://i.ibb.co/wg9tcg1/july-xxiii-currency.png"},
     "october_xxiii_" : {"img":"https://i.ibb.co/N6msX1X/october-xxiii-currency.png"},
     "january_xxiv_" : {"img":"https://i.ibb.co/vjQD2kX/season-xp-b15fa556d9a49df8ccdbc3fe222f0feb.png"},
+    "april_xxiv_": {"img":"https://i.ibb.co/wg9tcg1/july-xxiii-currency.png"},
 }
 
 var seasonProgress = {
@@ -49,6 +53,7 @@ var seasonProgress = {
     "july_xxiii_" : {"img":"https://i.ibb.co/DpyZj8K/season-triumph-progress.png", "img_width": "40"},
     "october_xxiii_" : {"img":"https://i.ibb.co/DpyZj8K/season-triumph-progress.png", "img_width": "40"},
     "january_xxiv_" : {"img":"https://i.ibb.co/GQyKdRP/season-dreams-progress.png", "img_width": "40"},
+    "april_xxiv_": {"img":"https://i.ibb.co/DpyZj8K/season-triumph-progress.png", "img_width": "40"},
 }
 
 var seasonsVideos = {
@@ -57,6 +62,7 @@ var seasonsVideos = {
     "july_xxiii_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
     "october_xxiii_": "https://www.youtube.com/embed/BMuyNcwpymE?feature=share",
     "january_xxiv_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
+    "april_xxiv_": "https://www.youtube.com/embed/1Zg8WAVg4gA",
 }
 
 var seasonQuestsRewards = {
@@ -65,6 +71,7 @@ var seasonQuestsRewards = {
     "july_xxiii_": {"daily" : 5, "weekly" : 70},
     "october_xxiii_": {"daily" : 5, "weekly" : 70},
     "january_xxiv_": {"daily" : 5, "weekly" : 70},
+    "april_xxiv_": {"daily" : 5, "weekly" : 70},
 }
 
 var seasonsQuestsBannerIcons = {
@@ -73,6 +80,7 @@ var seasonsQuestsBannerIcons = {
     "july_xxiii_": "https://i.ibb.co/ZWYZBKK/season-triumph-quests-banner.png",
     "october_xxiii_": "https://i.ibb.co/Y0cmsWN/october-xxiii-quests-banner.png",
     "january_xxiv_":"https://i.ibb.co/tXpRkmP/season-quests-and-rewards.png",
+    "april_xxiv_": "https://i.ibb.co/ZWYZBKK/season-triumph-quests-banner.png",
 }
 
 var seasonsIntro = `Seasons are a type of long-term events containing Daily and Weekly quests, many interesting rewards and a unique Season Pass.
@@ -91,6 +99,9 @@ var blessingChestsImages = {
 }
 
 var blessingFreeChests = {
+    "april_xxiv_": [
+        "reward_pool_event_chest_c_season_triumph","reward_pool_event_chest_f_season_triumph","reward_pool_event_chest_i_season_triumph"
+    ],
     "january_xxiv_": [
         "reward_pool_event_chest_c_season_dreams","reward_pool_event_chest_f_season_dreams","reward_pool_event_chest_i_season_dreams"
     ],

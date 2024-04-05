@@ -1,8 +1,18 @@
 var eventStartDates = { 
-    "shuffle_garden_xxiv_": {//Buzzing Spring 18.4. - 10.5.
+    "tile_amuni_xxiv_": {//Whiskers of the Past 23.5. - 14.6.
         "live": {
             "start_date": "__ _ 2024",
             "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "May 1st 2024",
+            "end_date": "May 2nd 2024"
+        }
+    },
+    "shuffle_garden_xxiv_": {
+        "live": {
+            "start_date": "April 18th 2024",
+            "end_date": "May 10th 2024"
         },
         "beta": {
             "start_date": "March 26th 2024",
@@ -235,6 +245,16 @@ var faStartDates = {
 }
 
 var seasonStartDates = {  //Season of Triumph 29.4. - 12.7., Season of Joy 30.7. - 8.10., Season of Secrets 23.10. - 6.1.
+    "april_xxiv_": {
+        "live": {
+            "start_date": "April 29th 2024",
+            "end_date": "July 12th 2024"
+        },
+        "beta": {
+            "start_date": "April 1st 2024",
+            "end_date": "June 15th 2024"
+        }
+    },
     "january_xxiv_": {
         "live": {
             "start_date": "January 24th 2024",

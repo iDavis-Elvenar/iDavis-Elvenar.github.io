@@ -1,5 +1,9 @@
 var dailyPrizes = {
 
+    "tile_amuni_xxiv_": [
+
+    ],
+
     "shuffle_garden_xxiv_": [
         "A_Evt_Shuffle_Garden_XXIV_Banshee_Bramble",
         "A_Evt_Shuffle_Garden_XXIII_Mischievous_Fae",

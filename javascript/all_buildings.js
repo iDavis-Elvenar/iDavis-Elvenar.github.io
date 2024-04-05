@@ -43,6 +43,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Chthonic_Circle": 4,
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Potionmakers_Pedestal": 4,
     "A_Evt_Evo_Theater_Easter_XXIV_Verdant_Phoenix": 9,
+    "A_Evt_Evo_Tile_Amuni_XXIV_Purring_Sanctum": 9,
 }
 
 function setAndReload(id) {
@@ -143,7 +144,7 @@ function readBuildingsJSON() {
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
                                     <b>${langUI("Expiring:")}</b> ${expiringDuration}<br>
-                                    <b>${langUI("Upgrade costs:")}</b> <img src="${artifacts[evoUpgradeCosts[filteredData[i]['id']]]["img"]}" style="width: 28px; margin-bottom: 3px;"> ${artifacts[evoUpgradeCosts[filteredData[i]['id']]]["name"]}<br>`;
+                                    <b>${langUI("Upgrade costs:")}</b> <img src="${artifacts[evoUpgradeCosts[filteredData[i]['id']]]?.["img"]}" style="width: 28px; margin-bottom: 3px;"> ${artifacts[evoUpgradeCosts[filteredData[i]['id']]]?.["name"]}<br>`;
                     if (feedingEffectsDescriptions.hasOwnProperty(filteredData[i]['id'])) {
                         td12.innerHTML += `<b>Feeding effect:</b> ${feedingEffectsDescriptions[filteredData[i]['id']]}<br>`;
                     }
@@ -179,7 +180,7 @@ function readBuildingsJSON() {
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
                                     <b>${langUI("Expiring:")}</b> ${expiringDuration}<br>
-                                    ${expiringDuration !== '-' && filteredData[i]['expiring']['description'] ? "<br><b>"+langUI("Effect:")+"</b> "+filteredData[i]['expiring']['description'] : ""}`;
+                                    ${expiringDuration !== '-' && filteredData[i]['expiring']['description'] ? "<b>"+langUI("Effect:")+"</b> "+filteredData[i]['expiring']['description']+"<br>" : ""}`;
                                     delete filteredData[i]["resale_resources"].population;
                                     td12.innerHTML += Object.keys(filteredData[i]["resale_resources"]).length === 0
                                                         ? "<b>Resale resources:</b> -"

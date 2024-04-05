@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2024" : [
+            ["Whiskers of the Past","tile_amuni_xxiv_",false,true],
             ["Buzzing Spring","shuffle_garden_xxiv_",true,false],
             ["Blessing of the Phoenix","theater_easter_xxiv",false,false],
             ["Tournament of Magic","scroll_sorcerers_xxiv_",false,false],
@@ -59,6 +60,7 @@ var allEvents = {
     },
     "all_events" : {
         "2024" : [
+            ["Whiskers of the Past","tile_amuni_xxiv_",false,true],
             ["Buzzing Spring","shuffle_garden_xxiv_",true,false],
             ["Blessing of the Phoenix","theater_easter_xxiv_",false,false],
             ["Tournament of Magic","scroll_sorcerers_xxiv_",false,false],
@@ -119,6 +121,7 @@ var allFas = { //NAME,ID,SELECTED,DISABLED == HIDDEN
 
 var allSeasons = { //NAME,ID,SELECTED,DISABLED == HIDDEN
     "2024" : [
+        ["Season of Triumph", "april_xxiv_",false,false],
         ["Season of Dreams", "january_xxiv_",true,false],
     ],
     "2023" : [
