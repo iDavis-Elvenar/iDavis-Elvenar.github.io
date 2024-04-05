@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Evt_Season_Triumph_XXIV_Aqua_Weaver":"https://i.ibb.co/JjqN7wb/aqua-weaver.png",
     "A_Evt_Set_Shuffle_Garden_XXIV_Fiddlin_Foliage":"https://i.ibb.co/Xt38tcp/fiddlin-foliage.png",
     "A_Evt_Set_Shuffle_Garden_XXIV_Pollen_Pantry":"https://i.ibb.co/QPM3M70/pollen-pantry.png",
     "A_Evt_Set_Shuffle_Garden_XXIV_Pupa_Nest":"https://i.ibb.co/cxdN5qV/pupa-nest.png",
