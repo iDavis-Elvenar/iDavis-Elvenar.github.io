@@ -175,7 +175,8 @@ let questsLinks = {
     "shuffle_postal_xxiii_": "bit.ly/WinterMagic2023",
     "scroll_sorcerers_xxiv_": "bit.ly/TournamentOfMagic2024",
     "theater_easter_xxiv_": "bit.ly/BlessingOfThePhoenix2024",
-    "shuffle_garden_xxiv_": "bit.ly/WhiskersOfThePast2024",
+    "shuffle_garden_xxiv_": "bit.ly/BuzzingSpring2024",
+    "tile_amuni_xxiv_": "bit.ly/WhiskersOfThePast2024",
 }
 
 let eventsDurations = {
