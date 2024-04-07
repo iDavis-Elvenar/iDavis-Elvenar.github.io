@@ -97,7 +97,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "10":{  // SEASON
@@ -197,25 +197,25 @@ var notifications = {
         <center><img src="https://i.ibb.co/Bcg7QqN/servers-settings.png" style="width: 35%;"></center><br>
         <hr>
         <p>Visit the <a href="https://idavis-elvenar.com/events.html" target="_blank" class="alert-link">Quests Page</a> to prepare your settings now!</p>`,
-        "repeatAfter":86400,
+        "repeatAfter":172800,
         "style":"warning",
         "duration":100,
         "active":true,
-        "priority":100
+        "priority":45
     },
     "17":{  // EVENT
         "id":17,
-        "text":`<h4 class="alert-heading">Blessing of the Phoenix event is coming soon!</h4>
-  <p>This year's Easter event is getting close!</p>
+        "text":`<h4 class="alert-heading">Buzzing Spring event is coming soon!</h4>
+  <p>This year's spring event is getting close!</p>
   <hr>
-  <center><img src="https://i.ibb.co/JRKBZPG/EL-akcia-ve-k-noc-2024-banner.jpg" style="width: 35%;"></center><br>
-    <center><p>The <b>Blessing of the Phoenix</b> is approaching and it is now fully covered on the All Events page! Get ready for everything that the Easter event has to offer!<br><br>
+  <center><img src="https://i.ibb.co/WPSTKgs/EL-akcia-m-j-2024-banner.jpg" style="width: 35%;"></center><br>
+    <center><p>The <b>Buzzing Spring</b> is approaching and it is now fully covered on the All Events page! Get ready for everything that the spring event has to offer!<br><br>
     Start Date, Daily Prizes and Quests are now available to preview in the <img src="https://i.ibb.co/QkJ7qzP/all-events.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/events.html" class="alert-link">All Events</a> page!<br><br>
     Visit the <img src="https://i.ibb.co/NC00fM1/all-buildings.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/buildings.html" class="alert-link">All Buildings</a> page for more information about all the newly introduced buildings.</p></center>`,
         "repeatAfter":86400,
         "style":"warning",
         "duration":60,
-        "active":false,
+        "active":true,
         "priority":50
     },
 }
