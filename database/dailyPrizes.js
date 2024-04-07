@@ -23,6 +23,7 @@ var dailyPrizes = {
         "A_Evt_Shuffle_Garden_XXIII_Blossoming_Brute",
         "A_Evt_May_XXI_Petal_Bridge",
         "INS_KP_AW_20",
+        "frog_unurium_DP_{10}",
     ],
 
     "theater_easter_xxiv_": [
