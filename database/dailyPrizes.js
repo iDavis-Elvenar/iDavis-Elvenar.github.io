@@ -24,6 +24,7 @@ var dailyPrizes = {
         "A_Evt_May_XXI_Petal_Bridge",
         "INS_KP_AW_20",
         "frog_unurium_DP_{10}",
+        "A_Evt_Summer_XVII_3Grandprize",
     ],
 
     "theater_easter_xxiv_": [
