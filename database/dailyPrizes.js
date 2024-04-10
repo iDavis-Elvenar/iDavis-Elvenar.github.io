@@ -26,6 +26,7 @@ var dailyPrizes = {
         "frog_unurium_DP_{10}",
         "A_Evt_Summer_XVII_3Grandprize",
         "frog_runeshards1_{2}",
+        "A_Evt_Shuffle_Garden_XXIV_Banshee_Bramble",
     ],
 
     "theater_easter_xxiv_": [
