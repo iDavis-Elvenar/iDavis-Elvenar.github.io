@@ -1007,11 +1007,12 @@ function generateQuestsAuto() {
         let result = [];
         let lastId = null;
         let questGathered = {};
+        let range = null;
         
         for (let i = 0; i < data.length; i++) {
             if (data[i].hasOwnProperty('subType') && data[i]['subType'].includes(event_id) && !data[i]['title'].includes('Daily Event Reward')) {
-                if (lastId === null || data[i]['rawTriggerCondition'].includes(lastId)) {
-                    lastId = data[i]['id'];
+                if ((lastId === null || data[i]['rawTriggerCondition'].includes(lastId)) && (range === null || range.includes('MAX'))) { //pridanie druhej casti AND-u je len rychla oprava, aby sa pri vypisani questov do konzoly nedal kazdy range na samostatny riadok
+                    lastId = data[i]['id'];                                                                                              //nemusi to fungovat ak by sa v buducnosti zmenilo poradie uloh a ulohy s range == n-MAX neboli posledne
                     if (Object.keys(questGathered).length !== 0) {
                         result.push(questGathered);
                         //console.log(questGathered);
@@ -1019,7 +1020,7 @@ function generateQuestsAuto() {
                     questGathered = {};
                 }
                 let triggerConditions = data[i]['rawTriggerCondition'].split(/\b(?:AND|OR)\b/).filter(item => !item.includes('running')).filter(item => !item.includes('login'));
-                let range = calculateChapterRange(triggerConditions);
+                range = calculateChapterRange(triggerConditions);
                 questGathered[range] = [];
 
                 var number_of_conditions = data[i]['successConditions'].length;
