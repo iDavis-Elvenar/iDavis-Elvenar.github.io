@@ -55,6 +55,7 @@ let questsDictionary = {
         52: "Získej nějaké množství unuria",
         53: "Získej nějaké množství živoucího zboží",
         54: "Získej nějaké množství osvíceného zboží",
+        55: "Použij _ d{spojovací činidlo,spojovací činidla,spojovacích činidel}"
     },
     "en" : {
         0: "Collect some amount of coins",
@@ -112,6 +113,7 @@ let questsDictionary = {
         52: "Collect some amount of unurium",
         53: "Collect some amount of sentient goods",
         54: "Collect some amount of ascended goods",
+        55: "Use _ d{combining catalyst,combining catalysts}",
     },
     "de" : {
         0: "Sammle eine Menge Münzen",
@@ -169,6 +171,7 @@ let questsDictionary = {
         52: "Sammle eine Menge Unurium",
         53: "Sammle eine Menge Erwecktes Güter",
         54: "Sammle eine Menge Erleuchtete Güter",
+        55: "Benutze _ d{Kombinationsauslöser,Kombinationsauslöser}",
     },
     "fr" : {
         0: "Collectez une certaine quantité de pièces",
@@ -226,6 +229,7 @@ let questsDictionary = {
         52: "Collectez une certaine quantité de Unurium",
         53: "Collectez une certaine quantité de sensibles basiques",
         54: "Collectez une certaine quantité de d'ascension basiques",
+        55: "Utilisez _ d{catalyseur de combinaison,catalyseurs de combinaison}",
     },
     "hu" : {
         0: "Gyűjts bizonyos mennyiségű aranyat",
@@ -283,6 +287,7 @@ let questsDictionary = {
         52: "Gyűjts bizonyos mennyiségű Unurium",
         53: "Gyűjts bizonyos mennyiségű Érző Áru",
         54: "Gyűjts bizonyos mennyiségű Felemelkedett Áru",
+        55: "Használj _ kombináló katalizátort",
     },
     "pl" : {
         0: "Zdobądź nieco monet",
@@ -340,6 +345,7 @@ let questsDictionary = {
         52: "Zdobądź nieco unuryt",
         53: "Zdobądź nieco żywe towary",
         54: "Zdobądź nieco wzniosłe towary",
+        55: "Użyj _ d{katalizator,katalizatory,katalizatorów}",
     },
     "ru" : {
         0: "Соберите хорошее количество монет",
@@ -397,5 +403,6 @@ let questsDictionary = {
         52: "Соберите хорошее количество unurium",
         53: "Соберите хорошее количество sentient goods",
         54: "Соберите хорошее количество ascended goods",
+        55: "Используйте _ d{комбинирующий катализатор,комбинирующего катализатора,комбинирующих катализаторов}",
     }
 }

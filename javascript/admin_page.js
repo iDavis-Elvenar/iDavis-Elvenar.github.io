@@ -1097,9 +1097,12 @@ function generateQuestsAuto() {
                     } else if (task_desc.includes('Negotiate Province Encounter')) {
                         var value = extractOneNumber(task_raw);
                         questGathered[range].push('STRETY_NA_MAPE_VYJEDNAVANIM('+value+')');
-                    } else if (task_desc.includes('Combining Catalyst')) {
+                    } else if (task_desc.includes('Combining Catalyst') && task_desc.includes('Gain')) {
                         var value = extractOneNumber(task_raw);
-                        questGathered[range].push('SPOJOVACI_CINIDLO('+value+')');
+                        questGathered[range].push('ZISKEJ_SPOJOVACI_CINIDLO('+value+')');
+                    } else if (task_desc.includes('Combining Catalyst') && task_desc.includes('Spend')) {
+                        var value = extractOneNumber(task_raw);
+                        questGathered[range].push('POUZIJ_SPOJOVACI_CINIDLO('+value+')');
                     } else if (task_desc.includes('Produce a good amount of Goods of your choice')) {
                         questGathered[range].push('ZBOZI_LIBOVOLNE');
                     } else if (task_desc.includes('Produce a good amount of Basic Goods')) {

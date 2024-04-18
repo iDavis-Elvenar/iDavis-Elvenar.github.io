@@ -35,7 +35,7 @@ var STRETY_LIBOVOLNE = function (value) {return {"id": 27, "value": value, "img"
 var STRETY_NA_MAPE_BOJEM = function (value) {return {"id": 28, "value": value, "img": "https://i.ibb.co/prd3mhW/info-fa-icon.png"}};
 var STRETY_NA_MAPE_VYJEDNAVANIM = function (value) {return {"id": 29, "value": value, "img": "https://i.ibb.co/prd3mhW/info-fa-icon.png"}};
 
-var SPOJOVACI_CINIDLO = function (value) {return {"id": 30, "value": value, "img": "https://i.ibb.co/WnDfq7P/combining-catalyst.png"}};
+var ZISKEJ_SPOJOVACI_CINIDLO = function (value) {return {"id": 30, "value": value, "img": "https://i.ibb.co/WnDfq7P/combining-catalyst.png"}};
 var ULOMKY_KOUZEL = function (value) {return {"id": 31, "value": value, "img": "https://i.ibb.co/fYLXgWP/spell-fragment.png"}};
 var OPAR_VIDENI = function (value) {return {"id": 32, "value": value, "img": "https://i.ibb.co/hYXr3HW/vision-vapor-small.png"}};
 
@@ -69,6 +69,8 @@ var UNURIUM = {"id": 52, "value": null, "img": "https://i.ibb.co/5shvjhx/unurium
 
 var ZBOZI_ZIVOUCI = {"id": 53, "value": null, "img": "https://i.ibb.co/tLr4XnT/sentient-goods.png"};
 var ZBOZI_OSVICENE = {"id": 54, "value": null, "img": "https://i.ibb.co/80gHPP5/ascended-goods.png"};
+
+var POUZIJ_SPOJOVACI_CINIDLO = function (value) {return {"id": 55, "value": value, "img": "https://i.ibb.co/WnDfq7P/combining-catalyst.png"}}
 
 var AND = "and";
 var OR = "or";
