@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Evo_Tile_Amuni_XXIV_Purring_Sanctum":"https://i.ibb.co/cDt9Vr4/purring-sanctum.png",
+    "A_Evt_Exp_Tile_Amuni_XXIV_Perfect_Planning_Solutions":"https://i.ibb.co/0DcsQVQ/perfect-planning-solutions.png",
+    "A_Evt_Tile_Amuni_XXIV_Mastabar_Cat_Cafe":"https://i.ibb.co/Rg8dC4F/mastabar-cat-cafe.png",
+    "A_Evt_Tile_Amuni_XXIV_The_Feline_Feastery":"https://i.ibb.co/Mkz4qQt/the-feline-feastery.png",
     "A_Evt_Season_Triumph_XXIV_Aqua_Weaver":"https://i.ibb.co/JjqN7wb/aqua-weaver.png",
     "A_Evt_Set_Shuffle_Garden_XXIV_Fiddlin_Foliage":"https://i.ibb.co/Xt38tcp/fiddlin-foliage.png",
     "A_Evt_Set_Shuffle_Garden_XXIV_Pollen_Pantry":"https://i.ibb.co/QPM3M70/pollen-pantry.png",
