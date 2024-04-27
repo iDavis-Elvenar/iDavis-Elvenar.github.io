@@ -96,6 +96,7 @@ let eventBanners = {
     "scroll_sorcerers_xxiv_": "https://i.ibb.co/kJZD0G5/EL-akcia-janu-r-2024-banner.png",
     "theater_easter_xxiv_": "https://i.ibb.co/JRKBZPG/EL-akcia-ve-k-noc-2024-banner.jpg",
     "shuffle_garden_xxiv_": "https://i.ibb.co/WPSTKgs/EL-akcia-m-j-2024-banner.jpg",
+    "tile_amuni_xxiv_": "https://i.ibb.co/QXbMfCS/EL-akcia-m-j-2024-banner.jpg",
 }
 
 let eventVideos = {
@@ -151,6 +152,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "scroll_sorcerers_xxiv_": "12/18/2023",
     "theater_easter_xxiv_": "02/14/2024",
     "shuffle_garden_xxiv_": "03/26/2024",
+    "tile_amuni_xxiv_": "05/01/2024",
 }
 
 let questsLinks = {
@@ -250,6 +252,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Chthonic_Circle": "ins_evo_scroll_sorcerers_xxiv",
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Potionmakers_Pedestal": "ins_evo_scroll_sorcerers_xxiv",
     "A_Evt_Evo_Theater_Easter_XXIV_Verdant_Phoenix": "ins_evo_easter_xxiv",
+    "A_Evt_Evo_Tile_Amuni_XXIV_Purring_Sanctum": "ins_evo_tile_amuni_xxiv",
 }
 
 var artifacts = {
@@ -289,6 +292,7 @@ var artifacts = {
     "ins_evo_tile_mistyforest_xxiii": {"name": "Soul Lab Artifact", "img": "https://i.ibb.co/556Xv0F/ins-evo-tile-mistyforest-xxiii.png"},
     "ins_evo_winter_xix": {"name": "Gingerbread Artifact", "img": "https://i.ibb.co/pwqRCHh/ins-evo-winter-xix.png"},
     "ins_evo_easter_xxiv": {"name": "Verdant Phoenix Artifact", "img": "https://i.ibb.co/xqvS2q4/ins-evo-easter-xxiv.png"},
+    "ins_evo_tile_amuni_xxiv": {"name": "Purring Sanctum Artifact", "img": "https://i.ibb.co/7n4f4TM/ins-evo-tile-amuni-xxiv.png"},
 }
 
 var feedingEffectsDescriptions = {
