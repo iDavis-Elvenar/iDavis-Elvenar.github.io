@@ -5,8 +5,8 @@ var eventStartDates = {
             "end_date": "__ _ 2024"
         },
         "beta": {
-            "start_date": "May 1st 2024",
-            "end_date": "May 2nd 2024"
+            "start_date": "May 7th 2024",
+            "end_date": "May 29th 2024"
         }
     },
     "shuffle_garden_xxiv_": {

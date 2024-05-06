@@ -152,7 +152,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "scroll_sorcerers_xxiv_": "12/18/2023",
     "theater_easter_xxiv_": "02/14/2024",
     "shuffle_garden_xxiv_": "03/26/2024",
-    "tile_amuni_xxiv_": "05/01/2024",
+    "tile_amuni_xxiv_": "05/07/2024",
 }
 
 let questsLinks = {
@@ -570,7 +570,7 @@ var grIds = {
 }
 
 var newEventSign = {
-    "active": false,
+    "active": true,
     "img": "https://i.ibb.co/n0KBPgt/new-sign.png",
 }
 
