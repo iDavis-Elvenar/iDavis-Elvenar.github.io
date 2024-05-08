@@ -54,7 +54,7 @@ var numberOfChapters = 21;
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
     11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII', 18: 'XVIII',
-    19: 'XIX', 20: 'XX', 21: 'XXI',
+    19: 'XIX', 20: 'XX', 21: 'XXI', 22: 'XXII',
 }
 
 var chapterNames = {
@@ -62,7 +62,7 @@ var chapterNames = {
     8: 'Orcs and Goblins', 9: 'Woodelves', 10: 'Sorcerers and Dragons',
     11: 'Halflings', 12: 'Elementals', 13: 'Amuni', 14: 'Constructs', 15: 'Elvenar', 16: 'Embassies', 
     17: 'Traders of Unur', 18: 'Team Spirit', 19: 'Revenge of the Exile', 20: 'The Power of Music',
-    21: 'The Vallorian Legend',
+    21: 'The Vallorian Legend', 22: 'Harbours of the Deep',
 }
 
 let eventBanners = {
@@ -548,6 +548,7 @@ var chapter_icons = {
     19: "https://i.ibb.co/Y4gW0Vy/ch19.png title='Revenge of the Exile'",
     20: "https://i.ibb.co/Vv6rC8r/ch20.png title='The Power of Music'",
     21: "https://i.ibb.co/XCp7d47/ch21.png title='The Vallorian Legend'",
+    22: "https://i.ibb.co/P92Ld8J/ch22.png title='Harbours of the Deep'",
 }
 
 var grIds = {
@@ -567,6 +568,7 @@ var grIds = {
     "revengeofexile": "ch19",
     "powerofmusic": "ch20",
     "vallorianlegend": "ch21",
+    "harboursofdeep": "ch22",
 }
 
 var newEventSign = {
