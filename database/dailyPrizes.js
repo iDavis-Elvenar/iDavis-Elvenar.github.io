@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "tile_amuni_xxiv_": [
-
+        "A_Evt_Tile_Amuni_XXIV_The_Feline_Feastery",
     ],
 
     "shuffle_garden_xxiv_": [
