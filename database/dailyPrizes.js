@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_February_XXIII_Golden_Tears",
         "INS_KP_{15}",
         "A_Evt_February_XXII_Desert_Watchtower",
+        "INS_REV_SQD_50",
     ],
 
     "shuffle_garden_xxiv_": [
