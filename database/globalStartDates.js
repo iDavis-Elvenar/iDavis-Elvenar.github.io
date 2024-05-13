@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "tile_amuni_xxiv_": {//Whiskers of the Past 23.5. - 14.6.
         "live": {
-            "start_date": "May 23th 2024",
-            "end_date": "June 14th 2024"
+            "start_date": "__ _th 2024",
+            "end_date": "__ _th 2024"
         },
         "beta": {
             "start_date": "May 13th 2024",
