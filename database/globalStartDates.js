@@ -1,5 +1,5 @@
 var eventStartDates = { 
-    "tile_amuni_xxiv_": {//Whiskers of the Past 23.5. - 14.6.
+    "tile_amuni_xxiv_": {//Whiskers of the Past 23.5. - 14.6., Marine Marvels 2.7. - 24.7.
         "live": {
             "start_date": "__ _th 2024",
             "end_date": "__ _th 2024"
