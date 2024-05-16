@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_February_XXIII_Mule_Lifter",
         "INS_UNIT_HM_10",
         "A_Evt_June_XX_Wood_Elf_Ship",
+        "A_Evt_June_XX_Amuni_Ship",
     ],
 
     "shuffle_garden_xxiv_": [
