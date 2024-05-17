@@ -10,6 +10,7 @@ var dailyPrizes = {
         "INS_UNIT_HM_10",
         "A_Evt_June_XX_Wood_Elf_Ship",
         "A_Evt_June_XX_Amuni_Ship",
+        "INS_KP_AW_20",
     ],
 
     "shuffle_garden_xxiv_": [
