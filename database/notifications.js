@@ -205,17 +205,17 @@ var notifications = {
     },
     "17":{  // EVENT
         "id":17,
-        "text":`<h4 class="alert-heading">Buzzing Spring event is coming soon!</h4>
-  <p>This year's spring event is getting close!</p>
+        "text":`<h4 class="alert-heading">Whiskers of the Past event is coming soon!</h4>
+  <p>This year's Amuni event is getting close!</p>
   <hr>
-  <center><img src="https://i.ibb.co/WPSTKgs/EL-akcia-m-j-2024-banner.jpg" style="width: 35%;"></center><br>
-    <center><p>The <b>Buzzing Spring</b> is approaching and it is now fully covered on the All Events page! Get ready for everything that the spring event has to offer!<br><br>
+  <center><img src="https://i.ibb.co/QXbMfCS/EL-akcia-m-j-2024-banner.jpg" style="width: 35%;"></center><br>
+    <center><p>The <b>Whiskers of the Past</b> is approaching and it is now fully covered on the All Events page! Get ready for everything that the Amuni event has to offer!<br><br>
     Start Date, Daily Prizes and Quests are now available to preview in the <img src="https://i.ibb.co/QkJ7qzP/all-events.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/events.html" class="alert-link">All Events</a> page!<br><br>
     Visit the <img src="https://i.ibb.co/NC00fM1/all-buildings.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/buildings.html" class="alert-link">All Buildings</a> page for more information about all the newly introduced buildings.</p></center>`,
         "repeatAfter":86400,
         "style":"warning",
         "duration":60,
-        "active":false,
+        "active":true,
         "priority":50
     },
 }
