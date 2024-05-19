@@ -12,6 +12,7 @@ var dailyPrizes = {
         "A_Evt_June_XX_Amuni_Ship",
         "INS_KP_AW_20",
         "frog_runeshards2_{2}",
+        "A_Evt_February_XXII_Amuni_Bar",
     ],
 
     "shuffle_garden_xxiv_": [
