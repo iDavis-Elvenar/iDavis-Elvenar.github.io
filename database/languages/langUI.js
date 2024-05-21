@@ -118,6 +118,9 @@ let ui = {
         "Dwarven Citadel": "Trpasličí citadela",
         "Ancient Promise": "Starodávný slib",
         //EVENTS
+        "Whiskers of the Past": "Fousky minulosti",
+        "Buzzing Spring": "Bzučící jaro",
+        "Blessing of the Phoenix": "Požehnání fénixe",
         "Tournament of Magic": "Turnaj magie",
         "Whispers of the Soul": "Šepoty duše",
         "Aqua Splendor": "Krásy mořského světa",
@@ -272,6 +275,9 @@ let ui = {
         "Dwarven Citadel": "Zwergen-Zitadelle",
         "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
+        "Whiskers of the Past": "Die Schnurrhaare der Vergangenheit",
+        "Buzzing Spring": "Summender Frühling",
+        "Blessing of the Phoenix": "Der Segen des Phönix",
         "Tournament of Magic": "Turnier der Magie",
         "Whispers of the Soul": "Flüstern der Seele",
         "Aqua Splendor": "Aquatische Pracht",
@@ -426,6 +432,9 @@ let ui = {
         "Dwarven Citadel": "Citadelle naine",
         "Ancient Promise": "Ancienne promesse",
         //EVENTS
+        "Whiskers of the Past": "Les moustaches du passé",
+        "Buzzing Spring": "Printemps bourdonnant",
+        "Blessing of the Phoenix": "Bénédiction du Phénix",
         "Tournament of Magic": "Tournoi de Magie",
         "Whispers of the Soul": "Les Chuchotements de l'âme",
         "Aqua Splendor": "Aqua Splendor",
@@ -580,6 +589,9 @@ let ui = {
         "Dwarven Citadel": "Törp Citadella",
         "Ancient Promise": "Ősi Ígéret",
         //EVENTS
+        "Whiskers of the Past": "A múlt bajusza",
+        "Buzzing Spring": "Zümmögő Tavasz",
+        "Blessing of the Phoenix": "A Főnix Áldása",
         "Tournament of Magic": "A Mágia Versenye",
         "Whispers of the Soul": "A Lélek Suttogásai",
         "Aqua Splendor": "Vízi Ragyogás",
@@ -734,6 +746,9 @@ let ui = {
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
+        "Whiskers of the Past": "Wibrysy z przeszłości",
+        "Buzzing Spring": "Bzycząca wiosna",
+        "Blessing of the Phoenix": "Błogosławieństwo Feniksa",
         "Tournament of Magic": "Turniej Magii",
         "Whispers of the Soul": "Szepty duszy",
         "Aqua Splendor": "Wodny splendor",
@@ -888,6 +903,9 @@ let ui = {
         "Dwarven Citadel": "Гномья цитадель",
         "Ancient Promise": "Древнее обещание",
         //EVENTS
+        "Whiskers of the Past": "Whiskers of the Past",
+        "Buzzing Spring": "Жужжащая весна",
+        "Blessing of the Phoenix": "Благословение Феникса",
         "Tournament of Magic": "Турнир по магии",
         "Whispers of the Soul": "Шепот души",
         "Aqua Splendor": "Морское великолепие",
