@@ -14,6 +14,7 @@ var dailyPrizes = {
         "frog_runeshards2_{2}",
         "A_Evt_February_XXII_Amuni_Bar",
         "frog_grr_5_{1}",
+        "A_Evt_February_XXII_Furry_Sands",
     ],
 
     "shuffle_garden_xxiv_": [
