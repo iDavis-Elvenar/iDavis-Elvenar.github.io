@@ -151,7 +151,7 @@ var eventStartDates = {
     },
 }
 
-var faStartDates = {
+var faStartDates = { //June 20.6. - 26.6.
     "april_xxiv_": {
         "live": {
             "start_date": "April 4th 2024",
