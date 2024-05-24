@@ -119,6 +119,7 @@ let eventVideos = {
     "tile_mistyforest_xxiii_": "https://www.youtube.com/embed/UAZJKjasaBI",
     "theater_easter_xxiv_": "https://www.youtube.com/embed/65B1s9qR1uk",
     "shuffle_garden_xxiv_": "https://www.youtube.com/embed/AL3G_gRQgNs",
+    "tile_amuni_xxiv_": "https://www.youtube.com/embed/gJf0E14W3wg",
 }
 
 let eventBetaStarts = { // MM/DD/YYYY
