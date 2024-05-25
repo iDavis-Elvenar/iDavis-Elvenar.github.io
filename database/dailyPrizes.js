@@ -17,6 +17,7 @@ var dailyPrizes = {
         "A_Evt_February_XXII_Furry_Sands",
         "A_Evt_Tile_Amuni_XXIV_The_Feline_Feastery",
         "INS_UNIT_HR_10",
+        "frog_default1_{10}",
     ],
 
     "shuffle_garden_xxiv_": [
