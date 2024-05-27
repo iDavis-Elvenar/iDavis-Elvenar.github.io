@@ -19,6 +19,7 @@ var dailyPrizes = {
         "INS_UNIT_HR_10",
         "frog_default1_{10}",
         "frog_runeshards1_{2}",
+        "A_Evt_June_XX_Elven_Ship",
     ],
 
     "shuffle_garden_xxiv_": [
