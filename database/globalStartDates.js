@@ -152,6 +152,16 @@ var eventStartDates = {
 }
 
 var faStartDates = { //June 20.6. - 26.6.
+    "june_xxiv_": {
+        "live": {
+            "start_date": "__ _th 2024",
+            "end_date": "__ _th 2024"
+        },
+        "beta": {
+            "start_date": "May 30th 2024",
+            "end_date": "June 5th 2024"
+        }
+    },
     "april_xxiv_": {
         "live": {
             "start_date": "April 4th 2024",

@@ -749,33 +749,34 @@ function generateMpeChestsCosts() {
     reader.onload = function () {
         let data = JSON.parse(reader.result);
         let chests = [];
-        for (let i = 0; i < data.length; i++) {
-            if (data[i]["chestId"].startsWith(selectedFaType) && !data[i]["chestId"].includes("endless")) {
+        for (let i = 0; i < data[0].components[3].chestCosts.length; i++) {  //ak nefunguje, overit ci je component s chests naozaj 3. prvok
+            var currentData = data[0].components[3].chestCosts[i];
+            if (currentData["chestId"].startsWith(selectedFaType) && !currentData["chestId"].includes("endless")) {
                 let chest = {};
-                chest["map"] = data[i]["chestId"].split("_")[2];
-                if (data[i]["chestId"].includes("stage_start")) {
+                chest["map"] = currentData["chestId"].split("_")[2];
+                if (currentData["chestId"].includes("stage_start")) {
                     chest["encounter"] = 1;
                     chest["color"] = "all";
-                    chest["order"] = data[i]["chestId"].split("stage_start_")[1];
+                    chest["order"] = currentData["chestId"].split("stage_start_")[1];
                 } else {
                     let color;
-                    if (data[i]["chestId"].includes("orange")) {
+                    if (currentData["chestId"].includes("orange")) {
                         color = "orange";
-                    } else if (data[i]["chestId"].includes("blue")) {
+                    } else if (currentData["chestId"].includes("blue")) {
                         color = "blue";
                     } else {
                         color = "green";
                     }
-                    chest["encounter"] = data[i]["chestId"].split(color)[1].split("_")[1];
+                    chest["encounter"] = currentData["chestId"].split(color)[1].split("_")[1];
                     chest["color"] = color;
-                    chest["order"] = data[i]["chestId"].split(color)[1].split("_")[2];
+                    chest["order"] = currentData["chestId"].split(color)[1].split("_")[2];
                 }
-                for (const key in data[i]["costs"]["resources"]) {
+                for (const key in currentData["costs"]["resources"]) {
                     if (key !== "__class__") {
                         if (!chest["costs"]) {
                             chest["costs"] = {};
                         }
-                        chest["costs"][key] = data[i]["costs"]["resources"][key];
+                        chest["costs"][key] = currentData["costs"]["resources"][key];
                     }
                 }
                 chests.push(chest);
