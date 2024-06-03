@@ -277,5 +277,5 @@ var faVersions = {
 }
 
 var notCertainVersionsYet = [
-    "june_xxiv_"
+    
 ]
