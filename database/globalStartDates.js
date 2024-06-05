@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "tile_amuni_xxiv_": {//Whiskers of the Past 23.5. - 14.6., Marine Marvels 2.7. - 24.7.
+    "scroll_aquatic_xxiv_": {//Marine Marvels 2.7. - 24.7., Builders of Harmony 1.8. - 23.8.
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "June 7th 2024",
+            "end_date": "__ _ 2024"
+        }
+    },
+    "tile_amuni_xxiv_": {
         "live": {
             "start_date": "May 23th 2024",
             "end_date": "June 14th 2024"

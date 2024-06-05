@@ -97,6 +97,7 @@ let eventBanners = {
     "theater_easter_xxiv_": "https://i.ibb.co/JRKBZPG/EL-akcia-ve-k-noc-2024-banner.jpg",
     "shuffle_garden_xxiv_": "https://i.ibb.co/WPSTKgs/EL-akcia-m-j-2024-banner.jpg",
     "tile_amuni_xxiv_": "https://i.ibb.co/QXbMfCS/EL-akcia-m-j-2024-banner.jpg",
+    "scroll_aquatic_xxiv_": "https://i.ibb.co/3zm6vrr/EL-akcia-j-l-2024-banner.jpg",
 }
 
 let eventVideos = {
@@ -154,6 +155,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "theater_easter_xxiv_": "02/14/2024",
     "shuffle_garden_xxiv_": "03/26/2024",
     "tile_amuni_xxiv_": "05/13/2024",
+    "scroll_aquatic_xxiv_": "06/07/2024",
 }
 
 let questsLinks = {
@@ -181,6 +183,7 @@ let questsLinks = {
     "theater_easter_xxiv_": "bit.ly/BlessingOfThePhoenix2024",
     "shuffle_garden_xxiv_": "bit.ly/BuzzingSpring2024",
     "tile_amuni_xxiv_": "bit.ly/WhiskersOfThePast2024",
+    "scroll_aquatic_xxiv_": "bit.ly/MarineMarvels2024",
 }
 
 let eventsDurations = {
@@ -208,6 +211,7 @@ let eventsDurations = {
     "theater_easter_xxiv_": 26,
     "shuffle_garden_xxiv_": 22,
     "tile_amuni_xxiv_": 22,
+    "scroll_aquatic_xxiv_": 23, //??
 }
 
 let evoUpgradeCosts = {
@@ -254,6 +258,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Scroll_Sorcerers_XXIV_Potionmakers_Pedestal": "ins_evo_scroll_sorcerers_xxiv",
     "A_Evt_Evo_Theater_Easter_XXIV_Verdant_Phoenix": "ins_evo_easter_xxiv",
     "A_Evt_Evo_Tile_Amuni_XXIV_Purring_Sanctum": "ins_evo_tile_amuni_xxiv",
+    "A_Evt_Evo_Scroll_Aquatic_XXIV_Puffs_Nautical_Theater": "ins_scroll_aquatic_xxiv",
 }
 
 var artifacts = {
@@ -294,6 +299,7 @@ var artifacts = {
     "ins_evo_winter_xix": {"name": "Gingerbread Artifact", "img": "https://i.ibb.co/pwqRCHh/ins-evo-winter-xix.png"},
     "ins_evo_easter_xxiv": {"name": "Verdant Phoenix Artifact", "img": "https://i.ibb.co/xqvS2q4/ins-evo-easter-xxiv.png"},
     "ins_evo_tile_amuni_xxiv": {"name": "Purring Sanctum Artifact", "img": "https://i.ibb.co/7n4f4TM/ins-evo-tile-amuni-xxiv.png"},
+    "ins_scroll_aquatic_xxiv": {"name": "Puff's Nautical Theater Artifact", "img": "https://i.ibb.co/0XYBcF6/ins-evo-scroll-aquatic-xxiv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -340,6 +346,9 @@ var iconsImages = {
     "spell_production_boost_bonus":"https://i.ibb.co/cFTnJH1/spell-production-boost-bonus.png",
     "spell_neighborly_help_boost_bonus":"https://i.ibb.co/SNCHdC3/spell-neighborly-help-boost-bonus.png",
     "portal_production":"https://i.ibb.co/pxqyvc3/settlement-boost.png",
+    "goods_basic":"https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png",
+    "goods_refined":"https://i.ibb.co/bzCh4vp/goods-standard-precious.png",
+    "goods_precious":"https://i.ibb.co/G0N8gT6/goods-standard-refined.png",
 }
 
 var iconsTitles = {
@@ -376,6 +385,7 @@ var setNames = {
     "scroll_aquatic_xxiii": "Seapectecular Aquatics",
     "tile_mistyforest_xxiii": "Soul Experiments",
     "shuffle_garden_xxiv": "Golden Hive",
+    "scroll_aquatic_expiring": "Hoarder's Set",
 }
 
 var discardBuildings = [
@@ -400,6 +410,7 @@ var eventsInfoIcons = {
     "theater_easter_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "shuffle_garden_xxiv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "tile_amuni_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "scroll_aquatic_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -413,6 +424,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "scroll_aquatic_xxiv_": [
+        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/10/2024"},
+    ],
     "tile_amuni_xxiv_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
         {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},
