@@ -47,7 +47,7 @@ function setLeftBar() {
         numberOfAdditionalItems = additionalTabsEvents[selectedEvent].length;
     }
 
-    let featuredBaseTabs = handleFeatureFlag("info_tab");
+    let featuredBaseTabs = handleFeatureFlag(["info_tab", "prizes_tab"]);
 
     let numberOfBaseItems = featuredBaseTabs.length;
 
@@ -800,6 +800,10 @@ function switchView(type) {
     } else if (type === "quests" && view !== "quests") {
         displayQuests();
         view = "quests";
+        //checkAdBlocker();
+    } else if (type === "prizes" && view !== "prizes") {
+        displayPrizes();
+        view = "prizes";
         //checkAdBlocker();
     } else if (type !== "calendar" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
@@ -2030,4 +2034,27 @@ function handleQuestsCopy(view) {
     } else {
         document.removeEventListener("copy", handleCopyVar, false);
     }
+}
+
+function displayPrizes() {
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = "";
+
+    let eventSelect = document.getElementById('input_event');
+    let selectedEvent = eventSelect.options[eventSelect.selectedIndex].value;
+    let selectedEventName = eventSelect.options[eventSelect.selectedIndex].text;
+
+    createEventHeader(selectedEvent, selectedEventName);
+
+    var h5 = document.createElement('h5');
+    h5.id = 'prizes_header';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: ${langUI("List of Prizes")} ::..<br>`;
+    parent.appendChild(h5);
+
+    let testText = document.createElement('div');
+    testText.innerHTML = 'prizes';
+
+    parent.appendChild(testText);
 }

@@ -632,15 +632,25 @@ function prepSetAlertElements() {
     html_text = document.getElementById('text');
 }
 
-function handleFeatureFlag(flag) {
-    if (flag === "info_tab") {
-        if (eventStartDates.hasOwnProperty(getSelectedEvent()) && new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[getSelectedEvent()]["beta"]["start_date"])) >= 
+function handleFeatureFlag(flags) {
+    let baseTabsEventsCopy = [...baseTabsEvents];
+    if (flags.includes("info_tab")) {
+        if (eventStartDates.hasOwnProperty(getSelectedEvent()) && eventStartDates.hasOwnProperty(featureFlagsInitialEvents["info_tab"]) && new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[getSelectedEvent()]["beta"]["start_date"])) >= 
         new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[featureFlagsInitialEvents["info_tab"]]["beta"]["start_date"]))) {
-            return baseTabsEvents;
+            baseTabsEventsCopy;
         } else {
-            return baseTabsEvents.filter(element => element["id"] !== "info_panel_div");
+            baseTabsEventsCopy = baseTabsEventsCopy.filter(element => element["id"] !== "info_panel_div");
         }
     }
+    if (flags.includes("prizes_tab")) {
+        if (eventStartDates.hasOwnProperty(getSelectedEvent()) && eventStartDates.hasOwnProperty(featureFlagsInitialEvents["prizes_tab"]) && new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[getSelectedEvent()]["beta"]["start_date"])) >= 
+        new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[featureFlagsInitialEvents["prizes_tab"]]["beta"]["start_date"]))) {
+            baseTabsEventsCopy;
+        } else {
+            baseTabsEventsCopy = baseTabsEventsCopy.filter(element => element["id"] !== "prizes_tab");
+        }
+    }
+    return baseTabsEventsCopy;
 }
 
 function getTitleFromGoodImage(id) {
