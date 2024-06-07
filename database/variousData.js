@@ -211,7 +211,7 @@ let eventsDurations = {
     "theater_easter_xxiv_": 26,
     "shuffle_garden_xxiv_": 22,
     "tile_amuni_xxiv_": 22,
-    "scroll_aquatic_xxiv_": 23, //??
+    "scroll_aquatic_xxiv_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -590,7 +590,7 @@ var grIds = {
 }
 
 var newEventSign = {
-    "active": false,
+    "active": true,
     "img": "https://i.ibb.co/n0KBPgt/new-sign.png",
 }
 

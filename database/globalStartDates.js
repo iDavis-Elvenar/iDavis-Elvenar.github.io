@@ -6,7 +6,7 @@ var eventStartDates = {
         },
         "beta": {
             "start_date": "June 7th 2024",
-            "end_date": "__ _ 2024"
+            "end_date": "June 29th 2024"
         }
     },
     "tile_amuni_xxiv_": {
