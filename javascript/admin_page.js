@@ -1330,3 +1330,49 @@ function generateChapterRange(inputArray) {
 
     return `${minChapter}-${maxChapterRange === numberOfChapters ? 'MAX' : maxChapterRange}`;
 }
+
+function generateEventPrizes() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('seasonal_event').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = [];
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        let result = {};
+        let grandPrizes = [];
+        let royalPrizes = [];
+        for (let i = 0; i < data[0].components.length; i++) {
+            if (data[0].components[i].__class__ === "RoyalPassPrizesComponentVO") {
+                let grandPrizesArray = data[0].components[i].grandPrizeRewards;
+                let royalPrizesArray = data[0].components[i].royalPrizeRewards;
+                console.log(grandPrizesArray, data[0].components[i]);
+                for (let g = 0; g < grandPrizesArray.length; g++) {
+                    console.log("GPS: ", grandPrizesArray[g]);
+                    let gpObject = {};
+                    gpObject['type'] = grandPrizesArray[g].reward['type'];
+                    gpObject['subType'] = grandPrizesArray[g].reward['subType'];
+                    gpObject['amount'] = grandPrizesArray[g].reward['amount'];
+                    gpObject['delta'] = grandPrizesArray[g]['delta'];
+                    gpObject['iterable'] = grandPrizesArray[g]['iterable'] ? grandPrizesArray[g]['iterable'] : false;
+                    grandPrizes.push(gpObject);
+                }
+                for (let r = 0; r < royalPrizesArray.length; r++) {
+                    let rpObject = {};
+                    rpObject['type'] = royalPrizesArray[r].reward['type'];
+                    rpObject['subType'] = royalPrizesArray[r].reward['subType'];
+                    rpObject['amount'] = royalPrizesArray[r].reward['amount'];
+                    rpObject['delta'] = royalPrizesArray[r]['delta'];
+                    rpObject['iterable'] = royalPrizesArray[r]['iterable'] ? royalPrizesArray[r]['iterable'] : false;
+                    royalPrizes.push(rpObject);
+                }
+            }
+        }
+        result['grandPrizes'] = grandPrizes;
+        result['royalPrizes'] = royalPrizes;
+
+        console.log(result)
+        saveJSON( JSON.stringify(result), "eventsPrizes.json" );
+        create_exception("Data Generated!",10,'success');
+    }
+}

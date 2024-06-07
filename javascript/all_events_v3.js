@@ -2053,8 +2053,62 @@ function displayPrizes() {
     h5.innerHTML = `..:: ${langUI("List of Prizes")} ::..<br>`;
     parent.appendChild(h5);
 
-    let testText = document.createElement('div');
-    testText.innerHTML = 'prizes';
+    var div = document.createElement('div');
+    div.style.textAlign = 'center';
+    div.style.marginBottom = '10px';
+    var divBBTable = document.createElement('div');
+    divBBTable.className = 'bbTable';
+    var table = document.createElement('table');
+    table.className = 'table-primary';
+    table.style.width = '100%';
+    var tbody = document.createElement('tbody');
+    
+    let tr = document.createElement('tr');
+    let th1 = document.createElement('th');
+    th1.innerHTML = 'Grand Prizes';
+    th1.style.width = '46%';
+    let th2 = document.createElement('th');
+    th2.innerHTML = 'Req';
+    th2.style.width = '8%';
+    let th3 = document.createElement('th');
+    th3.innerHTML = 'Royal Prizes';
+    th3.style.width = '46%';
+    tr.appendChild(th1);
+    tr.appendChild(th2);
+    tr.appendChild(th3);
+    tbody.appendChild(tr);
 
-    parent.appendChild(testText);
+    let currentReq = 0;
+    let eventPrizes = eventsPrizes[selectedEvent];
+    if (eventPrizes === undefined) {
+        let center = document.createElement('center');
+        center.innerHTML = `<h7>No recorded prizes for this event.</h7>`;
+        parent.appendChild(center);
+        return;
+    }
+
+    for (let prize = 0; prize < 20; prize++) {
+        currentReq += eventPrizes.grandPrizes[prize].delta ? eventPrizes.grandPrizes[prize].delta : 0;
+        let tr = document.createElement('tr');
+        let td1 = document.createElement('td');
+        if (eventPrizes.grandPrizes[prize].type === 'building') {
+
+        }
+        td1.innerHTML = eventPrizes.grandPrizes[prize].subType;
+        let td2 = document.createElement('td');
+        td2.innerHTML = currentReq;
+        let td3 = document.createElement('td');
+        td3.innerHTML = eventPrizes.royalPrizes[prize].subType;
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tbody.appendChild(tr);
+    }
+
+    table.appendChild(tbody);
+    divBBTable.appendChild(table);
+    div.appendChild(divBBTable);
+
+    parent.appendChild(div);
 }
