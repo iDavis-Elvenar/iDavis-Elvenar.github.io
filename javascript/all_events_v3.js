@@ -2053,15 +2053,6 @@ function displayPrizes() {
     h5.innerHTML = `..:: ${langUI("List of Prizes")} ::..<br>`;
     parent.appendChild(h5);
 
-    var prizesInfoText = document.createElement('h7');
-    prizesInfoText.id = 'prizes_info_text';
-    prizesInfoText.className = "card-title text-center";
-    prizesInfoText.style.textAlign = "left";
-    prizesInfoText.innerHTML = `${langUI(`This is the list of prizes for the ${getSelectedEventName()} event. Grand Prizes are available to everyone and you can also collect Royal Prizes with a one-time investment.`)}`;
-    var center = document.createElement('center');
-    center.appendChild(prizesInfoText);
-    parent.appendChild(center);
-
     var div = document.createElement('div');
     div.style.textAlign = 'center';
     div.style.marginBottom = '10px';
@@ -2096,6 +2087,15 @@ function displayPrizes() {
         parent.appendChild(center);
         return;
     }
+
+    var prizesInfoText = document.createElement('h7');
+    prizesInfoText.id = 'prizes_info_text';
+    prizesInfoText.className = "card-title text-center";
+    prizesInfoText.style.textAlign = "left";
+    prizesInfoText.innerHTML = `${langUI(`This is the list of prizes for the ${getSelectedEventName()} event. Grand Prizes are available to everyone and you can also collect Royal Prizes with a one-time investment.`)}`;
+    var center = document.createElement('center');
+    center.appendChild(prizesInfoText);
+    parent.appendChild(center);
 
     for (let prize = 0; prize < 26; prize++) {
         currentReq += eventPrizes.grandPrizes[prize].delta ? eventPrizes.grandPrizes[prize].delta : 0;
@@ -2170,7 +2170,6 @@ function createPrizeCell(prize, cell) {
         cell.appendChild(avatarImg);
     } else if (prize.type === 'flexible_reward') {
         var rewardCodeName = flexibleRewards.filter(elem => elem.id === prize.subType)[0]['rewards'][getPresetChapter()-1]['subType'];
-        console.log(rewardCodeName);
         if (instants.hasOwnProperty(rewardCodeName)) {
             cell.innerHTML = `<img src="${instants[rewardCodeName]["image_big"]}" style="width: 60px;">`;
         } else {
