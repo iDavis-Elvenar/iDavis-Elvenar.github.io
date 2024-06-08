@@ -4,6 +4,7 @@ var dailyPrizes = {
         "A_Evt_MM_XIX_MantaRay",
         "A_Evt_Scroll_Aquatic_XXIV_Torrent_of_Teamwork",
         "INS_KP_AW_20",
+        "A_Evt_MM_XIX_SharkTower",
     ],
 
     "tile_amuni_xxiv_": [
@@ -23,6 +24,7 @@ var dailyPrizes = {
         "A_Evt_February_XXII_Furry_Sands",
         "A_Evt_Tile_Amuni_XXIV_The_Feline_Feastery",
         "INS_UNIT_HR_10",
+        "A_Evt_June_XX_Dwarf_Ship",
         "frog_default1_{10}",
         "frog_runeshards1_{2}",
         "A_Evt_June_XX_Elven_Ship",
