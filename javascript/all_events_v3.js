@@ -47,7 +47,7 @@ function setLeftBar() {
         numberOfAdditionalItems = additionalTabsEvents[selectedEvent].length;
     }
 
-    let featuredBaseTabs = handleFeatureFlag(["info_tab", "prizes_tab"]);
+    let featuredBaseTabs = handleFeatureFlag(["info_tab", "prizes_tab", "leagues_tab"]);
 
     let numberOfBaseItems = featuredBaseTabs.length;
 
@@ -804,6 +804,10 @@ function switchView(type) {
     } else if (type === "prizes" && view !== "prizes") {
         displayPrizes();
         view = "prizes";
+        //checkAdBlocker();
+    } else if (type === "leagues" && view !== "leagues") {
+        displayLeagues();
+        view = "leagues";
         //checkAdBlocker();
     } else if (type !== "calendar" && type !== "quests" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";

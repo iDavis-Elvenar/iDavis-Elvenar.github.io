@@ -650,6 +650,14 @@ function handleFeatureFlag(flags) {
             baseTabsEventsCopy = baseTabsEventsCopy.filter(element => element["id"] !== "prizes_tab");
         }
     }
+    if (flags.includes("leagues_tab")) {
+        if (eventStartDates.hasOwnProperty(getSelectedEvent()) && eventStartDates.hasOwnProperty(featureFlagsInitialEvents["leagues_tab"]) && new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[getSelectedEvent()]["beta"]["start_date"])) >= 
+        new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[featureFlagsInitialEvents["leagues_tab"]]["beta"]["start_date"]))) {
+            baseTabsEventsCopy;
+        } else {
+            baseTabsEventsCopy = baseTabsEventsCopy.filter(element => element["id"] !== "leagues_tab");
+        }
+    }
     return baseTabsEventsCopy;
 }
 

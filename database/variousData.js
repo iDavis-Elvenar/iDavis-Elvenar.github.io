@@ -415,6 +415,7 @@ var eventsInfoIcons = {
 }
 
 var featureFlagsInitialEvents = {
+    "leagues_tab": "placeholder",
     "prizes_tab": "scroll_aquatic_xxiv_",
     "info_tab": "december_xxii_",
 }
@@ -433,6 +434,7 @@ var baseTabsEvents = [
     {"id":"calendar_top_div", "name":"Calendar", "img":"images/general/calendar.png", "img_width":"45", "img_style":"margin-left: -10px; margin-right: 2px; position: relative;", "href":"#calendar", "onclick":"calendar"},
     {"id":"quests_left_panel_div", "name":"Quests", "img":"images/general/event_guide.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#quests", "onclick":"quests"},
     {"id":"prizes_tab", "name":"Prizes", "img":"https://i.ibb.co/vsxWncK/chest-silver.png", "img_width":"32", "img_style":"margin-left: -2px; margin-right: 9px; position: relative;", "href":"#prizes", "onclick":"prizes"},
+    {"id":"leagues_tab", "name":"Leagues", "img":"https://i.ibb.co/LCf0Sf6/leagues.png", "img_width":"24", "img_style":"margin-left: 2px; margin-right: 12px; position: relative;", "href":"#leagues", "onclick":"leagues"},
 ] 
 
 var additionalTabsEvents = {
