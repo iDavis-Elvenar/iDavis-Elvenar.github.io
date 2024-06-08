@@ -654,7 +654,12 @@ function handleFeatureFlag(flags) {
 }
 
 function getTitleFromGoodImage(id) {
-    let temp = goods_icons[id].substring(goods_icons[id].indexOf("title='")+7);
+    let temp;
+    if (goods_icons[id] !== undefined) {
+        temp = goods_icons[id].substring(goods_icons[id].indexOf("title='")+7);
+    } else {
+        temp = goods_icons[id.toLowerCase()].substring(goods_icons[id.toLowerCase()].indexOf("title='")+7);
+    }
     temp = temp.substring(0, temp.indexOf("'"));
     return temp;
 }

@@ -2053,9 +2053,19 @@ function displayPrizes() {
     h5.innerHTML = `..:: ${langUI("List of Prizes")} ::..<br>`;
     parent.appendChild(h5);
 
+    var prizesInfoText = document.createElement('h7');
+    prizesInfoText.id = 'prizes_info_text';
+    prizesInfoText.className = "card-title text-center";
+    prizesInfoText.style.textAlign = "left";
+    prizesInfoText.innerHTML = `${langUI(`This is the list of prizes for the ${getSelectedEventName()} event. Grand Prizes are available to everyone and you can also collect Royal Prizes with a one-time investment.`)}`;
+    var center = document.createElement('center');
+    center.appendChild(prizesInfoText);
+    parent.appendChild(center);
+
     var div = document.createElement('div');
     div.style.textAlign = 'center';
     div.style.marginBottom = '10px';
+    div.style.marginTop = '10px';
     var divBBTable = document.createElement('div');
     divBBTable.className = 'bbTable';
     var table = document.createElement('table');
@@ -2068,7 +2078,7 @@ function displayPrizes() {
     th1.innerHTML = 'Grand Prizes';
     th1.style.width = '46%';
     let th2 = document.createElement('th');
-    th2.innerHTML = 'Req';
+    th2.innerHTML = 'Cost';
     th2.style.width = '8%';
     let th3 = document.createElement('th');
     th3.innerHTML = 'Royal Prizes';
@@ -2087,18 +2097,23 @@ function displayPrizes() {
         return;
     }
 
-    for (let prize = 0; prize < 20; prize++) {
+    for (let prize = 0; prize < 26; prize++) {
         currentReq += eventPrizes.grandPrizes[prize].delta ? eventPrizes.grandPrizes[prize].delta : 0;
         let tr = document.createElement('tr');
         let td1 = document.createElement('td');
-        if (eventPrizes.grandPrizes[prize].type === 'building') {
+        td1.style.height = "140px";
+        createPrizeCell(eventPrizes.grandPrizes[prize], td1);
 
-        }
-        td1.innerHTML = eventPrizes.grandPrizes[prize].subType;
         let td2 = document.createElement('td');
-        td2.innerHTML = currentReq;
+        td2.style.height = "140px";
+        td2.innerHTML = `${currentReq}x `;
+        let imgPayback = document.createElement('img');
+        imgPayback.src = eventsPaybackIcons[selectedEvent];
+        td2.appendChild(imgPayback);
+
         let td3 = document.createElement('td');
-        td3.innerHTML = eventPrizes.royalPrizes[prize].subType;
+        td3.style.height = "140px";
+        createPrizeCell(eventPrizes.royalPrizes[prize], td3);
 
         tr.appendChild(td1);
         tr.appendChild(td2);
@@ -2111,4 +2126,70 @@ function displayPrizes() {
     div.appendChild(divBBTable);
 
     parent.appendChild(div);
+}
+
+function createPrizeCell(prize, cell) {
+    if (prize.type === 'building') {
+        let buildingId = prize.subType.split("$")[0];
+        let buildingImage = images_buildings[buildingId];
+        let amount = prize.amount;
+        createBuildingPrizeCell(buildingId, buildingImage, amount, cell);
+    } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_evo_')) {
+        let artifactName = artifacts[prize.subType.toLowerCase()].name;
+        let artifactImg = document.createElement('img');
+        artifactImg.src = artifacts[prize.subType.toLowerCase()].img;
+        artifactImg.style.maxWidth = "60px";
+        cell.appendChild(artifactImg);
+        cell.innerHTML += `<br>${prize.amount}x ${artifactName}`;
+    } else if (prize.type === 'good' || prize.type === 'resource') {
+        let goods = document.createElement('img');
+        if (prize.subType === 'event_currency_1') {
+            goods.src = `images/events/icons/${getSelectedEvent()}.png`;
+        } else {
+            goods.src = xlImages[prize.subType];
+        }
+        goods.style.maxWidth = "50px";
+        cell.appendChild(goods);
+        cell.innerHTML += `<br>${prize.amount}x`;
+    } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_tr_')) {
+        let booster = document.createElement('img');
+        booster.src = xlImages["time_booster_general"];
+        booster.style.maxWidth = "50px";
+        cell.appendChild(booster);
+        cell.innerHTML += `<br>${prize.amount}x`;
+    } else if (prize.type === 'reward_selection_kit') {
+        let tome = tomes.filter(elem => elem.id === prize.subType)[0];
+        let tomeImg = document.createElement('img');
+        tomeImg.src = rskIcons[tome.iconId];
+        tomeImg.style.width = "60px";
+        cell.appendChild(tomeImg);
+        cell.innerHTML += `<br>${prize.amount}x <a class="text-link font-weight-bold" href="tomes.html#${tome.id}" target="_blank">${tome.name}</a>`;
+    } else if (prize.type === 'avatar') {
+        let avatarImg = document.createElement('img');
+        avatarImg.src = eventsAvatars[prize.subType];
+        cell.appendChild(avatarImg);
+    } else if (prize.type === 'flexible_reward') {
+        var rewardCodeName = flexibleRewards.filter(elem => elem.id === prize.subType)[0]['rewards'][getPresetChapter()-1]['subType'];
+        console.log(rewardCodeName);
+        if (instants.hasOwnProperty(rewardCodeName)) {
+            cell.innerHTML = `<img src="${instants[rewardCodeName]["image_big"]}" style="width: 60px;">`;
+        } else {
+            if (xlImages.hasOwnProperty(flexibleRewards.filter(elem => elem.id === prize.subType)[0]['rewards'][getPresetChapter()-1]['subType'])) {
+                cell.innerHTML = `<img src="${xlImages[flexibleRewards.filter(elem => elem.id === prize.subType)[0]['rewards'][getPresetChapter()-1]['subType']]}" style="width: 62px;">`;
+            } else {
+                cell.innerHTML = `<img src="https://i.ibb.co/WndLSNt/goods-general-medium.png" style="width: 60px;">`;
+            }
+        }
+        cell.innerHTML += `<br>${getTitleFromGoodImage(rewardCodeName)} <h7>${flexibleRewards.filter(elem => elem.id === prize.subType)[0]['rewards'][getPresetChapter()-1]['amount']*prize.amount}x</h7>`;
+    }
+}
+
+function createBuildingPrizeCell(buildingId, buildingImage, amount, cell) {
+    $.get('database/buildings.json', function(data) {
+        let img = document.createElement('img');
+        img.src = buildingImage;
+        img.style.maxWidth = "150px";
+        cell.appendChild(img);
+        cell.innerHTML += `<br>${amount}x <a class="text-link font-weight-bold" href="buildings.html#${buildingId}" target="_blank">${data.filter(elem => elem.id === buildingId)[0]['name']}</a>`;
+    });
 }

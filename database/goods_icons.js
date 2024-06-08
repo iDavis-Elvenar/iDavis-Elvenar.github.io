@@ -373,4 +373,9 @@ var xlImages = {
     "seeds": "https://i.ibb.co/YfQr505/seeds.png",
     "unurium": "https://i.ibb.co/hM40T65/unurium.png",
     "work": "https://i.ibb.co/KKQ5YFv/work.png",
+    "spell_pet_food_1": "https://i.ibb.co/4P5JftJ/spell-pet-food-1.png",
+    "spire_diplomacy_joker": "https://i.ibb.co/FKzqDbd/spire-diplomacy-joker.png",
+    "time_booster_general": "https://i.ibb.co/v3tz21P/Booster.png",
+    "premium": "https://i.ibb.co/WV2cnhX/premium.png",
+    "blueprint": "https://i.ibb.co/9gjsJbY/blueprint.png",
 }
