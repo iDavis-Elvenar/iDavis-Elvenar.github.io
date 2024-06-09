@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_Scroll_Aquatic_XXIV_Torrent_of_Teamwork",
         "INS_KP_AW_20",
         "A_Evt_MM_XIX_SharkTower",
+        "INS_REV_SQD_50",
     ],
 
     "tile_amuni_xxiv_": [
