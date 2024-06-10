@@ -6,6 +6,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_MM_XIX_SharkTower",
         "INS_REV_SQD_50",
+        "A_Evt_Scroll_Aquatic_XXIII_Fin_Stop",
     ],
 
     "tile_amuni_xxiv_": [
