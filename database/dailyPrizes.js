@@ -8,6 +8,7 @@ var dailyPrizes = {
         "INS_REV_SQD_50",
         "A_Evt_Scroll_Aquatic_XXIII_Fin_Stop",
         "frog_runeshards2_{2}",
+        "rsk_expiring_seatreasure_buildings_{1}",
     ],
 
     "tile_amuni_xxiv_": [

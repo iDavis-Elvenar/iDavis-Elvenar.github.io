@@ -198,6 +198,15 @@ function displayDailyPrizes() {
                         frogObject['rewards'].push(chFrogReward);
                     }
                     filteredDataDict[i] = frogObject;
+                } else if (dailyPrizes[selectedEvent][i].substring(0, 4).toLowerCase() === 'rsk_') {
+                    var baseID = dailyPrizes[selectedEvent][i].substring(0, dailyPrizes[selectedEvent][i].lastIndexOf('_'));
+                    var rskAmount = parseInt(dailyPrizes[selectedEvent][i].substring(dailyPrizes[selectedEvent][i].indexOf("{") + 1, dailyPrizes[selectedEvent][i].indexOf("}")));
+                    var rskObject = {};
+                    rskObject['id'] = baseID;
+                    rskObject['amount'] = rskAmount;
+                    rskObject['icon'] = rskIcons[tomes.filter(elem => elem.id === baseID)[0].iconId];
+                    rskObject['name'] = tomes.filter(elem => elem.id === baseID)[0].name;
+                    filteredDataDict[i] = rskObject;
                 }
             }
             var filteredData = [];
@@ -533,7 +542,7 @@ function displayDailyPrizes() {
                     for (var h = 0; h <= 1; h++) {
                         var th = document.createElement('th');
                         if (h === 0) {
-                            th.innerHTML = `Chapter / Bonus`;
+                            th.innerHTML = `${langUI("Chapter / Bonus")}`;
                             th.style.width = "15%";
                         } else {
                             th.innerHTML = `<img src=${chapter_icons[getPresetChapter()]}>`;
@@ -554,6 +563,48 @@ function displayDailyPrizes() {
                     var tdVal = document.createElement('td');
                     tdVal.innerHTML = `${frogReward['amount']}`;
                     filteredData[i]['frog_subType'] = frogReward['reward'];
+                    tr.appendChild(tdVal);
+                    t2body.appendChild(tr);
+                    secondTable.appendChild(t2body);
+                } else if (filteredData[i]['id'].toLowerCase().includes('rsk_')) {
+                    td11.innerHTML = `<img src="${rskObject['icon']}" style="margin-left: 10%;" title="${langUI("A one-time reward")}">`;
+                    var td12 = document.createElement('td');
+                    td12.style.width = "40%";
+                    td12.innerHTML = `<b>Type:</b> Tome<br>`;
+                    t1r.appendChild(td11);
+                    t1r.appendChild(td12);
+                    t1body.appendChild(t1r);
+                    firstTable.appendChild(t1body);
+                    divFirstTable.appendChild(firstTable);
+                    div.appendChild(divFirstTable);
+
+                    var divSecondTable = document.createElement('div');
+                    divSecondTable.className = "bbTable";
+                    divSecondTable.style.overflow = "auto";
+                    var secondTable = document.createElement('table');
+                    secondTable.className = 'table-primary text-center';
+                    secondTable.style.width = "100%";
+                    var t2body = document.createElement('tbody');
+                    var tr21 = document.createElement('tr');
+
+                    for (var h = 0; h <= 1; h++) {
+                        var th = document.createElement('th');
+                        if (h === 0) {
+                            th.innerHTML = `${langUI("Chapter / Bonus")}`;
+                            th.style.width = "15%";
+                        } else {
+                            th.innerHTML = `<b>All</b>`;
+                        }
+                        tr21.appendChild(th);
+                    }
+                    t2body.appendChild(tr21);
+
+                    var tr = document.createElement('tr');
+                    var tdProd = document.createElement('td');
+                    tdProd.innerHTML = `<img src="${rskObject['icon']}" style="width: 24px;"><br><h7>${langUI("one-time reward")}</h7>`;
+                    tr.appendChild(tdProd);
+                    var tdVal = document.createElement('td');
+                    tdVal.innerHTML = `${rskObject['amount']}x <a class="text-link font-weight-bold" href="tomes.html#${rskObject['id']}" target="_blank">${rskObject['name']}</a>`;
                     tr.appendChild(tdVal);
                     t2body.appendChild(tr);
                     secondTable.appendChild(t2body);
