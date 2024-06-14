@@ -1,8 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2024" : [
-            ["Marine Marvels","scroll_aquatic_xxiv_",false,false],
-            ["Whiskers of the Past","tile_amuni_xxiv_",true,false],
+            ["Marine Marvels","scroll_aquatic_xxiv_",true,false],
+            ["Whiskers of the Past","tile_amuni_xxiv_",false,false],
             ["Buzzing Spring","shuffle_garden_xxiv_",false,false],
             ["Blessing of the Phoenix","theater_easter_xxiv",false,false],
             ["Tournament of Magic","scroll_sorcerers_xxiv_",false,false],
@@ -61,8 +61,8 @@ var allEvents = {
     },
     "all_events" : {
         "2024" : [
-            ["Marine Marvels","scroll_aquatic_xxiv_",false,false],
-            ["Whiskers of the Past","tile_amuni_xxiv_",true,false],
+            ["Marine Marvels","scroll_aquatic_xxiv_",true,false],
+            ["Whiskers of the Past","tile_amuni_xxiv_",false,false],
             ["Buzzing Spring","shuffle_garden_xxiv_",false,false],
             ["Blessing of the Phoenix","theater_easter_xxiv_",false,false],
             ["Tournament of Magic","scroll_sorcerers_xxiv_",false,false],
