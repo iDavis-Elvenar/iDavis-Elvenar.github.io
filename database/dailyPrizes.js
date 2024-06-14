@@ -10,6 +10,7 @@ var dailyPrizes = {
         "frog_runeshards2_{2}",
         "rsk_expiring_seatreasure_buildings_{1}",
         "INS_KP_{15}",
+        "A_Evt_MM_XIX_Seahorse",
     ],
 
     "tile_amuni_xxiv_": [
