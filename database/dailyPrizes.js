@@ -11,6 +11,7 @@ var dailyPrizes = {
         "rsk_expiring_seatreasure_buildings_{1}",
         "INS_KP_{15}",
         "A_Evt_MM_XIX_Seahorse",
+        "A_Evt_MM_XIX_Corals",
     ],
 
     "tile_amuni_xxiv_": [
