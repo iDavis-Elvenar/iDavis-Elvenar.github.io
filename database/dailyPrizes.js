@@ -13,6 +13,7 @@ var dailyPrizes = {
         "A_Evt_MM_XIX_Seahorse",
         "A_Evt_MM_XIX_Corals",
         "INS_UNIT_MC_HM_10",
+        "A_Evt_July_XXII_Azure_Stables",
     ],
 
     "tile_amuni_xxiv_": [
