@@ -22,7 +22,7 @@ var goods_icons = {
     "boosted_plus_2_quality_2": "<img src='https://i.ibb.co/dMHH2Ns/goods-quality-2-plus-2.png' title='Boosted T2 + 2'><br>",
     "boosted_plus_1_quality_3": "<img src='https://image.ibb.co/fOAi4f/goods-quality-3-plus-1.png' title='Boosted T3 + 1'><br>",
     "boosted_plus_2_quality_3": "<img src='https://i.ibb.co/9qqkPBC/goods-quality-3-plus-2.png' title='Boosted T3 + 2'><br>",
-    "orcs": "<img src='https://i.ibb.co/Hn5W8XF/orcs.png' title='Orcs'><br>",
+    "orcs": "<img src='https://i.ibb.co/6gtMqwb/orcs-small.png' title='Orcs'><br>",
     "mana": "<img src='https://image.ibb.co/bzd1Zq/mana.png' title='Mana'><br>",
     "seeds": "<img src='https://image.ibb.co/c9JtEq/seeds.png' title='Seeds'><br>",
     "sentientmarble": "<img src='https://i.ibb.co/wRN3HJP/sentient-marble.png' title='Moonstone'><br>",
