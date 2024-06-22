@@ -18,6 +18,7 @@ var dailyPrizes = {
         "frog_runeshards2_{2}", //placeholder, ma to byt -2 kapitoly (vallorian seal tower pre ch21)
         "A_Evt_July_XXI_Manta_Boat",
         "A_Evt_MM_XIX_ShellSinger",
+        "A_Evt_MM_XIX_WaterBubble",
     ],
 
     "tile_amuni_xxiv_": [
