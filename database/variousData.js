@@ -539,6 +539,8 @@ var optionsForFilterBy = [
 var flexibleRewardsIcons = {
     "frog_unurium_DP":"https://i.ibb.co/6WJvjQD/frog-unurium.png",
     "frog_mana":"https://i.ibb.co/0F5pTWq/frog-mana.png",
+    "frog_runeshards4":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
+    "frog_runeshards3":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
     "frog_runeshards2":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
     "frog_runeshards1":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
     "frog_grr_5":"https://i.ibb.co/JHqqq6j/frog-grr.png",

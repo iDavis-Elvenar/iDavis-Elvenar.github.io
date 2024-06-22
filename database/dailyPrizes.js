@@ -15,7 +15,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_HM_10",
         "A_Evt_July_XXII_Azure_Stables",
         "A_Evt_Scroll_Aquatic_XXIV_Symphony_of_the_Sirens",
-        "frog_runeshards2_{2}", //placeholder, ma to byt -2 kapitoly (vallorian seal tower pre ch21)
+        "frog_runeshards4_{2}",
         "A_Evt_July_XXI_Manta_Boat",
         "A_Evt_MM_XIX_ShellSinger",
         "A_Evt_MM_XIX_WaterBubble",
