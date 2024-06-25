@@ -21,6 +21,7 @@ var dailyPrizes = {
         "A_Evt_MM_XIX_WaterBubble",
         "frog_unurium_DP_{10}",
         "A_Evt_July_XXII_Coral_Fountain",
+        "INS_UNIT_LR_10",
     ],
 
     "tile_amuni_xxiv_": [
