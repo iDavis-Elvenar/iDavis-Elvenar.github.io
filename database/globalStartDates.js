@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "scroll_aquatic_xxiv_": {//Marine Marvels 2.7. - 24.7., Builders of Harmony 1.8. - 23.8.
         "live": {
-            "start_date": "__ _ 2024",
-            "end_date": "__ _ 2024"
+            "start_date": "July 2nd 2024",
+            "end_date": "July 24th 2024"
         },
         "beta": {
             "start_date": "June 7th 2024",
