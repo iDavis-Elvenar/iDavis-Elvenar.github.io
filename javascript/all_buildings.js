@@ -287,7 +287,8 @@ function readBuildingsJSON() {
                         }
                         //PRIDAJ EXPIRING EFFECT CONFIG VALUES (AK EXISTUJE)
                         if (filteredData[i].hasOwnProperty("expiring") &&
-                            Object.keys(filteredData[i]["expiring"]["values"]).length >= numberOfChapters) {
+                            Object.keys(filteredData[i]["expiring"]["values"]).length >= numberOfChapters &&
+                            Object.values(filteredData[i]["expiring"]["values"]).some(value => value !== 0)) {
                             var trEffect = document.createElement('tr');
                             for (var ch = 0; ch < numberOfChapters + 1; ch++) {
                                 var tdEffect = document.createElement('td');

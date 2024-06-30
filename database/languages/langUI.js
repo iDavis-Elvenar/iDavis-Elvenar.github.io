@@ -118,6 +118,7 @@ let ui = {
         "Dwarven Citadel": "Trpasličí citadela",
         "Ancient Promise": "Starodávný slib",
         //EVENTS
+        "Marine Marvels": "Mořské zázraky",
         "Whiskers of the Past": "Fousky minulosti",
         "Buzzing Spring": "Bzučící jaro",
         "Blessing of the Phoenix": "Požehnání fénixe",
@@ -275,6 +276,7 @@ let ui = {
         "Dwarven Citadel": "Zwergen-Zitadelle",
         "Ancient Promise": "Altes Gelöbnis",
         //EVENTS
+        "Marine Marvels": "Meereswunder",
         "Whiskers of the Past": "Die Schnurrhaare der Vergangenheit",
         "Buzzing Spring": "Summender Frühling",
         "Blessing of the Phoenix": "Der Segen des Phönix",
@@ -432,6 +434,7 @@ let ui = {
         "Dwarven Citadel": "Citadelle naine",
         "Ancient Promise": "Ancienne promesse",
         //EVENTS
+        "Marine Marvels": "Merveilles Marines",
         "Whiskers of the Past": "Les moustaches du passé",
         "Buzzing Spring": "Printemps bourdonnant",
         "Blessing of the Phoenix": "Bénédiction du Phénix",
@@ -589,6 +592,7 @@ let ui = {
         "Dwarven Citadel": "Törp Citadella",
         "Ancient Promise": "Ősi Ígéret",
         //EVENTS
+        "Marine Marvels": "Tengeri Csodák",
         "Whiskers of the Past": "A múlt bajusza",
         "Buzzing Spring": "Zümmögő Tavasz",
         "Blessing of the Phoenix": "A Főnix Áldása",
@@ -746,6 +750,7 @@ let ui = {
         "Dwarven Citadel": "Krasnoludzka Cytadela",
         "Ancient Promise": "Starożytna Obietnica",
         //EVENTS
+        "Marine Marvels": "Morskie cuda",
         "Whiskers of the Past": "Wibrysy z przeszłości",
         "Buzzing Spring": "Bzycząca wiosna",
         "Blessing of the Phoenix": "Błogosławieństwo Feniksa",
@@ -903,6 +908,7 @@ let ui = {
         "Dwarven Citadel": "Гномья цитадель",
         "Ancient Promise": "Древнее обещание",
         //EVENTS
+        "Marine Marvels": "Морские чудеса",
         "Whiskers of the Past": "Whiskers of the Past",
         "Buzzing Spring": "Жужжащая весна",
         "Blessing of the Phoenix": "Благословение Феникса",
