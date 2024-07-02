@@ -121,6 +121,7 @@ let eventVideos = {
     "theater_easter_xxiv_": "https://www.youtube.com/embed/65B1s9qR1uk",
     "shuffle_garden_xxiv_": "https://www.youtube.com/embed/AL3G_gRQgNs",
     "tile_amuni_xxiv_": "https://www.youtube.com/embed/gJf0E14W3wg",
+    "scroll_aquatic_xxiv_": "https://www.youtube.com/embed/CzAi_Hpb6yc",
 }
 
 let eventBetaStarts = { // MM/DD/YYYY
