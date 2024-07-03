@@ -1,6 +1,7 @@
 var dailyPrizes = {
 
     "merge_dwarvengame_xxiv_": [
+        "A_Evt_August_XXII_Lunar_Factory",
         "A_Evt_Merge_Dwarvengame_XXIII_Target_Shooting",
     ],
 
