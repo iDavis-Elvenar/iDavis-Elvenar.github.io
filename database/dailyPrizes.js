@@ -1,5 +1,9 @@
 var dailyPrizes = {
 
+    "merge_dwarvengame_xxiv_": [
+        "A_Evt_Merge_Dwarvengame_XXIII_Target_Shooting",
+    ],
+
     "scroll_aquatic_xxiv_": [
         "A_Evt_MM_XIX_MantaRay",
         "A_Evt_Scroll_Aquatic_XXIV_Torrent_of_Teamwork",
