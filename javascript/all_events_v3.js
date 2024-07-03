@@ -2196,6 +2196,27 @@ function createPrizeCell(prize, cell) {
         artifactImg.style.maxWidth = "60px";
         cell.appendChild(artifactImg);
         cell.innerHTML += `<br>${prize.amount}x ${artifactName}`;
+    } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_kp_')) {
+        let kpName = `Ancient Knowledge ${prize.subType.split('_')[prize.subType.split('_').length-1]}`;
+        let kpImg = document.createElement('img');
+        kpImg.src = "https://i.ibb.co/FsPw0Z2/ins-kp-aw.png";
+        kpImg.style.maxWidth = "60px";
+        cell.appendChild(kpImg);
+        cell.innerHTML += `<br>${prize.amount}x ${kpName}`;
+    } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_rev_sqd_')) {
+        let revName = `Vitality Surge ${prize.subType.split('_')[prize.subType.split('_').length-1]}`;
+        let revImg = document.createElement('img');
+        revImg.src = "https://i.ibb.co/M7ypGhv/vitality-surge-big.png";
+        revImg.style.maxWidth = "60px";
+        cell.appendChild(revImg);
+        cell.innerHTML += `<br>${prize.amount}x ${revName}`;
+    } else if (prize.type === 'runeShard' && prize.subType.toLowerCase().includes('broken_shards')) {
+        let bsName = `Broken Shard`;
+        let bsImg = document.createElement('img');
+        bsImg.src = "https://i.ibb.co/Cbhk6Gs/brokenshard.png";
+        bsImg.style.maxWidth = "60px";
+        cell.appendChild(bsImg);
+        cell.innerHTML += `<br>${prize.amount}x ${bsName}`;
     } else if (prize.type === 'good' || prize.type === 'resource') {
         let goods = document.createElement('img');
         if (prize.subType === 'event_currency_1') {

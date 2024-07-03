@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "scroll_aquatic_xxiv_": {//Marine Marvels 2.7. - 24.7., Builders of Harmony 1.8. - 23.8.
+    "merge_dwarvengame_xxiv_": {//Builders of Harmony 1.8. - 23.8.
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "July 3rd 2024",
+            "end_date": "July 25th 2024"
+        }
+    },
+    "scroll_aquatic_xxiv_": {
         "live": {
             "start_date": "July 2nd 2024",
             "end_date": "July 24th 2024"

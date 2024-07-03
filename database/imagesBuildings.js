@@ -1,4 +1,7 @@
 var images_buildings = {
+    "A_Evt_Exp_Merge_Dwarvengame_XXIV_Die_of_Fortune":"https://i.ibb.co/kgL8gNV/die-of-fortune.png",
+    "A_Evt_Merge_Dwarvengame_XXIV_Linked_Ramparts":"https://i.ibb.co/ZYryS8V/linked-ramparts.png",
+    "A_Evt_Evo_Merge_Dwarvengame_XXIV_Tower_of_Unity":"https://i.ibb.co/jHQDkDR/tower-of-unity.png",
     "A_Evt_Exp_Set_Scroll_Aquatic_XXIV_Abyssal_Pearls":"https://i.ibb.co/KynYpMv/abyssal-pearls.png",
     "A_Evt_Exp_Set_Scroll_Aquatic_XXIV_Azure_Shard":"https://i.ibb.co/1qfr16Z/azure-shard.png",
     "A_Evt_Exp_Set_Scroll_Aquatic_XXIV_Neptunes_Trove":"https://i.ibb.co/fvSrLvT/neptunes-trove.png",

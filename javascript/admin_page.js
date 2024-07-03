@@ -243,7 +243,11 @@ function handleBuildingsJSON() {
                                                                 if (!b['chapters'][currentLevelString].hasOwnProperty(stageString)) {
                                                                     b['chapters'][currentLevelString][stageString] = {};
                                                                 }
-                                                                c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod]];
+                                                                if (allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod]] !== undefined) {
+                                                                    c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod]];
+                                                                } else {
+                                                                    c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod].toLowerCase()];
+                                                                }
                                                                 if (evoObject['stages'][stage]['products'][o].hasOwnProperty('value')) {
                                                                     c['value'] = evoObject['stages'][stage]['products'][o]['value'];
                                                                     /*if (allBuildings[k]['id'].includes("A_Evt_Evo_Autumn_XIX_Bear_Ice")) {

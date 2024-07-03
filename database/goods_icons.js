@@ -378,4 +378,5 @@ var xlImages = {
     "time_booster_general": "https://i.ibb.co/v3tz21P/Booster.png",
     "premium": "https://i.ibb.co/WV2cnhX/premium.png",
     "blueprint": "https://i.ibb.co/9gjsJbY/blueprint.png",
+    "combiningcatalyst": "https://i.ibb.co/8YyxDbs/combiningcatalyst.png",
 }
