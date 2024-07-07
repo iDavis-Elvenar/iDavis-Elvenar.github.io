@@ -6,6 +6,7 @@ var dailyPrizes = {
         "INS_REV_SQD_50",
         "A_Evt_August_XXII_Warriors_Gate",
         "INS_KP_AW_20",
+        "A_Evt_February_XXI_Sun_Loop",
     ],
 
     "scroll_aquatic_xxiv_": [
