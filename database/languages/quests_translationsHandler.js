@@ -57,7 +57,7 @@ function selectCorrectForm(value, formsList) {
             return formsList[2]; //gen. pl.
         }
     }
-    if (localStorage.getItem("lang") === "en" || localStorage.getItem("lang") === "de" || localStorage.getItem("lang") === "fr") {
+    if (localStorage.getItem("lang") === "en" || localStorage.getItem("lang") === "de" || localStorage.getItem("lang") === "fr" || localStorage.getItem("lang") === "it") {
         if (value == 1) {
             return formsList[0]; //singulár
         }

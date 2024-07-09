@@ -184,22 +184,15 @@ var notifications = {
     },
     "16":{  // NEW FEATURE ON THE WEBSITE #1
         "id":16,
-        "text":`<h4 class="alert-heading"><img src="https://i.ibb.co/GtLpfZ7/event-guide.png" style="width: 30px;">  Event Quests are now Chapter dependent!
-        <img src="https://i.ibb.co/XCp7d47/ch21.png" style="width: 25px;"> <img src="https://i.ibb.co/W5CtfR2/ch17.png" style="width: 25px;"> <img src="https://i.ibb.co/Sx7bcfG/ch13.png" style="width: 25px;"></h4>
+        "text":`<h4 class="alert-heading">Ciao giocatori di Elvenar!</h4>
         <hr>
-        <p>With the beginning of the next event (<b>Buzzing Spring</b>), some of the Event Quests will have varying conditions based on your current chapter.</p>
-        <p>For this reason, I have implemented a new feature that allows you to preset the chapter for Event Quest lists on this website!</p>
-        <p>1. Visit the <b>Quests</b> tab on the <b>All Events</b> page.</p>
-        <p>2. Search for the Settings Icon: <img src="https://i.ibb.co/0ycDvJx/options.png" style="width: 20px;">.</p>
-        <p>3. Click the Settings Icon and select a chapter for each of the servers on which you play.</p>
-        <p>Now the quests will be relevant to your selected chapter. Be sure to update the settings when your city advances.</p>
-        <center><img src="https://i.ibb.co/Bcg7QqN/servers-settings.png" style="width: 35%;"></center><br>
-        <hr>
-        <p>Visit the <a href="https://idavis-elvenar.com/events.html" target="_blank" class="alert-link">Quests Page</a> to prepare your settings now!</p>`,
+        <p>The website is now officially available in Italian! Use the globe button in the top right corner to select your language:</p>
+        <center><img src="https://i.ibb.co/3mCyY8f/language-selection-announcement.png"></center>
+        <p>Event quest translations, a major contribution to the dictionary, have been provided by the Italian player <b>Ajani 39</b>. Thank you very much for your support!</p>`,
         "repeatAfter":172800,
         "style":"warning",
         "duration":100,
-        "active":false,
+        "active":true,
         "priority":45
     },
     "17":{  // EVENT
