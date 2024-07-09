@@ -2268,3 +2268,103 @@ function createBuildingPrizeCell(buildingId, buildingImage, amount, cell) {
         cell.innerHTML += `<br>${amount}x <a class="text-link font-weight-bold" href="buildings.html#${buildingId}" target="_blank">${data.filter(elem => elem.id === buildingId)[0]['name']}</a>`;
     });
 }
+
+function displayLeagues() {
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = "";
+
+    let eventSelect = document.getElementById('input_event');
+    let selectedEvent = eventSelect.options[eventSelect.selectedIndex].value;
+    let selectedEventName = eventSelect.options[eventSelect.selectedIndex].text;
+
+    createEventHeader(selectedEvent, selectedEventName);
+
+    var h5 = document.createElement('h5');
+    h5.id = 'prizes_header';
+    h5.className = "card-title text-center text-title font-weight-bold";
+    h5.style.textAlign = "left";
+    h5.innerHTML = `..:: ${langUI("Leagues")} ::..<br>`;
+    parent.appendChild(h5);
+
+    let eventLeagues = eventsLeagues[selectedEvent];
+    if (eventLeagues === undefined) {
+        let center = document.createElement('center');
+        center.innerHTML = `<h7>No recorded Leagues for this event.</h7>`;
+        parent.appendChild(center);
+        return;
+    }
+
+    var prizesInfoText = document.createElement('h7');
+    prizesInfoText.id = 'leagues_info_text';
+    prizesInfoText.className = "card-title text-center";
+    prizesInfoText.style.textAlign = "left";
+    prizesInfoText.innerHTML = `${eventLeagues['description']}`;
+    var center = document.createElement('center');
+    center.appendChild(prizesInfoText);
+    parent.appendChild(center);
+
+    var div = document.createElement('div');
+    div.style.textAlign = 'center';
+    div.style.marginBottom = '10px';
+    div.style.marginTop = '10px';
+    var divBBTable = document.createElement('div');
+    divBBTable.className = 'bbTable';
+    var table = document.createElement('table');
+    table.className = 'table-primary';
+    table.style.width = '100%';
+    var tbody = document.createElement('tbody');
+
+    let maxRewards = getHighestLengthLeagueRewards(eventLeagues);
+    
+    let tr = document.createElement('tr');
+    let th1 = document.createElement('th');
+    th1.innerHTML = 'League';
+    th1.style.width = '25%';
+    let th2 = document.createElement('th');
+    th2.innerHTML = 'Rewards';
+    th2.style.width = '75%';
+    th2.colSpan = maxRewards;
+    tr.appendChild(th1);
+    tr.appendChild(th2);
+    tbody.appendChild(tr);
+
+    for (let league in eventLeagues) {
+        if (league !== 'description') {
+            let trLeague = document.createElement('tr');
+            let tdLeague = document.createElement('td');
+            let leagueImage = document.createElement('img');
+            leagueImage.src = leaguesBanners[league];
+            leagueImage.style.maxHeight = "150px";
+            tdLeague.appendChild(leagueImage);
+            trLeague.appendChild(tdLeague);
+
+            for (let reward = 0; reward < maxRewards; reward++) {
+                let tdReward = document.createElement('td');
+                tdReward.style.width = `${75/maxRewards}%`;
+                if (reward < eventLeagues[league].length) {
+                    createPrizeCell(eventLeagues[league][reward], tdReward);
+                }
+                trLeague.appendChild(tdReward);
+            }
+            tbody.appendChild(trLeague);
+        }
+    }
+
+    table.appendChild(tbody);
+    divBBTable.appendChild(table);
+    div.appendChild(divBBTable);
+
+    parent.appendChild(div);
+}
+
+function getHighestLengthLeagueRewards(obj) {
+    let maxLength = 0;
+    for (let key in obj) {
+        if (key !== 'description') {
+            if (obj.hasOwnProperty(key)) {
+                maxLength = Math.max(maxLength, obj[key].length);
+            }
+        }
+    }
+    return maxLength;
+}

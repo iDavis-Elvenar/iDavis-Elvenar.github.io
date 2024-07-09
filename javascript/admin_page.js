@@ -1380,3 +1380,34 @@ function generateEventPrizes() {
         create_exception("Data Generated!",10,'success');
     }
 }
+
+function generateEventLeagues() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('seasonal_event_leagues').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = {};
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        for (let i = 0; i < data[0].components.length; i++) {
+            if (data[0].components[i].__class__ === "EventLeagueComponentVO") {
+                let dbLeagues = data[0].components[i].eventLeagueConfigs;
+                for (let league = 0; league < dbLeagues.length; league++) {
+                    result[dbLeagues[league]['name']] = [];
+                    for (let reward = 0; reward < dbLeagues[league]['rewards'].length; reward++) {
+                        let rewObject = {};
+                        rewObject['type'] = dbLeagues[league]['rewards'][reward]['type'];
+                        rewObject['subType'] = dbLeagues[league]['rewards'][reward]['subType'];
+                        rewObject['amount'] = dbLeagues[league]['rewards'][reward]['amount'];
+                        result[dbLeagues[league]['name']].push(rewObject);
+                    }
+                }
+                result['description'] = data[0].components[i]['description'];
+            }
+        }
+
+        console.log(result)
+        saveJSON( JSON.stringify(result), "eventsLeagues.json" );
+        create_exception("Data Generated!",10,'success');
+    }
+}

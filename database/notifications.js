@@ -150,13 +150,12 @@ var notifications = {
     },
     "14":{  // FEEDBACK SURVEY
         "id":14,
-        "text":`<h4 class="alert-heading">✍ How did you learn about the website?</h4>
-        <p>I'd love to hear from you! Help me improve your experience by letting me know how you discovered my website.
-        I will be glad if could take a minute to fill out this short survey.</p>
-        <hr>
-        <p style="text-align: center;"><h4 style="text-align: center;">Visit the survey <a href="https://docs.google.com/forms/d/1LVn9ZoyqCJBkgB6W4GToM9u0V9NZTomKIcKCg3Bvknc" target="_blank" class="alert-link">here</a>!</h4></p>
-        <p>You can ignore this message if you have already completed this survey.</p>`,
-        "repeatAfter":432000,
+        "text":`<h4 class="alert-heading">📜 A Message from iDavis (July 5th) 📜</h4>
+        <p>Hello everyone, I hope this message finds you well. I want to take a moment address the recent development of the website and share with you some latest updates.</p>
+        <p>First, I want to thank every single visitor of my website for your continued support. Over the last few months, the website has continued to grow, confirming its undisputed position as the most 
+        popular fan site for Elvenar! ...</p>
+        <p></p>`,
+        "repeatAfter":1,
         "style":"warning",
         "duration":60,
         "active":false,

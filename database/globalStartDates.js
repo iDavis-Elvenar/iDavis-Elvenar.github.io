@@ -1,5 +1,5 @@
 var eventStartDates = { 
-    "merge_dwarvengame_xxiv_": {//Builders of Harmony 1.8. - 23.8.
+    "merge_dwarvengame_xxiv_": {//Builders of Harmony 1.8. - 23.8., Autumn Zodiac 9.9. - 1.10.
         "live": {
             "start_date": "__ _ 2024",
             "end_date": "__ _ 2024"

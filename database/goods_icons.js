@@ -379,4 +379,5 @@ var xlImages = {
     "premium": "https://i.ibb.co/WV2cnhX/premium.png",
     "blueprint": "https://i.ibb.co/9gjsJbY/blueprint.png",
     "combiningcatalyst": "https://i.ibb.co/8YyxDbs/combiningcatalyst.png",
+    "knowledge_points": "https://i.ibb.co/bmBcTNB/knowledge-points.png",
 }

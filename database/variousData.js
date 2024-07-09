@@ -422,7 +422,7 @@ var eventsInfoIcons = {
 }
 
 var featureFlagsInitialEvents = {
-    "leagues_tab": "placeholder",
+    "leagues_tab": "merge_dwarvengame_xxiv_",
     "prizes_tab": "scroll_aquatic_xxiv_",
     "info_tab": "december_xxii_",
 }
@@ -439,6 +439,14 @@ var eventsAvatars = {
     "portraitEvtMergeDwarvengameXxivF1": "https://i.ibb.co/MsRGRLL/portrait-evt-merge-dwarvengame-xxiv-f1.png",
 }
 
+var leaguesBanners = {
+    "Gold": "https://i.ibb.co/1vJC8Wt/league-gold.png",
+    "Silver": "https://i.ibb.co/Lvqd9QV/league-silver.png",
+    "Bronze": "https://i.ibb.co/hsJ8D1f/league-bronze.png",
+    "Iron": "https://i.ibb.co/c8dL12m/league-iron.png",
+    "Hobby": "https://i.ibb.co/fx4pbfR/league-hobby.png",
+}
+
 var baseTabsEvents = [
     {"id":"info_panel_div", "name":"Info", "img":"various", "img_width":"45", "img_style":"margin-left: -10px; margin-right: 2px; position: relative;", "href":"#info", "onclick":"info"},
     {"id":"calendar_top_div", "name":"Calendar", "img":"images/general/calendar.png", "img_width":"45", "img_style":"margin-left: -10px; margin-right: 2px; position: relative;", "href":"#calendar", "onclick":"calendar"},
@@ -449,9 +457,9 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "merge_dwarvengame_xxiv_": [
-        {"id":"board", "name":"Board", "img":"https://i.ibb.co/5vGFxky/a4.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"07/10/2024"},
-        {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html", "releaseDate":"07/10/2024"},
-        {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html", "releaseDate":"07/10/2024"},
+        {"id":"board", "name":"Board", "img":"https://i.ibb.co/5vGFxky/a4.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"07/09/2024"},
+        {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html", "releaseDate":"07/09/2024"},
+        {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html", "releaseDate":"07/09/2024"},
     ],
     "scroll_aquatic_xxiv_": [
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/8/2024"},
