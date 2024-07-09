@@ -191,7 +191,7 @@ var notifications = {
         <p>Event quest translations, a major contribution to the dictionary, have been provided by the Italian player <b>Ajani 39</b>. Thank you very much for your support!</p>`,
         "repeatAfter":172800,
         "style":"warning",
-        "duration":100,
+        "duration":70,
         "active":true,
         "priority":45
     },
