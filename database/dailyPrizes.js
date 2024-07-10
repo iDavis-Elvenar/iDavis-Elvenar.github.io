@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_February_XXI_Sun_Loop",
         "INS_KP_{15}",
         "INS_UNIT_LM_10",
+        "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
     ],
 
     "scroll_aquatic_xxiv_": [
