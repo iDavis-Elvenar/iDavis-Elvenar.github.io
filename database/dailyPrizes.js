@@ -10,6 +10,7 @@ var dailyPrizes = {
         "INS_KP_{15}",
         "INS_UNIT_LM_10",
         "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
+        "frog_runeshards1_{2}",
     ],
 
     "scroll_aquatic_xxiv_": [
