@@ -12,6 +12,7 @@ var dailyPrizes = {
         "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
         "frog_runeshards1_{2}",
         "A_Evt_Summer_XVIII_Mystical_Lace",
+        "A_Evt_Summer_XVIII_Woodelvenstock",
     ],
 
     "scroll_aquatic_xxiv_": [
