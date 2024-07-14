@@ -151,6 +151,7 @@ var notifications = {
     "14":{  // FEEDBACK SURVEY
         "id":14,
         "text":`<h4 class="alert-heading">📜 A Message from iDavis (July 15th) 📜</h4>
+        <hr>
         <p>Hello everyone, I hope this message finds you well. I want to take a moment address the recent development of the website and share with you some latest updates.</p>
         <p>First, I want to thank every single visitor of <b>iDavis-Elvenar</b> for your continued support. Over the last few months, the website has continued to grow, maintaining its number one position among all fan sites for Elvenar.
         This milestone would not have been possible without your dedication to spreading the website among fellow players and your willingness to provide invaluable feedback and suggestions for improvement! I'm always curious about your thoughts,
