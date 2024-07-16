@@ -15,6 +15,7 @@ var dailyPrizes = {
         "A_Evt_Summer_XVIII_Woodelvenstock",
         "A_Evt_Car_XX_Dwarven_Wagon",
         "frog_grr_5_{1}",
+        "A_Evt_August_XXII_Solar_Training_Grounds",
     ],
 
     "scroll_aquatic_xxiv_": [
