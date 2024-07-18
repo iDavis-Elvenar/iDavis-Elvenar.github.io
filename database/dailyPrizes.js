@@ -17,6 +17,7 @@ var dailyPrizes = {
         "frog_grr_5_{1}",
         "A_Evt_August_XXII_Solar_Training_Grounds",
         "A_Evt_StoneHengeSmall",
+        "A_Evt_Summer_XVIII_Monopteros",
     ],
 
     "scroll_aquatic_xxiv_": [
