@@ -18,6 +18,7 @@ var dailyPrizes = {
         "A_Evt_August_XXII_Solar_Training_Grounds",
         "A_Evt_StoneHengeSmall",
         "A_Evt_Summer_XVIII_Monopteros",
+        "INS_UNIT_MC_LM_10",
     ],
 
     "scroll_aquatic_xxiv_": [
