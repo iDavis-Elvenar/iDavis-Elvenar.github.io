@@ -533,6 +533,10 @@ function displayPass() {
                         tdReward.innerHTML = `<img src="https://i.ibb.co/r2d4mnk/premium-big.png">`;
                         tdReward.innerHTML += `<br>${seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['amount']}x`;
                     }
+                } else if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'avatar') {
+                    let subType = seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'];
+                    var avatarImg = eventsAvatars[subType];
+                    tdReward.innerHTML = `<img src="${avatarImg}">`;
                 }
             } else {
                 tdReward.innerHTML = "";

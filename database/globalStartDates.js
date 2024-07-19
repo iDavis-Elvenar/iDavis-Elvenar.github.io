@@ -274,7 +274,17 @@ var faStartDates = { //June 20.6. - 26.6.
     },
 }
 
-var seasonStartDates = {  //Season of Triumph 29.4. - 12.7., Season of Joy 30.7. - 8.10., Season of Secrets 23.10. - 6.1.
+var seasonStartDates = {  //Season of Joy 30.7. - 8.10., Season of Secrets 23.10. - 6.1.
+    "july_xxiv_": {
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "June 20th 2024",
+            "end_date": "September 3rd 2024"
+        }
+    },
     "april_xxiv_": {
         "live": {
             "start_date": "April 29th 2024",

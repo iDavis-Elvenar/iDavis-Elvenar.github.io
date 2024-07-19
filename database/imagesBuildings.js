@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Evt_Season_Joy_XXIV_Cradle_of_Seeds":"https://i.ibb.co/9TKnzhV/cradle-of-seeds.png",
     "A_Evt_Exp_Merge_Dwarvengame_XXIV_Die_of_Fortune":"https://i.ibb.co/kgL8gNV/die-of-fortune.png",
     "A_Evt_Merge_Dwarvengame_XXIV_Linked_Ramparts":"https://i.ibb.co/ZYryS8V/linked-ramparts.png",
     "A_Evt_Evo_Merge_Dwarvengame_XXIV_Tower_of_Unity":"https://i.ibb.co/jHQDkDR/tower-of-unity.png",
