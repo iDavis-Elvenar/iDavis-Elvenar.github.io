@@ -20,6 +20,7 @@ var dailyPrizes = {
         "A_Evt_Summer_XVIII_Monopteros",
         "INS_UNIT_MC_LM_10",
         "A_Evt_May_XX_Food_Market",
+        "frog_runeshards2_{2}",
     ],
 
     "scroll_aquatic_xxiv_": [
