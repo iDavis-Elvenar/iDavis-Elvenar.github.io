@@ -22,6 +22,7 @@ var dailyPrizes = {
         "A_Evt_May_XX_Food_Market",
         "frog_runeshards2_{2}",
         "INS_KP_{10}",
+        "A_Evt_StoneHengeMedium",
     ],
 
     "scroll_aquatic_xxiv_": [
