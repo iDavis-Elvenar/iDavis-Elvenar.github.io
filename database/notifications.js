@@ -102,16 +102,16 @@ var notifications = {
     },
     "10":{  // SEASON
         "id":10,
-        "text":`<h4 class="alert-heading">Season of Triumph is coming soon!</h4>
+        "text":`<h4 class="alert-heading">Season of Joy is coming soon!</h4>
   <p>The brand-new season is soon beginning on your server!</p>
   <hr>
-  <center><img src="https://i.ibb.co/kxdBh0Y/season-triumph-banner.png" style="width: 35%;"></center><br>
-    <center><p>The <b>Season of Triumph</b> is approaching quickly and it is now fully covered on my Seasons page! Get ready for everything that the Season of Triumph has to offer. You can access this page from the navigation bar under the "More" button!<br>
+  <center><img src="https://i.ibb.co/Hdm0FzN/season-joy-banner.png" style="width: 35%;"></center><br>
+    <center><p>The <b>Season of Joy</b> is approaching quickly and it is now fully covered on my Seasons page! Get ready for everything that the Season of Joy has to offer. You can access this page from the navigation bar under the "More" button!<br>
     Start Date, Daily Quests, Weekly Quests, Blessings, many interesting rewards and the <b>Season Pass calculator</b> are now available in the newest <img src="https://i.ibb.co/87MNrBB/season-pass.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/seasons.html" class="alert-link">Seasons</a> page!</p></center>`,
         "repeatAfter":259200,
         "style":"warning",
         "duration":60,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "11":{  // EVENTS SIMULTANEOUSLY - BETA PRIMARY
@@ -165,7 +165,7 @@ var notifications = {
         and you can find a wealth of tips and tricks to begin with the new discoveries of Elvenar!</p>
         <p>Until then, thank you for reading, have fun with the game and stay tuned for more updates and content!</p>
         <p>iDavis</p>`,
-        "repeatAfter":86400,
+        "repeatAfter":172800,
         "style":"warning",
         "duration":300,
         "active":true,
@@ -202,7 +202,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":70,
-        "active":true,
+        "active":false,
         "priority":45
     },
     "17":{  // EVENT
