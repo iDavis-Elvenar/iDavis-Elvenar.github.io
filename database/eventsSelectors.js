@@ -1,8 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2024" : [
-            ["Builders of Harmony","merge_dwarvengame_xxiv_",false,false],
-            ["Marine Marvels","scroll_aquatic_xxiv_",true,false],
+            ["Builders of Harmony","merge_dwarvengame_xxiv_",true,false],
+            ["Marine Marvels","scroll_aquatic_xxiv_",false,false],
             ["Whiskers of the Past","tile_amuni_xxiv_",false,false],
             ["Buzzing Spring","shuffle_garden_xxiv_",false,false],
             ["Blessing of the Phoenix","theater_easter_xxiv",false,false],
@@ -62,8 +62,8 @@ var allEvents = {
     },
     "all_events" : {
         "2024" : [
-            ["Builders of Harmony","merge_dwarvengame_xxiv_",false,false],
-            ["Marine Marvels","scroll_aquatic_xxiv_",true,false],
+            ["Builders of Harmony","merge_dwarvengame_xxiv_",true,false],
+            ["Marine Marvels","scroll_aquatic_xxiv_",false,false],
             ["Whiskers of the Past","tile_amuni_xxiv_",false,false],
             ["Buzzing Spring","shuffle_garden_xxiv_",false,false],
             ["Blessing of the Phoenix","theater_easter_xxiv_",false,false],
