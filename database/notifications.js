@@ -169,7 +169,7 @@ var notifications = {
         "style":"warning",
         "duration":300,
         "active":true,
-        "priority":80
+        "priority":120
     },
     "15":{  // SHORTS TEASER
         "id":15,
