@@ -99,6 +99,7 @@ let eventBanners = {
     "tile_amuni_xxiv_": "https://i.ibb.co/QXbMfCS/EL-akcia-m-j-2024-banner.jpg",
     "scroll_aquatic_xxiv_": "https://i.ibb.co/3zm6vrr/EL-akcia-j-l-2024-banner.jpg",
     "merge_dwarvengame_xxiv_": "https://i.ibb.co/Twb7GYL/EL-akcia-august-2024-banner.jpg",
+    "theater_zodiac_xxiv_": "https://i.ibb.co/0nVXGDW/EL-akcia-jese-2024-banner.jpg",
 }
 
 let eventVideos = {
@@ -159,6 +160,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "tile_amuni_xxiv_": "05/13/2024",
     "scroll_aquatic_xxiv_": "06/07/2024",
     "merge_dwarvengame_xxiv_": "07/03/2024",
+    "theater_zodiac_xxiv_": "08/12/2024",
 }
 
 let questsLinks = {
@@ -188,6 +190,7 @@ let questsLinks = {
     "tile_amuni_xxiv_": "bit.ly/WhiskersOfThePast2024",
     "scroll_aquatic_xxiv_": "bit.ly/MarineMarvels2024",
     "merge_dwarvengame_xxiv_": "bit.ly/BuildersOfHarmony2024",
+    "theater_zodiac_xxiv_": "bit.ly/AutumnZodiac2024",
 }
 
 let eventsDurations = {
@@ -217,6 +220,7 @@ let eventsDurations = {
     "tile_amuni_xxiv_": 22,
     "scroll_aquatic_xxiv_": 22,
     "merge_dwarvengame_xxiv_": 22,
+    "theater_zodiac_xxiv_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -265,6 +269,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Tile_Amuni_XXIV_Purring_Sanctum": "ins_evo_tile_amuni_xxiv",
     "A_Evt_Evo_Scroll_Aquatic_XXIV_Puffs_Nautical_Theater": "ins_evo_scroll_aquatic_xxiv",
     "A_Evt_Evo_Merge_Dwarvengame_XXIV_Tower_of_Unity": "ins_evo_merge_dwarvengame_xxiv",
+    "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": "ins_evo_theater_zodiac_xxiv",
 }
 
 var artifacts = {
@@ -307,6 +312,7 @@ var artifacts = {
     "ins_evo_tile_amuni_xxiv": {"name": "Purring Sanctum Artifact", "img": "https://i.ibb.co/7n4f4TM/ins-evo-tile-amuni-xxiv.png"},
     "ins_evo_scroll_aquatic_xxiv": {"name": "Puff's Nautical Theater Artifact", "img": "https://i.ibb.co/0XYBcF6/ins-evo-scroll-aquatic-xxiv.png"},
     "ins_evo_merge_dwarvengame_xxiv": {"name": "Tower of Unity Artifact", "img": "https://i.ibb.co/7GgT6nj/ins-evo-merge-dwarvengame-xxiv.png"},
+    "ins_evo_theater_zodiac_xxiv": {"name": "Glido, The Dreamweaver Artifact", "img": "https://i.ibb.co/9bsNngq/ins-evo-theater-zodiac-xxiv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -326,6 +332,7 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_Easter_XXIII_Astral_Phoenix" : `<img src="https://i.ibb.co/s5zgfs4/goods-production.png">`,
     "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent" : `<img src="https://i.ibb.co/WnDfq7P/combining-catalyst.png">`,
     "A_Evt_Evo_Theater_Easter_XXIV_Verdant_Phoenix": `<img src="https://i.ibb.co/vjQD2kX/season-xp-b15fa556d9a49df8ccdbc3fe222f0feb.png">`,
+    "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": `<img src="https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png">`,
 }
 
 var allowedFeedingMultiplicators = {
@@ -356,6 +363,7 @@ var iconsImages = {
     "goods_basic":"https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png",
     "goods_refined":"https://i.ibb.co/bzCh4vp/goods-standard-precious.png",
     "goods_precious":"https://i.ibb.co/G0N8gT6/goods-standard-refined.png",
+    "goods_all_small": "https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png",
 }
 
 var iconsTitles = {
@@ -419,6 +427,7 @@ var eventsInfoIcons = {
     "tile_amuni_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_aquatic_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "merge_dwarvengame_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "theater_zodiac_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -430,6 +439,7 @@ var featureFlagsInitialEvents = {
 var eventsPaybackIcons = {
     "scroll_aquatic_xxiv_": "https://i.ibb.co/vQgG13g/scroll-aquatic-xxiv-payback.png",
     "merge_dwarvengame_xxiv_": "https://i.ibb.co/VL6QWtp/merge-dwarvengame-xxiv-event-payback.png",
+    "theater_zodiac_xxiv_": "https://i.ibb.co/YWgvz91/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -438,6 +448,9 @@ var eventsAvatars = {
     "portraitEvtMergeDwarvengameXxivM1": "https://i.ibb.co/1Lb4pP6/portrait-evt-merge-dwarvengame-xxiv-m1.png",
     "portraitEvtMergeDwarvengameXxivF1": "https://i.ibb.co/MsRGRLL/portrait-evt-merge-dwarvengame-xxiv-f1.png",
     "portraitSeasonJoyXxivF1": "https://i.ibb.co/P1wJ7MM/portrait-season-joy-xxiv-f1.png",
+    "portraitEvtTheaterZodiacXxivM1": "https://i.ibb.co/gFdk1n2/portrait-evt-theater-zodiac-xxiv-m1.png",
+    "portraitEvtTheaterZodiacXxivF1": "https://i.ibb.co/tDY8xwC/portrait-evt-theater-zodiac-xxiv-f1.png",
+    "portraitEvtTheaterZodiacXxivF2": "https://i.ibb.co/44kyVL2/portrait-evt-theater-zodiac-xxiv-f2.png",
 }
 
 var leaguesBanners = {
@@ -457,6 +470,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "theater_zodiac_xxiv_": [
+        {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html", "releaseDate":"08/17/2024"},
+    ],
     "merge_dwarvengame_xxiv_": [
         {"id":"board", "name":"Board", "img":"https://i.ibb.co/5vGFxky/a4.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"07/09/2024"},
         {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html", "releaseDate":"07/09/2024"},
@@ -627,7 +643,7 @@ var grIds = {
 }
 
 var newEventSign = {
-    "active": false,
+    "active": true,
     "img": "https://i.ibb.co/n0KBPgt/new-sign.png",
 }
 

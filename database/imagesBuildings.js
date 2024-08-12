@@ -1,4 +1,7 @@
 var images_buildings = {
+    "A_Evt_Theater_Zodiac_XXIV_Alcove_of_Sweet_Naps":"https://i.ibb.co/2jhXbFC/alcove-of-sweet-naps.png",
+    "A_Evt_Theater_Zodiac_XXIV_Dreamers_Pillar":"https://i.ibb.co/HTzBN6K/dreamers-pillar.png",
+    "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver":"https://i.ibb.co/CbSrSzh/glido-the-dreamweaver.png",
     "A_Evt_Season_Joy_XXIV_Cradle_of_Seeds":"https://i.ibb.co/9TKnzhV/cradle-of-seeds.png",
     "A_Evt_Exp_Merge_Dwarvengame_XXIV_Die_of_Fortune":"https://i.ibb.co/kgL8gNV/die-of-fortune.png",
     "A_Evt_Merge_Dwarvengame_XXIV_Linked_Ramparts":"https://i.ibb.co/ZYryS8V/linked-ramparts.png",

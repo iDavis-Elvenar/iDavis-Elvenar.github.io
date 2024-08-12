@@ -1,5 +1,11 @@
 var dailyPrizes = {
 
+    "theater_zodiac_xxiv_": [
+        "A_Evt_Theater_Zodiac_XXIII_Divine_Orrary",
+        //,
+        "A_Evt_September_XXI_Calligraphy_Class",
+    ],
+
     "merge_dwarvengame_xxiv_": [
         "A_Evt_August_XXII_Lunar_Factory",
         "A_Evt_Merge_Dwarvengame_XXIII_Target_Shooting",

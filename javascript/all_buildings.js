@@ -46,6 +46,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Tile_Amuni_XXIV_Purring_Sanctum": 9,
     "A_Evt_Evo_Scroll_Aquatic_XXIV_Puffs_Nautical_Theater": 9,
     "A_Evt_Evo_Merge_Dwarvengame_XXIV_Tower_of_Unity": 9,
+    "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": 9,
 }
 
 function setAndReload(id) {
@@ -570,9 +571,19 @@ function readBuildingsJSON() {
                             petTd.innerHTML = `${feedingEffectsDescriptions[filteredData[i]['id']]}`;
                         } else {
                             if (petJSON['format'].toLowerCase().includes("percentage")) {
-                                petTd.innerHTML = `${(petJSON['valuesStages'][stg]*100).toFixed(1)}%`;
+                                if (petJSON.hasOwnProperty("frogId")) {
+                                    petTd.innerHTML = `${flexibleRewards.filter(elem => elem.id === petJSON["frogId"])[0]['rewards'][getPresetChapter()-1]['amount']*petJSON['valuesStages'][stg]}
+                                    ${goods_icons[flexibleRewards.filter(elem => elem.id === petJSON["frogId"])[0]['rewards'][getPresetChapter()-1]['subType']]}`;
+                                } else {
+                                    petTd.innerHTML = `${(petJSON['valuesStages'][stg]*100).toFixed(1)}%`;
+                                }
                             } else {
-                                petTd.innerHTML = `${petJSON['valuesStages'][stg]}`;
+                                if (petJSON.hasOwnProperty("frogId")) {
+                                    petTd.innerHTML = `${flexibleRewards.filter(elem => elem.id === petJSON["frogId"])[0]['rewards'][getPresetChapter()-1]['amount']*petJSON['valuesStages'][stg]}
+                                    ${goods_icons[flexibleRewards.filter(elem => elem.id === petJSON["frogId"])[0]['rewards'][getPresetChapter()-1]['subType']]}`;
+                                } else {
+                                    petTd.innerHTML = `${petJSON['valuesStages'][stg]}`;
+                                }
                             }
                         }
                         petTr2.appendChild(petTd);

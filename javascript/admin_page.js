@@ -625,6 +625,13 @@ function generateEffectConfigs() {
                             break;
                         }
                     }
+                    if (data[i].hasOwnProperty("metadata")) {
+                        if (data[i]["metadata"].hasOwnProperty("calculator") && data[i]["metadata"].hasOwnProperty("components")) {
+                            if (data[i]["metadata"]["calculator"] === "frog") {
+                                pet["frogId"] = data[i]["metadata"]["components"][0]["frogId"];
+                            }
+                        }
+                    }
                     result.push(pet);
                 }
                 if (data[i].hasOwnProperty("origins") && data[i].hasOwnProperty("duration")) {
@@ -1285,6 +1292,8 @@ function calculateChapterRange(conditions) {
                     directions.push("<13");
                 } else if (c.includes('barracks_ch19')) {
                     directions.push("<19");
+                } else if (c.includes('cauldron')) {
+                    directions.push("<6");
                 } else if (!c.includes('has race humans') && !c.includes('has race elves')){
                     console.log(`not recognized condition: ${c}`);
                 }
@@ -1305,6 +1314,8 @@ function calculateChapterRange(conditions) {
                     directions.push(">12");
                 } else if (c.includes('barracks_ch19')) {
                     directions.push(">18");
+                } else if (c.includes('cauldron')) {
+                    directions.push(">5");
                 } else if (!c.includes('has race humans') && !c.includes('has race elves')){
                     console.log(`not recognized condition: ${c}`);
                 }

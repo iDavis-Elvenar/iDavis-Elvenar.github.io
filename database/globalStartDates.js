@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "merge_dwarvengame_xxiv_": {//Builders of Harmony 1.8. - 23.8., Autumn Zodiac 9.9. - 1.10.
+    "theater_zodiac_xxiv_": {//Autumn Zodiac 9.9. - 1.10.
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "August 12th 2024",
+            "end_date": "September 3rd 2024"
+        }
+    },
+    "merge_dwarvengame_xxiv_": {
         "live": {
             "start_date": "August 1st 2024",
             "end_date": "August 23rd 2024"
