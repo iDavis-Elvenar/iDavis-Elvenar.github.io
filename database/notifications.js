@@ -168,7 +168,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":300,
-        "active":true,
+        "active":false,
         "priority":120
     },
     "15":{  // SHORTS TEASER
