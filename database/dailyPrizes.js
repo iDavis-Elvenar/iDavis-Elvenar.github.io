@@ -2,8 +2,9 @@ var dailyPrizes = {
 
     "theater_zodiac_xxiv_": [
         "A_Evt_Theater_Zodiac_XXIII_Divine_Orrary",
-        //,
+        "A_Evt_Theater_Zodiac_XXIII_Mirrors_of_the_Cosmos",
         "A_Evt_September_XXI_Calligraphy_Class",
+        "INS_REV_SQD_50",
     ],
 
     "merge_dwarvengame_xxiv_": [
