@@ -87,7 +87,14 @@ function readTomesJSON() {
             switch (filteredData[i]['rewards'][j]['type']) {
                 case "building": {
                     var building = filteredData[i]['rewards'][j];
-                    var image = images_buildings[building['subType']];
+                    var image = null;
+                    if (building['subType'].toLowerCase().includes('premium_residential')) {
+                        image = "https://i.ibb.co/vBJs524/R-Humans-Premium-Residential-21.png";
+                    } else if (building['subType'].toLowerCase().includes('premium_workshop')) {
+                        image = "https://i.ibb.co/LrgMwz8/P-Humans-Premium-Workshop-21.png";
+                    } else {
+                        image = images_buildings[building['subType']];
+                    }
                     td21.innerHTML = `<img src="${image}" style="max-height: 72px;">`;
                     findBuildingName(building['subType'], td21);
                     break;
@@ -115,7 +122,11 @@ function readTomesJSON() {
                     if (filteredData[i]['rewards'][j]['subType'].toLowerCase().includes("ins_")) {
                         var itemId = filteredData[i]['rewards'][j]['subType'].substring(0, filteredData[i]['rewards'][j]['subType'].lastIndexOf('_')+1);
                         td21.innerHTML = `<img src="${instants[itemId]["image_big"]}" style="width: 72px;">`;
-                        td21.innerHTML += `<br>${parseInt(filteredData[i]['rewards'][j]['subType'].match(/\d+$/)[0], 10)}${instants[itemId]["production_type"]}`;
+                        if (filteredData[i]['rewards'][j]['subType'].toLowerCase().includes('ins_tr')) {
+                            td21.innerHTML += `<br>${parseInt(filteredData[i]['rewards'][j]['subType'].match(/\d+$/)[0], 10)/60}${instants[itemId]["production_type"]}`;
+                        } else {
+                            td21.innerHTML += `<br>${parseInt(filteredData[i]['rewards'][j]['subType'].match(/\d+$/)[0], 10)}${instants[itemId]["production_type"]}`;
+                        }
                         break;
                     }
                     break;

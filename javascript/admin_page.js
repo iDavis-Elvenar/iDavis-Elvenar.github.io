@@ -989,7 +989,7 @@ function generateTomes() {
                 for (let j = 0; j < data[i]['rewards'].length; j++) {
                     let rewObject = {};
                     rewObject['type'] = data[i]['rewards'][j]['type'];
-                    if (rewObject['type'] === "building") {
+                    if (rewObject['type'] === "building" && data[i]['rewards'][j]['subType'].toLowerCase().includes('evt')) {
                         rewObject['subType'] = data[i]['rewards'][j]['subType'].split("$")[0];
                     } else {
                         rewObject['subType'] = data[i]['rewards'][j]['subType'];
