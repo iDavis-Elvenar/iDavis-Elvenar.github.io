@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_Theater_Zodiac_XXIII_Mirrors_of_the_Cosmos",
         "A_Evt_September_XXI_Calligraphy_Class",
         "INS_REV_SQD_50",
+        "INS_KP_AW_20",
     ],
 
     "merge_dwarvengame_xxiv_": [
