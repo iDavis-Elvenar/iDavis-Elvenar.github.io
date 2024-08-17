@@ -8,6 +8,7 @@ var dailyPrizes = {
         "INS_KP_AW_20",
         "A_Evt_Autumn_XXII_Luscious_Cakes",
         "INS_KP_{15}",
+        "A_Evt_September_XX_Kite_Outpost",
     ],
 
     "merge_dwarvengame_xxiv_": [
