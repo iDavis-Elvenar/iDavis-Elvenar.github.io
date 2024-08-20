@@ -11,6 +11,7 @@ var dailyPrizes = {
         "A_Evt_September_XX_Kite_Outpost",
         "A_Evt_Theater_Zodiac_XXIV_Dreamers_Pillar",
         "frog_runeshards1_{3}",
+        "A_Evt_Autumn_XVIII_Feasting_Crowd",
     ],
 
     "merge_dwarvengame_xxiv_": [
