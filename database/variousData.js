@@ -643,7 +643,7 @@ var grIds = {
 }
 
 var newEventSign = {
-    "active": true,
+    "active": false,
     "img": "https://i.ibb.co/n0KBPgt/new-sign.png",
 }
 
@@ -656,7 +656,7 @@ var navbarNew = {
 }
 
 var webIconChange = {
-    "active": true,
+    "active": false,
     "img": "https://i.ibb.co/9hJqb4d/rainbow-heart.png",
 }
 
