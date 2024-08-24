@@ -15,6 +15,7 @@ var dailyPrizes = {
         "A_Evt_September_XXI_Training_Dojo",
         "INS_UNIT_MA_10",
         "frog_runeshards2_{3}",
+        "A_Evt_September_XX_Bell_Fountain",
     ],
 
     "merge_dwarvengame_xxiv_": [
