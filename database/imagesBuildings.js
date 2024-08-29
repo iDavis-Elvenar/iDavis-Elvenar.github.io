@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Sale_RedForest":"https://i.ibb.co/TmkfCkY/red-forest.png",
     "A_Evt_Theater_Zodiac_XXIV_Alcove_of_Sweet_Naps":"https://i.ibb.co/2jhXbFC/alcove-of-sweet-naps.png",
     "A_Evt_Theater_Zodiac_XXIV_Dreamers_Pillar":"https://i.ibb.co/HTzBN6K/dreamers-pillar.png",
     "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver":"https://i.ibb.co/CbSrSzh/glido-the-dreamweaver.png",

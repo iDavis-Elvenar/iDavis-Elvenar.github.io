@@ -20,6 +20,7 @@ var dailyPrizes = {
         "INS_KP_{15}",
         "INS_UNIT_MC_LM_10",
         "A_Evt_Autumn_XVIII_Green_Pond",
+        "A_Sale_RedForest",
     ],
 
     "merge_dwarvengame_xxiv_": [

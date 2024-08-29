@@ -409,6 +409,10 @@ var discardBuildings = [
     "A_Evt_Expiring_AWAssistance",
 ]
 
+var forceNonEventBuildings = [
+    "A_Sale_RedForest"
+]
+
 var eventsInfoIcons = {
     "december_xxii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "january_xxiii_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},

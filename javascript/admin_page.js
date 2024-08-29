@@ -16,6 +16,7 @@ function handleBuildingsJSON() {
                 //console.log('buildingCount');
                 allBuildings.push(data[i]);
             }
+            forceNonEventBuildings.map((oneNonEventBuilding) => data[i]['id'].includes(oneNonEventBuilding) && allBuildings.push(data[i]));
         }
         //HANDLE EVOLVINGS:
         let fileE = document.getElementById('evolvingFile').files[0];
