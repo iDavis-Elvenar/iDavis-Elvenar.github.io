@@ -21,6 +21,7 @@ var dailyPrizes = {
         "INS_UNIT_MC_LM_10",
         "A_Evt_Autumn_XVIII_Green_Pond",
         "A_Sale_RedForest",
+        "A_Evt_September_XX_Firefly_Lookout",
     ],
 
     "merge_dwarvengame_xxiv_": [
