@@ -363,6 +363,18 @@ var goods_icons = {
     "work": "<img src='https://i.ibb.co/Y8km2P4/work.png' title='Community Work'><br>",
     "b_ch21_aw1_shards": "<img src='https://i.ibb.co/qMP2TGV/b-ch21-aw1-shards.png' title='Rune Shard for Maman Le Prés Antique Shop'><br>",
     "b_ch21_aw2_shards": "<img src='https://i.ibb.co/xMRdtx1/b-ch21-aw2-shards.png' title='Rune Shard for Vallorian School of Sorcery'><br>",
+    "ch22_seafood": "<img src='' title='Sea Food'><br>",
+    "ch22_fish": "<img src='' title='Shore Fish'><br>",
+    "ch22_fruits": "<img src='' title='Kelp Fruits'><br>",
+    "ch22_salt": "<img src='' title='Cave Salt'><br>",
+    "ch22_shrimps": "<img src='' title='Luminous Shrimps'><br>",
+    "ch22_snails": "<img src='' title='Deep Sea Snails'><br>",
+    "ch22_weed": "<img src='' title='Lure Weed'><br>",
+    "ch22_eels": "<img src='https://i.ibb.co/Xz2rr4Z/ch22-eels.png' title='Garden Eels'><br>",
+    "ch22_sponges": "<img src='' title='Sea Sponges'><br>",
+    "canned_goods": "<img src='https://i.ibb.co/BzwXBhX/canned-goods-small.png' title='Canned Goods'><br>",
+    "eldian_sapphire": "<img src='https://i.ibb.co/Pmk430t/eldian-sapphire.png' title='Eldian Sapphire'><br>",
+    "blueprint": "<img src='https://i.ibb.co/9gjsJbY/blueprint.png' title='Blueprint' style='width: 24px;'><br>",
 }
 
 var xlImages = {

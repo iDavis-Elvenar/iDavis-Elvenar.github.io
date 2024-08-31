@@ -9,7 +9,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ascendedelixir", "ascendedmagic_dust", "ascendedgems", "boosted_ascended_plus_0_quality_1", "boosted_ascended_plus_1_quality_1",
     "boosted_ascended_plus_2_quality_1", "boosted_ascended_plus_0_quality_2", "boosted_ascended_plus_1_quality_2",
     "boosted_ascended_plus_2_quality_2", "boosted_ascended_plus_0_quality_3", "boosted_ascended_plus_1_quality_3",
-    "boosted_ascended_plus_2_quality_3", "work", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
+    "boosted_ascended_plus_2_quality_3", "work", "canned_goods", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
     "mc_lm", "mc_lr", "mc_ma", "mc_hm", "mc_hr", "knowledge_points", "broken_shards",
     "relic_marble", "relic_steel", "relic_planks", "relic_crystal", "relic_scrolls", "relic_silk", "relic_elixir",
     "relic_magic_dust", "relic_gems", "boosted_relic_plus_0_quality_1", "boosted_relic_plus_1_quality_1", "boosted_relic_plus_2_quality_1",
@@ -46,7 +46,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ch19_magic1", "ch19_magic2", "ch19_matter1", "ch19_matter2", "ch19_creatures1", "ch19_creatures2", "ch19_creatures3", "ch19_matter3",
     "ch20_bars", "ch20_strings", "ch20_flutes", "ch20_drums", "ch20_songs",
     "ch21_prey", "ch21_scales", "ch21_oblations3", "ch21_shells", "ch21_dragon", "ch21_oblations2", "ch21_art", "ch21_oblations1", "ch21_oblations4", 
-    "", "", "", "", "", "", "", "", "", 
+    "ch22_seafood", "ch22_fish", "ch22_fruits", "ch22_salt", "ch22_shrimps", "ch22_snails", "ch22_weed", "ch22_eels", "ch22_sponges", 
     "", "", "", ];
 
 var numberOfChapters = 21;

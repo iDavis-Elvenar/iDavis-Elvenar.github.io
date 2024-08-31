@@ -67,7 +67,7 @@ function displayQuests() {
         I would be extremely grateful for any feedback you may have. If you come across a quest with different conditions than those listed here, 
         please inform me by filling <a href="https://docs.google.com/forms/d/e/1FAIpQLScGlNcHS9LN4swFnoMDEt0AzOYSgpsfExxFhvstr3SI8Uo3YA/viewform?usp=sf_link" class="text-link font-weight-bold" target="_blank">this form</a>. Kindly specify the chapter, quest number 
         and the in-game condition you have encountered. Thank you very much for your assistance and understanding, and for your interest in making this site better!`;
-        center.appendChild(tempInfoNote);
+        //center.appendChild(tempInfoNote);
         // -----
 
         var div_info = document.createElement('div');

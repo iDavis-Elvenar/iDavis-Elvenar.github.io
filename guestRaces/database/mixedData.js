@@ -6,8 +6,8 @@ var baseTabsGuestRaces = [
 
 var additionalTabsGuestRaces = {
     "ch22": [
-        {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
-        {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/z8pjTPh/layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},
+        /*{"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
+        {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/z8pjTPh/layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},*/
         {"id":"wonders", "name":"Wonders", "img":"https://i.ibb.co/wrhMdKZ/wonders.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#wonders", "file":"wonders.html"},
     ],
     "ch21": [
@@ -109,6 +109,7 @@ var grBanners = {
     "ch19": "https://i.ibb.co/NTmBDJ6/ch19-banner.png",
     "ch20": "https://i.ibb.co/kxJQxbn/ch20-banner.png",
     "ch21": "https://i.ibb.co/f4FTJcz/ch21-banner.png",
+    "ch22": "https://i.ibb.co/zPm6Jts/ch22-banner.png",
 }
 
 var settlementIcons = {
