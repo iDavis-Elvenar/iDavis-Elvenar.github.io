@@ -294,7 +294,7 @@ function displayDailyPrizes() {
                 var t1r = document.createElement('tr');
                 var td11 = document.createElement('td');
                 td11.style.width = "60%";
-                if (filteredData[i]['id'].toLowerCase().includes('a_evt')) {
+                if (filteredData[i]['id'].toLowerCase().includes('a_evt') || forceNonEventBuildings.includes(filteredData[i]['id'])) {                
                     td11.innerHTML = `<img src="${filteredData[i]['image']}">`;
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
