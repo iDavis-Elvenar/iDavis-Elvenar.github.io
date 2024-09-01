@@ -147,6 +147,7 @@ function handleBuildingsJSON() {
                                 //VYTVORENIE EVO OBJEKTU A PRIDANIE BONUSOVYCH PRODUKCII DO ALL PRODUCTIONS
                                 let evoObject = {};
                                 if (b['id'].includes('_Evo_')) {
+                                    //console.log(b['id'])
                                     for (let evo = 0; evo < allEvolvings.length; evo++) {
                                         if (allEvolvings[evo]['baseName'].toLowerCase() === b['id'].toLowerCase()) {
                                             evoObject = allEvolvings[evo];

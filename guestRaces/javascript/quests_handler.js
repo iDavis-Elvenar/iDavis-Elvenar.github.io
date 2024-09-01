@@ -59,7 +59,7 @@ function displayQuests() {
         tempInfoH5.style.textAlign = "left";
         tempInfoH5.style.marginTop = "15px";
         tempInfoH5.innerHTML = `${langUI("Important: Changes in Quests")}<br>`;
-        center.appendChild(tempInfoH5);
+        //center.appendChild(tempInfoH5);
         var tempInfoNote = document.createElement('h7');
         tempInfoNote.className = "card-title text-center";
         tempInfoNote.style.textAlign = "left";
