@@ -49,7 +49,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ch22_seafood", "ch22_fish", "ch22_fruits", "ch22_salt", "ch22_shrimps", "ch22_snails", "ch22_weed", "ch22_eels", "ch22_sponges", 
     "", "", "", ];
 
-var numberOfChapters = 21;
+var numberOfChapters = 22;
 
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
