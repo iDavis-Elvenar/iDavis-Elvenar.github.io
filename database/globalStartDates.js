@@ -1,8 +1,8 @@
 var eventStartDates = { 
-    "theater_zodiac_xxiv_": {//Autumn Zodiac 9.9. - 1.10.
+    "theater_zodiac_xxiv_": {//Autumn Zodiac 9.9. - 1.10., All Howl's Eve 14.10. - 6.11.
         "live": {
-            "start_date": "__ _ 2024",
-            "end_date": "__ _ 2024"
+            "start_date": "September 9th 2024",
+            "end_date": "October 1st 2024"
         },
         "beta": {
             "start_date": "August 12th 2024",
