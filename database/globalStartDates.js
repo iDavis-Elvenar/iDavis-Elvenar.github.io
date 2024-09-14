@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "theater_zodiac_xxiv_": {//Autumn Zodiac 9.9. - 1.10., All Howl's Eve 14.10. - 6.11.
+    "tile_mistyforest_xxiv_": {//All Howl's Eve 14.10. - 6.11., Winter Magic 5.12. - 6.1.
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "October 1st 2024",
+            "end_date": "October 2nd 2024"
+        }
+    },
+    "theater_zodiac_xxiv_": {
         "live": {
             "start_date": "September 9th 2024",
             "end_date": "October 1st 2024"

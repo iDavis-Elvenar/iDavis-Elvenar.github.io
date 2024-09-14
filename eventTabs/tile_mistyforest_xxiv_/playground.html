@@ -1,0 +1,1776 @@
+<!-- 1. currency:
+	* event_currency.png - HQ PNG taken from CM_assets
+	* event_payback.png - HQ PNG taken from CM_assets
+	* chest.png - used for displaying the count of collected generic rewards - OF, margins trimmed
+	* chest_silver.png - OF
+2. genericRewards - chest0.png - chest11.png - OF
+3. tiles:
+	* tile_payback.png - OF
+	* tileBlocker1.png - tileBlocker6.png - OF
+	* tileboardBackground.png - OF
+	* tileClearableNew.png - cropped from atlas-common...
+	* tileOverlayFoggedOLD.png - OF
+	* ui_tile_highlight.png, ui_tile_position.png - taken from CM_assets
+4. tools:
+	* arrow.png/arrow.svg - downloaded
+	* cell_tool_(adjacent/column/single)_on_tileboard.png - used for displaying the tools excavated on the tileboard - HQ PNG taken from CM_assets, changed the margin to a specific ratio
+	* tool_(adjacent/column/single) - used for displaying the tools on the side panel - HQ PNG taken from CM_assets, changed the margin to a specific ratio
+	* tool_(adjacent/column/single)_bw.png - used for displaying the unavailable tools on the side panel - HQ PNG taken from CM_assets, change the colours to black and white, changed the margin to the same ratio as above
+	* tool_(adjacent/column/single)_hover.png - used for displaying the available tools when hovered over them - HQ PNG taken from CM_assets, changed the margin to the same ratio as above
+	* tool_(adjacent/column/single)_cursor.png - HQ PNG taken from CM_assets, trimmed the sides leaving enough space for the cursor, added the cursor icon (arrow.png) to the upper left corner, downscaled (neither dimension must exceed 64px)
+5. window:
+	* button... - all from atlas-common.buttons...
+	* panel.png - used for the side panel - created by myself based on ui_panel_amuni_9s.png
+	* panel_shop_tool_bottom.png - used for the under row of offer (single offers) in the tool shop for the images - extracted from windowBackground.png
+	* panel_shop_tool_top.png - used for the upper row of offer (set offers) in the tool shop for the images - extracted from windowBackground.png
+	* panel_shop_bottom.png - used for the under row of offer (single offers) in the tool shop as a frame for the whole offer - extracted from windowBackground.png
+	* panel_shop_top.png - used for the upper row of offer (set offers) in the tool shop as a frame for the whole offer - extracted from windowBackground.png
+	* ui_panel_amuni_tools_inset.png - used for the side panel as a background for the tool images - HQ PNG taken from CM_assets
+	* ui_panel_tiled_borders.png - used for the border of the tileboard - HQ PNG taken from CM_assets
+	* ui_pattern_amuni_hieroglyphs.png - used as a background of the playground - HQ PNG taken from CM_assets
+-->
+
+<style>
+    #minigameContainer {
+      display: grid;
+      width: 100%;
+      background-color: burlywood;
+      background-image: url("eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/window/ui_pattern_amuni_hieroglyphs.png");
+      grid-template-columns: 4fr 1fr 1fr;
+      grid-template-rows: 12fr 1fr;
+      gap: 15px 10px;
+      grid-template-areas:
+        "game game tools"
+        "bar stats restart";
+      align-items: center;
+      place-content: space-around;
+      padding: 10px;
+      min-width: 600px;
+      margin-bottom: 20px;
+      /*box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.5);*/
+      border-radius: 5px;
+    }
+  
+    #game {
+      grid-area: game;
+      grid-column: 1 / span 2;
+      grid-row: 1;
+    }
+  
+    #tools {
+      grid-area: tools;
+      grid-column: 3;
+      grid-row: 1;
+      background-image: url("eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/window/panel.png");
+      background-size: 100% 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  
+    #barText {
+      text-align: center;
+      position: absolute;
+      padding: 2.5px;
+    }
+  
+    #tools p, #barText, #restartButton, #shopButton {
+      margin: 0;
+      color: white;
+      text-shadow: 2px 2px #000000;
+      font-weight: bold;
+    }
+  
+    #bar {
+      grid-area: bar;
+      grid-column: 1;
+      grid-row: 2;
+      background-color: #0f6a65;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  
+    #tabletIcon {
+      display: inline;
+      height: 40px;
+      position: relative;
+      top: -7px;
+      vertical-align: top;
+      margin-right: 5px;
+    }
+  
+    #stats {
+      grid-area: stats;
+      grid-column: 2;
+      grid-row: 2;
+      background-color: #0f6a65;
+      border-radius: 5px;
+      color: white;
+      text-shadow: 2px 2px #000000;
+      font-weight: bold;
+      height: 100%;
+      position: relative;
+    }
+  
+    #prize {
+      position: absolute;
+      text-align: center;
+      margin: 0;
+      height: 100%;
+      vertical-align: middle;
+      padding-top: 2%;
+      padding-bottom: 2%;
+    }
+  
+    #prizeIcon, #grIcon {
+      display: inline;
+      margin-left: 1px;
+    }
+  
+    #restart {
+      grid-area: restart;
+      grid-column: 3;
+      grid-row: 2;
+    }
+  
+    #restartButton {
+      padding-left: 25px;
+      padding-right: 25px;
+      box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+    }
+    
+    #progress {
+      width: 1%;
+      height: 30px;
+      background-color: #189E33;
+    }
+  
+    #canvas {
+      width: 100%;
+      border: 29px solid black;
+      border-image: url("eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/window/ui_panel_tiled_borders.png") 87 99 80 95 repeat;
+      box-shadow: inset 0px 0px 10px 7px rgba(0,0,0,0.5);
+    }
+  
+    .tool {
+      text-align: center;
+      padding-top: 1px;
+    }
+  
+    .tool img {
+      width: 60%;
+      /*border: 10px inset rgb(114, 52, 11);*/
+      /*background-image: url("eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/window/ui_panel_amuni_tools_inset.png");*/
+      background-size: 100% 100%;
+    }
+  
+    @media only screen and (max-width: 768px) {
+      #minigameContainer { grid-template-rows: 10fr 1fr; gap: 3px; }
+      #minigameContainer { grid-template-columns: 3fr 2fr 1fr; }
+      #tools p, #prize { font-size: 0.9em; };
+      #tools p { padding-top: 2px; }
+      .tool { padding-top: 0; }
+      .tool img { width: 65%; }
+    }
+  
+    .tool img:hover {
+      cursor: grab;
+    }
+  
+    .centerContainer {
+      text-align: center;
+    }
+  
+    #shopButton {
+      line-height: 0.8em;
+      font-size: 16px;
+      background-color: #1ea83a;
+      box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+      margin-bottom: 10px;
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 24px;
+      width: 64px;
+      border: 0;
+      background-image: url("eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/window/button_plus_normal.png");
+      background-size: 100% 100%;
+    }
+  
+    #shopButton:hover {
+      background-image: url("eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/window/button_plus_highlight.png");
+    }
+  
+    #shopButton:active {
+      background-image: url("eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/window/button_plus_pressed.png");
+    }
+  
+    #donkeyIcon {
+      height: 25px;
+      margin-right: 2px;
+    }
+  
+    #donkeys {
+      padding: 0;
+    }
+  
+    #restart {
+      text-align: center;
+    }
+  
+    #restartButton {
+      background-color: #1ea83a;
+      border-color: #1ea83a;
+    }
+  
+    .loadImg {
+      display: none;
+    }
+  </style>
+  
+  <div id="minigameContainer" class="nocopy">
+    <div class="mgItem" id="game">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="mgItem" id="tools">
+      <div class="centerContainer">
+        <p id="donkeys"></p>
+      </div>
+      <div class="tool">
+        <img id="tool1" src="eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/tools/tool_single.png" draggable="false" />
+        <p id="tool1Count"></p>
+      </div>
+      <div class="tool">
+        <img id="tool2" src="eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/tools/tool_column.png" draggable="false" />
+        <p id="tool2Count"></p>
+      </div>
+      <div class="tool">
+        <img id="tool3" src="eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/tools/tool_adjacent.png" draggable="false" />
+        <p id="tool3Count"></p>
+      </div>
+      <div class="centerContainer">
+        <button type="button" id="shopButton"></button>
+      </div>
+    </div>
+    <div class="mgItem" id="bar">
+      <p id="barText"></p>
+      <div id="progress"></div>
+    </div>
+    <div class="mgItem" id="stats">
+      <p id="prize"></p>
+    </div>
+    <div class="mgItem" id="restart">
+      <button type="button" class="btn btn-primary btn-sm" id="restartButton">Restart</button>
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin: auto 3%;">
+    <p style="font-weight: bold;">Your High Score: <span id="text1231" style="font-weight: normal;"></span> <img src="eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/currency/event_payback.png" style="width: 20px; display: inline;" /></p>
+    <hr />
+    <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left; margin-bottom: 25px;">..:: Instructions ::..<br></h5>
+  
+    <p>This is a Playground for <strong>All Howl's Eve</strong> event! This feature simulates the well-known event mechanic
+    we know from the Halloween event!</p>
+    
+    <p>You can interact with it &ndash; use magic ingredients <img src="eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/currency/event_currency.png" style="height: 18px;"> to purchase tools&nbsp;<img src="https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png" style="height: 18px; display: inline;">, use your tools to clear the
+    fog and uncover rewards <img src="https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png" style="height: 18px;"> to help you progressing on the progress lane. Practising this minigame will help you to not only
+    better understand the way this event works, but will also help you better navigate inside the misty forest <img src="eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/tiles/tileBlocker3.png" style="height: 20px"> and improve the efficiency
+    of using your tools.</p>
+  
+    <p>You can use the <img src="eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/window/button_plus_normal.png" style="height: 18px;" caption="+"> button to purchase more tools. Use the same button to get back to the game. This toolshop
+    allows you to try various combinations of newly introduced packages (that are also the part of this year's event) and learn, which ones
+    work the best for you!</p>
+  
+    <p>You can use the <strong>Restart</strong> button to clear your current progress and start again. The game <strong>ends</strong> when all possible
+    magic ingredients are used and no more tools can be placed. In case you broke your personal record, it will get displayed on the page.
+    This information is only visible to you and you can play again to try improve your strategies and beat your high score again.
+    </p>
+  
+    <p>Note that this is a Playground and it is only a practise tool. No rewards will be transferred to your game account when you
+    collect them on my website. All assets used belong to InnoGames GmbH.
+    </p>  
+  </div>
+  
+  <script type="text/javascript">
+  
+  (function() {
+  
+  var imagesPath = "eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/";
+  var states = ["cleared", "tileClearable", "tileFogged"];
+  var content = ["empty", "blocker", "chest", "tablet", "tool"];
+  var tools = ["tool1", "tool2", "tool3"];
+  var toolNames = ["shovel", "thinBottle", "thickBottle"];
+  var blockers = ["blocker1", "blocker2", "blocker3", "blocker4", "blocker5", "blocker6"];
+  var genericRewards = ["chest0", "chest1", "chest2", "chest3", "chest4", "chest5", "chest6", "chest7", "chest8", "chest9", "chest10", "chest11"];
+  var imgArrayKeys = ["content", "fog", "mark"];
+  var toolImgTB = ["single", "column", "adjacent"];
+  var toolFc = [shovel, thinBottle, thickBottle];
+  var toolHoverFc = [shovelHover, thinBottleHover, thickBottleHover];
+  var toolHoverStopFc = [shovelHoverStop, thinBottleHoverStop, thickBottleHoverStop];
+  
+  var images = [
+    [imagesPath + "tiles/tileboardBackground.png", "canvasBackground"],
+    [imagesPath + "tiles/tileClearableNew.png", "tileClearable"],
+    [imagesPath + "tiles/tileOverlayFoggedOLD.png", "tileFogged"],
+    [imagesPath + "tiles/ui_tile_highlight.png", "tileHighlight"],
+    [imagesPath + "tiles/ui_tile_position.png", "circle"],
+    [imagesPath + "tiles/tile_payback.png", "tablet"],
+    [imagesPath + "tiles/tileBlocker1.png", "blocker1"],
+    [imagesPath + "tiles/tileBlocker2.png", "blocker2"],
+    [imagesPath + "tiles/tileBlocker3.png", "blocker3"],
+    [imagesPath + "tiles/tileBlocker4.png", "blocker4"],
+    [imagesPath + "tiles/tileBlocker5.png", "blocker5"],
+    [imagesPath + "tiles/tileBlocker6.png", "blocker6"],
+    [imagesPath + "genericRewards/chest0.png", "chest0"],
+    [imagesPath + "genericRewards/chest1.png", "chest1"],
+    [imagesPath + "genericRewards/chest2.png", "chest2"],
+    [imagesPath + "genericRewards/chest3.png", "chest3"],
+    [imagesPath + "genericRewards/chest4.png", "chest4"],
+    [imagesPath + "genericRewards/chest5.png", "chest5"],
+    [imagesPath + "genericRewards/chest6.png", "chest6"],
+    [imagesPath + "genericRewards/chest7.png", "chest7"],
+    [imagesPath + "genericRewards/chest8.png", "chest8"],
+    [imagesPath + "genericRewards/chest9.png", "chest9"],
+    [imagesPath + "genericRewards/chest10.png", "chest10"],
+    [imagesPath + "genericRewards/chest11.png", "chest11"],
+    [imagesPath + "tools/tool_single.png", "shovel"],
+    [imagesPath + "tools/tool_column.png", "thinBottle"],
+    [imagesPath + "tools/tool_adjacent.png", "thickBottle"],
+    [imagesPath + "tools/tool_single_hover.png", "shovelHover"],
+    [imagesPath + "tools/tool_column_hover.png", "thinBottleHover"],
+    [imagesPath + "tools/tool_adjacent_hover.png", "thickBottleHover"],
+    [imagesPath + "tools/tool_single_bw.png", "shovelBw"],
+    [imagesPath + "tools/tool_column_bw.png", "thinBottleBw"],
+    [imagesPath + "tools/tool_adjacent_bw.png", "thickBottleBw"],
+    [imagesPath + "tools/cell_tool_single_on_tileboard.png", "shovelTileboard"],
+    [imagesPath + "tools/cell_tool_column_on_tileboard.png", "thinBottleTileboard"],
+    [imagesPath + "tools/cell_tool_adjacent_on_tileboard.png", "thickBottleTileboard"],
+    [imagesPath + "currency/event_payback.png", "payback"],
+    [imagesPath + "currency/chest_silver.png", "silverChest"],
+    [imagesPath + "currency/chest.png", "grChest"],
+    [imagesPath + "currency/event_currency.png", "eventCurrency"],
+    [imagesPath + "window/panel_shop_top.png", "panelShopTop"],
+    [imagesPath + "window/panel_shop_bottom.png", "panelShopBottom"],
+    [imagesPath + "window/panel_shop_tool_top.png", "toolShopTop"],
+    [imagesPath + "window/panel_shop_tool_bottom.png", "toolShopBottom"],
+    [imagesPath + "window/button_normal.png", "button"],
+    [imagesPath + "window/button_highlight.png", "buttonHighlight"],
+    [imagesPath + "window/button_pressed.png", "buttonPressed"],
+    [imagesPath + "window/button_short_normal.png", "shortButton"],
+    [imagesPath + "window/button_short_highlight.png", "shortButtonHighlight"],
+    [imagesPath + "window/button_short_pressed.png", "shortButtonPressed"],
+    [imagesPath + "window/button_plus_normal.png", "buttonPlus"],
+    [imagesPath + "window/button_plus_highlight.png", "buttonPlusHighlight"],
+    [imagesPath + "window/button_plus_pressed.png", "buttonPlusPressed"],
+  ];
+  
+  var imagesLoaded = 0;
+  
+  var renderer = null;
+  var dragHandler = null;
+  var toolShop = null;
+
+  prepSetAlertElements();
+  create_exception("Loading...", 10000, 'primary');
+  
+  for (var i = 0; i < images.length; i++) {
+    var img = document.createElement('img');
+    img.src = images[i][0];
+    img.id = images[i][1];
+    img.className = "loadImg";
+    img.onload = function() {
+      imagesLoaded++;
+      if (imagesLoaded === images.length) {
+        renderer = new CanvasRenderer();
+        dragHandler = new DragHandler();
+        toolShop = new ToolShop();
+        dragHandler.writeHighscore();
+        prepSetAlertElements();
+        create_exception("Playground Generated!", 3, 'success');
+      }
+    }
+    document.getElementById("column_with_tables").appendChild(img);
+  }
+  
+  var canvas = document.getElementById("canvas");
+  
+  var canvasWidth = canvas.clientWidth;
+  canvas.width = canvasWidth;
+  canvas.height = canvasWidth / 25 * 14;
+  var canvasHeight = canvas.clientHeight;
+  canvas.style.borderWidth = canvasWidth/32 + "px";
+  var ctx = canvas.getContext("2d");
+  
+  window.onresize = function() {
+    canvasWidth = canvas.clientWidth;
+    canvas.width = canvasWidth;
+    canvas.height = canvasWidth / 25 * 14;
+    canvasHeight = canvas.clientHeight;
+    canvas.style.borderWidth = canvasWidth/32 + "px";
+    dragHandler.setBarPosition();
+    dragHandler.setPrizePosition();
+    ctx = canvas.getContext("2d");
+    if (toolShop.shopping) {
+      toolShop.setShop();
+      toolShop.renderShop();
+    }
+    else {
+      renderer.unmarkAll();
+      renderer.rerenderAll();
+      renderer.drawAll();
+      dragHandler.markAll();
+      renderer.drawAll();
+    }
+  }
+  
+  class Tile {
+    constructor(column, row, state, content, contentInstance) {
+      this.column = column;
+      this.row = row;
+      this.state = state;
+      this.content = content;
+      this.contentInstance = contentInstance;
+      this.imgArray = {content: null, fog: null, mark: null};
+      this.marked = false;
+      this.draw();
+      this.fog();
+    }
+  
+    setContentInstance(no) {
+      this.contentInstance = no;
+    }
+  
+    highlight() {
+      this.renderTile("tileHighlight", 2);
+    }
+  
+    mark() {
+      this.renderTile("circle", 3);
+      this.marked = true;
+    }
+  
+    unmark() {
+      this.marked = false;
+      if (this.imgArray.mark) this.imgArray.mark = null;
+    }
+  
+    reindex() {
+      this.column -= 1;
+    }
+  
+    changeImgPositionToLeft(dx) {
+      for (let key of imgArrayKeys) {
+        var img = this.imgArray[key];
+        if (img) {
+          img.x -= dx;
+        }
+      }
+    }
+  
+    renderTileGenerated() {
+      for (let key of imgArrayKeys) {
+        var img = this.imgArray[key];
+        if (img) {
+          if (key == "mark") ctx.globalAlpha = 0.7;
+          ctx.drawImage(img.img, img.x, img.y, img.width, img.height);
+          if (key == "mark") ctx.globalAlpha = 1;
+        }
+      }
+    }
+  
+    // types: 0 - content, 1 - fog, 2 - highlight, 3 - mark/circle, 4 - hmla bez vykreslenia, 5 - content bez vykreslenia
+    renderTile(id, type=0) {
+      var img = document.getElementById(id);
+      var allSidesShift = 0;
+      var downShift = 0;
+      var upExtension = 0;
+      if (type == 1 && this.state == 2) allSidesShift = canvasHeight/6/32;
+      if (type == 0 || type == 5) downShift = canvasHeight/6/16;
+      if (type == 0 && this.content != 4) upExtension = canvasHeight/6/6;
+      if (type == 3) {
+        allSidesShift = -canvasHeight/6/20;
+        downShift = canvasHeight/6/5;
+      }
+      var x = (this.column-1)*canvasWidth/8 -allSidesShift;
+      var y = (this.row-1)*canvasHeight/6 -allSidesShift+downShift-upExtension;
+      var width = canvasWidth/8+allSidesShift*2;
+      var height = canvasHeight/6+allSidesShift*2+upExtension;
+      switch (type) {
+        case 0: //content
+        case 5: //content post-generation
+          this.imgArray.content = {img: img, x: x, y: y, width: width, height: height};
+          break;
+        case 1: //fog
+        case 4: //fog post-generation
+          this.imgArray.fog = {img: img, x: x, y: y, width: width, height: height};
+          break;
+        case 3: //mark
+          this.imgArray.mark = {img: img, x: x, y: y, width: width, height: height};
+          break;
+      }
+      if (type == 2) ctx.drawImage(img, x, y, width, height);
+    }
+  
+    draw(type=0) {
+      if (this.content != 0) {
+        switch (this.content) {
+          case 1:
+            this.renderTile(blockers[this.contentInstance]);
+            break;
+          case 2:
+            if (this.state != 2) {
+              this.renderTile(genericRewards[this.contentInstance], type);
+            }
+            break;
+          case 3:
+            if (this.state != 2) {
+              this.renderTile("tablet", type);
+            }
+            break;
+          case 4:
+            if (this.state != 2) {
+              this.renderTile(toolNames[this.contentInstance] + "Tileboard", type);
+            }
+            break;
+        }
+      }
+    }
+  
+    fog() {
+      if (this.state != 0) {
+        this.renderTile(states[this.state], 1);
+      }
+    }
+  
+    reveal() {
+      if (this.state > 0) {
+        var originalState = this.state;
+        this.imgArray.fog = null;
+        this.state = 0;
+        if (originalState == 2 && this.content != 0) {
+          this.draw(5);
+        }
+      }
+    }
+  
+    revealPartially() {
+      if (this.state == 2) {
+        this.state = 1;
+        this.renderTile(states[this.state], 4);
+        if (this.content != 0) this.draw(5);
+      }
+    }
+  
+    claimReward() {
+      switch (this.content) {
+        case 2:
+          dragHandler.addToGRCount();
+          break;
+        case 3:
+          dragHandler.addToTabletCount();
+          break;
+        case 4:
+          dragHandler.addToToolCount(this.contentInstance);
+          break;
+      }
+      this.content = 0;
+      this.contentInstance = 0;
+      this.imgArray.content = null;
+    }
+  }
+  
+  class CanvasRenderer {
+    constructor() {
+      this.background = document.getElementById("canvasBackground");
+      this.tiles = [];
+      this.renderBackground();
+      this.generateStart();
+    }
+  
+    rerenderAll() {
+      for (const column of this.tiles) {
+        for (const row of column) {
+          row.draw();
+          row.fog();
+        }
+      }
+    }
+  
+    unmarkAll() {
+      for (const column of this.tiles) {
+        for (const row of column) {
+          row.unmark();
+        }
+      }
+    }
+  
+    generateStart() {
+      for (let i = 0; i <= 9; i++) {
+        this.generateColumn(i);
+      }
+      this.drawAll();
+    }
+  
+    generateColumn(i=9) {
+      var tilesCol = []
+      for (let j = 1; j <= 6; j++) {
+        var stateRan = 2;
+        var random = Math.random();
+        var contentRan;
+        if (random <= 0.625) contentRan = 0;
+        else if (random <= 0.80) contentRan = 1;
+        else if (random <= 0.88) contentRan = 2;
+        else if (random <= 0.96) contentRan = 3;
+        else contentRan = 4;
+        if (i == 0) {
+          stateRan = 0;
+          contentRan = 0;
+        }
+        if (i == 1) {
+          stateRan = 0;
+          if (j == 3)
+            contentRan = 0;
+          else
+            contentRan = 1;
+        }
+        if (i == 2 && j == 3) {
+          stateRan = 1;
+          if (contentRan == 1) {
+            var newRandom = Math.random();
+            if (newRandom <= 0.75) contentRan = 0;
+            else if (newRandom <= 0.15) contentRan = 2;
+            else contentRan = 3;
+          }
+        }
+        switch (contentRan) {
+          case 0:
+          case 3:
+            var contentInsRan = 0;
+            break;
+          case 1:
+            var contentInsRan = Math.floor(Math.random() * 6);
+            break;
+          case 2:
+            var contentInsRan = Math.floor(Math.random() * 12);
+            break;
+          case 4:
+            var contentInsRan = Math.floor(Math.random() * 3);
+        }
+        tilesCol.push(new Tile(i, j, stateRan, contentRan, contentInsRan));
+      }
+      this.tiles.push(tilesCol);
+    }
+  
+    renderBackground() {
+      ctx.drawImage(this.background, 0, 0, canvasWidth, canvasHeight);
+    }
+  
+    drawAll() {
+      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+      this.renderBackground();
+      for (const column of this.tiles) {
+        for (const row of column) {
+          row.renderTileGenerated();
+        }
+      }
+    }
+  
+    shiftByFrame(frameSection) {
+      for (const column of this.tiles) {
+        for (const row of column) {
+          row.changeImgPositionToLeft(frameSection);
+        }
+      }
+      this.drawAll();
+      this.frames -= 1;
+      return this.frames > 0;
+    }
+  
+    async shiftToLeft() {
+      const frames = 30;
+      const duration = 600;
+  
+      dragHandler.disableEventListeners();
+      var frameSection = canvasWidth/8/frames;
+      this.frames = frames;
+      try {
+        await asyncInterval(function() {renderer.shiftByFrame(frameSection)}, duration/frames, frames);
+      } catch (e) {
+        //console.log('Error');
+      }
+      //console.log("Done!");
+  
+      for (const column of this.tiles) {
+        for (const row of column) {
+          row.reindex();
+        }
+      }
+  
+      this.tiles.shift();
+      this.generateColumn();
+      this.generateHiddenEmptyTile();
+      this.checkTheHiddenColumn()
+      dragHandler.enableEventListeners();
+      return 1;
+    }
+  
+    generateHiddenEmptyTile() {
+      var random = Math.random();
+      var clears = [];
+      this.tiles[9].forEach(function(tile) {
+        if (tile.content == 0) {
+          clears.push(tile.row);
+        }
+      });
+      if (clears.length && random <= 0.35) {
+        var tileRandom = Math.floor(Math.random() * clears.length);
+        this.tiles[9][clears[tileRandom]-1].setContentInstance(1);
+      }
+    }
+  
+    checkTheHiddenColumn() {
+      this.tiles[0].forEach(function(tile) {
+        if (tile.state == 0 && tile.content > 1) {
+          tile.claimReward();
+        }
+      });
+    }
+  
+    checkSides() {
+      var repeat = false;
+      for (const column of this.tiles) {
+        for (const row of column) {
+          var surroundings = [
+            [row.column-1, row.row],
+            [row.column+1, row.row],
+            [row.column, row.row+1],
+            [row.column, row.row-1]
+          ];
+          var isAtLeastOneEmpty = false;
+          surroundings.forEach(function(element) {
+            if (element[0] >= 1 && element[0] <= 9 && element[1] >= 1 && element[1] <= 6) {
+              if(renderer.tiles[element[0]][element[1]-1].state == 0 && renderer.tiles[element[0]][element[1]-1].content != 1) {
+                isAtLeastOneEmpty = true;
+              }
+            }
+          });
+          if (row.state == 2 && isAtLeastOneEmpty) {
+            if (row.content == 1) row.reveal();
+            else if (row.content == 0 && row.contentInstance == 1) {
+              row.reveal();
+              repeat = true;
+            }
+            else row.revealPartially();
+          }
+        }
+      }
+      if (repeat) this.checkSides();
+    }
+  
+    isLastColumnDiscovered () {
+      var condition = false;
+      this.tiles[8].forEach(function(tile) {
+        if (tile.state == 0 && tile.content != 1) {
+          condition = true;
+        }
+      });
+      return condition;
+    }
+  }
+  
+  class DragHandler {
+    constructor() {
+      this.root = document.getElementById("minigameContainer");
+      this.bar = document.getElementById("bar");
+      this.barProgress = document.getElementById("progress");
+      this.barText = document.getElementById("barText");
+      this.stats = document.getElementById("stats");
+      this.prizeText = document.getElementById("prize");
+      this.donkeyText = document.getElementById("donkeys");
+      this.dragging = false;
+      this.tool = null;
+      this.eventListenersState = false;
+      this.toolsImg = [document.getElementById("tool1"), document.getElementById("tool2"), document.getElementById("tool3")];
+      this.setToolImg(0);
+      this.setToolImg(1);
+      this.setToolImg(2);
+      this.toolCountOutput = [document.getElementById("tool1Count"), document.getElementById("tool2Count"), document.getElementById("tool3Count")];
+      this.toolCount = [3,1,1];
+      this.setToolCount(0, this.toolCount[0]);
+      this.setToolCount(1, this.toolCount[1]);
+      this.setToolCount(2, this.toolCount[2]);
+      this.toolState = [true, true, true];
+      this.donkeyCount = 1000;
+      this.iconDonkeyCount = null;
+      this.setDonkeyIcon();
+      this.writeDonkeyCount(this.donkeyCount);
+      this.rewardCount = [0, 0]; // generic r., tablets
+      this.iconTabletCount = null;
+      this.setTabletIcon();
+      this.writeTabletCount(this.rewardCount[1]);
+      this.setBarPosition();
+      this.prizeCount = 0;
+      this.iconPrizeCount = null;
+      this.setPrizeIcon();
+      this.iconGRCount = null;
+      this.setGRIcon()
+      this.writePrizeCount(this.prizeCount, this.rewardCount[0]);
+      this.setPrizePosition();
+      this.dragSuspended = false;
+      this.restart = document.getElementById("restartButton");
+      this.shop = document.getElementById("shopButton");
+      this.enableEventListeners();
+      this.enableHover();
+      this.setPointerCursor();
+    }
+  
+    endGame() {
+      this.disableEventListeners();
+      this.restart.addEventListener("click", restart, false);
+      this.setPointerCursor();
+      this.disableHoverAll();
+      for (const column of renderer.tiles) {
+        for (const row of column) {
+          if (row.state == 0 && row.content == 3) {
+            row.claimReward();
+          }
+        }
+      }
+      renderer.drawAll();
+      var gameOverText = "Game over! You have earned <strong>"+this.rewardCount[1]+"</strong> tablets. ";
+      if (this.rewardCount[1] >= 20) {
+        gameOverText += "Good job! ";
+      }
+      if (this.checkHighscoreChange()) {
+        this.writeHighscore();
+        gameOverText += "You have beaten your highscore!";
+      } else {
+        gameOverText += "You can play again in order to beat your highscore.";
+      }
+      create_exception(gameOverText, 20, "warning");
+    }
+  
+    checkHighscoreChange() {
+      if (this.rewardCount[1] > this.getHighscore()) {
+        this.setHighscore(this.rewardCount[1]);
+        return true;
+      }
+      return false;
+    }
+  
+    writeHighscore() {
+      var highscoreLabel = document.getElementById("text1231");
+      highscoreLabel.innerHTML = this.getHighscore();
+    }
+  
+    getHighscore() {
+      if (localStorage.getItem("tileEvent_"+getSelectedEvent()+"highscore") == null) {
+        return 0;
+      } else {
+        return parseInt(localStorage.getItem("tileEvent_"+getSelectedEvent()+"highscore"));
+      }
+    }
+  
+    setHighscore(value) {
+      localStorage.setItem("tileEvent_"+getSelectedEvent()+"highscore", parseInt(value));
+    }
+  
+    setBarPosition() {
+      this.barText.style.left = (this.bar.clientWidth - this.barText.clientWidth) / 2 + 7 + "px";
+    }
+  
+    setPrizePosition() {
+      var prizeIcon = document.getElementById("prizeIcon");
+      prizeIcon.style.height = this.stats.clientHeight * 0.9 + "px";
+      this.iconPrizeCount.style.height = this.stats.clientHeight * 0.9 + "px";
+      var grIcon = document.getElementById("grIcon");
+      grIcon.style.height = this.stats.clientHeight * 0.9 + "px";
+      this.iconGRCount.style.height = this.stats.clientHeight * 0.9 + "px";
+      this.prizeText.style.left = (this.stats.clientWidth - this.prizeText.clientWidth) / 2 + "px";
+    }
+  
+    getSurroundings(mode, xc, yc) {
+      var res = [];
+      var tile = [];
+      if (mode == "3x3") {
+        for (let x = xc-1; x <= xc+1; x++) {
+          for (let y = yc-1; y <= yc+1; y++) {
+            if (x != xc || y != yc) {
+              tile = [x, y];
+              res.push(tile);
+            }
+          }
+        }
+      }
+      return res;
+    }
+  
+    setToolCount(no, count) {
+      this.toolCount[no] = count;
+      this.toolCountOutput[no].innerHTML = this.toolCount[no];
+    }
+  
+    addToToolCount(no, count=1) {
+      if (count != 0) {
+        if (this.toolCount[no] == 0) {
+          if (toolShop.isShopOpen()) {
+            this.toolState[no] = true;
+            this.setToolImg(no);
+          }
+          else {
+            this.enableTool(no);
+          }
+        }
+        this.setToolCount(no, this.toolCount[no] + count);
+      }
+    }
+  
+    removeFromToolCount(no) {
+      this.setToolCount(no, this.toolCount[no] - 1);
+      if (this.toolCount[no] == 0) {
+        this.disableTool(this.tool);
+        this.dragSwitch(this.tool);
+      }
+    }
+  
+    setDonkeyIcon() {
+      var donkeyIcon = document.createElement('img');
+      donkeyIcon.src = document.getElementById('eventCurrency').src;
+      donkeyIcon.id = "donkeyIcon";
+      donkeyIcon.draggable = false;
+      this.iconDonkeyCount = donkeyIcon;
+    }
+  
+    writeDonkeyCount(count) {
+      this.donkeyText.innerHTML = "";
+      this.donkeyText.appendChild(this.iconDonkeyCount);
+      this.donkeyText.innerHTML += count;
+    }
+  
+    removeFromDonkeyCount(count) {
+      this.donkeyCount -= count;
+      this.writeDonkeyCount(this.donkeyCount);
+    }
+  
+    returnDonkeyCount() {
+      return this.donkeyCount;
+    }
+  
+    setTabletIcon() {
+      var tabletIcon = document.createElement('img');
+      tabletIcon.src = document.getElementById('payback').src;
+      tabletIcon.id = "tabletIcon";
+      tabletIcon.draggable = false;
+      this.iconTabletCount = tabletIcon;
+    }
+  
+    writeTabletCount(count) {
+      this.barText.innerHTML = "";
+      this.barText.appendChild(this.iconTabletCount);
+      var partialCount = (count%20 > 0 || count == 0) ? count%20 : 20;
+      this.barText.innerHTML += partialCount + "/20";
+      this.barProgress.style.width = 5*partialCount + "%";
+      if (partialCount == 20) this.addToPrizeCount();
+    }
+  
+    addToTabletCount() {
+      this.rewardCount[1] += 1;
+      this.writeTabletCount(this.rewardCount[1]);
+    }
+  
+    setPrizeIcon() {
+      var prizeIcon = document.createElement('img');
+      prizeIcon.src = document.getElementById('silverChest').src;
+      prizeIcon.id = "prizeIcon";
+      prizeIcon.draggable = false;
+      this.iconPrizeCount = prizeIcon;
+    }
+  
+    writePrizeCount(mPrizeCount, grCount) {
+      this.prizeText.innerHTML = mPrizeCount + "x&nbsp;";
+      this.prizeText.appendChild(this.iconPrizeCount);
+      this.prizeText.innerHTML += " " + grCount + "x&nbsp;";
+      this.prizeText.appendChild(this.iconGRCount);
+    }
+  
+    addToPrizeCount() {
+      this.prizeCount += 1;
+      this.writePrizeCount(this.prizeCount, this.rewardCount[0]);
+    }
+  
+    setGRIcon() {
+      var GRIcon = document.createElement('img');
+      GRIcon.src = document.getElementById('grChest').src;
+      GRIcon.id = "grIcon";
+      GRIcon.draggable = false;
+      this.iconGRCount = GRIcon;
+    }
+  
+    addToGRCount() {
+      this.rewardCount[0] += 1;
+      this.writePrizeCount(this.prizeCount, this.rewardCount[0]);
+    }
+  
+    disableTool(no) {
+      this.toolsImg[no].removeEventListener("click", toolFc[no], false);
+      this.toolState[no] = false;
+      var tool = document.getElementById(tools[no]);
+      var bwTool = document.getElementById(toolNames[no] + "Bw");
+      tool.src = bwTool.src;
+      this.disableHover(no);
+    }
+  
+    enableTool(no) {
+      this.toolsImg[no].addEventListener("click", toolFc[no], false);
+      this.toolState[no] = true;
+      this.setToolImg(no);
+      this.enableHover(no);
+    }
+  
+    toolHover(no) {
+      var tool = document.getElementById(tools[no]);
+      var hoverTool = document.getElementById(toolNames[no] + "Hover");
+      tool.src = hoverTool.src;
+    }
+  
+    setToolImg(no) {
+      var tool = document.getElementById(tools[no]);
+      var img = document.getElementById(toolNames[no]);
+      tool.src = img.src;
+    }
+  
+    enableHoverAll() {
+      if (this.toolState[0]) this.enableHover(0);
+      if (this.toolState[1]) this.enableHover(1);
+      if (this.toolState[2]) this.enableHover(2);
+    }
+  
+    enableHover(no=null) {
+      if (no == null) {
+        for (let i = 0; i < this.toolsImg.length; i++) {
+          this.toolsImg[i].addEventListener("mouseenter", toolHoverFc[i], false);
+          this.toolsImg[i].addEventListener("mouseleave", toolHoverStopFc[i], false);
+        }
+      }
+      else {
+        this.toolsImg[no].addEventListener("mouseenter", toolHoverFc[no], false);
+        this.toolsImg[no].addEventListener("mouseleave", toolHoverStopFc[no], false);
+      }
+    }
+  
+    disableHoverAll() {
+      this.disableHover(0);
+      this.disableHover(1);
+      this.disableHover(2);
+    }
+  
+    disableHover(no) {
+      this.toolsImg[no].removeEventListener("mouseenter", toolHoverFc[no], false);
+      this.toolsImg[no].removeEventListener("mouseleave", toolHoverStopFc[no], false);
+    }
+  
+    disableToolEventListeners() {
+      if (this.toolState[0] == true) this.toolsImg[0].removeEventListener("click", shovel, false);
+      if (this.toolState[1] == true) this.toolsImg[1].removeEventListener("click", thinBottle, false);
+      if (this.toolState[2] == true) this.toolsImg[2].removeEventListener("click", thickBottle, false);
+    }
+  
+    enableToolEventListeners() {
+      if (this.toolState[0] == true) this.toolsImg[0].addEventListener("click", shovel, false);
+      if (this.toolState[1] == true) this.toolsImg[1].addEventListener("click", thinBottle, false);
+      if (this.toolState[2] == true) this.toolsImg[2].addEventListener("click", thickBottle, false);
+    }
+  
+    disableCanvasEventListeners() {
+      canvas.removeEventListener("click", useToolFc, false);
+      canvas.removeEventListener("mousemove", moveToolFc, false);
+    }
+  
+    enableCanvasEventListeners() {
+      canvas.addEventListener("click", useToolFc, false);
+      canvas.addEventListener("mousemove", moveToolFc, false);
+    }
+  
+    disableEventListeners() {
+      this.eventListenersState = false;
+      this.disableCanvasEventListeners();
+      this.disableToolEventListeners();
+  
+      this.restart.removeEventListener("click", restart, false);
+      this.shop.removeEventListener("click", shopToggle, false);
+    }
+  
+    enableEventListeners() {
+      this.eventListenersState = true;
+      this.enableCanvasEventListeners();
+      this.enableToolEventListeners();
+  
+      this.restart.addEventListener("click", restart, false);
+      this.shop.addEventListener("click", shopToggle, false);
+    }
+  
+    highlightCondition(row, tool=this.tool) {
+      var condition;
+      switch (tool) {
+        case 0:
+          condition = row.state == 1 && row.content != 1;
+          break;
+        case 1:
+          var resultUp = false;
+          if (row.row != 1) {
+            for (let i = row.row-1; i >= 1; i--) {
+              if (renderer.tiles[row.column][i-1].content == 1) {
+                resultUp = false;
+                break;
+              }
+              else if (renderer.tiles[row.column][i-1].state != 0) {
+                resultUp = true;
+                break;
+              }
+            }
+          }
+          var resultDown = false;
+          if (row.row != 6) {
+            for (let i = row.row+1; i <= 6; i++) {
+              if (renderer.tiles[row.column][i-1].content == 1) {
+                resultDown = false;
+                break;
+              }
+              else if (renderer.tiles[row.column][i-1].state != 0) {
+                resultDown = true;
+                break;
+              }
+            }
+          }
+          var result = resultUp || resultDown;
+          condition = row.state == 0 && row.content != 1 && result;
+          break;
+        case 2:
+          var surroundings = this.getSurroundings("3x3", row.column, row.row);
+          var result = false;
+          for (const coords of surroundings) {
+            if (coords[0] >= 1 && coords[0] <= 8 && coords[1] >= 1 && coords[1] <= 6) {
+              if (renderer.tiles[coords[0]][coords[1]-1].state != 0) {
+                result = true;
+                break;
+              }
+            }
+          }
+          condition = row.state == 0 && row.content != 1 && result;
+          break;
+      }
+      return condition;
+    }
+  
+    markAll() {
+      for (const column of renderer.tiles) {
+        for (const row of column) {
+          if (this.highlightCondition(row)) {
+            row.mark();
+          }
+        }
+      }
+    }
+  
+    isUsefulToolOnTileboard() {
+      var condition = false;
+      for (const column of renderer.tiles) {
+        for (const row of column) {
+          if (row.state == 0 && row.content == 4 && this.isToolUseful(row.contentInstance)) {
+            condition = true;
+            break;
+          }
+        }
+        if (condition) break;
+      }
+      return condition;
+    }
+  
+    isAnyToolUseful() {
+      var condition = false;
+      for (let i = 0; i < tools.length; i++) {
+        if (this.isToolUseful(i) && this.toolCount[i] > 0) {
+          condition = true;
+          break;
+        }
+      }
+      if (condition == false) {
+        if (this.isUsefulToolOnTileboard())
+          condition = true;
+      }
+      return condition;
+    }
+  
+    isToolUseful(tool) {
+      var condition = false;
+      for (const column of renderer.tiles) {
+        for (const row of column) {
+          if (this.highlightCondition(row, tool)) {
+            condition = true;
+            break;
+          }
+        }
+        if (condition == true) break;
+      }
+      return condition;
+    }
+  
+    setToolCursor(tool) {
+      var img = toolImgTB[tool];
+      this.root.style.cursor = "url('eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/tools/tool_" + img + "_cursor.png'), auto";
+      this.toolsImg.forEach(function(element) {
+        element.style.cursor = "url('eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/tools/tool_" + img + "_cursor.png'), auto";
+      });
+    }
+  
+    setPointerCursor() {
+      this.root.style.cursor = "url('eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/tools/arrow.svg'), auto";
+      this.toolsImg.forEach(function(element) {
+        element.style.cursor = "url('eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/tools/arrow.svg'), auto";
+      });
+      this.shop.style.cursor = "url('eventTabs/tile_mistyforest_xxiii_/tileEvent_assets/tools/arrow.svg'), auto";
+    }
+  
+    dragSwitch(tool) {
+      renderer.unmarkAll();
+      renderer.drawAll();
+      if (this.dragging == true && this.tool == tool) {
+        this.dragging = false;
+        this.tool = null;
+        this.setPointerCursor();
+      }
+      else {
+        this.dragging = true;
+        this.tool = tool;
+        this.setToolCursor(tool);
+        this.markAll();
+        renderer.drawAll();
+      }
+    }
+  
+    detectTile(event) {
+      var currentTile = null;
+      event.preventDefault();
+      var posX = event.offsetX;
+      var posY = event.offsetY;
+      if (posX > 0 && posX < canvasWidth && posY > 0 && posY < canvasHeight) {
+        var posCol = Math.floor(8*posX / canvasWidth);
+        var posRow = Math.floor(6*posY / canvasHeight);
+        currentTile = renderer.tiles[posCol+1][posRow];
+      }
+      return currentTile;
+    }
+  
+    revealTiles(event) {
+      var currentTile = this.detectTile(event);
+      if (currentTile && this.dragging == true) {
+        renderer.drawAll();
+        if (this.highlightCondition(currentTile)) {
+          switch (this.tool) {
+            case 0:
+              currentTile.reveal();
+              break;
+            case 1:
+              for (let i = currentTile.row-1; i >= 1; i--) {
+                if (renderer.tiles[currentTile.column][i-1].content == 1) {
+                  break;
+                }
+                else {
+                  renderer.tiles[currentTile.column][i-1].reveal();
+                }
+              }
+              for (let i = currentTile.row+1; i <= 6; i++) {
+                if (renderer.tiles[currentTile.column][i-1].content == 1) {
+                  break;
+                }
+                else {
+                  renderer.tiles[currentTile.column][i-1].reveal();
+                }
+              }
+              break;
+            case 2:
+              var surroundings = this.getSurroundings("3x3", currentTile.column, currentTile.row);
+              for (const coords of surroundings) {
+                if (coords[0] >= 1 && coords[0] <= 8 && coords[1] >= 1 && coords[1] <= 6) {
+                  if (renderer.tiles[coords[0]][coords[1]-1].content != 1) {
+                    renderer.tiles[coords[0]][coords[1]-1].reveal();
+                  }
+                }
+              }
+              break;
+          }
+          this.removeFromToolCount(this.tool);
+        }
+      }
+    }
+  
+    highlightTiles(event) {
+      var currentTile = this.detectTile(event);
+      if (currentTile && this.dragging == true) {
+        renderer.drawAll();
+        if (this.highlightCondition(currentTile)) {
+          switch (this.tool) {
+            case 0:
+              currentTile.highlight();
+              break;
+            case 1:
+              for (let i = currentTile.row-1; i >= 1; i--) {
+                if (renderer.tiles[currentTile.column][i-1].content == 1) {
+                  break;
+                }
+                else {
+                  renderer.tiles[currentTile.column][i-1].highlight();
+                }
+              }
+              for (let i = currentTile.row+1; i <= 6; i++) {
+                if (renderer.tiles[currentTile.column][i-1].content == 1) {
+                  break;
+                }
+                else {
+                  renderer.tiles[currentTile.column][i-1].highlight();
+                }
+              }
+              break;
+            case 2:
+              var surroundings = this.getSurroundings("3x3", currentTile.column, currentTile.row);
+              for (const coords of surroundings) {
+                if (coords[0] >= 1 && coords[0] <= 8 && coords[1] >= 1 && coords[1] <= 6) {
+                  if (renderer.tiles[coords[0]][coords[1]-1].content != 1) {
+                    renderer.tiles[coords[0]][coords[1]-1].highlight();
+                  }
+                }
+              }
+              break;
+          }
+        }
+      }
+    }
+  
+    async useTool(event) {
+      if (this.dragSuspended == false) {
+        renderer.unmarkAll();
+        renderer.drawAll();
+        this.revealTiles(event);
+        renderer.checkSides();
+        renderer.drawAll();
+        while (renderer.isLastColumnDiscovered()) {
+          renderer.checkSides();
+          await renderer.shiftToLeft();
+        }
+        this.markAll();
+        renderer.drawAll();
+        if ((this.toolCount == [0, 0, 0] || this.isAnyToolUseful() == false) && this.donkeyCount < toolShop.getMinimalPrice()) {
+          this.endGame();
+        }
+      }
+      if (this.dragSuspended == true || this.dragging == false) {
+        var currentTile = this.detectTile(event);
+        if (currentTile.state == 0 && currentTile.content > 1) {
+          currentTile.claimReward();
+          renderer.drawAll();
+          if (this.dragSuspended == true) {
+            this.setToolCursor(this.tool);
+            this.dragSuspended = false;
+          }
+        }
+      }
+    }
+  
+    moveTool(event) {
+      var currentTile = this.detectTile(event);
+      if (currentTile && this.dragging == true) {
+        if (this.dragging == true && currentTile.content > 1 && currentTile.state == 0 && this.dragSuspended == false) {
+          renderer.drawAll();
+          this.setPointerCursor();
+          this.dragSuspended = true;
+        }
+        if (this.dragging == true && (currentTile.content <= 1 || currentTile.state != 0) && this.dragSuspended == true) {
+          this.setToolCursor(this.tool);
+          this.dragSuspended = false;
+        }
+      }
+      if (this.dragSuspended == false) this.highlightTiles(event);
+    }
+  }
+  
+  class ToolShop {
+    constructor() {
+      this.disableEventListeners();
+      this.shopElements = [];
+      this.offerIds = ["set1", "set2", "shovel", "thinBottle", "thickBottle"];
+      this.shopOffers = {
+        set1: {prize: 100, tool1: 8, tool2: 1, tool3: 1},
+        set2: {prize: 150, tool1: 1, tool2: 4, tool3: 3},
+        shovel: {prize: 9, tool1: 1, tool2: 0, tool3: 0},
+        thinBottle: {prize: 20, tool1: 0, tool2: 1, tool3: 0},
+        thickBottle: {prize: 30, tool1: 0, tool2: 0, tool3: 1}
+      };
+      this.toolLabels = [];
+      this.buttons = [];
+      this.donkeyImgs = [];
+      this.prizeLabels = [];
+      this.shopping = false;
+      this.highlight = false;
+      this.setShop();
+    }
+  
+    isShopOpen() {
+      return this.shopping;
+    }
+  
+    getMinimalPrice() {
+      var prices = [];
+      for (const item of this.offerIds) {
+        prices.push(this.shopOffers[item].prize);
+      };
+      return Math.min(...prices);
+    }
+  
+    toggle() {
+      if (this.shopping) {
+        this.disableEventListeners()
+        dragHandler.enableHoverAll();
+        dragHandler.enableToolEventListeners();
+        dragHandler.enableCanvasEventListeners();
+        renderer.drawAll();
+      }
+      else {
+        if (dragHandler.dragging) {
+          dragHandler.dragSwitch(dragHandler.tool);
+        }
+        dragHandler.disableHoverAll();
+        dragHandler.disableToolEventListeners();
+        dragHandler.disableCanvasEventListeners();
+        this.enableEventListeners();
+        this.renderShop();
+      }
+      this.shopping = !this.shopping;
+    }
+  
+    setShop() {
+      this.shopElements = [];
+      this.buttons = [];
+      this.donkeyImgs = [];
+      this.prizeLabels = [];
+      this.toolLabels = [];
+  
+      var margin = canvasWidth/20;
+      var sidesMargin = canvasWidth/15;
+      var verticalGap = canvasWidth/26;
+      var horizontalGap = 3*canvasHeight/50;
+      var Xbase = sidesMargin+margin;
+  
+      var widthTop = (canvasWidth - 2*margin - 2*sidesMargin - verticalGap*2)/2;
+      var widthBottom = (canvasWidth - 2*margin - 2*sidesMargin - verticalGap*2)/3;
+      var heightElement = (canvasHeight - 2*margin - horizontalGap)/2;
+      var Xshift = widthBottom+verticalGap;
+      var elementY = margin+heightElement+horizontalGap;
+  
+      var panelShopTop = document.getElementById("panelShopTop");
+      var panelShopBottom = document.getElementById("panelShopBottom");
+  
+      this.shopElements.push({pos: "top", img: panelShopTop, x: Xbase, y: margin, width: widthTop, height: heightElement}); //0: top1
+      this.shopElements.push({pos: "top", img: panelShopTop, x: Xbase+widthTop+verticalGap*2, y: margin, width: widthTop, height: heightElement}); //1: top2
+      this.shopElements.push({pos: "bot", img: panelShopBottom, x: Xbase, y: elementY, width: widthBottom, height: heightElement}); //2: bottom1
+      this.shopElements.push({pos: "bot", img: panelShopBottom, x: Xbase+Xshift, y: elementY, width: widthBottom, height: heightElement}); //3: bottom2
+      this.shopElements.push({pos: "bot", img: panelShopBottom, x: Xbase+Xshift*2, y: elementY, width: widthBottom, height: heightElement}); //4: bottom<3
+      
+      this.setFrames();
+      this.setTools();
+      this.setButtons();
+      this.setButtonLabels();
+    }
+  
+    setFrames() {
+      var panels = [this.shopElements[0], this.shopElements[1], this.shopElements[2], this.shopElements[3], this.shopElements[4]];
+  
+      var toolShopTop = document.getElementById("toolShopTop");
+      var toolShopBottom = document.getElementById("toolShopBottom");
+  
+      for (const panel of panels) {
+        var marginTop = panel.height/8;
+        if (panel.pos == "top") {
+          var marginSides = panel.width/16;
+          var img = toolShopTop;
+        }
+        else {
+          var marginSides = panel.width/8;
+          var img = toolShopBottom;
+        }
+        this.shopElements.push({pos: panel.pos, img: img, x: panel.x+marginSides, y: panel.y+marginTop, width: panel.width-marginSides*2, height: panel.height/40*19});
+      }
+    }
+  
+    setTools() {
+      var frames = [this.shopElements[5], this.shopElements[6], this.shopElements[7], this.shopElements[8], this.shopElements[9]];
+      var shopTools = [document.getElementById("shovel"), document.getElementById("thinBottle"), document.getElementById("thickBottle")];
+  
+      var j = 0;
+      var k = 0;
+      for (const frame of frames) {
+        var padding = -frame.height/14;
+        var fontSize = frame.height/5;
+        ctx.font = "bold " + fontSize + "px Segoe UI";
+        var offer = this.shopOffers[this.offerIds[k]];
+        if (frame.pos == "top") {
+          var toolGap = frame.width - 3*frame.height;
+          var i = 0;
+          for (const tool of shopTools) {
+            var height = frame.height*tool.height/tool.width;
+            var shift = (frame.height - height) / 2;
+            var textLength = ctx.measureText(offer["tool"+(i+1)].toString()).width;
+            this.shopElements.push({img: tool, x: frame.x+frame.height*i+toolGap+padding, y: frame.y+shift+padding, width: frame.height-padding*2, height: height-padding*2});
+            this.toolLabels.push({amount: offer["tool"+(i+1)], size: fontSize, x: frame.x+frame.height*i+(frame.height+toolGap-textLength)/2, y: frame.y+frame.height+fontSize});
+            i++;
+          }
+        }
+        else {
+          var img = shopTools[j];
+          var width = frame.height*img.width/img.height;
+          var shift = (frame.width - width) / 2;
+          var textLength = ctx.measureText(offer["tool"+(j+1)].toString()).width;
+          this.shopElements.push({img: img, x: frame.x+shift, y: frame.y, width: width, height: frame.height});
+          this.toolLabels.push({amount: offer["tool"+(j+1)], size: fontSize, x: frame.x+(frame.width-textLength)/2, y: frame.y+frame.height+fontSize});
+          j++;
+        }
+        k++;
+      }
+    }
+  
+    setButtons() {
+      var panels = [this.shopElements[0], this.shopElements[1], this.shopElements[2], this.shopElements[3], this.shopElements[4]];
+  
+      var button = document.getElementById("button");
+      var shortButton = document.getElementById("shortButton");
+  
+      var i = 0;
+      for (const panel of panels) {
+        var marginBottom = panel.height/12;
+        var height = panel.height/40*7;
+        if (panel.pos == "top") {
+          var marginSides = panel.width/14;
+          var img = button;
+        }
+        else {
+          var marginSides = panel.width/7;
+          var img = shortButton;
+        }
+        this.buttons.push({name: this.offerIds[i], img: img, x: panel.x+marginSides, y: panel.y+panel.height-marginBottom-height, width: panel.width-marginSides*2, height: height});
+        i++;
+      }
+    }
+  
+    setButtonLabels() {
+      var donkeyImg = document.getElementById("eventCurrency");
+  
+      for (const button of this.buttons) {
+        var donkeyHeight = button.height*0.8;
+        var donkeyWidth = donkeyHeight*donkeyImg.width/donkeyImg.height;
+        var fontSize = button.height/20*11;
+        ctx.font = "bold " + fontSize + "px Segoe UI";
+        var amount = this.shopOffers[button.name].prize;
+        var amountWidth = ctx.measureText(amount.toString()).width;
+        var fullWidth = donkeyWidth*1.25+amountWidth;
+        this.donkeyImgs.push({img: donkeyImg, x: button.x+(button.width-fullWidth)/2, y: button.y+(button.height-donkeyHeight)/2, width: donkeyWidth, height: donkeyHeight});
+        this.prizeLabels.push({amount: amount, size: fontSize, x: button.x+(button.width-fullWidth)/2+donkeyWidth*1.25, y: button.y+(button.height+fontSize)/20*9});
+        i++;
+      }
+    }
+  
+    buy(event) {
+      if (this.detectButton(event)) {
+        var buttonName = this.detectButton(event);
+        var offer = this.shopOffers[buttonName];
+        if (dragHandler.returnDonkeyCount() >= offer.prize) {
+          dragHandler.removeFromDonkeyCount(offer.prize);
+          dragHandler.addToToolCount(0, offer.tool1);
+          dragHandler.addToToolCount(1, offer.tool2);
+          dragHandler.addToToolCount(2, offer.tool3);
+        }
+      }
+    }
+  
+    move(event) {
+      var currentButton = this.detectButton(event);
+      if (this.highlight == false && currentButton) {
+        var id = this.offerIds.indexOf(currentButton);
+        var button = (id > 1) ? document.getElementById("shortButtonHighlight") : document.getElementById("buttonHighlight");
+        this.buttons[id].img = button;
+        this.highlight = true;
+        this.renderShop();
+      }
+      else if (this.highlight == true && currentButton == null) {
+        for (let i = 0; i <= 4; i++) {
+          var button = (i > 1) ? document.getElementById("shortButton") : document.getElementById("button");
+          this.buttons[i].img = button;
+        }
+        this.highlight = false;
+        this.renderShop();
+      }
+    }
+  
+    press(event) {
+      var currentButton = this.detectButton(event);
+      if (currentButton) {
+        var id = this.offerIds.indexOf(currentButton);
+        var button = (id > 1) ? document.getElementById("shortButtonPressed") : document.getElementById("buttonPressed");
+        this.buttons[id].img = button;
+        this.renderShop();
+      }
+    }
+  
+    release(event) {
+      for (let i = 0; i <= 4; i++) {
+        var button = (i > 1) ? document.getElementById("shortButton") : document.getElementById("button");
+        this.buttons[i].img = button;
+      }
+      this.highlight = false;
+      this.move(event);
+      this.renderShop();
+    }
+  
+    detectButton(event) {
+      var currentButton = null;
+      event.preventDefault();
+      var posX = event.offsetX;
+      var posY = event.offsetY;
+      this.buttons.forEach(function(button) {
+        if (posX >= button.x && posX <= button.x+button.width && posY >= button.y && posY <= button.y+button.height) {
+          currentButton = button.name;
+        }
+      });
+      return currentButton;
+    }
+  
+    disableEventListeners() {
+      canvas.removeEventListener("click", buyFc, false);
+      canvas.removeEventListener("mousemove", shopMoveFc, false);
+      canvas.removeEventListener("mousedown", shopPressFc, false);
+      canvas.removeEventListener("mouseup", shopReleaseFc, false);
+    }
+  
+    enableEventListeners() {
+      canvas.addEventListener("click", buyFc, false);
+      canvas.addEventListener("mousemove", shopMoveFc, false);
+      canvas.addEventListener("mousedown", shopPressFc, false);
+      canvas.addEventListener("mouseup", shopReleaseFc, false);
+    }
+  
+    renderShop() {
+      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+      this.shopElements.forEach(function(element) {
+        ctx.drawImage(element.img, element.x, element.y, element.width, element.height);
+      });
+      this.buttons.forEach(function(element) {
+        ctx.drawImage(element.img, element.x, element.y, element.width, element.height);
+      });
+      this.donkeyImgs.forEach(function(element) {
+        ctx.drawImage(element.img, element.x, element.y, element.width, element.height);
+      });
+      ctx.shadowColor = "black";
+      ctx.shadowOffsetX = 2;
+      ctx.shadowOffsetY = 2;
+      this.prizeLabels.forEach(function(label) {
+        ctx.font = "bold " + label.size + "px Segoe UI";
+        ctx.fillStyle = "white";
+        ctx.fillText(label.amount, label.x, label.y);
+      });
+      this.toolLabels.forEach(function(label) {
+        ctx.font = "bold " + label.size + "px Segoe UI";
+        ctx.fillStyle = "white";
+        ctx.fillText(label.amount, label.x, label.y);
+      });
+      ctx.shadowColor = "";
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+    }
+  }
+  
+  async function asyncInterval (callback, ms, triesLeft = 30) {
+    return new Promise((resolve, reject) => {
+      const interval = setInterval(async () => {
+        if (await callback()) {
+          resolve();
+          clearInterval(interval);
+        } else if (triesLeft <= 1) {
+          //console.log("fail");
+          resolve();
+          clearInterval(interval);
+        }
+        triesLeft--;
+      }, ms);
+    });
+  }
+  
+  function useToolFc (event) {
+    dragHandler.useTool(event);
+  }
+  
+  function moveToolFc (event) {
+    dragHandler.moveTool(event);
+  }
+  
+  function shovel() {
+    dragHandler.dragSwitch(0);
+  }
+  
+  function thinBottle() {
+    dragHandler.dragSwitch(1);
+  }
+  
+  function thickBottle() {
+    dragHandler.dragSwitch(2);
+  }
+  
+  function shovelHover() {
+    dragHandler.toolHover(0);
+  }
+  
+  function thinBottleHover() {
+    dragHandler.toolHover(1);
+  }
+  
+  function thickBottleHover() {
+    dragHandler.toolHover(2);
+  }
+  
+  function shovelHoverStop() {
+    dragHandler.setToolImg(0);
+  }
+  
+  function thinBottleHoverStop() {
+    dragHandler.setToolImg(1);
+  }
+  
+  function thickBottleHoverStop() {
+    dragHandler.setToolImg(2);
+  }
+  
+  function shopToggle() {
+    toolShop.toggle();
+  }
+  
+  function buyFc(event) {
+    toolShop.buy(event);
+  }
+  
+  function shopMoveFc(event) {
+    toolShop.move(event);
+  }
+  
+  function shopPressFc(event) {
+    toolShop.press(event);
+  }
+  
+  function shopReleaseFc(event) {
+    toolShop.release(event);
+  }
+  
+  function restart() {
+    renderer = new CanvasRenderer();
+    dragHandler = new DragHandler();
+    toolShop = new ToolShop();
+  }
+  
+  })();
+  
+  </script>
+  

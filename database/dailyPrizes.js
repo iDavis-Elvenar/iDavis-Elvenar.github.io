@@ -1,5 +1,9 @@
 var dailyPrizes = {
 
+    "tile_mistyforest_xxiv_": [
+
+    ],
+
     "theater_zodiac_xxiv_": [
         "A_Evt_Theater_Zodiac_XXIII_Divine_Orrary",
         "A_Evt_Theater_Zodiac_XXIII_Mirrors_of_the_Cosmos",
