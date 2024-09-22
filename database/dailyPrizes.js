@@ -1,7 +1,9 @@
 var dailyPrizes = {
 
     "tile_mistyforest_xxiv_": [
-
+        //"",
+        //"",
+        //"", 2x combining catalyst
     ],
 
     "theater_zodiac_xxiv_": [
