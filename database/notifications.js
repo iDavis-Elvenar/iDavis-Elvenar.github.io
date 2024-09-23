@@ -50,7 +50,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":30
     },
     "6":{  // DONATE
@@ -194,15 +194,16 @@ var notifications = {
     },
     "16":{  // NEW FEATURE ON THE WEBSITE #1
         "id":16,
-        "text":`<h4 class="alert-heading">Ciao giocatori di Elvenar!</h4>
+        "text":`<h4 class="alert-heading">Blog Article: Impressions from Chapter 22!</h4>
         <hr>
-        <p>The website is now officially available in Italian! Use the globe button in the top right corner to select your language:</p>
-        <center><img src="https://i.ibb.co/3mCyY8f/language-selection-announcement.png"></center>
-        <p>Event quest translations, a major contribution to the dictionary, have been provided by the Italian player <b>Ajani 39</b>. Thank you very much for your support!</p>`,
-        "repeatAfter":172800,
+        <center><img src="https://i.ibb.co/xMtKZtV/Chapter-22-main.webp" style="width: 100%; max-width: 450px;"></center><br>
+        <p>Recently, I have been asked by InnoGames to share my thoughts, opinions and behind-the-scenes insights about the new <b>Chapter 22 - Harbours of the Deep</b>. Below, you can find the official blog article containing all
+        my answers and various tips for this new chapter!</p>
+        <center><p><h4><a href="https://blog.innogames.com/from-first-impressions-to-hidden-gems-idavis-dives-into-elvenars-chapter-22/" target="_blank" class="alert-link">> Visit the article here <</a></h4></p></center>`,
+        "repeatAfter":1,//172800,
         "style":"warning",
         "duration":70,
-        "active":false,
+        "active":true,
         "priority":45
     },
     "17":{  // EVENT
