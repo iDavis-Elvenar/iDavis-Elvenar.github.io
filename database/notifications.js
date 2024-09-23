@@ -200,7 +200,7 @@ var notifications = {
         <p>Recently, I have been asked by InnoGames to share my thoughts, opinions and behind-the-scenes insights about the new <b>Chapter 22 - Harbours of the Deep</b>. Below, you can find the official blog article containing all
         my answers and various tips for this new chapter!</p>
         <center><p><h4><a href="https://blog.innogames.com/from-first-impressions-to-hidden-gems-idavis-dives-into-elvenars-chapter-22/" target="_blank" class="alert-link">> Visit the article here <</a></h4></p></center>`,
-        "repeatAfter":1,//172800,
+        "repeatAfter":172800,
         "style":"warning",
         "duration":70,
         "active":true,
