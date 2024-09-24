@@ -5,6 +5,7 @@ var dailyPrizes = {
         //"",
         //"", 2x combining catalyst
         "INS_KP_AW_20",
+        "A_Evt_October_XX_Smiling_Pumpkins",
     ],
 
     "theater_zodiac_xxiv_": [
