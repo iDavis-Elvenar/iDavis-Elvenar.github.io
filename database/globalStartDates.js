@@ -5,8 +5,8 @@ var eventStartDates = {
             "end_date": "__ _ 2024"
         },
         "beta": {
-            "start_date": "October 1st 2024",
-            "end_date": "October 2nd 2024"
+            "start_date": "September 25th 2024",
+            "end_date": "October 17th 2024"
         }
     },
     "theater_zodiac_xxiv_": {

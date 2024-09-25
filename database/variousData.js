@@ -162,7 +162,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "scroll_aquatic_xxiv_": "06/07/2024",
     "merge_dwarvengame_xxiv_": "07/03/2024",
     "theater_zodiac_xxiv_": "08/12/2024",
-    "tile_mistyforest_xxiv_": "10/01/2024",
+    "tile_mistyforest_xxiv_": "09/25/2024",
 }
 
 let questsLinks = {
@@ -663,7 +663,7 @@ var grIds = {
 }
 
 var newEventSign = {
-    "active": false,
+    "active": true,
     "img": "https://i.ibb.co/n0KBPgt/new-sign.png",
 }
 
