@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "tile_mistyforest_xxiv_": [
-        //"",
+        "A_Evt_October_XXII_Creepy_Clinic",
         //"",
         //"", 2x combining catalyst
         "INS_KP_AW_20",
