@@ -2,11 +2,12 @@ var dailyPrizes = {
 
     "tile_mistyforest_xxiv_": [
         "A_Evt_October_XXII_Creepy_Clinic",
-        //"",
+        "A_Evt_Halloween_XIX",
         //"", 2x combining catalyst
         "INS_KP_AW_20",
         "A_Evt_October_XX_Smiling_Pumpkins",
         "INS_REV_SQD_75",
+        "A_Evt_October_XXI_Phantom_Bear",
     ],
 
     "theater_zodiac_xxiv_": [
