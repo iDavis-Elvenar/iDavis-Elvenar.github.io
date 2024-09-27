@@ -8,6 +8,7 @@ var dailyPrizes = {
         "A_Evt_October_XX_Smiling_Pumpkins",
         "INS_REV_SQD_75",
         "A_Evt_October_XXI_Phantom_Bear",
+        "INS_RF_CN_100",
     ],
 
     "theater_zodiac_xxiv_": [
