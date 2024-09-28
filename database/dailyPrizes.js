@@ -9,6 +9,7 @@ var dailyPrizes = {
         "INS_REV_SQD_75",
         "A_Evt_October_XXI_Phantom_Bear",
         "INS_RF_CN_100",
+        "A_Evt_Tile_Mistyforest_XXIV_Eternal_Rivals",
     ],
 
     "theater_zodiac_xxiv_": [
