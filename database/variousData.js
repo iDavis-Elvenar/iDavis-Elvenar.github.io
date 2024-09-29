@@ -224,7 +224,7 @@ let eventsDurations = {
     "scroll_aquatic_xxiv_": 22,
     "merge_dwarvengame_xxiv_": 22,
     "theater_zodiac_xxiv_": 22,
-    "tile_mistyforest_xxiv_": 22,
+    "tile_mistyforest_xxiv_": 23,
 }
 
 let evoUpgradeCosts = {
