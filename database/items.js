@@ -161,5 +161,12 @@ var instants = {
         "image_small": "https://i.ibb.co/FHcY7ML/vitality-surge-small.png",
         "title": "Vitality Surge Instant",
         "production_type": "%"
+    },
+    "INS_COMBINING_CATALYST_": {
+        "name": "Combining Catalyst",
+        "image_big": "https://i.ibb.co/8YyxDbs/combiningcatalyst.png",
+        "image_small": "https://i.ibb.co/WnDfq7P/combining-catalyst.png",
+        "title": "Combining Catalyst",
+        "production_type": ""
     }
 }

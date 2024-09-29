@@ -464,7 +464,7 @@ function displayDailyPrizes() {
                     }
                     var td12 = document.createElement('td');
                     td12.style.width = "40%";
-                    if (filteredData[i]['id'].toLowerCase().includes("ins_kp_") || filteredData[i]['id'].toLowerCase().includes("ins_petfood_")) {
+                    if (filteredData[i]['id'].toLowerCase().includes("ins_kp_") || filteredData[i]['id'].toLowerCase().includes("ins_petfood_") || filteredData[i]['id'].toLowerCase().includes("ins_combining_catalyst_")) {
                         td12.innerHTML = `<b>Type:</b> Item<br>`;
                     } else if (filteredData[i]['id'].toLowerCase().includes("ins_")) {
                         td12.innerHTML = `<b>Type:</b> Instant<br>`;
