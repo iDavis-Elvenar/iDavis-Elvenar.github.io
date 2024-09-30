@@ -11,6 +11,7 @@ var dailyPrizes = {
         "INS_RF_CN_100",
         "A_Evt_Tile_Mistyforest_XXIV_Eternal_Rivals",
         "A_Evt_Halloween_Xviii",
+        "INS_UNIT_HR_10",
     ],
 
     "theater_zodiac_xxiv_": [
