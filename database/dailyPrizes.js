@@ -16,6 +16,7 @@ var dailyPrizes = {
         "INS_KP_{15}",
         "A_Evt_October_XXI_Spirit_Moose_Family",
         "INS_UNIT_LM_10",
+        "A_Evt_Tile_Mistyforest_XXIII_Pumpkins_Head_Rack",
     ],
 
     "theater_zodiac_xxiv_": [
