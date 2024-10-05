@@ -17,6 +17,12 @@ var dailyPrizes = {
         "A_Evt_October_XXI_Spirit_Moose_Family",
         "INS_UNIT_LM_10",
         "A_Evt_Tile_Mistyforest_XXIII_Pumpkins_Head_Rack",
+        "frog_defaultpremium_{10}",
+        "INS_UNIT_MC_HM_10",
+        "A_Evt_Tile_Mistyforest_XXIII_HideandSeek_Hollows",
+        "A_Evt_October_XX_Scarriage",
+        "INS_TR_AMT_480",
+        "A_Evt_Tile_Mistyforest_XXIII_Wraith_Unicorn",
     ],
 
     "theater_zodiac_xxiv_": [
