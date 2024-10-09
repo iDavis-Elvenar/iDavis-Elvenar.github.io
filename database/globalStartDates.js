@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "tile_mistyforest_xxiv_": {//All Howl's Eve 14.10. - 6.11., Winter Magic 5.12. - 6.1.
         "live": {
-            "start_date": "__ _ 2024",
-            "end_date": "__ _ 2024"
+            "start_date": "October 14th 2024",
+            "end_date": "November 6th 2024"
         },
         "beta": {
             "start_date": "September 25th 2024",
