@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Evt_Season_Secrets_XXIV_Ghost_Ship":"https://i.ibb.co/4S7xdk6/ghost-ship.png",
     "A_Evt_Tile_Mistyforest_XXIV_Eternal_Rivals":"https://i.ibb.co/fYmRPw3/eternal-rivals.png",
     "A_Evt_Tile_Mistyforest_XXIV_Nuisance_Burial_Service":"https://i.ibb.co/S7Bx53k/nuisance-burial-service.png",
     "A_Evt_Evo_Tile_Mistyforest_XXIV_Moonlight_Party":"https://i.ibb.co/SsMmM1J/moonlight-party.png",

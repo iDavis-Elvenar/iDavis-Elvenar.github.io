@@ -819,7 +819,6 @@ function generateSeasonPass() {
     let reader = new FileReader();
     reader.readAsText(file);
     var result = [];
-    var selectedSeasonId = document.getElementById("season_id").value;
     reader.onload = function () {
         let data = JSON.parse(reader.result);
         for (let i = 0; i < data[0]['components'][7]['levels'].length; i++) {
@@ -849,36 +848,35 @@ function generateSeasonChests() {
     let reader = new FileReader();
     reader.readAsText(file);
     var result = {};
-    var selectedSeasonId = document.getElementById("season_chests_id").value;
     reader.onload = function () {
         let data = JSON.parse(reader.result);
         var daily = [];
         var blessings = [];
-        for (let i = 0; i < data.length; i++) {
-            if (data[i]['id'].includes(selectedSeasonId)) {
-                if (data[i]['id'].includes("chest_daily")) {
-                    for (const reward of data[i]['chances']) {
-                        var item = {};
-                        item['type'] = reward['type'];
-                        item['subType'] = reward['subType'];
-                        item['amount'] = reward['amount'];
-                        item['percentage'] = reward['percentage'];
-                        daily.push(item);
-                    }
-                } else if (/^reward_pool_event_chest_[a-z]_/.test(data[i]['id'])) {
-                    var bless = {};
-                    bless['id'] = data[i]['id'];
-                    bless['rewards'] = [];
-                    for (const reward of data[i]['chances']) {
-                        var item = {};
-                        item['type'] = reward['type'];
-                        item['subType'] = reward['subType'];
-                        item['amount'] = reward['amount'];
-                        item['percentage'] = reward['percentage'];
-                        bless['rewards'].push(item);
-                    }
-                    blessings.push(bless);
+        
+        for (let i = 0; i < data[0]['components'][5]['weightedRewards'].length; i++) {
+            var currentChest = data[0]['components'][5]['weightedRewards'][i];
+            if (currentChest['id'].includes("chest_daily")) {
+                for (const reward of currentChest['chances']) {
+                    var item = {};
+                    item['type'] = reward['type'];
+                    item['subType'] = reward['subType'];
+                    item['amount'] = reward['amount'];
+                    item['percentage'] = reward['percentage'];
+                    daily.push(item);
                 }
+            } else if (/^reward_pool_event_chest_[a-z]_/.test(currentChest['id'])) {
+                var bless = {};
+                bless['id'] = currentChest['id'];
+                bless['rewards'] = [];
+                for (const reward of currentChest['chances']) {
+                    var item = {};
+                    item['type'] = reward['type'];
+                    item['subType'] = reward['subType'];
+                    item['amount'] = reward['amount'];
+                    item['percentage'] = reward['percentage'];
+                    bless['rewards'].push(item);
+                }
+                blessings.push(bless);
             }
         }
         result['daily'] = daily;
