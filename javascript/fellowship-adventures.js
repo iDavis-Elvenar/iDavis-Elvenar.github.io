@@ -298,48 +298,58 @@ function displayRewards() {
 
     let tbody = document.createElement("tbody");
 
+    let maxRewards = Math.max(...stageRewards[getSelectedFa()].map(stage => stage.length));
+
     for (let st = 0; st < stageRewards[getSelectedFa()].length; st++) {
         let tr1 = document.createElement('tr');
         let th = document.createElement('th');
         th.className = "text-center";
-        th.colSpan = 3;
+        th.colSpan = maxRewards;
         th.innerHTML = `Stage ${st+1}`;
         tr1.appendChild(th);
         tbody.appendChild(tr1);
 
+        // Row for images
         let tr2 = document.createElement('tr');
-        for (let re = 0; re < stageRewards[getSelectedFa()][st].length; re++) {
+        for (let re = 0; re < maxRewards; re++) {
             let td = document.createElement('td');
             td.className = "text-center";
-            td.style.width = "33%";
+            td.style.width = `${100 / maxRewards}%`;
             td.style.height = "120px";
-            td.innerHTML = `<img src="${stageRewards[getSelectedFa()][st][re]["img"]}" style="max-width: 120px;">`;
+
+            if (re < stageRewards[getSelectedFa()][st].length) {
+                td.innerHTML = `<img src="${stageRewards[getSelectedFa()][st][re]["img"]}" style="max-width: 120px;">`;
+            }
             tr2.appendChild(td);
         }
         tbody.appendChild(tr2);
 
         let tr3 = document.createElement('tr');
-        for (let re = 0; re < stageRewards[getSelectedFa()][st].length; re++) {
+        for (let re = 0; re < maxRewards; re++) {
             let td = document.createElement('td');
             td.className = "text-center";
-            td.style.width = "33%";
+            td.style.width = `${100 / maxRewards}%`;
             td.style.height = "120px";
             let divCol = document.createElement('div');
             divCol.className = "col-sm";
             let divRow1 = document.createElement('div');
             divRow1.className = "row h-90";
-            if (stageRewards[getSelectedFa()][st][re]["link"] !== "") {
-                divRow1.innerHTML = `<a href="${stageRewards[getSelectedFa()][st][re]["link"]}" class="text-link font-weight-bold" target="_blank">${stageRewards[getSelectedFa()][st][re]["text"]}</a>`;
-            } else {
-                divRow1.innerHTML = `<center>${stageRewards[getSelectedFa()][st][re]["text"]}</center>`;
-            }
-            divCol.appendChild(divRow1);
-            if (stageRewards[getSelectedFa()][st][re]["description"] !== "") {
-                let divRow2 = document.createElement('div');
-                divRow2.className = "row h-10";
-                divRow2.style.paddingTop = "30px";
-                divRow2.innerHTML = `<h7>${stageRewards[getSelectedFa()][st][re]["description"]}</h7>`;
-                divCol.appendChild(divRow2);
+
+            if (re < stageRewards[getSelectedFa()][st].length) {
+                if (stageRewards[getSelectedFa()][st][re]["link"] !== "") {
+                    divRow1.innerHTML = `<a href="${stageRewards[getSelectedFa()][st][re]["link"]}" class="text-link font-weight-bold" target="_blank">${stageRewards[getSelectedFa()][st][re]["text"]}</a>`;
+                } else {
+                    divRow1.innerHTML = `<center>${stageRewards[getSelectedFa()][st][re]["text"]}</center>`;
+                }
+                divCol.appendChild(divRow1);
+
+                if (stageRewards[getSelectedFa()][st][re]["description"] !== "") {
+                    let divRow2 = document.createElement('div');
+                    divRow2.className = "row h-10";
+                    divRow2.style.paddingTop = "30px";
+                    divRow2.innerHTML = `<h7>${stageRewards[getSelectedFa()][st][re]["description"]}</h7>`;
+                    divCol.appendChild(divRow2);
+                }
             }
             td.appendChild(divCol);
             tr3.appendChild(td);

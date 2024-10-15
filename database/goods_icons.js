@@ -303,6 +303,7 @@ var goods_icons = {
     "arcane_residue": "<img src='https://i.ibb.co/qDXppMz/fellowship-adventures-item19.png' title='Arcane Residue' style='width: 28px;'><br>",
     "enchanted_tiara": "<img src='https://i.ibb.co/Y3xnddG/fellowship-adventures-item21.png' title='Enchanted Tiara' style='width: 28px;'><br>",
     "wand": "<img src='https://i.ibb.co/Kqk0VBJ/fellowship-adventures-item11.png' title='Wand' style='width: 28px;'><br>",
+    "recycled_potion": "<img src='https://i.ibb.co/hsXJGzt/recycled-potion.png' title='Recycled Potion' style='width: 28px;'><br>",
     "b_ch19_aw1_shards": "<img src='https://i.ibb.co/TRBrG90/b-ch19-aw1-shards-small.png' title='Rune Shard for Vallorian Seal Tower'><br>",
     "b_ch19_aw2_shards": "<img src='https://i.ibb.co/sPvTV3X/b-ch19-aw2-shards-small.png' title='Rune Shard for Tree of Enlightenment'><br>",
     "b_ch20_aw1_shards": "<img src='https://i.ibb.co/Yh32gVQ/b-ch20-aw1-shards-small.png' title='Rune Shard for Ancestral Resting Place'><br>",

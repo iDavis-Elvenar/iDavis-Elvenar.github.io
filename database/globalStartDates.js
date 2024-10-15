@@ -191,7 +191,17 @@ var eventStartDates = {
     },
 }
 
-var faStartDates = { //August 29.8. - 4.9.
+var faStartDates = { //November 14.11. - 20.11.
+    "november_xxiv_": {
+        "live": {
+            "start_date": "__ _ 2024",
+            "end_date": "__ _ 2024"
+        },
+        "beta": {
+            "start_date": "October 17th 2024",
+            "end_date": "October 23rd 2024"
+        }
+    },
     "august_xxiv_": {
         "live": {
             "start_date": "August 29th 2024",
