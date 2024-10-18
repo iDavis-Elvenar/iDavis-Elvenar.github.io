@@ -1,5 +1,9 @@
 var dailyPrizes = {
 
+    "shuffle_postal_xxiv_": [
+        "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout",
+    ],
+
     "tile_mistyforest_xxiv_": [
         "A_Evt_October_XXII_Creepy_Clinic",
         "A_Evt_Halloween_XIX",
