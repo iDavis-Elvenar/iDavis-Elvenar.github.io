@@ -1,4 +1,11 @@
 var images_buildings = {
+    "A_Evt_Set_Shuffle_Postal_XXIV_A_Frosty_Fugue":"https://i.ibb.co/T43ph8B/frosty-fugue.png",
+    "A_Evt_Set_Shuffle_Postal_XXIV_Frostbeards_Monologue":"https://i.ibb.co/s5bDBXm/frostbeards-monologue.png",
+    "A_Evt_Set_Shuffle_Postal_XXIV_Revelers_Banquet":"https://i.ibb.co/qjk8p9D/revelers-banquet.png",
+    "A_Evt_Set_Shuffle_Postal_XXIV_The_Cold_Corner":"https://i.ibb.co/xDRxBp8/the-cold-corner.png",
+    "A_Evt_Evo_Set_Shuffle_Postal_XXIV_The_Act_of_Giving":"https://i.ibb.co/C13t0Nc/the-act-of-giving.png",
+    "A_Evt_Shuffle_Postal_XXIV_Polar_Beats":"https://i.ibb.co/YXYH7wW/polar-beats.png",
+    "A_Evt_Shuffle_Postal_XXIV_The_Discordant_Choir":"https://i.ibb.co/KrGYWpP/the-discordant-choir.png",
     "A_Evt_Season_Secrets_XXIV_Ghost_Ship":"https://i.ibb.co/4S7xdk6/ghost-ship.png",
     "A_Evt_Tile_Mistyforest_XXIV_Eternal_Rivals":"https://i.ibb.co/fYmRPw3/eternal-rivals.png",
     "A_Evt_Tile_Mistyforest_XXIV_Nuisance_Burial_Service":"https://i.ibb.co/S7Bx53k/nuisance-burial-service.png",

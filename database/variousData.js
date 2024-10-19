@@ -101,6 +101,7 @@ let eventBanners = {
     "merge_dwarvengame_xxiv_": "https://i.ibb.co/Twb7GYL/EL-akcia-august-2024-banner.jpg",
     "theater_zodiac_xxiv_": "https://i.ibb.co/0nVXGDW/EL-akcia-jese-2024-banner.jpg",
     "tile_mistyforest_xxiv_": "https://i.ibb.co/x77zMr3/EL-akcia-halloween-2024-banner.jpg",
+    "shuffle_postal_xxiv_": "https://i.ibb.co/MB6W7YV/EL-akcia-zima-2024-banner.png",
 }
 
 let eventVideos = {
@@ -163,6 +164,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "merge_dwarvengame_xxiv_": "07/03/2024",
     "theater_zodiac_xxiv_": "08/12/2024",
     "tile_mistyforest_xxiv_": "09/25/2024",
+    "shuffle_postal_xxiv_": "10/24/2024",
 }
 
 let questsLinks = {
@@ -194,6 +196,7 @@ let questsLinks = {
     "merge_dwarvengame_xxiv_": "bit.ly/BuildersOfHarmony2024",
     "theater_zodiac_xxiv_": "bit.ly/AutumnZodiac2024",
     "tile_mistyforest_xxiv_": "bit.ly/AllHowlsEve2024",
+    "shuffle_postal_xxiv_": "bit.ly/WinterMagic2024",
 }
 
 let eventsDurations = {
@@ -225,6 +228,7 @@ let eventsDurations = {
     "merge_dwarvengame_xxiv_": 22,
     "theater_zodiac_xxiv_": 22,
     "tile_mistyforest_xxiv_": 23,
+    "shuffle_postal_xxiv_": 32,
 }
 
 let evoUpgradeCosts = {
@@ -275,6 +279,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Merge_Dwarvengame_XXIV_Tower_of_Unity": "ins_evo_merge_dwarvengame_xxiv",
     "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": "ins_evo_theater_zodiac_xxiv",
     "A_Evt_Evo_Tile_Mistyforest_XXIV_Moonlight_Party": "ins_evo_tile_mistyforest_xxiv",
+    "A_Evt_Evo_Set_Shuffle_Postal_XXIV_The_Act_of_Giving": "ins_evo_shuffle_postal_xxiv",
 }
 
 var artifacts = {
@@ -319,6 +324,7 @@ var artifacts = {
     "ins_evo_merge_dwarvengame_xxiv": {"name": "Tower of Unity Artifact", "img": "https://i.ibb.co/7GgT6nj/ins-evo-merge-dwarvengame-xxiv.png"},
     "ins_evo_theater_zodiac_xxiv": {"name": "Glido, The Dreamweaver Artifact", "img": "https://i.ibb.co/9bsNngq/ins-evo-theater-zodiac-xxiv.png"},
     "ins_evo_tile_mistyforest_xxiv": {"name": "Moonlight Party Artifact", "img": "https://i.ibb.co/jMqWmnr/ins-evo-tile-mistyforest-xxiv.png"},
+    "ins_evo_shuffle_postal_xxiv": {"name": "The Act of Giving Artifact", "img": "https://i.ibb.co/thhNnKL/ins-evo-shuffle-postal-xxiv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -407,6 +413,7 @@ var setNames = {
     "tile_mistyforest_xxiii": "Soul Experiments",
     "shuffle_garden_xxiv": "Golden Hive",
     "scroll_aquatic_expiring": "Hoarder's Set",
+    "shuffle_postal_xxiv": "The Winter's Stage",
 }
 
 var discardBuildings = [
@@ -440,6 +447,7 @@ var eventsInfoIcons = {
     "merge_dwarvengame_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "theater_zodiac_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "tile_mistyforest_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "shuffle_postal_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -453,6 +461,7 @@ var eventsPaybackIcons = {
     "merge_dwarvengame_xxiv_": "https://i.ibb.co/VL6QWtp/merge-dwarvengame-xxiv-event-payback.png",
     "theater_zodiac_xxiv_": "https://i.ibb.co/YWgvz91/event-payback.png",
     "tile_mistyforest_xxiv_": "https://i.ibb.co/vwWd2RQ/event-payback.png",
+    "shuffle_postal_xxiv_": "https://i.ibb.co/gb1xL9T/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -467,6 +476,8 @@ var eventsAvatars = {
     "portraitEvtTileMistyforestXxivF1": "https://i.ibb.co/GJkbSpt/portrait-evt-tile-mistyforest-xxiv-f1.png",
     "portraitEvtTileMistyforestXxivM1": "https://i.ibb.co/YpJ8mm8/portrait-evt-tile-mistyforest-xxiv-m1.png",
     "portraitSeasonSecretsXxivF1": "https://i.ibb.co/tBYvKxm/portrait-season-secrets-xxiv-f1.png",
+    "portraitEvtShufflePostalXxivF1": "https://i.ibb.co/NnbTbb8/portrait-evt-shuffle-postal-xxiv-f1.png",
+    "portraitEvtShufflePostalXxivM1": "https://i.ibb.co/n0TbVc8/portrait-evt-shuffle-postal-xxiv-m1.png",
 }
 
 var leaguesBanners = {

@@ -70,7 +70,9 @@ var UNURIUM = {"id": 52, "value": null, "img": "https://i.ibb.co/5shvjhx/unurium
 var ZBOZI_ZIVOUCI = {"id": 53, "value": null, "img": "https://i.ibb.co/tLr4XnT/sentient-goods.png"};
 var ZBOZI_OSVICENE = {"id": 54, "value": null, "img": "https://i.ibb.co/80gHPP5/ascended-goods.png"};
 
-var POUZIJ_SPOJOVACI_CINIDLO = function (value) {return {"id": 55, "value": value, "img": "https://i.ibb.co/WnDfq7P/combining-catalyst.png"}}
+var POUZIJ_SPOJOVACI_CINIDLO = function (value) {return {"id": 55, "value": value, "img": "https://i.ibb.co/WnDfq7P/combining-catalyst.png"}};
+
+var POZEHNANI_JEDNOTKY = function (value) {return {"id": 56, "value": value, "img": "https://i.ibb.co/pvw2GBt/units.png"}};
 
 var AND = "and";
 var OR = "or";

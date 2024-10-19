@@ -203,7 +203,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":70,
-        "active":true,
+        "active":false,
         "priority":45
     },
     "17":{  // EVENT

@@ -48,6 +48,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Merge_Dwarvengame_XXIV_Tower_of_Unity": 9,
     "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": 9,
     "A_Evt_Evo_Tile_Mistyforest_XXIV_Moonlight_Party": 9,
+    "A_Evt_Evo_Set_Shuffle_Postal_XXIV_The_Act_of_Giving": 4,
 }
 
 function setAndReload(id) {

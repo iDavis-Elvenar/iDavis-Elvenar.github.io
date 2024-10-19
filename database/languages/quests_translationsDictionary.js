@@ -55,7 +55,8 @@ let questsDictionary = {
         52: "Získej nějaké množství unuria",
         53: "Získej nějaké množství živoucího zboží",
         54: "Získej nějaké množství osvíceného zboží",
-        55: "Použij _ d{spojovací činidlo,spojovací činidla,spojovacích činidel}"
+        55: "Použij _ d{spojovací činidlo,spojovací činidla,spojovacích činidel}",
+        56: "Použij _ d{požehnání na jednotky,požehnání na jednotky,požehnání na jednotky}",
     },
     "en" : {
         0: "Collect some amount of coins",
@@ -114,6 +115,7 @@ let questsDictionary = {
         53: "Collect some amount of sentient goods",
         54: "Collect some amount of ascended goods",
         55: "Use _ d{combining catalyst,combining catalysts}",
+        56: "Use _ d{unit refill instant,unit refill instants}",
     },
     "de" : {
         0: "Sammle eine Menge Münzen",
@@ -172,6 +174,7 @@ let questsDictionary = {
         53: "Sammle eine Menge Erwecktes Güter",
         54: "Sammle eine Menge Erleuchtete Güter",
         55: "Benutze _ d{Kombinationsauslöser,Kombinationsauslöser}",
+        56: "Use _ d{unit refill instant,unit refill instants}",
     },
     "fr" : {
         0: "Collectez une certaine quantité de pièces",
@@ -230,6 +233,7 @@ let questsDictionary = {
         53: "Collectez une certaine quantité de sensibles basiques",
         54: "Collectez une certaine quantité de d'ascension basiques",
         55: "Utilisez _ d{catalyseur de combinaison,catalyseurs de combinaison}",
+        56: "Use _ d{unit refill instant,unit refill instants}",
     },
     "hu" : {
         0: "Gyűjts bizonyos mennyiségű aranyat",
@@ -288,6 +292,7 @@ let questsDictionary = {
         53: "Gyűjts bizonyos mennyiségű Érző Áru",
         54: "Gyűjts bizonyos mennyiségű Felemelkedett Áru",
         55: "Használj _ kombináló katalizátort",
+        56: "Use _ unit refill instant",
     },
     "it" : {
     	0: "Ottieni una grande somma di Monete",
@@ -346,6 +351,7 @@ let questsDictionary = {
     	53: "Ottieni una buona somma di Beni Senzienti a scelta",
     	54: "Ottieni una buona somma di Beni Ascesi a scelta",
     	55: "Usa _ d{Catalizzatore Combinante,Catalizzatori Combinanti}",
+        56: "Use _ d{unit refill instant,unit refill instants}",
 	},
     "pl" : {
         0: "Zdobądź nieco monet",
@@ -404,6 +410,7 @@ let questsDictionary = {
         53: "Zdobądź nieco żywe towary",
         54: "Zdobądź nieco wzniosłe towary",
         55: "Użyj _ d{katalizator,katalizatory,katalizatorów}",
+        56: "Use _ d{unit refill instant,unit refill instants,unit refill instants}",
     },
     "ru" : {
         0: "Соберите хорошее количество монет",
@@ -462,5 +469,6 @@ let questsDictionary = {
         53: "Соберите хорошее количество sentient goods",
         54: "Соберите хорошее количество ascended goods",
         55: "Используйте _ d{комбинирующий катализатор,комбинирующего катализатора,комбинирующих катализаторов}",
+        56: "Use _ d{unit refill instant,unit refill instants,unit refill instants}",
     }
 }

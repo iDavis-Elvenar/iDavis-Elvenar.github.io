@@ -1183,7 +1183,9 @@ function generateQuestsAuto() {
                         questGathered[range].push('ZBOZI_ZIVOUCI');
                     } else if (task_desc.includes('Collect a good amount of Ascended Goods of your choice')) {
                         questGathered[range].push('ZBOZI_OSVICENE');
-                    
+                    } else if (task_raw.includes('use') && task_raw.includes('unit_instant_items')) {
+                        var value = extractOneNumber(task_raw);
+                        questGathered[range].push('POZEHNANI_JEDNOTKY('+value+')');
                     } else {
                         console.log(`Not handled quest:\n'${task_desc}'\n'${task_raw}'`);
                     }
