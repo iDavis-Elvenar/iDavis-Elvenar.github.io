@@ -2,6 +2,7 @@ var dailyPrizes = {
 
     "shuffle_postal_xxiv_": [
         "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout",
+        //The Discordant Choir
     ],
 
     "tile_mistyforest_xxiv_": [
