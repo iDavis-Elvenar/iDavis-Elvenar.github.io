@@ -5,6 +5,7 @@ var dailyPrizes = {
         "A_Evt_Shuffle_Postal_XXIV_The_Discordant_Choir",
         //""
         "A_Evt_ManaIcicle",
+        "INS_TR_AMT_480",
     ],
 
     "tile_mistyforest_xxiv_": [
