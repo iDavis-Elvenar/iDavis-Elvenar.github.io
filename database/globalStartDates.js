@@ -327,8 +327,8 @@ var faStartDates = { //November 14.11. - 20.11.
 var seasonStartDates = {  //Season of Joy 30.7. - 8.10., Season of Secrets 23.10. - 6.1.
     "october_xxiv_": {
         "live": {
-            "start_date": "__ _ 2024",
-            "end_date": "__ _ 2025"
+            "start_date": "October 23th 2024",
+            "end_date": "January 6th 2025"
         },
         "beta": {
             "start_date": "September 9th 2024",
