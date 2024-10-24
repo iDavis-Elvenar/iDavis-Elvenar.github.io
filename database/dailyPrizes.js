@@ -7,6 +7,7 @@ var dailyPrizes = {
         "A_Evt_ManaIcicle",
         "INS_TR_AMT_480",
         "A_Evt_Winter_XIX_Lemonade_Brewery",
+        "INS_REV_SQD_75",
     ],
 
     "tile_mistyforest_xxiv_": [
