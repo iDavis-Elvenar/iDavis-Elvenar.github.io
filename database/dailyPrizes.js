@@ -3,12 +3,13 @@ var dailyPrizes = {
     "shuffle_postal_xxiv_": [
         "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout",
         "A_Evt_Shuffle_Postal_XXIV_The_Discordant_Choir",
-        //""
+        "INS_RF_CN_100",
         "A_Evt_ManaIcicle",
         "INS_TR_AMT_480",
         "A_Evt_Winter_XIX_Lemonade_Brewery",
         "INS_REV_SQD_75",
         "A_Evt_December_XX_FrozenOwlCave",
+        "A_Evt_Winter_XIX_Ice_Track",
     ],
 
     "tile_mistyforest_xxiv_": [
