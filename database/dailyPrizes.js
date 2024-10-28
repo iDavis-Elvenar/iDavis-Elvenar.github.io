@@ -11,6 +11,7 @@ var dailyPrizes = {
         "A_Evt_December_XX_FrozenOwlCave",
         "A_Evt_Winter_XIX_Ice_Track",
         "INS_KP_{15}",
+        "A_Evt_December_XX_IceCreamConeFram",
     ],
 
     "tile_mistyforest_xxiv_": [
