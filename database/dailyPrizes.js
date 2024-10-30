@@ -13,6 +13,7 @@ var dailyPrizes = {
         "INS_KP_{15}",
         "A_Evt_December_XX_IceCreamConeFram",
         "INS_UNIT_HR_10",
+        "A_Evt_December_XXI_Magical_Supply_Station",
     ],
 
     "tile_mistyforest_xxiv_": [
