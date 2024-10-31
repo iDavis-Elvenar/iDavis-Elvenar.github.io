@@ -14,6 +14,7 @@ var dailyPrizes = {
         "A_Evt_December_XX_IceCreamConeFram",
         "INS_UNIT_HR_10",
         "A_Evt_December_XXI_Magical_Supply_Station",
+        "A_Evt_December_XX_GoblinSleigh",
     ],
 
     "tile_mistyforest_xxiv_": [
