@@ -15,6 +15,7 @@ var dailyPrizes = {
         "INS_UNIT_HR_10",
         "A_Evt_December_XXI_Magical_Supply_Station",
         "A_Evt_December_XX_GoblinSleigh",
+        "frog_defaultpremium_{15}",
     ],
 
     "tile_mistyforest_xxiv_": [
