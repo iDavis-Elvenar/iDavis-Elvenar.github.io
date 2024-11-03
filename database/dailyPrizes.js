@@ -17,6 +17,7 @@ var dailyPrizes = {
         "A_Evt_December_XX_GoblinSleigh",
         "frog_defaultpremium_{15}",
         "A_Evt_December_XXII_Brisk_Market",
+        "INS_COMBINING_CATALYST_{3}",
     ],
 
     "tile_mistyforest_xxiv_": [
