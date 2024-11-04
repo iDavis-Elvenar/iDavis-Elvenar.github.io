@@ -18,6 +18,7 @@ var dailyPrizes = {
         "frog_defaultpremium_{15}",
         "A_Evt_December_XXII_Brisk_Market",
         "INS_COMBINING_CATALYST_{3}",
+        "A_Evt_Winter_XIX_Candy_Cane_Factory",
     ],
 
     "tile_mistyforest_xxiv_": [
