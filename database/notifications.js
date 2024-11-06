@@ -90,14 +90,14 @@ var notifications = {
     "9":{  // FELLOWSHIP ADVENTURES
         "id":9,
         "text":`<h4 class="alert-heading">New round of Fellowship Adventures is coming very soon!</h4>
-  <p>The next round of Fellowship Adventures is getting close and will soon start on Live servers!</p>
+  <p>The next round of Fellowship Adventures - <b>with a brand-new layout</b> - is getting close and will soon start on Live servers!</p>
   <hr>
   <center><img src="https://i.ibb.co/fMX3t5B/fellowship-adventures-banner.png" style="width: 40%;"></center><br>
     <center><p>Start Date, Quests, Waypoints and Rewards are now available in the <img src="https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/fellowship-adventures.html" class="alert-link">Fellowship Adventures</a> page!<br></p></center>`,
         "repeatAfter":86400,
         "style":"warning",
         "duration":45,
-        "active":false,
+        "active":true,
         "priority":40
     },
     "10":{  // SEASON
