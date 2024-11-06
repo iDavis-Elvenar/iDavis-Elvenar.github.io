@@ -20,6 +20,7 @@ var dailyPrizes = {
         "INS_COMBINING_CATALYST_{3}",
         "A_Evt_Winter_XIX_Candy_Cane_Factory",
         "INS_UNIT_HM_10",
+        "A_Evt_Winter_Garden",
     ],
 
     "tile_mistyforest_xxiv_": [
