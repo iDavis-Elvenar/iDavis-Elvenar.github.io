@@ -1,8 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2024" : [
-            ["Winter Magic","shuffle_postal_xxiv_",false,false],
-            ["All Howl's Eve","tile_mistyforest_xxiv_",true,false],
+            ["Winter Magic","shuffle_postal_xxiv_",true,false],
+            ["All Howl's Eve","tile_mistyforest_xxiv_",false,false],
             ["Autumn Zodiac","theater_zodiac_xxiv_",false,false],
             ["Builders of Harmony","merge_dwarvengame_xxiv_",false,false],
             ["Marine Marvels","scroll_aquatic_xxiv_",false,false],
@@ -65,8 +65,8 @@ var allEvents = {
     },
     "all_events" : {
         "2024" : [
-            ["Winter Magic","shuffle_postal_xxiv_",false,false],
-            ["All Howl's Eve","tile_mistyforest_xxiv_",true,false],
+            ["Winter Magic","shuffle_postal_xxiv_",true,false],
+            ["All Howl's Eve","tile_mistyforest_xxiv_",false,false],
             ["Autumn Zodiac","theater_zodiac_xxiv_",false,false],
             ["Builders of Harmony","merge_dwarvengame_xxiv_",false,false],
             ["Marine Marvels","scroll_aquatic_xxiv_",false,false],
