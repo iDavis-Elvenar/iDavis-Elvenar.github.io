@@ -21,6 +21,7 @@ var dailyPrizes = {
         "A_Evt_Winter_XIX_Candy_Cane_Factory",
         "INS_UNIT_HM_10",
         "A_Evt_Winter_Garden",
+        "INS_KP_AW_20",
     ],
 
     "tile_mistyforest_xxiv_": [
