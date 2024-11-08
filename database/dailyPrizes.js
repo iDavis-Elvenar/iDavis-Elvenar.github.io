@@ -22,6 +22,7 @@ var dailyPrizes = {
         "INS_UNIT_HM_10",
         "A_Evt_Winter_Garden",
         "INS_KP_AW_20",
+        "A_Evt_Winter_Xviii_Candy_Hut",
     ],
 
     "tile_mistyforest_xxiv_": [
