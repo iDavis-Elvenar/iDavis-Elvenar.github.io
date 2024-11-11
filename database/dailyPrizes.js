@@ -23,9 +23,16 @@ var dailyPrizes = {
         "A_Evt_Winter_Garden",
         "INS_KP_AW_20",
         "A_Evt_Winter_Xviii_Candy_Hut",
-        //"",
+        "A_Evt_IceVillage",
         "A_Evt_December_XXI_Snowball_Hut",
         "A_Evt_Winter_1Tree",
+        "A_Evt_Winter_XIX_Crane",
+        "INS_UNIT_MA_10",
+        "A_Evt_Winter_XIX_Elvenade_Distributor",
+        "INS_KP_{15}",
+        "A_Evt_December_XXII_Fragile_Bubble",
+        "A_Evt_Winter_3Tree",
+        "A_Evt_Shuffle_Postal_XXIV_The_Discordant_Choir",
     ],
 
     "tile_mistyforest_xxiv_": [
