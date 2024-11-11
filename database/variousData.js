@@ -421,6 +421,7 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_",
+    "scroll_sorcerers_xxv",
 ]
 
 var forceNonEventBuildings = [
