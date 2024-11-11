@@ -23,6 +23,9 @@ var dailyPrizes = {
         "A_Evt_Winter_Garden",
         "INS_KP_AW_20",
         "A_Evt_Winter_Xviii_Candy_Hut",
+        //"",
+        "A_Evt_December_XXI_Snowball_Hut",
+        "A_Evt_Winter_1Tree",
     ],
 
     "tile_mistyforest_xxiv_": [
