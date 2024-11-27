@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "shuffle_postal_xxiv_": {//Winter Magic 5.12. - 6.1.
         "live": {
-            "start_date": "__ _ 2024",
-            "end_date": "__ _ 2025"
+            "start_date": "December 5th 2024",
+            "end_date": "January 6th 2025"
         },
         "beta": {
             "start_date": "October 24th 2024",
