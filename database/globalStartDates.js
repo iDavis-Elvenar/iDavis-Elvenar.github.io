@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "shuffle_postal_xxiv_": {//Winter Magic 5.12. - 6.1.
+    "scroll_sorcerers_xxv_": {//Magic of Yore 23.1. - 13.2.
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "December 3rd 2024",
+            "end_date": "December 24th 2024"
+        }
+    },
+    "shuffle_postal_xxiv_": {
         "live": {
             "start_date": "December 5th 2024",
             "end_date": "January 6th 2025"

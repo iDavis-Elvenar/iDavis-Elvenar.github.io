@@ -365,6 +365,16 @@ function handleBuildingsJSON() {
                                         b['feedingEffect'] = effectConfigs[pet];
                                     }
                                 }
+                                //PRIDAJ TRANSCENDENCE AK EXISTUJE
+                                for (let effect = 0; effect < effectConfigs.length; effect++) {
+                                    if (effectConfigs[effect]["buildingID"] === b["id"] &&
+                                    effectConfigs[effect]["typeEffectConfig"] === "expiring") {
+                                        if (!b.hasOwnProperty('transcendence')) {
+                                            b['transcendence'] = [];
+                                        }
+                                        b['transcendence'].push(effectConfigs[effect]);
+                                    }
+                                }
                                 //PRIDAJ EXPIRING AK EXISTUJE
                                 for (let exp = 0; exp < effectConfigs.length; exp++) {
                                     if (effectConfigs[exp]["buildingID"] === b["id"] &&
@@ -646,6 +656,9 @@ function generateEffectConfigs() {
                         expiring["iconID"] = data[i]["metadata"]["iconId"];
                         expiring["name"] = data[i]["metadata"]["name"];
                         expiring["format"] = data[i]["metadata"]["format"];
+                    }
+                    if (data[i].hasOwnProperty("valuesStages")) {
+                        expiring["valuesStages"] = data[i]["valuesStages"];
                     }
                     for (let j = 0; j < data2.length; j++) {
                         console.log(data[i]);

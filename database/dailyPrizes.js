@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "scroll_sorcerers_xxv_": [
+        "A_Evt_Scroll_Sorcerers_XXV_Scorching_Snacks",
+        "A_Evt_January_XXII_Spectral_Moths",
+        "INS_UNIT_TG_MA_10",
+        "A_Evt_January_XXIII_Potion_Distribution_Post",
+        "INS_KP_{15}",
+        "INS_RF_CN_50",
+        "A_Evt_Scroll_Sorcerers_XXV_Froggy_Soda",
+        "INS_RF_SPL_50",
+        "A_Evt_January_XXIII_Experimental_Distillery",
+        "INS_REV_SQD_75",
+        "A_Evt_Scroll_Sorcerers_XXV_Scorching_Snacks",
+        "INS_UNIT_MC_MA_10",
+        "A_Evt_June_XXI_Hungry_Treasure",
+        "INS_KP_AW_20",
+        "A_Evt_July_XX_Copper_Dragon",
+        "INS_KP_{15}",
+        "A_Evt_June_XXI_Active_Fissure",
+        "frog_defaultpremium_{10}",
+        "A_Evt_June_XXI_Unexpected_Morning",
+        "INS_UNIT_MA_10",
+        "A_Evt_July_XX_Golem_Cave",
+    ],
+
     "shuffle_postal_xxiv_": [
         "A_Evt_Shuffle_Postal_XXIII_Adaptation_Workout",
         "A_Evt_Shuffle_Postal_XXIV_The_Discordant_Choir",

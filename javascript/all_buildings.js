@@ -49,6 +49,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": 9,
     "A_Evt_Evo_Tile_Mistyforest_XXIV_Moonlight_Party": 9,
     "A_Evt_Evo_Set_Shuffle_Postal_XXIV_The_Act_of_Giving": 4,
+    "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence": 6,
 }
 
 function setAndReload(id) {
@@ -148,7 +149,7 @@ function readBuildingsJSON() {
                                     <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}s<br>
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
-                                    <b>${langUI("Expiring:")}</b> ${expiringDuration}<br>
+                                    <b>${langUI("Expiring:")}</b> ${filteredData[i].hasOwnProperty('transcendence') ? '-' : expiringDuration}<br>
                                     <b>${langUI("Upgrade costs:")}</b> <img src="${artifacts[evoUpgradeCosts[filteredData[i]['id']]]?.["img"]}" style="width: 28px; margin-bottom: 3px;"> ${artifacts[evoUpgradeCosts[filteredData[i]['id']]]?.["name"]}<br>`;
                     if (feedingEffectsDescriptions.hasOwnProperty(filteredData[i]['id'])) {
                         td12.innerHTML += `<b>Feeding effect:</b> ${feedingEffectsDescriptions[filteredData[i]['id']]}<br>`;
@@ -594,6 +595,52 @@ function readBuildingsJSON() {
                     petTable.appendChild(petBody);
                     petDiv.appendChild(petTable);
                     div.appendChild(petDiv);
+                }
+                // TRANSCENDENCE
+                if (isEvo && filteredData[i].hasOwnProperty("transcendence")) {
+                    var transData = filteredData[i]["transcendence"];
+                    var transDiv = document.createElement('div');
+                    transDiv.className = 'bbTable';
+                    transDiv.style.marginTop = "20px";
+                    var transCenter = document.createElement('center');
+                    var transImg = document.createElement('img');
+                    transImg.src = "images/general/icon_transcendence_active.png";
+                    transCenter.appendChild(transImg);
+                    transDiv.appendChild(transCenter);
+                    var transUl = document.createElement('ul');
+                    var transLi1 = document.createElement('li');
+                    transLi1.innerHTML = `<b>Transcendence effect: </b>activate with ${goods_icons["volatile_sigils"]}`;
+                    transUl.appendChild(transLi1);
+                    var transLi2 = document.createElement('li');
+                    transLi2.innerHTML = `<b>Duration: </b>${transData[0]['duration']/60/60/24}d`;
+                    transUl.appendChild(transLi2);
+
+                    let transEffectsInStageAvailable = 0;
+                    for (let transEffect = 0; transEffect < transData.length; transEffect++) {
+                        var transN = document.createElement('li');
+                        if (transData[transEffect]['valuesStages'].hasOwnProperty(displayStage+1)) {
+                            if (transData[transEffect]['format'] === 'sign_percentage') {
+                                transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]*100}%`;
+                                const nthProductionId = filteredData[i]['all_productions'].find(prod => 
+                                    Object.keys(filteredData[i]['chapters'][getPresetChapter()][displayStage]).includes(prod[0]) && 
+                                    !prioritiesNonProduction.includes(prod[0])
+                                )[0]; // tato nula aktualne vybera prvu produkciu. Mozno to bude treba v buducnosti zmenit a parametrizovat podla parametra targets v effectConfigs
+                                transN.innerHTML += ` ${goods_icons[nthProductionId]}`;
+                            } else if (transData[transEffect]['format'] === 'default') {
+                                transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]}x`;
+                                transN.innerHTML += ` ${goods_icons[transData[transEffect]['iconID']]}`;
+                            }
+                            transUl.appendChild(transN);
+                            transEffectsInStageAvailable++;
+                        }
+                    }
+                    if (transEffectsInStageAvailable === 0) {
+                        var transN = document.createElement('li');
+                        transN.innerHTML = `No transcendence effects are available at this stage.`;
+                        transUl.appendChild(transN);
+                    }
+                    transDiv.appendChild(transUl);
+                    div.appendChild(transDiv);
                 }
                 //WEIGHTED REWARDS
                 if (filteredData[i].hasOwnProperty("weightedRewards")) {

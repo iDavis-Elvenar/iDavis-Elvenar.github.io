@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence":"https://i.ibb.co/djCVTzn/place-of-convergence.png",
+    "A_Evt_Scroll_Sorcerers_XXV_Froggy_Soda":"https://i.ibb.co/CJHRBFW/froggy-soda.png",
+    "A_Evt_Scroll_Sorcerers_XXV_Scorching_Snacks":"https://i.ibb.co/swXgMpw/scorching-snacks.png",
+    "A_Evt_Scroll_Sorcerers_XXV_Scrying_Stream":"https://i.ibb.co/9GJF70P/scrying-stream.png",
     "A_Evt_Set_Shuffle_Postal_XXIV_A_Frosty_Fugue":"https://i.ibb.co/T43ph8B/frosty-fugue.png",
     "A_Evt_Set_Shuffle_Postal_XXIV_Frostbeards_Monologue":"https://i.ibb.co/s5bDBXm/frostbeards-monologue.png",
     "A_Evt_Set_Shuffle_Postal_XXIV_Revelers_Banquet":"https://i.ibb.co/qjk8p9D/revelers-banquet.png",

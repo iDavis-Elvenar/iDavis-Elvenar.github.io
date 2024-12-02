@@ -102,6 +102,7 @@ let eventBanners = {
     "theater_zodiac_xxiv_": "https://i.ibb.co/0nVXGDW/EL-akcia-jese-2024-banner.jpg",
     "tile_mistyforest_xxiv_": "https://i.ibb.co/x77zMr3/EL-akcia-halloween-2024-banner.jpg",
     "shuffle_postal_xxiv_": "https://i.ibb.co/MB6W7YV/EL-akcia-zima-2024-banner.png",
+    "scroll_sorcerers_xxv_": "https://i.ibb.co/KWKySL5/EL-akcia-janu-r-2025-banner.png",
 }
 
 let eventVideos = {
@@ -165,6 +166,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "theater_zodiac_xxiv_": "08/12/2024",
     "tile_mistyforest_xxiv_": "09/25/2024",
     "shuffle_postal_xxiv_": "10/24/2024",
+    "scroll_sorcerers_xxv_": "12/3/2024",
 }
 
 let questsLinks = {
@@ -197,6 +199,7 @@ let questsLinks = {
     "theater_zodiac_xxiv_": "bit.ly/AutumnZodiac2024",
     "tile_mistyforest_xxiv_": "bit.ly/AllHowlsEve2024",
     "shuffle_postal_xxiv_": "bit.ly/WinterMagic2024",
+    "scroll_sorcerers_xxv_": "bit.ly/MagicOfYore2025",
 }
 
 let eventsDurations = {
@@ -229,6 +232,7 @@ let eventsDurations = {
     "theater_zodiac_xxiv_": 22,
     "tile_mistyforest_xxiv_": 23,
     "shuffle_postal_xxiv_": 32,
+    "scroll_sorcerers_xxv_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -280,6 +284,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": "ins_evo_theater_zodiac_xxiv",
     "A_Evt_Evo_Tile_Mistyforest_XXIV_Moonlight_Party": "ins_evo_tile_mistyforest_xxiv",
     "A_Evt_Evo_Set_Shuffle_Postal_XXIV_The_Act_of_Giving": "ins_evo_shuffle_postal_xxiv",
+    "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence": "ins_evo_scroll_sorcerers_xxv",
 }
 
 var artifacts = {
@@ -325,6 +330,7 @@ var artifacts = {
     "ins_evo_theater_zodiac_xxiv": {"name": "Glido, The Dreamweaver Artifact", "img": "https://i.ibb.co/9bsNngq/ins-evo-theater-zodiac-xxiv.png"},
     "ins_evo_tile_mistyforest_xxiv": {"name": "Moonlight Party Artifact", "img": "https://i.ibb.co/jMqWmnr/ins-evo-tile-mistyforest-xxiv.png"},
     "ins_evo_shuffle_postal_xxiv": {"name": "The Act of Giving Artifact", "img": "https://i.ibb.co/thhNnKL/ins-evo-shuffle-postal-xxiv.png"},
+    "ins_evo_scroll_sorcerers_xxv": {"name": "Place of Convergence Artifact", "img": "https://i.ibb.co/jMw8qtB/ins-evo-scroll-sorcerers-xxv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -420,8 +426,7 @@ var discardBuildings = [
     "A_Evt_Expiring_NegotiationDebuff",
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
-    "A_Evt_Trans_",
-    "scroll_sorcerers_xxv",
+    "A_Evt_Trans_Evo_N_Dance",
 ]
 
 var forceNonEventBuildings = [
@@ -449,6 +454,7 @@ var eventsInfoIcons = {
     "theater_zodiac_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "tile_mistyforest_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "shuffle_postal_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "scroll_sorcerers_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -463,6 +469,7 @@ var eventsPaybackIcons = {
     "theater_zodiac_xxiv_": "https://i.ibb.co/YWgvz91/event-payback.png",
     "tile_mistyforest_xxiv_": "https://i.ibb.co/vwWd2RQ/event-payback.png",
     "shuffle_postal_xxiv_": "https://i.ibb.co/gb1xL9T/event-payback.png",
+    "scroll_sorcerers_xxv_": "https://i.ibb.co/Jpb1pXB/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -479,6 +486,8 @@ var eventsAvatars = {
     "portraitSeasonSecretsXxivF1": "https://i.ibb.co/tBYvKxm/portrait-season-secrets-xxiv-f1.png",
     "portraitEvtShufflePostalXxivF1": "https://i.ibb.co/NnbTbb8/portrait-evt-shuffle-postal-xxiv-f1.png",
     "portraitEvtShufflePostalXxivM1": "https://i.ibb.co/n0TbVc8/portrait-evt-shuffle-postal-xxiv-m1.png",
+    "portraitEvtScrollSorcerersXxvF1": "https://i.ibb.co/VJ1Mmgc/portrait-evt-scroll-sorcerers-xxv-f1.png",
+    "portraitEvtScrollSorcerersXxvM1": "https://i.ibb.co/gWyMptt/portrait-evt-scroll-sorcerers-xxv-m1.png",
 }
 
 var leaguesBanners = {
@@ -498,6 +507,10 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "scroll_sorcerers_xxv_": [
+        {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/rv5vH4Z/chest8.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html", "releaseDate":"12/10/2024"},
+        {"id":"sigils", "name":"Effects", "img":"https://i.ibb.co/Pw9HpQ1/icon-transcendence-active.png", "img_width":"32", "img_style":"margin-left: -2px; margin-right: 8px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#transcendence", "file":"transcendence.html"},
+    ],
     "tile_mistyforest_xxiv_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/NWtcHK0/tool-column.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
         {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/FK9Wd7N/event-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 12px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},

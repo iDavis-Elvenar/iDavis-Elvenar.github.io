@@ -2203,6 +2203,13 @@ function createPrizeCell(prize, cell) {
         kpImg.style.maxWidth = "60px";
         cell.appendChild(kpImg);
         cell.innerHTML += `<br>${prize.amount}x ${kpName}`;
+    } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_rf_cn_')) {
+        let rfName = `Coin Rain ${prize.subType.split('_')[prize.subType.split('_').length-1]}%`;
+        let rfImg = document.createElement('img');
+        rfImg.src = "https://i.ibb.co/7g1KCmv/ins-rf-cn.png";
+        rfImg.style.maxWidth = "60px";
+        cell.appendChild(rfImg);
+        cell.innerHTML += `<br>${prize.amount}x ${rfName}`;
     } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_rev_sqd_')) {
         let revName = `Vitality Surge ${prize.subType.split('_')[prize.subType.split('_').length-1]}`;
         let revImg = document.createElement('img');

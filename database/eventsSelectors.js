@@ -1,5 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
+        "2025" : [
+            ["Magic of Yore","scroll_sorcerers_xxv_",false,false],
+        ],
         "2024" : [
             ["Winter Magic","shuffle_postal_xxiv_",true,false],
             ["All Howl's Eve","tile_mistyforest_xxiv_",false,false],
@@ -64,6 +67,9 @@ var allEvents = {
         ]
     },
     "all_events" : {
+        "2025" : [
+            ["Magic of Yore","scroll_sorcerers_xxv_",false,false],
+        ],
         "2024" : [
             ["Winter Magic","shuffle_postal_xxiv_",true,false],
             ["All Howl's Eve","tile_mistyforest_xxiv_",false,false],

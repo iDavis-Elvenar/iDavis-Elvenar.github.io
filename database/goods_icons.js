@@ -376,6 +376,7 @@ var goods_icons = {
     "canned_goods": "<img src='https://i.ibb.co/BzwXBhX/canned-goods-small.png' title='Canned Goods'><br>",
     "eldian_sapphire": "<img src='https://i.ibb.co/Pmk430t/eldian-sapphire.png' title='Eldian Sapphire'><br>",
     "blueprint": "<img src='https://i.ibb.co/9gjsJbY/blueprint.png' title='Blueprint' style='width: 24px;'><br>",
+    "volatile_sigils": "<img src='https://i.ibb.co/pwnK74T/volatile-sigils.png' title='Volatile Sigils' style='width: 24px;'><br>",
 }
 
 var xlImages = {
@@ -393,4 +394,5 @@ var xlImages = {
     "blueprint": "https://i.ibb.co/9gjsJbY/blueprint.png",
     "combiningcatalyst": "https://i.ibb.co/8YyxDbs/combiningcatalyst.png",
     "knowledge_points": "https://i.ibb.co/bmBcTNB/knowledge-points.png",
+    "volatile_sigils": "https://i.ibb.co/ZH6SMN8/volatile-sigils-xl.png",
 }
