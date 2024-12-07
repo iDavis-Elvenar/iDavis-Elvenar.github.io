@@ -324,6 +324,7 @@ var artifacts = {
     "ins_evo_tile_mistyforest_xxiii": {"name": "Soul Lab Artifact", "img": "https://i.ibb.co/556Xv0F/ins-evo-tile-mistyforest-xxiii.png"},
     "ins_evo_winter_xix": {"name": "Gingerbread Artifact", "img": "https://i.ibb.co/pwqRCHh/ins-evo-winter-xix.png"},
     "ins_evo_easter_xxiv": {"name": "Verdant Phoenix Artifact", "img": "https://i.ibb.co/xqvS2q4/ins-evo-easter-xxiv.png"},
+    "ins_evo_theater_easter_xxiv": {"name": "Verdant Phoenix Artifact", "img": "https://i.ibb.co/xqvS2q4/ins-evo-easter-xxiv.png"},
     "ins_evo_tile_amuni_xxiv": {"name": "Purring Sanctum Artifact", "img": "https://i.ibb.co/7n4f4TM/ins-evo-tile-amuni-xxiv.png"},
     "ins_evo_scroll_aquatic_xxiv": {"name": "Puff's Nautical Theater Artifact", "img": "https://i.ibb.co/0XYBcF6/ins-evo-scroll-aquatic-xxiv.png"},
     "ins_evo_merge_dwarvengame_xxiv": {"name": "Tower of Unity Artifact", "img": "https://i.ibb.co/7GgT6nj/ins-evo-merge-dwarvengame-xxiv.png"},

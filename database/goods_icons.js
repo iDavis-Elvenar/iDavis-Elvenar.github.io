@@ -377,6 +377,8 @@ var goods_icons = {
     "eldian_sapphire": "<img src='https://i.ibb.co/Pmk430t/eldian-sapphire.png' title='Eldian Sapphire'><br>",
     "blueprint": "<img src='https://i.ibb.co/9gjsJbY/blueprint.png' title='Blueprint' style='width: 24px;'><br>",
     "volatile_sigils": "<img src='https://i.ibb.co/pwnK74T/volatile-sigils.png' title='Volatile Sigils' style='width: 24px;'><br>",
+    "b_ch22_aw1_shards": "<img src='https://i.ibb.co/vkhgkGn/b-ch22-aw1-shards.png' title='Rune Shard for Tournament Fan Curve'><br>",
+    "b_ch22_aw2_shards": "<img src='https://i.ibb.co/wCjyvJy/b-ch22-aw2-shards.png' title='Rune Shard for Altar of Eternity'><br>",
 }
 
 var xlImages = {
