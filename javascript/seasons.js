@@ -517,9 +517,7 @@ function displayPass() {
                     });
                 } else if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'good') {
                     let subType = seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'];
-                    if (subType === 'knowledge_points') {
-                        tdReward.innerHTML = `<img src="https://i.ibb.co/sKGvKDY/knowledge-points-big.png">`;
-                    }
+                    tdReward.innerHTML = `<img src="${xlImages[subType]}">`;
                     tdReward.innerHTML += `<br>${seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]["amount"]}x`;
                 } else if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'reward_selection_kit') {
                     let subType = seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'];

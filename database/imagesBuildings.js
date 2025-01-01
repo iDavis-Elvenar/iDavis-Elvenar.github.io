@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Evt_Season_Dreams_XXV_A_Dream_of_Thorns": "https://i.ibb.co/PC7PMwz/dream-of-thorns.png",
     "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence":"https://i.ibb.co/djCVTzn/place-of-convergence.png",
     "A_Evt_Scroll_Sorcerers_XXV_Froggy_Soda":"https://i.ibb.co/CJHRBFW/froggy-soda.png",
     "A_Evt_Scroll_Sorcerers_XXV_Scorching_Snacks":"https://i.ibb.co/swXgMpw/scorching-snacks.png",

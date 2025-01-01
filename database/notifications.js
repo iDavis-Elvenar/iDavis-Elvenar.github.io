@@ -150,25 +150,18 @@ var notifications = {
     },
     "14":{  // FEEDBACK SURVEY
         "id":14,
-        "text":`<h4 class="alert-heading">📜 A Message from iDavis (July 15th) 📜</h4>
+        "text":`<h4 class="alert-heading">📜 A Message from iDavis (January 1st) 📜</h4>
         <hr>
-        <p>Hello everyone, I hope this message finds you well. I want to take a moment address the recent development of the website and share with you some latest updates.</p>
-        <p>First, I want to thank every single visitor of <b>iDavis-Elvenar</b> for your continued support. Over the last few months, the website has continued to grow, maintaining its number one position among all fan sites for Elvenar.
-        This milestone would not have been possible without your dedication to spreading the website among fellow players and your willingness to provide invaluable feedback and suggestions for improvement! I'm always curious about your thoughts,
-        so please don't hesitate to reach out using my <a href="https://idavis-elvenar.com/contact.html" target="_blank" class="alert-link">Contact Page</a>!</p>
-        <p>Over the last few weeks, I have added two major components to the website: an overview of the Grand and Royal Prizes <img src="https://i.ibb.co/vsxWncK/chest-silver.png" style="width: 24px">, which will now be part of every event, and the Italian language option <img src="https://i.ibb.co/MnMTksr/lang-it.png" style="width: 24px">, 
-        allowing Italian players to access tips and resources in their native language. I am currently working on another addition - the Leagues <img src="https://i.ibb.co/LCf0Sf6/leagues.png" style="width: 24px">, which will become a permanent tab for events, debuting in the upcoming event, 
-        Builders of Harmony (which is already in the testing phase on Beta). I invite you to share your suggestions and feedback on what you would like to see next by reaching out 
-        through my <a href="https://idavis-elvenar.com/contact.html" target="_blank" class="alert-link">Contact Page</a>.</p>
-        <p>In the meantime - the Elvenar team continues to work on the upcoming Chapter 22. According to the latest news shared on <b>Discord</b>, it is expected to reach the testing phase on Beta in August. If the testing phase takes the same amount of time as usual,
-        we can anticipate that Chapter 22 will hit the live servers in late August or early September this year. Keep watching this website, as I will ensure that all the relevant information are properly covered, 
-        and you can find a wealth of tips and tricks to begin with the new discoveries of Elvenar!</p>
-        <p>Until then, thank you for reading, have fun with the game and stay tuned for more updates and content!</p>
+        <p>Hello everyone, I hope this message finds you well. First and foremost, happy new year, and I wish you all the best in 2025!</p>
+        <p>This year, Elvenar will celebrate a monumental milestone - its 10th anniversary! No doubt that we have some exciting updates on the way, and as all of this unfolds throughout the year, 
+        I'm thrilled to share that my website will continue to be a hub for all things Elvenar. Expect new updates, guides, tips, and features that will enhance your gaming experience.</p>
+        <p>I would like to extend a heartfelt thank you to all the visitors for your continued support and for sharing this website with fellow Elvenar players. Your interest truly motivates me to deliver even more valuable and engaging content.</p>
+        <p>Thank you for reading, have fun with the game and let's look forward to the exciting updates that will shape the year!</p>
         <p>iDavis</p>`,
         "repeatAfter":172800,
         "style":"warning",
         "duration":300,
-        "active":false,
+        "active":true,
         "priority":120
     },
     "15":{  // SHORTS TEASER
@@ -218,7 +211,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":60,
-        "active":true,
+        "active":false,
         "priority":50
     },
 }
