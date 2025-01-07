@@ -1,5 +1,5 @@
 var eventStartDates = { 
-    "scroll_sorcerers_xxv_": {//Magic of Yore 23.1. - 13.2.
+    "scroll_sorcerers_xxv_": {//Magic of Yore 23.1. - 13.2., Elvarian Cook Off 21.2. - 14.3.
         "live": {
             "start_date": "__ _ 2025",
             "end_date": "__ _ 2025"
