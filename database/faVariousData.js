@@ -88,7 +88,7 @@ var stageRewards = {
         [
             {"img":"https://i.ibb.co/WV2cnhX/premium.png", "text":"100x Diamonds", "link":"", "description":``},
             {"img":"https://i.ibb.co/VpD8CvF/generic-ferris-wheel.png", "text":"Ferris Wheel Galore", "link":"https://idavis-elvenar.com/buildings.html#A_Evt_Generic_Ferris_Wheel", "description":``},
-            {"img":"https://i.ibb.co/Sd261b7/rsk-set.png", "text":"Tome of The Winter's Stage", "link":"https://idavis-elvenar.com/tomes.html#rsk_set_shufflepostal_setevo_xxiv", "description":``},
+            {"img":"https://i.ibb.co/Sd261b7/rsk-set.png", "text":"Tome of The Winter's Stage", "link":"https://idavis-elvenar.com/tomes.html#rsk_set_shufflepostal_setevopieces_and_artifact_xxiv", "description":``},
             {"img":"https://i.ibb.co/Mh9PnYj/time-booster-instant.png", "text":"25x Time Booster (45 min)", "link":"", "description":``},
         ]
     ],
