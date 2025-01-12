@@ -50,6 +50,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Tile_Mistyforest_XXIV_Moonlight_Party": 9,
     "A_Evt_Evo_Set_Shuffle_Postal_XXIV_The_Act_of_Giving": 4,
     "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence": 6,
+    "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off": 9,
 }
 
 function setAndReload(id) {

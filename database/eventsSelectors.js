@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2025" : [
+            ["Elvarian Cook Off","merge_kitchen_xxv_",false,true],
             ["Magic of Yore","scroll_sorcerers_xxv_",true,false],
         ],
         "2024" : [
@@ -68,6 +69,7 @@ var allEvents = {
     },
     "all_events" : {
         "2025" : [
+            ["Elvarian Cook Off","merge_kitchen_xxv_",false,true],
             ["Magic of Yore","scroll_sorcerers_xxv_",true,false],
         ],
         "2024" : [

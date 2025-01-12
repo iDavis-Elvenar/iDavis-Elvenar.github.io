@@ -97,7 +97,7 @@ var notifications = {
         "repeatAfter":86400,
         "style":"warning",
         "duration":45,
-        "active":true,
+        "active":false,
         "priority":40
     },
     "10":{  // SEASON
@@ -161,7 +161,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":300,
-        "active":true,
+        "active":false,
         "priority":120
     },
     "15":{  // SHORTS TEASER
