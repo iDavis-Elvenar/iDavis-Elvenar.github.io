@@ -347,8 +347,8 @@ var faStartDates = { //January 14.1. - 20.1.
 var seasonStartDates = {  //
     "january_xxv_": {
         "live": {
-            "start_date": "__ _ 2025",
-            "end_date": "__ _ 2025"
+            "start_date": "January 15th 2025",
+            "end_date": "March 31st 2025"
         },
         "beta": {
             "start_date": "December 4th 2025",
