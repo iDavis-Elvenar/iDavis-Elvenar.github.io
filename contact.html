@@ -239,6 +239,19 @@
                     <script type="text/javascript">var submitted=false;</script>
                     <script type="text/javascript">
                         $('#gform').on('submit', function(e) {
+                            let messageField = document.getElementById("entry.333289760");
+                            let emailField = document.getElementById("entry.617066544");
+                            if (!messageField.value.trim()) {
+                                alert("Error: The message field cannot be empty. Please write a message.");
+                                e.preventDefault();
+                                return false;
+                            }
+                            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (emailField.value.trim() && !emailRegex.test(emailField.value.trim())) {
+                                alert("Error: Please enter a valid email address.");
+                                e.preventDefault();
+                                return false;
+                            }
                             $('#gform *').fadeOut(2000);
                             //$('#gform').prepend('Email sent :) I will get to it soon...');
                             create_exception("Successfully sent. I will get to your email soon.", 10, "success")
