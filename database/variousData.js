@@ -103,6 +103,7 @@ let eventBanners = {
     "tile_mistyforest_xxiv_": "https://i.ibb.co/x77zMr3/EL-akcia-halloween-2024-banner.jpg",
     "shuffle_postal_xxiv_": "https://i.ibb.co/MB6W7YV/EL-akcia-zima-2024-banner.png",
     "scroll_sorcerers_xxv_": "https://i.ibb.co/KWKySL5/EL-akcia-janu-r-2025-banner.png",
+    "merge_kitchen_xxv_": "https://i.ibb.co/DPgC3FBx/EL-akcia-febru-r-2025-banner.png",
 }
 
 let eventVideos = {
@@ -166,7 +167,8 @@ let eventBetaStarts = { // MM/DD/YYYY
     "theater_zodiac_xxiv_": "08/12/2024",
     "tile_mistyforest_xxiv_": "09/25/2024",
     "shuffle_postal_xxiv_": "10/24/2024",
-    "scroll_sorcerers_xxv_": "12/3/2024",
+    "scroll_sorcerers_xxv_": "12/03/2024",
+    "merge_kitchen_xxv_": "02/03/2025",
 }
 
 let questsLinks = {
@@ -200,6 +202,7 @@ let questsLinks = {
     "tile_mistyforest_xxiv_": "bit.ly/AllHowlsEve2024",
     "shuffle_postal_xxiv_": "bit.ly/WinterMagic2024",
     "scroll_sorcerers_xxv_": "bit.ly/MagicOfYore2025",
+    "merge_kitchen_xxv_": "bit.ly/ElvarianCookOff2025",
 }
 
 let eventsDurations = {
@@ -233,6 +236,7 @@ let eventsDurations = {
     "tile_mistyforest_xxiv_": 23,
     "shuffle_postal_xxiv_": 32,
     "scroll_sorcerers_xxv_": 22,
+    "merge_kitchen_xxv_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -285,6 +289,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Tile_Mistyforest_XXIV_Moonlight_Party": "ins_evo_tile_mistyforest_xxiv",
     "A_Evt_Evo_Set_Shuffle_Postal_XXIV_The_Act_of_Giving": "ins_evo_shuffle_postal_xxiv",
     "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence": "ins_evo_scroll_sorcerers_xxv",
+    "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off": "ins_evo_merge_kitchen_xxv",
 }
 
 var artifacts = {
@@ -332,6 +337,7 @@ var artifacts = {
     "ins_evo_tile_mistyforest_xxiv": {"name": "Moonlight Party Artifact", "img": "https://i.ibb.co/jMqWmnr/ins-evo-tile-mistyforest-xxiv.png"},
     "ins_evo_shuffle_postal_xxiv": {"name": "The Act of Giving Artifact", "img": "https://i.ibb.co/thhNnKL/ins-evo-shuffle-postal-xxiv.png"},
     "ins_evo_scroll_sorcerers_xxv": {"name": "Place of Convergence Artifact", "img": "https://i.ibb.co/jMw8qtB/ins-evo-scroll-sorcerers-xxv.png"},
+    "ins_evo_merge_kitchen_xxv": {"name": "Elvarian Cook Off Artifact", "img": "https://i.ibb.co/8g6pcMPp/ins-evo-merge-kitchen-xxv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -456,6 +462,7 @@ var eventsInfoIcons = {
     "tile_mistyforest_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "shuffle_postal_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_sorcerers_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "merge_kitchen_xxv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -471,6 +478,7 @@ var eventsPaybackIcons = {
     "tile_mistyforest_xxiv_": "https://i.ibb.co/vwWd2RQ/event-payback.png",
     "shuffle_postal_xxiv_": "https://i.ibb.co/gb1xL9T/event-payback.png",
     "scroll_sorcerers_xxv_": "https://i.ibb.co/Jpb1pXB/event-payback.png",
+    "merge_kitchen_xxv_": "https://i.ibb.co/d0w16xRD/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -490,6 +498,8 @@ var eventsAvatars = {
     "portraitEvtScrollSorcerersXxvF1": "https://i.ibb.co/VJ1Mmgc/portrait-evt-scroll-sorcerers-xxv-f1.png",
     "portraitEvtScrollSorcerersXxvM1": "https://i.ibb.co/gWyMptt/portrait-evt-scroll-sorcerers-xxv-m1.png",
     "portraitSeasonDreamsXxvF1": "https://i.ibb.co/cgfvzLx/portrait-season-dreams-xxv-f1.png",
+    "portraitEvtMergeKitchenXxvF1": "https://i.ibb.co/LdxZ1XVN/portrait-evt-merge-kitchen-xxv-f1.png",
+    "portraitEvtMergeKitchenXxvM1": "https://i.ibb.co/8LZPwmht/portrait-evt-merge-kitchen-xxv-m1.png",
 }
 
 var leaguesBanners = {
@@ -509,6 +519,11 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "merge_kitchen_xxv_": [
+        {"id":"kitchen", "name":"Kitchen", "img":"https://i.ibb.co/YfB76Sx/kitchen.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#kitchen", "file":"kitchen.html", "releaseDate":"02/02/2025"},
+        {"id":"offers", "name":"Offers", "img":"https://i.ibb.co/9WV3mdS/offers.png", "img_width":"28", "img_style":"margin-left: 1px; margin-right: 8px; position: relative;", "href":"#offers", "file":"offers.html", "releaseDate":"02/02/2025"},
+        {"id":"dishes", "name":"Dishes", "img":"https://i.ibb.co/8bDBzxp/dishes.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#dishes", "file":"dishes.html", "releaseDate":"02/02/2025"},
+    ],
     "scroll_sorcerers_xxv_": [
         {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/rv5vH4Z/chest8.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html", "releaseDate":"12/10/2024"},
         {"id":"sigils", "name":"Effects", "img":"https://i.ibb.co/Pw9HpQ1/icon-transcendence-active.png", "img_width":"32", "img_style":"margin-left: -2px; margin-right: 8px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#transcendence", "file":"transcendence.html"},

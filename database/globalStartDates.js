@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "scroll_sorcerers_xxv_": {//Magic of Yore 23.1. - 13.2., Elvarian Cook Off 21.2. - 14.3.
+    "merge_kitchen_xxv_": {//Elvarian Cook Off 21.2. - 14.3.
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "February 3rd 2025",
+            "end_date": "February 24th 2025"
+        }
+    },
+    "scroll_sorcerers_xxv_": {
         "live": {
             "start_date": "January 23rd 2025",
             "end_date": "February 13th 2025"

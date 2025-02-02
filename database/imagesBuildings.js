@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_Generic_Arcane_Ferris_Wheel":"https://i.ibb.co/q3tfrNcT/arcane-ferris-wheel.png",
+    "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off":"https://i.ibb.co/J9gyysr/elvarian-cook-off.png",
+    "A_Evt_Merge_Kitchen_XXV_Cooking_Fest_Gate":"https://i.ibb.co/svX2tRks/cooking-fest-gate.png",
+    "A_Evt_Merge_Kitchen_XXV_Eating_Contest":"https://i.ibb.co/jPKRfcST/eating-contest.png",
+    "A_Evt_Merge_Kitchen_XXV_Food_Truck_Fest":"https://i.ibb.co/FkkzYgjK/food-truck-fest.png",
     "A_Evt_Season_Dreams_XXV_A_Dream_of_Thorns": "https://i.ibb.co/PC7PMwz/dream-of-thorns.png",
     "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence":"https://i.ibb.co/djCVTzn/place-of-convergence.png",
     "A_Evt_Scroll_Sorcerers_XXV_Froggy_Soda":"https://i.ibb.co/CJHRBFW/froggy-soda.png",

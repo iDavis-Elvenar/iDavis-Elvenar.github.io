@@ -62,7 +62,7 @@ function handleBuildingsJSON() {
                         }
 
                         for (let i = 0; i < allBuildings.length; i++) {
-                            if (allBuildings[i]['level'] === 1 && !excludeAsDiscard(allBuildings[i]['id'])) {
+                            if (allBuildings[i]['level'] === 1 && !excludeAsDiscard(allBuildings[i]['id']) && !allBuildings[i]['id'].includes("(Placeholder)")) {
                                 var b = {
                                     "id": allBuildings[i]['id'].substring(0, allBuildings[i]['id'].lastIndexOf('_')),
                                     "name": allBuildings[i]['name'],

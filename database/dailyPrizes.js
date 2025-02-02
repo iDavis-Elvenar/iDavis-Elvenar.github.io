@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "merge_kitchen_xxv_": [
+        "A_Evt_Merge_Kitchen_XXV_Eating_Contest",
+        "A_Evt_June_XX_Orc_Ship",
+        "frog_unurium_DP_{10}",
+        "A_Evt_Autumn_XXII_Luscious_Cakes",
+        "INS_UNIT_MC_LM_10",
+        "INS_RF_SPL_100",
+        "A_Evt_May_XXIII_Orcish_Delight",
+        "INS_KP_{15}",
+        "INS_REV_SQD_75",
+        "A_Evt_Merge_Kitchen_XXV_Cooking_Fest_Gate",
+        "INS_RF_CN_100",
+        "A_Evt_Autumn_XVIII_Mushrooms",
+        "INS_KP_AW_20",
+        "A_Evt_Autumn_XXII_Succulent_Crabs",
+        "INS_UNIT_MA_10",
+        "A_Evt_May_XXIII_The_Simmering_Soup",
+        "A_Evt_Prod_Nutcracker",
+        "INS_KP_{15}",
+        "A_Evt_Winter_Xviii_Candy_Hut",
+        "INS_UNIT_TG_LM_10",
+        "A_Evt_Car_XIX_Orc_Wagon",
+    ],
+
     "scroll_sorcerers_xxv_": [
         "A_Evt_Scroll_Sorcerers_XXV_Scorching_Snacks",
         "A_Evt_January_XXII_Spectral_Moths",
