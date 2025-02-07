@@ -24,7 +24,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "INS_TR_AMT_20", "INS_TR_AMT_30", "INS_TR_AMT_45", "INS_TR_AMT_60", "INS_TR_AMT_120", 
     "INS_TR_AMT_300", "INS_TR_AMT_480", "INS_TR_AMT_840", "INS_TR_AMT_1200", "INS_TR_AMT_2400", 
     "INS_KP_AW_1", "INS_KP_AW_3", "INS_KP_AW_5", "INS_KP_AW_7", "INS_KP_AW_10", "INS_KP_AW_15", "INS_KP_AW_20",
-    "INS_KP_AW_30", "ins_rs_1", "INS_REV_SQD_10", "", "",
+    "INS_KP_AW_30", "ins_rs_1", "INS_REV_SQD_5", "INS_REV_SQD_10", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
@@ -434,6 +434,7 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
+    "theater_easter_xxv_",
 ]
 
 var forceNonEventBuildings = [
