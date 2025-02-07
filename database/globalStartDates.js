@@ -1,5 +1,5 @@
 var eventStartDates = { 
-    "merge_kitchen_xxv_": {//Elvarian Cook Off 21.2. - 14.3.
+    "merge_kitchen_xxv_": {//Elvarian Cook Off 21.2. - 14.3., Glory of the Phoenix 1.4. - 23.4.
         "live": {
             "start_date": "__ _ 2025",
             "end_date": "__ _ 2025"
@@ -221,7 +221,7 @@ var eventStartDates = {
     },
 }
 
-var faStartDates = { //January 14.1. - 20.1.
+var faStartDates = { //March 21.3. - 27.3.
     "january_xxv_": {
         "live": {
             "start_date": "January 9th 2025",
@@ -354,7 +354,7 @@ var faStartDates = { //January 14.1. - 20.1.
     },
 }
 
-var seasonStartDates = {  //
+var seasonStartDates = {  //Season of Triumph 10.4. - 24.6.
     "january_xxv_": {
         "live": {
             "start_date": "January 15th 2025",
