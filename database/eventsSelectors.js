@@ -1,8 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2025" : [
-            ["Elvarian Cook Off","merge_kitchen_xxv_",false,false],
-            ["Magic of Yore","scroll_sorcerers_xxv_",true,false],
+            ["Elvarian Cook Off","merge_kitchen_xxv_",true,false],
+            ["Magic of Yore","scroll_sorcerers_xxv_",false,false],
         ],
         "2024" : [
             ["Winter Magic","shuffle_postal_xxiv_",false,false],
@@ -69,8 +69,8 @@ var allEvents = {
     },
     "all_events" : {
         "2025" : [
-            ["Elvarian Cook Off","merge_kitchen_xxv_",false,false],
-            ["Magic of Yore","scroll_sorcerers_xxv_",true,false],
+            ["Elvarian Cook Off","merge_kitchen_xxv_",true,false],
+            ["Magic of Yore","scroll_sorcerers_xxv_",false,false],
         ],
         "2024" : [
             ["Winter Magic","shuffle_postal_xxiv_",false,false],
