@@ -201,17 +201,17 @@ var notifications = {
     },
     "17":{  // EVENT
         "id":17,
-        "text":`<h4 class="alert-heading">Winter Magic event is coming soon!</h4>
-  <p>This year's Winter Magic event is getting close!</p>
+        "text":`<h4 class="alert-heading">Elvarian Cook Off event is coming soon!</h4>
+  <p>This year's merge event is getting close!</p>
   <hr>
-  <center><img src="https://i.ibb.co/MB6W7YV/EL-akcia-zima-2024-banner.png" style="width: 35%;"></center><br>
-    <center><p>The <b>Winter Magic</b> is approaching and it is now fully covered on the All Events page! Get ready for everything that the Winter Magic event has to offer!<br><br>
+  <center><img src="https://i.ibb.co/DPgC3FBx/EL-akcia-febru-r-2025-banner.png" style="width: 35%;"></center><br>
+    <center><p>The <b>Elvarian Cook Off</b> is approaching and it is now fully covered on the All Events page! Get ready for everything that the merge event has to offer!<br><br>
     Start Date, Daily Prizes and Quests are now available to preview in the <img src="https://i.ibb.co/QkJ7qzP/all-events.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/events.html" class="alert-link">All Events</a> page!<br><br>
     Visit the <img src="https://i.ibb.co/NC00fM1/all-buildings.png" style="width: 22px;"> <a href="https://idavis-elvenar.com/buildings.html" class="alert-link">All Buildings</a> page for more information about all the newly introduced buildings.</p></center>`,
         "repeatAfter":86400,
         "style":"warning",
         "duration":60,
-        "active":false,
+        "active":true,
         "priority":50
     },
 }
