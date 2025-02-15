@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "merge_kitchen_xxv_": {//Elvarian Cook Off 21.2. - 14.3., Glory of the Phoenix 1.4. - 23.4.
         "live": {
-            "start_date": "__ _ 2025",
-            "end_date": "__ _ 2025"
+            "start_date": "February 21st 2025",
+            "end_date": "March 14th 2025"
         },
         "beta": {
             "start_date": "February 3rd 2025",
