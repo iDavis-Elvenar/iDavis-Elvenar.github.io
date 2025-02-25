@@ -222,6 +222,16 @@ var eventStartDates = {
 }
 
 var faStartDates = { //March 21.3. - 27.3.
+    "march_xxv_": {
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "February 26th 2025",
+            "end_date": "March 4th 2025"
+        }
+    },
     "january_xxv_": {
         "live": {
             "start_date": "January 9th 2025",
