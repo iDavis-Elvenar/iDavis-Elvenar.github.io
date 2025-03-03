@@ -1,5 +1,30 @@
 var dailyPrizes = {
 
+    "theater_easter_xxv_": [
+        "A_Evt_Theater_Easter_XXV_Relic_Delver",
+        "A_Evt_Easter_XX_Phoenix_Anatomy",
+        "frog_unurium_DP_{10}",
+        "A_Evt_March_XXI_Phoenix_Chick",
+        "INS_UNIT_MC_LM_10",
+        "A_Evt_Theater_Easter_XXV_Painting_Tent",
+        "INS_RF_SPL_100",
+        "INS_KP_{15}",
+        "INS_REV_SQD_75",
+        "A_Evt_Scroll_Aquatic_XXIV_Torrent_of_Teamwork",
+        "INS_RF_CN_100",
+        "A_Evt_May_XXII_Soothing_Pond",
+        "INS_KP_AW_20",
+        "A_Evt_March_XXI_Phoenix_Rider",
+        "INS_UNIT_MA_10",
+        "A_Evt_Easter_XX_Phoenix_Painting",
+        "A_Evt_Tile_Amuni_XXIV_The_Feline_Feastery",
+        "INS_KP_{15}",
+        "A_Evt_February_XXI_Dawn_Of_Spring_Shrine",
+        "INS_UNIT_TG_LM_10",
+        "INS_UNIT_MA_10",
+        "A_Evt_February_XXI_Lifeblood_Cone",
+    ],
+
     "merge_kitchen_xxv_": [
         "A_Evt_Merge_Kitchen_XXV_Eating_Contest",
         "A_Evt_June_XX_Orc_Ship",

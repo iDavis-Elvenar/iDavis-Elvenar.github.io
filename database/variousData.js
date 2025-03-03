@@ -104,6 +104,7 @@ let eventBanners = {
     "shuffle_postal_xxiv_": "https://i.ibb.co/MB6W7YV/EL-akcia-zima-2024-banner.png",
     "scroll_sorcerers_xxv_": "https://i.ibb.co/KWKySL5/EL-akcia-janu-r-2025-banner.png",
     "merge_kitchen_xxv_": "https://i.ibb.co/DPgC3FBx/EL-akcia-febru-r-2025-banner.png",
+    "theater_easter_xxv_": "https://i.ibb.co/gbdTwwkW/EL-akcia-ve-k-noc-2025-banner.png",
 }
 
 let eventVideos = {
@@ -169,6 +170,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "shuffle_postal_xxiv_": "10/24/2024",
     "scroll_sorcerers_xxv_": "12/03/2024",
     "merge_kitchen_xxv_": "02/03/2025",
+    "theater_easter_xxv_": "03/06/2025",
 }
 
 let questsLinks = {
@@ -203,6 +205,7 @@ let questsLinks = {
     "shuffle_postal_xxiv_": "bit.ly/WinterMagic2024",
     "scroll_sorcerers_xxv_": "bit.ly/MagicOfYore2025",
     "merge_kitchen_xxv_": "bit.ly/ElvarianCookOff2025",
+    "theater_easter_xxv_": "bit.ly/GloryOfThePhoenix2025",
 }
 
 let eventsDurations = {
@@ -237,6 +240,7 @@ let eventsDurations = {
     "shuffle_postal_xxiv_": 32,
     "scroll_sorcerers_xxv_": 22,
     "merge_kitchen_xxv_": 21,
+    "theater_easter_xxv_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -290,6 +294,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Set_Shuffle_Postal_XXIV_The_Act_of_Giving": "ins_evo_shuffle_postal_xxiv",
     "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence": "ins_evo_scroll_sorcerers_xxv",
     "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off": "ins_evo_merge_kitchen_xxv",
+    "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": "ins_evo_theater_easter_xxv",
 }
 
 var artifacts = {
@@ -338,6 +343,7 @@ var artifacts = {
     "ins_evo_shuffle_postal_xxiv": {"name": "The Act of Giving Artifact", "img": "https://i.ibb.co/thhNnKL/ins-evo-shuffle-postal-xxiv.png"},
     "ins_evo_scroll_sorcerers_xxv": {"name": "Place of Convergence Artifact", "img": "https://i.ibb.co/jMw8qtB/ins-evo-scroll-sorcerers-xxv.png"},
     "ins_evo_merge_kitchen_xxv": {"name": "Elvarian Cook Off Artifact", "img": "https://i.ibb.co/8g6pcMPp/ins-evo-merge-kitchen-xxv.png"},
+    "ins_evo_theater_easter_xxv": {"name": "Azure Phoenix Artifact", "img": "https://i.ibb.co/fYKK0N2x/ins-evo-theater-easter-xxv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -358,6 +364,7 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent" : `<img src="https://i.ibb.co/WnDfq7P/combining-catalyst.png">`,
     "A_Evt_Evo_Theater_Easter_XXIV_Verdant_Phoenix": `<img src="https://i.ibb.co/vjQD2kX/season-xp-b15fa556d9a49df8ccdbc3fe222f0feb.png">`,
     "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": `<img src="https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png">`,
+    "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": `<img src="https://i.ibb.co/bgJmdntT/tournament-points-boost.png">`,
 }
 
 var allowedFeedingMultiplicators = {
@@ -434,7 +441,6 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
-    "theater_easter_xxv_",
 ]
 
 var forceNonEventBuildings = [
@@ -464,6 +470,7 @@ var eventsInfoIcons = {
     "shuffle_postal_xxiv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_sorcerers_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "merge_kitchen_xxv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
+    "theater_easter_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -480,6 +487,7 @@ var eventsPaybackIcons = {
     "shuffle_postal_xxiv_": "https://i.ibb.co/gb1xL9T/event-payback.png",
     "scroll_sorcerers_xxv_": "https://i.ibb.co/Jpb1pXB/event-payback.png",
     "merge_kitchen_xxv_": "https://i.ibb.co/d0w16xRD/event-payback.png",
+    "theater_easter_xxv_": "https://i.ibb.co/bjdMSDxK/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -501,6 +509,8 @@ var eventsAvatars = {
     "portraitSeasonDreamsXxvF1": "https://i.ibb.co/cgfvzLx/portrait-season-dreams-xxv-f1.png",
     "portraitEvtMergeKitchenXxvF1": "https://i.ibb.co/LdxZ1XVN/portrait-evt-merge-kitchen-xxv-f1.png",
     "portraitEvtMergeKitchenXxvM1": "https://i.ibb.co/8LZPwmht/portrait-evt-merge-kitchen-xxv-m1.png",
+    "portraitEvtTheaterEasterXxvC1": "https://i.ibb.co/FL8yB8zx/portrait-evt-theater-easter-xxv-c1.png",
+    "portraitEvtTheaterEasterXxvF1": "https://i.ibb.co/gFXhYNCd/portrait-evt-theater-easter-xxv-f1.png",
 }
 
 var leaguesBanners = {
@@ -520,6 +530,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "theater_easter_xxv_": [
+        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"03/08/2025"},
+    ],
     "merge_kitchen_xxv_": [
         {"id":"kitchen", "name":"Kitchen", "img":"https://i.ibb.co/YfB76Sx/kitchen.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#kitchen", "file":"kitchen.html", "releaseDate":"02/02/2025"},
         {"id":"offers", "name":"Offers", "img":"https://i.ibb.co/9WV3mdS/offers.png", "img_width":"28", "img_style":"margin-left: 1px; margin-right: 8px; position: relative;", "href":"#offers", "file":"offers.html", "releaseDate":"02/02/2025"},
