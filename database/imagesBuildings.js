@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix":"https://i.ibb.co/YFzdfNPH/azure-phoenix.png",
+    "A_Evt_Theater_Easter_XXV_Cinderling":"https://i.ibb.co/rK7vRT4J/cinderling.png",
+    "A_Evt_Theater_Easter_XXV_Feather_Shrine":"https://i.ibb.co/nqmGJcDS/feather-shrine.png",
+    "A_Evt_Theater_Easter_XXV_Painting_Tent":"https://i.ibb.co/zVZCdgYG/painting-tent.png",
+    "A_Evt_Theater_Easter_XXV_Relic_Delver":"https://i.ibb.co/jkv3qX9d/relic-delver.png",
     "A_Evt_Generic_Arcane_Ferris_Wheel":"https://i.ibb.co/q3tfrNcT/arcane-ferris-wheel.png",
     "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off":"https://i.ibb.co/J9gyysr/elvarian-cook-off.png",
     "A_Evt_Merge_Kitchen_XXV_Cooking_Fest_Gate":"https://i.ibb.co/svX2tRks/cooking-fest-gate.png",

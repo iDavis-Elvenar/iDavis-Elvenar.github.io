@@ -396,6 +396,7 @@ var iconsImages = {
     "goods_refined":"https://i.ibb.co/bzCh4vp/goods-standard-precious.png",
     "goods_precious":"https://i.ibb.co/G0N8gT6/goods-standard-refined.png",
     "goods_all_small": "https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png",
+    "tournamentpoint_boosted": "https://i.ibb.co/bgJmdntT/tournament-points-boost.png",
 }
 
 var iconsTitles = {
@@ -441,6 +442,7 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
+    "Shuffle_Garden_XXV",
 ]
 
 var forceNonEventBuildings = [
