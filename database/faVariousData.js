@@ -1,6 +1,6 @@
 var baseTabsFa = [
     {"id":"base_left_panel_div", "name":"Info", "img":"https://i.ibb.co/prd3mhW/info-fa-icon.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#info", "onclick":"info"},
-    {"id":"base_left_panel_div", "name":"Items", "img":"https://i.ibb.co/7RDLWV6/fellowship-adventures-item1.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#items", "onclick":"items"},
+    {"id":"base_left_panel_div", "name":"Items", "img":"https://i.ibb.co/kschWppN/fellowship-adventures-item1.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#items", "onclick":"items"},
     {"id":"base_left_panel_div", "name":"Rewards", "img":"https://i.ibb.co/Jv4v0z0/chest-gold.png", "img_width":"26", "img_style":"margin-left: 1px; margin-right: 10px; position: relative;", "href":"#rewards", "onclick":"rewards"},
     {"id":"base_left_panel_div", "name":"Waypoints", "img":"https://i.ibb.co/8mQV9TJ/fellowship-adventures-waypoint.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#waypoints", "onclick":"waypoints"},
 ]
