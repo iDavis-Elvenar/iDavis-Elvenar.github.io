@@ -240,7 +240,7 @@ let eventsDurations = {
     "shuffle_postal_xxiv_": 32,
     "scroll_sorcerers_xxv_": 22,
     "merge_kitchen_xxv_": 21,
-    "theater_easter_xxv_": 22,
+    "theater_easter_xxv_": 21,
 }
 
 let evoUpgradeCosts = {
