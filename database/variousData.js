@@ -513,6 +513,7 @@ var eventsAvatars = {
     "portraitEvtMergeKitchenXxvM1": "https://i.ibb.co/8LZPwmht/portrait-evt-merge-kitchen-xxv-m1.png",
     "portraitEvtTheaterEasterXxvC1": "https://i.ibb.co/FL8yB8zx/portrait-evt-theater-easter-xxv-c1.png",
     "portraitEvtTheaterEasterXxvF1": "https://i.ibb.co/gFXhYNCd/portrait-evt-theater-easter-xxv-f1.png",
+    "portraitSeasonTriumphXxvF1": "https://i.ibb.co/Qvz3GKjv/portrait-season-triumph-xxv-f1.png",
 }
 
 var leaguesBanners = {

@@ -1,4 +1,5 @@
 var images_buildings = {
+    "A_Evt_Season_Triumph_XXV_Call_of_Destiny": "https://i.ibb.co/tw9st95D/call-of-destiny.png",
     "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix":"https://i.ibb.co/YFzdfNPH/azure-phoenix.png",
     "A_Evt_Theater_Easter_XXV_Cinderling":"https://i.ibb.co/rK7vRT4J/cinderling.png",
     "A_Evt_Theater_Easter_XXV_Feather_Shrine":"https://i.ibb.co/nqmGJcDS/feather-shrine.png",
