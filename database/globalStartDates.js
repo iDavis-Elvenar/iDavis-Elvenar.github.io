@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "theater_easter_xxv_": {//Glory of the Phoenix 1.4. - 23.4., Garden of Remembrance 6.5. - 27.5., The Chiming Sands 12.6. - 3.7.
+    "shuffle_garden_xxv_": {//Garden of Remembrance 6.5. - 27.5., The Chiming Sands 12.6. - 3.7.
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "April 7th 2025",
+            "end_date": "April 28th 2025"
+        }
+    },
+    "theater_easter_xxv_": {
         "live": {
             "start_date": "April 1st 2025",
             "end_date": "April 23rd 2025"

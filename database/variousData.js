@@ -105,6 +105,7 @@ let eventBanners = {
     "scroll_sorcerers_xxv_": "https://i.ibb.co/KWKySL5/EL-akcia-janu-r-2025-banner.png",
     "merge_kitchen_xxv_": "https://i.ibb.co/DPgC3FBx/EL-akcia-febru-r-2025-banner.png",
     "theater_easter_xxv_": "https://i.ibb.co/gbdTwwkW/EL-akcia-ve-k-noc-2025-banner.png",
+    "shuffle_garden_xxv_": "https://i.ibb.co/ycWCzqZx/EL-akcia-m-j-2025-banner.png",
 }
 
 let eventVideos = {
@@ -171,6 +172,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "scroll_sorcerers_xxv_": "12/03/2024",
     "merge_kitchen_xxv_": "02/03/2025",
     "theater_easter_xxv_": "03/06/2025",
+    "shuffle_garden_xxv_": "04/07/2024",
 }
 
 let questsLinks = {
@@ -206,6 +208,7 @@ let questsLinks = {
     "scroll_sorcerers_xxv_": "bit.ly/MagicOfYore2025",
     "merge_kitchen_xxv_": "bit.ly/ElvarianCookOff2025",
     "theater_easter_xxv_": "bit.ly/GloryOfThePhoenix2025",
+    "shuffle_garden_xxv_": "bit.ly/GardenOfRemembrance2025",
 }
 
 let eventsDurations = {
@@ -241,6 +244,7 @@ let eventsDurations = {
     "scroll_sorcerers_xxv_": 22,
     "merge_kitchen_xxv_": 21,
     "theater_easter_xxv_": 21,
+    "shuffle_garden_xxv_": 21,
 }
 
 let evoUpgradeCosts = {
@@ -397,6 +401,7 @@ var iconsImages = {
     "goods_precious":"https://i.ibb.co/G0N8gT6/goods-standard-refined.png",
     "goods_all_small": "https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png",
     "tournamentpoint_boosted": "https://i.ibb.co/bgJmdntT/tournament-points-boost.png",
+    "seeds": "https://image.ibb.co/c9JtEq/seeds.png",
 }
 
 var iconsTitles = {
@@ -435,6 +440,7 @@ var setNames = {
     "shuffle_garden_xxiv": "Golden Hive",
     "scroll_aquatic_expiring": "Hoarder's Set",
     "shuffle_postal_xxiv": "The Winter's Stage",
+    "shuffle_garden_xxv": "Floating Garden",
 }
 
 var discardBuildings = [
@@ -442,7 +448,7 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
-    "Shuffle_Garden_XXV",
+    "tile_amuni_xxv",
 ]
 
 var forceNonEventBuildings = [
@@ -473,6 +479,7 @@ var eventsInfoIcons = {
     "scroll_sorcerers_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "merge_kitchen_xxv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "theater_easter_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "shuffle_garden_xxv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -490,6 +497,7 @@ var eventsPaybackIcons = {
     "scroll_sorcerers_xxv_": "https://i.ibb.co/Jpb1pXB/event-payback.png",
     "merge_kitchen_xxv_": "https://i.ibb.co/d0w16xRD/event-payback.png",
     "theater_easter_xxv_": "https://i.ibb.co/bjdMSDxK/event-payback.png",
+    "shuffle_garden_xxv_": "https://i.ibb.co/wN3QL26L/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -514,6 +522,8 @@ var eventsAvatars = {
     "portraitEvtTheaterEasterXxvC1": "https://i.ibb.co/FL8yB8zx/portrait-evt-theater-easter-xxv-c1.png",
     "portraitEvtTheaterEasterXxvF1": "https://i.ibb.co/gFXhYNCd/portrait-evt-theater-easter-xxv-f1.png",
     "portraitSeasonTriumphXxvF1": "https://i.ibb.co/Qvz3GKjv/portrait-season-triumph-xxv-f1.png",
+    "portraitEvtShuffleGardenXxvF1": "https://i.ibb.co/MkS9xqpX/portrait-evt-shuffle-garden-xxv-f1.png",
+    "portraitEvtShuffleGardenXxvM1": "https://i.ibb.co/KpmwdSxp/portrait-evt-shuffle-garden-xxv-m1.png",
 }
 
 var leaguesBanners = {

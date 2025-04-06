@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "shuffle_garden_xxv_": [
+        "A_Evt_Shuffle_Garden_XXV_Drifting_Florist",
+        "A_Evt_Shuffle_Garden_XXIV_Banshee_Bramble",
+        "INS_RF_CN_100",
+        "A_Evt_May_XXII_Primordial_Gecko",
+        "INS_KP_AW_20",
+        "A_Evt_May_XXI_Bumblebee_Stables",
+        "frog_unurium_DP_{15}",
+        "A_Evt_Summer_XVIII_Merchant",
+        "INS_KP_{15}",
+        "INS_UNIT_MA_10",
+        "A_Evt_May_XXII_Tender_Tag_Team",
+        "INS_REV_SQD_75",
+        "A_Evt_Shuffle_Garden_XXIII_Mischievous_Fae",
+        "INS_RF_SPL_100",
+        "A_Evt_Summer_XVII_3Grandprize",
+        "INS_UNIT_TG_LR_10",
+        "A_Evt_Summer_XVIII_Playground",
+        "INS_UNIT_MC_MA_10",
+        "A_Evt_Shuffle_Garden_XXV_The_Rickety_Reaper",
+        "INS_TR_AMT_300",
+        "A_Evt_May_XXI_Petal_Bridge",
+    ],
+
     "theater_easter_xxv_": [
         "A_Evt_Theater_Easter_XXV_Relic_Delver",
         "A_Evt_Easter_XX_Phoenix_Anatomy",

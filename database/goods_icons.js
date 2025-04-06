@@ -379,7 +379,7 @@ var goods_icons = {
     "volatile_sigils": "<img src='https://i.ibb.co/pwnK74T/volatile-sigils.png' title='Volatile Sigils' style='width: 24px;'><br>",
     "b_ch22_aw1_shards": "<img src='https://i.ibb.co/vkhgkGn/b-ch22-aw1-shards.png' title='Rune Shard for Tournament Fan Curve'><br>",
     "b_ch22_aw2_shards": "<img src='https://i.ibb.co/wCjyvJy/b-ch22-aw2-shards.png' title='Rune Shard for Altar of Eternity'><br>",
-    "spell_settlement_production_boost_1": "<img src='https://i.ibb.co/GfnygnS6/spell-settlement-production-boost-1.png' title='Settlement Production Boost Spell'><br>",
+    "spell_settlement_production_boost_1": "<img src='https://i.ibb.co/GfnygnS6/spell-settlement-production-boost-1.png' title='Generous Guests'><br>",
 }
 
 var xlImages = {

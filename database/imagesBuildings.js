@@ -1,4 +1,13 @@
 var images_buildings = {
+    "A_Evt_Exp_Shuffle_Garden_XXV_Turbo_Harvester": "https://i.ibb.co/xSJ21pPT/turbo-harvester.png",
+    "A_Evt_Set_Shuffle_Garden_XXV_Delta_Canal": "https://i.ibb.co/0RFks8xh/delta-canal.png",
+    "A_Evt_Set_Shuffle_Garden_XXV_Memory_Lattice": "https://i.ibb.co/W4VcbVBX/memory-lattice.png",
+    "A_Evt_Set_Shuffle_Garden_XXV_Menhiroks_Reverie": "https://i.ibb.co/GQBDyLB3/menhiroks-reverie.png",
+    "A_Evt_Set_Shuffle_Garden_XXV_The_Flow_Engine": "https://i.ibb.co/TxPQCqDF/the-flow-engine.png",
+    "A_Evt_Set_Shuffle_Garden_XXV_The_Looming_Falls": "https://i.ibb.co/h1T8mVKn/the-looming-falls.png",
+    "A_Evt_Shuffle_Garden_XXV_Drifting_Florist": "https://i.ibb.co/FLrG7MwW/drifting-florist.png",
+    "A_Evt_Shuffle_Garden_XXV_The_Faux_Float": "https://i.ibb.co/qfMTtWY/the-faux-float.png",
+    "A_Evt_Shuffle_Garden_XXV_The_Rickety_Reaper": "https://i.ibb.co/8n5RQrf4/the-rickety-reaper.png",
     "A_Evt_Season_Triumph_XXV_Call_of_Destiny": "https://i.ibb.co/tw9st95D/call-of-destiny.png",
     "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix":"https://i.ibb.co/YFzdfNPH/azure-phoenix.png",
     "A_Evt_Theater_Easter_XXV_Cinderling":"https://i.ibb.co/rK7vRT4J/cinderling.png",
