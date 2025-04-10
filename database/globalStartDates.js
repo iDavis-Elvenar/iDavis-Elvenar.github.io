@@ -387,8 +387,8 @@ var faStartDates = { //March 21.3. - 27.3.
 var seasonStartDates = {  //Season of Triumph 10.4. - 24.6.
     "april_xxv_": {
         "live": {
-            "start_date": "__ _ 2025",
-            "end_date": "__ _ 2025"
+            "start_date": "April 10th 2025",
+            "end_date": "June 24th 2025"
         },
         "beta": {
             "start_date": "February 23rd 2025",
