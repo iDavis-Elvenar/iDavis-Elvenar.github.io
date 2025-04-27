@@ -449,6 +449,7 @@ var discardBuildings = [
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
     "tile_amuni_xxv",
+    "Scroll_Aquatic_XXV",
 ]
 
 var forceNonEventBuildings = [
