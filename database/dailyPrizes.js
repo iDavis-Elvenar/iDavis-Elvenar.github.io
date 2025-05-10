@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "tile_amuni_xxv_": [
+        "A_Evt_Tile_Amuni_XXV_Travelling_Scriptorium",
+        "A_Evt_February_XXIII_Mule_Lifter",
+        "INS_UNIT_MA_10",
+        "INS_RF_SPL_100",
+        "A_Evt_February_XXII_Amuni_Bar",
+        "frog_runeshardspremium1_{1}",
+        "INS_REV_SQD_100",
+        "INS_KP_{15}",
+        "A_Evt_Tile_Amuni_XXIV_The_Feline_Feastery",
+        "INS_TR_AMT_300",
+        "A_Evt_February_XXIII_Golden_Tears",
+        "INS_KP_AW_20",
+        "A_Evt_June_XX_Amuni_Ship",
+        "A_Evt_Tile_Amuni_XXV_Dig_Site_Quarters",
+        "INS_KP_{15}",
+        "INS_TR_AMT_300",
+        "A_Evt_February_XXII_Desert_Watchtower",
+        "frog_runeshardspremium2_{1}",
+        "A_Evt_Autumn_XVIII_Black_Lotus",
+        "INS_COMBINING_CATALYST_{2}",
+        "A_Evt_February_XXII_Furry_Sands",
+    ],
+
     "shuffle_garden_xxv_": [
         "A_Evt_Shuffle_Garden_XXV_Drifting_Florist",
         "A_Evt_Shuffle_Garden_XXIV_Banshee_Bramble",

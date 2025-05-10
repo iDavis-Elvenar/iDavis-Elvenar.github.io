@@ -52,6 +52,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence": 6,
     "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off": 9,
     "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": 9,
+    "A_Evt_Evo_Tile_Amuni_XXV_Everflowing_Cascade": 9,
 }
 
 function setAndReload(id) {

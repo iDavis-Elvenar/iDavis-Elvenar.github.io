@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "shuffle_garden_xxv_": {//Garden of Remembrance 6.5. - 27.5., The Chiming Sands 12.6. - 3.7.
+    "tile_amuni_xxv_": {//The Chiming Sands 12.6. - 3.7.
+        "live": {
+            "start_date": "May 6th 2025",
+            "end_date": "May 27th 2025"
+        },
+        "beta": {
+            "start_date": "May 16th 2025",
+            "end_date": "June 6th 2025"
+        }
+    },
+    "shuffle_garden_xxv_": {
         "live": {
             "start_date": "May 6th 2025",
             "end_date": "May 27th 2025"

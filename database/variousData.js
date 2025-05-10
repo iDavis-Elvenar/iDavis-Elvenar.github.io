@@ -24,7 +24,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "INS_TR_AMT_20", "INS_TR_AMT_30", "INS_TR_AMT_45", "INS_TR_AMT_60", "INS_TR_AMT_120", 
     "INS_TR_AMT_300", "INS_TR_AMT_480", "INS_TR_AMT_840", "INS_TR_AMT_1200", "INS_TR_AMT_2400", 
     "INS_KP_AW_1", "INS_KP_AW_3", "INS_KP_AW_5", "INS_KP_AW_7", "INS_KP_AW_10", "INS_KP_AW_15", "INS_KP_AW_20",
-    "INS_KP_AW_30", "ins_rs_1", "INS_REV_SQD_5", "INS_REV_SQD_10", "", "",
+    "INS_KP_AW_30", "ins_rs_1", "royalrestoration", "INS_REV_SQD_5", "INS_REV_SQD_10", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "",
@@ -106,6 +106,7 @@ let eventBanners = {
     "merge_kitchen_xxv_": "https://i.ibb.co/DPgC3FBx/EL-akcia-febru-r-2025-banner.png",
     "theater_easter_xxv_": "https://i.ibb.co/gbdTwwkW/EL-akcia-ve-k-noc-2025-banner.png",
     "shuffle_garden_xxv_": "https://i.ibb.co/ycWCzqZx/EL-akcia-m-j-2025-banner.png",
+    "tile_amuni_xxv_": "https://i.ibb.co/nMp3XmJc/EL-akcia-j-n-2025-banner.png",
 }
 
 let eventVideos = {
@@ -173,6 +174,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "merge_kitchen_xxv_": "02/03/2025",
     "theater_easter_xxv_": "03/06/2025",
     "shuffle_garden_xxv_": "04/07/2025",
+    "tile_amuni_xxv_": "05/16/2025",
 }
 
 let questsLinks = {
@@ -209,6 +211,7 @@ let questsLinks = {
     "merge_kitchen_xxv_": "bit.ly/ElvarianCookOff2025",
     "theater_easter_xxv_": "bit.ly/GloryOfThePhoenix2025",
     "shuffle_garden_xxv_": "bit.ly/GardenOfRemembrance2025",
+    "tile_amuni_xxv_": "bit.ly/TheChimingSands2025",
 }
 
 let eventsDurations = {
@@ -245,6 +248,7 @@ let eventsDurations = {
     "merge_kitchen_xxv_": 21,
     "theater_easter_xxv_": 21,
     "shuffle_garden_xxv_": 21,
+    "tile_amuni_xxv_": 21,
 }
 
 let evoUpgradeCosts = {
@@ -299,6 +303,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence": "ins_evo_scroll_sorcerers_xxv",
     "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off": "ins_evo_merge_kitchen_xxv",
     "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": "ins_evo_theater_easter_xxv",
+    "A_Evt_Evo_Tile_Amuni_XXV_Everflowing_Cascade": "ins_evo_tile_amuni_xxv",
 }
 
 var artifacts = {
@@ -348,6 +353,7 @@ var artifacts = {
     "ins_evo_scroll_sorcerers_xxv": {"name": "Place of Convergence Artifact", "img": "https://i.ibb.co/jMw8qtB/ins-evo-scroll-sorcerers-xxv.png"},
     "ins_evo_merge_kitchen_xxv": {"name": "Elvarian Cook Off Artifact", "img": "https://i.ibb.co/8g6pcMPp/ins-evo-merge-kitchen-xxv.png"},
     "ins_evo_theater_easter_xxv": {"name": "Azure Phoenix Artifact", "img": "https://i.ibb.co/fYKK0N2x/ins-evo-theater-easter-xxv.png"},
+    "ins_evo_tile_amuni_xxv": {"name": "Everflowing Cascade Artifact", "img": "https://i.ibb.co/Mk3DS6bN/ins-evo-tile-amuni-xxv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -448,7 +454,6 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
-    "tile_amuni_xxv",
     "Scroll_Aquatic_XXV",
 ]
 
@@ -481,6 +486,7 @@ var eventsInfoIcons = {
     "merge_kitchen_xxv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "theater_easter_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "shuffle_garden_xxv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
+    "tile_amuni_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -499,6 +505,7 @@ var eventsPaybackIcons = {
     "merge_kitchen_xxv_": "https://i.ibb.co/d0w16xRD/event-payback.png",
     "theater_easter_xxv_": "https://i.ibb.co/bjdMSDxK/event-payback.png",
     "shuffle_garden_xxv_": "https://i.ibb.co/wN3QL26L/event-payback.png",
+    "tile_amuni_xxv_": "https://i.ibb.co/4nPVJV6V/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -525,6 +532,8 @@ var eventsAvatars = {
     "portraitSeasonTriumphXxvF1": "https://i.ibb.co/Qvz3GKjv/portrait-season-triumph-xxv-f1.png",
     "portraitEvtShuffleGardenXxvF1": "https://i.ibb.co/MkS9xqpX/portrait-evt-shuffle-garden-xxv-f1.png",
     "portraitEvtShuffleGardenXxvM1": "https://i.ibb.co/KpmwdSxp/portrait-evt-shuffle-garden-xxv-m1.png",
+    "portraitEvtTileAmuniXxvF1": "https://i.ibb.co/HTxfV2L3/portrait-evt-tile-amuni-xxv-f1.png",
+    "portraitEvtTileAmuniXxvM1": "https://i.ibb.co/v4d1fSzY/portrait-evt-tile-amuni-xxv-m1.png",
 }
 
 var leaguesBanners = {
@@ -544,6 +553,11 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "tile_amuni_xxv_": [
+        {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
+        {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},
+        {"id":"playground", "name":"Playground", "img":"https://i.ibb.co/nmkBMxB/february-xxiii-chest5.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html"},
+    ],
     "theater_easter_xxv_": [
         {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"03/06/2025"},
     ],
@@ -677,6 +691,8 @@ var flexibleRewardsIcons = {
     "frog_grr_5":"https://i.ibb.co/JHqqq6j/frog-grr.png",
     "frog_default1":"https://i.ibb.co/VD89QDJ/frog-default1.png",
     "frog_runeshards3":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
+    "frog_runeshardspremium1":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
+    "frog_runeshardspremium2":"https://i.ibb.co/rc3ZcDm/frog-runes.png",
 }
 
 var rskIcons = {

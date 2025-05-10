@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_Evo_Tile_Amuni_XXV_Everflowing_Cascade":"https://i.ibb.co/1J8VZ0BB/everflowing-cascade.png",
+    "A_Evt_Exp_Tile_Amuni_XXV_Glyph_Weaver_Workshop":"https://i.ibb.co/YFTStdjK/glyph-weaver-workshop.png",
+    "A_Evt_Tile_Amuni_XXV_Crystal_Pond":"https://i.ibb.co/VfQNv61/crystal-pond.png",
+    "A_Evt_Tile_Amuni_XXV_Dig_Site_Quarters":"https://i.ibb.co/MknSKxw0/dig-site-quarters.png",
+    "A_Evt_Tile_Amuni_XXV_Travelling_Scriptorium":"https://i.ibb.co/ZpHJqtKJ/travelling-scriptorium.png",
     "A_Evt_Exp_Shuffle_Garden_XXV_Turbo_Harvester": "https://i.ibb.co/xSJ21pPT/turbo-harvester.png",
     "A_Evt_Set_Shuffle_Garden_XXV_Delta_Canal": "https://i.ibb.co/0RFks8xh/delta-canal.png",
     "A_Evt_Set_Shuffle_Garden_XXV_Memory_Lattice": "https://i.ibb.co/W4VcbVBX/memory-lattice.png",
