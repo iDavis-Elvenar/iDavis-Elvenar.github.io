@@ -47,6 +47,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ch20_bars", "ch20_strings", "ch20_flutes", "ch20_drums", "ch20_songs",
     "ch21_prey", "ch21_scales", "ch21_oblations3", "ch21_shells", "ch21_dragon", "ch21_oblations2", "ch21_art", "ch21_oblations1", "ch21_oblations4", 
     "ch22_seafood", "ch22_fish", "ch22_fruits", "ch22_salt", "ch22_shrimps", "ch22_snails", "ch22_weed", "ch22_eels", "ch22_sponges", 
+    "ch23_unicornblossoms", "ch23_queenhoney", "ch23_orcspirits", "ch23_halflingspirits", "ch23_flowerwreaths", "ch23_fairyspirits", "ch23_dwarvenspirits", "ch23_dragonteeth", "ch23_mithril", //usporiadat podla toho ake bude poradie v sklade tovarov
     "", "", "", ];
 
 var numberOfChapters = 22;
@@ -54,7 +55,7 @@ var numberOfChapters = 22;
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
     11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII', 18: 'XVIII',
-    19: 'XIX', 20: 'XX', 21: 'XXI', 22: 'XXII',
+    19: 'XIX', 20: 'XX', 21: 'XXI', 22: 'XXII', 23: 'XXIII',
 }
 
 var chapterNames = {
@@ -62,7 +63,7 @@ var chapterNames = {
     8: 'Orcs and Goblins', 9: 'Woodelves', 10: 'Sorcerers and Dragons',
     11: 'Halflings', 12: 'Elementals', 13: 'Amuni', 14: 'Constructs', 15: 'Elvenar', 16: 'Embassies', 
     17: 'Traders of Unur', 18: 'Team Spirit', 19: 'Revenge of the Exile', 20: 'The Power of Music',
-    21: 'The Vallorian Legend', 22: 'Harbours of the Deep',
+    21: 'The Vallorian Legend', 22: 'Harbours of the Deep', 23: 'Secrets of the Unicorn',
 }
 
 let eventBanners = {
@@ -727,6 +728,7 @@ var chapter_icons = {
     20: "https://i.ibb.co/Vv6rC8r/ch20.png title='The Power of Music'",
     21: "https://i.ibb.co/XCp7d47/ch21.png title='The Vallorian Legend'",
     22: "https://i.ibb.co/P92Ld8J/ch22.png title='Harbours of the Deep'",
+    23: "https://i.ibb.co/Y7tLZ49n/ch23.png title='Secrets of the Unicorn'",
 }
 
 var grIds = {
@@ -747,6 +749,7 @@ var grIds = {
     "powerofmusic": "ch20",
     "vallorianlegend": "ch21",
     "harboursofdeep": "ch22",
+    "secretsofunicorn": "ch23",
 }
 
 var newEventSign = {

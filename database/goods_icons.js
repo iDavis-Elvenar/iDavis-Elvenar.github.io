@@ -380,6 +380,17 @@ var goods_icons = {
     "b_ch22_aw1_shards": "<img src='https://i.ibb.co/vkhgkGn/b-ch22-aw1-shards.png' title='Rune Shard for Tournament Fan Curve'><br>",
     "b_ch22_aw2_shards": "<img src='https://i.ibb.co/wCjyvJy/b-ch22-aw2-shards.png' title='Rune Shard for Altar of Eternity'><br>",
     "spell_settlement_production_boost_1": "<img src='https://i.ibb.co/GfnygnS6/spell-settlement-production-boost-1.png' title='Generous Guests'><br>",
+    "ch23_unicornblossoms": "<img src='https://i.ibb.co/yFnYk6RX/ch23-unicornblossoms.png' title='Sea Food'><br>",
+    "ch23_queenhoney": "<img src='https://i.ibb.co/VcGJNgGJ/ch23-queenhoney.png' title='Sea Food'><br>",
+    "ch23_orcspirits": "<img src='https://i.ibb.co/mVGsdvcc/ch23-orcspirits.png' title='Sea Food'><br>",
+    "ch23_halflingspirits": "<img src='https://i.ibb.co/4wGBXqSq/ch23-halflingspirits.png' title='Sea Food'><br>",
+    "ch23_flowerwreaths": "<img src='https://i.ibb.co/h1hwXZPV/ch23-flowerwreaths.png' title='Sea Food'><br>",
+    "ch23_fairyspirits": "<img src='https://i.ibb.co/VpNC4NG6/ch23-fairyspirits.png' title='Sea Food'><br>",
+    "ch23_dwarvenspirits": "<img src='https://i.ibb.co/tpGZ25dt/ch23-dwarvenspirits.png' title='Sea Food'><br>",
+    "ch23_dragonteeth": "<img src='https://i.ibb.co/tpbfyBgS/ch23-dragonteeth.png' title='Sea Food'><br>",
+    "ch23_mithril": "<img src='https://i.ibb.co/zW9KzZV6/ch23-mithril.png' title='Sea Food'><br>",
+    "b_ch23_aw1_shards": "<img src='https://i.ibb.co/8LXSJqK0/b-ch23-aw1-shards.png' title='Rune Shard for Fabulous Delivery Service'><br>",
+    "b_ch23_aw2_shards": "<img src='https://i.ibb.co/DHmCQDg8/b-ch23-aw2-shards.png' title='Rune Shard for Unicorn Park'><br>",
 }
 
 var xlImages = {
