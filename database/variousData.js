@@ -50,7 +50,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ch23_unicornblossoms", "ch23_queenhoney", "ch23_orcspirits", "ch23_halflingspirits", "ch23_flowerwreaths", "ch23_fairyspirits", "ch23_dwarvenspirits", "ch23_dragonteeth", "ch23_mithril", //usporiadat podla toho ake bude poradie v sklade tovarov
     "", "", "", ];
 
-var numberOfChapters = 22;
+var numberOfChapters = 23;
 
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
@@ -456,6 +456,7 @@ var discardBuildings = [
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
     "Scroll_Aquatic_XXV",
+    "Merge_Dwarvengame_XXV",
 ]
 
 var forceNonEventBuildings = [
