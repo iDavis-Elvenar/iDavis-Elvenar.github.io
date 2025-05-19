@@ -42,15 +42,15 @@ var notifications = {
     },
     "5":{  // NEW CHAPTER
         "id":5,
-        "text":`<h4 class="alert-heading">Chapter 22 has arrived in Beta!</h4>
+        "text":`<h4 class="alert-heading">Chapter 23 has arrived in Beta!</h4>
         <hr>
-        <p><center><img src="https://i.ibb.co/zPm6Jts/ch22-banner.png" style="width: 40%;">
-        <br><br>You can visit the respective page of <a href="https://idavis-elvenar.com/guestRaces/harboursofdeep.html" class='alert-link'>Chapter 22 - Harbours of the Deep</a> to see the questline, research and a lot of new content about this chapter!
+        <p><center><img src="https://i.ibb.co/23qR8Bcx/ch23-banner.png" style="width: 40%;">
+        <br><br>You can visit the respective page of <a href="https://idavis-elvenar.com/guestRaces/secretsofunicorn.html" class='alert-link'>Chapter 23 - Secrets of the Unicorn</a> to see a lot of new content about this chapter!
         <br>If the process goes as usual, we can expect this chapter to hit Live servers in the coming weeks!</center></p>`,
         "repeatAfter":172800,
         "style":"warning",
         "duration":45,
-        "active":false,
+        "active":true,
         "priority":30
     },
     "6":{  // DONATE

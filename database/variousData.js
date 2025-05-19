@@ -47,7 +47,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ch20_bars", "ch20_strings", "ch20_flutes", "ch20_drums", "ch20_songs",
     "ch21_prey", "ch21_scales", "ch21_oblations3", "ch21_shells", "ch21_dragon", "ch21_oblations2", "ch21_art", "ch21_oblations1", "ch21_oblations4", 
     "ch22_seafood", "ch22_fish", "ch22_fruits", "ch22_salt", "ch22_shrimps", "ch22_snails", "ch22_weed", "ch22_eels", "ch22_sponges", 
-    "ch23_unicornblossoms", "ch23_queenhoney", "ch23_orcspirits", "ch23_halflingspirits", "ch23_flowerwreaths", "ch23_fairyspirits", "ch23_dwarvenspirits", "ch23_dragonteeth", "ch23_mithril", //usporiadat podla toho ake bude poradie v sklade tovarov
+    "ch23_unicornblossoms", "ch23_dwarvenspirits", "ch23_fairyspirits", "ch23_orcspirits", "ch23_halflingspirits", "ch23_mithril", "ch23_queenhoney", "ch23_dragonteeth", "ch23_flowerwreaths",
     "", "", "", ];
 
 var numberOfChapters = 23;
