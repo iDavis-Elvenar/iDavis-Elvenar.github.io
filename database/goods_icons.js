@@ -137,6 +137,9 @@ var goods_icons = {
     "diamonds": "<img src='https://i.ibb.co/cYyST31/Premium-small.png' title='Diamonds'><br>",
     "gr6_fertilizer": "<img src='https://i.ibb.co/pPHTWTT/gr6-fertilizer.png' title='Fertilizer'><br>",
     "gr6_apples": "<img src='https://i.ibb.co/Y7c1L9J/gr6-apple.png' title='Apple'><br>",
+    "gr6_grain": "<img src='' title='Grain'><br>",
+    "gr6_carrots": "<img src='' title='Carrots'><br>",
+    "gr6_pumpkins": "<img src='' title='Pumpkins'><br>",
     "spell_neighborly_help_boost_1": "<img src='https://i.ibb.co/8BsQZ4W/Spell-neighborly-help-boost-1-small.png' title='Ensorcelled Endowment'><br>",
     "gr7_toll": "<img src='https://i.ibb.co/yB6PYm2/gr7-toll.png' title='Minerals'><br>",
     "spell_supply_production_boost_1": "<img src='https://i.ibb.co/JcGk0d7/Spell-supply-production-boost-1-small.png' title='Power of Provision'><br>",
@@ -391,6 +394,8 @@ var goods_icons = {
     "ch23_mithril": "<img src='https://i.ibb.co/zW9KzZV6/ch23-mithril.png' title='Azurite'><br>",
     "b_ch23_aw1_shards": "<img src='https://i.ibb.co/8LXSJqK0/b-ch23-aw1-shards.png' title='Rune Shard for Fabulous Delivery Service'><br>",
     "b_ch23_aw2_shards": "<img src='https://i.ibb.co/DHmCQDg8/b-ch23-aw2-shards.png' title='Rune Shard for Unicorn Park'><br>",
+    "radiant_stones": "<img src='' title='Radiant Stones'><br>",
+    "cauldron_witchpoints": "<img src='' title='Cauldron Witch Points'><br>",
 }
 
 var xlImages = {
