@@ -1,8 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2025" : [
-            ["The Chiming Sands","tile_amuni_xxv_",false,false],
-            ["Garden of Remembrance","shuffle_garden_xxv_",true,false],
+            ["The Chiming Sands","tile_amuni_xxv_",true,false],
+            ["Garden of Remembrance","shuffle_garden_xxv_",false,false],
             ["Glory of the Phoenix","theater_easter_xxv_",false,false],
             ["Elvarian Cook Off","merge_kitchen_xxv_",false,false],
             ["Magic of Yore","scroll_sorcerers_xxv_",false,false],
@@ -72,8 +72,8 @@ var allEvents = {
     },
     "all_events" : {
         "2025" : [
-            ["The Chiming Sands","tile_amuni_xxv_",false,false],
-            ["Garden of Remembrance","shuffle_garden_xxv_",true,false],
+            ["The Chiming Sands","tile_amuni_xxv_",true,false],
+            ["Garden of Remembrance","shuffle_garden_xxv_",false,false],
             ["Glory of the Phoenix","theater_easter_xxv_",false,false],
             ["Elvarian Cook Off","merge_kitchen_xxv_",false,false],
             ["Magic of Yore","scroll_sorcerers_xxv_",false,false],
