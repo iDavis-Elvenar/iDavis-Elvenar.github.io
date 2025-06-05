@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "tile_amuni_xxv_": {//The Chiming Sands 12.6. - 3.7.
         "live": {
-            "start_date": "__ _ 2025",
-            "end_date": "__ _ 2025"
+            "start_date": "June 12th 2025",
+            "end_date": "July 3rd 2025"
         },
         "beta": {
             "start_date": "May 16th 2025",
