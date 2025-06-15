@@ -108,6 +108,7 @@ let eventBanners = {
     "theater_easter_xxv_": "https://i.ibb.co/gbdTwwkW/EL-akcia-ve-k-noc-2025-banner.png",
     "shuffle_garden_xxv_": "https://i.ibb.co/ycWCzqZx/EL-akcia-m-j-2025-banner.png",
     "tile_amuni_xxv_": "https://i.ibb.co/nMp3XmJc/EL-akcia-j-n-2025-banner.png",
+    "scroll_aquatic_xxv_": "https://i.ibb.co/j9v3wcyh/EL-akcia-j-l-2025-banner.png",
 }
 
 let eventVideos = {
@@ -176,6 +177,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "theater_easter_xxv_": "03/06/2025",
     "shuffle_garden_xxv_": "04/07/2025",
     "tile_amuni_xxv_": "05/16/2025",
+    "scroll_aquatic_xxv_": "06/13/2025",
 }
 
 let questsLinks = {
@@ -213,6 +215,7 @@ let questsLinks = {
     "theater_easter_xxv_": "bit.ly/GloryOfThePhoenix2025",
     "shuffle_garden_xxv_": "bit.ly/GardenOfRemembrance2025",
     "tile_amuni_xxv_": "bit.ly/TheChimingSands2025",
+    "scroll_aquatic_xxv_": "bit.ly/TheElvarianGames2025",
 }
 
 let eventsDurations = {
@@ -250,6 +253,7 @@ let eventsDurations = {
     "theater_easter_xxv_": 21,
     "shuffle_garden_xxv_": 21,
     "tile_amuni_xxv_": 21,
+    "scroll_aquatic_xxv_": 21,
 }
 
 let evoUpgradeCosts = {
@@ -305,6 +309,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off": "ins_evo_merge_kitchen_xxv",
     "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": "ins_evo_theater_easter_xxv",
     "A_Evt_Evo_Tile_Amuni_XXV_Everflowing_Cascade": "ins_evo_tile_amuni_xxv",
+    "A_Evt_Evo_Scroll_Aquatic_XXV_Ceremonial_Pools": "ins_evo_scroll_aquatic_xxv",
 }
 
 var artifacts = {
@@ -355,6 +360,7 @@ var artifacts = {
     "ins_evo_merge_kitchen_xxv": {"name": "Elvarian Cook Off Artifact", "img": "https://i.ibb.co/8g6pcMPp/ins-evo-merge-kitchen-xxv.png"},
     "ins_evo_theater_easter_xxv": {"name": "Azure Phoenix Artifact", "img": "https://i.ibb.co/fYKK0N2x/ins-evo-theater-easter-xxv.png"},
     "ins_evo_tile_amuni_xxv": {"name": "Everflowing Cascade Artifact", "img": "https://i.ibb.co/Mk3DS6bN/ins-evo-tile-amuni-xxv.png"},
+    "ins_evo_scroll_aquatic_xxv": {"name": "Ceremonial Pools Artifact", "img": "https://i.ibb.co/gFjQTQzG/ins-evo-scroll-aquatic-xxv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -455,7 +461,6 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
-    "Scroll_Aquatic_XXV",
     "Merge_Dwarvengame_XXV",
 ]
 
@@ -489,6 +494,7 @@ var eventsInfoIcons = {
     "theater_easter_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "shuffle_garden_xxv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "tile_amuni_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "scroll_aquatic_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -508,6 +514,7 @@ var eventsPaybackIcons = {
     "theater_easter_xxv_": "https://i.ibb.co/bjdMSDxK/event-payback.png",
     "shuffle_garden_xxv_": "https://i.ibb.co/wN3QL26L/event-payback.png",
     "tile_amuni_xxv_": "https://i.ibb.co/4nPVJV6V/event-payback.png",
+    "scroll_aquatic_xxv_": "https://i.ibb.co/vQgG13g/scroll-aquatic-xxiv-payback.png",
 }
 
 var eventsAvatars = {
@@ -536,6 +543,8 @@ var eventsAvatars = {
     "portraitEvtShuffleGardenXxvM1": "https://i.ibb.co/KpmwdSxp/portrait-evt-shuffle-garden-xxv-m1.png",
     "portraitEvtTileAmuniXxvF1": "https://i.ibb.co/HTxfV2L3/portrait-evt-tile-amuni-xxv-f1.png",
     "portraitEvtTileAmuniXxvM1": "https://i.ibb.co/v4d1fSzY/portrait-evt-tile-amuni-xxv-m1.png",
+    "portraitEvtScrollAquaticXxvF1": "https://i.ibb.co/TxHLRNMC/portrait-evt-scroll-aquatic-xxv-f1.png",
+    "portraitEvtScrollAquaticXxvM1": "https://i.ibb.co/XxG1hNXZ/portrait-evt-scroll-aquatic-xxv-m1.png",
 }
 
 var leaguesBanners = {
@@ -555,6 +564,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "scroll_aquatic_xxv_": [
+        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/20/2025"},
+    ],
     "tile_amuni_xxv_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
         {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},

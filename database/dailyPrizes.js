@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "scroll_aquatic_xxv_": [
+        "A_Evt_Scroll_Aquatic_XXIV_Torrent_of_Teamwork",
+        "A_Evt_Scroll_Aquatic_XXV_Pufferfish_Bounce",
+        "INS_KP_{15}",
+        "A_Evt_Scroll_Aquatic_XXIV_Symphony_of_the_Sirens",
+        "A_Evt_Exp_Set_Scroll_Aquatic_XXIV_Abyssal_Pearls",
+        "A_Evt_MM_XIX_CrabHotel",
+        "A_Evt_Exp_Set_Scroll_Aquatic_XXIV_Neptunes_Trove",
+        "A_Evt_Scroll_Aquatic_XXV_Octo_Sweeper",
+        "INS_UNIT_MC_HM_10",
+        "A_Evt_MM_XIX_WaterBubble",
+        "A_Evt_Exp_Set_Scroll_Aquatic_XXIV_Opaline_Shell",
+        "A_Evt_Scroll_Aquatic_XXIII_Fin_Stop",
+        "INS_REV_SQD_100",
+        "A_Evt_Exp_Set_Scroll_Aquatic_XXIV_Sunset_Kelp",
+        "A_Evt_MM_XIX_MantaRay",
+        "A_Evt_MM_XIX_Baywatch",
+        "A_Evt_Exp_Set_Scroll_Aquatic_XXIV_Azure_Shard",
+        "A_Evt_MM_XIX_SharkTower",
+        "INS_UNIT_LR_10",
+        "A_Evt_MM_XIX_Lagoon",
+        "INS_KP_{15}",
+    ],
+
     "tile_amuni_xxv_": [
         "A_Evt_Tile_Amuni_XXV_Travelling_Scriptorium",
         "A_Evt_February_XXIII_Mule_Lifter",

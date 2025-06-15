@@ -53,6 +53,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off": 9,
     "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": 9,
     "A_Evt_Evo_Tile_Amuni_XXV_Everflowing_Cascade": 9,
+    "A_Evt_Evo_Scroll_Aquatic_XXV_Ceremonial_Pools": 6,
 }
 
 function setAndReload(id) {

@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "tile_amuni_xxv_": {//The Chiming Sands 12.6. - 3.7.
+    "scroll_aquatic_xxv_": {//The Crystal Expedition 12.8. - 2.9.
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "June 13th 2025",
+            "end_date": "July 4th 2025"
+        }
+    },
+    "tile_amuni_xxv_": {
         "live": {
             "start_date": "June 12th 2025",
             "end_date": "July 3rd 2025"

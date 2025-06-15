@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Evo_Scroll_Aquatic_XXV_Ceremonial_Pools":"https://i.ibb.co/ksMXMGfM/ceremonial-pools.png",
+    "A_Evt_Scroll_Aquatic_XXV_Hermits_Maze":"https://i.ibb.co/Pz3JL0f5/hermits-maze.png",
+    "A_Evt_Scroll_Aquatic_XXV_Octo_Sweeper":"https://i.ibb.co/BKgLX7PS/octo-sweeper.png",
+    "A_Evt_Scroll_Aquatic_XXV_Pufferfish_Bounce":"https://i.ibb.co/GQKRmfBs/pufferfish-bounce.png",
     "A_Evt_Evo_Tile_Amuni_XXV_Everflowing_Cascade":"https://i.ibb.co/1J8VZ0BB/everflowing-cascade.png",
     "A_Evt_Exp_Tile_Amuni_XXV_Glyph_Weaver_Workshop":"https://i.ibb.co/YFTStdjK/glyph-weaver-workshop.png",
     "A_Evt_Tile_Amuni_XXV_Crystal_Pond":"https://i.ibb.co/VfQNv61/crystal-pond.png",
