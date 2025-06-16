@@ -600,52 +600,6 @@ function readBuildingsJSON() {
                     petDiv.appendChild(petTable);
                     div.appendChild(petDiv);
                 }
-                // TRANSCENDENCE
-                if (isEvo && filteredData[i].hasOwnProperty("transcendence")) {
-                    var transData = filteredData[i]["transcendence"];
-                    var transDiv = document.createElement('div');
-                    transDiv.className = 'bbTable';
-                    transDiv.style.marginTop = "20px";
-                    var transCenter = document.createElement('center');
-                    var transImg = document.createElement('img');
-                    transImg.src = "images/general/icon_transcendence_active.png";
-                    transCenter.appendChild(transImg);
-                    transDiv.appendChild(transCenter);
-                    var transUl = document.createElement('ul');
-                    var transLi1 = document.createElement('li');
-                    transLi1.innerHTML = `<b>Transcendence effect: </b>activate with ${goods_icons["volatile_sigils"]}`;
-                    transUl.appendChild(transLi1);
-                    var transLi2 = document.createElement('li');
-                    transLi2.innerHTML = `<b>Duration: </b>${transData[0]['duration']/60/60/24}d`;
-                    transUl.appendChild(transLi2);
-
-                    let transEffectsInStageAvailable = 0;
-                    for (let transEffect = 0; transEffect < transData.length; transEffect++) {
-                        var transN = document.createElement('li');
-                        if (transData[transEffect]['valuesStages'].hasOwnProperty(displayStage+1)) {
-                            if (transData[transEffect]['format'] === 'sign_percentage') {
-                                transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]*100}%`;
-                                const nthProductionId = filteredData[i]['all_productions'].find(prod => 
-                                    Object.keys(filteredData[i]['chapters'][getPresetChapter()][displayStage]).includes(prod[0]) && 
-                                    !prioritiesNonProduction.includes(prod[0])
-                                )[0]; // tato nula aktualne vybera prvu produkciu. Mozno to bude treba v buducnosti zmenit a parametrizovat podla parametra targets v effectConfigs
-                                transN.innerHTML += ` ${goods_icons[nthProductionId]}`;
-                            } else if (transData[transEffect]['format'] === 'default') {
-                                transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]}x`;
-                                transN.innerHTML += ` ${goods_icons[transData[transEffect]['iconID']]}`;
-                            }
-                            transUl.appendChild(transN);
-                            transEffectsInStageAvailable++;
-                        }
-                    }
-                    if (transEffectsInStageAvailable === 0) {
-                        var transN = document.createElement('li');
-                        transN.innerHTML = `No transcendence effects are available at this stage.`;
-                        transUl.appendChild(transN);
-                    }
-                    transDiv.appendChild(transUl);
-                    div.appendChild(transDiv);
-                }
                 //WEIGHTED REWARDS
                 if (filteredData[i].hasOwnProperty("weightedRewards")) {
                     let wrJSON = undefined;
@@ -697,6 +651,55 @@ function readBuildingsJSON() {
                     wrTable.appendChild(wrBody);
                     wrDiv.appendChild(wrTable);
                     div.appendChild(wrDiv);
+                }
+                // TRANSCENDENCE
+                if (isEvo && filteredData[i].hasOwnProperty("transcendence")) {
+                    var transData = filteredData[i]["transcendence"];
+                    var transDiv = document.createElement('div');
+                    transDiv.className = 'bbTable';
+                    transDiv.style.marginTop = "20px";
+                    var transCenter = document.createElement('center');
+                    var transImg = document.createElement('img');
+                    transImg.src = "images/general/icon_transcendence_active.png";
+                    transCenter.appendChild(transImg);
+                    transDiv.appendChild(transCenter);
+                    var transUl = document.createElement('ul');
+                    var transLi1 = document.createElement('li');
+                    transLi1.innerHTML = `<b>Transcendence effect: </b>activate with ${goods_icons["volatile_sigils"]}`;
+                    transUl.appendChild(transLi1);
+                    var transLi2 = document.createElement('li');
+                    transLi2.innerHTML = `<b>Duration: </b>${transData[0]['duration']/60/60/24}d`;
+                    transUl.appendChild(transLi2);
+
+                    let transEffectsInStageAvailable = 0;
+                    for (let transEffect = 0; transEffect < transData.length; transEffect++) {
+                        var transN = document.createElement('li');
+                        if (transData[transEffect]['valuesStages'].hasOwnProperty(displayStage+1)) {
+                            if (transData[transEffect]['format'] === 'sign_percentage') {
+                                transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]*100}%`;
+                                const nthProductionId = filteredData[i]['all_productions'].find(prod => 
+                                    Object.keys(filteredData[i]['chapters'][getPresetChapter()][displayStage]).includes(prod[0]) && 
+                                    !prioritiesNonProduction.includes(prod[0])
+                                )[0]; // tato nula aktualne vybera prvu produkciu. Mozno to bude treba v buducnosti zmenit a parametrizovat podla parametra targets v effectConfigs
+                                transN.innerHTML += ` ${goods_icons[nthProductionId]}`;
+                            } else if (transData[transEffect]['format'] === 'default') {
+                                transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]}x`;
+                                transN.innerHTML += ` ${goods_icons[transData[transEffect]['iconID']]}`;
+                            } else if (transData[transEffect]['format'] === 'trigger_chance') {
+                                transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]}x`;
+                                transN.innerHTML += ` ${goods_icons[transData[transEffect]['iconID']]}`;
+                            }
+                            transUl.appendChild(transN);
+                            transEffectsInStageAvailable++;
+                        }
+                    }
+                    if (transEffectsInStageAvailable === 0) {
+                        var transN = document.createElement('li');
+                        transN.innerHTML = `No transcendence effects are available at this stage.`;
+                        transUl.appendChild(transN);
+                    }
+                    transDiv.appendChild(transUl);
+                    div.appendChild(transDiv);
                 }
                 document.getElementById('column_with_tables').appendChild(div);
                 

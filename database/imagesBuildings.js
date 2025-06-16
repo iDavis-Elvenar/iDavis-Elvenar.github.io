@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Set_Seasons_XXV_The_Sleeping_Root":"https://i.ibb.co/vCJrZP9B/the-sleeping-root.png",
+    "A_Evt_Set_Seasons_XXV_The_Quiet_Shade":"https://i.ibb.co/YFC5RfvQ/the-quiet-shade.png",
+    "A_Evt_Set_Seasons_XXV_The_Crowned_Arch":"https://i.ibb.co/1YYD545k/the-crowned-arch.png",
+    "A_Evt_Set_Seasons_XXV_The_Blooming_Light":"https://i.ibb.co/60hHyyt5/the-blooming-light.png",
     "A_Evt_Evo_Scroll_Aquatic_XXV_Ceremonial_Pools":"https://i.ibb.co/ksMXMGfM/ceremonial-pools.png",
     "A_Evt_Scroll_Aquatic_XXV_Hermits_Maze":"https://i.ibb.co/Pz3JL0f5/hermits-maze.png",
     "A_Evt_Scroll_Aquatic_XXV_Octo_Sweeper":"https://i.ibb.co/BKgLX7PS/octo-sweeper.png",

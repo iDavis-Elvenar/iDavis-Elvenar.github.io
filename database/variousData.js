@@ -454,6 +454,7 @@ var setNames = {
     "scroll_aquatic_expiring": "Hoarder's Set",
     "shuffle_postal_xxiv": "The Winter's Stage",
     "shuffle_garden_xxv": "Floating Garden",
+    "seasons_xxv": "Canopy of Seasons",
 }
 
 var discardBuildings = [
@@ -545,6 +546,7 @@ var eventsAvatars = {
     "portraitEvtTileAmuniXxvM1": "https://i.ibb.co/v4d1fSzY/portrait-evt-tile-amuni-xxv-m1.png",
     "portraitEvtScrollAquaticXxvF1": "https://i.ibb.co/TxHLRNMC/portrait-evt-scroll-aquatic-xxv-f1.png",
     "portraitEvtScrollAquaticXxvM1": "https://i.ibb.co/XxG1hNXZ/portrait-evt-scroll-aquatic-xxv-m1.png",
+    "portraitSeasonJoyXxvF1": "https://i.ibb.co/cKVqdJp9/portrait-season-joy-xxv-f1.png",
 }
 
 var leaguesBanners = {
@@ -565,7 +567,7 @@ var baseTabsEvents = [
 
 var additionalTabsEvents = {
     "scroll_aquatic_xxv_": [
-        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/20/2025"},
+        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/16/2025"},
     ],
     "tile_amuni_xxv_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
