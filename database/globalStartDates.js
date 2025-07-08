@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "scroll_aquatic_xxv_": {//The Crystal Expedition 12.8. - 2.9.
         "live": {
-            "start_date": "__ _ 2025",
-            "end_date": "__ _ 2025"
+            "start_date": "July 14th 2025",
+            "end_date": "August 4th 2025"
         },
         "beta": {
             "start_date": "June 13th 2025",
