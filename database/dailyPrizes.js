@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "merge_dwarvengame_xxv_": [
+        "A_Evt_Merge_Dwarvengame_XXV_Gleaming_Gambit",
+        "INS_ROYAL_RESTORATION_{1}",
+        "A_Evt_Merge_Dwarvengame_XXV_Blast_Works",
+        "INS_KP_{20}",
+        "A_Evt_Theater_Zodiac_XXIII_Mirrors_of_the_Cosmos",
+        "A_Evt_Merge_Kitchen_XXV_Cooking_Fest_Gate",
+        "INS_KP_AW_20",
+        "INS_RF_SPL_100",
+        "INS_PREMIUM_{15}",
+        "A_Evt_February_XXIII_Mule_Lifter",
+        "INS_PETFOOD_1",
+        "A_Evt_August_XXII_Lunar_Factory",
+        "INS_REV_SQD_75",
+        "frog_unurium_DP_{15}",
+        "A_Evt_Merge_Dwarvengame_XXIII_Perpetual_Slider",
+        "INS_TR_AMT_300{8}",
+        "INS_KP_AW_20",
+        "INS_ROYAL_RESTORATION_{1}",
+        "A_Evt_Merge_Dwarvengame_XXIII_Target_Shooting",
+        "A_Evt_May_XXII_Primordial_Gecko",
+        "INS_KP_{15}",
+    ],
+
     "scroll_aquatic_xxv_": [
         "A_Evt_Scroll_Aquatic_XXIV_Torrent_of_Teamwork",
         "A_Evt_Scroll_Aquatic_XXV_Pufferfish_Bounce",

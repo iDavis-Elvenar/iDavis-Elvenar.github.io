@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_Evo_Merge_Dwarvengame_XXV_Frostgem_Foundry":"https://i.ibb.co/wNVd6VZ2/frostgem-foundry.png",
+    "A_Evt_Exp_Merge_Dwarvengame_XXV_Dwarven_Ironhorn":"https://i.ibb.co/Xk2ppCRt/dwarven-ironhorn.png",
+    "A_Evt_Merge_Dwarvengame_XXV_Blast_Works":"https://i.ibb.co/5h26WLBN/blast-works.png",
+    "A_Evt_Merge_Dwarvengame_XXV_Gleaming_Gambit":"https://i.ibb.co/7NppgrDT/gleaming-gambit.png",
+    "A_Evt_Merge_Dwarvengame_XXV_Stoneface_Pathway":"https://i.ibb.co/HfWnjKsn/stoneface-pathway.png",
     "A_Evt_Set_Seasons_XXV_The_Sleeping_Root":"https://i.ibb.co/vCJrZP9B/the-sleeping-root.png",
     "A_Evt_Set_Seasons_XXV_The_Quiet_Shade":"https://i.ibb.co/YFC5RfvQ/the-quiet-shade.png",
     "A_Evt_Set_Seasons_XXV_The_Crowned_Arch":"https://i.ibb.co/1YYD545k/the-crowned-arch.png",

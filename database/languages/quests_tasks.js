@@ -74,5 +74,7 @@ var POUZIJ_SPOJOVACI_CINIDLO = function (value) {return {"id": 55, "value": valu
 
 var POZEHNANI_JEDNOTKY = function (value) {return {"id": 56, "value": value, "img": "https://i.ibb.co/pvw2GBt/units.png"}};
 
+var RUNY = function (value) {return {"id": 57, "value": value, "img": "https://i.ibb.co/cK9Bjdm/b-all-aw1-shards.png"}};
+
 var AND = "and";
 var OR = "or";

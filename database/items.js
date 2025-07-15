@@ -168,5 +168,19 @@ var instants = {
         "image_small": "https://i.ibb.co/WnDfq7P/combining-catalyst.png",
         "title": "Combining Catalyst",
         "production_type": ""
+    },
+    "INS_ROYAL_RESTORATION_": {
+        "name": "Royal Restoration",
+        "image_big": "https://i.ibb.co/4YLRxLh/royalrestoration.png",
+        "image_small": "https://i.ibb.co/47B34xJ/royalrestoration.png",
+        "title": "Royal Restoration",
+        "production_type": ""
+    },
+    "INS_PREMIUM_": {
+        "name": "Diamonds",
+        "image_big": "https://i.ibb.co/WV2cnhX/premium.png",
+        "image_small": "https://i.ibb.co/cYyST31/Premium-small.png",
+        "title": "Diamonds",
+        "production_type": ""
     }
 }

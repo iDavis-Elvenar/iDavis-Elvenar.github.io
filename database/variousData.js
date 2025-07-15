@@ -109,6 +109,7 @@ let eventBanners = {
     "shuffle_garden_xxv_": "https://i.ibb.co/ycWCzqZx/EL-akcia-m-j-2025-banner.png",
     "tile_amuni_xxv_": "https://i.ibb.co/nMp3XmJc/EL-akcia-j-n-2025-banner.png",
     "scroll_aquatic_xxv_": "https://i.ibb.co/j9v3wcyh/EL-akcia-j-l-2025-banner.png",
+    "merge_dwarvengame_xxv_": "https://i.ibb.co/20CM9kgv/EL-akcia-august-2025-banner.png",
 }
 
 let eventVideos = {
@@ -178,6 +179,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "shuffle_garden_xxv_": "04/07/2025",
     "tile_amuni_xxv_": "05/16/2025",
     "scroll_aquatic_xxv_": "06/13/2025",
+    "merge_dwarvengame_xxv_": "07/17/2025",
 }
 
 let questsLinks = {
@@ -216,6 +218,7 @@ let questsLinks = {
     "shuffle_garden_xxv_": "bit.ly/GardenOfRemembrance2025",
     "tile_amuni_xxv_": "bit.ly/TheChimingSands2025",
     "scroll_aquatic_xxv_": "bit.ly/TheElvarianGames2025",
+    "merge_dwarvengame_xxv_": "bit.ly/TheCrystalExpedition2025",
 }
 
 let eventsDurations = {
@@ -254,6 +257,7 @@ let eventsDurations = {
     "shuffle_garden_xxv_": 21,
     "tile_amuni_xxv_": 21,
     "scroll_aquatic_xxv_": 21,
+    "merge_dwarvengame_xxv_": 21,
 }
 
 let evoUpgradeCosts = {
@@ -310,6 +314,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": "ins_evo_theater_easter_xxv",
     "A_Evt_Evo_Tile_Amuni_XXV_Everflowing_Cascade": "ins_evo_tile_amuni_xxv",
     "A_Evt_Evo_Scroll_Aquatic_XXV_Ceremonial_Pools": "ins_evo_scroll_aquatic_xxv",
+    "A_Evt_Evo_Merge_Dwarvengame_XXV_Frostgem_Foundry": "ins_evo_merge_dwarvengame_xxv",
 }
 
 var artifacts = {
@@ -361,6 +366,7 @@ var artifacts = {
     "ins_evo_theater_easter_xxv": {"name": "Azure Phoenix Artifact", "img": "https://i.ibb.co/fYKK0N2x/ins-evo-theater-easter-xxv.png"},
     "ins_evo_tile_amuni_xxv": {"name": "Everflowing Cascade Artifact", "img": "https://i.ibb.co/Mk3DS6bN/ins-evo-tile-amuni-xxv.png"},
     "ins_evo_scroll_aquatic_xxv": {"name": "Ceremonial Pools Artifact", "img": "https://i.ibb.co/gFjQTQzG/ins-evo-scroll-aquatic-xxv.png"},
+    "ins_evo_merge_dwarvengame_xxv": {"name": "Frostgem Foundry Artifact", "img": "https://i.ibb.co/QvTn62hf/ins-evo-merge-dwarvengame-xxv.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -415,6 +421,7 @@ var iconsImages = {
     "goods_all_small": "https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png",
     "tournamentpoint_boosted": "https://i.ibb.co/bgJmdntT/tournament-points-boost.png",
     "seeds": "https://image.ibb.co/c9JtEq/seeds.png",
+    "b_all_spire_aw_shards": "https://i.ibb.co/Kjtg4jK6/b-all-spire-aw-shards.png",
 }
 
 var iconsTitles = {
@@ -462,7 +469,7 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
-    "Merge_Dwarvengame_XXV",
+    "Theater_Zodiac_XXV",
 ]
 
 var forceNonEventBuildings = [
@@ -496,6 +503,7 @@ var eventsInfoIcons = {
     "shuffle_garden_xxv_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "tile_amuni_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_aquatic_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "merge_dwarvengame_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -516,6 +524,7 @@ var eventsPaybackIcons = {
     "shuffle_garden_xxv_": "https://i.ibb.co/wN3QL26L/event-payback.png",
     "tile_amuni_xxv_": "https://i.ibb.co/4nPVJV6V/event-payback.png",
     "scroll_aquatic_xxv_": "https://i.ibb.co/vQgG13g/scroll-aquatic-xxiv-payback.png",
+    "merge_dwarvengame_xxv_": "https://i.ibb.co/VL6QWtp/merge-dwarvengame-xxiv-event-payback.png",
 }
 
 var eventsAvatars = {
@@ -547,6 +556,8 @@ var eventsAvatars = {
     "portraitEvtScrollAquaticXxvF1": "https://i.ibb.co/TxHLRNMC/portrait-evt-scroll-aquatic-xxv-f1.png",
     "portraitEvtScrollAquaticXxvM1": "https://i.ibb.co/XxG1hNXZ/portrait-evt-scroll-aquatic-xxv-m1.png",
     "portraitSeasonJoyXxvF1": "https://i.ibb.co/cKVqdJp9/portrait-season-joy-xxv-f1.png",
+    "portraitEvtMergeDwarvengameXxvC1": "https://i.ibb.co/nNKsPsNN/portrait-evt-merge-dwarvengame-xxv-c1.png",
+    "portraitEvtMergeDwarvengameXxvM1": "https://i.ibb.co/jkf2dsHP/portrait-evt-merge-dwarvengame-xxv-m1.png",
 }
 
 var leaguesBanners = {
@@ -566,6 +577,11 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "merge_dwarvengame_xxv_": [
+        {"id":"board", "name":"Board", "img":"https://i.ibb.co/5vGFxky/a4.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"07/15/2025"},
+        {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html", "releaseDate":"07/25/2025"},
+        {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html", "releaseDate":"07/15/2025"},
+    ],
     "scroll_aquatic_xxv_": [
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html", "releaseDate":"06/16/2025"},
     ],

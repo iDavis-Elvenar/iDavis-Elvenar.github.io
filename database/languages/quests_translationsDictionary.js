@@ -57,6 +57,7 @@ let questsDictionary = {
         54: "Získej nějaké množství osvíceného zboží",
         55: "Použij _ d{spojovací činidlo,spojovací činidla,spojovacích činidel}",
         56: "Použij _ d{požehnání na jednotky,požehnání na jednotky,požehnání na jednotky}",
+        57: "Vytvoř _ d{runu,runy,run}",
     },
     "en" : {
         0: "Collect some amount of coins",
@@ -116,6 +117,7 @@ let questsDictionary = {
         54: "Collect some amount of ascended goods",
         55: "Use _ d{combining catalyst,combining catalysts}",
         56: "Use _ d{unit refill instant,unit refill instants}",
+        57: "Forge _ d{rune,runes}",
     },
     "de" : {
         0: "Sammle eine Menge Münzen",
@@ -175,6 +177,7 @@ let questsDictionary = {
         54: "Sammle eine Menge Erleuchtete Güter",
         55: "Benutze _ d{Kombinationsauslöser,Kombinationsauslöser}",
         56: "Use _ d{unit refill instant,unit refill instants}",
+        57: "Forge _ d{rune,runes}",
     },
     "fr" : {
         0: "Collectez une certaine quantité de pièces",
@@ -234,6 +237,7 @@ let questsDictionary = {
         54: "Collectez une certaine quantité de d'ascension basiques",
         55: "Utilisez _ d{catalyseur de combinaison,catalyseurs de combinaison}",
         56: "Use _ d{unit refill instant,unit refill instants}",
+        57: "Forge _ d{rune,runes}",
     },
     "hu" : {
         0: "Gyűjts bizonyos mennyiségű aranyat",
@@ -293,6 +297,7 @@ let questsDictionary = {
         54: "Gyűjts bizonyos mennyiségű Felemelkedett Áru",
         55: "Használj _ kombináló katalizátort",
         56: "Use _ unit refill instant",
+        57: "Forge _ d{rune,runes}",
     },
     "it" : {
     	0: "Ottieni una grande somma di Monete",
@@ -352,6 +357,7 @@ let questsDictionary = {
     	54: "Ottieni una buona somma di Beni Ascesi a scelta",
     	55: "Usa _ d{Catalizzatore Combinante,Catalizzatori Combinanti}",
         56: "Use _ d{unit refill instant,unit refill instants}",
+        57: "Forge _ d{rune,runes}",
 	},
     "pl" : {
         0: "Zdobądź nieco monet",
@@ -411,6 +417,7 @@ let questsDictionary = {
         54: "Zdobądź nieco wzniosłe towary",
         55: "Użyj _ d{katalizator,katalizatory,katalizatorów}",
         56: "Use _ d{unit refill instant,unit refill instants,unit refill instants}",
+        57: "Forge _ d{rune,runes}",
     },
     "ru" : {
         0: "Соберите хорошее количество монет",
@@ -470,5 +477,6 @@ let questsDictionary = {
         54: "Соберите хорошее количество ascended goods",
         55: "Используйте _ d{комбинирующий катализатор,комбинирующего катализатора,комбинирующих катализаторов}",
         56: "Use _ d{unit refill instant,unit refill instants,unit refill instants}",
+        57: "Forge _ d{rune,runes}",
     }
 }

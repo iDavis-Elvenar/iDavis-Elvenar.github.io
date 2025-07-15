@@ -1199,6 +1199,9 @@ function generateQuestsAuto() {
                     } else if (task_raw.includes('use') && task_raw.includes('unit_instant_items')) {
                         var value = extractOneNumber(task_raw);
                         questGathered[range].push('POZEHNANI_JEDNOTKY('+value+')');
+                    } else if (task_raw.includes('forge rune')) {
+                        var value = extractOneNumber(task_raw);
+                        questGathered[range].push('RUNY('+value+')');
                     } else {
                         console.log(`Not handled quest:\n'${task_desc}'\n'${task_raw}'`);
                     }
