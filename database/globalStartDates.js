@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "merge_dwarvengame_xxv_": {//The Crystal Expedition 12.8. - 2.9.
         "live": {
-            "start_date": "__ _ 2025",
-            "end_date": "__ _ 2025"
+            "start_date": "August 12th 2025",
+            "end_date": "September 2nd 2025"
         },
         "beta": {
             "start_date": "July 17th 2025",
