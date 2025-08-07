@@ -1,5 +1,5 @@
 var eventStartDates = { 
-    "merge_dwarvengame_xxv_": {//The Crystal Expedition 12.8. - 2.9.
+    "merge_dwarvengame_xxv_": {//Autumn Zodiac 12.10. - 2.11.
         "live": {
             "start_date": "August 12th 2025",
             "end_date": "September 2nd 2025"
@@ -272,6 +272,16 @@ var eventStartDates = {
 }
 
 var faStartDates = { //June 3.6. - 9.6.
+    "september_xxv_": {
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "August 7th 2025",
+            "end_date": "August 13th 2025"
+        }
+    },
     "june_xxv_": {
         "live": {
             "start_date": "June 3rd 2025",
