@@ -32,7 +32,7 @@ var instants = {
     "INS_RS_": {
         "name": "Royal Restoration",
         "image_big": "https://i.ibb.co/St8BLZB/ins-rs.png",
-        "image_small": "",
+        "image_small": "https://i.ibb.co/47B34xJ/royalrestoration.png",
         "production_type": ""
     },
     "INS_RF_GRR_": {

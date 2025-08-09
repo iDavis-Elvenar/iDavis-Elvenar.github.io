@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "theater_zodiac_xxv_": [
+        "A_Evt_Set_Shuffle_Garden_XXIV_Pupa_Nest", //?
+        "A_Evt_Theater_Zodiac_XXV_Phantoms_Rest",
+        "A_Evt_Expiring_UnitHealth_Boost",
+        "INS_KP_{20}",
+        "A_Evt_Theater_Zodiac_XXIV_Dreamers_Pillar",
+        "INS_UNIT_LR_10",
+        "A_Evt_Theater_Zodiac_XXV_Fae_Falls",
+        "INS_RF_SPL_100{2}",
+        "INS_TR_AMT_300",
+        "A_Evt_Tile_Mistyforest_XXIV_Eternal_Rivals",
+        "INS_PETFOOD_1{2}",
+        "A_Evt_Tile_Mistyforest_XXIII_HideandSeek_Hollows",
+        "INS_REV_SQD_75{2}",
+        "frog_unurium_DP_{15}",
+        "A_Evt_Expiring_LightMelee_Boost",
+        "INS_TR_AMT_300{2}",
+        "INS_KP_AW_20{2}",
+        "INS_RS_1",
+        "INS_KP_AW_10{3}",
+        "INS_REV_SQD_100{2}",
+        "INS_KP_{15}",
+    ],
+
     "merge_dwarvengame_xxv_": [
         "A_Evt_Merge_Dwarvengame_XXV_Gleaming_Gambit",
         "INS_ROYAL_RESTORATION_{1}",

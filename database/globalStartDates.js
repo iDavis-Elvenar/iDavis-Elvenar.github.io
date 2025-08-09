@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "merge_dwarvengame_xxv_": {//Autumn Zodiac 12.10. - 2.11.
+    "theater_zodiac_xxv_": {//Autumn Zodiac 18.9. - 9.10.
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "August 15th 2025",
+            "end_date": "September 5th 2025"
+        }
+    },
+    "merge_dwarvengame_xxv_": {
         "live": {
             "start_date": "August 12th 2025",
             "end_date": "September 2nd 2025"

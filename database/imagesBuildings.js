@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail":"https://i.ibb.co/YSvRbFr/shellux-the-dragonsnail.png",
+    "A_Evt_Theater_Zodiac_XXV_Cosmic_Timekeeper":"https://i.ibb.co/GQ1xWXRK/cosmic-timekeeper.png",
+    "A_Evt_Theater_Zodiac_XXV_Fae_Falls":"https://i.ibb.co/bgd7Sxy1/fae-falls.png",
+    "A_Evt_Theater_Zodiac_XXV_Phantoms_Rest":"https://i.ibb.co/cKtnHBnj/phantoms-rest.png",
     "A_Evt_Evo_Merge_Dwarvengame_XXV_Frostgem_Foundry":"https://i.ibb.co/wNVd6VZ2/frostgem-foundry.png",
     "A_Evt_Exp_Merge_Dwarvengame_XXV_Dwarven_Ironhorn":"https://i.ibb.co/Xk2ppCRt/dwarven-ironhorn.png",
     "A_Evt_Merge_Dwarvengame_XXV_Blast_Works":"https://i.ibb.co/5h26WLBN/blast-works.png",
