@@ -27,11 +27,11 @@ var dailyPrizes = {
     "merge_dwarvengame_xxv_": [
         "A_Evt_Merge_Dwarvengame_XXV_Gleaming_Gambit",
         "INS_ROYAL_RESTORATION_{1}",
-        "A_Evt_Merge_Dwarvengame_XXV_Blast_Works",
+        "INS_KP_AW_20",
         "INS_KP_{20}",
         "A_Evt_Theater_Zodiac_XXIII_Mirrors_of_the_Cosmos",
         "A_Evt_Merge_Kitchen_XXV_Cooking_Fest_Gate",
-        "INS_KP_AW_20",
+        "A_Evt_Merge_Dwarvengame_XXV_Blast_Works",
         "INS_RF_SPL_100",
         "INS_TR_AMT_300{1}",
         "A_Evt_February_XXIII_Mule_Lifter",
