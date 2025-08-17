@@ -1035,6 +1035,9 @@ function generateQuestsAuto() {
         let range = null;
         
         for (let i = 0; i < data.length; i++) {
+            if (data[i]['rawTriggerCondition'] === 'is unreachable') {
+                continue;
+            }
             if (data[i].hasOwnProperty('subType') && data[i]['subType'].includes(event_id) && !data[i]['title'].includes('Daily Event Reward')) {
                 if ((lastId === null || data[i]['rawTriggerCondition'].includes(lastId)) && (range === null || range.includes('MAX'))) { //pridanie druhej casti AND-u je len rychla oprava, aby sa pri vypisani questov do konzoly nedal kazdy range na samostatny riadok
                     lastId = data[i]['id'];                                                                                              //nemusi to fungovat ak by sa v buducnosti zmenilo poradie uloh a ulohy s range == n-MAX neboli posledne
@@ -1218,7 +1221,7 @@ function generateQuestsAuto() {
                     }
                 }
                 questGathered[range].push(data[i]['rewards'][0]['amount']);
-                if (data[i+1]['title'].includes('Daily Event Reward')) {
+                if (data[i+1]?.['title'].includes('Daily Event Reward')) {
                     result.push(questGathered);
                     //console.log(questGathered);
                     break;
