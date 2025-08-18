@@ -1,0 +1,604 @@
+<!-- HTML -->
+
+<div id="main">
+  
+    <!-- <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Lucky Little Fin ::..<br></h5>
+     <img id="event_banner" src="https://i.ibb.co/F33YbJG/EL-akcia-m-j-2022-banner.png" alt="undefined" class="center " style="margin-bottom: 15px; width: 50%;">
+    -->
+     <h5 id="header" class="card-title text-center text-title font-weight-bold" style="text-align: left;">..:: Spheres Overview ::..<br></h5>
+     <img id="event_banner" src="https://i.ibb.co/0Yz4Q93/EL-akcia-september-2022-chests.png" alt="undefined" class="center " style="margin-bottom: 15px;">
+   
+     <div class="row">
+       <div class="col-sm">
+           <center><label for="order_chests" id="order_chests" style="margin-bottom: 35px; margin-top: 15px;">Order By:</label>
+               <select id="order_chests" class="custom-select" style="width: 50%;" onchange="sort(this.value);">
+                   <option value="none">Default</option>
+                   <option value="dp">Best Chests for Daily Prizes</option>
+                   <option value="gp">Best Chests for Grand Prizes</option>
+               </select>
+           </center>
+       </div>
+     </div>
+   
+ </div>
+ 
+ <!-- JS DATABASE -->
+ 
+ <script>
+ var currencies = {
+     "theater_zodiac_xxv_": {
+         "ec": "https://i.ibb.co/fqWPg3p/EL-akcia-september-2022-currency1.png",
+         "ep": "https://i.ibb.co/K9vTy06/EL-akcia-september-2022-payback.png"
+     }
+ }
+ 
+ var chests = {
+     "theater_zodiac_xxv_": [
+         {
+             "img": "https://i.ibb.co/WDBqqd6/EL-akcia-september-2022-chest1.png", // HOTOVO
+             "ec": 28,
+             "ep": 1,
+             "chances": [
+              {
+                "__class__": "RewardChanceVO",
+                "type": "episodic",
+                "subType": "daily_reward_event_chest_theater_zodiac",
+                "amount": 1,
+                "percentage": 7
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_UNIT_LR_5",
+                "amount": 1,
+                "percentage": 31
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_UNIT_MA_5",
+                "amount": 1,
+                "percentage": 31
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_UNIT_LM_5",
+                "amount": 1,
+                "percentage": 31
+              }
+            ],
+             "id": "reward_pool_event_chest_a_scroll_aquatic"
+         },
+         {
+             "img": "https://i.ibb.co/TbT07BS/EL-akcia-september-2022-chest0.png", // HOTOVO
+             "ec": 26,
+             "ep": 1,
+             "chances": [
+              {
+                "__class__": "RewardChanceVO",
+                "type": "episodic",
+                "subType": "daily_reward_event_chest_theater_zodiac",
+                "amount": 1,
+                "percentage": 8
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_KP_AW_5",
+                "amount": 1,
+                "percentage": 10
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "knowledge_points",
+                "amount": 2,
+                "percentage": 32
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_KP_AW_3",
+                "amount": 1,
+                "percentage": 50
+              }
+            ],
+             "id": "reward_pool_event_chest_b_scroll_aquatic"
+         },
+         {
+             "img": "https://i.ibb.co/BcWXKqq/EL-akcia-september-2022-chest2.png", // HOTOVO
+             "ec": 30,
+             "ep": 1,
+             "chances": [
+              {
+                "__class__": "RewardChanceVO",
+                "type": "episodic",
+                "subType": "daily_reward_event_chest_theater_zodiac",
+                "amount": 1,
+                "percentage": 10
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "event_currency_1",
+                "amount": 30,
+                "percentage": 15
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "spell_good_production_boost_1",
+                "amount": 1,
+                "percentage": 25
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "spell_supply_production_boost_1",
+                "amount": 1,
+                "percentage": 25
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "spell_neighborly_help_boost_1",
+                "amount": 1,
+                "percentage": 25
+              }
+            ],
+             "id": "reward_pool_event_chest_c_scroll_aquatic"
+         },
+         {
+             "img": "https://i.ibb.co/By4xrNh/EL-akcia-september-2022-chest3.png", // HOTOVO
+             "ec": 51,
+             "ep": 2,
+             "chances": [
+              {
+                "__class__": "RewardChanceVO",
+                "type": "episodic",
+                "subType": "daily_reward_event_chest_theater_zodiac",
+                "amount": 1,
+                "percentage": 15
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "event_currency_1",
+                "amount": 50,
+                "percentage": 20
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_TR_AMT_480",
+                "amount": 1,
+                "percentage": 20
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "craft_spell_fragments",
+                "amount": 500,
+                "percentage": 20
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "combiningcatalyst",
+                "amount": 2,
+                "percentage": 25
+              }
+            ],
+             "id": "reward_pool_event_chest_d_scroll_aquatic"
+         },
+         {
+             "img": "https://i.ibb.co/Kr6mf2b/EL-akcia-september-2022-chest4.png", // HOTOVO
+             "ec": 55,
+             "ep": 2,
+             "chances": [
+              {
+                "__class__": "RewardChanceVO",
+                "type": "episodic",
+                "subType": "daily_reward_event_chest_theater_zodiac",
+                "amount": 1,
+                "percentage": 15
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "event_currency_1",
+                "amount": 60,
+                "percentage": 15
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_KP_AW_10",
+                "amount": 1,
+                "percentage": 20
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "runeShard",
+                "subType": "random",
+                "amount": 2,
+                "percentage": 25
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "runeShard",
+                "subType": "broken_shards",
+                "amount": 2,
+                "percentage": 25
+              }
+            ],
+             "id": "reward_pool_event_chest_e_scroll_aquatic"
+         },
+         {
+             "img": "https://i.ibb.co/MgN3ZrW/EL-akcia-september-2022-chest5.png", // HOTOVO
+             "ec": 59,
+             "ep": 2,
+             "chances": [
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "event_currency_1",
+                "amount": 100,
+                "percentage": 10
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "episodic",
+                "subType": "daily_reward_event_chest_theater_zodiac",
+                "amount": 1,
+                "percentage": 15
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_UNIT_MA_10",
+                "amount": 1,
+                "percentage": 25
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_UNIT_HR_10",
+                "amount": 1,
+                "percentage": 25
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_UNIT_LR_10",
+                "amount": 1,
+                "percentage": 25
+              }
+            ],
+             "id": "reward_pool_event_chest_f_scroll_aquatic"
+         },
+         {
+             "img": "https://i.ibb.co/frsMNd9/EL-akcia-september-2022-chest6.png", // HOTOVO
+             "ec": 66,
+             "ep": 3,
+             "chances": [
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_UNIT_HR_25",
+                "amount": 1,
+                "percentage": 5
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_REV_SQD_75",
+                "amount": 1,
+                "percentage": 15
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "episodic",
+                "subType": "daily_reward_event_chest_theater_zodiac",
+                "amount": 1,
+                "percentage": 25
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_UNIT_LM_15",
+                "amount": 1,
+                "percentage": 25
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_REV_SQD_25",
+                "amount": 1,
+                "percentage": 30
+              }
+            ],
+             "id": "reward_pool_event_chest_g_scroll_aquatic"
+         },
+         {
+             "img": "https://i.ibb.co/z4J7njT/EL-akcia-september-2022-chest7.png", // HOTOVO
+             "ec": 108,
+             "ep": 4,
+             "chances": [
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "event_currency_1",
+                "amount": 150,
+                "percentage": 15
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "knowledge_points",
+                "amount": 15,
+                "percentage": 20
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "flexible_reward",
+                "subType": "frog_unurium_DP",
+                "amount": 15,
+                "percentage": 20
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_UNIT_HM_25",
+                "amount": 1,
+                "percentage": 20
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "episodic",
+                "subType": "daily_reward_event_chest_theater_zodiac",
+                "amount": 1,
+                "percentage": 25
+              }
+            ],
+             "id": "reward_pool_event_chest_h_scroll_aquatic"
+         },
+         {
+             "img": "https://i.ibb.co/fSqqVcX/EL-akcia-september-2022-chest8.png", // HOTOVO
+             "ec": 129,
+             "ep": 5,
+             "chances": [
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "event_currency_1",
+                "amount": 200,
+                "percentage": 15
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "spell_pet_food_1",
+                "amount": 1,
+                "percentage": 15
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "item",
+                "subType": "INS_RF_GRR_10",
+                "amount": 1,
+                "percentage": 20
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "episodic",
+                "subType": "daily_reward_event_chest_theater_zodiac",
+                "amount": 1,
+                "percentage": 25
+              },
+              {
+                "__class__": "RewardChanceVO",
+                "type": "good",
+                "subType": "knowledge_points",
+                "amount": 10,
+                "percentage": 25
+              }
+            ],
+             "id": "reward_pool_event_chest_i_scroll_aquatic"
+         },
+     ]
+ }
+ 
+ var specialBuildings = {
+     "A_Evt_Autumn_XXII_Bear_Booster_A":`<h7>Ursa Totem</h7>`,
+     "A_Evt_Autumn_XXII_Bear_Booster_B":`<h7>Mellow Feast</h7>`,
+     "A_Evt_Autumn_XXII_Bear_Booster_C":`<h7>Royal Jelly</h7>`,
+ }
+ 
+ // JS CODE
+ 
+ generateChests();
+ 
+ if (typeof rewardMultiplicator === "undefined") {
+     var rewardMultiplicator = 1;
+ }
+ 
+ function generateChests() {
+     var selectedEvent = getSelectedEvent();
+     var chestsData = getChestsData(selectedEvent);
+     draw(chestsData);
+ 
+ }
+ 
+ function getChestsData(selectedEvent) {
+     return chests[selectedEvent];
+ }
+ 
+ function draw(chestsData, sort="") {
+     if (document.getElementById("div_chests") !== null) {
+         document.getElementById("div_chests").remove();
+     }
+     let divCenter = document.createElement("div");
+     divCenter.id = "div_chests";
+     divCenter.style.textAlign = "center";
+     let divBBTable = document.createElement("div");
+     divBBTable.className = "bbTable";
+ 
+     for (let i = 0; i < chestsData.length; i++) {
+ 
+     let table = document.createElement("table");
+     table.className = "table-primary";
+     table.style.width = "100%";
+     table.style.marginBottom = "10px";
+     let tbody = document.createElement("tbody");
+     let maxRewards = Array.from(new Array(chestsData.length),(val,index) => chestsData[index]["chances"].length).reduce(function(a,b) {
+         return Math.max(a,b);
+     });
+     
+     for (let r = 1; r <= 3; r++) {
+ 
+         let tr = document.createElement("tr");
+ 
+         if (r === 1) {
+ 
+             let td1 = document.createElement("td");
+             td1.rowSpan = "3";
+             td1.style.width = "30%";
+             let img = document.createElement("img");
+             img.src = chestsData[i]["img"];
+             td1.appendChild(img);
+             tr.appendChild(td1);
+ 
+             let td2 = document.createElement("td");
+             td2.innerHTML = `<i><b>Costs:</b></i> `+chestsData[i]["ec"]+` <img src="`+currencies[getSelectedEvent()]["ec"]+`">`;
+             td2.style.width = 70/maxRewards+"%";
+             tr.appendChild(td2);
+ 
+             let td3 = document.createElement("td");
+             td3.innerHTML = `<i>Gives:</i> `+chestsData[i]["ep"]+` <img src="`+currencies[getSelectedEvent()]["ep"]+`">`;
+             td3.style.width = 70/maxRewards+"%";
+             tr.appendChild(td3);
+ 
+             let td4 = document.createElement("td");
+             td4.colSpan = maxRewards-2;
+             if (sort === "dp") {
+                 td4.innerHTML = `<h7><i>~ `+(100/chestsData[i]["chances"].filter(chance => chance["subType"].startsWith("daily_reward"))[0]["percentage"]*
+                     (chestsData[i]["ec"]-((chestsData[i]["chances"].filter(chance => chance["subType"] === "event_currency_1").length > 0 
+         ? chestsData[i]["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["amount"]/100*chestsData[i]["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["percentage"] : 0)))).toFixed(1)
+                 +` <img src='${currencies[getSelectedEvent()]["ec"]}'> per Daily Prize`+`</i></h7>`;
+             } else if (sort === "gp") {
+                 td4.innerHTML = `<h7><i>`+(20/chestsData[i]["ep"]*(chestsData[i]["ec"]-(chestsData[i]["chances"].filter(chance => chance["subType"] === "event_currency_1").length > 0 
+         ? chestsData[i]["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["amount"]/100*chestsData[i]["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["percentage"] : 0))).toFixed(1)
+                 +` <img src='${currencies[getSelectedEvent()]["ec"]}'> per Grand Prize`+`</i></h7>`;
+             }
+             tr.appendChild(td4);
+ 
+         } else if (r === 2) {
+ 
+             for (let d = 0; d < maxRewards; d++) {
+                 
+                 let th = document.createElement("th");
+                 if (d < chestsData[i]["chances"].length) {
+                     th.innerHTML = chestsData[i]["chances"][d]["percentage"]+"%";
+                 }
+                 th.style.width = 70/maxRewards+"%";
+                 tr.appendChild(th);
+ 
+             }
+ 
+         } else {
+ 
+             for (let d = 0; d < maxRewards; d++) {
+ 
+                 let td = document.createElement("td");
+                 if (d < chestsData[i]["chances"].length) {
+                     let reward = getReward(chestsData, i, d);
+                     td.innerHTML = (rewardMultiplicator*getAmount(chestsData, i, d))+"x "+reward;
+                 }
+                 rewardMultiplicator = 1;
+                 td.style.width = 70/maxRewards+"%";
+                 tr.appendChild(td);
+             }
+ 
+         }
+ 
+         tbody.appendChild(tr);
+     }
+ 
+     table.appendChild(tbody);
+     divBBTable.appendChild(table);
+     }
+     divCenter.appendChild(divBBTable);
+     document.getElementById("column_with_tables").appendChild(divCenter);
+ }
+ 
+ function getAmount(chestsData, chest, chance) {
+     return chestsData[chest]["chances"][chance]["amount"];
+ }
+ 
+ function getReward(chestsData, chest, chance) {
+     if (chestsData[chest]["chances"][chance]["subType"].startsWith("daily_reward")) {
+         return goods_icons["daily_reward"];
+     }
+     if (chestsData[chest]["chances"][chance]["subType"] === "event_currency_1") {
+         return `<img src="`+currencies[getSelectedEvent()]["ec"]+`">`;
+     }
+     if (chestsData[chest]["chances"][chance]["type"] === "runeShard") {
+         if (chestsData[chest]["chances"][chance]["subType"] === "random") {
+             return goods_icons["rune_shard"];
+         }
+         if (chestsData[chest]["chances"][chance]["subType"] === "broken_shards") {
+             return goods_icons["broken_shards"];
+         }
+     }
+     if (chestsData[chest]["chances"][chance]["type"] === "item" || chestsData[chest]["chances"][chance]["type"] === "good") {
+         if (goods_icons[chestsData[chest]["chances"][chance]["subType"]] !== undefined) {
+             return goods_icons[chestsData[chest]["chances"][chance]["subType"]].replaceAll("<br>","");
+         } else if (goods_icons[chestsData[chest]["chances"][chance]["subType"].toLowerCase()] !== undefined) {
+             return goods_icons[chestsData[chest]["chances"][chance]["subType"].toLowerCase()].replaceAll("<br>","");
+         } else {
+             return "MISSING!!!"
+         }
+     }
+     if (chestsData[chest]["chances"][chance]["type"] === "flexible_reward") {
+         for (let fr = 0; fr < flexibleRewards.length; fr++) {
+             if (flexibleRewards[fr]["id"] === chestsData[chest]["chances"][chance]["subType"]) {
+                 rewardMultiplicator = flexibleRewards[fr]["rewards"][localStorage.getItem("chapter")-1]["amount"];
+                 if (goods_icons[flexibleRewards[fr]["rewards"][localStorage.getItem("chapter")-1]["subType"]]) {
+                     return goods_icons[flexibleRewards[fr]["rewards"][localStorage.getItem("chapter")-1]["subType"]].replaceAll("<br>","");
+                 }
+                 return goods_icons[flexibleRewards[fr]["rewards"][localStorage.getItem("chapter")-1]["subType"].toLowerCase()].replaceAll("<br>","");
+             }
+         }
+     }
+     if (chestsData[chest]["chances"][chance]["type"] === "building") {
+         return specialBuildings[chestsData[chest]["chances"][chance]["subType"].substring(0, chestsData[chest]["chances"][chance]["subType"].indexOf("$"))];
+     }
+ }
+ 
+ function sort(value) {
+     var chestsData = getChestsData(getSelectedEvent()).slice();
+     if (value === "none") {
+         draw(chestsData);
+     }
+     else if (value === "dp") {
+         //SORT BY DAILY PRIZES
+         chestsData.sort((a,b) => (100/a["chances"].filter(chance => chance["subType"].startsWith("daily_reward"))[0]["percentage"]
+         *(a["ec"]-(a["chances"].filter(chance => chance["subType"] === "event_currency_1").length > 0 
+         ? a["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["amount"]/100*a["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["percentage"] : 0))>
+         (100/b["chances"].filter(chance => chance["subType"].startsWith("daily_reward"))[0]["percentage"]
+         *(b["ec"]-(b["chances"].filter(chance => chance["subType"] === "event_currency_1").length > 0 
+         ? b["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["amount"]/100*b["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["percentage"] : 0)))) ? 1 : -1);
+         draw(chestsData, value);
+     } else if (value === "gp") {
+         //SORT BY GRAND PRIZES
+         chestsData.sort((a,b) => (20/a["ep"]*(a["ec"]-(a["chances"].filter(chance => chance["subType"] === "event_currency_1").length > 0 
+         ? a["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["amount"]/100*a["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["percentage"] : 0)) 
+             > 
+         20/b["ep"]*(b["ec"]-(b["chances"].filter(chance => chance["subType"] === "event_currency_1").length > 0 
+         ? b["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["amount"]/100*b["chances"].filter(chance => chance["subType"] === "event_currency_1")[0]["percentage"] : 0))) ? 1 : -1);
+         draw(chestsData, value);
+     }
+ }
+ </script>
