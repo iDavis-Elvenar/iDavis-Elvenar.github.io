@@ -1033,6 +1033,7 @@ function generateQuestsAuto() {
         let lastId = null;
         let questGathered = {};
         let range = null;
+        data = data.sort((a, b) => a['id'] - b['id']);
         
         for (let i = 0; i < data.length; i++) {
             if (data[i]['rawTriggerCondition'] === 'is unreachable') {
