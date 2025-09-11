@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "theater_zodiac_xxv_": {//Autumn Zodiac 18.9. - 9.10.
         "live": {
-            "start_date": "__ _ 2025",
-            "end_date": "__ _ 2025"
+            "start_date": "September 18th 2025",
+            "end_date": "October 9th 2025"
         },
         "beta": {
             "start_date": "August 15th 2025",
