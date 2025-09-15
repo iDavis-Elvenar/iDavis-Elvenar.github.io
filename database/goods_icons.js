@@ -415,4 +415,5 @@ var xlImages = {
     "knowledge_points": "https://i.ibb.co/bmBcTNB/knowledge-points.png",
     "volatile_sigils": "https://i.ibb.co/ZH6SMN8/volatile-sigils-xl.png",
     "spell_settlement_production_boost_1": "https://i.ibb.co/twbxHTXD/spell-settlement-production-boost-1-xl.png",
+    "spell_teleport_1": "https://i.ibb.co/HfjMS0bD/spell-teleport-1.png",
 }
