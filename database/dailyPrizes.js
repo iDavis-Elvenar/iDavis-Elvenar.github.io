@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "theater_zodiac_xxv_": [
-        "A_Evt_Set_Shuffle_Garden_XXIV_Pupa_Nest", //?
+        "A_Evt_September_XX_Firefly_Lookout",
         "A_Evt_Theater_Zodiac_XXV_Phantoms_Rest",
         "A_Evt_Expiring_UnitHealth_Boost",
         "INS_KP_{20}",
