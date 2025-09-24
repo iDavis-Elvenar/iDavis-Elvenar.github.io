@@ -568,6 +568,7 @@ var eventsAvatars = {
     "portraitEvtMergeDwarvengameXxvM1": "https://i.ibb.co/jkf2dsHP/portrait-evt-merge-dwarvengame-xxv-m1.png",
     "portraitEvtTheaterZodiacXxvC1": "https://i.ibb.co/FFxzv63/portrait-evt-theater-zodiac-xxv-c1.png",
     "portraitEvtTheaterZodiacXxvM1": "https://i.ibb.co/21FkV8DB/portrait-evt-theater-zodiac-xxv-m1.png",
+    "portraitSeasonSecretsXxvF1": "https://i.ibb.co/2Y16RSTJ/portrait-season-secrets-xxv-f1.png",
 }
 
 var leaguesBanners = {

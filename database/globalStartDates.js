@@ -444,7 +444,17 @@ var faStartDates = { //June 3.6. - 9.6.
     },
 }
 
-var seasonStartDates = {  //Season of Joy 4.7. - 17.9.
+var seasonStartDates = {  //
+    "october_xxv_": {
+        "live": {
+            "start_date": "October 1st 2025",
+            "end_date": "December 14th 2025"
+        },
+        "beta": {
+            "start_date": "August 1st 2025",
+            "end_date": "October 14th 2025"
+        }
+    },
     "july_xxv_": {
         "live": {
             "start_date": "July 4th 2025",

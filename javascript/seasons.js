@@ -484,11 +484,17 @@ function displayPass() {
             if (rew <= seasonPassData[getSelectedSeason()][level]['rewards'].length) {
                 if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'item') {
                     let subType = seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['subType'];
-                    tdReward.innerHTML = `<img src="${instants[subType.substring(0, subType.lastIndexOf("_")+1)]["image_big"]}">`;
+                    if (subType.toLowerCase().includes("ins_evo_")) {
+                        tdReward.innerHTML = `<img src="${artifacts[subType.toLowerCase()]["img"]}">`;
+                    } else {
+                        tdReward.innerHTML = `<img src="${instants[subType.substring(0, subType.lastIndexOf("_")+1)]["image_big"]}">`;
+                    }
                     if (goods_icons.hasOwnProperty(subType)) {
                         tdReward.innerHTML += `<br>${getTitleFromGoodImage(subType)}`;
                     } else if (goods_icons.hasOwnProperty(subType.toLowerCase())) {
                         tdReward.innerHTML += `<br>${getTitleFromGoodImage(subType.toLowerCase())}`;
+                    } else if (subType.toLowerCase().includes("ins_evo_")) {
+                        tdReward.innerHTML += `<br>${artifacts[subType.toLowerCase()]["name"]}`;
                     }
 
                 } else if (seasonPassData[getSelectedSeason()][level]['rewards'][rew-1]['type'] === 'flexible_reward') {
