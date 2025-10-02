@@ -12,7 +12,7 @@ function handleBuildingsJSON() {
     reader.onload = function() {
         let data = JSON.parse(reader.result);
         for (let i = 0; i < data.length; i++) {
-            if (data[i]['id'].includes('A_Evt')) {
+            if (data[i]['id'].includes('A_Evt') || data[i]['id'].includes('B_Guardian')) {
                 //console.log('buildingCount');
                 allBuildings.push(data[i]);
             }
@@ -652,6 +652,7 @@ function generateEffectConfigs() {
                     expiring["values"] = data[i]["values"];
                     expiring["typeEffectConfig"] = "expiring";
                     expiring["duration"] = data[i]["duration"];
+                    expiring["id"] = data[i]["effectId"];
                     if (data[i].hasOwnProperty("metadata")) {
                         expiring["iconID"] = data[i]["metadata"]["iconId"];
                         expiring["name"] = data[i]["metadata"]["name"];
@@ -1441,6 +1442,37 @@ function generateEventLeagues() {
 
         console.log(result)
         saveJSON( JSON.stringify(result), "eventsLeagues.json" );
+        create_exception("Data Generated!",10,'success');
+    }
+}
+
+function generateGuardians() {
+    create_exception("Generating...", 10000, 'primary')
+    let file = document.getElementById('guardians').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    var result = [];
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        for (let i = 0; i < data.length; i++) {
+            let guardian = {};
+            guardian['guardianId'] = data[i]['guardianId'];
+            guardian['buildingId'] = data[i]['buildingId'];
+            guardian['rarity'] = data[i]['rarity'];
+            guardian['duration'] = data[i]['duration'];
+            guardian['stages'] = [];
+            for (let j = 0; j < data[i]['stages'].length; j++) {
+                let effectIds = [];
+                for (let k = 0; k < data[i]['stages'][j]['effectIds'].length; k++) {
+                    effectIds.push(data[i]['stages'][j]['effectIds'][k]);
+                }
+                guardian['stages'].push(effectIds);
+            }
+            result.push(guardian);
+        }
+
+        console.log(result)
+        saveJSON( JSON.stringify(result), "guardians.json" );
         create_exception("Data Generated!",10,'success');
     }
 }

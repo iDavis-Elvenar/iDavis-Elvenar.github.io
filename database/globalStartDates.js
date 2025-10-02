@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "theater_zodiac_xxv_": {//Autumn Zodiac 18.9. - 9.10.
+    "theater_yulecat_xxv_": {//The Tangled Prophecy 21.10. - 11.11.
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "October 2nd 2025",
+            "end_date": "October 23th 2025"
+        }
+    },
+    "theater_zodiac_xxv_": {
         "live": {
             "start_date": "September 18th 2025",
             "end_date": "October 9th 2025"

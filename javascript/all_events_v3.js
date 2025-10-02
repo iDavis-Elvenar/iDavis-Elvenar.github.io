@@ -2185,10 +2185,17 @@ function displayPrizes() {
 
 function createPrizeCell(prize, cell) {
     if (prize.type === 'building') {
-        let buildingId = prize.subType.split("$")[0];
-        let buildingImage = images_buildings[buildingId];
-        let amount = prize.amount;
-        createBuildingPrizeCell(buildingId, buildingImage, amount, cell);
+        if (prize.subType.includes("B_Guardian_")) {
+            let buildingId = prize.subType.replace(/_\d+$/, "");
+            let buildingImage = images_buildings[buildingId];
+            let amount = prize.amount;
+            createBuildingPrizeCell(buildingId, buildingImage, amount, cell);
+        } else {
+            let buildingId = prize.subType.split("$")[0];
+            let buildingImage = images_buildings[buildingId];
+            let amount = prize.amount;
+            createBuildingPrizeCell(buildingId, buildingImage, amount, cell);
+        }
     } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_evo_')) {
         let artifactName = artifacts[prize.subType.toLowerCase()].name;
         let artifactImg = document.createElement('img');
@@ -2196,6 +2203,13 @@ function createPrizeCell(prize, cell) {
         artifactImg.style.maxWidth = "60px";
         cell.appendChild(artifactImg);
         cell.innerHTML += `<br>${prize.amount}x ${artifactName}`;
+    } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_grow_')) {
+        let effigyName = effigies[prize.subType.toLowerCase()].name;
+        let effigyImg = document.createElement('img');
+        effigyImg.src = effigies[prize.subType.toLowerCase()].img;
+        effigyImg.style.maxWidth = "60px";
+        cell.appendChild(effigyImg);
+        cell.innerHTML += `<br>${prize.amount}x ${effigyName}`;
     } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_kp_')) {
         let kpName = `Ancient Knowledge ${prize.subType.split('_')[prize.subType.split('_').length-1]}`;
         let kpImg = document.createElement('img');

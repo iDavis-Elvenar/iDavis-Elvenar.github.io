@@ -111,6 +111,7 @@ let eventBanners = {
     "scroll_aquatic_xxv_": "https://i.ibb.co/j9v3wcyh/EL-akcia-j-l-2025-banner.png",
     "merge_dwarvengame_xxv_": "https://i.ibb.co/20CM9kgv/EL-akcia-august-2025-banner.png",
     "theater_zodiac_xxv_": "https://i.ibb.co/ZRMRmJRC/EL-akcia-jese-2025-banner.png",
+    "theater_yulecat_xxv_": "https://i.ibb.co/VYZPQgjd/EL-akcia-okt-ber-2025-banner.png",
 }
 
 let eventVideos = {
@@ -182,6 +183,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "scroll_aquatic_xxv_": "06/13/2025",
     "merge_dwarvengame_xxv_": "07/17/2025",
     "theater_zodiac_xxv_": "08/15/2025",
+    "theater_yulecat_xxv_": "10/02/2025",
 }
 
 let questsLinks = {
@@ -222,6 +224,7 @@ let questsLinks = {
     "scroll_aquatic_xxv_": "bit.ly/TheElvarianGames2025",
     "merge_dwarvengame_xxv_": "bit.ly/TheCrystalExpedition2025",
     "theater_zodiac_xxv_": "bit.ly/AutumnZodiac2025",
+    "theater_yulecat_xxv_": "bit.ly/TangledProphecy2025",
 }
 
 let eventsDurations = {
@@ -262,6 +265,7 @@ let eventsDurations = {
     "scroll_aquatic_xxv_": 21,
     "merge_dwarvengame_xxv_": 21,
     "theater_zodiac_xxv_": 21,
+    "theater_yulecat_xxv_": 21,
 }
 
 let evoUpgradeCosts = {
@@ -375,6 +379,14 @@ var artifacts = {
     "ins_evo_theater_zodiac_xxv": {"name": "Shellux, The Dragonsnail Artifact", "img": "https://i.ibb.co/sXgpWWX/ins-evo-theater-zodiac-xxv.png"},
 }
 
+let guardianUpgradeCosts = {
+    "B_Guardian_XXV_Naturion_the_Awakened": "ins_grow_guardian_xxv_naturion_the_awakened",
+}
+
+let effigies = {
+    "ins_grow_guardian_xxv_naturion_the_awakened": {"name": "Naturion Effigy", "img": "https://i.ibb.co/pBZtQM5v/ins-grow-guardian-xxv-naturion-the-awakened.png"},
+}
+
 var feedingEffectsDescriptions = {
     "A_Evt_Evo_Autumn_XIX_Bear_Brown" : `<img src="https://i.ibb.co/9rSkBkw/unit-production-boost.png">`,
     "A_Evt_Evo_Autumn_XIX_Bear_Ice" : `<img src="https://i.ibb.co/NZ1xsbt/tournament-cooldown-reduction.png">`,
@@ -429,6 +441,9 @@ var iconsImages = {
     "tournamentpoint_boosted": "https://i.ibb.co/bgJmdntT/tournament-points-boost.png",
     "seeds": "https://image.ibb.co/c9JtEq/seeds.png",
     "b_all_spire_aw_shards": "https://i.ibb.co/Kjtg4jK6/b-all-spire-aw-shards.png",
+    "time_reduction": "https://i.ibb.co/7F3j8R2/time-reduction.png",
+    "encounter_boosted": "https://i.ibb.co/NdwJXQZz/encounter-boosted.png",
+    "event_boosted": "https://i.ibb.co/zVgxzvqN/events-boosted.png",
 }
 
 var iconsTitles = {
@@ -511,6 +526,7 @@ var eventsInfoIcons = {
     "scroll_aquatic_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "merge_dwarvengame_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "theater_zodiac_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "theater_yulecat_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -533,6 +549,7 @@ var eventsPaybackIcons = {
     "scroll_aquatic_xxv_": "https://i.ibb.co/vQgG13g/scroll-aquatic-xxiv-payback.png",
     "merge_dwarvengame_xxv_": "https://i.ibb.co/VL6QWtp/merge-dwarvengame-xxiv-event-payback.png",
     "theater_zodiac_xxv_": "https://i.ibb.co/YWgvz91/event-payback.png",
+    "theater_yulecat_xxv_": "https://i.ibb.co/DP5Zc9KN/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -569,6 +586,8 @@ var eventsAvatars = {
     "portraitEvtTheaterZodiacXxvC1": "https://i.ibb.co/FFxzv63/portrait-evt-theater-zodiac-xxv-c1.png",
     "portraitEvtTheaterZodiacXxvM1": "https://i.ibb.co/21FkV8DB/portrait-evt-theater-zodiac-xxv-m1.png",
     "portraitSeasonSecretsXxvF1": "https://i.ibb.co/2Y16RSTJ/portrait-season-secrets-xxv-f1.png",
+    "portraitEvtTheaterYulecatXxvF1": "https://i.ibb.co/nMssmDHw/portrait-evt-theater-yulecat-xxv-f1.png",
+    "portraitEvtTheaterYulecatXxvM1": "https://i.ibb.co/f7JkWyH/portrait-evt-theater-yulecat-xxv-m1.png",
 }
 
 var leaguesBanners = {

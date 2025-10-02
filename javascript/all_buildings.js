@@ -108,15 +108,24 @@ function readBuildingsJSON() {
             }
 
             if (isTriggeredOrderBy) {
+                filteredData = removeGuardians(filteredData);
                 filteredData = sortBySelectedAttribute(filteredData, selectedEvoStages, orderByOption);
+            }
+
+            if (filterEventData !== "all_events") {
+                filteredData = sortGuardiansFirst(filteredData);
             }
 
             for (var i = 0; i < filteredData.length; i++) {
                 let isEvo = false;
+                let isGuardian = false;
                 let displayStage = 0;
                 if (filteredData[i]['id'].toLowerCase().includes('_evo_')) {
                     isEvo = true;
                     displayStage = selectedEvoStages[filteredData[i]['id']];
+                }
+                if (filteredData[i]['id'].toLowerCase().includes('b_guardian_')) {
+                    isGuardian = true;
                 }
                 var h5 = document.createElement('h5');
                 h5.id = filteredData[i]['id'];
@@ -182,6 +191,18 @@ function readBuildingsJSON() {
                         openInNewTab(location.href.split(`#`)[0]+h5hashtag.id);
                     });
                     td12.appendChild(h5hashtag);
+                } else if (isGuardian) {
+                    td12.innerHTML = `<b>${langUI("Building type:")}</b> Guardian<br>
+                                    <b>${langUI("Duration:")}</b> ${guardians.find(item => item['buildingId'] === filteredData[i]['id'])?.['duration'] ? (guardians.find(item => item['buildingId'] === filteredData[i]['id'])['duration']/60/60 + "h") : ""}<br>
+                                    <b>${langUI("Cooldown:")}</b> ${guardiansCooldowns[filteredData[i]['id']]}<br>
+                                    <b>${langUI("Upgrade costs:")}</b> <img src="${effigies[guardianUpgradeCosts[filteredData[i]['id']]]?.["img"]}" style="width: 28px; margin-bottom: 3px;"> ${effigies[guardianUpgradeCosts[filteredData[i]['id']]]?.["name"]}<br>`;
+                                    let h5hashtag = document.createElement('h5');
+                                    h5hashtag.id = "#"+filteredData[i]['id'];
+                                    h5hashtag.innerHTML = '<a class="text-link font-weight-bold" id="hash"><img src="images/general/share-symbol.png" class="pointer" title="Open in new tab and share" width="15px;"></a><br>';
+                                    h5hashtag.addEventListener('click', function() {
+                                        openInNewTab(location.href.split(`#`)[0]+h5hashtag.id);
+                                    });
+                                    td12.appendChild(h5hashtag);
                 } else {
                     let expiringDuration = `-`;
                     if (filteredData[i].hasOwnProperty("expiring")) {
@@ -213,207 +234,95 @@ function readBuildingsJSON() {
                 divFirstTable.appendChild(firstTable);
                 div.appendChild(divFirstTable);
 
-                var divSecondTable = document.createElement('div');
-                divSecondTable.className = "bbTable";
-                divSecondTable.style.overflow = "auto";
-                var secondTable = document.createElement('table');
-                secondTable.className = 'table-primary text-center';
-                secondTable.style.width = "100%";
-                var t2body = document.createElement('tbody');
-                var tr21 = document.createElement('tr');
-                for (var h = 0; h < numberOfChapters + 1; h++) {
-                    var th = document.createElement('th');
-                    if (h === 0) {
-                        th.innerHTML = `${langUI("Chapter / Bonus")}`;
-                    } else {
-                        th.innerHTML = `<img src=${chapter_icons[h]}>`;
+                if (isGuardian) {
+                    var divSecondTable = document.createElement('div');
+                    divSecondTable.className = "bbTable";
+                    divSecondTable.style.overflow = "auto";
+                    var secondTable = document.createElement('table');
+                    secondTable.className = 'table-primary text-center';
+                    secondTable.style.width = "100%";
+
+                    var guardian = guardians.find(item => item.buildingId === filteredData[i]['id']);
+                    var guardianEffectConfigs = effectConfigs.filter(item => item['buildingID'] === filteredData[i]['id']);
+
+                    var t2body = document.createElement('tbody');
+                    var tr21 = document.createElement('tr');
+                    for (var s = 0; s < guardian['stages'].length + 1; s++) {
+                        var th = document.createElement('th');
+                        if (s === 0) {
+                            th.innerHTML = `${langUI("Stage / Effect")}`;
+                        } else {
+                            th.innerHTML = `${s}`;
+                        }
+                        tr21.appendChild(th);
                     }
-                    tr21.appendChild(th);
-                }
-                var divSetTable = document.createElement('div');
-                divSetTable.className = "bbTable";
-                divSetTable.style.overflow = "auto";
-                var setTable = document.createElement('table');
-                setTable.className = 'table-primary text-center';
-                setTable.style.width = "100%";
-                var tSetBody = document.createElement('tbody');
-                t2body.appendChild(tr21);
-                if (!isEvo) {
-                    for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
-                        var tr = document.createElement('tr');
-                        for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                    t2body.appendChild(tr21);
+
+                    for (let effect = 0; effect < guardianEffectConfigs.length; effect++) {
+                        var tr22 = document.createElement('tr');
+                        for (var s = 0; s < guardian['stages'].length + 1; s++) {
                             var td = document.createElement('td');
-                            if (ch === 0) {
-                                td.innerHTML = `${goods_icons[filteredData[i]['all_productions'][prod][0]]}`;
-                                if (filteredData[i]['all_productions'])
-                                if (filteredData[i]['all_productions'][prod][0] != 'providedCulture' &&
-                                    filteredData[i]['all_productions'][prod][0] != 'provided_population') {
-                                    //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
-                                    for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
-                                        if (filteredData[i]['chapters'][chPom].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                            td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][filteredData[i]['all_productions'][prod][0]]['production_time'] / 60 / 60}h</b>`;
-                                            break;
-                                        }
-                                    }
-                                }
+                            if (s === 0) {
+                                td.innerHTML = `<img src="${iconsImages[guardianEffectConfigs[effect]["iconID"]]}" title="${guardianEffectConfigs[effect]['description']}">`;
                             } else {
-                                if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                    if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]] === 'object') {
-                                        td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'])}`;
-                                    } else {
-                                        td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]])}`;
-                                    }
-                                } else {
-                                    td.innerHTML = `-`;
-                                }
+                                td.innerHTML = guardianEffectConfigs[effect]['valuesStages'][s] ? Math.round(guardianEffectConfigs[effect]['valuesStages'][s]*100) + "%" : "-";
                             }
-                            tr.appendChild(td);
+                            tr22.appendChild(td);
                         }
-                        t2body.appendChild(tr);
-                        if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod][0]) {
-                            var trPerSquare = document.createElement('tr');
-                            for (var ch = 0; ch < numberOfChapters + 1; ch++) {
-                                var tdPerSquare = document.createElement('td');
-                                if (ch === 0) {
-                                    if (prioritiesProduction.includes(filteredData[i]['all_productions'][prod][0].toLowerCase())) {
-                                        tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod][0]]} / per square per 1h</h7>`;
-                                    } else {
-                                        tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod][0]]} / per square</h7>`;
-                                    }
-                                } else {
-                                    if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                        if (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]].hasOwnProperty('production_time')) {
-                                            tdPerSquare.innerHTML = `<h7>${round((filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['production_time'] / 3600)).toFixed(1))}</h7>`;
-                                        } else {
-                                            tdPerSquare.innerHTML = `<h7>${round((filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1))}</h7>`;
-                                        }
-                                    } else {
-                                        tdPerSquare.innerHTML = `-`;
-                                    }
-                                }
-                                trPerSquare.appendChild(tdPerSquare);
-                            }
-                            t2body.appendChild(trPerSquare);
-                        }
-                        //PRIDAJ EXPIRING EFFECT CONFIG VALUES (AK EXISTUJE)
-                        if (filteredData[i].hasOwnProperty("expiring") &&
-                            Object.keys(filteredData[i]["expiring"]["values"]).length >= numberOfChapters &&
-                            Object.values(filteredData[i]["expiring"]["values"]).some(value => value !== 0)) {
-                            var trEffect = document.createElement('tr');
-                            for (var ch = 0; ch < numberOfChapters + 1; ch++) {
-                                var tdEffect = document.createElement('td');
-                                if (ch === 0) {
-                                    if (filteredData[i]["expiring"].hasOwnProperty("description")) {
-                                        tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${filteredData[i]["expiring"]["description"].replaceAll("\"", "")}">`;
-                                    } else {
-                                        tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${iconsTitles[filteredData[i]["expiring"]["iconID"]]}">`;
-                                    }
-                                } else {
-                                    if (filteredData[i]["expiring"].hasOwnProperty("format") &&
-                                    filteredData[i]["expiring"]["format"].toLowerCase().includes("percentage")) {
-                                        if (filteredData[i]["id"].includes("A_Evt_December_XXII_Cryo")) {  //pre zimne dekoracie chcem mat iba 10nasobok a bez znamienka +
-                                            tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]*10}%`;
-                                        } else {
-                                            tdEffect.innerHTML = `+${filteredData[i]["expiring"]["values"][ch]*100}%`;
-                                        }
-                                    } else {
-                                        tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]}`;
-                                    }
-                                }
-                                trEffect.appendChild(tdEffect);
-                            }
-                            t2body.appendChild(trEffect);
-                        }
+                        t2body.appendChild(tr22);
                     }
+
                     secondTable.appendChild(t2body);
-                    //SETOVE PARAMETRE:
-                    if (filteredData[i].hasOwnProperty('setBuilding')) {
-
-                        let bonuses = orderSetBuildingData(filteredData[i]);
-                        //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
-                        //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
-
-                        let prodChangeFlags = getProdChangeFlags(bonuses);
-
-                        if (bonuses.length > 0) {
-                            for (let setLine = -1; setLine < bonuses.length; setLine++) {
-                                let trSet = document.createElement('tr');
-                                let idxFlag = -1;
-                                let chToPrint = 1;
-                                if (setLine === -1) {
-                                    while (chToPrint <= numberOfChapters) {
-                                        let thSet = document.createElement('th');
-                                        if (idxFlag === -1) {
-                                            thSet.innerHTML = `${langUI("Chapter / Connection")}`;
-                                            idxFlag++;
-                                        } else {
-                                            if (prodChangeFlags[idxFlag] !== chToPrint) {
-                                                thSet.innerHTML = `<img src=${chapter_icons[chToPrint]}>`;
-                                                chToPrint++;
-                                            } else {
-                                                thSet.innerHTML = `-`;
-                                                idxFlag++;
-                                            }
-                                        }
-                                        trSet.appendChild(thSet);
-                                    }
-                                } else {
-                                    while (chToPrint <= numberOfChapters) {
-                                        let tdSet = document.createElement('td');
-                                        if (idxFlag === -1) {
-                                            tdSet.innerHTML = `${setLine + 1}. ${langUI("building")}`;
-                                            idxFlag++;
-                                        } else {
-                                            if (prodChangeFlags[idxFlag] !== chToPrint) {
-                                                tdSet.innerHTML = `${bonuses[setLine][chToPrint - 1][1].toFixed(0)}`;
-                                                chToPrint++;
-                                            } else {
-                                                tdSet.innerHTML = `${goods_icons[bonuses[setLine][chToPrint - 1][0]]}`;
-                                                idxFlag++;
-                                            }
-                                        }
-                                        trSet.appendChild(tdSet);
-                                    }
-                                }
-                                tSetBody.appendChild(trSet);
-                            }
-                        }
-                    }
                 } else {
-                    for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
-                        var tr = document.createElement('tr');
-                        let existsInThisStage = false;
-                        for (let chAttempt = 1; chAttempt < numberOfChapters+1; chAttempt++) {
-                            if (filteredData[i]['chapters'][chAttempt][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                existsInThisStage = true;
-                                break;
-                            }
+                    var divSecondTable = document.createElement('div');
+                    divSecondTable.className = "bbTable";
+                    divSecondTable.style.overflow = "auto";
+                    var secondTable = document.createElement('table');
+                    secondTable.className = 'table-primary text-center';
+                    secondTable.style.width = "100%";
+                    var t2body = document.createElement('tbody');
+                    var tr21 = document.createElement('tr');
+                    for (var h = 0; h < numberOfChapters + 1; h++) {
+                        var th = document.createElement('th');
+                        if (h === 0) {
+                            th.innerHTML = `${langUI("Chapter / Bonus")}`;
+                        } else {
+                            th.innerHTML = `<img src=${chapter_icons[h]}>`;
                         }
-                        if (existsInThisStage) {
+                        tr21.appendChild(th);
+                    }
+                    var divSetTable = document.createElement('div');
+                    divSetTable.className = "bbTable";
+                    divSetTable.style.overflow = "auto";
+                    var setTable = document.createElement('table');
+                    setTable.className = 'table-primary text-center';
+                    setTable.style.width = "100%";
+                    var tSetBody = document.createElement('tbody');
+                    t2body.appendChild(tr21);
+                    if (!isEvo) {
+                        for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
+                            var tr = document.createElement('tr');
                             for (var ch = 0; ch < numberOfChapters + 1; ch++) {
                                 var td = document.createElement('td');
                                 if (ch === 0) {
                                     td.innerHTML = `${goods_icons[filteredData[i]['all_productions'][prod][0]]}`;
-                                    if (filteredData[i]['all_productions'][prod].includes("switchable")) {
-                                        td.innerHTML = td.innerHTML.substring(0,td.innerHTML.length-4);
-                                        td.innerHTML += `<img src="images/general/circle_info.png" title="${langUI('This is a switchable production. Only one of the switchable productions can be running at the same time.')}"><br>`;
-                                    }
+                                    if (filteredData[i]['all_productions'])
                                     if (filteredData[i]['all_productions'][prod][0] != 'providedCulture' &&
                                         filteredData[i]['all_productions'][prod][0] != 'provided_population') {
                                         //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
                                         for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
-                                            if (filteredData[i]['chapters'][chPom][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                                td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][displayStage][filteredData[i]['all_productions'][prod][0]]['production_time'] / 60 / 60}h</b>`;
+                                            if (filteredData[i]['chapters'][chPom].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
+                                                td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][filteredData[i]['all_productions'][prod][0]]['production_time'] / 60 / 60}h</b>`;
                                                 break;
                                             }
                                         }
                                     }
                                 } else {
-                                    if (filteredData[i]['chapters'][ch][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                        if (typeof filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]] === 'object') {
-                                            td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value']).toFixed(0))}`;
+                                    if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
+                                        if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]] === 'object') {
+                                            td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'])}`;
                                         } else {
-                                            td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]).toFixed(0))}`;
+                                            td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]])}`;
                                         }
                                     } else {
                                         td.innerHTML = `-`;
@@ -421,11 +330,9 @@ function readBuildingsJSON() {
                                 }
                                 tr.appendChild(td);
                             }
-                        }
-                        t2body.appendChild(tr);
-                        if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod][0]) {
-                            var trPerSquare = document.createElement('tr');
-                            if (existsInThisStage) {
+                            t2body.appendChild(tr);
+                            if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod][0]) {
+                                var trPerSquare = document.createElement('tr');
                                 for (var ch = 0; ch < numberOfChapters + 1; ch++) {
                                     var tdPerSquare = document.createElement('td');
                                     if (ch === 0) {
@@ -435,11 +342,11 @@ function readBuildingsJSON() {
                                             tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod][0]]} / per square</h7>`;
                                         }
                                     } else {
-                                        if (filteredData[i]['chapters'][ch][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                            if (filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]].hasOwnProperty('production_time')) {
-                                                tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['production_time'] / 3600)).toFixed(1)}</h7>`;
+                                        if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
+                                            if (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]].hasOwnProperty('production_time')) {
+                                                tdPerSquare.innerHTML = `<h7>${round((filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['production_time'] / 3600)).toFixed(1))}</h7>`;
                                             } else {
-                                                tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1)}</h7>`;
+                                                tdPerSquare.innerHTML = `<h7>${round((filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1))}</h7>`;
                                             }
                                         } else {
                                             tdPerSquare.innerHTML = `-`;
@@ -447,78 +354,233 @@ function readBuildingsJSON() {
                                     }
                                     trPerSquare.appendChild(tdPerSquare);
                                 }
+                                t2body.appendChild(trPerSquare);
                             }
-                            t2body.appendChild(trPerSquare);
-                        }
-                    }
-                    secondTable.appendChild(t2body);
-                    //SETOVE PARAMETRE:
-                    if (filteredData[i].hasOwnProperty('setBuilding')) {   // v tejto moznosti (ked je evo a sucasne set) nastala ta zmena, ze je ina struktura premennej bonuses (nizsie). Tym padom je potrebne odlisne spravanie niektorych funkcii, ako
-                                                                            // napriklad orderSetEvoBuildingData() alebo getProdChangeFlagsEvo() 
-
-                        let bonuses = orderSetEvoBuildingData(filteredData[i], displayStage);
-                        //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
-                        //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
-
-                        let prodChangeFlags = getProdChangeFlagsEvo(bonuses);
-
-                        if (bonuses.length > 0) {
-                            for (let setLine = -1; setLine < bonuses.length; setLine++) {
-                                let trSet = document.createElement('tr');
-                                let idxFlag = -1;
-                                let chToPrint = 1;
-                                if (setLine === -1) {
-                                    while (chToPrint <= numberOfChapters) {
-                                        let thSet = document.createElement('th');
-                                        if (idxFlag === -1) {
-                                            thSet.innerHTML = `${langUI("Chapter / Connection")}`;
-                                            idxFlag++;
+                            //PRIDAJ EXPIRING EFFECT CONFIG VALUES (AK EXISTUJE)
+                            if (filteredData[i].hasOwnProperty("expiring") &&
+                                Object.keys(filteredData[i]["expiring"]["values"]).length >= numberOfChapters &&
+                                Object.values(filteredData[i]["expiring"]["values"]).some(value => value !== 0)) {
+                                var trEffect = document.createElement('tr');
+                                for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                                    var tdEffect = document.createElement('td');
+                                    if (ch === 0) {
+                                        if (filteredData[i]["expiring"].hasOwnProperty("description")) {
+                                            tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${filteredData[i]["expiring"]["description"].replaceAll("\"", "")}">`;
                                         } else {
-                                            if (prodChangeFlags[idxFlag] !== chToPrint) {
-                                                thSet.innerHTML = `<img src=${chapter_icons[chToPrint]}>`;
-                                                chToPrint++;
-                                            } else {
-                                                thSet.innerHTML = `-`;
-                                                idxFlag++;
-                                            }
+                                            tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${iconsTitles[filteredData[i]["expiring"]["iconID"]]}">`;
                                         }
-                                        trSet.appendChild(thSet);
+                                    } else {
+                                        if (filteredData[i]["expiring"].hasOwnProperty("format") &&
+                                        filteredData[i]["expiring"]["format"].toLowerCase().includes("percentage")) {
+                                            if (filteredData[i]["id"].includes("A_Evt_December_XXII_Cryo")) {  //pre zimne dekoracie chcem mat iba 10nasobok a bez znamienka +
+                                                tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]*10}%`;
+                                            } else {
+                                                tdEffect.innerHTML = `+${filteredData[i]["expiring"]["values"][ch]*100}%`;
+                                            }
+                                        } else {
+                                            tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]}`;
+                                        }
+                                    }
+                                    trEffect.appendChild(tdEffect);
+                                }
+                                t2body.appendChild(trEffect);
+                            }
+                        }
+                        secondTable.appendChild(t2body);
+                        //SETOVE PARAMETRE:
+                        if (filteredData[i].hasOwnProperty('setBuilding')) {
+
+                            let bonuses = orderSetBuildingData(filteredData[i]);
+                            //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
+                            //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
+
+                            let prodChangeFlags = getProdChangeFlags(bonuses);
+
+                            if (bonuses.length > 0) {
+                                for (let setLine = -1; setLine < bonuses.length; setLine++) {
+                                    let trSet = document.createElement('tr');
+                                    let idxFlag = -1;
+                                    let chToPrint = 1;
+                                    if (setLine === -1) {
+                                        while (chToPrint <= numberOfChapters) {
+                                            let thSet = document.createElement('th');
+                                            if (idxFlag === -1) {
+                                                thSet.innerHTML = `${langUI("Chapter / Connection")}`;
+                                                idxFlag++;
+                                            } else {
+                                                if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                                    thSet.innerHTML = `<img src=${chapter_icons[chToPrint]}>`;
+                                                    chToPrint++;
+                                                } else {
+                                                    thSet.innerHTML = `-`;
+                                                    idxFlag++;
+                                                }
+                                            }
+                                            trSet.appendChild(thSet);
+                                        }
+                                    } else {
+                                        while (chToPrint <= numberOfChapters) {
+                                            let tdSet = document.createElement('td');
+                                            if (idxFlag === -1) {
+                                                tdSet.innerHTML = `${setLine + 1}. ${langUI("building")}`;
+                                                idxFlag++;
+                                            } else {
+                                                if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                                    tdSet.innerHTML = `${bonuses[setLine][chToPrint - 1][1].toFixed(0)}`;
+                                                    chToPrint++;
+                                                } else {
+                                                    tdSet.innerHTML = `${goods_icons[bonuses[setLine][chToPrint - 1][0]]}`;
+                                                    idxFlag++;
+                                                }
+                                            }
+                                            trSet.appendChild(tdSet);
+                                        }
                                     }
                                     tSetBody.appendChild(trSet);
-                                } else {
-                                    for (var adjBon = 0; adjBon < bonuses[0][1].length; adjBon++) {
-                                        var trSub = document.createElement('tr');
-                                        idxFlag = 0;
-                                        chToPrint = 1;
-                                        if (adjBon === 0) {
-                                            var tdFirst = document.createElement('td');
-                                            tdFirst.innerHTML = `${setLine + 1}. ${langUI("building")}`;
-                                            tdFirst.rowSpan = bonuses[0][1].length;
-                                            if (bonuses[0][1].length > 1 && setLine !== bonuses.length - 1) {
-                                                tdFirst.style.borderBottomWidth = "2px";
-                                            }
-                                            trSub.appendChild(tdFirst);
+                                }
+                            }
+                        }
+                    } else {
+                        for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
+                            var tr = document.createElement('tr');
+                            let existsInThisStage = false;
+                            for (let chAttempt = 1; chAttempt < numberOfChapters+1; chAttempt++) {
+                                if (filteredData[i]['chapters'][chAttempt][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
+                                    existsInThisStage = true;
+                                    break;
+                                }
+                            }
+                            if (existsInThisStage) {
+                                for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                                    var td = document.createElement('td');
+                                    if (ch === 0) {
+                                        td.innerHTML = `${goods_icons[filteredData[i]['all_productions'][prod][0]]}`;
+                                        if (filteredData[i]['all_productions'][prod].includes("switchable")) {
+                                            td.innerHTML = td.innerHTML.substring(0,td.innerHTML.length-4);
+                                            td.innerHTML += `<img src="images/general/circle_info.png" title="${langUI('This is a switchable production. Only one of the switchable productions can be running at the same time.')}"><br>`;
                                         }
-                                        while (chToPrint <= numberOfChapters) {
-                                            if (prodChangeFlags[idxFlag] !== chToPrint) {
-                                                let tdSet = document.createElement('td');
-                                                tdSet.innerHTML = bonuses[setLine][chToPrint][adjBon][1].toFixed(0);
-                                                if (bonuses[0][1].length > 1 && adjBon === bonuses[0][1].length - 1 && setLine !== bonuses.length - 1) {
-                                                    tdSet.style.borderBottomWidth = "2px";
+                                        if (filteredData[i]['all_productions'][prod][0] != 'providedCulture' &&
+                                            filteredData[i]['all_productions'][prod][0] != 'provided_population') {
+                                            //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
+                                            for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
+                                                if (filteredData[i]['chapters'][chPom][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
+                                                    td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][displayStage][filteredData[i]['all_productions'][prod][0]]['production_time'] / 60 / 60}h</b>`;
+                                                    break;
                                                 }
-                                                trSub.appendChild(tdSet);
-                                                chToPrint++;
+                                            }
+                                        }
+                                    } else {
+                                        if (filteredData[i]['chapters'][ch][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
+                                            if (typeof filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]] === 'object') {
+                                                td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value']).toFixed(0))}`;
                                             } else {
-                                                let tdSet = document.createElement('td');
-                                                tdSet.innerHTML = goods_icons[bonuses[setLine][chToPrint][adjBon][0]];
-                                                if (bonuses[0][1].length > 1 && adjBon === bonuses[0][1].length - 1 && setLine !== bonuses.length - 1) {
-                                                    tdSet.style.borderBottomWidth = "2px";
+                                                td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]).toFixed(0))}`;
+                                            }
+                                        } else {
+                                            td.innerHTML = `-`;
+                                        }
+                                    }
+                                    tr.appendChild(td);
+                                }
+                            }
+                            t2body.appendChild(tr);
+                            if (isTriggeredOrderBy && orderByOption === filteredData[i]['all_productions'][prod][0]) {
+                                var trPerSquare = document.createElement('tr');
+                                if (existsInThisStage) {
+                                    for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                                        var tdPerSquare = document.createElement('td');
+                                        if (ch === 0) {
+                                            if (prioritiesProduction.includes(filteredData[i]['all_productions'][prod][0].toLowerCase())) {
+                                                tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod][0]]} / per square per 1h</h7>`;
+                                            } else {
+                                                tdPerSquare.innerHTML = `<h7>${goods_icons[filteredData[i]['all_productions'][prod][0]]} / per square</h7>`;
+                                            }
+                                        } else {
+                                            if (filteredData[i]['chapters'][ch][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
+                                                if (filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]].hasOwnProperty('production_time')) {
+                                                    tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width']) / (filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['production_time'] / 3600)).toFixed(1)}</h7>`;
+                                                } else {
+                                                    tdPerSquare.innerHTML = `<h7>${(filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value'] / (filteredData[i]['length'] * filteredData[i]['width'])).toFixed(1)}</h7>`;
                                                 }
-                                                trSub.appendChild(tdSet);
-                                                idxFlag++;
+                                            } else {
+                                                tdPerSquare.innerHTML = `-`;
                                             }
                                         }
-                                        tSetBody.appendChild(trSub);
+                                        trPerSquare.appendChild(tdPerSquare);
+                                    }
+                                }
+                                t2body.appendChild(trPerSquare);
+                            }
+                        }
+                        secondTable.appendChild(t2body);
+                        //SETOVE PARAMETRE:
+                        if (filteredData[i].hasOwnProperty('setBuilding')) {   // v tejto moznosti (ked je evo a sucasne set) nastala ta zmena, ze je ina struktura premennej bonuses (nizsie). Tym padom je potrebne odlisne spravanie niektorych funkcii, ako
+                                                                                // napriklad orderSetEvoBuildingData() alebo getProdChangeFlagsEvo() 
+
+                            let bonuses = orderSetEvoBuildingData(filteredData[i], displayStage);
+                            //BONUSES: [[1.budova: [CH1: [prod, value]],[CH2: [prod, value]], ...],[2.budova: ]]
+                            //BONUSES: zoznam pripojeni, kazdy ma num_of_ch zoznamov dvojic [prod value]
+
+                            let prodChangeFlags = getProdChangeFlagsEvo(bonuses);
+
+                            if (bonuses.length > 0) {
+                                for (let setLine = -1; setLine < bonuses.length; setLine++) {
+                                    let trSet = document.createElement('tr');
+                                    let idxFlag = -1;
+                                    let chToPrint = 1;
+                                    if (setLine === -1) {
+                                        while (chToPrint <= numberOfChapters) {
+                                            let thSet = document.createElement('th');
+                                            if (idxFlag === -1) {
+                                                thSet.innerHTML = `${langUI("Chapter / Connection")}`;
+                                                idxFlag++;
+                                            } else {
+                                                if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                                    thSet.innerHTML = `<img src=${chapter_icons[chToPrint]}>`;
+                                                    chToPrint++;
+                                                } else {
+                                                    thSet.innerHTML = `-`;
+                                                    idxFlag++;
+                                                }
+                                            }
+                                            trSet.appendChild(thSet);
+                                        }
+                                        tSetBody.appendChild(trSet);
+                                    } else {
+                                        for (var adjBon = 0; adjBon < bonuses[0][1].length; adjBon++) {
+                                            var trSub = document.createElement('tr');
+                                            idxFlag = 0;
+                                            chToPrint = 1;
+                                            if (adjBon === 0) {
+                                                var tdFirst = document.createElement('td');
+                                                tdFirst.innerHTML = `${setLine + 1}. ${langUI("building")}`;
+                                                tdFirst.rowSpan = bonuses[0][1].length;
+                                                if (bonuses[0][1].length > 1 && setLine !== bonuses.length - 1) {
+                                                    tdFirst.style.borderBottomWidth = "2px";
+                                                }
+                                                trSub.appendChild(tdFirst);
+                                            }
+                                            while (chToPrint <= numberOfChapters) {
+                                                if (prodChangeFlags[idxFlag] !== chToPrint) {
+                                                    let tdSet = document.createElement('td');
+                                                    tdSet.innerHTML = bonuses[setLine][chToPrint][adjBon][1].toFixed(0);
+                                                    if (bonuses[0][1].length > 1 && adjBon === bonuses[0][1].length - 1 && setLine !== bonuses.length - 1) {
+                                                        tdSet.style.borderBottomWidth = "2px";
+                                                    }
+                                                    trSub.appendChild(tdSet);
+                                                    chToPrint++;
+                                                } else {
+                                                    let tdSet = document.createElement('td');
+                                                    tdSet.innerHTML = goods_icons[bonuses[setLine][chToPrint][adjBon][0]];
+                                                    if (bonuses[0][1].length > 1 && adjBon === bonuses[0][1].length - 1 && setLine !== bonuses.length - 1) {
+                                                        tdSet.style.borderBottomWidth = "2px";
+                                                    }
+                                                    trSub.appendChild(tdSet);
+                                                    idxFlag++;
+                                                }
+                                            }
+                                            tSetBody.appendChild(trSub);
+                                        }
                                     }
                                 }
                             }
@@ -735,7 +797,7 @@ function filterEvent(filterData, objectToPass) {
     if (filterData.includes('all')) {
         return true;
     }
-    return objectToPass['id'].toLowerCase().includes(filterData.toLowerCase());
+    return objectToPass['id'].toLowerCase().includes(filterData.toLowerCase()) || guardiansEventsMapping[objectToPass['id']]?.includes(filterData);
 }
 
 function filterProduction(filterData, objectToPass) {
@@ -844,6 +906,21 @@ function sortByDay(filteredData, filterEventData) {
         }
     }
     return res;
+}
+
+function removeGuardians(filteredData) {
+    return filteredData.filter(item => !item['id'].toLowerCase().includes("b_guardian"));
+}
+
+function sortGuardiansFirst(filteredData) {
+    return filteredData.sort((a, b) => {
+        const aIsGuardian = a.id.includes("B_Guardian");
+        const bIsGuardian = b.id.includes("B_Guardian");
+
+        if (aIsGuardian && !bIsGuardian) return -1;
+        if (!aIsGuardian && bIsGuardian) return 1;
+        return 0;
+    });
 }
 
 function sortBySelectedAttribute(filteredData, selectedEvoStages, orderByOption) {

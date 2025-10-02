@@ -1,0 +1,1 @@
+var guardians = [{"guardianId":"naturion","buildingId":"B_Guardian_XXV_Naturion_the_Awakened","rarity":5,"duration":14400,"stages":[[4000],[4000],[4000],[4000],[4000],[4000],[4000],[4000],[4000],[4000,4001],[4000,4001],[4000,4001],[4000,4001],[4000,4001],[4000,4001,4002]]}]

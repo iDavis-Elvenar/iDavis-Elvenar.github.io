@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "theater_yulecat_xxv_": [
+        "A_Evt_Autumn_XXII_The_Ingenious_Bakery",
+        "A_Evt_Theater_Yulecat_XXV_Nap_Hollow",
+        "INS_KP_{20}",
+        "A_Evt_October_XXII_Creepy_Clinic",
+        "INS_UNIT_MA_10",
+        "A_Evt_Theater_Yulecat_XXV_Autumn_Weave",
+        "INS_RF_CN_50",
+        "INS_PETFOOD_1{2}",
+        "INS_TR_AMT_300{2}",
+        "INS_UNIT_MC_HM_10",
+        "A_Evt_Autumn_XXII_Luscious_Cakes",
+        "frog_grr_5",
+        "INS_UNIT_LR_10",
+        "frog_unurium_DP_{15}",
+        "INS_RS_1",
+        "INS_TR_AMT_300{2}",
+        "A_Evt_Tile_Mistyforest_XXIII_Gargantuan_Zombie",
+        "INS_KP_AW_20",
+        "A_Evt_Autumn_XXII_Succulent_Crabs",
+        "INS_REV_SQD_75",
+        "INS_KP_{15}",
+    ],
+
     "theater_zodiac_xxv_": [
         "A_Evt_September_XX_Firefly_Lookout",
         "A_Evt_Theater_Zodiac_XXV_Phantoms_Rest",

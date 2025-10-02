@@ -1,4 +1,9 @@
 var images_buildings = {
+    "A_Evt_Theater_Yulecat_XXV_Autumn_Weave":"https://i.ibb.co/s9LXPcPW/autumn-weave.png",
+    "A_Evt_Theater_Yulecat_XXV_Harvest_Memory_Theater":"https://i.ibb.co/QjHLLRBd/harvest-memory-theater.png",
+    "A_Evt_Theater_Yulecat_XXV_Nap_Hollow":"https://i.ibb.co/5Xp68CHD/nap-hollow.png",
+    "A_Evt_Theater_Yulecat_XXV_Nectar_Lodge":"https://i.ibb.co/jvXwfnB2/nectar-lodge.png",
+    "B_Guardian_XXV_Naturion_the_Awakened":"https://i.ibb.co/SX4KTwpF/naturion-the-awakened.png",
     "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail":"https://i.ibb.co/YSvRbFr/shellux-the-dragonsnail.png",
     "A_Evt_Theater_Zodiac_XXV_Cosmic_Timekeeper":"https://i.ibb.co/GQ1xWXRK/cosmic-timekeeper.png",
     "A_Evt_Theater_Zodiac_XXV_Fae_Falls":"https://i.ibb.co/bgd7Sxy1/fae-falls.png",
