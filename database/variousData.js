@@ -607,6 +607,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "theater_yulecat_xxv_": [
+        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/7JJYYYTF/chest-8.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"chests.html", "releaseDate":"10/08/2025"},
+    ],
     "theater_zodiac_xxv_": [
         {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html", "releaseDate":"08/17/2025"},
     ],
