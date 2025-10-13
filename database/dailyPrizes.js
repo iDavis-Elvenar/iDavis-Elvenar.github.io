@@ -12,7 +12,7 @@ var dailyPrizes = {
         "INS_TR_AMT_300{2}",
         "INS_UNIT_MC_HM_10",
         "A_Evt_Autumn_XXII_Luscious_Cakes",
-        "frog_grr_5",
+        "frog_grr_5_{1}",
         "INS_UNIT_LR_10",
         "frog_unurium_DP_{15}",
         "INS_RS_1",
