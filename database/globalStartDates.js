@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "theater_yulecat_xxv_": {//The Tangled Prophecy 21.10. - 11.11.
         "live": {
-            "start_date": "__ _ 2025",
-            "end_date": "__ _ 2025"
+            "start_date": "October 21st 2025",
+            "end_date": "November 11th 2025"
         },
         "beta": {
             "start_date": "October 2nd 2025",
