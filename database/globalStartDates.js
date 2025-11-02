@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "theater_yulecat_xxv_": {//The Tangled Prophecy 21.10. - 11.11.
+    "shuffle_postal_xxv_": {//Winter Magic 5.12. - 5.1.
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "November 3rd 2025",
+            "end_date": "November 29th 2025"
+        }
+    },
+    "theater_yulecat_xxv_": {
         "live": {
             "start_date": "October 21st 2025",
             "end_date": "November 11th 2025"

@@ -39,7 +39,7 @@ function handleBuildingsJSON() {
                     readerS.onload = function () {
                         let dataSets = JSON.parse(readerS.result);
                         for (let i = 0; i < dataSets.length; i++) {
-                            if (dataSets[i].hasOwnProperty('buildings')) {
+                            if (dataSets[i].hasOwnProperty('buildings') && !dataSets[i]['id'].includes("ch24_")) {
                                 for (let j = 0; j < dataSets[i]['buildings'].length; j++) {
                                     var s = {
                                         "id": dataSets[i]['buildings'][j]['baseName'],
@@ -1386,7 +1386,6 @@ function generateEventPrizes() {
                 let royalPrizesArray = data[0].components[i].royalPrizeRewards;
                 console.log(grandPrizesArray, data[0].components[i]);
                 for (let g = 0; g < grandPrizesArray.length; g++) {
-                    console.log("GPS: ", grandPrizesArray[g]);
                     let gpObject = {};
                     gpObject['type'] = grandPrizesArray[g].reward['type'];
                     gpObject['subType'] = grandPrizesArray[g].reward['subType'];
@@ -1409,7 +1408,6 @@ function generateEventPrizes() {
         result['grandPrizes'] = grandPrizes;
         result['royalPrizes'] = royalPrizes;
 
-        console.log(result)
         saveJSON( JSON.stringify(result), "eventsPrizes.json" );
         create_exception("Data Generated!",10,'success');
     }

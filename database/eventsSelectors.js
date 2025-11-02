@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2025" : [
+            ["Winter Magic","shuffle_postal_xxv_",false,false],
             ["The Tangled Prophecy","theater_yulecat_xxv_",true,false],
             ["Autumn Zodiac","theater_zodiac_xxv_",false,false],
             ["The Crystal Expedition","merge_dwarvengame_xxv_",false,false],
@@ -76,6 +77,7 @@ var allEvents = {
     },
     "all_events" : {
         "2025" : [
+            ["Winter Magic","shuffle_postal_xxv_",false,false],
             ["The Tangled Prophecy","theater_yulecat_xxv_",true,false],
             ["Autumn Zodiac","theater_zodiac_xxv_",false,false],
             ["The Crystal Expedition","merge_dwarvengame_xxv_",false,false],

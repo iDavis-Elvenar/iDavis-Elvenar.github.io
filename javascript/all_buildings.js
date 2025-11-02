@@ -56,6 +56,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Scroll_Aquatic_XXV_Ceremonial_Pools": 6,
     "A_Evt_Evo_Merge_Dwarvengame_XXV_Frostgem_Foundry": 9,
     "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail": 9,
+    "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart": 6,
 }
 
 function setAndReload(id) {

@@ -112,6 +112,7 @@ let eventBanners = {
     "merge_dwarvengame_xxv_": "https://i.ibb.co/20CM9kgv/EL-akcia-august-2025-banner.png",
     "theater_zodiac_xxv_": "https://i.ibb.co/ZRMRmJRC/EL-akcia-jese-2025-banner.png",
     "theater_yulecat_xxv_": "https://i.ibb.co/VYZPQgjd/EL-akcia-okt-ber-2025-banner.png",
+    "shuffle_postal_xxv_": "https://i.ibb.co/d0cQXYTR/EL-akcia-zima-2025-banner.png",
 }
 
 let eventVideos = {
@@ -184,6 +185,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "merge_dwarvengame_xxv_": "07/17/2025",
     "theater_zodiac_xxv_": "08/15/2025",
     "theater_yulecat_xxv_": "10/02/2025",
+    "shuffle_postal_xxv_": "11/03/2025",
 }
 
 let questsLinks = {
@@ -225,6 +227,7 @@ let questsLinks = {
     "merge_dwarvengame_xxv_": "bit.ly/TheCrystalExpedition2025",
     "theater_zodiac_xxv_": "bit.ly/AutumnZodiac2025",
     "theater_yulecat_xxv_": "bit.ly/TangledProphecy2025",
+    "shuffle_postal_xxv_": "bit.ly/TheWinterMagic2025",
 }
 
 let eventsDurations = {
@@ -266,6 +269,7 @@ let eventsDurations = {
     "merge_dwarvengame_xxv_": 21,
     "theater_zodiac_xxv_": 21,
     "theater_yulecat_xxv_": 21,
+    "shuffle_postal_xxv_": 32,
 }
 
 let evoUpgradeCosts = {
@@ -324,6 +328,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Scroll_Aquatic_XXV_Ceremonial_Pools": "ins_evo_scroll_aquatic_xxv",
     "A_Evt_Evo_Merge_Dwarvengame_XXV_Frostgem_Foundry": "ins_evo_merge_dwarvengame_xxv",
     "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail": "ins_evo_theater_zodiac_xxv",
+    "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart": "ins_evo_shuffle_postal_xxv",
 }
 
 var artifacts = {
@@ -377,6 +382,7 @@ var artifacts = {
     "ins_evo_scroll_aquatic_xxv": {"name": "Ceremonial Pools Artifact", "img": "https://i.ibb.co/gFjQTQzG/ins-evo-scroll-aquatic-xxv.png"},
     "ins_evo_merge_dwarvengame_xxv": {"name": "Frostgem Foundry Artifact", "img": "https://i.ibb.co/QvTn62hf/ins-evo-merge-dwarvengame-xxv.png"},
     "ins_evo_theater_zodiac_xxv": {"name": "Shellux, The Dragonsnail Artifact", "img": "https://i.ibb.co/sXgpWWX/ins-evo-theater-zodiac-xxv.png"},
+    "ins_evo_shuffle_postal_xxv": {"name": "Winter's True Heart Artifact", "img": "https://i.ibb.co/KjfByThS/ins-evo-shuffle-postal-xxv.png"},
 }
 
 let guardianUpgradeCosts = {
@@ -527,6 +533,7 @@ var eventsInfoIcons = {
     "merge_dwarvengame_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "theater_zodiac_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "theater_yulecat_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "shuffle_postal_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -550,6 +557,7 @@ var eventsPaybackIcons = {
     "merge_dwarvengame_xxv_": "https://i.ibb.co/VL6QWtp/merge-dwarvengame-xxiv-event-payback.png",
     "theater_zodiac_xxv_": "https://i.ibb.co/YWgvz91/event-payback.png",
     "theater_yulecat_xxv_": "https://i.ibb.co/DP5Zc9KN/event-payback.png",
+    "shuffle_postal_xxv_": "https://i.ibb.co/gb1xL9T/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -588,6 +596,8 @@ var eventsAvatars = {
     "portraitSeasonSecretsXxvF1": "https://i.ibb.co/2Y16RSTJ/portrait-season-secrets-xxv-f1.png",
     "portraitEvtTheaterYulecatXxvF1": "https://i.ibb.co/nMssmDHw/portrait-evt-theater-yulecat-xxv-f1.png",
     "portraitEvtTheaterYulecatXxvM1": "https://i.ibb.co/f7JkWyH/portrait-evt-theater-yulecat-xxv-m1.png",
+    "portraitEvtShufflePostalXxvF1": "https://i.ibb.co/VWJXCMr9/portrait-evt-shuffle-postal-xxv-f1.png",
+    "portraitEvtShufflePostalXxvM1": "https://i.ibb.co/Kpj17gBm/portrait-evt-shuffle-postal-xxv-m1.png",
 }
 
 var leaguesBanners = {

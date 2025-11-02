@@ -1,4 +1,8 @@
 var images_buildings = {
+    "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart":"https://i.ibb.co/pBr6YRgB/winters-true-heart.png",
+    "A_Evt_Shuffle_Postal_XXV_Frostfire_Soup_Kitchen":"https://i.ibb.co/r2h7Zdfx/frostfire-soup-kitchen.png",
+    "A_Evt_Shuffle_Postal_XXV_Glacier_Spa":"https://i.ibb.co/Vyxwx78/glacier-spa.png",
+    "A_Evt_Shuffle_Postal_XXV_Skyshot_Springs":"https://i.ibb.co/YF4b1vRs/skyshot-springs.png",
     "A_Evt_Theater_Yulecat_XXV_Autumn_Weave":"https://i.ibb.co/s9LXPcPW/autumn-weave.png",
     "A_Evt_Theater_Yulecat_XXV_Harvest_Memory_Theater":"https://i.ibb.co/QjHLLRBd/harvest-memory-theater.png",
     "A_Evt_Theater_Yulecat_XXV_Nap_Hollow":"https://i.ibb.co/5Xp68CHD/nap-hollow.png",
