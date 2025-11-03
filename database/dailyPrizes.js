@@ -2,6 +2,7 @@ var dailyPrizes = {
 
     "shuffle_postal_xxv_": [
         "A_Evt_Shuffle_Postal_XXIV_The_Discordant_Choir",
+        "INS_PETFOOD_1{2}",
     ],
 
     "theater_yulecat_xxv_": [
