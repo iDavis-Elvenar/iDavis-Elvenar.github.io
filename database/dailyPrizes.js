@@ -1,8 +1,11 @@
 var dailyPrizes = {
 
     "shuffle_postal_xxv_": [
+        // ?
+        "A_Evt_Shuffle_Postal_XXV_Skyshot_Springs",
         "A_Evt_Shuffle_Postal_XXIV_The_Discordant_Choir",
         "INS_PETFOOD_1{2}",
+        "A_Evt_Shuffle_Postal_XXV_Frostfire_Soup_Kitchen",
     ],
 
     "theater_yulecat_xxv_": [
