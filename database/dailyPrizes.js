@@ -1,7 +1,7 @@
 var dailyPrizes = {
 
     "shuffle_postal_xxv_": [
-        // ?
+        "INS_TR_AMT_300{2}",
         "A_Evt_Shuffle_Postal_XXV_Skyshot_Springs",
         "INS_KP_{20}",
         "A_Evt_Shuffle_Postal_XXIV_The_Discordant_Choir",
