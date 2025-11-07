@@ -9,6 +9,7 @@ var dailyPrizes = {
         "A_Evt_Shuffle_Postal_XXV_Frostfire_Soup_Kitchen",
         "INS_RF_CN_100",
         "frog_defaultpremium_{15}",
+        "INS_TR_AMT_300{2}",
     ],
 
     "theater_yulecat_xxv_": [
