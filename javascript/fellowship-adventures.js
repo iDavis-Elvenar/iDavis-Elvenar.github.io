@@ -387,7 +387,7 @@ function displayWaypoints() {
 
     let h7 = document.createElement('h7');
     if (notCertainVersionsYet.includes(getSelectedFa())) {
-        h7.innerHTML = `<center>Currently scheduled version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Note that it might still change until the FA begins on Beta. I will update this page if necessary.</center><br>`;
+        h7.innerHTML = `<center>Currently scheduled version of this Fellowship Adventure is <b>${faVersions[getSelectedFa()]}</b>. Note that it might still change until few days before the event starts. I will update this page if necessary.</center><br>`;
         parent.appendChild(h7);
     } else {
         if (faVersions.hasOwnProperty(getSelectedFa())) {

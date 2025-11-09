@@ -301,7 +301,17 @@ var eventStartDates = {
     },
 }
 
-var faStartDates = { //June 3.6. - 9.6.
+var faStartDates = { //
+    "november_xxv_": {
+        "live": {
+            "start_date": "__ _ 2025",
+            "end_date": "__ _ 2025"
+        },
+        "beta": {
+            "start_date": "October 24th 2025",
+            "end_date": "October 30th 2025"
+        }
+    },
     "september_xxv_": {
         "live": {
             "start_date": "September 5th 2025",
