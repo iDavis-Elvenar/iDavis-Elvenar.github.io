@@ -269,7 +269,7 @@ let eventsDurations = {
     "merge_dwarvengame_xxv_": 21,
     "theater_zodiac_xxv_": 21,
     "theater_yulecat_xxv_": 21,
-    "shuffle_postal_xxv_": 32,
+    "shuffle_postal_xxv_": 31,
 }
 
 let evoUpgradeCosts = {
