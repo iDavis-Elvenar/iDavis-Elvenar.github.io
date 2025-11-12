@@ -10,6 +10,7 @@ var dailyPrizes = {
         "INS_RF_CN_100",
         "frog_defaultpremium_{15}",
         "INS_TR_AMT_300{2}",
+        "INS_UNIT_MA_10",
     ],
 
     "theater_yulecat_xxv_": [
