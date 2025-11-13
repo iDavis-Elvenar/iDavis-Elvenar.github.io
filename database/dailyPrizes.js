@@ -11,6 +11,7 @@ var dailyPrizes = {
         "frog_defaultpremium_{15}",
         "INS_TR_AMT_300{2}",
         "INS_UNIT_MA_10",
+        "A_Evt_Shuffle_Postal_XXIV_Polar_Beats",
     ],
 
     "theater_yulecat_xxv_": [
