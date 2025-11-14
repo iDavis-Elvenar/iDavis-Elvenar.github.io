@@ -12,6 +12,7 @@ var dailyPrizes = {
         "INS_TR_AMT_300{2}",
         "INS_UNIT_MA_10",
         "A_Evt_Shuffle_Postal_XXIV_Polar_Beats",
+        "frog_grr_5_{1}",
     ],
 
     "theater_yulecat_xxv_": [
