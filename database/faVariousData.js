@@ -424,5 +424,5 @@ var faVersions = {
 }
 
 var notCertainVersionsYet = [
-    "november_xxv_"
+
 ]
