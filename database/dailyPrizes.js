@@ -15,6 +15,7 @@ var dailyPrizes = {
         "frog_grr_5_{1}",
         "INS_KP_{20}",
         "A_Evt_Winter_Xviii_Candy_Hut",
+        "INS_RS_1",
     ],
 
     "theater_yulecat_xxv_": [
