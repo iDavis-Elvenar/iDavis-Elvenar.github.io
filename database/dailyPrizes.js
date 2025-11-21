@@ -19,6 +19,7 @@ var dailyPrizes = {
         "INS_TR_AMT_480{2}",
         "INS_RS_1",
         "INS_KP_AW_30",
+        "A_Evt_Winter_XIX_Crane",
     ],
 
     "theater_yulecat_xxv_": [
