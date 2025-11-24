@@ -22,6 +22,7 @@ var dailyPrizes = {
         "A_Evt_Winter_XIX_Crane",
         "INS_REV_SQD_75",
         "INS_UNIT_MC_HM_10",
+        "A_Evt_Expiring_UnitHealth_Boost",
     ],
 
     "theater_yulecat_xxv_": [
