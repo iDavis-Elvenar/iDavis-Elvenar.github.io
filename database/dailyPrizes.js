@@ -23,6 +23,16 @@ var dailyPrizes = {
         "INS_REV_SQD_75",
         "INS_UNIT_MC_HM_10",
         "A_Evt_Expiring_UnitHealth_Boost",
+        "INS_UNIT_HR_10",
+        "A_Evt_Winter_3Tree",
+        "INS_RF_SPL_50{2}",
+        //combiningcatalyst	3
+        "A_Evt_Winter_2DailyReward",
+        //frog_default1 1
+        "A_Evt_December_XX_FrozenOwlCave",
+        //volatile_sigils 15
+        "INS_KP_AW_20{2}",
+        "A_Evt_Expiring_HeavyRanged_Boost",
     ],
 
     "theater_yulecat_xxv_": [
