@@ -9,7 +9,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ascendedelixir", "ascendedmagic_dust", "ascendedgems", "boosted_ascended_plus_0_quality_1", "boosted_ascended_plus_1_quality_1",
     "boosted_ascended_plus_2_quality_1", "boosted_ascended_plus_0_quality_2", "boosted_ascended_plus_1_quality_2",
     "boosted_ascended_plus_2_quality_2", "boosted_ascended_plus_0_quality_3", "boosted_ascended_plus_1_quality_3",
-    "boosted_ascended_plus_2_quality_3", "work", "canned_goods", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
+    "boosted_ascended_plus_2_quality_3", "work", "canned_goods", "nox", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
     "mc_lm", "mc_lr", "mc_ma", "mc_hm", "mc_hr", "knowledge_points", "broken_shards",
     "relic_marble", "relic_steel", "relic_planks", "relic_crystal", "relic_scrolls", "relic_silk", "relic_elixir",
     "relic_magic_dust", "relic_gems", "boosted_relic_plus_0_quality_1", "boosted_relic_plus_1_quality_1", "boosted_relic_plus_2_quality_1",
@@ -48,14 +48,14 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ch21_prey", "ch21_scales", "ch21_oblations3", "ch21_shells", "ch21_dragon", "ch21_oblations2", "ch21_art", "ch21_oblations1", "ch21_oblations4", 
     "ch22_seafood", "ch22_fish", "ch22_fruits", "ch22_salt", "ch22_shrimps", "ch22_snails", "ch22_weed", "ch22_eels", "ch22_sponges", 
     "ch23_unicornblossoms", "ch23_dwarvenspirits", "ch23_fairyspirits", "ch23_orcspirits", "ch23_halflingspirits", "ch23_mithril", "ch23_queenhoney", "ch23_dragonteeth", "ch23_flowerwreaths",
-    "", "", "", ];
+    "ch24_servants", "ch24_warriors", "ch24_farmers", "ch24_workers", "ch24_motivation", "ch24_prophecies", "ch24_studies", "", "", "", "", ];
 
-var numberOfChapters = 23;
+var numberOfChapters = 24;
 
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
     11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII', 18: 'XVIII',
-    19: 'XIX', 20: 'XX', 21: 'XXI', 22: 'XXII', 23: 'XXIII',
+    19: 'XIX', 20: 'XX', 21: 'XXI', 22: 'XXII', 23: 'XXIII', 24: 'XXIV',
 }
 
 var chapterNames = {
@@ -64,6 +64,7 @@ var chapterNames = {
     11: 'Halflings', 12: 'Elementals', 13: 'Amuni', 14: 'Constructs', 15: 'Elvenar', 16: 'Embassies', 
     17: 'Traders of Unur', 18: 'Team Spirit', 19: 'Revenge of the Exile', 20: 'The Power of Music',
     21: 'The Vallorian Legend', 22: 'Harbours of the Deep', 23: 'Secrets of the Unicorn',
+    24: 'Fate of the Bastet',
 }
 
 let eventBanners = {
@@ -497,6 +498,7 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
+    "Scroll_Sorcerers_XXV",
 ]
 
 var forceNonEventBuildings = [
@@ -806,6 +808,7 @@ var chapter_icons = {
     21: "https://i.ibb.co/XCp7d47/ch21.png title='The Vallorian Legend'",
     22: "https://i.ibb.co/P92Ld8J/ch22.png title='Harbours of the Deep'",
     23: "https://i.ibb.co/Y7tLZ49n/ch23.png title='Secrets of the Unicorn'",
+    24: "https://i.ibb.co/6cVsmTtY/ch24.png title='Fate of the Bastet'",
 }
 
 var grIds = {
@@ -827,6 +830,7 @@ var grIds = {
     "vallorianlegend": "ch21",
     "harboursofdeep": "ch22",
     "secretsofunicorn": "ch23",
+    "fateofbastet": "ch24",
 }
 
 var newEventSign = {

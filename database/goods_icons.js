@@ -396,6 +396,16 @@ var goods_icons = {
     "b_ch23_aw2_shards": "<img src='https://i.ibb.co/DHmCQDg8/b-ch23-aw2-shards.png' title='Rune Shard for Unicorn Park'><br>",
     "radiant_stones": "<img src='https://i.ibb.co/C5ZHdzZt/radiant-stones.png' title='Radiant Stones'><br>",
     "cauldron_witchpoints": "<img src='https://i.ibb.co/kVtJxBKp/cauldron-witchpoints.png' title='Cauldron Witch Points'><br>",
+    "ch24_studies": "<img src='https://i.ibb.co/wFss72wP/ch24-studies.png' title='Studies of Nox'><br>",
+    "ch24_prophecies": "<img src='https://i.ibb.co/7x0Szqbm/ch24-prophecies.png' title='Divine Prophecies'><br>",
+    "ch24_motivation": "<img src='https://i.ibb.co/zVdskx8x/ch24-motivation.png' title='Intrinsic Motivation'><br>",
+    "ch24_workers": "<img src='https://i.ibb.co/LzgKw0VB/ch24-workers.png' title='Skilled Workers'><br>",
+    "ch24_farmers": "<img src='https://i.ibb.co/hRfCwv1s/ch24-farmers.png' title='Diligent Farmers'><br>",
+    "ch24_warriors": "<img src='https://i.ibb.co/jPSZNt6g/ch24-warriors.png' title='Keen Warriors'><br>",
+    "ch24_servants": "<img src='https://i.ibb.co/DP72hFbZ/ch24-servants.png' title='Humble Servants'><br>",
+    "nox": "<img src='https://i.ibb.co/ptxxScH/nox-small.png' title='Nox'><br>",
+    "b_ch24_aw1_shards": "<img src='https://i.ibb.co/Q7sPWJxD/b-ch24-aw1-shards.png' title='Rune Shard for Bernard's Kennel'><br>",
+    "b_ch24_aw2_shards": "<img src='https://i.ibb.co/Fkzgfqyp/b-ch24-aw2-shards.png' title='Rune Shard for Temple of the White Cat'><br>",
 }
 
 var xlImages = {
@@ -416,4 +426,5 @@ var xlImages = {
     "volatile_sigils": "https://i.ibb.co/ZH6SMN8/volatile-sigils-xl.png",
     "spell_settlement_production_boost_1": "https://i.ibb.co/twbxHTXD/spell-settlement-production-boost-1-xl.png",
     "spell_teleport_1": "https://i.ibb.co/HfjMS0bD/spell-teleport-1.png",
+    "nox": "https://i.ibb.co/FqskksVx/nox.png",
 }
