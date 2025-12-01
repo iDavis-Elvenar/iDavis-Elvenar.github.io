@@ -182,5 +182,12 @@ var instants = {
         "image_small": "https://i.ibb.co/cYyST31/Premium-small.png",
         "title": "Diamonds",
         "production_type": ""
+    },
+    "INS_VOLATILE_SIGILS_": {
+        "name": "Volatile Sigils",
+        "image_big": "https://i.ibb.co/ZH6SMN8/volatile-sigils-xl.png",
+        "image_small": "https://i.ibb.co/pwnK74T/volatile-sigils.png",
+        "title": "Volatile Sigils",
+        "production_type": ""
     }
 }

@@ -26,11 +26,11 @@ var dailyPrizes = {
         "INS_UNIT_HR_10",
         "A_Evt_Winter_3Tree",
         "INS_RF_SPL_50{2}",
-        //combiningcatalyst	3
+        "INS_COMBINING_CATALYST_{3}",
         "A_Evt_Winter_2DailyReward",
-        //frog_default1 1
+        "frog_default1_{10}",
         "A_Evt_December_XX_FrozenOwlCave",
-        //volatile_sigils 15
+        "INS_VOLATILE_SIGILS_{15}",
         "INS_KP_AW_20{2}",
         "A_Evt_Expiring_HeavyRanged_Boost",
     ],
