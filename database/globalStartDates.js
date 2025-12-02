@@ -6,7 +6,7 @@ var eventStartDates = {
         },
         "beta": {
             "start_date": "November 3rd 2025",
-            "end_date": "November 29th 2025"
+            "end_date": "December 4th 2025"
         }
     },
     "theater_yulecat_xxv_": {
