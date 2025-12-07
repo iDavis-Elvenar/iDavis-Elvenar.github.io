@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "shuffle_postal_xxv_": {//Winter Magic 5.12. - 5.1.
+    "scroll_sorcerers_xxvi_": {//The Duplication Disaster 23.1. - 13.2.
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "December 8th 2025",
+            "end_date": "December 29th 2025"
+        }
+    },
+    "shuffle_postal_xxv_": {
         "live": {
             "start_date": "December 5th 2025",
             "end_date": "January 5th 2026"

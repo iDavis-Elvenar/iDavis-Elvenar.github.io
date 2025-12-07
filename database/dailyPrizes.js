@@ -1,5 +1,30 @@
 var dailyPrizes = {
 
+    "scroll_sorcerers_xxvi_": [
+        "A_Evt_Scroll_Sorcerers_XXVI_Smash_Kitchen",
+        "A_Evt_Winter_Xvii_1GrandPrize",
+        "INS_KP_AW_20",
+        "frog_orcs_{10}",
+        "A_Evt_Winter_3GrandPrize",
+        "INS_RF_CN_50",
+        "A_Evt_Scroll_Sorcerers_XXVI_Good_Boys_Banquet",
+        "INS_RF_SPL_50",
+        "A_Evt_Scroll_Sorcerers_XXIV_Sorcerers_Witness_Auditorium",
+        "INS_COMBINING_CATALYST_{3}",
+        "frog_unurium_DP_{10}",
+        "INS_UNIT_MC_MA_10",
+        "A_Evt_Snow_Village",
+        "INS_RS_1{2}",
+        "A_Evt_July_XX_Sorcerers_Gathering",
+        "INS_KP_{15}",
+        "INS_UNIT_MA_10",
+        "INS_REV_SQD_75{2}",
+        "A_Evt_Scroll_Sorcerers_XXV_Scorching_Snacks",
+        "INS_PETFOOD_1{2}",
+        "A_Evt_Theater_Zodiac_XXV_Cosmic_Timekeeper",
+        "INS_KP_AW_30",
+    ],
+
     "shuffle_postal_xxv_": [
         "INS_TR_AMT_300{2}",
         "A_Evt_Shuffle_Postal_XXV_Skyshot_Springs",

@@ -1,5 +1,8 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
+        "2026" : [
+            ["The Duplication Disaster","scroll_sorcerers_xxvi_",false,false],
+        ],
         "2025" : [
             ["Winter Magic","shuffle_postal_xxv_",true,false],
             ["The Tangled Prophecy","theater_yulecat_xxv_",false,false],
@@ -76,6 +79,9 @@ var allEvents = {
         ]
     },
     "all_events" : {
+        "2026" : [
+            ["The Duplication Disaster","scroll_sorcerers_xxvi_",false,false],
+        ],
         "2025" : [
             ["Winter Magic","shuffle_postal_xxv_",true,false],
             ["The Tangled Prophecy","theater_yulecat_xxv_",false,false],

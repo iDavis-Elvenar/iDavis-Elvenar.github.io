@@ -1,4 +1,7 @@
 var images_buildings = {
+    "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast":"https://i.ibb.co/WW0h9wDJ/endless-feast.png",
+    "A_Evt_Scroll_Sorcerers_XXVI_Good_Boys_Banquet":"https://i.ibb.co/SwmMVqjP/good-boys-banquet.png",
+    "A_Evt_Scroll_Sorcerers_XXVI_Smash_Kitchen":"https://i.ibb.co/PG0HCv7W/smash-kitchen.png",
     "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart":"https://i.ibb.co/pBr6YRgB/winters-true-heart.png",
     "A_Evt_Shuffle_Postal_XXV_Frostfire_Soup_Kitchen":"https://i.ibb.co/r2h7Zdfx/frostfire-soup-kitchen.png",
     "A_Evt_Shuffle_Postal_XXV_Glacier_Spa":"https://i.ibb.co/Vyxwx78/glacier-spa.png",

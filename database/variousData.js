@@ -114,6 +114,7 @@ let eventBanners = {
     "theater_zodiac_xxv_": "https://i.ibb.co/ZRMRmJRC/EL-akcia-jese-2025-banner.png",
     "theater_yulecat_xxv_": "https://i.ibb.co/VYZPQgjd/EL-akcia-okt-ber-2025-banner.png",
     "shuffle_postal_xxv_": "https://i.ibb.co/d0cQXYTR/EL-akcia-zima-2025-banner.png",
+    "scroll_sorcerers_xxvi_": "https://i.ibb.co/1Yp11gZf/EL-akcia-janu-r-2026-banner.png",
 }
 
 let eventVideos = {
@@ -187,6 +188,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "theater_zodiac_xxv_": "08/15/2025",
     "theater_yulecat_xxv_": "10/02/2025",
     "shuffle_postal_xxv_": "11/03/2025",
+    "scroll_sorcerers_xxvi_": "12/08/2025",
 }
 
 let questsLinks = {
@@ -229,6 +231,7 @@ let questsLinks = {
     "theater_zodiac_xxv_": "bit.ly/AutumnZodiac2025",
     "theater_yulecat_xxv_": "bit.ly/TangledProphecy2025",
     "shuffle_postal_xxv_": "bit.ly/TheWinterMagic2025",
+    "scroll_sorcerers_xxvi_": "bit.ly/DuplicationDisaster2026",
 }
 
 let eventsDurations = {
@@ -271,6 +274,7 @@ let eventsDurations = {
     "theater_zodiac_xxv_": 21,
     "theater_yulecat_xxv_": 21,
     "shuffle_postal_xxv_": 31,
+    "scroll_sorcerers_xxvi_": 21,
 }
 
 let evoUpgradeCosts = {
@@ -330,6 +334,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Merge_Dwarvengame_XXV_Frostgem_Foundry": "ins_evo_merge_dwarvengame_xxv",
     "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail": "ins_evo_theater_zodiac_xxv",
     "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart": "ins_evo_shuffle_postal_xxv",
+    "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast": "ins_evo_scroll_sorcerers_xxvi",
 }
 
 var artifacts = {
@@ -384,6 +389,7 @@ var artifacts = {
     "ins_evo_merge_dwarvengame_xxv": {"name": "Frostgem Foundry Artifact", "img": "https://i.ibb.co/QvTn62hf/ins-evo-merge-dwarvengame-xxv.png"},
     "ins_evo_theater_zodiac_xxv": {"name": "Shellux, The Dragonsnail Artifact", "img": "https://i.ibb.co/sXgpWWX/ins-evo-theater-zodiac-xxv.png"},
     "ins_evo_shuffle_postal_xxv": {"name": "Winter's True Heart Artifact", "img": "https://i.ibb.co/KjfByThS/ins-evo-shuffle-postal-xxv.png"},
+    "ins_evo_scroll_sorcerers_xxvi": {"name": "Endless Feast Artifact", "img": "https://i.ibb.co/TBKg492M/ins-evo-scroll-sorcerers-xxvi.png"},
 }
 
 let guardianUpgradeCosts = {
@@ -498,7 +504,6 @@ var discardBuildings = [
     "A_Evt_Expiring_OrcBuff",
     "A_Evt_Expiring_AWAssistance",
     "A_Evt_Trans_Evo_N_Dance",
-    "Scroll_Sorcerers_XXV",
 ]
 
 var forceNonEventBuildings = [
@@ -536,6 +541,7 @@ var eventsInfoIcons = {
     "theater_zodiac_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "theater_yulecat_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "shuffle_postal_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "scroll_sorcerers_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -560,6 +566,7 @@ var eventsPaybackIcons = {
     "theater_zodiac_xxv_": "https://i.ibb.co/YWgvz91/event-payback.png",
     "theater_yulecat_xxv_": "https://i.ibb.co/DP5Zc9KN/event-payback.png",
     "shuffle_postal_xxv_": "https://i.ibb.co/gb1xL9T/event-payback.png",
+    "scroll_sorcerers_xxvi_": "https://i.ibb.co/Jpb1pXB/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -600,6 +607,8 @@ var eventsAvatars = {
     "portraitEvtTheaterYulecatXxvM1": "https://i.ibb.co/f7JkWyH/portrait-evt-theater-yulecat-xxv-m1.png",
     "portraitEvtShufflePostalXxvF1": "https://i.ibb.co/VWJXCMr9/portrait-evt-shuffle-postal-xxv-f1.png",
     "portraitEvtShufflePostalXxvM1": "https://i.ibb.co/Kpj17gBm/portrait-evt-shuffle-postal-xxv-m1.png",
+    "portraitEvtScrollSorcerersXxviF1": "https://i.ibb.co/1GZPG2tn/portrait-evt-scroll-sorcerers-xxvi-f1.png",
+    "portraitEvtScrollSorcerersXxviM1": "https://i.ibb.co/hFTFZPTn/portrait-evt-scroll-sorcerers-xxvi-m1.png",
 }
 
 var leaguesBanners = {
@@ -619,6 +628,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "scroll_sorcerers_xxvi_": [
+        {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/rv5vH4Z/chest8.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html", "releaseDate":"12/07/2025"},
+    ],
     "theater_yulecat_xxv_": [
         {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/7JJYYYTF/chest-8.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"chests.html", "releaseDate":"10/08/2025"},
     ],
