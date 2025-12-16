@@ -142,8 +142,11 @@ var allEvents = {
 }
 
 var allFas = { //NAME,ID,SELECTED,DISABLED == HIDDEN
+    "2026" : [
+        ["Fellowship Adventures - January 2026", "january_xxvi_",true,false],
+    ],
     "2025" : [
-        ["Fellowship Adventures - November 2025", "november_xxv_",true,false],
+        ["Fellowship Adventures - November 2025", "november_xxv_",false,false],
         ["Fellowship Adventures - September 2025", "september_xxv_",false,false],
         ["Fellowship Adventures - June 2025", "june_xxv_",false,false],
         ["Fellowship Adventures - March 2025", "march_xxv_",false,false],

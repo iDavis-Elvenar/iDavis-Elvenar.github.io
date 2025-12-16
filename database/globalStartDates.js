@@ -312,6 +312,16 @@ var eventStartDates = {
 }
 
 var faStartDates = { //
+    "january_xxvi_": {
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "December 16th 2025",
+            "end_date": "December 22nd 2025"
+        }
+    },
     "november_xxv_": {
         "live": {
             "start_date": "November 18th 2025",
