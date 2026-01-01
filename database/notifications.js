@@ -152,16 +152,16 @@ var notifications = {
         "id":14,
         "text":`<h4 class="alert-heading">📜 A Message from iDavis (January 1st) 📜</h4>
         <hr>
-        <p>Hello everyone, I hope this message finds you well. First and foremost, happy new year, and I wish you all the best in 2025!</p>
-        <p>This year, Elvenar will celebrate a monumental milestone - its 10th anniversary! No doubt that we have some exciting updates on the way, and as all of this unfolds throughout the year, 
-        I'm thrilled to share that my website will continue to be a hub for all things Elvenar. Expect new updates, guides, tips, and features that will enhance your gaming experience.</p>
-        <p>I would like to extend a heartfelt thank you to all the visitors for your continued support and for sharing this website with fellow Elvenar players. Your interest truly motivates me to deliver even more valuable and engaging content.</p>
-        <p>Thank you for reading, have fun with the game and let's look forward to the exciting updates that will shape the year!</p>
+        <p>Hello, hello! Another year has passed, and I'd like to take a moment to look back and say thank you for the love you showed throughout 2025!</p>
+        <p>The iDavis-Elvenar website would not be the same without your continuous support, your valuable feedback, and your contributions to its growth by sharing
+        it with your friends and fellow players. This year, the website continued to be your #1 source for everything Elvenar, and at this pace, it will remain your go-to hub for all things Elvenar in 2026! Expect new updates
+        and features that will further enhance your gaming experience.</p>
+        <p>Thank you for reading, have fun with the game, and have a wonderful New Year 2026!</p>
         <p>iDavis</p>`,
         "repeatAfter":172800,
         "style":"warning",
         "duration":300,
-        "active":false,
+        "active":true,
         "priority":120
     },
     "15":{  // SHORTS TEASER
