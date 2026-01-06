@@ -1,10 +1,10 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2026" : [
-            ["The Duplication Disaster","scroll_sorcerers_xxvi_",false,false],
+            ["The Duplication Disaster","scroll_sorcerers_xxvi_",true,false],
         ],
         "2025" : [
-            ["Winter Magic","shuffle_postal_xxv_",true,false],
+            ["Winter Magic","shuffle_postal_xxv_",false,false],
             ["The Tangled Prophecy","theater_yulecat_xxv_",false,false],
             ["Autumn Zodiac","theater_zodiac_xxv_",false,false],
             ["The Crystal Expedition","merge_dwarvengame_xxv_",false,false],
@@ -80,10 +80,10 @@ var allEvents = {
     },
     "all_events" : {
         "2026" : [
-            ["The Duplication Disaster","scroll_sorcerers_xxvi_",false,false],
+            ["The Duplication Disaster","scroll_sorcerers_xxvi_",true,false],
         ],
         "2025" : [
-            ["Winter Magic","shuffle_postal_xxv_",true,false],
+            ["Winter Magic","shuffle_postal_xxv_",false,false],
             ["The Tangled Prophecy","theater_yulecat_xxv_",false,false],
             ["Autumn Zodiac","theater_zodiac_xxv_",false,false],
             ["The Crystal Expedition","merge_dwarvengame_xxv_",false,false],

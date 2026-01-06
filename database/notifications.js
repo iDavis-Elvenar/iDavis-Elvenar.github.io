@@ -187,17 +187,16 @@ var notifications = {
     },
     "16":{  // NEW FEATURE ON THE WEBSITE #1
         "id":16,
-        "text":`<h4 class="alert-heading">Blog Article: Impressions from Chapter 22!</h4>
+        "text":`<h4 class="alert-heading">Discussion space for this website now on Discord! <img src="https://i.ibb.co/wZGRGRnv/discord.png" style="width: 40px;"></h4>
         <hr>
-        <center><img src="https://i.ibb.co/xMtKZtV/Chapter-22-main.webp" style="width: 100%; max-width: 450px;"></center><br>
-        <p>Recently, I have been asked by InnoGames to share my thoughts, opinions and behind-the-scenes insights about the new <b>Chapter 22 - Harbours of the Deep</b>. Below, you can find the official blog article containing all
-        my answers and various tips for this new chapter!</p>
-        <center><p><h4><a href="https://blog.innogames.com/from-first-impressions-to-hidden-gems-idavis-dives-into-elvenars-chapter-22/" target="_blank" class="alert-link">> Visit the article here <</a></h4></p></center>`,
+        <p>In the official Elvenar server on Discord, I have created a dedicated space where you can share feedback about my website. This provides a more practical and organized space for related discussions moving forward,
+        so it will eventually replace the Contact Form I have on my Contact Page. If you are not yet on the Discord server and would like to provide feedback or reach out there, please follow the guide below for more information.</p>
+        <center><p><h4><a href="https://idavis-elvenar.com/contact.html" target="_blank" class="alert-link">How to join Discord</a></h4></p></center>`,
         "repeatAfter":172800,
         "style":"warning",
         "duration":70,
-        "active":false,
-        "priority":45
+        "active":true,
+        "priority":140
     },
     "17":{  // EVENT
         "id":17,
