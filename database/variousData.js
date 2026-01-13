@@ -875,6 +875,17 @@ var moreNavbarContent = [
             "style":    "width: 24px; margin-right: 6px; margin-bottom: 4px;",
         }
     },
+    // CITY PLANNER
+    /*{
+        "className":    "dropdown-item text-dark", 
+        "href":         "", 
+        "id":           "navitem_city_planner", 
+        "innerHTML":    `City Planner`,
+        "img":          {
+            "src":      "https://i.ibb.co/xtNdzx0c/worker-large-2.png",
+            "style":    "width: 24px; margin-right: 6px; margin-bottom: 4px;",
+        }
+    },*/
     // SEASONS
     {
         "className":    "dropdown-item text-dark",
