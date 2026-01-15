@@ -609,6 +609,7 @@ var eventsAvatars = {
     "portraitEvtShufflePostalXxvM1": "https://i.ibb.co/Kpj17gBm/portrait-evt-shuffle-postal-xxv-m1.png",
     "portraitEvtScrollSorcerersXxviF1": "https://i.ibb.co/1GZPG2tn/portrait-evt-scroll-sorcerers-xxvi-f1.png",
     "portraitEvtScrollSorcerersXxviM1": "https://i.ibb.co/hFTFZPTn/portrait-evt-scroll-sorcerers-xxvi-m1.png",
+    "portraitSeasonDreamsXxviF2": "https://i.ibb.co/gLgsv4HC/portrait-season-dreams-xxvi-f2.png",
 }
 
 var leaguesBanners = {

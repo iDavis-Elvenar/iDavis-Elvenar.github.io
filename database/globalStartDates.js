@@ -495,6 +495,16 @@ var faStartDates = { //
 }
 
 var seasonStartDates = {  //
+    "january_xxvi_": {
+        "live": {
+            "start_date": "January 15th 2026",
+            "end_date": "March 31st 2026"
+        },
+        "beta": {
+            "start_date": "October 21st 2025",
+            "end_date": "January 4th 2026"
+        }
+    },
     "october_xxv_": {
         "live": {
             "start_date": "October 1st 2025",
