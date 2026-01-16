@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "scroll_sorcerers_xxvi_": {//The Duplication Disaster 23.1. - 13.2.
         "live": {
-            "start_date": "__ _ 2026",
-            "end_date": "__ _ 2026"
+            "start_date": "January 23rd 2026",
+            "end_date": "February 13th 2026"
         },
         "beta": {
             "start_date": "December 8th 2025",
