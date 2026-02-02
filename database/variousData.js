@@ -115,6 +115,7 @@ let eventBanners = {
     "theater_yulecat_xxv_": "https://i.ibb.co/VYZPQgjd/EL-akcia-okt-ber-2025-banner.png",
     "shuffle_postal_xxv_": "https://i.ibb.co/d0cQXYTR/EL-akcia-zima-2025-banner.png",
     "scroll_sorcerers_xxvi_": "https://i.ibb.co/1Yp11gZf/EL-akcia-janu-r-2026-banner.png",
+    "merge_dwarvengame_xxvi_": "https://i.ibb.co/W42Hn5Yf/EL-akcia-febru-r-2026-banner.png",
 }
 
 let eventVideos = {
@@ -189,6 +190,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "theater_yulecat_xxv_": "10/02/2025",
     "shuffle_postal_xxv_": "11/03/2025",
     "scroll_sorcerers_xxvi_": "12/08/2025",
+    "merge_dwarvengame_xxvi_": "02/02/2026",
 }
 
 let questsLinks = {
@@ -232,6 +234,7 @@ let questsLinks = {
     "theater_yulecat_xxv_": "bit.ly/TangledProphecy2025",
     "shuffle_postal_xxv_": "bit.ly/TheWinterMagic2025",
     "scroll_sorcerers_xxvi_": "bit.ly/DuplicationDisaster2026",
+    "merge_dwarvengame_xxvi_": "bit.ly/SummitTrials2026",
 }
 
 let eventsDurations = {
@@ -275,6 +278,7 @@ let eventsDurations = {
     "theater_yulecat_xxv_": 21,
     "shuffle_postal_xxv_": 31,
     "scroll_sorcerers_xxvi_": 21,
+    "merge_dwarvengame_xxvi_": 21,
 }
 
 let evoUpgradeCosts = {
@@ -394,10 +398,12 @@ var artifacts = {
 
 let guardianUpgradeCosts = {
     "B_Guardian_XXV_Naturion_the_Awakened": "ins_grow_guardian_xxv_naturion_the_awakened",
+    "B_Guardian_XXVI_Ursalith_the_Ascendant": "ins_grow_guardian_xxvi_ursalith_the_ascendant",
 }
 
 let effigies = {
     "ins_grow_guardian_xxv_naturion_the_awakened": {"name": "Naturion Effigy", "img": "https://i.ibb.co/pBZtQM5v/ins-grow-guardian-xxv-naturion-the-awakened.png"},
+    "ins_grow_guardian_xxvi_ursalith_the_ascendant": {"name": "Ursalith Effigy", "img": "https://i.ibb.co/0pPZhhtp/ins-grow-guardian-xxvi-ursalith-the-ascendant.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -457,6 +463,8 @@ var iconsImages = {
     "time_reduction": "https://i.ibb.co/7F3j8R2/time-reduction.png",
     "encounter_boosted": "https://i.ibb.co/NdwJXQZz/encounter-boosted.png",
     "event_boosted": "https://i.ibb.co/zVgxzvqN/events-boosted.png",
+    "radiant_stones_boosted": "https://i.ibb.co/WWQgFwRs/radiant-stones-boosted.png",
+    "spiritessence_boosted": "https://i.ibb.co/jPRrggx4/spiritessence-boosted.png",
 }
 
 var iconsTitles = {
@@ -542,6 +550,7 @@ var eventsInfoIcons = {
     "theater_yulecat_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "shuffle_postal_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_sorcerers_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "merge_dwarvengame_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -567,6 +576,7 @@ var eventsPaybackIcons = {
     "theater_yulecat_xxv_": "https://i.ibb.co/DP5Zc9KN/event-payback.png",
     "shuffle_postal_xxv_": "https://i.ibb.co/gb1xL9T/event-payback.png",
     "scroll_sorcerers_xxvi_": "https://i.ibb.co/Jpb1pXB/event-payback.png",
+    "merge_dwarvengame_xxvi_": "https://i.ibb.co/VL6QWtp/merge-dwarvengame-xxiv-event-payback.png",
 }
 
 var eventsAvatars = {
@@ -610,6 +620,8 @@ var eventsAvatars = {
     "portraitEvtScrollSorcerersXxviF1": "https://i.ibb.co/1GZPG2tn/portrait-evt-scroll-sorcerers-xxvi-f1.png",
     "portraitEvtScrollSorcerersXxviM1": "https://i.ibb.co/hFTFZPTn/portrait-evt-scroll-sorcerers-xxvi-m1.png",
     "portraitSeasonDreamsXxviF2": "https://i.ibb.co/gLgsv4HC/portrait-season-dreams-xxvi-f2.png",
+    "portraitEvtMergeDwarvengameXxviC1": "https://i.ibb.co/XxgddWxG/portrait-evt-merge-dwarvengame-xxvi-c1.png",
+    "portraitEvtMergeDwarvengameXxviF1": "https://i.ibb.co/JWMvKtqj/portrait-evt-merge-dwarvengame-xxvi-f1.png",
 }
 
 var leaguesBanners = {
@@ -629,6 +641,11 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "merge_dwarvengame_xxvi_": [
+        {"id":"board", "name":"Board", "img":"https://i.ibb.co/5vGFxky/a4.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"02/02/2026"},
+        {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html", "releaseDate":"02/05/2026"},
+        {"id":"pieces", "name":"Pieces", "img":"https://i.ibb.co/ZWRchkQ/EL-akcia-august-2022-piece-c3.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#pieces", "file":"pieces.html", "releaseDate":"02/02/2026"},
+    ],
     "scroll_sorcerers_xxvi_": [
         {"id":"beacons", "name":"Beacons", "img":"https://i.ibb.co/rv5vH4Z/chest8.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#beacons", "file":"beacons.html", "releaseDate":"12/07/2025"},
     ],
@@ -877,16 +894,16 @@ var moreNavbarContent = [
         }
     },
     // CITY PLANNER
-    /*{
+    {
         "className":    "dropdown-item text-dark", 
-        "href":         "", 
+        "href":         "https://elvenar-tools.com/city-planner", 
         "id":           "navitem_city_planner", 
         "innerHTML":    `City Planner`,
         "img":          {
-            "src":      "https://i.ibb.co/xtNdzx0c/worker-large-2.png",
+            "src":      "https://i.ibb.co/LdFXZzHx/worker-large-human.webp",
             "style":    "width: 24px; margin-right: 6px; margin-bottom: 4px;",
         }
-    },*/
+    },
     // SEASONS
     {
         "className":    "dropdown-item text-dark",

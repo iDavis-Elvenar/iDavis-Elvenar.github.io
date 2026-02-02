@@ -1,4 +1,8 @@
 var images_buildings = {
+    "B_Guardian_XXVI_Ursalith_the_Ascendant":"https://i.ibb.co/BV2wMSS1/ursalith-the-ascendant.png",
+    "A_Evt_Merge_Dwarvengame_XXVI_Bonk_Corner":"https://i.ibb.co/tPvxVxQ3/bonk-corner.png",
+    "A_Evt_Merge_Dwarvengame_XXVI_Precision_Arena":"https://i.ibb.co/Wv6f6Vqh/precision-arena.png",
+    "A_Evt_Merge_Dwarvengame_XXVI_Stubborn_Bridge":"https://i.ibb.co/7M48Stx/stubborn-bridge.png",
     "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast":"https://i.ibb.co/WW0h9wDJ/endless-feast.png",
     "A_Evt_Scroll_Sorcerers_XXVI_Good_Boys_Banquet":"https://i.ibb.co/SwmMVqjP/good-boys-banquet.png",
     "A_Evt_Scroll_Sorcerers_XXVI_Smash_Kitchen":"https://i.ibb.co/PG0HCv7W/smash-kitchen.png",

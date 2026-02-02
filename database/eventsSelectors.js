@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2026" : [
+            ["The Summit Trials","merge_dwarvengame_xxvi_",false,false],
             ["The Duplication Disaster","scroll_sorcerers_xxvi_",true,false],
         ],
         "2025" : [
@@ -80,6 +81,7 @@ var allEvents = {
     },
     "all_events" : {
         "2026" : [
+            ["The Summit Trials","merge_dwarvengame_xxvi_",false,false],
             ["The Duplication Disaster","scroll_sorcerers_xxvi_",true,false],
         ],
         "2025" : [

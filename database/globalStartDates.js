@@ -1,5 +1,15 @@
 var eventStartDates = { 
-    "scroll_sorcerers_xxvi_": {//The Duplication Disaster 23.1. - 13.2.
+    "merge_dwarvengame_xxvi_": {
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "February 2nd 2026",
+            "end_date": "February 23rd 2026"
+        }
+    },
+    "scroll_sorcerers_xxvi_": {
         "live": {
             "start_date": "January 23rd 2026",
             "end_date": "February 13th 2026"

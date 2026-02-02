@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "merge_dwarvengame_xxvi_": [
+        "A_Evt_Merge_Dwarvengame_XXVI_Stubborn_Bridge",
+        "INS_RS_1{2}",
+        "INS_KP_AW_20",
+        "A_Evt_Auto_OrcStrategist",
+        "INS_KP_{20}",
+        "INS_PETFOOD_1{1}",
+        "A_Evt_Merge_Dwarvengame_XXVI_Bonk_Corner",
+        "INS_RF_SPL_100{2}",
+        "A_Evt_Expiring_DwarvenArmorer",
+        "INS_TR_AMT_480{2}",
+        "A_Evt_Merge_Dwarvengame_XXIV_Linked_Ramparts",
+        "INS_REV_SQD_75{1}",
+        "A_Evt_Expiring_LightMelee_Boost",
+        "frog_unurium_DP_{15}",
+        "A_Evt_Merge_Dwarvengame_XXIII_Target_Shooting",
+        "INS_TR_AMT_300{2}",
+        "A_Evt_February_XXIII_Rhythm_of_War",
+        "INS_UNIT_LR_10",
+        "INS_RF_CN_33",
+        "A_Evt_Merge_Dwarvengame_XXIII_Bouldersurge",
+        "INS_KP_{15}",
+    ],
+
     "scroll_sorcerers_xxvi_": [
         "A_Evt_Scroll_Sorcerers_XXVI_Smash_Kitchen",
         "A_Evt_Winter_Xvii_1GrandPrize",
