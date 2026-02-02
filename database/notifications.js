@@ -196,7 +196,7 @@ var notifications = {
         "style":"warning",
         "duration":70,
         "active":false,
-        "priority":140
+        "priority":150
     },
     "17":{  // EVENT
         "id":17,
