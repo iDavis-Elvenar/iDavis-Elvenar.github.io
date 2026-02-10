@@ -6,6 +6,11 @@
     color: #7a5e49 !important;
 }
 
+.text-link-bold {
+    color: #7a5e49 !important;
+    font-weight: bold;
+}
+
 .text-orange {
     color: #fc7f25 !important;
 }
