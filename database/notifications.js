@@ -187,15 +187,17 @@ var notifications = {
     },
     "16":{  // NEW FEATURE ON THE WEBSITE #1
         "id":16,
-        "text":`<h4 class="alert-heading">Discussion space for this website now on Discord! <img src="https://i.ibb.co/wZGRGRnv/discord.png" style="width: 40px;"></h4>
+        "text":`<h4 class="alert-heading">Introducing new City Planner by iDavis! <img src="https://i.ibb.co/LdFXZzHx/worker-large-human.webp" style="width: 40px;"></h4>
         <hr>
-        <p>In the official Elvenar server on Discord, I have created a dedicated space where you can share feedback about my website. This provides a more practical and organized space for related discussions moving forward,
-        so it will eventually replace the Contact Form I have on my Contact Page. If you are not yet on the Discord server and would like to provide feedback or reach out there, please follow the guide below for more information.</p>
-        <center><p><h4><a href="https://idavis-elvenar.com/contact.html" target="_blank" class="alert-link">How to join Discord</a></h4></p></center>`,
-        "repeatAfter":172800,
+        <p>Hello Elvenar players!</p>
+        <p>Today, I want to introduce you to the newest tool from the creator of iDavis-Elvenar: the <a href="https://elvenar-tools.com/city-planner" target="_blank" class="alert-link">City Planner</a>!</p>
+        <p>This tool is designed to help you optimize your city layouts efficiently and without the limitations of planning directly in the game. It supports the newest Chapters 23 and 24 and features a modern interface 
+        inspired by today's editors, along with a stack of convenient tools that handle complex in-game logic beyond the capabilities of Elvenarchitect. With a clear vision for the future, I will provide regular updates and maintenance to ensure the tool remains fully compatible with upcoming in-game chapters and features.</p>
+        <center><h4>Start planning your city now at <a href="https://elvenar-tools.com/city-planner" target="_blank" class="alert-link">Elvenar Tools - City Planner</a>!</h4></center>`,
+        "repeatAfter":86400,
         "style":"warning",
         "duration":70,
-        "active":false,
+        "active":true,
         "priority":150
     },
     "17":{  // EVENT
