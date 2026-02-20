@@ -302,11 +302,15 @@ function displayDailyPrizes() {
                     if (filteredData[i].hasOwnProperty('setBuilding')) {
                         setDesc = `${langUI(setNames[filteredData[i]['setBuilding']['setID']])}`;
                     }
+                    let expiringDuration = `-`;
+                    if (filteredData[i].hasOwnProperty("expiring")) {
+                        expiringDuration = (filteredData[i]["expiring"]["duration"]/60/60).toString()+"h";
+                    }
                     td12.innerHTML = `<b>${langUI("Building type:")}</b> ${buildingTypes[filteredData[i]['type']]}<br>
                                     <b>${langUI("Construction time:")}</b> ${filteredData[i]['construction_time']}<br>
                                     <b>${langUI("Size:")}</b> ${filteredData[i]['width']}x${filteredData[i]['length']}<br>
                                     <b>${langUI("Set building:")}</b> ${setDesc}<br>
-                                    <b>${langUI("Expiring:")}</b> -<br>`;
+                                    <b>${langUI("Expiring:")}</b> ${expiringDuration}<br>`;
                     delete filteredData[i]["resale_resources"].population;
                     td12.innerHTML += Object.keys(filteredData[i]["resale_resources"]).length === 0
                     ? "<b>Resale resources:</b> None"
@@ -401,6 +405,34 @@ function displayDailyPrizes() {
                                 trPerSquare.appendChild(tdPerSquare);
                             }
                             t2body.appendChild(trPerSquare);
+                        }
+                        if (filteredData[i].hasOwnProperty("expiring") &&
+                            Object.keys(filteredData[i]["expiring"]["values"]).length >= numberOfChapters &&
+                            Object.values(filteredData[i]["expiring"]["values"]).some(value => value !== 0)) {
+                            var trEffect = document.createElement('tr');
+                            for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+                                var tdEffect = document.createElement('td');
+                                if (ch === 0) {
+                                    if (filteredData[i]["expiring"].hasOwnProperty("description")) {
+                                        tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${filteredData[i]["expiring"]["description"].replaceAll("\"", "")}">`;
+                                    } else {
+                                        tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${iconsTitles[filteredData[i]["expiring"]["iconID"]]}">`;
+                                    }
+                                } else {
+                                    if (filteredData[i]["expiring"].hasOwnProperty("format") &&
+                                    filteredData[i]["expiring"]["format"].toLowerCase().includes("percentage")) {
+                                        if (filteredData[i]["id"].includes("A_Evt_December_XXII_Cryo")) {  //pre zimne dekoracie chcem mat iba 10nasobok a bez znamienka +
+                                            tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]*10}%`;
+                                        } else {
+                                            tdEffect.innerHTML = `+${filteredData[i]["expiring"]["values"][ch]*100}%`;
+                                        }
+                                    } else {
+                                        tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]}`;
+                                    }
+                                }
+                                trEffect.appendChild(tdEffect);
+                            }
+                            t2body.appendChild(trEffect);
                         }
                     }
                     secondTable.appendChild(t2body);
