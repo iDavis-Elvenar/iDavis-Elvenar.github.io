@@ -1,4 +1,7 @@
 var images_buildings = {
+    "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix":"https://i.ibb.co/0VzgDGyn/cosmic-phoenix.png",
+    "A_Evt_Theater_Easter_XXVI_Oracles_Chamber":"https://i.ibb.co/dJVntNgR/oracles-chamber.png",
+    "A_Evt_Theater_Easter_XXVI_Starseers_Platform":"https://i.ibb.co/MkYJdHJG/starseers-platform.png",
     "B_Guardian_XXVI_Ursalith_the_Ascendant":"https://i.ibb.co/BV2wMSS1/ursalith-the-ascendant.png",
     "A_Evt_Merge_Dwarvengame_XXVI_Bonk_Corner":"https://i.ibb.co/tPvxVxQ3/bonk-corner.png",
     "A_Evt_Merge_Dwarvengame_XXVI_Precision_Arena":"https://i.ibb.co/Wv6f6Vqh/precision-arena.png",

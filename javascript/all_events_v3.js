@@ -2216,6 +2216,7 @@ function displayPrizes() {
 }
 
 function createPrizeCell(prize, cell) {
+    if (prize === undefined) return;
     if (prize.type === 'building') {
         if (prize.subType.includes("B_Guardian_")) {
             let buildingId = prize.subType.replace(/_\d+$/, "");

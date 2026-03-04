@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2026" : [
+            ["Cosmic Phoenix Rite","theater_easter_xxvi_",false,false],
             ["The Summit Trials","merge_dwarvengame_xxvi_",true,false],
             ["The Duplication Disaster","scroll_sorcerers_xxvi_",false,false],
         ],
@@ -81,6 +82,7 @@ var allEvents = {
     },
     "all_events" : {
         "2026" : [
+            ["Cosmic Phoenix Rite","theater_easter_xxvi_",false,false],
             ["The Summit Trials","merge_dwarvengame_xxvi_",true,false],
             ["The Duplication Disaster","scroll_sorcerers_xxvi_",false,false],
         ],

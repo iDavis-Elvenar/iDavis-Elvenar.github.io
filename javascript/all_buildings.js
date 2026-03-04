@@ -58,6 +58,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail": 9,
     "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart": 6,
     "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast": 6,
+    "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": 9,
 }
 
 function setAndReload(id) {

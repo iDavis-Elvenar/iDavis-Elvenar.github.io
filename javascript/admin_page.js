@@ -46,7 +46,7 @@ function handleBuildingsJSON() {
                                         "setID": dataSets[i]['id']
                                     }
                                     let bonuses = [];
-                                    for (let k = 0; k < dataSets[i]['buildings'][j]['bonuses'].length; k++) {
+                                    for (let k = 0; k < dataSets[i]['buildings'][j]['bonuses']?.length; k++) {
                                         let bonus = {};
                                         for (let keySet in dataSets[i]['buildings'][j]['bonuses'][k]) {
                                             if (keySet !== '__class__') {

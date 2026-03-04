@@ -1,5 +1,31 @@
 var dailyPrizes = {
 
+    "theater_easter_xxvi_": [
+        "A_Evt_Theater_Easter_XXVI_Starseers_Platform",
+        "INS_KP_{20}",
+        "A_Evt_Easter_Vii_PhoenixFire",
+        "A_Evt_Theater_Easter_XXV_Painting_Tent",
+        "INS_UNIT_MC_LM_10",
+        "A_Evt_Theater_Easter_XXVI_Oracles_Chamber",
+        "frog_unurium_DP_{15}",
+        "INS_KP_{15}",
+        "INS_REV_SQD_75",
+        "A_Evt_Expiring_Mage_Boost",
+        "INS_RF_CN_100",
+        "INS_RS_1",
+        "INS_PETFOOD_1{2}",
+        "A_Evt_March_XXI_Eggshell_Shrine",
+        "INS_UNIT_MA_10",
+        "A_Evt_Theater_Easter_XXIV_Peridot_Perch",
+        "INS_KP_AW_30",
+        "INS_RF_SPL_100",
+        "INS_TR_AMT_300{3}",
+        "A_Evt_Season_Joy_XXIII_Pond_of_Spring",
+        "INS_UNIT_MA_10",
+        "A_Evt_Easter_Flower_Cage",
+        "frog_grr_5_{1}",
+    ],
+
     "merge_dwarvengame_xxvi_": [
         "A_Evt_Merge_Dwarvengame_XXVI_Stubborn_Bridge",
         "INS_RS_1{2}",

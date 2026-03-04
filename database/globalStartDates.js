@@ -1,4 +1,14 @@
 var eventStartDates = { 
+    "theater_easter_xxvi_": {
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "March 5th 2026",
+            "end_date": "March 27th 2026"
+        }
+    },
     "merge_dwarvengame_xxvi_": {
         "live": {
             "start_date": "February 20th 2026",

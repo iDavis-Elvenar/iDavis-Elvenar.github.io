@@ -116,6 +116,7 @@ let eventBanners = {
     "shuffle_postal_xxv_": "https://i.ibb.co/d0cQXYTR/EL-akcia-zima-2025-banner.png",
     "scroll_sorcerers_xxvi_": "https://i.ibb.co/1Yp11gZf/EL-akcia-janu-r-2026-banner.png",
     "merge_dwarvengame_xxvi_": "https://i.ibb.co/W42Hn5Yf/EL-akcia-febru-r-2026-banner.png",
+    "theater_easter_xxvi_": "https://i.ibb.co/m5708rhy/EL-akcia-ve-k-noc-2026-banner.png",
 }
 
 let eventVideos = {
@@ -191,6 +192,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "shuffle_postal_xxv_": "11/03/2025",
     "scroll_sorcerers_xxvi_": "12/08/2025",
     "merge_dwarvengame_xxvi_": "02/02/2026",
+    "theater_easter_xxvi_": "03/05/2026",
 }
 
 let questsLinks = {
@@ -235,6 +237,7 @@ let questsLinks = {
     "shuffle_postal_xxv_": "bit.ly/TheWinterMagic2025",
     "scroll_sorcerers_xxvi_": "bit.ly/DuplicationDisaster2026",
     "merge_dwarvengame_xxvi_": "bit.ly/SummitTrials2026",
+    "theater_easter_xxvi_": "bit.ly/CosmicPhoenixRite2026",
 }
 
 let eventsDurations = {
@@ -279,6 +282,7 @@ let eventsDurations = {
     "shuffle_postal_xxv_": 31,
     "scroll_sorcerers_xxvi_": 21,
     "merge_dwarvengame_xxvi_": 22,
+    "theater_easter_xxvi_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -339,6 +343,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail": "ins_evo_theater_zodiac_xxv",
     "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart": "ins_evo_shuffle_postal_xxv",
     "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast": "ins_evo_scroll_sorcerers_xxvi",
+    "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": "ins_evo_theater_easter_xxvi",
 }
 
 var artifacts = {
@@ -394,6 +399,7 @@ var artifacts = {
     "ins_evo_theater_zodiac_xxv": {"name": "Shellux, The Dragonsnail Artifact", "img": "https://i.ibb.co/sXgpWWX/ins-evo-theater-zodiac-xxv.png"},
     "ins_evo_shuffle_postal_xxv": {"name": "Winter's True Heart Artifact", "img": "https://i.ibb.co/KjfByThS/ins-evo-shuffle-postal-xxv.png"},
     "ins_evo_scroll_sorcerers_xxvi": {"name": "Endless Feast Artifact", "img": "https://i.ibb.co/TBKg492M/ins-evo-scroll-sorcerers-xxvi.png"},
+    "ins_evo_theater_easter_xxvi": {"name": "Cosmic Phoenix Artifact", "img": "https://i.ibb.co/7twzhCXn/ins-evo-theater-easter-xxvi.png"},
 }
 
 let guardianUpgradeCosts = {
@@ -426,6 +432,7 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": `<img src="https://i.ibb.co/f1Fm1Tc/goods-standard-basic.png">`,
     "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": `<img src="https://i.ibb.co/bgJmdntT/tournament-points-boost.png">`,
     "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail": `<img src="https://i.ibb.co/k2sSFCMp/training-speed-boost.png">`,
+    "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": `<img src="https://i.ibb.co/JWNmQGbq/b-neutral-aw-shards.png">`,
 }
 
 var allowedFeedingMultiplicators = {
@@ -551,6 +558,7 @@ var eventsInfoIcons = {
     "shuffle_postal_xxv_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_sorcerers_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "merge_dwarvengame_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "theater_easter_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -577,6 +585,7 @@ var eventsPaybackIcons = {
     "shuffle_postal_xxv_": "https://i.ibb.co/gb1xL9T/event-payback.png",
     "scroll_sorcerers_xxvi_": "https://i.ibb.co/Jpb1pXB/event-payback.png",
     "merge_dwarvengame_xxvi_": "https://i.ibb.co/VL6QWtp/merge-dwarvengame-xxiv-event-payback.png",
+    "theater_easter_xxvi_": "https://i.ibb.co/bjdMSDxK/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -622,6 +631,8 @@ var eventsAvatars = {
     "portraitSeasonDreamsXxviF2": "https://i.ibb.co/gLgsv4HC/portrait-season-dreams-xxvi-f2.png",
     "portraitEvtMergeDwarvengameXxviC1": "https://i.ibb.co/XxgddWxG/portrait-evt-merge-dwarvengame-xxvi-c1.png",
     "portraitEvtMergeDwarvengameXxviF1": "https://i.ibb.co/JWMvKtqj/portrait-evt-merge-dwarvengame-xxvi-f1.png",
+    "portraitEvtTheaterEasterXxviC1": "https://i.ibb.co/fddnvpFr/portrait-evt-theater-easter-xxvi-c1.png",
+    "portraitEvtTheaterEasterXxviF1": "https://i.ibb.co/cSb7znv2/portrait-evt-theater-easter-xxvi-f1.png",
 }
 
 var leaguesBanners = {
@@ -641,6 +652,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "theater_easter_xxvi_": [
+        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"03/12/2026"},
+    ],
     "merge_dwarvengame_xxvi_": [
         {"id":"board", "name":"Board", "img":"https://i.ibb.co/5vGFxky/a4.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#board", "file":"board.html", "releaseDate":"02/02/2026"},
         {"id":"trades", "name":"Trades", "img":"https://i.ibb.co/ctjdKNc/EL-akcia-august-2022-chest-8.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#trades", "file":"trades.html", "releaseDate":"02/05/2026"},
