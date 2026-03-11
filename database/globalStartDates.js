@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "theater_easter_xxvi_": {
         "live": {
-            "start_date": "__ _ 2026",
-            "end_date": "__ _ 2026"
+            "start_date": "March 17th 2026",
+            "end_date": "April 8th 2026"
         },
         "beta": {
             "start_date": "March 5th 2026",
