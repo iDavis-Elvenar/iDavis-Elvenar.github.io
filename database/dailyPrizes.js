@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "shuffle_garden_xxvi_": [
+        "A_Evt_Shuffle_Garden_XXVI_Stringing_Roundhouse",
+        "INS_KP_AW_20",
+        "INS_RF_CN_100",
+        "A_Evt_Shuffle_Garden_XXV_The_Faux_Float",
+        "INS_TR_AMT_300{2}",
+        "INS_PETFOOD_1{2}",
+        "frog_unurium_DP_{15}",
+        "A_Evt_Shuffle_Garden_XXV_The_Rickety_Reaper",
+        "INS_KP_{15}",
+        "A_Evt_Shuffle_Garden_XXVI_Carved_Idol_Stand",
+        "A_Evt_Expiring_HeavyMelee_Boost",
+        "INS_REV_SQD_75{2}",
+        "A_Evt_Shuffle_Garden_XXIII_Mischievous_Fae",
+        "INS_RF_SPL_100",
+        "A_Evt_Shuffle_Garden_XXIV_Banshee_Bramble",
+        "INS_VOLATILE_SIGILS_{15}",
+        "INS_RF_GRR_15{2}",
+        "INS_UNIT_MC_MA_10",
+        "INS_COMBINING_CATALYST_{3}",
+        "A_Evt_Expiring_UnitHealth_Boost",
+        "INS_KP_AW_30",
+    ],
+
     "theater_easter_xxvi_": [
         "A_Evt_Theater_Easter_XXVI_Starseers_Platform",
         "INS_KP_{20}",

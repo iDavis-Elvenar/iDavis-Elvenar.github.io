@@ -117,6 +117,7 @@ let eventBanners = {
     "scroll_sorcerers_xxvi_": "https://i.ibb.co/1Yp11gZf/EL-akcia-janu-r-2026-banner.png",
     "merge_dwarvengame_xxvi_": "https://i.ibb.co/W42Hn5Yf/EL-akcia-febru-r-2026-banner.png",
     "theater_easter_xxvi_": "https://i.ibb.co/m5708rhy/EL-akcia-ve-k-noc-2026-banner.png",
+    "shuffle_garden_xxvi_": "https://i.ibb.co/HpG8N1kV/EL-akcia-m-j-2026-banner.png",
 }
 
 let eventVideos = {
@@ -192,7 +193,8 @@ let eventBetaStarts = { // MM/DD/YYYY
     "shuffle_postal_xxv_": "11/03/2025",
     "scroll_sorcerers_xxvi_": "12/08/2025",
     "merge_dwarvengame_xxvi_": "02/02/2026",
-    "theater_easter_xxvi_": "03/04/2026", //change back to March 5th
+    "theater_easter_xxvi_": "03/05/2026",
+    "shuffle_garden_xxvi_": "03/31/2026",
 }
 
 let questsLinks = {
@@ -238,6 +240,7 @@ let questsLinks = {
     "scroll_sorcerers_xxvi_": "bit.ly/DuplicationDisaster2026",
     "merge_dwarvengame_xxvi_": "bit.ly/SummitTrials2026",
     "theater_easter_xxvi_": "bit.ly/CosmicPhoenixRite2026",
+    "shuffle_garden_xxvi_": "bit.ly/TheLivingChorus2026", 
 }
 
 let eventsDurations = {
@@ -283,6 +286,7 @@ let eventsDurations = {
     "scroll_sorcerers_xxvi_": 21,
     "merge_dwarvengame_xxvi_": 22,
     "theater_easter_xxvi_": 22,
+    "shuffle_garden_xxvi_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -512,6 +516,7 @@ var setNames = {
     "shuffle_postal_xxiv": "The Winter's Stage",
     "shuffle_garden_xxv": "Floating Garden",
     "seasons_xxv": "Canopy of Seasons",
+    "shuffle_garden_xxvi": "Boughsong Terraces",
 }
 
 var discardBuildings = [
@@ -559,6 +564,7 @@ var eventsInfoIcons = {
     "scroll_sorcerers_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "merge_dwarvengame_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "theater_easter_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "shuffle_garden_xxvi_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -586,6 +592,7 @@ var eventsPaybackIcons = {
     "scroll_sorcerers_xxvi_": "https://i.ibb.co/Jpb1pXB/event-payback.png",
     "merge_dwarvengame_xxvi_": "https://i.ibb.co/VL6QWtp/merge-dwarvengame-xxiv-event-payback.png",
     "theater_easter_xxvi_": "https://i.ibb.co/bjdMSDxK/event-payback.png",
+    "shuffle_garden_xxvi_": "https://i.ibb.co/wN3QL26L/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -633,6 +640,8 @@ var eventsAvatars = {
     "portraitEvtMergeDwarvengameXxviF1": "https://i.ibb.co/JWMvKtqj/portrait-evt-merge-dwarvengame-xxvi-f1.png",
     "portraitEvtTheaterEasterXxviC1": "https://i.ibb.co/fddnvpFr/portrait-evt-theater-easter-xxvi-c1.png",
     "portraitEvtTheaterEasterXxviF1": "https://i.ibb.co/cSb7znv2/portrait-evt-theater-easter-xxvi-f1.png",
+    "portraitEvtShuffleGardenXxviF1": "https://i.ibb.co/Rk7xVVj4/portrait-evt-shuffle-garden-xxvi-f1.png",
+    "portraitEvtShuffleGardenXxviM1": "https://i.ibb.co/FqN05Vrd/portrait-evt-shuffle-garden-xxvi-m1.png",
 }
 
 var leaguesBanners = {

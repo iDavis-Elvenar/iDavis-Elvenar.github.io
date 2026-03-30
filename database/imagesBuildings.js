@@ -1,4 +1,11 @@
 var images_buildings = {
+    "A_Evt_Set_Shuffle_Garden_XXVI_Boughsong_Assembling_Steps":"https://i.ibb.co/HDrFSQpm/assembling-steps.png",
+    "A_Evt_Set_Shuffle_Garden_XXVI_Boughsong_Cueing_Stump":"https://i.ibb.co/d0Zsr4ZS/boughsong-cueing-stump.png",
+    "A_Evt_Set_Shuffle_Garden_XXVI_Boughsong_Drumming_Deck":"https://i.ibb.co/kVWpjg9t/boughsong-drumming-deck.png",
+    "A_Evt_Set_Shuffle_Garden_XXVI_Boughsong_Harping_Hollow":"https://i.ibb.co/Wvzd9M2N/boughsong-harping-hollow.png",
+    "A_Evt_Set_Shuffle_Garden_XXVI_Boughsong_Piping_Canopy":"https://i.ibb.co/ZzYX07qH/boughsong-piping-canopy.png",
+    "A_Evt_Shuffle_Garden_XXVI_Carved_Idol_Stand":"https://i.ibb.co/Qj7NGW6S/carved-idol-stand.png",
+    "A_Evt_Shuffle_Garden_XXVI_Stringing_Roundhouse":"https://i.ibb.co/8LdYxJdr/stringing-roundhouse.png",
     "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix":"https://i.ibb.co/0VzgDGyn/cosmic-phoenix.png",
     "A_Evt_Theater_Easter_XXVI_Oracles_Chamber":"https://i.ibb.co/dJVntNgR/oracles-chamber.png",
     "A_Evt_Theater_Easter_XXVI_Starseers_Platform":"https://i.ibb.co/MkYJdHJG/starseers-platform.png",
