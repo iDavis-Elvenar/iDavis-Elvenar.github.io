@@ -642,6 +642,7 @@ var eventsAvatars = {
     "portraitEvtTheaterEasterXxviF1": "https://i.ibb.co/cSb7znv2/portrait-evt-theater-easter-xxvi-f1.png",
     "portraitEvtShuffleGardenXxviF1": "https://i.ibb.co/Rk7xVVj4/portrait-evt-shuffle-garden-xxvi-f1.png",
     "portraitEvtShuffleGardenXxviM1": "https://i.ibb.co/FqN05Vrd/portrait-evt-shuffle-garden-xxvi-m1.png",
+    "portraitSeasonTriumphXxviF1": "https://i.ibb.co/84DDCwTG/portrait-season-triumph-xxvi-f1.png",
 }
 
 var leaguesBanners = {
