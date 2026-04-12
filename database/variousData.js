@@ -194,7 +194,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "scroll_sorcerers_xxvi_": "12/08/2025",
     "merge_dwarvengame_xxvi_": "02/02/2026",
     "theater_easter_xxvi_": "03/05/2026",
-    "shuffle_garden_xxvi_": "03/31/2026",
+    "shuffle_garden_xxvi_": "03/28/2026", //change back to 31st
 }
 
 let questsLinks = {
