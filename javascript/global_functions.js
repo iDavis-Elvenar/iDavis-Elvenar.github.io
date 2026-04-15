@@ -445,7 +445,11 @@ function generateMoreNavbar(filePrefix="") {
         }
         let a = document.createElement('a');
         a.className = item["className"];
-        a.href = filePrefix+item["href"];
+        if (!item["href"].includes('https://')) {
+          a.href = filePrefix+item["href"];
+        } else {
+          a.href = item["href"];
+        }
         a.id = item["id"];
         a.innerHTML = item["innerHTML"];
         if (item.hasOwnProperty("img")) {
