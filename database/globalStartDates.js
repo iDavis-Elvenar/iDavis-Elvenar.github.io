@@ -1,4 +1,14 @@
 var eventStartDates = { 
+    "tile_amuni_xxvi_": {
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "May 7th 2026",
+            "end_date": "May 27th 2026"
+        }
+    },
     "shuffle_garden_xxvi_": {
         "live": {
             "start_date": "April 28th 2026",

@@ -118,6 +118,7 @@ let eventBanners = {
     "merge_dwarvengame_xxvi_": "https://i.ibb.co/W42Hn5Yf/EL-akcia-febru-r-2026-banner.png",
     "theater_easter_xxvi_": "https://i.ibb.co/m5708rhy/EL-akcia-ve-k-noc-2026-banner.png",
     "shuffle_garden_xxvi_": "https://i.ibb.co/HpG8N1kV/EL-akcia-m-j-2026-banner.png",
+    "tile_amuni_xxvi_": "https://i.ibb.co/XrpjyrQ3/EL-akcia-m-j-2026-banner.png",
 }
 
 let eventVideos = {
@@ -194,7 +195,8 @@ let eventBetaStarts = { // MM/DD/YYYY
     "scroll_sorcerers_xxvi_": "12/08/2025",
     "merge_dwarvengame_xxvi_": "02/02/2026",
     "theater_easter_xxvi_": "03/05/2026",
-    "shuffle_garden_xxvi_": "03/28/2026", //change back to 31st
+    "shuffle_garden_xxvi_": "03/31/2026",
+    "tile_amuni_xxvi_": "05/07/2026",
 }
 
 let questsLinks = {
@@ -240,7 +242,8 @@ let questsLinks = {
     "scroll_sorcerers_xxvi_": "bit.ly/DuplicationDisaster2026",
     "merge_dwarvengame_xxvi_": "bit.ly/SummitTrials2026",
     "theater_easter_xxvi_": "bit.ly/CosmicPhoenixRite2026",
-    "shuffle_garden_xxvi_": "bit.ly/TheLivingChorus2026", 
+    "shuffle_garden_xxvi_": "bit.ly/TheLivingChorus2026",
+    "tile_amuni_xxvi_": "bit.ly/TheSummoningOfZeraphis2026",
 }
 
 let eventsDurations = {
@@ -287,6 +290,7 @@ let eventsDurations = {
     "merge_dwarvengame_xxvi_": 22,
     "theater_easter_xxvi_": 22,
     "shuffle_garden_xxvi_": 22,
+    "tile_amuni_xxvi_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -409,11 +413,13 @@ var artifacts = {
 let guardianUpgradeCosts = {
     "B_Guardian_XXV_Naturion_the_Awakened": "ins_grow_guardian_xxv_naturion_the_awakened",
     "B_Guardian_XXVI_Ursalith_the_Ascendant": "ins_grow_guardian_xxvi_ursalith_the_ascendant",
+    "B_Guardian_XXVI_Zeraphis_the_Highstride": "ins_grow_guardian_xxvi_zeraphis_the_highstride",
 }
 
 let effigies = {
     "ins_grow_guardian_xxv_naturion_the_awakened": {"name": "Naturion Effigy", "img": "https://i.ibb.co/pBZtQM5v/ins-grow-guardian-xxv-naturion-the-awakened.png"},
     "ins_grow_guardian_xxvi_ursalith_the_ascendant": {"name": "Ursalith Effigy", "img": "https://i.ibb.co/0pPZhhtp/ins-grow-guardian-xxvi-ursalith-the-ascendant.png"},
+    "ins_grow_guardian_xxvi_zeraphis_the_highstride": {"name": "Zeraphis Effigy", "img": "https://i.ibb.co/gF3tHNFs/ins-grow-guardian-xxvi-zeraphis-the-highstride.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -476,6 +482,9 @@ var iconsImages = {
     "event_boosted": "https://i.ibb.co/zVgxzvqN/events-boosted.png",
     "radiant_stones_boosted": "https://i.ibb.co/WWQgFwRs/radiant-stones-boosted.png",
     "spiritessence_boosted": "https://i.ibb.co/jPRrggx4/spiritessence-boosted.png",
+    "boost_kp": "https://i.ibb.co/RtmbgCd/boost-kp.png",
+    "faster_scouting": "https://i.ibb.co/LdPr8yM8/faster-scouting.png",
+    "fellowship_blessing_increase": "https://i.ibb.co/W4wbRckc/fellowship-blessing-increase.png",
 }
 
 var iconsTitles = {
@@ -565,6 +574,7 @@ var eventsInfoIcons = {
     "merge_dwarvengame_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "theater_easter_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "shuffle_garden_xxvi_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
+    "tile_amuni_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -593,6 +603,7 @@ var eventsPaybackIcons = {
     "merge_dwarvengame_xxvi_": "https://i.ibb.co/VL6QWtp/merge-dwarvengame-xxiv-event-payback.png",
     "theater_easter_xxvi_": "https://i.ibb.co/bjdMSDxK/event-payback.png",
     "shuffle_garden_xxvi_": "https://i.ibb.co/wN3QL26L/event-payback.png",
+    "tile_amuni_xxvi_": "https://i.ibb.co/4nPVJV6V/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -643,6 +654,8 @@ var eventsAvatars = {
     "portraitEvtShuffleGardenXxviF1": "https://i.ibb.co/Rk7xVVj4/portrait-evt-shuffle-garden-xxvi-f1.png",
     "portraitEvtShuffleGardenXxviM1": "https://i.ibb.co/FqN05Vrd/portrait-evt-shuffle-garden-xxvi-m1.png",
     "portraitSeasonTriumphXxviF1": "https://i.ibb.co/84DDCwTG/portrait-season-triumph-xxvi-f1.png",
+    "portraitEvtTileAmuniXxviC1": "https://i.ibb.co/ymwmYb2b/portrait-evt-tile-amuni-xxvi-c1.png",
+    "portraitEvtTileAmuniXxviM1": "https://i.ibb.co/zWHNSnZV/portrait-evt-tile-amuni-xxvi-m1.png",
 }
 
 var leaguesBanners = {
@@ -662,6 +675,11 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "tile_amuni_xxvi_": [
+        {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
+        {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},
+        {"id":"playground", "name":"Playground", "img":"https://i.ibb.co/nmkBMxB/february-xxiii-chest5.png", "img_width":"29", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#playground", "file":"playground.html"},
+    ],
     "theater_easter_xxvi_": [
         {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/w7FdnKm/chest-8.png", "img_width":"26", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; margin-top: -4px; position: relative;", "href":"#chests", "file":"chests.html", "releaseDate":"03/12/2026"},
     ],

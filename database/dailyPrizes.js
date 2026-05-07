@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "tile_amuni_xxvi_": [
+        "A_Evt_Tile_Amuni_XXVI_Highstride_Lotus_Basin",
+        "INS_KP_AW_30",
+        "A_Evt_Tile_Amuni_XXV_Crystal_Pond",
+        "INS_PETFOOD_1{2}",
+        "A_Evt_Expiring_LightRanged_Boost",
+        "A_Evt_Tile_Amuni_XXVI_Cascade_Aqueduct",
+        "INS_REV_SQD_100",
+        "INS_KP_{15}",
+        "A_Evt_UnicornSilver",
+        "INS_TR_AMT_300{2}",
+        "frog_unurium_DP_{15}",
+        "INS_KP_AW_15{2}",
+        "A_Evt_May_XX_Sheep_Shenanigans",
+        "INS_UNIT_LR_10",
+        "INS_RF_SPL_100{2}",
+        "INS_TR_AMT_300{2}",
+        "A_Evt_Expiring_DwarvenArmorer",
+        "frog_runeshardspremium2_{1}",
+        "INS_RF_CN_33{2}",
+        "INS_COMBINING_CATALYST_{2}",
+        "INS_REV_SQD_75{2}",
+    ],
+
     "shuffle_garden_xxvi_": [
         "A_Evt_Shuffle_Garden_XXVI_Stringing_Roundhouse",
         "INS_KP_AW_20",

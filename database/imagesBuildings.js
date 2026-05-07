@@ -1,4 +1,7 @@
 var images_buildings = {
+    "B_Guardian_XXVI_Zeraphis_the_Highstride":"https://i.ibb.co/MLTntVM/zeraphis-the-highstride.png",
+    "A_Evt_Tile_Amuni_XXVI_Highstride_Lotus_Basin":"https://i.ibb.co/qYFGNk2y/highstride-lotus-basin.png",
+    "A_Evt_Tile_Amuni_XXVI_Cascade_Aqueduct":"https://i.ibb.co/3YR52BFt/cascade-aqueduct.png",
     "A_Evt_Set_Shuffle_Garden_XXVI_Boughsong_Assembling_Steps":"https://i.ibb.co/HDrFSQpm/assembling-steps.png",
     "A_Evt_Set_Shuffle_Garden_XXVI_Boughsong_Cueing_Stump":"https://i.ibb.co/d0Zsr4ZS/boughsong-cueing-stump.png",
     "A_Evt_Set_Shuffle_Garden_XXVI_Boughsong_Drumming_Deck":"https://i.ibb.co/kVWpjg9t/boughsong-drumming-deck.png",
