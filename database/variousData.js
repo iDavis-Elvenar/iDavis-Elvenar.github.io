@@ -946,6 +946,17 @@ var moreNavbarContent = [
             "style":    "width: 24px; margin-right: 6px; margin-bottom: 4px;",
         }
     },
+    // INVENTORY MANAGER
+    {
+        "className":    "dropdown-item text-dark", 
+        "href":         "https://elvenar-tools.com/inventory-manager", 
+        "id":           "navitem_inventory_manager", 
+        "innerHTML":    `Inventory Manager`,
+        "img":          {
+            "src":      "https://elvenar-tools.com/shared/inventory.png",
+            "style":    "width: 24px; margin-right: 7px; margin-bottom: 4px;  margin-left: -1px;",
+        }
+    },
     // SEASONS
     {
         "className":    "dropdown-item text-dark",
