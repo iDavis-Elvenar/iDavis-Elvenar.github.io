@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "tile_amuni_xxvi_": {
         "live": {
-            "start_date": "__ _ 2026",
-            "end_date": "__ _ 2026"
+            "start_date": "May 27th 2026",
+            "end_date": "June 16th 2026"
         },
         "beta": {
             "start_date": "May 7th 2026",
