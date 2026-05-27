@@ -1,4 +1,7 @@
 var images_buildings = {
+    "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon":"https://i.ibb.co/1f4cS42D/bubblebeat-galleon.png",
+    "A_Evt_Exp_Scroll_Aquatic_XXVI_Bubble_Bumper_Pier":"https://i.ibb.co/XffwB8yR/tidepool-dive-school.png",
+    "A_Evt_Scroll_Aquatic_XXVI_Tidepool_Dive_School":"https://i.ibb.co/tp7wH1QD/bubble-bumper-pier.png",
     "B_Guardian_XXVI_Zeraphis_the_Highstride":"https://i.ibb.co/MLTntVM/zeraphis-the-highstride.png",
     "A_Evt_Tile_Amuni_XXVI_Highstride_Lotus_Basin":"https://i.ibb.co/qYFGNk2y/highstride-lotus-basin.png",
     "A_Evt_Tile_Amuni_XXVI_Cascade_Aqueduct":"https://i.ibb.co/3YR52BFt/cascade-aqueduct.png",

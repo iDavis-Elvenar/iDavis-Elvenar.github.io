@@ -119,6 +119,7 @@ let eventBanners = {
     "theater_easter_xxvi_": "https://i.ibb.co/m5708rhy/EL-akcia-ve-k-noc-2026-banner.png",
     "shuffle_garden_xxvi_": "https://i.ibb.co/HpG8N1kV/EL-akcia-m-j-2026-banner.png",
     "tile_amuni_xxvi_": "https://i.ibb.co/XrpjyrQ3/EL-akcia-m-j-2026-banner.png",
+    "scroll_aquatic_xxvi_": "https://i.ibb.co/8nJj3W7g/EL-akcia-j-l-2026-banner.webp",
 }
 
 let eventVideos = {
@@ -197,6 +198,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "theater_easter_xxvi_": "03/05/2026",
     "shuffle_garden_xxvi_": "03/31/2026",
     "tile_amuni_xxvi_": "05/07/2026",
+    "scroll_aquatic_xxvi_": "05/29/2026",
 }
 
 let questsLinks = {
@@ -244,6 +246,7 @@ let questsLinks = {
     "theater_easter_xxvi_": "bit.ly/CosmicPhoenixRite2026",
     "shuffle_garden_xxvi_": "bit.ly/TheLivingChorus2026",
     "tile_amuni_xxvi_": "bit.ly/TheSummoningOfZeraphis2026",
+    "scroll_aquatic_xxvi_": "bit.ly/BubblebeatAquatica2026",
 }
 
 let eventsDurations = {
@@ -291,6 +294,7 @@ let eventsDurations = {
     "theater_easter_xxvi_": 22,
     "shuffle_garden_xxvi_": 22,
     "tile_amuni_xxvi_": 20,
+    "scroll_aquatic_xxvi_": 22,
 }
 
 let evoUpgradeCosts = {
@@ -352,6 +356,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart": "ins_evo_shuffle_postal_xxv",
     "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast": "ins_evo_scroll_sorcerers_xxvi",
     "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": "ins_evo_theater_easter_xxvi",
+    "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon": "ins_evo_scroll_aquatic_xxvi",
 }
 
 var artifacts = {
@@ -408,6 +413,7 @@ var artifacts = {
     "ins_evo_shuffle_postal_xxv": {"name": "Winter's True Heart Artifact", "img": "https://i.ibb.co/KjfByThS/ins-evo-shuffle-postal-xxv.png"},
     "ins_evo_scroll_sorcerers_xxvi": {"name": "Endless Feast Artifact", "img": "https://i.ibb.co/TBKg492M/ins-evo-scroll-sorcerers-xxvi.png"},
     "ins_evo_theater_easter_xxvi": {"name": "Cosmic Phoenix Artifact", "img": "https://i.ibb.co/7twzhCXn/ins-evo-theater-easter-xxvi.png"},
+    "ins_evo_scroll_aquatic_xxvi": {"name": "Bubblebeat Galleon", "img": "https://i.ibb.co/d4g26knz/ins-evo-scroll-aquatic-xxvi.png"},
 }
 
 let guardianUpgradeCosts = {
@@ -575,6 +581,7 @@ var eventsInfoIcons = {
     "theater_easter_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "shuffle_garden_xxvi_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "tile_amuni_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "scroll_aquatic_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -604,6 +611,7 @@ var eventsPaybackIcons = {
     "theater_easter_xxvi_": "https://i.ibb.co/bjdMSDxK/event-payback.png",
     "shuffle_garden_xxvi_": "https://i.ibb.co/wN3QL26L/event-payback.png",
     "tile_amuni_xxvi_": "https://i.ibb.co/4nPVJV6V/event-payback.png",
+    "scroll_aquatic_xxvi_": "https://i.ibb.co/vQgG13g/scroll-aquatic-xxiv-payback.png",
 }
 
 var eventsAvatars = {
@@ -656,6 +664,8 @@ var eventsAvatars = {
     "portraitSeasonTriumphXxviF1": "https://i.ibb.co/84DDCwTG/portrait-season-triumph-xxvi-f1.png",
     "portraitEvtTileAmuniXxviC1": "https://i.ibb.co/ymwmYb2b/portrait-evt-tile-amuni-xxvi-c1.png",
     "portraitEvtTileAmuniXxviM1": "https://i.ibb.co/zWHNSnZV/portrait-evt-tile-amuni-xxvi-m1.png",
+    "portraitEvtScrollAquaticXxviC1": "https://i.ibb.co/FbYzbKqv/portrait-evt-scroll-aquatic-xxvi-c1.png",
+    "portraitEvtScrollAquaticXxviM1": "https://i.ibb.co/nN9tPtYL/portrait-evt-scroll-aquatic-xxvi-m1.png",
 }
 
 var leaguesBanners = {
@@ -675,6 +685,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "scroll_aquatic_xxvi_": [
+        {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},
+    ],
     "tile_amuni_xxvi_": [
         {"id":"toolsGuide", "name":"Tools", "img":"https://i.ibb.co/D70H5y5/EL-akcia-febru-r-2022-shovel.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#tools", "file":"tools.html"},
         {"id":"strategies", "name":"Strategies", "img":"https://i.ibb.co/W2RtBts/EL-akcia-febru-r-2022-payback.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#strategies", "file":"strategies.html"},

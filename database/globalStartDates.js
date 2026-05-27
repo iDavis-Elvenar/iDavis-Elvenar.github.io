@@ -1,4 +1,14 @@
 var eventStartDates = { 
+    "scroll_aquatic_xxvi_": {
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "May 29th 2026",
+            "end_date": "June 19th 2026"
+        }
+    },
     "tile_amuni_xxvi_": {
         "live": {
             "start_date": "May 27th 2026",

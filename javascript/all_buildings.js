@@ -59,6 +59,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart": 6,
     "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast": 6,
     "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": 9,
+    "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon": 6,
 }
 
 function setAndReload(id) {
@@ -751,10 +752,16 @@ function readBuildingsJSON() {
                                 transN.innerHTML += ` ${goods_icons[nthProductionId]}`;
                             } else if (transData[transEffect]['format'] === 'default') {
                                 transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]}x`;
-                                transN.innerHTML += ` ${goods_icons[transData[transEffect]['iconID']]}`;
+                                const targetIconID = transData[transEffect]['iconID'].toLowerCase();
+                                const matchedKey = Object.keys(goods_icons).find(key => key.toLowerCase() === targetIconID);
+                                const icon = matchedKey ? goods_icons[matchedKey] : goods_icons[transData[transEffect]['iconID']];
+                                transN.innerHTML += ` ${icon || ''}`;
                             } else if (transData[transEffect]['format'] === 'trigger_chance') {
                                 transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]}x`;
-                                transN.innerHTML += ` ${goods_icons[transData[transEffect]['iconID']]}`;
+                                const targetIconID = transData[transEffect]['iconID'].toLowerCase();
+                                const matchedKey = Object.keys(goods_icons).find(key => key.toLowerCase() === targetIconID);
+                                const icon = matchedKey ? goods_icons[matchedKey] : goods_icons[transData[transEffect]['iconID']];
+                                transN.innerHTML += ` ${icon || ''}`;
                             }
                             transUl.appendChild(transN);
                             transEffectsInStageAvailable++;

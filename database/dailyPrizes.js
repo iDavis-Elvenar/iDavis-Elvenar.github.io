@@ -1,5 +1,30 @@
 var dailyPrizes = {
 
+    "scroll_aquatic_xxvi_": [
+        "A_Evt_Exp_Scroll_Aquatic_XXVI_Bubble_Bumper_Pier",
+        "A_Evt_Expiring_LightRanged_Boost",
+        "INS_KP_{15}",
+        "INS_RF_SPL_50{2}",
+        "A_Evt_Season_Triumph_XXIV_Aqua_Weaver",
+        "INS_KP_AW_30",
+        "INS_TR_AMT_300{2}",
+        "A_Evt_Scroll_Aquatic_XXV_Hermits_Maze",
+        "INS_UNIT_MC_HM_10",
+        "A_Evt_StatueWarriorsBronze",
+        "INS_COMBINING_CATALYST_{3}",
+        "INS_RS_1",
+        "INS_REV_SQD_100",
+        "INS_RF_GRR_15",
+        "A_Evt_Community_GravityInn",
+        "INS_VOLATILE_SIGILS_{15}",
+        "INS_PETFOOD_1{2}",
+        "A_Evt_June_XX_Elven_Ship",
+        "INS_UNIT_LR_10",
+        "INS_KP_{20}",
+        "INS_RF_GRR_5",
+        "INS_KP_AW_30",
+    ],
+
     "tile_amuni_xxvi_": [
         "A_Evt_Tile_Amuni_XXVI_Highstride_Lotus_Basin",
         "INS_KP_AW_30",

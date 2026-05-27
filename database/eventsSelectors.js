@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2026" : [
+            ["Bubblebeat Aquatica","scroll_aquatic_xxvi_",false,false],
             ["The Summoning of Zeraphis","tile_amuni_xxvi_",true,false],
             ["The Living Chorus","shuffle_garden_xxvi_",false,false],
             ["Cosmic Phoenix Rite","theater_easter_xxvi_",false,false],
@@ -84,6 +85,7 @@ var allEvents = {
     },
     "all_events" : {
         "2026" : [
+            ["Bubblebeat Aquatica","scroll_aquatic_xxvi_",false,false],
             ["The Summoning of Zeraphis","tile_amuni_xxvi_",true,false],
             ["The Living Chorus","shuffle_garden_xxvi_",false,false],
             ["Cosmic Phoenix Rite","theater_easter_xxvi_",false,false],
