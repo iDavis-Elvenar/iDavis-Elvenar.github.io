@@ -55,7 +55,7 @@ var numberOfChapters = 24;
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
     11: 'XI', 12: 'XII', 13: 'XIII', 14: 'XIV', 15: 'XV', 16: 'XVI', 17: 'XVII', 18: 'XVIII',
-    19: 'XIX', 20: 'XX', 21: 'XXI', 22: 'XXII', 23: 'XXIII', 24: 'XXIV',
+    19: 'XIX', 20: 'XX', 21: 'XXI', 22: 'XXII', 23: 'XXIII', 24: 'XXIV', 25: 'XXV',
 }
 
 var chapterNames = {
@@ -64,7 +64,7 @@ var chapterNames = {
     11: 'Halflings', 12: 'Elementals', 13: 'Amuni', 14: 'Constructs', 15: 'Elvenar', 16: 'Embassies', 
     17: 'Traders of Unur', 18: 'Team Spirit', 19: 'Revenge of the Exile', 20: 'The Power of Music',
     21: 'The Vallorian Legend', 22: 'Harbours of the Deep', 23: 'Secrets of the Unicorn',
-    24: 'Fate of the Bastet',
+    24: 'Fate of the Bastet', 25: 'The Purpose of Life',
 }
 
 let eventBanners = {
@@ -894,6 +894,7 @@ var chapter_icons = {
     22: "https://i.ibb.co/P92Ld8J/ch22.png title='Harbours of the Deep'",
     23: "https://i.ibb.co/Y7tLZ49n/ch23.png title='Secrets of the Unicorn'",
     24: "https://i.ibb.co/6cVsmTtY/ch24.png title='Fate of the Bastet'",
+    25: "https://i.ibb.co/4gWMDyLg/ch25.png title='The Purpose of Life'",
 }
 
 var grIds = {
@@ -916,6 +917,7 @@ var grIds = {
     "harboursofdeep": "ch22",
     "secretsofunicorn": "ch23",
     "fateofbastet": "ch24",
+    "purposeoflife": "ch25",
 }
 
 var newEventSign = {

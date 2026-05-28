@@ -406,6 +406,18 @@ var goods_icons = {
     "nox": "<img src='https://i.ibb.co/ptxxScH/nox-small.png' title='Nox'><br>",
     "b_ch24_aw1_shards": "<img src='https://i.ibb.co/Q7sPWJxD/b-ch24-aw1-shards.png' title='Rune Shard for Bernard's Kennel'><br>",
     "b_ch24_aw2_shards": "<img src='https://i.ibb.co/Fkzgfqyp/b-ch24-aw2-shards.png' title='Rune Shard for Temple of the White Cat'><br>",
+    "finity_gear": "<img src='https://i.ibb.co/HpfSdpCY/finity-gear.png' title='Finity Gear'><br>",
+    "ch25_wisdom_adult": "<img src='https://i.ibb.co/39g1yk34/ch25-wisdom-adult.webp' title='Wisdom of Adults'><br>",
+    "ch25_wisdom_elder": "<img src='https://i.ibb.co/q3r3K6rL/ch25-wisdom-elder.webp' title='Wisdom of Age'><br>",
+    "ch25_wisdom_kid": "<img src='https://i.ibb.co/23wGjSHs/ch25-wisdom-kid.webp' title='Wisdom of Youth'><br>",
+    "ch25_wisdom_life": "<img src='https://i.ibb.co/FkJFNZjb/ch25-wisdom-life.webp' title='Wisdom of Life'><br>",
+    "ch25_xpg_1": "<img src='https://i.ibb.co/tR1V4mq/ch25-xpg-1.webp' title='Growth'><br>",
+    "ch25_xpg_2": "<img src='https://i.ibb.co/m588t3GM/ch25-xpg-2.webp' title='Maturity'><br>",
+    "ch25_xps_adult": "<img src='https://i.ibb.co/93wTxG0K/ch25-xps-adult.webp' title='Adults Experience'><br>",
+    "ch25_xps_elder": "<img src='https://i.ibb.co/Tx98zxJF/ch25-xps-elder.webp' title='Elders Experience'><br>",
+    "ch25_xps_kid": "<img src='https://i.ibb.co/cSrr14c8/ch25-xps-kid.webp' title='Childhood Experience'><br>",
+    "b_ch25_aw1_shards": "<img src='https://i.ibb.co/SDF6z6G0/b-ch25-aw1-shards.webp' title='Rune Shard for Blossom Temple'><br>",
+    "b_ch25_aw2_shards": "<img src='https://i.ibb.co/ccN2T3qv/b-ch25-aw2-shards.webp' title='Rune Shard for Bastet Amun's Altar'><br>",
 }
 
 var xlImages = {
