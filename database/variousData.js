@@ -50,7 +50,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ch23_unicornblossoms", "ch23_dwarvenspirits", "ch23_fairyspirits", "ch23_orcspirits", "ch23_halflingspirits", "ch23_mithril", "ch23_queenhoney", "ch23_dragonteeth", "ch23_flowerwreaths",
     "ch24_servants", "ch24_warriors", "ch24_farmers", "ch24_workers", "ch24_motivation", "ch24_prophecies", "ch24_studies", "", "", "", "", ];
 
-var numberOfChapters = 24;
+var numberOfChapters = 25;
 
 var chapters = {
     1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',
