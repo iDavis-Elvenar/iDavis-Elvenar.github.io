@@ -294,7 +294,7 @@ let eventsDurations = {
     "theater_easter_xxvi_": 22,
     "shuffle_garden_xxvi_": 22,
     "tile_amuni_xxvi_": 20,
-    "scroll_aquatic_xxvi_": 22,
+    "scroll_aquatic_xxvi_": 21,
 }
 
 let evoUpgradeCosts = {
