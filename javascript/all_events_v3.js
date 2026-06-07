@@ -1512,7 +1512,7 @@ function increaseByAshenPhoenixes(value) {
 }
 
 function generateShareButtons(parent) {
-    if (quests[getSelectedEvent()] && quests[getSelectedEvent()].length > 0) {
+    if (quests[getSelectedEvent()] && quests[getSelectedEvent()].length > 0 && questsLinks[getSelectedEvent()]) {
         const button = document.createElement('button');
         button.type = 'button';
         button.classList.add('btn', 'btn-download', 'btn-sm');
