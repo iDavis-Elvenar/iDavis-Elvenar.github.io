@@ -9,7 +9,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ascendedelixir", "ascendedmagic_dust", "ascendedgems", "boosted_ascended_plus_0_quality_1", "boosted_ascended_plus_1_quality_1",
     "boosted_ascended_plus_2_quality_1", "boosted_ascended_plus_0_quality_2", "boosted_ascended_plus_1_quality_2",
     "boosted_ascended_plus_2_quality_2", "boosted_ascended_plus_0_quality_3", "boosted_ascended_plus_1_quality_3",
-    "boosted_ascended_plus_2_quality_3", "work", "canned_goods", "nox", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
+    "boosted_ascended_plus_2_quality_3", "work", "canned_goods", "nox", "finity_gear", "unit_1", "unit_2", "unit_3", "unit_4", "unit_5", "tg_lm", "tg_lr", "tg_ma", "tg_hm", "tg_hr",
     "mc_lm", "mc_lr", "mc_ma", "mc_hm", "mc_hr", "knowledge_points", "broken_shards",
     "relic_marble", "relic_steel", "relic_planks", "relic_crystal", "relic_scrolls", "relic_silk", "relic_elixir",
     "relic_magic_dust", "relic_gems", "boosted_relic_plus_0_quality_1", "boosted_relic_plus_1_quality_1", "boosted_relic_plus_2_quality_1",
@@ -48,7 +48,8 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "ch21_prey", "ch21_scales", "ch21_oblations3", "ch21_shells", "ch21_dragon", "ch21_oblations2", "ch21_art", "ch21_oblations1", "ch21_oblations4", 
     "ch22_seafood", "ch22_fish", "ch22_fruits", "ch22_salt", "ch22_shrimps", "ch22_snails", "ch22_weed", "ch22_eels", "ch22_sponges", 
     "ch23_unicornblossoms", "ch23_dwarvenspirits", "ch23_fairyspirits", "ch23_orcspirits", "ch23_halflingspirits", "ch23_mithril", "ch23_queenhoney", "ch23_dragonteeth", "ch23_flowerwreaths",
-    "ch24_servants", "ch24_warriors", "ch24_farmers", "ch24_workers", "ch24_motivation", "ch24_prophecies", "ch24_studies", "", "", "", "", ];
+    "ch24_servants", "ch24_warriors", "ch24_farmers", "ch24_workers", "ch24_motivation", "ch24_prophecies", "ch24_studies",
+    "ch25_xpg_1", "ch25_xpg_2", "ch25_xps_kid", "ch25_xps_adult", "ch25_xps_elder", "ch25_wisdom_kid", "ch25_wisdom_adult", "ch25_wisdom_elder", "ch25_wisdom_life"];
 
 var numberOfChapters = 25;
 

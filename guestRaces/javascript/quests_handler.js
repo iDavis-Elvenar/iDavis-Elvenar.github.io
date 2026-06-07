@@ -137,8 +137,24 @@ function displayQuests() {
                 task.style.paddingLeft = "10px";*/
 
                 let rewards = document.createElement('td');
-                rewards.id = "quest_reward_"+(quest);
-                rewards.innerHTML = `${grQuests[guestRace][quest-1]["rewards"].map(x => x.split(" ")[0].substring(0, x.split(" ")[0].length-1)+" "+goods_icons[x.split(" ")[1]]).join(" ").replaceAll("<br>", " ")}`;
+                rewards.id = "quest_reward_" + quest;
+                function parseReward(rewardStr) {
+                    let parts = rewardStr.split(" ");
+                    let amount = parts[0];
+                    let type = parts[1];
+                    if (type && type.startsWith("rsk_")) {
+                        return `${amount} <a href="https://idavis-elvenar.com/tomes.html#${type}" target="_blank">
+                                    <img src="https://i.ibb.co/5rzQfnT/rsk-misc.png" width="24" height="24" alt="${type}" style="vertical-align: middle;">
+                                </a>`;
+                    }
+                    let cleanAmount = amount.substring(0, amount.length - 1);
+                    let icon = goods_icons[type] || '';
+                    return `${cleanAmount} ${icon}`;
+                }
+                rewards.innerHTML = grQuests[guestRace][quest - 1]["rewards"]
+                    .map(parseReward)
+                    .join(" ")
+                    .replaceAll("<br>", " ");
                 let finished = document.createElement('td');
                 let div = document.createElement('div');
                 div.className = "form-check";

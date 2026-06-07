@@ -444,7 +444,7 @@ function realizeParent(key) {
         return "settlement";
     }
 
-    var discovered_resources = ["orcs", "mana", "seeds", "unurium", "work", "canned_goods"];
+    var discovered_resources = ["orcs", "mana", "seeds", "unurium", "work", "canned_goods", "nox", "finity_gear"];
     if (discovered_resources.includes(key)) {
         return "discovered";
     }
