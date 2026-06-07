@@ -42,15 +42,19 @@ var notifications = {
     },
     "5":{  // NEW CHAPTER
         "id":5,
-        "text":`<h4 class="alert-heading">Chapter 24 has arrived in Beta!</h4>
+        "text":`<h4 class="alert-heading">Chapter 25 is coming soon!</h4>
         <hr>
-        <p><center><img src="https://i.ibb.co/dXFG20P/ch24-banner.png" style="width: 40%;">
-        <br><br>You can visit the respective page of <a href="https://idavis-elvenar.com/guestRaces/fateofbastet.html" class='alert-link'>Chapter 24 - Fate of the Bastet</a> to see a lot of new content about this chapter!
-        <br>If the process goes as usual, we can expect this chapter to hit Live servers in the coming weeks!</center></p>`,
+        <p><center><img src="https://i.ibb.co/nMNxtSq8/ch25-banner.png" style="width: 40%;">
+        <br><br>Chapter 25 has arrived to Beta and is soon coming to Live servers! On <b>iDavis-Elvenar</b> and <b>Elvenar Tools</b> you can find everything you need to get prepared!<br><br>
+        You can visit the respective page of <a href="https://idavis-elvenar.com/guestRaces/purposeoflife.html" class='alert-link'>Chapter 25 - The Purpose of Life</a> to discover new mechanics, Quests, Settlement and first layouts for this chapter.<br>
+        At <a href="https://elvenar-tools.com/buildings/settlements?chapter=25" class='alert-link'>Elvenar Tools - Settlement Buildings</a> you can find the compact list of new Settlement Buildings.<br>
+        At <a href="https://elvenar-tools.com/buildings/ancient-wonders?chapter=25" class='alert-link'>Elvenar Tools - Ancient Wonders</a> you can preview the upcoming new Ancient Wonders.<br>
+        <a href="https://elvenar-tools.com/inventory-manager" class='alert-link'>Inventory Manager</a> is now updated too and supports calculations up to Chapter 25.<br><br>
+        <br>Keep an eye on both sites, as more content to help you prepare will be released soon! If the process goes as usual, we can expect this chapter to hit Live servers in the coming weeks!</center></p>`,
         "repeatAfter":172800,
         "style":"warning",
-        "duration":45,
-        "active":false,
+        "duration":120,
+        "active":true,
         "priority":30
     },
     "6":{  // DONATE
