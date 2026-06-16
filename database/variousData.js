@@ -962,6 +962,17 @@ var moreNavbarContent = [
             "style":    "width: 24px; margin-right: 6px; margin-bottom: 4px;",
         }
     },
+    // ELVENAR STATS
+    {
+        "className":    "dropdown-item text-dark", 
+        "href":         "https://elvenar-tools.com/stats", 
+        "id":           "navitem_elvenar_stats", 
+        "innerHTML":    `Elvenar Stats`,
+        "img":          {
+            "src":      "https://elvenar-tools.com/shared/world.webp",
+            "style":    "width: 24px; margin-right: 7px; margin-bottom: 4px;  margin-left: -1px;",
+        }
+    },
     // INVENTORY MANAGER
     {
         "className":    "dropdown-item text-dark", 
