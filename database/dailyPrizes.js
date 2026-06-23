@@ -15,7 +15,7 @@ var dailyPrizes = {
         "INS_RS_1",
         "INS_REV_SQD_100",
         "INS_RF_GRR_15",
-        "A_Evt_Community_GravityInn",
+        "A_Evt_Expiring_LightMelee_Boost",
         "INS_VOLATILE_SIGILS_{15}",
         "INS_PETFOOD_1{2}",
         "A_Evt_June_XX_Elven_Ship",
