@@ -186,6 +186,7 @@ var notifications = {
         </center>
         </p>
         <p>Visit <a href="https://elvenar-tools.com" class="alert-link" target="_blank">Elvenar Tools</a> to find all important details about Chapter 25!</p>
+        <p><i>Elvenar Tools is my newest website, designed to run alongside iDavis-Elvenar to provide you with even more in-depth information and tools for the game.</i></p>
         <p>iDavis</p>
         </h4></center>`,
         "repeatAfter":86400,
