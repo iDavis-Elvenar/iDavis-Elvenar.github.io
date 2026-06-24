@@ -168,26 +168,31 @@ var notifications = {
         "active":false,
         "priority":120
     },
-    "15":{  // SHORTS TEASER
+    "15":{  // NEW FEATURE ON THE WEBSITE #3
         "id":15,
-        "text":`<h4 class="alert-heading">Sshh the Season of Secrets is here!</h4>
-  <p>Learn all about the newest season on the <a href="https://idavis-elvenar.com/seasons.html" class="alert-link">Seasons</a> page.</p>
-  <hr>
-  <p class="mb-0"><iframe class="center" width="315" height="560"
-    src="https://www.youtube.com/embed/BMuyNcwpymE?feature=share"
-    title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-    gyroscope; picture-in-picture;
-    web-share"
-    allowfullscreen>
-  </iframe></p>
-    <hr>
-    <p><a href="https://www.youtube.com/channel/UCRzBOCps1xnc1h8xhNK2hzg?sub_confirmation=1 " class="alert-link">Visit my channel</a> to find more videos from Elvenar and happening around InnoGames!</p>`,
+        "text":`<h4 class="alert-heading">Chapter 25 releases on June 30th! <img src="https://i.ibb.co/nsLc56GW/finity-gear-icon.png" style="width: 40px;"></h4>
+        <hr>
+        Your time to prepare for the new chapter is here!
+        <center><img src="https://i.ibb.co/HD3n5V40/techtree-banner-era-25.png" style="height: 200px;">
+        <p>
+        <center>
+        Hi everyone,<br><br>
+        The newest Chapter 25 is just around the corner. Now is the time to roll up your sleeves and finalize your city layouts before you dive into every challenge this newest chapter has to offer!<br><br>
+        With the newest <a href="https://elvenar-tools.com/city-planner" class="alert-link" target="_blank">City Planner</a>, you can prepare layouts in advance.
+        Thanks to the Layout Manager on the left side, you can save them, rename them, and return to them whenever you are ready for them in-game.<br>
+        You can easily track how your building productions shift with every upgrade, ensure you have enough Armories prepared to forge Finity Gear, or simply experiment with the expiring settlement buildings.
+        Keep an eye on the right-hand panel to watch your production values change in real-time, allowing you to maximize your efficiency and optimize your space.
+        With the <a href="https://elvenar-tools.com/city-planner" class="alert-link" target="_blank">City Planner</a>, all your preparations can be handled with ease.
+        </center>
+        </p>
+        <p>Visit <a href="https://elvenar-tools.com" class="alert-link" target="_blank">Elvenar Tools</a> to find all important details about Chapter 25!</p>
+        <p>iDavis</p>
+        </h4></center>`,
         "repeatAfter":86400,
-        "style":"secondary",
-        "duration":60,
-        "active":false,
-        "priority":50
+        "style":"warning",
+        "duration":180,
+        "active":true,
+        "priority":150
     },
     "16":{  // NEW FEATURE ON THE WEBSITE #1
         "id":16,
