@@ -60,6 +60,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast": 6,
     "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": 9,
     "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon": 6,
+    "A_Evt_Evo_Merge_Kitchen_XXVI_Boarback_Cookwagon": 9,
 }
 
 function setAndReload(id) {
