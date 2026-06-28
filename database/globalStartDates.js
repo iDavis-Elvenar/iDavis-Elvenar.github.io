@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "scroll_aquatic_xxvi_": {
         "live": {
-            "start_date": "__ _ 2026",
-            "end_date": "__ _ 2026"
+            "start_date": "July 9th 2026",
+            "end_date": "July 30th 2026"
         },
         "beta": {
             "start_date": "May 29th 2026",
