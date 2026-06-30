@@ -70,6 +70,39 @@ function setAndReload(id) {
     readBuildingsJSON();
 }
 
+function getProductionEntry(productions, productionId) {
+    if (!productions) {
+        return null;
+    }
+    if (productions.hasOwnProperty(productionId)) {
+        return productions[productionId];
+    }
+
+    let normalizedProductionId = productionId.toLowerCase();
+    let matchingKey = Object.keys(productions).find(key => key.toLowerCase() === normalizedProductionId);
+    return matchingKey ? productions[matchingKey] : null;
+}
+
+function getProductionValue(productionEntry) {
+    if (productionEntry === null || productionEntry === undefined) {
+        return null;
+    }
+    return typeof productionEntry === 'object' ? productionEntry['value'] : productionEntry;
+}
+
+function formatProductionValue(productionEntry, productionId) {
+    let value = getProductionValue(productionEntry);
+    if (value === null || value === undefined) {
+        return '-';
+    }
+
+    if (productionId.toLowerCase().startsWith('ins_rf_') && value > 0 && value < 1) {
+        return '1';
+    }
+
+    return `${round(Number(value).toFixed(0))}`;
+}
+
 
 function readBuildingsJSON() {
     prepSetAlertElements();
@@ -316,19 +349,17 @@ function readBuildingsJSON() {
                                         filteredData[i]['all_productions'][prod][0] != 'provided_population') {
                                         //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
                                         for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
-                                            if (filteredData[i]['chapters'][chPom].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                                td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][filteredData[i]['all_productions'][prod][0]]['production_time'] / 60 / 60}h</b>`;
+                                            let timeEntry = getProductionEntry(filteredData[i]['chapters'][chPom], filteredData[i]['all_productions'][prod][0]);
+                                            if (timeEntry && timeEntry['production_time']) {
+                                                td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${timeEntry['production_time'] / 60 / 60}h</b>`;
                                                 break;
                                             }
                                         }
                                     }
                                 } else {
-                                    if (filteredData[i]['chapters'][ch].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                        if (typeof filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]] === 'object') {
-                                            td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]]['value'])}`;
-                                        } else {
-                                            td.innerHTML = `${round(filteredData[i]['chapters'][ch][filteredData[i]['all_productions'][prod][0]])}`;
-                                        }
+                                    let productionEntry = getProductionEntry(filteredData[i]['chapters'][ch], filteredData[i]['all_productions'][prod][0]);
+                                    if (productionEntry !== null) {
+                                        td.innerHTML = formatProductionValue(productionEntry, filteredData[i]['all_productions'][prod][0]);
                                     } else {
                                         td.innerHTML = `-`;
                                     }
@@ -449,8 +480,9 @@ function readBuildingsJSON() {
                         for (var prod = 0; prod < filteredData[i]['all_productions'].length; prod++) {
                             var tr = document.createElement('tr');
                             let existsInThisStage = false;
+                            let productionId = filteredData[i]['all_productions'][prod][0];
                             for (let chAttempt = 1; chAttempt < numberOfChapters+1; chAttempt++) {
-                                if (filteredData[i]['chapters'][chAttempt][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
+                                if (getProductionEntry(filteredData[i]['chapters'][chAttempt][displayStage], productionId)) {
                                     existsInThisStage = true;
                                     break;
                                 }
@@ -468,19 +500,17 @@ function readBuildingsJSON() {
                                             filteredData[i]['all_productions'][prod][0] != 'provided_population') {
                                             //tymto for cyklom hladam ten chapter, v ktorom je ta produkcia, ktorej cas chcem zistit
                                             for (var chPom = 1; chPom < numberOfChapters + 1; chPom++) {
-                                                if (filteredData[i]['chapters'][chPom][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                                    td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${filteredData[i]['chapters'][chPom][displayStage][filteredData[i]['all_productions'][prod][0]]['production_time'] / 60 / 60}h</b>`;
+                                                let timeEntry = getProductionEntry(filteredData[i]['chapters'][chPom][displayStage], productionId);
+                                                if (timeEntry && timeEntry['production_time']) {
+                                                    td.innerHTML += `${filteredData[i]['earlyPickupTime'] / 60 / 60}h / <b>${timeEntry['production_time'] / 60 / 60}h</b>`;
                                                     break;
                                                 }
                                             }
                                         }
                                     } else {
-                                        if (filteredData[i]['chapters'][ch][displayStage].hasOwnProperty(filteredData[i]['all_productions'][prod][0])) {
-                                            if (typeof filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]] === 'object') {
-                                                td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]['value']).toFixed(0))}`;
-                                            } else {
-                                                td.innerHTML = `${round((filteredData[i]['chapters'][ch][displayStage][filteredData[i]['all_productions'][prod][0]]).toFixed(0))}`;
-                                            }
+                                        let productionEntry = getProductionEntry(filteredData[i]['chapters'][ch][displayStage], productionId);
+                                        if (productionEntry !== null) {
+                                            td.innerHTML = formatProductionValue(productionEntry, productionId);
                                         } else {
                                             td.innerHTML = `-`;
                                         }

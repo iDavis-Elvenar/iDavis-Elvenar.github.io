@@ -131,8 +131,7 @@ function handleBuildingsJSON() {
                                         if (allBuildings[l].hasOwnProperty('production')) {
                                             for (var p2 = 0; p2 < prioritiesProduction.length; p2++) {
                                                 for (var product = 0; product < allBuildings[l]['production']['products'].length; product++) {
-                                                    if (allBuildings[l]['production']['products'][product]['revenue']['resources'].hasOwnProperty(prioritiesProduction[p2])
-                                                    || allBuildings[l]['production']['products'][product]['revenue']['resources'].hasOwnProperty(prioritiesProduction[p2].toLowerCase())) {
+                                                    if (findResourceKey(allBuildings[l]['production']['products'][product]['revenue']['resources'], prioritiesProduction[p2]) !== undefined) {
                                                         setOfAllProductions.add(prioritiesProduction[p2]);
                                                     }
                                                 }
@@ -184,11 +183,12 @@ function handleBuildingsJSON() {
                                                         t['value'] = allBuildings[k]['provisions']['resources']['resources'][baseNonProductions[allDifferentProductions[prod]]];
                                                         b['chapters'][currentLevelString][allDifferentProductions[prod]] = t;
                                                     }
-                                                } else if (prioritiesProduction.includes(allDifferentProductions[prod].toLowerCase())) {
+                                                } else if (isProductionPriority(allDifferentProductions[prod])) {
                                                     for (var o = 0; o < allBuildings[k]['production']['products'].length; o++) {
-                                                        if (allBuildings[k]['production']['products'][o]['revenue']['resources'].hasOwnProperty(allDifferentProductions[prod])) {
+                                                        let resourceKey = findResourceKey(allBuildings[k]['production']['products'][o]['revenue']['resources'], allDifferentProductions[prod]);
+                                                        if (resourceKey !== undefined) {
                                                             var c = {};
-                                                            c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod]];
+                                                            c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][resourceKey];
                                                             c['production_time'] = allBuildings[k]['production']['products'][o]['production_time'];
                                                             if (allBuildings[k]['production']['__class__'] === 'SwitchableProductionVO') {
                                                                 for (let allp2 = 0; allp2 < b['all_productions'].length; allp2++) {
@@ -236,20 +236,15 @@ function handleBuildingsJSON() {
                                                             b['chapters'][currentLevelString][stageString] = {};
                                                         }
                                                         b['chapters'][currentLevelString][stageString][allDifferentProductions[prod]] = t;
-                                                    } else if (prioritiesProduction.includes(allDifferentProductions[prod].toLowerCase())
-                                                    || prioritiesProduction.includes(allDifferentProductions[prod])) {
+                                                    } else if (isProductionPriority(allDifferentProductions[prod])) {
                                                         for (var o = 0; o < allBuildings[k]['production']['products'].length; o++) {
-                                                            if (allBuildings[k]['production']['products'][o]['revenue']['resources'].hasOwnProperty(allDifferentProductions[prod])
-                                                            || allBuildings[k]['production']['products'][o]['revenue']['resources'].hasOwnProperty(allDifferentProductions[prod].toLowerCase())) {
+                                                            let resourceKey = findResourceKey(allBuildings[k]['production']['products'][o]['revenue']['resources'], allDifferentProductions[prod]);
+                                                            if (resourceKey !== undefined) {
                                                                 var c = {};
                                                                 if (!b['chapters'][currentLevelString].hasOwnProperty(stageString)) {
                                                                     b['chapters'][currentLevelString][stageString] = {};
                                                                 }
-                                                                if (allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod]] !== undefined) {
-                                                                    c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod]];
-                                                                } else {
-                                                                    c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][allDifferentProductions[prod].toLowerCase()];
-                                                                }
+                                                                c['value'] = allBuildings[k]['production']['products'][o]['revenue']['resources'][resourceKey];
                                                                 if (evoObject['stages'][stage]['products'][o].hasOwnProperty('value')) {
                                                                     c['value'] = evoObject['stages'][stage]['products'][o]['value'];
                                                                     /*if (allBuildings[k]['id'].includes("A_Evt_Evo_Autumn_XIX_Bear_Ice")) {
@@ -347,10 +342,10 @@ function handleBuildingsJSON() {
                                         for (var st in b["chapters"][ch]) {
                                             let foundProductionTime = -1;
                                             for (var sprod in b["chapters"][ch][st]) {
-                                                if (prioritiesProduction.includes(sprod) &&
+                                                if (isProductionPriority(sprod) &&
                                                     b["chapters"][ch][st][sprod].hasOwnProperty("production_time")) {
                                                     foundProductionTime = b["chapters"][ch][st][sprod]["production_time"];
-                                                } else if (prioritiesProduction.includes(sprod) &&
+                                                } else if (isProductionPriority(sprod) &&
                                                     !b["chapters"][ch][st][sprod].hasOwnProperty("production_time") && foundProductionTime !== -1) {
                                                     b["chapters"][ch][st][sprod]["production_time"] = foundProductionTime;
                                                 }
@@ -460,6 +455,20 @@ function getByKey(object, key, default_value) {
     return (typeof result !== "undefined") ? result : default_value;
 }
 
+function isProductionPriority(productionId) {
+    let normalizedProductionId = productionId.toLowerCase();
+    return prioritiesProduction.some(priority => priority.toLowerCase() === normalizedProductionId);
+}
+
+function findResourceKey(resources, resourceId) {
+    if (resources.hasOwnProperty(resourceId)) {
+        return resourceId;
+    }
+
+    let normalizedResourceId = resourceId.toLowerCase();
+    return Object.keys(resources).find(key => key.toLowerCase() === normalizedResourceId);
+}
+
 function orderByPriorities(productions) {
     var result = new Array();
     for (var i = 0; i < prioritiesNonProduction.length; i++) {
@@ -471,8 +480,8 @@ function orderByPriorities(productions) {
     }
     for (var i = 0; i < prioritiesProduction.length; i++) {
         for (var j = 0; j < productions.length; j++) {
-            if (prioritiesProduction[i] === productions[j]) {
-                result.push(productions[j]);
+            if (prioritiesProduction[i].toLowerCase() === productions[j].toLowerCase()) {
+                result.push(prioritiesProduction[i]);
             }
         }
     }
