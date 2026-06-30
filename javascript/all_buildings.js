@@ -111,6 +111,39 @@ function getEffectDisplayValue(buildingId, value) {
     return value * 100;
 }
 
+function appendExpiringEffectConfigRow(tbody, building) {
+    if (!building.hasOwnProperty("expiring") ||
+        Object.keys(building["expiring"]["values"]).length < numberOfChapters ||
+        !Object.values(building["expiring"]["values"]).some(value => value !== 0)) {
+        return;
+    }
+
+    var trEffect = document.createElement('tr');
+    for (var ch = 0; ch < numberOfChapters + 1; ch++) {
+        var tdEffect = document.createElement('td');
+        if (ch === 0) {
+            if (building["expiring"].hasOwnProperty("description")) {
+                tdEffect.innerHTML = `<img src="${iconsImages[building["expiring"]["iconID"]]}" title="${building["expiring"]["description"].replaceAll("\"", "")}">`;
+            } else {
+                tdEffect.innerHTML = `<img src="${iconsImages[building["expiring"]["iconID"]]}" title="${iconsTitles[building["expiring"]["iconID"]]}">`;
+            }
+        } else {
+            if (building["expiring"].hasOwnProperty("format") &&
+            building["expiring"]["format"].toLowerCase().includes("percentage")) {
+                if (building["id"].includes("A_Evt_December_XXII_Cryo")) {
+                    tdEffect.innerHTML = `${building["expiring"]["values"][ch]*10}%`;
+                } else {
+                    tdEffect.innerHTML = `+${building["expiring"]["values"][ch]*100}%`;
+                }
+            } else {
+                tdEffect.innerHTML = `${building["expiring"]["values"][ch]}`;
+            }
+        }
+        trEffect.appendChild(tdEffect);
+    }
+    tbody.appendChild(trEffect);
+}
+
 
 function readBuildingsJSON() {
     prepSetAlertElements();
@@ -400,36 +433,9 @@ function readBuildingsJSON() {
                                 }
                                 t2body.appendChild(trPerSquare);
                             }
-                            //PRIDAJ EXPIRING EFFECT CONFIG VALUES (AK EXISTUJE)
-                            if (filteredData[i].hasOwnProperty("expiring") &&
-                                Object.keys(filteredData[i]["expiring"]["values"]).length >= numberOfChapters &&
-                                Object.values(filteredData[i]["expiring"]["values"]).some(value => value !== 0)) {
-                                var trEffect = document.createElement('tr');
-                                for (var ch = 0; ch < numberOfChapters + 1; ch++) {
-                                    var tdEffect = document.createElement('td');
-                                    if (ch === 0) {
-                                        if (filteredData[i]["expiring"].hasOwnProperty("description")) {
-                                            tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${filteredData[i]["expiring"]["description"].replaceAll("\"", "")}">`;
-                                        } else {
-                                            tdEffect.innerHTML = `<img src="${iconsImages[filteredData[i]["expiring"]["iconID"]]}" title="${iconsTitles[filteredData[i]["expiring"]["iconID"]]}">`;
-                                        }
-                                    } else {
-                                        if (filteredData[i]["expiring"].hasOwnProperty("format") &&
-                                        filteredData[i]["expiring"]["format"].toLowerCase().includes("percentage")) {
-                                            if (filteredData[i]["id"].includes("A_Evt_December_XXII_Cryo")) {  //pre zimne dekoracie chcem mat iba 10nasobok a bez znamienka +
-                                                tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]*10}%`;
-                                            } else {
-                                                tdEffect.innerHTML = `+${filteredData[i]["expiring"]["values"][ch]*100}%`;
-                                            }
-                                        } else {
-                                            tdEffect.innerHTML = `${filteredData[i]["expiring"]["values"][ch]}`;
-                                        }
-                                    }
-                                    trEffect.appendChild(tdEffect);
-                                }
-                                t2body.appendChild(trEffect);
-                            }
                         }
+                        //PRIDAJ EXPIRING EFFECT CONFIG VALUES (AK EXISTUJE)
+                        appendExpiringEffectConfigRow(t2body, filteredData[i]);
                         secondTable.appendChild(t2body);
                         //SETOVE PARAMETRE:
                         if (filteredData[i].hasOwnProperty('setBuilding')) {
