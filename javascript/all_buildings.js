@@ -103,6 +103,14 @@ function formatProductionValue(productionEntry, productionId) {
     return `${round(Number(value).toFixed(0))}`;
 }
 
+function getEffectDisplayValue(buildingId, value) {
+    if (effectsBaseValues.hasOwnProperty(buildingId)) {
+        return effectsBaseValues[buildingId] * value;
+    }
+
+    return value * 100;
+}
+
 
 function readBuildingsJSON() {
     prepSetAlertElements();
@@ -681,7 +689,7 @@ function readBuildingsJSON() {
                                     petTd.innerHTML = `${flexibleRewards.filter(elem => elem.id === petJSON["frogId"])[0]['rewards'][getPresetChapter()-1]['amount']*petJSON['valuesStages'][stg]}
                                     ${goods_icons[flexibleRewards.filter(elem => elem.id === petJSON["frogId"])[0]['rewards'][getPresetChapter()-1]['subType']]}`;
                                 } else {
-                                    petTd.innerHTML = `${(petJSON['valuesStages'][stg]*100).toFixed(1)}%`;
+                                    petTd.innerHTML = `${getEffectDisplayValue(filteredData[i]['id'], petJSON['valuesStages'][stg]).toFixed(1)}%`;
                                 }
                             } else {
                                 if (petJSON.hasOwnProperty("frogId")) {

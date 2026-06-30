@@ -456,6 +456,10 @@ var allowedFeedingMultiplicators = {
     "completedProvinces":"completed provinces",
 }
 
+var effectsBaseValues = {
+    "A_Evt_Evo_Easter_XIX_Phoenix_Blue": 50,
+}
+
 var iconsImages = {
     "damage_boost":"https://i.ibb.co/3TG2xv7/unit-attack-enhance.png",
     "event_currency_1":"https://i.ibb.co/cYv1Scg/EL-akcia-ve-k-noc-2019-event-currency.png",
