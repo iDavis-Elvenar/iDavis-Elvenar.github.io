@@ -1,4 +1,14 @@
 var eventStartDates = { 
+    "merge_kitchen_xxvi_": {
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "July 1st 2026",
+            "end_date": "July 22nd 2026"
+        }
+    },
     "scroll_aquatic_xxvi_": {
         "live": {
             "start_date": "July 9th 2026",
@@ -565,6 +575,16 @@ var faStartDates = { //
 }
 
 var seasonStartDates = {  //
+    "july_xxvi_": {
+        "live": {
+            "start_date": "July 1st 2026",
+            "end_date": "September 14th 2026"
+        },
+        "beta": {
+            "start_date": "May 15th 2026",
+            "end_date": "July 29th 2026"
+        }
+    },
     "april_xxvi_": {
         "live": {
             "start_date": "April 9th 2026",

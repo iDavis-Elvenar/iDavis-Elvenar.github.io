@@ -1512,7 +1512,8 @@ function increaseByAshenPhoenixes(value) {
 }
 
 function generateShareButtons(parent) {
-    if (quests[getSelectedEvent()] && quests[getSelectedEvent()].length > 0 && questsLinks[getSelectedEvent()]) {
+    if (quests[getSelectedEvent()] && quests[getSelectedEvent()].length > 0 &&
+        (!eventBetaStarts[getSelectedEvent()] || new Date(eventBetaStarts[getSelectedEvent()]) < new Date("07/01/2026"))) {
         const button = document.createElement('button');
         button.type = 'button';
         button.classList.add('btn', 'btn-download', 'btn-sm');
@@ -2254,6 +2255,13 @@ function createPrizeCell(prize, cell) {
         let rfName = `Coin Rain ${prize.subType.split('_')[prize.subType.split('_').length-1]}%`;
         let rfImg = document.createElement('img');
         rfImg.src = "https://i.ibb.co/7g1KCmv/ins-rf-cn.png";
+        rfImg.style.maxWidth = "60px";
+        cell.appendChild(rfImg);
+        cell.innerHTML += `<br>${prize.amount}x ${rfName}`;
+    } else if (prize.type === 'item' && prize.subType.toLowerCase().includes('ins_rf_grr_')) {
+        let rfName = `Portal Profit ${prize.subType.split('_')[prize.subType.split('_').length-1]}%`;
+        let rfImg = document.createElement('img');
+        rfImg.src = "https://i.ibb.co/CKp7gHR3/ins-rf-grr-xl.png";
         rfImg.style.maxWidth = "60px";
         cell.appendChild(rfImg);
         cell.innerHTML += `<br>${prize.amount}x ${rfName}`;

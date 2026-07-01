@@ -120,7 +120,8 @@ let eventBanners = {
     "theater_easter_xxvi_": "https://i.ibb.co/m5708rhy/EL-akcia-ve-k-noc-2026-banner.png",
     "shuffle_garden_xxvi_": "https://i.ibb.co/HpG8N1kV/EL-akcia-m-j-2026-banner.png",
     "tile_amuni_xxvi_": "https://i.ibb.co/XrpjyrQ3/EL-akcia-m-j-2026-banner.png",
-    "scroll_aquatic_xxvi_": "https://i.ibb.co/8nJj3W7g/EL-akcia-j-l-2026-banner.webp",
+    "scroll_aquatic_xxvi_": "https://i.ibb.co/7NGmj79c/EL-akcia-j-l-2026-banner.png",
+    "merge_kitchen_xxvi_": "https://i.ibb.co/1YMn2xyD/EL-akcia-august-2026-banner.png",
 }
 
 let eventVideos = {
@@ -200,6 +201,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "shuffle_garden_xxvi_": "03/31/2026",
     "tile_amuni_xxvi_": "05/07/2026",
     "scroll_aquatic_xxvi_": "05/29/2026",
+    "merge_kitchen_xxvi_": "07/01/2026",
 }
 
 let questsLinks = {
@@ -248,6 +250,7 @@ let questsLinks = {
     "shuffle_garden_xxvi_": "bit.ly/TheLivingChorus2026",
     "tile_amuni_xxvi_": "bit.ly/TheSummoningOfZeraphis2026",
     "scroll_aquatic_xxvi_": "bit.ly/BubblebeatAquatica2026",
+    "merge_kitchen_xxvi_": "bit.ly/FeastOnWheels2026",
 }
 
 let eventsDurations = {
@@ -296,6 +299,7 @@ let eventsDurations = {
     "shuffle_garden_xxvi_": 22,
     "tile_amuni_xxvi_": 20,
     "scroll_aquatic_xxvi_": 21,
+    "merge_kitchen_xxvi_": 21, // vzdy o 1 menej ako pocet daily prizes
 }
 
 let evoUpgradeCosts = {
@@ -358,6 +362,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast": "ins_evo_scroll_sorcerers_xxvi",
     "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": "ins_evo_theater_easter_xxvi",
     "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon": "ins_evo_scroll_aquatic_xxvi",
+    "A_Evt_Evo_Merge_Kitchen_XXVI_Boarback_Cookwagon": "ins_evo_merge_kitchen_xxvi",
 }
 
 var artifacts = {
@@ -415,6 +420,7 @@ var artifacts = {
     "ins_evo_scroll_sorcerers_xxvi": {"name": "Endless Feast Artifact", "img": "https://i.ibb.co/TBKg492M/ins-evo-scroll-sorcerers-xxvi.png"},
     "ins_evo_theater_easter_xxvi": {"name": "Cosmic Phoenix Artifact", "img": "https://i.ibb.co/7twzhCXn/ins-evo-theater-easter-xxvi.png"},
     "ins_evo_scroll_aquatic_xxvi": {"name": "Bubblebeat Galleon", "img": "https://i.ibb.co/d4g26knz/ins-evo-scroll-aquatic-xxvi.png"},
+    "ins_evo_merge_kitchen_xxvi": {"name": "Boarback Cookwagon", "img": "https://i.ibb.co/jvVHcPFT/ins-evo-merge-kitchen-xxvi.png"},
 }
 
 let guardianUpgradeCosts = {
@@ -537,6 +543,7 @@ var setNames = {
     "shuffle_garden_xxv": "Floating Garden",
     "seasons_xxv": "Canopy of Seasons",
     "shuffle_garden_xxvi": "Boughsong Terraces",
+    "seasons_xxvi": "Azure Rhapsody Court",
 }
 
 var discardBuildings = [
@@ -587,6 +594,7 @@ var eventsInfoIcons = {
     "shuffle_garden_xxvi_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "tile_amuni_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_aquatic_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "merge_kitchen_xxvi_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -617,6 +625,7 @@ var eventsPaybackIcons = {
     "shuffle_garden_xxvi_": "https://i.ibb.co/wN3QL26L/event-payback.png",
     "tile_amuni_xxvi_": "https://i.ibb.co/4nPVJV6V/event-payback.png",
     "scroll_aquatic_xxvi_": "https://i.ibb.co/vQgG13g/scroll-aquatic-xxiv-payback.png",
+    "merge_kitchen_xxvi_": "https://i.ibb.co/d0w16xRD/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -671,6 +680,9 @@ var eventsAvatars = {
     "portraitEvtTileAmuniXxviM1": "https://i.ibb.co/zWHNSnZV/portrait-evt-tile-amuni-xxvi-m1.png",
     "portraitEvtScrollAquaticXxviC1": "https://i.ibb.co/FbYzbKqv/portrait-evt-scroll-aquatic-xxvi-c1.png",
     "portraitEvtScrollAquaticXxviM1": "https://i.ibb.co/nN9tPtYL/portrait-evt-scroll-aquatic-xxvi-m1.png",
+    "portraitEvtMergeKitchenXxviF1": "https://i.ibb.co/c5TS3sf/portrait-evt-merge-kitchen-xxvi-f1.png",
+    "portraitEvtMergeKitchenXxviM1": "https://i.ibb.co/fGzXWKzv/portrait-evt-merge-kitchen-xxvi-m1.png",
+    "portraitSeasonJoyXxviC1": "https://i.ibb.co/5W6g2d3Z/portrait-season-joy-xxvi-c1.png",
 }
 
 var leaguesBanners = {
@@ -690,6 +702,11 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "merge_kitchen_xxvi_": [
+        {"id":"kitchen", "name":"Kitchen", "img":"https://i.ibb.co/YfB76Sx/kitchen.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#kitchen", "file":"kitchen.html", "releaseDate":"02/02/2025"},
+        {"id":"offers", "name":"Offers", "img":"https://i.ibb.co/9WV3mdS/offers.png", "img_width":"28", "img_style":"margin-left: 1px; margin-right: 8px; position: relative;", "href":"#offers", "file":"offers.html", "releaseDate":"02/02/2025"},
+        {"id":"dishes", "name":"Dishes", "img":"https://i.ibb.co/8bDBzxp/dishes.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#dishes", "file":"dishes.html", "releaseDate":"02/02/2025"},
+    ],
     "scroll_aquatic_xxvi_": [
         {"id":"hoops", "name":"Hoops", "img":"https://i.ibb.co/bzfprNK/EL-scroll-aquatic-truhla-6.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#hoops", "file":"hoops.html"},
     ],

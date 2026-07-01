@@ -1,5 +1,30 @@
 var dailyPrizes = {
 
+    "merge_kitchen_xxvi_": [
+        "A_Evt_Merge_Kitchen_XXVI_Burrow_Ketch_Market",
+        "A_Evt_Scroll_Sorcerers_XXVI_Smash_Kitchen",
+        "rsk_goods_discovered_large_{1}",
+        "INS_RF_CN_100",
+        "INS_UNIT_MC_LM_10",
+        "A_Evt_Car_XX_Halfling_Wagon",
+        "INS_KP_AW_30",
+        "INS_KP_{15}",
+        "INS_REV_SQD_75",
+        "A_Evt_Merge_Kitchen_XXV_Cooking_Fest_Gate",
+        "A_Evt_Scroll_Sorcerers_XXVI_Good_Boys_Banquet",
+        "INS_RS_1{2}",
+        "INS_PETFOOD_1{2}",
+        "INS_KP_AW_30",
+        "INS_UNIT_MA_10",
+        "INS_TR_AMT_300{2}",
+        "A_Evt_Merge_Kitchen_XXV_Food_Truck_Fest",
+        "INS_KP_{15}",
+        "A_Evt_Winter_Xviii_Candy_Hut",
+        "INS_UNIT_TG_LM_10",
+        "A_Evt_Merge_Kitchen_XXV_Eating_Contest",
+        "INS_TR_AMT_480{2}",
+    ],
+
     "scroll_aquatic_xxvi_": [
         "A_Evt_Exp_Scroll_Aquatic_XXVI_Bubble_Bumper_Pier",
         "A_Evt_Expiring_LightRanged_Boost",

@@ -111,6 +111,15 @@ function getEffectDisplayValue(buildingId, value) {
     return value * 100;
 }
 
+function getGoodsIcon(resourceId) {
+    if (goods_icons.hasOwnProperty(resourceId)) {
+        return goods_icons[resourceId];
+    }
+
+    let matchingKey = Object.keys(goods_icons).find(key => key.toLowerCase() === resourceId.toLowerCase());
+    return matchingKey ? goods_icons[matchingKey] : resourceId;
+}
+
 function appendExpiringEffectConfigRow(tbody, building) {
     if (!building.hasOwnProperty("expiring") ||
         Object.keys(building["expiring"]["values"]).length < numberOfChapters ||
@@ -479,7 +488,7 @@ function readBuildingsJSON() {
                                                     tdSet.innerHTML = `${bonuses[setLine][chToPrint - 1][1].toFixed(0)}`;
                                                     chToPrint++;
                                                 } else {
-                                                    tdSet.innerHTML = `${goods_icons[bonuses[setLine][chToPrint - 1][0]]}`;
+                                                    tdSet.innerHTML = `${getGoodsIcon(bonuses[setLine][chToPrint - 1][0])}`;
                                                     idxFlag++;
                                                 }
                                             }
@@ -620,7 +629,7 @@ function readBuildingsJSON() {
                                                     chToPrint++;
                                                 } else {
                                                     let tdSet = document.createElement('td');
-                                                    tdSet.innerHTML = goods_icons[bonuses[setLine][chToPrint][adjBon][0]];
+                                                    tdSet.innerHTML = getGoodsIcon(bonuses[setLine][chToPrint][adjBon][0]);
                                                     if (bonuses[0][1].length > 1 && adjBon === bonuses[0][1].length - 1 && setLine !== bonuses.length - 1) {
                                                         tdSet.style.borderBottomWidth = "2px";
                                                     }

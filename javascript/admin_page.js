@@ -361,15 +361,13 @@ function handleBuildingsJSON() {
                                     }
                                 }
                                 //PRIDAJ TRANSCENDENCE AK EXISTUJE
-                                if (isEvo) {
-                                    for (let effect = 0; effect < effectConfigs.length; effect++) {
-                                        if (effectConfigs[effect]["buildingID"] === b["id"] &&
-                                        effectConfigs[effect]["typeEffectConfig"] === "expiring") {
-                                            if (!b.hasOwnProperty('transcendence')) {
-                                                b['transcendence'] = [];
-                                            }
-                                            b['transcendence'].push(effectConfigs[effect]);
+                                for (let effect = 0; effect < effectConfigs.length; effect++) {
+                                    if (effectConfigs[effect]["buildingID"] === b["id"] &&
+                                    effectConfigs[effect]["typeEffectConfig"] === "expiring") {
+                                        if (!b.hasOwnProperty('transcendence')) {
+                                            b['transcendence'] = [];
                                         }
+                                        b['transcendence'].push(effectConfigs[effect]);
                                     }
                                 }
                                 //PRIDAJ EXPIRING AK EXISTUJE

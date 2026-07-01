@@ -1,4 +1,11 @@
 var images_buildings = {
+    "A_Evt_Set_Seasons_XXVI_Azurefall_Backdrop":"https://i.ibb.co/xqJMKC7J/azurefall-backdrop.png",
+    "A_Evt_Set_Seasons_XXVI_Bluewater_Serenade":"https://i.ibb.co/XxNJ48Q4/bluewater-serenade.png",
+    "A_Evt_Set_Seasons_XXVI_Harp_Alcove":"https://i.ibb.co/GQzWzsVq/harp-alcove.png",
+    "A_Evt_Set_Seasons_XXVI_Prima_Stage":"https://i.ibb.co/r2BRZHmG/prima-stage.png",
+    "A_Evt_Evo_Merge_Kitchen_XXVI_Boarback_Cookwagon":"https://i.ibb.co/RkF3hgTt/boarback-cookwagon.png",
+    "A_Evt_Merge_Kitchen_XXVI_Burrow_Ketch_Market":"https://i.ibb.co/LDTP4mZn/burrow-ketch-market.png",
+    "A_Evt_Merge_Kitchen_XXVI_Fizzy_Tap_Kiosk":"https://i.ibb.co/DDzNnGbd/fizzy-tap-kiosk.png",
     "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon":"https://i.ibb.co/1f4cS42D/bubblebeat-galleon.png",
     "A_Evt_Exp_Scroll_Aquatic_XXVI_Bubble_Bumper_Pier":"https://i.ibb.co/XffwB8yR/tidepool-dive-school.png",
     "A_Evt_Scroll_Aquatic_XXVI_Tidepool_Dive_School":"https://i.ibb.co/tp7wH1QD/bubble-bumper-pier.png",
