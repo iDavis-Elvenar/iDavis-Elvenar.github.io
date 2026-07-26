@@ -54,7 +54,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":120,
-        "active":true,
+        "active":false,
         "priority":30
     },
     "6":{  // DONATE
@@ -170,28 +170,31 @@ var notifications = {
     },
     "15":{  // NEW FEATURE ON THE WEBSITE #3
         "id":15,
-        "text":`<h4 class="alert-heading">Chapter 25 releases on June 30th! <img src="https://i.ibb.co/nsLc56GW/finity-gear-icon.png" style="width: 40px;"></h4>
+        "text":`<h4 class="alert-heading">Introducing: Elvenar Stats! <img src="https://elvenar-tools.com/shared/world.webp" style="width: 40px;"></h4>
         <hr>
-        Your time to prepare for the new chapter is here!
-        <center><img src="https://i.ibb.co/HD3n5V40/techtree-banner-era-25.png" style="height: 200px;">
+        <p>Hello everyone!</p>
         <p>
-        <center>
-        Hi everyone,<br><br>
-        The newest Chapter 25 is just around the corner. Now is the time to roll up your sleeves and finalize your city layouts before you dive into every challenge this newest chapter has to offer!<br><br>
-        With the newest <a href="https://elvenar-tools.com/city-planner" class="alert-link" target="_blank">City Planner</a>, you can prepare layouts in advance.
-        Thanks to the Layout Manager on the left side, you can save them, rename them, and return to them whenever you are ready for them in-game.<br>
-        You can easily track how your building productions shift with every upgrade, ensure you have enough Armories prepared to forge Finity Gear, or simply experiment with the expiring settlement buildings.
-        Keep an eye on the right-hand panel to watch your production values change in real-time, allowing you to maximize your efficiency and optimize your space.
-        With the <a href="https://elvenar-tools.com/city-planner" class="alert-link" target="_blank">City Planner</a>, all your preparations can be handled with ease.
-        </center>
+        I would like to introduce the newest addition to Elvenar Tools: <a href="https://elvenar-tools.com/stats " class="alert-link" target="_blank" >Elvenar Stats</a>!
         </p>
-        <p>Visit <a href="https://elvenar-tools.com" class="alert-link" target="_blank">Elvenar Tools</a> to find all important details about Chapter 25!</p>
-        <p><i>Elvenar Tools is my newest website, designed to run alongside iDavis-Elvenar to provide you with even more in-depth information and tools for the game.</i></p>
+        <p>
+        Elvenar Stats tracks all players in Elvenar, allowing you to search for players and fellowships, compare weekly tournament rankings, analyze a unique global top 100, and explore many more statistics collected from all Elvenar servers worldwide.
+        </p>
+        <p>
+        Everything on Elvenar Stats connects directly with the City Planner, letting you visit other players' cities with a single click. If you are a fellowship leader, you can also take advantage of various tools and statistics designed to help
+        you track member activity much more easily.
+        </p>
+        <p>
+        As you may know, currently available resources like Elvenstats are not always reliable - many recent weeks are missing, and the infrastructure is no longer updated to support the newest chapters, ancient wonders, or player portraits.
+        Many of you have asked whether I could build a feature like this within my projects. Although I was skeptical at first, I am thrilled to finally present it to you.
+        As with everything I create, my goal for Elvenar Stats is to keep the data reliable, up to date, and useful in the long term.
+        </p>
+        <p>I hope this new addition - and having all these important resources under one roof - helps you and your gameplay moving forward.</p>
+        <p>Visit <a href="https://elvenar-tools.com/stats " class="alert-link" target="_blank" >Elvenar Tools - Stats</a> to explore all the new features.</p>
         <p>iDavis</p>
         </h4></center>`,
-        "repeatAfter":86400,
+        "repeatAfter":172800,
         "style":"warning",
-        "duration":180,
+        "duration":120,
         "active":true,
         "priority":150
     },
@@ -213,8 +216,8 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":70,
-        "active":true,
-        "priority":150
+        "active":false,
+        "priority":120
     },
     "17":{  // EVENT
         "id":17,

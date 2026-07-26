@@ -372,6 +372,16 @@ var eventStartDates = {
 }
 
 var faStartDates = { //
+    "september_xxvi_": {
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "July 24th 2026",
+            "end_date": "July 30th 2026"
+        }
+    },
     "may_xxvi_": {
         "live": {
             "start_date": "June 24th 2026",
