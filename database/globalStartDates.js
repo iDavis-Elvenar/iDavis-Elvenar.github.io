@@ -1,8 +1,8 @@
 var eventStartDates = { 
     "merge_kitchen_xxvi_": {
         "live": {
-            "start_date": "__ _ 2026",
-            "end_date": "__ _ 2026"
+            "start_date": "August 7th 2026",
+            "end_date": "August 28th 2026"
         },
         "beta": {
             "start_date": "July 1st 2026",
