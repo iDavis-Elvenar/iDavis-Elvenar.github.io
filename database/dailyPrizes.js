@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "theater_zodiac_xxvi_": [
+        "A_Evt_Exp_Theater_Zodiac_XXVI_Inktrail_Banner_Rack",
+        "A_Evt_Theater_Zodiac_XXV_Cosmic_Timekeeper",
+        "INS_TR_AMT_840",
+        "INS_KP_{20}",
+        "frog_portal_enchantment_{1}",
+        "INS_UNIT_LR_10",
+        "A_Evt_Expiring_HeavyRanged_Boost",
+        "INS_RF_SPL_100{2}",
+        "INS_TR_AMT_300{3}",
+        "frog_runeshardspremium2_{1}",
+        "INS_PETFOOD_1{2}",
+        "frog_grr_25_{1}",
+        "INS_REV_SQD_75{2}",
+        "frog_unurium_DP_{15}",
+        "A_Evt_Expiring_LightMelee_Boost",
+        "INS_TR_AMT_300{2}",
+        "INS_KP_AW_20{2}",
+        "INS_RS_1",
+        "INS_KP_AW_10{3}",
+        "INS_REV_SQD_100{2}",
+        "INS_KP_{20}",
+    ],
+
     "merge_kitchen_xxvi_": [
         "A_Evt_Merge_Kitchen_XXVI_Burrow_Ketch_Market",
         "A_Evt_Scroll_Sorcerers_XXVI_Smash_Kitchen",

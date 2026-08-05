@@ -1,4 +1,14 @@
 var eventStartDates = { 
+    "theater_zodiac_xxvi_": {
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "August 6th 2026",
+            "end_date": "August 26th 2026"
+        }
+    },
     "merge_kitchen_xxvi_": {
         "live": {
             "start_date": "August 7th 2026",

@@ -1511,9 +1511,27 @@ function increaseByAshenPhoenixes(value) {
     return value + Math.ceil(value / 100 * 2 * getNumberOfAshenPhoenixes());
 }
 
+function shouldShowQuestDownloadButton(selectedEvent) {
+    if (!eventStartDates.hasOwnProperty(selectedEvent) ||
+        !eventStartDates[selectedEvent].hasOwnProperty("live") ||
+        !eventStartDates[selectedEvent]["live"].hasOwnProperty("start_date") ||
+        eventStartDates[selectedEvent]["live"]["start_date"].includes("_")) {
+        return false;
+    }
+
+    let liveStartDate = new Date(convertDisplayDateToJavascriptFormatDate(eventStartDates[selectedEvent]["live"]["start_date"]));
+    let today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    let twoDaysBeforeLiveStart = new Date(liveStartDate);
+    twoDaysBeforeLiveStart.setDate(twoDaysBeforeLiveStart.getDate() - 2);
+
+    return today >= twoDaysBeforeLiveStart;
+}
+
 function generateShareButtons(parent) {
     if (quests[getSelectedEvent()] && quests[getSelectedEvent()].length > 0 &&
-        (!eventBetaStarts[getSelectedEvent()] || new Date(eventBetaStarts[getSelectedEvent()]) < new Date("07/01/2026"))) {
+        shouldShowQuestDownloadButton(getSelectedEvent())) {
         const button = document.createElement('button');
         button.type = 'button';
         button.classList.add('btn', 'btn-download', 'btn-sm');

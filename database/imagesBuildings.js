@@ -1,4 +1,7 @@
 var images_buildings = {
+    "A_Evt_Evo_Theater_Zodiac_XXVI_Veloria_The_Painted_Starwing":"https://i.ibb.co/Q39pJb7q/veloria-the-painted-starwing.png",
+    "A_Evt_Exp_Theater_Zodiac_XXVI_Inktrail_Banner_Rack":"https://i.ibb.co/dw04CRR7/inktrail-banner-rack.png",
+    "A_Evt_Theater_Zodiac_XXVI_Stardust_Ink_Basin":"https://i.ibb.co/6010kK78/stardust-ink-basin.png",
     "A_Evt_Set_Seasons_XXVI_Azurefall_Backdrop":"https://i.ibb.co/xqJMKC7J/azurefall-backdrop.png",
     "A_Evt_Set_Seasons_XXVI_Bluewater_Serenade":"https://i.ibb.co/XxNJ48Q4/bluewater-serenade.png",
     "A_Evt_Set_Seasons_XXVI_Harp_Alcove":"https://i.ibb.co/GQzWzsVq/harp-alcove.png",

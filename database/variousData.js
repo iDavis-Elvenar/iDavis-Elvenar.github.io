@@ -122,6 +122,7 @@ let eventBanners = {
     "tile_amuni_xxvi_": "https://i.ibb.co/XrpjyrQ3/EL-akcia-m-j-2026-banner.png",
     "scroll_aquatic_xxvi_": "https://i.ibb.co/7NGmj79c/EL-akcia-j-l-2026-banner.png",
     "merge_kitchen_xxvi_": "https://i.ibb.co/1YMn2xyD/EL-akcia-august-2026-banner.png",
+    "theater_zodiac_xxvi_": "https://i.ibb.co/v47tqQdf/EL-akcia-jese-2026-banner.png",
 }
 
 let eventVideos = {
@@ -202,6 +203,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "tile_amuni_xxvi_": "05/07/2026",
     "scroll_aquatic_xxvi_": "05/29/2026",
     "merge_kitchen_xxvi_": "07/01/2026",
+    "theater_zodiac_xxvi_": "08/06/2026",
 }
 
 let questsLinks = {
@@ -251,6 +253,7 @@ let questsLinks = {
     "tile_amuni_xxvi_": "bit.ly/TheSummoningOfZeraphis2026",
     "scroll_aquatic_xxvi_": "bit.ly/BubblebeatAquatica2026",
     "merge_kitchen_xxvi_": "bit.ly/FeastOnWheels2026",
+    "theater_zodiac_xxvi_": "bit.ly/VeloriasPaintedWings2026",
 }
 
 let eventsDurations = {
@@ -300,6 +303,7 @@ let eventsDurations = {
     "tile_amuni_xxvi_": 20,
     "scroll_aquatic_xxvi_": 21,
     "merge_kitchen_xxvi_": 21, // vzdy o 1 menej ako pocet daily prizes
+    "theater_zodiac_xxvi_": 20,
 }
 
 let evoUpgradeCosts = {
@@ -363,6 +367,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": "ins_evo_theater_easter_xxvi",
     "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon": "ins_evo_scroll_aquatic_xxvi",
     "A_Evt_Evo_Merge_Kitchen_XXVI_Boarback_Cookwagon": "ins_evo_merge_kitchen_xxvi",
+    "A_Evt_Evo_Theater_Zodiac_XXVI_Veloria_The_Painted_Starwing": "ins_evo_theater_zodiac_xxvi",
 }
 
 var artifacts = {
@@ -419,8 +424,9 @@ var artifacts = {
     "ins_evo_shuffle_postal_xxv": {"name": "Winter's True Heart Artifact", "img": "https://i.ibb.co/KjfByThS/ins-evo-shuffle-postal-xxv.png"},
     "ins_evo_scroll_sorcerers_xxvi": {"name": "Endless Feast Artifact", "img": "https://i.ibb.co/TBKg492M/ins-evo-scroll-sorcerers-xxvi.png"},
     "ins_evo_theater_easter_xxvi": {"name": "Cosmic Phoenix Artifact", "img": "https://i.ibb.co/7twzhCXn/ins-evo-theater-easter-xxvi.png"},
-    "ins_evo_scroll_aquatic_xxvi": {"name": "Bubblebeat Galleon", "img": "https://i.ibb.co/d4g26knz/ins-evo-scroll-aquatic-xxvi.png"},
-    "ins_evo_merge_kitchen_xxvi": {"name": "Boarback Cookwagon", "img": "https://i.ibb.co/jvVHcPFT/ins-evo-merge-kitchen-xxvi.png"},
+    "ins_evo_scroll_aquatic_xxvi": {"name": "Bubblebeat Galleon Artifact", "img": "https://i.ibb.co/d4g26knz/ins-evo-scroll-aquatic-xxvi.png"},
+    "ins_evo_merge_kitchen_xxvi": {"name": "Boarback Cookwagon Artifact", "img": "https://i.ibb.co/jvVHcPFT/ins-evo-merge-kitchen-xxvi.png"},
+    "ins_evo_theater_zodiac_xxvi": {"name": "Veloria, The Painted Starwing Artifact", "img": "https://i.ibb.co/1Jrqj1DH/ins-evo-theater-zodiac-xxvi.png"},
 }
 
 let guardianUpgradeCosts = {
@@ -456,6 +462,7 @@ var feedingEffectsDescriptions = {
     "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": `<img src="https://i.ibb.co/bgJmdntT/tournament-points-boost.png">`,
     "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail": `<img src="https://i.ibb.co/k2sSFCMp/training-speed-boost.png">`,
     "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": `<img src="https://i.ibb.co/JWNmQGbq/b-neutral-aw-shards.png">`,
+    "A_Evt_Evo_Theater_Zodiac_XXVI_Veloria_The_Painted_Starwing": `<img src="https://i.ibb.co/7F3j8R2/time-reduction.png">`,
 }
 
 var allowedFeedingMultiplicators = {
@@ -595,6 +602,7 @@ var eventsInfoIcons = {
     "tile_amuni_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
     "scroll_aquatic_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "merge_kitchen_xxvi_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
+    "theater_zodiac_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -626,6 +634,7 @@ var eventsPaybackIcons = {
     "tile_amuni_xxvi_": "https://i.ibb.co/4nPVJV6V/event-payback.png",
     "scroll_aquatic_xxvi_": "https://i.ibb.co/vQgG13g/scroll-aquatic-xxiv-payback.png",
     "merge_kitchen_xxvi_": "https://i.ibb.co/d0w16xRD/event-payback.png",
+    "theater_zodiac_xxvi_": "https://i.ibb.co/YWgvz91/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -683,6 +692,8 @@ var eventsAvatars = {
     "portraitEvtMergeKitchenXxviF1": "https://i.ibb.co/c5TS3sf/portrait-evt-merge-kitchen-xxvi-f1.png",
     "portraitEvtMergeKitchenXxviM1": "https://i.ibb.co/fGzXWKzv/portrait-evt-merge-kitchen-xxvi-m1.png",
     "portraitSeasonJoyXxviC1": "https://i.ibb.co/5W6g2d3Z/portrait-season-joy-xxvi-c1.png",
+    "portraitEvtTheaterZodiacXxviF1": "https://i.ibb.co/gZ4QScFq/portrait-evt-theater-zodiac-xxvi-f1.png",
+    "portraitEvtTheaterZodiacXxviM1": "https://i.ibb.co/nMBtqPVx/portrait-evt-theater-zodiac-xxvi-m1.png",
 }
 
 var leaguesBanners = {
@@ -702,6 +713,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "theater_zodiac_xxvi_": [
+        {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html"},
+    ],
     "merge_kitchen_xxvi_": [
         {"id":"kitchen", "name":"Kitchen", "img":"https://i.ibb.co/YfB76Sx/kitchen.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; position: relative;", "href":"#kitchen", "file":"kitchen.html", "releaseDate":"02/02/2025"},
         {"id":"offers", "name":"Offers", "img":"https://i.ibb.co/9WV3mdS/offers.png", "img_width":"28", "img_style":"margin-left: 1px; margin-right: 8px; position: relative;", "href":"#offers", "file":"offers.html", "releaseDate":"02/02/2025"},
