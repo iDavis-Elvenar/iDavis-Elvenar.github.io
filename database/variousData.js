@@ -1019,6 +1019,17 @@ var moreNavbarContent = [
             "style":    "width: 24px; margin-right: 7px; margin-bottom: 4px;  margin-left: -1px;",
         }
     },
+    // CRAFTING RECIPES
+    {
+        "className":    "dropdown-item text-dark", 
+        "href":         "https://elvenar-tools.com/crafting-recipes", 
+        "id":           "navitem_crafting_recipes", 
+        "innerHTML":    `Crafting Recipes`,
+        "img":          {
+            "src":      "https://elvenar-tools.com/shared/crafting.webp",
+            "style":    "width: 24px; margin-right: 7px; margin-bottom: 4px;",
+        }
+    },
     // SEASONS
     {
         "className":    "dropdown-item text-dark",
