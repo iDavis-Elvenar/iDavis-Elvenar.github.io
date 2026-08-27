@@ -43,7 +43,7 @@ var dailyPrizes = {
         "INS_TR_AMT_300{2}",
         "A_Evt_Merge_Kitchen_XXV_Food_Truck_Fest",
         "INS_KP_{15}",
-        "A_Evt_Winter_Xviii_Candy_Hut",
+        "rsk_shards_premium_{1}",
         "INS_UNIT_TG_LM_10",
         "A_Evt_Merge_Kitchen_XXV_Eating_Contest",
         "INS_TR_AMT_480{2}",
