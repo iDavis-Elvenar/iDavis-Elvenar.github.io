@@ -970,7 +970,7 @@ var navbarNew = {
 }
 
 var webIconChange = {
-    "active": true,
+    "active": false,
     "img": "https://i.ibb.co/9hJqb4d/rainbow-heart.png",
 }
 
