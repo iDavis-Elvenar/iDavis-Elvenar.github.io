@@ -384,8 +384,8 @@ var eventStartDates = {
 var faStartDates = { //
     "september_xxvi_": {
         "live": {
-            "start_date": "__ _ 2026",
-            "end_date": "__ _ 2026"
+            "start_date": "September 8th 2026",
+            "end_date": "September 14th 2026"
         },
         "beta": {
             "start_date": "July 24th 2026",
