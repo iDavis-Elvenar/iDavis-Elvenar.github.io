@@ -1,4 +1,14 @@
 var eventStartDates = { 
+    "theater_yulecat_xxvi_": {
+        "live": {
+            "start_date": "__ _ 2026",
+            "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "September 2nd 2026",
+            "end_date": "September 22nd 2026"
+        }
+    },
     "theater_zodiac_xxvi_": {
         "live": {
             "start_date": "__ _ 2026",

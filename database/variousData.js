@@ -123,6 +123,7 @@ let eventBanners = {
     "scroll_aquatic_xxvi_": "https://i.ibb.co/7NGmj79c/EL-akcia-j-l-2026-banner.png",
     "merge_kitchen_xxvi_": "https://i.ibb.co/1YMn2xyD/EL-akcia-august-2026-banner.png",
     "theater_zodiac_xxvi_": "https://i.ibb.co/v47tqQdf/EL-akcia-jese-2026-banner.png",
+    "theater_yulecat_xxvi_": "https://i.ibb.co/GgHY98b/EL-akcia-okt-ber-2026-banner.png",
 }
 
 let eventVideos = {
@@ -204,6 +205,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "scroll_aquatic_xxvi_": "05/29/2026",
     "merge_kitchen_xxvi_": "07/01/2026",
     "theater_zodiac_xxvi_": "08/06/2026",
+    "theater_yulecat_xxvi_": "09/02/2026",
 }
 
 let questsLinks = {
@@ -254,6 +256,7 @@ let questsLinks = {
     "scroll_aquatic_xxvi_": "bit.ly/BubblebeatAquatica2026",
     "merge_kitchen_xxvi_": "bit.ly/FeastOnWheels2026",
     "theater_zodiac_xxvi_": "bit.ly/VeloriasPaintedWings2026",
+    "theater_yulecat_xxvi_": "bit.ly/RipplesOfAutumn2026",
 }
 
 let eventsDurations = {
@@ -304,6 +307,7 @@ let eventsDurations = {
     "scroll_aquatic_xxvi_": 21,
     "merge_kitchen_xxvi_": 21, // vzdy o 1 menej ako pocet daily prizes
     "theater_zodiac_xxvi_": 20,
+    "theater_yulecat_xxvi_": 20,
 }
 
 let evoUpgradeCosts = {
@@ -433,12 +437,14 @@ let guardianUpgradeCosts = {
     "B_Guardian_XXV_Naturion_the_Awakened": "ins_grow_guardian_xxv_naturion_the_awakened",
     "B_Guardian_XXVI_Ursalith_the_Ascendant": "ins_grow_guardian_xxvi_ursalith_the_ascendant",
     "B_Guardian_XXVI_Zeraphis_the_Highstride": "ins_grow_guardian_xxvi_zeraphis_the_highstride",
+    "B_Guardian_XXVI_Lutrion_the_Gleamkeeper": "ins_grow_guardian_xxvi_lutrion_the_gleamkeeper",
 }
 
 let effigies = {
     "ins_grow_guardian_xxv_naturion_the_awakened": {"name": "Naturion Effigy", "img": "https://i.ibb.co/pBZtQM5v/ins-grow-guardian-xxv-naturion-the-awakened.png"},
     "ins_grow_guardian_xxvi_ursalith_the_ascendant": {"name": "Ursalith Effigy", "img": "https://i.ibb.co/0pPZhhtp/ins-grow-guardian-xxvi-ursalith-the-ascendant.png"},
     "ins_grow_guardian_xxvi_zeraphis_the_highstride": {"name": "Zeraphis Effigy", "img": "https://i.ibb.co/gF3tHNFs/ins-grow-guardian-xxvi-zeraphis-the-highstride.png"},
+    "ins_grow_guardian_xxvi_lutrion_the_gleamkeeper": {"name": "Lutrion the Gleam Keeper", "img": "https://i.ibb.co/1xbhd9b/ins-grow-guardian-xxvi-lutrion-the-gleamkeeper.png"},
 }
 
 var feedingEffectsDescriptions = {
@@ -509,6 +515,8 @@ var iconsImages = {
     "boost_kp": "https://i.ibb.co/RtmbgCd/boost-kp.png",
     "faster_scouting": "https://i.ibb.co/LdPr8yM8/faster-scouting.png",
     "fellowship_blessing_increase": "https://i.ibb.co/W4wbRckc/fellowship-blessing-increase.png",
+    "season_xp": "https://i.ibb.co/56xyPT6/april-xxiii-currency.png",
+    "random": "https://i.ibb.co/ZzvgKPjd/daily-prize.png",
 }
 
 var iconsTitles = {
@@ -603,6 +611,7 @@ var eventsInfoIcons = {
     "scroll_aquatic_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "merge_kitchen_xxvi_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "theater_zodiac_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
+    "theater_yulecat_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -635,6 +644,7 @@ var eventsPaybackIcons = {
     "scroll_aquatic_xxvi_": "https://i.ibb.co/vQgG13g/scroll-aquatic-xxiv-payback.png",
     "merge_kitchen_xxvi_": "https://i.ibb.co/d0w16xRD/event-payback.png",
     "theater_zodiac_xxvi_": "https://i.ibb.co/YWgvz91/event-payback.png",
+    "theater_yulecat_xxvi_": "https://i.ibb.co/DP5Zc9KN/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -694,6 +704,8 @@ var eventsAvatars = {
     "portraitSeasonJoyXxviC1": "https://i.ibb.co/5W6g2d3Z/portrait-season-joy-xxvi-c1.png",
     "portraitEvtTheaterZodiacXxviF1": "https://i.ibb.co/gZ4QScFq/portrait-evt-theater-zodiac-xxvi-f1.png",
     "portraitEvtTheaterZodiacXxviM1": "https://i.ibb.co/nMBtqPVx/portrait-evt-theater-zodiac-xxvi-m1.png",
+    "portraitEvtTheaterYulecatXxviC1": "https://i.ibb.co/Dg4scdZY/portrait-evt-theater-yulecat-xxvi-c1.png",
+    "portraitEvtTheaterYulecatXxviF1": "https://i.ibb.co/TDGnG8sG/portrait-evt-theater-yulecat-xxvi-f1.png",
 }
 
 var leaguesBanners = {
@@ -713,6 +725,9 @@ var baseTabsEvents = [
 ] 
 
 var additionalTabsEvents = {
+    "theater_yulecat_xxvi_": [
+        {"id":"chests", "name":"Chests", "img":"https://i.ibb.co/7JJYYYTF/chest-8.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"chests.html", "releaseDate":"10/08/2025"},
+    ],
     "theater_zodiac_xxvi_": [
         {"id":"spheres", "name":"Spheres", "img":"https://i.ibb.co/80wYmwn/EL-akcia-september-2022-chest7.png", "img_width":"28", "img_style":"margin-left: -1px; margin-right: 10px; margin-bottom: 3px; position: relative;", "href":"#spheres", "file":"spheres.html"},
     ],

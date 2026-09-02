@@ -1,4 +1,7 @@
 var images_buildings = {
+    "B_Guardian_XXVI_Lutrion_the_Gleamkeeper":"https://i.ibb.co/jP3sqgGH/lutrion-the-gleamkeeper.png",
+    "A_Evt_Exp_Theater_Yulecat_XXVI_Little_Leaf_Pier":"https://i.ibb.co/R89DFFF/little-leaf-pier.png",
+    "A_Evt_Exp_Theater_Yulecat_XXVI_Otterstone_Skipcourt":"https://i.ibb.co/1JTCWX8S/otterstone-skipcourt.png",
     "A_Evt_Evo_Theater_Zodiac_XXVI_Veloria_The_Painted_Starwing":"https://i.ibb.co/Q39pJb7q/veloria-the-painted-starwing.png",
     "A_Evt_Exp_Theater_Zodiac_XXVI_Inktrail_Banner_Rack":"https://i.ibb.co/dw04CRR7/inktrail-banner-rack.png",
     "A_Evt_Theater_Zodiac_XXVI_Stardust_Ink_Basin":"https://i.ibb.co/6010kK78/stardust-ink-basin.png",

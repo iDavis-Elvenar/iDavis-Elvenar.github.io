@@ -281,6 +281,7 @@ function readBuildingsJSON() {
                     });
                     td12.appendChild(h5hashtag);
                 } else if (isGuardian) {
+                  console.log(filteredData[i]['id'])
                     td12.innerHTML = `<b>${langUI("Building type:")}</b> Guardian<br>
                                     <b>${langUI("Duration:")}</b> ${guardians.find(item => item['buildingId'] === filteredData[i]['id'])?.['duration'] ? (guardians.find(item => item['buildingId'] === filteredData[i]['id'])['duration']/60/60 + "h") : ""}<br>
                                     <b>${langUI("Cooldown:")}</b> ${guardiansCooldowns[filteredData[i]['id']]}<br>
@@ -700,7 +701,7 @@ function readBuildingsJSON() {
                         if (stg === 0) {
                             petTd.innerHTML = `${feedingEffectsDescriptions[filteredData[i]['id']]}`;
                         } else {
-                            if (petJSON['format'].toLowerCase().includes("percentage")) {
+                            if (petJSON['format'] === undefined || petJSON['format']?.toLowerCase().includes("percentage")) {
                                 if (petJSON.hasOwnProperty("frogId")) {
                                     petTd.innerHTML = `${flexibleRewards.filter(elem => elem.id === petJSON["frogId"])[0]['rewards'][getPresetChapter()-1]['amount']*petJSON['valuesStages'][stg]}
                                     ${goods_icons[flexibleRewards.filter(elem => elem.id === petJSON["frogId"])[0]['rewards'][getPresetChapter()-1]['subType']]}`;

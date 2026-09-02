@@ -1,5 +1,29 @@
 var dailyPrizes = {
 
+    "theater_yulecat_xxvi_": [
+        "A_Evt_Exp_Theater_Yulecat_XXVI_Otterstone_Skipcourt",
+        "INS_TR_AMT_300",
+        "INS_KP_{20}",
+        "INS_RF_GRR_20",
+        "INS_UNIT_MA_10",
+        "A_Evt_Exp_Theater_Yulecat_XXVI_Little_Leaf_Pier",
+        "INS_KP_AW_20",
+        "INS_PETFOOD_1{2}",
+        "A_Evt_Autumn_XVIII_Burning_Man",
+        "INS_UNIT_MC_HM_10",
+        "frog_portal_enchantment_{1}",
+        "frog_runeshards1_{3}",
+        "INS_UNIT_LR_10",
+        "frog_unurium_DP_{15}",
+        "A_Evt_Theater_Zodiac_XXIII_Nebula_Passage",
+        "INS_TR_AMT_1200",
+        "A_Evt_Astronomi_XVIII_StoneOfTheStars",
+        "INS_RF_CN_33{2}",
+        "frog_runeshardspremium2_{1}",
+        "INS_REV_SQD_75{2}",
+        "INS_KP_AW_30",
+    ],
+
     "theater_zodiac_xxvi_": [
         "A_Evt_Exp_Theater_Zodiac_XXVI_Inktrail_Banner_Rack",
         "A_Evt_Theater_Zodiac_XXV_Cosmic_Timekeeper",

@@ -1,6 +1,7 @@
 var allEvents = {
     "all_buildings" : { //NAME,ID,SELECTED,DISABLED == HIDDEN
         "2026" : [
+            ["Ripples of Autumn","theater_yulecat_xxvi_",false,false],
             ["Veloria's Painted Wings","theater_zodiac_xxvi_",true,false],
             ["A Feast on Wheels","merge_kitchen_xxvi_",false,false],
             ["Bubblebeat Aquatica","scroll_aquatic_xxvi_",false,false],
@@ -87,6 +88,7 @@ var allEvents = {
     },
     "all_events" : {
         "2026" : [
+            ["Ripples of Autumn","theater_yulecat_xxvi_",false,false],
             ["Veloria's Painted Wings","theater_zodiac_xxvi_",true,false],
             ["A Feast on Wheels","merge_kitchen_xxvi_",false,false],
             ["Bubblebeat Aquatica","scroll_aquatic_xxvi_",false,false],
