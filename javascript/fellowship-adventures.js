@@ -29,6 +29,9 @@ function switchView(type) {
     } else if (type === "waypoints" && view !== "waypoints") {
         displayWaypoints();
         view = "waypoints";
+    } else if (type === "endless" && view !== "endless") {
+        displayEndlessEncounters();
+        view = "endless";
     } else if (type !== "info" && type !== "items" && view !== type) {
         document.getElementById("column_with_tables").innerHTML = "";
         view = type;
@@ -44,6 +47,65 @@ function switchView(type) {
     }
     setDocumentTitle(document, type, baseTabsFa, additionalTabsFa, "fa");
     create_exception("Content Generated!", 3, 'success');
+}
+
+function displayEndlessEncounters() {
+    let parent = document.getElementById("column_with_tables");
+    parent.innerHTML = "";
+    createFaHeader();
+
+    if (!endlessEncountersData.hasOwnProperty(getSelectedFa())) {
+        let unavailable = document.createElement('h7');
+        unavailable.innerHTML = "<center>Not available yet. Please come back later.</center>";
+        parent.appendChild(unavailable);
+        return;
+    }
+
+    let heading = document.createElement('h5');
+    heading.className = "card-title text-center text-title font-weight-bold";
+    heading.innerHTML = "..:: Bottomless Pit ::..";
+    parent.appendChild(heading);
+
+    let tableWrapper = document.createElement('div');
+    tableWrapper.className = "bbTable";
+    let table = document.createElement('table');
+    table.className = "table-primary";
+    table.style.width = "100%";
+    let tbody = document.createElement('tbody');
+
+    let headerRow = document.createElement('tr');
+    let encounterHeader = document.createElement('th');
+    encounterHeader.style.textAlign = "center";
+    encounterHeader.innerHTML = "Encounter";
+    let requirementsHeader = document.createElement('th');
+    requirementsHeader.style.textAlign = "center";
+    requirementsHeader.innerHTML = "Possible requirements";
+    headerRow.appendChild(encounterHeader);
+    headerRow.appendChild(requirementsHeader);
+    tbody.appendChild(headerRow);
+
+    let encounters = endlessEncountersData[getSelectedFa()];
+    for (const encounter of Object.keys(encounters)) {
+        let row = document.createElement('tr');
+        let encounterCell = document.createElement('td');
+        encounterCell.style.textAlign = "center";
+        encounterCell.innerHTML = encounter;
+        row.appendChild(encounterCell);
+
+        let requirementsCell = document.createElement('td');
+        requirementsCell.style.textAlign = "center";
+        for (let option = 0; option < encounters[encounter].length; option++) {
+            for (const itemId in encounters[encounter][option]) {
+                requirementsCell.innerHTML += `${encounters[encounter][option][itemId]}x ${goods_icons[itemId].replace("style='width: 28px", "style='width: 25px;")}`;
+            }
+        }
+        row.appendChild(requirementsCell);
+        tbody.appendChild(row);
+    }
+
+    table.appendChild(tbody);
+    tableWrapper.appendChild(table);
+    parent.appendChild(tableWrapper);
 }
 
 function setLeftBar() {

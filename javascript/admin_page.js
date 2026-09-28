@@ -836,6 +836,44 @@ function generateMpeChestsCosts() {
     }
 }
 
+function generateFaEndlessEncounters() {
+    create_exception("Generating...", 10000, 'primary');
+    let file = document.getElementById('faEndlessEncounters').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function () {
+        let data = JSON.parse(reader.result);
+        let chestCostsComponent = data[0].components.find(component => component['__class__'] === 'ChestCostsComponentVO');
+        let result = {};
+
+        for (let i = 0; i < chestCostsComponent.chestCosts.length; i++) {
+            let currentData = chestCostsComponent.chestCosts[i];
+            let endlessId = currentData.chestId.match(/_endless_(\d+)_(\d+)$/);
+            if (!endlessId) {
+                continue;
+            }
+
+            let encounter = endlessId[1];
+            let order = parseInt(endlessId[2]) - 1;
+            let costs = {};
+            for (const key in currentData.costs.resources) {
+                if (key !== '__class__') {
+                    costs[key] = currentData.costs.resources[key];
+                }
+            }
+
+            if (!result[encounter]) {
+                result[encounter] = [];
+            }
+            result[encounter][order] = costs;
+        }
+
+        console.log(result);
+        saveJSON(JSON.stringify(result), "faEndlessEncounters.json");
+        create_exception("Data Generated!", 10, 'success');
+    }
+}
+
 function generateSeasonPass() {
     create_exception("Generating...", 10000, 'primary')
     let file = document.getElementById('seasonPass').files[0];
