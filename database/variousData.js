@@ -706,6 +706,7 @@ var eventsAvatars = {
     "portraitEvtTheaterZodiacXxviM1": "https://i.ibb.co/nMBtqPVx/portrait-evt-theater-zodiac-xxvi-m1.png",
     "portraitEvtTheaterYulecatXxviC1": "https://i.ibb.co/Dg4scdZY/portrait-evt-theater-yulecat-xxvi-c1.png",
     "portraitEvtTheaterYulecatXxviF1": "https://i.ibb.co/TDGnG8sG/portrait-evt-theater-yulecat-xxvi-f1.png",
+    "portraitSeasonSecretsXxviC1": "https://i.ibb.co/xtq433Ry/portrait-season-secrets-xxvi-c1.png",
 }
 
 var leaguesBanners = {
