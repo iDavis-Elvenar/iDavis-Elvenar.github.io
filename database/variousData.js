@@ -14,7 +14,7 @@ var prioritiesProduction = ["money", "supplies", "marble", "steel", "planks", "c
     "relic_marble", "relic_steel", "relic_planks", "relic_crystal", "relic_scrolls", "relic_silk", "relic_elixir",
     "relic_magic_dust", "relic_gems", "boosted_relic_plus_0_quality_1", "boosted_relic_plus_1_quality_1", "boosted_relic_plus_2_quality_1",
     "boosted_relic_plus_0_quality_2", "boosted_relic_plus_1_quality_2", "boosted_relic_plus_2_quality_2",
-    "spell_good_production_boost_1",
+    "spell_good_production_boost_1", "spell_settlement_production_boost_1",
     "craft_spell_fragments", "spell_combining_catalyst_1",
     "ins_rf_cn_5", "ins_rf_cn_10", "ins_rf_cn_15", "ins_rf_cn_20",
     "ins_rf_cn_25", "ins_rf_cn_33", "ins_rf_cn_50", "ins_rf_cn_100", "ins_rf_spl_5", "ins_rf_spl_10", "ins_rf_spl_15",
