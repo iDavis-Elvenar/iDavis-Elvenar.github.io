@@ -62,6 +62,7 @@ var selectedEvoStages = {
     "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon": 6,
     "A_Evt_Evo_Merge_Kitchen_XXVI_Boarback_Cookwagon": 9,
     "A_Evt_Evo_Theater_Zodiac_XXVI_Veloria_The_Painted_Starwing": 9,
+    "A_Evt_Evo_Shuffle_Postal_XXVI_Grand_Parcel_Dispatch": 6,
 }
 
 function setAndReload(id) {

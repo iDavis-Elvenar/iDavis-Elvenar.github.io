@@ -1,8 +1,18 @@
 var eventStartDates = { 
-    "theater_yulecat_xxvi_": {
+    "shuffle_postal_xxvi_": {
         "live": {
             "start_date": "__ _ 2026",
             "end_date": "__ _ 2026"
+        },
+        "beta": {
+            "start_date": "October 12th 2026",
+            "end_date": "November 12th 2026"
+        }
+    },
+    "theater_yulecat_xxvi_": {
+        "live": {
+            "start_date": "October 20th 2026",
+            "end_date": "November 9th 2026"
         },
         "beta": {
             "start_date": "September 2nd 2026",

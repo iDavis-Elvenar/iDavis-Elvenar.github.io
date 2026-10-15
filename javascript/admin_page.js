@@ -602,6 +602,29 @@ function regenerateBuildingNamesLanguages() {
     }
 }
 
+// od septembra 2026 hra posiela metadata.formatterId / metadata.calculatorId (enum objekty) namiesto metadata.format / metadata.calculator
+// enum hodnoty prevadzame na povodne nazvy cez effectFormatterMapping (variousData.js)
+function getEffectFormat(metadata) {
+    if (metadata.hasOwnProperty("format")) {
+        return metadata["format"];
+    }
+    if (metadata.hasOwnProperty("formatterId")) {
+        const formatter = metadata["formatterId"]["value"];
+        return effectFormatterMapping[formatter] || formatter;
+    }
+    return undefined;
+}
+
+function getEffectCalculator(metadata) {
+    if (metadata.hasOwnProperty("calculator")) {
+        return metadata["calculator"];
+    }
+    if (metadata.hasOwnProperty("calculatorId")) {
+        return metadata["calculatorId"]["value"];
+    }
+    return undefined;
+}
+
 function generateEffectConfigs() {
     create_exception("Generating...", 10000, 'primary')
     let file = document.getElementById('effectConfigs').files[0];
@@ -630,8 +653,9 @@ function generateEffectConfigs() {
                             if (data[i]["metadata"].hasOwnProperty("action"))
                             pet["iconId"] = data[i]["metadata"]["action"];
                         }
-                        if (data[i]["metadata"].hasOwnProperty("format")) {
-                            pet["format"] = data[i]["metadata"]["format"];
+                        const petFormat = getEffectFormat(data[i]["metadata"]);
+                        if (petFormat !== undefined) {
+                            pet["format"] = petFormat;
                         }
                     }
                     if (data[i].hasOwnProperty("metadata"))
@@ -647,8 +671,8 @@ function generateEffectConfigs() {
                         }
                     }
                     if (data[i].hasOwnProperty("metadata")) {
-                        if (data[i]["metadata"].hasOwnProperty("calculator") && data[i]["metadata"].hasOwnProperty("components")) {
-                            if (data[i]["metadata"]["calculator"] === "frog") {
+                        if (data[i]["metadata"].hasOwnProperty("components")) {
+                            if (getEffectCalculator(data[i]["metadata"]) === "frog") {
                                 pet["frogId"] = data[i]["metadata"]["components"][0]["frogId"];
                             }
                         }
@@ -665,7 +689,7 @@ function generateEffectConfigs() {
                     if (data[i].hasOwnProperty("metadata")) {
                         expiring["iconID"] = data[i]["metadata"]["iconId"];
                         expiring["name"] = data[i]["metadata"]["name"];
-                        expiring["format"] = data[i]["metadata"]["format"];
+                        expiring["format"] = getEffectFormat(data[i]["metadata"]);
                     }
                     if (data[i].hasOwnProperty("valuesStages")) {
                         expiring["valuesStages"] = data[i]["valuesStages"];

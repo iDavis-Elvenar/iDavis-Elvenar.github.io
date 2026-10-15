@@ -1,4 +1,7 @@
 var images_buildings = {
+    "A_Evt_Evo_Shuffle_Postal_XXVI_Grand_Parcel_Dispatch":"https://i.ibb.co/hRNxkGxq/grand-parcel-dispatch.png",
+    "A_Evt_Exp_Shuffle_Postal_XXVI_Yeti_Signal_Car":"https://i.ibb.co/VW90X8g3/yeti-signal-car.png",
+    "A_Evt_Shuffle_Postal_XXVI_Runaway_Gift_Ramp":"https://i.ibb.co/0yNqK7xF/runaway-gift-ramp.png",
     "B_Guardian_XXVI_Lutrion_the_Gleamkeeper":"https://i.ibb.co/jP3sqgGH/lutrion-the-gleamkeeper.png",
     "A_Evt_Exp_Theater_Yulecat_XXVI_Little_Leaf_Pier":"https://i.ibb.co/R89DFFF/little-leaf-pier.png",
     "A_Evt_Exp_Theater_Yulecat_XXVI_Otterstone_Skipcourt":"https://i.ibb.co/1JTCWX8S/otterstone-skipcourt.png",

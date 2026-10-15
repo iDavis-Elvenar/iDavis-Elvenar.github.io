@@ -124,6 +124,7 @@ let eventBanners = {
     "merge_kitchen_xxvi_": "https://i.ibb.co/1YMn2xyD/EL-akcia-august-2026-banner.png",
     "theater_zodiac_xxvi_": "https://i.ibb.co/v47tqQdf/EL-akcia-jese-2026-banner.png",
     "theater_yulecat_xxvi_": "https://i.ibb.co/GgHY98b/EL-akcia-okt-ber-2026-banner.png",
+    "shuffle_postal_xxvi_": "https://i.ibb.co/RpgzMDbZ/EL-akcia-zima-2026-banner.png",
 }
 
 let eventVideos = {
@@ -206,6 +207,7 @@ let eventBetaStarts = { // MM/DD/YYYY
     "merge_kitchen_xxvi_": "07/01/2026",
     "theater_zodiac_xxvi_": "08/06/2026",
     "theater_yulecat_xxvi_": "09/02/2026",
+    "shuffle_postal_xxvi_": "10/12/2026",
 }
 
 let questsLinks = {
@@ -257,6 +259,7 @@ let questsLinks = {
     "merge_kitchen_xxvi_": "bit.ly/FeastOnWheels2026",
     "theater_zodiac_xxvi_": "bit.ly/VeloriasPaintedWings2026",
     "theater_yulecat_xxvi_": "bit.ly/RipplesOfAutumn2026",
+    "shuffle_postal_xxvi_": "bit.ly/WinterMagic2026",
 }
 
 let eventsDurations = {
@@ -308,6 +311,7 @@ let eventsDurations = {
     "merge_kitchen_xxvi_": 21, // vzdy o 1 menej ako pocet daily prizes
     "theater_zodiac_xxvi_": 20,
     "theater_yulecat_xxvi_": 20,
+    "shuffle_postal_xxvi_": 31,
 }
 
 let evoUpgradeCosts = {
@@ -372,6 +376,7 @@ let evoUpgradeCosts = {
     "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon": "ins_evo_scroll_aquatic_xxvi",
     "A_Evt_Evo_Merge_Kitchen_XXVI_Boarback_Cookwagon": "ins_evo_merge_kitchen_xxvi",
     "A_Evt_Evo_Theater_Zodiac_XXVI_Veloria_The_Painted_Starwing": "ins_evo_theater_zodiac_xxvi",
+    "A_Evt_Evo_Shuffle_Postal_XXVI_Grand_Parcel_Dispatch": "ins_evo_shuffle_postal_xxvi",
 }
 
 var artifacts = {
@@ -431,6 +436,7 @@ var artifacts = {
     "ins_evo_scroll_aquatic_xxvi": {"name": "Bubblebeat Galleon Artifact", "img": "https://i.ibb.co/d4g26knz/ins-evo-scroll-aquatic-xxvi.png"},
     "ins_evo_merge_kitchen_xxvi": {"name": "Boarback Cookwagon Artifact", "img": "https://i.ibb.co/jvVHcPFT/ins-evo-merge-kitchen-xxvi.png"},
     "ins_evo_theater_zodiac_xxvi": {"name": "Veloria, The Painted Starwing Artifact", "img": "https://i.ibb.co/1Jrqj1DH/ins-evo-theater-zodiac-xxvi.png"},
+    "ins_evo_shuffle_postal_xxvi": {"name": "Grand Parcel Dispatch Artifact", "img": "https://i.ibb.co/hR355LgD/ins-evo-shuffle-postal-xxvi.png"},
 }
 
 let guardianUpgradeCosts = {
@@ -478,6 +484,13 @@ var allowedFeedingMultiplicators = {
 var effectsBaseValues = {
     "A_Evt_Evo_Easter_XIX_Phoenix_Blue": 50,
 }
+
+var effectFormatterMapping = {
+    "signed_percentage": "sign_percentage",
+    "whole_number": "default",
+    "signed_whole_number": "default",
+    "signed_time": "sign_time"
+};
 
 var iconsImages = {
     "damage_boost":"https://i.ibb.co/3TG2xv7/unit-attack-enhance.png",
@@ -612,6 +625,7 @@ var eventsInfoIcons = {
     "merge_kitchen_xxvi_": {"img_width": "28", "img_style": "margin-left: -2px; margin-right: 11px; position: relative;"},
     "theater_zodiac_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 11px; position: relative;"},
     "theater_yulecat_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
+    "shuffle_postal_xxvi_": {"img_width": "28", "img_style": "margin-left: -1px; margin-right: 10px; position: relative;"},
 }
 
 var featureFlagsInitialEvents = {
@@ -645,6 +659,7 @@ var eventsPaybackIcons = {
     "merge_kitchen_xxvi_": "https://i.ibb.co/d0w16xRD/event-payback.png",
     "theater_zodiac_xxvi_": "https://i.ibb.co/YWgvz91/event-payback.png",
     "theater_yulecat_xxvi_": "https://i.ibb.co/DP5Zc9KN/event-payback.png",
+    "shuffle_postal_xxvi_": "https://i.ibb.co/gb1xL9T/event-payback.png",
 }
 
 var eventsAvatars = {
@@ -707,6 +722,8 @@ var eventsAvatars = {
     "portraitEvtTheaterYulecatXxviC1": "https://i.ibb.co/Dg4scdZY/portrait-evt-theater-yulecat-xxvi-c1.png",
     "portraitEvtTheaterYulecatXxviF1": "https://i.ibb.co/TDGnG8sG/portrait-evt-theater-yulecat-xxvi-f1.png",
     "portraitSeasonSecretsXxviC1": "https://i.ibb.co/xtq433Ry/portrait-season-secrets-xxvi-c1.png",
+    "portraitEvtShufflePostalXxviF1": "https://i.ibb.co/kV0kt6MG/portrait-evt-shuffle-postal-xxvi-f1.png",
+    "portraitEvtShufflePostalXxviM1": "https://i.ibb.co/rfHqCZFR/portrait-evt-shuffle-postal-xxvi-m1.png",
 }
 
 var leaguesBanners = {
