@@ -200,18 +200,12 @@ var notifications = {
     },
     "16":{  // NEW FEATURE ON THE WEBSITE #1
         "id":16,
-        "text":`<h4 class="alert-heading">Introducing: Inventory Manager! <img src="https://elvenar-tools.com/shared/inventory.png" style="width: 40px;"></h4>
+        "text":`<h4 class="alert-heading">InnoGames Official Interview: iDavis & Elvenar Tools <img src="https://idavis-elvenar.com/images/general/idavis.png" style="width: 40px;"> <img src="https://i.ibb.co/tMqN65LV/logo-128x128-transparent.png" style="width: 40px";></h4>
         <hr>
-        <p>Meet the new Inventory Manager at Elvenar Tools! Analyze your inventory like never before with features normally unavailable in-game. Get a clear advantage and easily figure out which buildings are actually worth your space.</p>
-        <p>
-        <ul>
-        <li><b>Load your inventory</b> using the extension and manage it in various ways</li>
-        <li><b>Sort buildings</b> based on culture, population and various productions</li>
-        <li><b>Calculate production per tile</b> for any given chapter</li>
-        <li><b>Track Royal Restorations</b> needed to upgrade buildings</li>
-        </ul>
-        </p>
-        <p>Visit <a href="https://elvenar-tools.com/inventory-manager " class="alert-link" target="_blank" >> Elvenar Tools - Inventory Manager <</a> to learn more!</p>
+        <p>Hello everyone!</p>
+        <p>Recently, I was interviewed by InnoGames about my collaboration with them and the creation of my independent projects, such as iDavis-Elvenar, Elvenar Tools and my YouTube channel. I spoke about many details and shared insights that offer a peek behind the scenes of my work - including information and perspectives I haven't shared much elsewhere.</p>
+        <p>If you are interested, visit the <a href="TBA" class="alert-link" target="_blank" >InnoGames Blog</a> to read the full interview.</p>
+        <p>iDavis</p>
         </h4></center>`,
         "repeatAfter":172800,
         "style":"warning",
