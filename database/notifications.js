@@ -203,14 +203,14 @@ var notifications = {
         "text":`<h4 class="alert-heading">InnoGames Official Interview: iDavis & Elvenar Tools <img src="https://idavis-elvenar.com/images/general/idavis.png" style="width: 40px;"> <img src="https://i.ibb.co/tMqN65LV/logo-128x128-transparent.png" style="width: 40px";></h4>
         <hr>
         <p>Hello everyone!</p>
-        <p>Recently, I was interviewed by InnoGames about my collaboration with them and the creation of my independent projects, such as iDavis-Elvenar, Elvenar Tools and my YouTube channel. I spoke about many details and shared insights that offer a peek behind the scenes of my work - including information and perspectives I haven't shared much elsewhere.</p>
-        <p>If you are interested, visit the <a href="TBA" class="alert-link" target="_blank" >InnoGames Blog</a> to read the full interview.</p>
+        <p>Recently, I was interviewed by InnoGames about my collaboration with them and the creation of my projects, such as iDavis-Elvenar, Elvenar Tools and my YouTube channel. I spoke about many details and shared insights that offer a peek behind the scenes of my work - including information and perspectives I haven't shared much elsewhere.</p>
+        <p>If you are interested, visit the <a href="https://blog.innogames.com/elvenar-fan-tools-built-by-one-player-an-interview-with-idavis/" class="alert-link" target="_blank" >InnoGames Blog</a> to read the full interview.</p>
         <p>iDavis</p>
         </h4></center>`,
         "repeatAfter":172800,
         "style":"warning",
         "duration":70,
-        "active":false,
+        "active":true,
         "priority":120
     },
     "17":{  // EVENT
