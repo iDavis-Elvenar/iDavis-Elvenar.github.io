@@ -188,7 +188,7 @@ var notifications = {
         <li>With the latest update of the <b>Elvenar Tools Extension</b>, you can open the calculator straight from the extension, and all your cauldron settings are filled in automatically</li>
         </ul>
         </p>
-        <p>I hope you will find this new addition helpful. As always, you can find a permanent link for it under the <b>Menu</b> in this website.</p>
+        <p>I hope you will find this new addition helpful. As always, you can find a permanent link for it under the <b>More</b> in this website.</p>
         </h4></center>`,
         "repeatAfter":172800,
         "style":"warning",
