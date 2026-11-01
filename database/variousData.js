@@ -1063,6 +1063,17 @@ var moreNavbarContent = [
             "style":    "width: 24px; margin-right: 7px; margin-bottom: 4px;",
         }
     },
+    // CAULDRON CALCULATOR
+    {
+        "className":    "dropdown-item text-dark", 
+        "href":         "https://elvenar-tools.com/cauldron-calculator", 
+        "id":           "navitem_cauldron_calculator", 
+        "innerHTML":    `Cauldron Calculator`,
+        "img":          {
+            "src":      "https://elvenar-tools.com/assets/cauldron/cauldron.webp",
+            "style":    "width: 24px; margin-right: 7px; margin-bottom: 4px;",
+        }
+    },
     // SEASONS
     {
         "className":    "dropdown-item text-dark",

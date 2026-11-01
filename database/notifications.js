@@ -170,32 +170,30 @@ var notifications = {
     },
     "15":{  // NEW FEATURE ON THE WEBSITE #3
         "id":15,
-        "text":`<h4 class="alert-heading">Introducing: Elvenar Stats! <img src="https://elvenar-tools.com/shared/world.webp" style="width: 40px;"></h4>
+        "text":`<h4 class="alert-heading">Introducing: Cauldron Calculator! <img src="https://elvenar-tools.com/assets/cauldron/cauldron.webp" style="width: 40px;"></h4>
         <hr>
-        <p>Hello everyone!</p>
+        <p>Hello!</p>
         <p>
-        I would like to introduce the newest addition to Elvenar Tools: <a href="https://elvenar-tools.com/stats " class="alert-link" target="_blank" >Elvenar Stats</a>!
+        Elvenar Tools now has a new addition: <a href="https://elvenar-tools.com/cauldron-calculator" target="_blank" class="alert-link">Cauldron Calculator</a>!
         </p>
         <p>
-        Elvenar Stats tracks all players in Elvenar, allowing you to search for players and fellowships, compare weekly tournament rankings, analyze a unique global top 100, and explore many more statistics collected from all Elvenar servers worldwide.
+        It finds the best Cauldron recipe for the effects you want and shows the exact chances and Witch Point cost before you brew, using the same rules as the game.
         </p>
         <p>
-        Everything on Elvenar Stats connects directly with the City Planner, letting you visit other players' cities with a single click. If you are a fellowship leader, you can also take advantage of various tools and statistics designed to help
-        you track member activity much more easily.
+        <ul>
+        <li>Select the effects you have enabled in the game, give a weight to the ones you want, mark this week's premium ingredients and press <b>Find recipe</b>: the calculator goes through every possible recipe and comes back with the best one for your in-game preference</li>
+        <li>See the ingredients in the cheapest order to add them, the success rate and the chance of each effect</li>
+        <li>Takes your Witch Points, Valorian School of Sorcery level and this week's premium ingredients into account</li>
+        <li>Use <b>Manual mode</b> to try your own recipes, just like in the game</li>
+        <li>With the latest update of the <b>Elvenar Tools Extension</b>, you can open the calculator straight from the extension, and all your cauldron settings are filled in automatically</li>
+        </ul>
         </p>
-        <p>
-        As you may know, currently available resources like Elvenstats are not always reliable - many recent weeks are missing, and the infrastructure is no longer updated to support the newest chapters, ancient wonders, or player portraits.
-        Many of you have asked whether I could build a feature like this within my projects. Although I was skeptical at first, I am thrilled to finally present it to you.
-        As with everything I create, my goal for Elvenar Stats is to keep the data reliable, up to date, and useful in the long term.
-        </p>
-        <p>I hope this new addition - and having all these important resources under one roof - helps you and your gameplay moving forward.</p>
-        <p>Visit <a href="https://elvenar-tools.com/stats " class="alert-link" target="_blank" >Elvenar Tools - Stats</a> to explore all the new features.</p>
-        <p>iDavis</p>
+        <p>I hope you will find this new addition helpful. As always, you can find a permanent link for it under the <b>Menu</b> in this website.</p>
         </h4></center>`,
         "repeatAfter":172800,
         "style":"warning",
         "duration":120,
-        "active":false,
+        "active":true,
         "priority":150
     },
     "16":{  // NEW FEATURE ON THE WEBSITE #1
