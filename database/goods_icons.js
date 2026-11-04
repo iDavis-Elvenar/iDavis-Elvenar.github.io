@@ -439,4 +439,5 @@ var xlImages = {
     "spell_settlement_production_boost_1": "https://i.ibb.co/twbxHTXD/spell-settlement-production-boost-1-xl.png",
     "spell_teleport_1": "https://i.ibb.co/HfjMS0bD/spell-teleport-1.png",
     "nox": "https://i.ibb.co/FqskksVx/nox.png",
+    "broken_shards": "https://i.ibb.co/C5wfsWdP/brokenshard-xl.png",
 }

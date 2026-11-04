@@ -199,13 +199,19 @@ function displayDailyPrizes() {
                     }
                     filteredDataDict[i] = frogObject;
                 } else if (dailyPrizes[selectedEvent][i].substring(0, 4).toLowerCase() === 'rsk_') {
-                    var baseID = dailyPrizes[selectedEvent][i].substring(0, dailyPrizes[selectedEvent][i].lastIndexOf('_'));
-                    var rskAmount = parseInt(dailyPrizes[selectedEvent][i].substring(dailyPrizes[selectedEvent][i].indexOf("{") + 1, dailyPrizes[selectedEvent][i].indexOf("}")));
+                    var rskMatch = dailyPrizes[selectedEvent][i].match(/^(.*)_\{(\d+)\}$/);
+                    var baseID = rskMatch ? rskMatch[1] : dailyPrizes[selectedEvent][i];
+                    var rskAmount = rskMatch ? parseInt(rskMatch[2]) : 1;
+                    var rskTome = tomes.find(elem => elem.id === baseID);
+                    if (!rskTome) {
+                        console.log('Unknown tome in daily prizes: ' + dailyPrizes[selectedEvent][i]);
+                        continue;
+                    }
                     var rskObject = {};
                     rskObject['id'] = baseID;
                     rskObject['amount'] = rskAmount;
-                    rskObject['icon'] = rskIcons[tomes.filter(elem => elem.id === baseID)[0].iconId];
-                    rskObject['name'] = tomes.filter(elem => elem.id === baseID)[0].name;
+                    rskObject['icon'] = rskIcons[rskTome.iconId];
+                    rskObject['name'] = rskTome.name;
                     filteredDataDict[i] = rskObject;
                 }
             }

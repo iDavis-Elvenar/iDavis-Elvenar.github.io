@@ -189,5 +189,19 @@ var instants = {
         "image_small": "https://i.ibb.co/pwnK74T/volatile-sigils.png",
         "title": "Volatile Sigils",
         "production_type": ""
-    }
+    },
+    "INS_CRAFTING_SLOT_REFRESH_": {
+        "name": "Sip of Clarity",
+        "image_big": "https://i.ibb.co/q76HpVv/crafting-slots-refresh.png",
+        "image_small": "https://i.ibb.co/MBGNBL9/Sipof-Clarity-small.png",
+        "title": "Sip of Clarity",
+        "production_type": ""
+    },
+    "INS_BROKEN_SHARDS_": {
+        "name": "Broken Shards",
+        "image_big": "https://i.ibb.co/C5wfsWdP/brokenshard-xl.png",
+        "image_small": "https://i.ibb.co/ZMBLJS3/broken-shard.png",
+        "title": "Broken Shards",
+        "production_type": ""
+    },
 }
