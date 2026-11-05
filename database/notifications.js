@@ -193,7 +193,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":120,
-        "active":true,
+        "active":false,
         "priority":150
     },
     "16":{  // NEW FEATURE ON THE WEBSITE #1
@@ -208,7 +208,7 @@ var notifications = {
         "repeatAfter":172800,
         "style":"warning",
         "duration":70,
-        "active":false,
+        "active":true,
         "priority":120
     },
     "17":{  // EVENT
