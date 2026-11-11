@@ -802,10 +802,13 @@ function readBuildingsJSON() {
                         if (transData[transEffect]['valuesStages'].hasOwnProperty(displayStage+1)) {
                             if (transData[transEffect]['format'] === 'sign_percentage') {
                                 transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]*100}%`;
-                                const nthProductionId = filteredData[i]['all_productions'].find(prod => 
-                                    Object.keys(filteredData[i]['chapters'][getPresetChapter()][displayStage]).includes(prod[0]) && 
-                                    !prioritiesNonProduction.includes(prod[0])
-                                )[0]; // tato nula aktualne vybera prvu produkciu. Mozno to bude treba v buducnosti zmenit a parametrizovat podla parametra targets v effectConfigs
+                                // prva produkcia podla hernej definicie pre vybranu kapitolu (first_production z admin_page.js),
+                                // fallback na prvu produkciu podla priorit webu pre starsie data
+                                const nthProductionId = filteredData[i]['first_production']?.[getPresetChapter()] ??
+                                    filteredData[i]['all_productions'].find(prod =>
+                                        Object.keys(filteredData[i]['chapters'][getPresetChapter()][displayStage]).includes(prod[0]) &&
+                                        !prioritiesNonProduction.includes(prod[0])
+                                    )[0];
                                 transN.innerHTML += ` ${goods_icons[nthProductionId]}`;
                             } else if (transData[transEffect]['format'] === 'default') {
                                 transN.innerHTML = `<b>${transData[transEffect]['name']}: </b>${transData[transEffect]['valuesStages'][displayStage+1]}x`;

@@ -175,6 +175,18 @@ function handleBuildingsJSON() {
                                         var currentLevel = parseInt(allBuildings[k]['level']);
                                         var currentLevelString = currentLevel.toString();
                                         b['chapters'][currentLevelString] = {};
+                                        //ULOZ PRVU PRODUKCIU PODLA HERNEJ DEFINICIE (poradie products), napr. pre Self-Production Boost v transcendence
+                                        const gameFirstProduct = allBuildings[k]?.['production']?.['products']?.[0]?.['revenue']?.['resources'];
+                                        if (gameFirstProduct) {
+                                            const firstProdId = allDifferentProductions.find(p =>
+                                                isProductionPriority(p) && findResourceKey(gameFirstProduct, p) !== undefined);
+                                            if (firstProdId !== undefined) {
+                                                if (!b.hasOwnProperty('first_production')) {
+                                                    b['first_production'] = {};
+                                                }
+                                                b['first_production'][currentLevelString] = firstProdId;
+                                            }
+                                        }
                                         if (!b['id'].includes('_Evo_')) {
                                             for (var prod = 0; prod < allDifferentProductions.length; prod++) {
                                                 if (prioritiesNonProduction.includes(allDifferentProductions[prod])) {
