@@ -5,6 +5,11 @@ var baseTabsGuestRaces = [
 ] 
 
 var additionalTabsGuestRaces = {
+    "ch26": [
+        {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
+        {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/pv2XXgT3/ch25-layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},
+        {"id":"wonders", "name":"Wonders", "img":"https://i.ibb.co/3mhX3r2Z/ch25-aws.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#wonders", "file":"wonders.html"},
+    ],
     "ch25": [
         {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
         {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/pv2XXgT3/ch25-layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},

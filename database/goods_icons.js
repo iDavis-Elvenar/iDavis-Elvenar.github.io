@@ -418,6 +418,20 @@ var goods_icons = {
     "ch25_xps_kid": "<img src='https://i.ibb.co/cSrr14c8/ch25-xps-kid.webp' title='Childhood Experience'><br>",
     "b_ch25_aw1_shards": "<img src='https://i.ibb.co/SDF6z6G0/b-ch25-aw1-shards.webp' title='Rune Shard for Blossom Temple'><br>",
     "b_ch25_aw2_shards": "<img src='https://i.ibb.co/ccN2T3qv/b-ch25-aw2-shards.webp' title='Rune Shard for Bastet Amun's Altar'><br>",
+    "dragon_steel": "<img src='https://assets.elvenar-tools.com/resources/big/dragon_steel.webp' title='Dragon Steel'><br>",
+    "ch26_water": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_water.webp' title='Wisdom of Adults'><br>",
+    "ch26_fire": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_fire.webp' title='Wisdom of Age'><br>",
+    "ch26_earth": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_earth.webp' title='Wisdom of Youth'><br>",
+    "ch26_wind": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_wind.webp' title='Wisdom of Life'><br>",
+    "ch26_vials": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_vials.webp' title='Growth'><br>",
+    "ch26_fiwa": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_fiwa.webp' title='Maturity'><br>",
+    "ch26_eawa": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_eawa.webp' title='Adults Experience'><br>",
+    "ch26_wiwa": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_wiwa.webp' title='Elders Experience'><br>",
+    "ch26_eafi": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_eafi.webp' title='Childhood Experience'><br>",
+    "ch26_wifi": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_wifi.webp' title='Childhood Experience'><br>",
+    "ch26_eawi": "<img src='https://assets.elvenar-tools.com/resources/big/ch26_eawi.webp' title='Childhood Experience'><br>",
+    "b_ch26_aw1_shards": "<img src='https://assets.elvenar-tools.com/resources/big/b_ch26_aw1_shards.webp' title='Rune Shard for Spire Research Lab'><br>",
+    "b_ch26_aw2_shards": "<img src='https://assets.elvenar-tools.com/resources/big/b_ch26_aw2_shards.webp' title='Rune Shard for Tower of the Frog Prince'><br>",
 }
 
 var xlImages = {
