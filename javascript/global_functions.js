@@ -389,6 +389,8 @@ function round(value) {
 
 function generateGuestRacesDropdown() {
     let mainDiv = document.getElementById("guestRacesDropdown");
+    mainDiv.style.maxHeight = "70vh";
+    mainDiv.style.overflowY = "auto";
     for (let i = numberOfChapters; i >= 6; i--) {
         let a = document.createElement("a");
         a.className = "dropdown-item";
