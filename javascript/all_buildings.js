@@ -1,68 +1,13 @@
 // Copyright 2021, iDavis, All rights reserved.
 
-var selectedEvoStages = {
-    "A_Evt_Evo_February_XXI_Everblossom_Sleigh" : 9,
-    "A_Evt_Evo_Autumn_XIX_Bear_Brown" : 9,
-    "A_Evt_Evo_Autumn_XIX_Bear_Ice" : 9,
-    "A_Evt_Evo_Winter_XIX_Gingerbread_Mansion" : 9,
-    "A_Evt_Evo_Summer_XIX_Stonehenge" : 9,
-    "A_Evt_Evo_September_XX_Moon_Bear" : 9,
-    "A_Evt_Evo_October_XX_Witches_Hut" : 9,
-    "A_Evt_Evo_May_XX_May_Tree" : 9,
-    "A_Evt_Evo_March_XXI_Ashen_Phoenix" : 9,
-    "A_Evt_Evo_MM_XIX_WaterTower" : 9,
-    "A_Evt_Evo_July_XX_Wise_Golem" : 9,
-    "A_Evt_Evo_Easter_XX_Phoenix_Coldfire" : 9,
-    "A_Evt_Evo_Easter_XIX_Phoenix_Yellow" : 9,
-    "A_Evt_Evo_Easter_XIX_Phoenix_Red" : 9,
-    "A_Evt_Evo_Easter_XIX_Phoenix_Blue" : 9,
-    "A_Evt_Evo_December_XX_Watchful_Winter_Owl" : 9,
-    "A_Evt_Evo_Car_XX_Burukbrak_Gaelagil" : 9,
-    "A_Evt_Evo_Autumn_XIX_Bear_Panda" : 9,
-    "A_Evt_Evo_May_XXI_Queen_Fairys_Retreat": 9,
-    "A_Evt_Evo_July_XXI_Triumph_of_Tides": 9,
-    "A_Evt_Evo_September_XXI_Red_Panda_Master": 9,
-    "A_Evt_Evo_October_XXI_Witch_Summoning_Circle": 9,
-    "A_Evt_Evo_December_XXI_Boblins_Express_Service": 9,
-    "A_Evt_Evo_February_XXII_Echoes_of_the_Forgotten": 9,
-    "A_Evt_Evo_Easter_XXII_Twilight_Phoenix": 9,
-    "A_Evt_Evo_May_XXII_Flower_Goblin_Epiphany": 9,
-    "A_Evt_Evo_July_XXII_Glory_of_the_Nimble": 9,
-    "A_Evt_Evo_Autumn_XXII_WittyCoon": 9,
-    "A_Evt_Evo_October_XXII_Witch_Doctor": 9,
-    "A_Evt_Evo_December_XXII_Chromafrost_Glacier": 9,
-    "A_Evt_Evo_January_XXIII_Steam_Golem": 9,
-    "A_Evt_Evo_Easter_XXIII_Astral_Phoenix": 9,
-    "A_Evt_Evo_May_XXIII_Juuls_Traveling_Kitchen": 9,
-    "A_Evt_Evo_Shuffle_Garden_XXIII_Dragonheart_Estate": 9,
-    "A_Evt_Evo_Theater_Zodiac_XXIII_Tinlug_The_Star_Serpent": 9,
-    "A_Evt_Evo_Merge_Dwarvengame_XXIII_Solunar_Nexus": 9,
-    "A_Evt_Evo_Set_Tile_Mistyforest_XXIII_Soul_Lab": 4,
-    "A_Evt_Evo_Shuffle_Postal_XXIII_Hearthbloom": 9,
-    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Arcane_Arena": 4,
-    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Chthonic_Circle": 4,
-    "A_Evt_Evo_Scroll_Sorcerers_XXIV_Potionmakers_Pedestal": 4,
-    "A_Evt_Evo_Theater_Easter_XXIV_Verdant_Phoenix": 9,
-    "A_Evt_Evo_Tile_Amuni_XXIV_Purring_Sanctum": 9,
-    "A_Evt_Evo_Scroll_Aquatic_XXIV_Puffs_Nautical_Theater": 9,
-    "A_Evt_Evo_Merge_Dwarvengame_XXIV_Tower_of_Unity": 9,
-    "A_Evt_Evo_Theater_Zodiac_XXIV_Gludo_The_Dreamweaver": 9,
-    "A_Evt_Evo_Tile_Mistyforest_XXIV_Moonlight_Party": 9,
-    "A_Evt_Evo_Set_Shuffle_Postal_XXIV_The_Act_of_Giving": 4,
-    "A_Evt_Evo_Scroll_Sorcerers_XXV_Place_of_Convergence": 6,
-    "A_Evt_Evo_Merge_Kitchen_XXV_Elvarian_Cook_Off": 9,
-    "A_Evt_Evo_Theater_Easter_XXV_Azure_Phoenix": 9,
-    "A_Evt_Evo_Tile_Amuni_XXV_Everflowing_Cascade": 9,
-    "A_Evt_Evo_Scroll_Aquatic_XXV_Ceremonial_Pools": 6,
-    "A_Evt_Evo_Merge_Dwarvengame_XXV_Frostgem_Foundry": 9,
-    "A_Evt_Evo_Theater_Zodiac_XXV_Shellux_The_Dragonsnail": 9,
-    "A_Evt_Evo_Shuffle_Postal_XXV_Winters_True_Heart": 6,
-    "A_Evt_Evo_Scroll_Sorcerers_XXVI_Endless_Feast": 6,
-    "A_Evt_Evo_Theater_Easter_XXVI_Cosmic_Phoenix": 9,
-    "A_Evt_Evo_Scroll_Aquatic_XXVI_Bubblebeat_Galleon": 6,
-    "A_Evt_Evo_Merge_Kitchen_XXVI_Boarback_Cookwagon": 9,
-    "A_Evt_Evo_Theater_Zodiac_XXVI_Veloria_The_Painted_Starwing": 9,
-    "A_Evt_Evo_Shuffle_Postal_XXVI_Grand_Parcel_Dispatch": 6,
+var selectedEvoStages = {};
+
+function initSelectedEvoStages(data) {
+    data.forEach(building => {
+        if (building['id'].toLowerCase().includes('_evo_') && !selectedEvoStages.hasOwnProperty(building['id'])) {
+            selectedEvoStages[building['id']] = Object.keys(building['chapters'][1]).length - 1;
+        }
+    });
 }
 
 function setAndReload(id) {
@@ -163,6 +108,7 @@ function readBuildingsJSON() {
 
     $.get('database/buildings.json')
         .done(data => {
+            initSelectedEvoStages(data);
 
             let eventSelect = document.getElementById('input_event');
             let filterEventData = eventSelect.options[eventSelect.selectedIndex].value;
