@@ -128,15 +128,30 @@ var notifications = {
         "active":false,
         "priority":100
     },
-    "12":{  // EVENTS SIMULTANEOUSLY - BETA SECONDARY
+    "12":{  // NEW FEATURE ON THE WEBSITE #4
         "id":12,
-        "text":`<h4 class="alert-heading">Mama Juul's Event starts on Beta!</h4>
-        <p>The new event is starting on Beta and you can now access the information using the drop-down menu at the top of the website! Use "Select event" filter to preview the buildings or event information about this upcoming event!</p>`,
-        "repeatAfter":86400,
+        "text":`<h4 class="alert-heading">Get ahead with the Elvenar Tools Extension! <img src="https://elvenar-tools.com/shared/extension-128x128.png" style="width: 40px;"></h4>
+        <hr>
+        <p>
+        Elvenar Tools Extension today is full of useful features for your gameplay in Elvenar.
+        </p>
+        <ul>
+        <li>Open your city in the city planner with a single click and have all the variables filled in for you</li>
+        <li>Analyze your inventory and sort your buildings by various productions with ease - options normally unavailable in the game</li>
+        <li>Fellowship cities - open the cities of your fellowship members to help them with their planning</li>
+        <li>Stats - jump to your own player or fellowship stats page with one click</li>
+        </ul>
+        <p>
+        <b>Download it for free:</b>
+        <a href="https://chromewebstore.google.com/detail/elvenar-tools/fkfhnfdkknhalibhnaijoloijplopcib" target="_blank" class="alert-link">Chrome / Edge</a> |
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/elvenar-tools/" target="_blank" class="alert-link">Firefox</a>
+        </p>
+        <p>Thank you for using Elvenar Tools and happy building!</p>`,
+        "repeatAfter":172800,
         "style":"warning",
-        "duration":60,
-        "active":false,
-        "priority":50
+        "duration":120,
+        "active":true,
+        "priority":150
     },
     "13":{  // NEW FEATURE ON THE WEBSITE #2
         "id":13,
