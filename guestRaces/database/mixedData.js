@@ -133,7 +133,7 @@ var grBanners = {
     "ch23": "https://i.ibb.co/23qR8Bcx/ch23-banner.png",
     "ch24": "https://i.ibb.co/dXFG20P/ch24-banner.png",
     "ch25": "https://i.ibb.co/nMNxtSq8/ch25-banner.png",
-    "ch26": "https://i.ibb.co/1JBs0bnS/ch26-banner.png",
+    "ch26": "https://i.ibb.co/G4qJfCmD/ch26-banner.png",
 }
 
 var settlementIcons = {
