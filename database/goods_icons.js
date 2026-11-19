@@ -454,4 +454,5 @@ var xlImages = {
     "spell_teleport_1": "https://i.ibb.co/HfjMS0bD/spell-teleport-1.png",
     "nox": "https://i.ibb.co/FqskksVx/nox.png",
     "broken_shards": "https://i.ibb.co/C5wfsWdP/brokenshard-xl.png",
+    "dragon_steel": "https://i.ibb.co/sd8Cy3F1/dragon-steel.png",
 }

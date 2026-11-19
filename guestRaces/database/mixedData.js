@@ -7,8 +7,8 @@ var baseTabsGuestRaces = [
 var additionalTabsGuestRaces = {
     "ch26": [
         {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
-        {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/pv2XXgT3/ch25-layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},
-        {"id":"wonders", "name":"Wonders", "img":"https://i.ibb.co/3mhX3r2Z/ch25-aws.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#wonders", "file":"wonders.html"},
+        {"id":"layouts", "name":"Layouts", "img":"https://i.ibb.co/z8pjTPh/layouts.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#layouts", "file":"layouts.html"},
+        {"id":"wonders", "name":"Wonders", "img":"https://cz.wiki.elvenar.com/images/d/d3/AncientWonder.png", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#wonders", "file":"wonders.html"},
     ],
     "ch25": [
         {"id":"settlement", "name":"Settlement", "img":"various_settlement", "img_width":"28", "img_style":"margin-left: 0px; margin-right: 10px; position: relative;", "href":"#settlement", "file":"settlement.html"},
@@ -133,6 +133,7 @@ var grBanners = {
     "ch23": "https://i.ibb.co/23qR8Bcx/ch23-banner.png",
     "ch24": "https://i.ibb.co/dXFG20P/ch24-banner.png",
     "ch25": "https://i.ibb.co/nMNxtSq8/ch25-banner.png",
+    "ch26": "https://i.ibb.co/1JBs0bnS/ch26-banner.png",
 }
 
 var settlementIcons = {
@@ -156,4 +157,5 @@ var settlementIcons = {
     "ch23": "https://i.ibb.co/d975hJ3/settlement-ch23.png",
     "ch24": "https://i.ibb.co/1GNtXbPB/settlement-ch24.png",
     "ch25": "https://i.ibb.co/ksG9ytmG/settlement-ch25.png",
+    "ch26": "https://assets.elvenar-tools.com/techtree/portal.webp",
 }

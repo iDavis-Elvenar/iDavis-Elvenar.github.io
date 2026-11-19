@@ -304,6 +304,27 @@ function createTotalCostsDiv(parent) {
     divRow5.id = "totalCosts_settlement_"+guestRace;
     divTotalCosts.appendChild(divRow5);
 
+    let hr4 = document.createElement('hr');
+    hr4.style.marginTop = "3px";
+    hr4.style.marginBottom = "-2px";
+    divTotalCosts.appendChild(hr4);
+
+    let divHeadline4 = document.createElement('div');
+    divHeadline4.className = "row";
+    divHeadline4.innerHTML = `<h7><b>Knowledge Points:</b></h7>`;
+    divHeadline4.style.textAlign = "left";
+    divHeadline4.style.marginLeft = "-10px";
+    divHeadline4.style.marginTop = "0px";
+    divHeadline4.style.marginBottom = "-5px";
+    divTotalCosts.appendChild(divHeadline4);
+
+    let divRow6 = document.createElement('div');
+    divRow6.className = "";
+    divRow6.innerHTML = ``;
+    divRow6.style.textAlign = "left";
+    divRow6.id = "totalCosts_kp_"+guestRace;
+    divTotalCosts.appendChild(divRow6);
+
     parent.appendChild(divTotalCosts);
 }
 
@@ -322,9 +343,11 @@ function calculateTotalCosts() {
     var guestRace = getSelectedGuestRace();
     var includeNonMandatory = document.getElementById(`research_mandatoryInclude_${guestRace}`).checked;
     var totalCosts = [];
+    var totalKP = 0;
     for (let i = 0; i < grResearch[guestRace].length; i++) {
         var finished = document.getElementById('research_finished_'+(i+1)).checked;
         if ((includeNonMandatory || grResearch[guestRace][i]['childrenIds'].length > 0) && !finished) {
+            totalKP += parseInt(grResearch[guestRace][i]['kp']) || 0;
             for (let j = 0; j < grResearch[guestRace][i]['requirements'].length; j++) {
                 totalCosts.push(grResearch[guestRace][i]['requirements'][j]);
             }
@@ -345,10 +368,10 @@ function calculateTotalCosts() {
         result[key] = totalCostsSet[key];
     })
 
-    updateTotalCosts(result);
+    updateTotalCosts(result, totalKP);
 }
 
-function updateTotalCosts(value) {
+function updateTotalCosts(value, totalKP) {
     var guestRace = getSelectedGuestRace();
     let parent_goods = document.getElementById("totalCosts_goods_"+guestRace);
     let parent_discovered = document.getElementById("totalCosts_discovered_"+guestRace);
@@ -387,6 +410,11 @@ function updateTotalCosts(value) {
     parent_goods.innerHTML = parent_goods.innerHTML || `<h7>-</h7>`;
     parent_discovered.innerHTML = parent_discovered.innerHTML || `<h7>-</h7>`;
     parent_settlement.innerHTML = parent_settlement.innerHTML || `<h7>-</h7>`;
+
+    let parent_kp = document.getElementById("totalCosts_kp_"+guestRace);
+    parent_kp.innerHTML = totalKP > 0
+        ? `<h7 style="white-space: nowrap;">${totalKP}x&nbsp;${goods_icons["knowledge_points"].replace("'><br>", "' style='width: 20px;'><br>").replace("<br>", "")}</h7>`
+        : `<h7>-</h7>`;
 }
 
 function finishTechnology(tech, value, numberOfTechnologies, maxCostsLength, recalculate) {
@@ -444,7 +472,7 @@ function realizeParent(key) {
         return "settlement";
     }
 
-    var discovered_resources = ["orcs", "mana", "seeds", "unurium", "work", "canned_goods", "nox", "finity_gear"];
+    var discovered_resources = ["orcs", "mana", "seeds", "unurium", "work", "canned_goods", "nox", "finity_gear", "dragon_steel"];
     if (discovered_resources.includes(key)) {
         return "discovered";
     }
